@@ -1,0 +1,16 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "skills": {
+    "paths": [".opencode/skills"]
+  },
+  "references": {
+    "uswds-drupal": {
+      "repository": "ednark/drupal-uswds-ai-components",
+      "description": "Drupal implementation for USWDS components (modules, paragraph types, Twig, Drush)"
+    },
+    "registry-spec": {
+      "repository": "ednark/ai-component-registry-spec",
+      "description": "Base protocol spec and generic generator for AI component registries"
+    }
+  }
+}
