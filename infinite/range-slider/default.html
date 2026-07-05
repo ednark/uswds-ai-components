@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Range Slider for selecting approximate values from a range.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Range Slider</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "range-slider/default.html",
+  "title": "Range Slider",
+  "uswdsComponentType": "range-slider",
+  "uswdsClass": "usa-range",
+  "description": "Allows users to choose an approximate number from a range by sliding a control.",
+  "section": "forms",
+  "variant": "default",
+  "useWhen": [
+    "Selecting approximate values within a range",
+    "Budget or quantity selection",
+    "When visual representation of range helps understanding",
+    "Settings that benefit from immediate visual feedback"
+  ],
+  "avoidWhen": [
+    "Precise values needed — use text input instead",
+    "Very large ranges where slider is imprecise",
+    "Mobile interfaces where slider is hard to control precisely"
+  ],
+  "agentPrompt": "Update min, max, and step attributes. Add value display element and update with JS. Use aria-label for accessibility if label is not visually present. Set appropriate default value.",
+  "editableAreas": [
+    "Minimum value (min attribute)",
+    "Maximum value (max attribute)",
+    "Step increment (step attribute)",
+    "Default value",
+    "Label text"
+  ],
+  "preserveElements": [
+    "input.usa-range type='range'",
+    "min, max, step attributes",
+    "Label associated with for attribute",
+    "aria-label or aria-labelledby for screen readers"
+  ],
+  "knownLimitations": [
+    "Precise selection is difficult — always show current value",
+    "Mobile touch targets can be small",
+    "May not work well for very large or precise ranges"
+  ],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["drag", "click", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default"],
+  "settings": ["$theme-range-border-radius"],
+  "relatedComponents": ["form", "text-input"],
+  "tokenOverrides": ["$theme-range-border-radius", "$theme-range-thumb-border-color"],
+  "tags": ["range", "slider", "input", "select", "value", "drag", "form", "approximate"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .form-section {
+    max-width: 400px;
+  }
+</style>
+</head>
+<body>
+<div class="form-section">
+  <label class="usa-label" for="range-slider">Select a value</label>
+  <input class="usa-range" id="range-slider" type="range" min="0" max="100" step="1" value="50">
+</div>
+<div class="cap">Range Slider default</div>
+</body>
+</html>

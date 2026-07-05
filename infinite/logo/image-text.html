@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Logo with image and text combination.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Logo (Image + Text)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "logo/image-text.html",
+  "title": "Logo (Image + Text)",
+  "uswdsComponentType": "logo",
+  "uswdsClass": "usa-logo",
+  "description": "Logo variant combining an image with text and optional tagline.",
+  "section": "navigation",
+  "variant": "image-text",
+  "useWhen": ["Agency branding", "When logo image alone isn't enough", "Sites needing name + tagline"],
+  "avoidWhen": ["Simple text-only logos", "When image alone suffices"],
+  "agentPrompt": "Use usa-logo with usa-logo__text containing an <a> with both img.usa-logo-img and a div.logo-text with strong and tagline.",
+  "editableAreas": ["Logo image src and alt", "Logo text", "Tagline text"],
+  "preserveElements": ["div.usa-logo", "em.usa-logo__text", "a.logo-img", "img.usa-logo-img", "div.logo-text"],
+  "knownLimitations": ["Needs custom CSS for text layout", "Image + text may overflow on small screens"],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "image-text"],
+  "settings": ["$theme-header-logo-width"],
+  "relatedComponents": ["header", "navbar"],
+  "tokenOverrides": ["$theme-header-logo-width"],
+  "tags": ["logo", "image", "text", "tagline", "branding", "agency"]
+}
+</script>
+</head>
+<body>
+<div class="usa-logo" id="logo">
+  <em class="usa-logo__text">
+    <a class="logo-img" href="/" title="Home" aria-label="Home">
+      <img class="usa-logo-img" src="logo.svg" alt="Agency Logo">
+      <div class="logo-text">
+        <strong class="logo-text-bold">Agency Name</strong>
+        <div class="logo-tagline">Making government services easier to find</div>
+      </div>
+    </a>
+  </em>
+</div>
+</body>
+</html>

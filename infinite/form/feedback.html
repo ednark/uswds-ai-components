@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Feedback form for page helpfulness.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Form (Feedback)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "form/feedback.html",
+  "title": "Form (Feedback)",
+  "uswdsComponentType": "form",
+  "uswdsClass": "usa-form",
+  "description": "Feedback form pattern asking 'Was this page helpful?' with Yes/No buttons.",
+  "section": "forms",
+  "variant": "feedback",
+  "useWhen": ["Page feedback collection", "User satisfaction tracking", "Content improvement metrics"],
+  "avoidWhen": ["Forms requiring detailed input", "When feedback isn't actionable"],
+  "agentPrompt": "Use usa-form class. Include a span with question text and two usa-button submit buttons (Yes/No). Handle via AJAX or form post.",
+  "editableAreas": ["Question text", "Button labels", "Response messages"],
+  "preserveElements": ["form.usa-form", "span.helpful_title", "input.usa-button"],
+  "knownLimitations": ["Requires backend handling", "Typically needs AJAX for inline response"],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["click", "submit"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "feedback"],
+  "settings": [],
+  "relatedComponents": ["button", "validation"],
+  "tokenOverrides": [],
+  "tags": ["form", "feedback", "helpful", "yes-no", "survey", "page-feedback"]
+}
+</script>
+</head>
+<body>
+<form class="usa-form" data-drupal-selector="helpful-form" action="/feedback" method="post" id="helpful-form">
+  <span class="helpful_title">Was this page helpful?</span>
+  <div class="btns">
+    <input class="usa-button" type="submit" id="affirmative" name="op" value="Yes">
+    <input class="usa-button" type="submit" id="negative" name="op" value="No">
+  </div>
+</form>
+</body>
+</html>

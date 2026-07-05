@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Select success variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Select (Success)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "select/success.html",
+  "title": "Select (Success)",
+  "uswdsComponentType": "select",
+  "uswdsClass": "usa-select--success",
+  "description": "Select dropdown showing success validation state.",
+  "section": "forms",
+  "variant": "success",
+  "useWhen": ["Successful selection validation", "Confirmed dropdown selection"],
+  "avoidWhen": ["Errors", "Pending validation"],
+  "agentPrompt": "Add usa-select--success class for success state styling.",
+  "editableAreas": ["Select label", "Success message text"],
+  "preserveElements": ["div.usa-form-group", "select.usa-select--success"],
+  "knownLimitations": [],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click", "change"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "tile", "error", "success", "disabled"],
+  "settings": [],
+  "relatedComponents": ["text-input", "validation"],
+  "tokenOverrides": [],
+  "tags": ["select", "success", "validation"]
+}
+</script>
+</head>
+<body>
+<div class="usa-form-group">
+  <label class="usa-label" for="select-success">Select with success</label>
+  <span class="usa-success-message" id="select-success-message" role="status">Success: Selection confirmed</span>
+  <select class="usa-select usa-select--success" id="select-success" name="select-success" aria-describedby="select-success-message">
+    <option value="">Select an option</option>
+    <option value="1" selected>Option one (selected)</option>
+    <option value="2">Option two</option>
+  </select>
+</div>
+</body>
+</html>

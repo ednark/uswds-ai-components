@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Form Validation component for displaying inline error messages.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Form Validation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "validation/default.html",
+  "title": "Form Validation",
+  "uswdsComponentType": "validation",
+  "uswdsClass": "usa-form-error-message",
+  "description": "Provides inline error feedback when users submit invalid form data.",
+  "section": "forms",
+  "variant": "default",
+  "useWhen": [
+    "Form fields requiring validation",
+    "When users submit incorrect or incomplete data",
+    "Required field indicators",
+    "Real-time or post-submission error display"
+  ],
+  "avoidWhen": [
+    "Before user has interacted with field (show on submit, not on load)",
+    "Non-form content",
+    "When errors can be prevented client-side"
+  ],
+  "agentPrompt": "Add role='alert' to error message for screen reader announcement. Set aria-invalid='true' on invalid inputs. Use usa-form-error-message for error text. Use usa-form-group--error on the parent group.",
+  "editableAreas": [
+    "Error message text",
+    "Input that triggered the error",
+    "Field label text",
+    "Required indicator text"
+  ],
+  "preserveElements": [
+    "div.usa-form-group--error on parent group",
+    "span.usa-error-message with role='alert'",
+    "aria-invalid='true' on invalid input",
+    "span.usa-label--required or * for required",
+    "aria-describedby linking input to error"
+  ],
+  "knownLimitations": [
+    "JavaScript typically needed to show/hide errors",
+    "Errors should be announced via role='alert'",
+    "Invalid state should persist until error is corrected"
+  ],
+  "tier": "curated",
+  "requiresJs": "optional",
+  "interaction": ["input", "submit", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "alert"],
+  "settings": ["$theme-input-error-border-color"],
+  "relatedComponents": ["form", "text-input", "alert"],
+  "tokenOverrides": ["$theme-input-error-border-color", "$theme-input-error-message-color"],
+  "tags": ["validation", "error", "form", "invalid", "message", "feedback", "required"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .form-section {
+    max-width: 400px;
+  }
+</style>
+</head>
+<body>
+<div class="form-section">
+  <form class="usa-form">
+    <div class="usa-form-group usa-form-group--error">
+      <label class="usa-label" for="example-input-error">Email address <span class="usa-label--required">*</span></label>
+      <span class="usa-error-message" role="alert" id="example-input-error-message">Error message text</span>
+      <input class="usa-input usa-input--error" id="example-input-error" type="email" aria-describedby="example-input-error-message" aria-invalid="true" required>
+    </div>
+    <button class="usa-button" type="submit">Submit</button>
+  </form>
+</div>
+<div class="cap">Form Validation default</div>
+</body>
+</html>

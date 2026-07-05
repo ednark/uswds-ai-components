@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Radio Buttons for selecting exactly one option from a group.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Radio Buttons</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "radio-buttons/default.html",
+  "title": "Radio Buttons",
+  "uswdsComponentType": "radio-buttons",
+  "uswdsClass": "usa-radio__input",
+  "description": "Allows users to select exactly one choice from a group of options.",
+  "section": "forms",
+  "variant": "default",
+  "useWhen": [
+    "Single selection from mutually exclusive options",
+    "When only one option can be chosen",
+    "Options that need to be visible at once for comparison",
+    "2-7 options where visual scanning helps decision-making"
+  ],
+  "avoidWhen": [
+    "Multiple selections needed — use checkboxes",
+    "More than 7 options — use select dropdown",
+    "Single binary yes/no — use checkbox"
+  ],
+  "agentPrompt": "Add usa-radio__input--tile for tile style. Group with fieldset/legend. Add checked attribute for pre-selected option. Ensure all options in a group have the same name attribute.",
+  "editableAreas": [
+    "Radio label text",
+    "input id and for attribute values",
+    "name attribute (must be same for all in group)",
+    "value attribute for form submission",
+    "checked state for default selection"
+  ],
+  "preserveElements": [
+    "fieldset/legend wrapper for radio groups",
+    "div.usa-radio wrapper for each option",
+    "input.usa-radio__input type='radio'",
+    "label.usa-radio__label wrapper",
+    "Same name attribute for all options in group"
+  ],
+  "knownLimitations": [
+    "Always wrap radio groups in fieldset with legend",
+    "id attributes must be unique per page",
+    "name attribute groups radios for form submission"
+  ],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click", "focus", "keyboard"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "tile"],
+  "settings": ["$theme-radio-border-radius"],
+  "relatedComponents": ["checkbox", "form", "select"],
+  "tokenOverrides": ["$theme-radio-border-radius", "$theme-input-state-border-width"],
+  "tags": ["radio", "buttons", "form", "input", "select", "single", "choice", "mutually-exclusive"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .form-section {
+    max-width: 400px;
+  }
+</style>
+</head>
+<body>
+<fieldset class="usa-fieldset">
+  <legend class="usa-legend">Select a delivery method</legend>
+  <div class="usa-radio">
+    <input class="usa-radio__input" id="delivery-standard" type="radio" name="delivery" value="standard">
+    <label class="usa-radio__label" for="delivery-standard">Standard delivery (5-7 days)</label>
+  </div>
+  <div class="usa-radio">
+    <input class="usa-radio__input" id="delivery-express" type="radio" name="delivery" value="express">
+    <label class="usa-radio__label" for="delivery-express">Express delivery (2-3 days)</label>
+  </div>
+  <div class="usa-radio">
+    <input class="usa-radio__input" id="delivery-overnight" type="radio" name="delivery" value="overnight">
+    <label class="usa-radio__label" for="delivery-overnight">Overnight delivery</label>
+  </div>
+</fieldset>
+<div class="cap">Radio Buttons default</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Radio button tile variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Radio Button (Tile)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "radio-buttons/tile.html",
+  "title": "Radio Button (Tile)",
+  "uswdsComponentType": "radio-buttons",
+  "uswdsClass": "usa-radio__input--tile",
+  "description": "Radio button styled as a large tile for touch-friendly selection.",
+  "section": "forms",
+  "variant": "tile",
+  "useWhen": ["Mobile forms", "Touch-friendly selection", "Large clickable options"],
+  "avoidWhen": ["Dense form layouts", "Standard desktop forms"],
+  "agentPrompt": "Add usa-radio__input--tile class to radio input.",
+  "editableAreas": ["Radio label text", "Optional description"],
+  "preserveElements": ["input.usa-radio__input", "label.usa-radio__label"],
+  "knownLimitations": [],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "tile", "error", "success", "disabled"],
+  "settings": [],
+  "relatedComponents": ["checkbox", "text-input"],
+  "tokenOverrides": [],
+  "tags": ["radio", "tile", "touch", "large"]
+}
+</script>
+</head>
+<body>
+<fieldset class="usa-fieldset">
+  <legend class="usa-legend">Select an option</legend>
+  <div class="usa-radio__group">
+    <input class="usa-radio__input usa-radio__input--tile" id="radio-tile-1" type="radio" name="radio-tile" value="1">
+    <label class="usa-radio__label" for="radio-tile-1">
+      Tile option one
+    </label>
+  </div>
+  <div class="usa-radio__group">
+    <input class="usa-radio__input usa-radio__input--tile" id="radio-tile-2" type="radio" name="radio-tile" value="2">
+    <label class="usa-radio__label" for="radio-tile-2">
+      Tile option two
+    </label>
+  </div>
+</fieldset>
+</body>
+</html>

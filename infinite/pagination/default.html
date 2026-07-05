@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Pagination component for navigating between pages of content.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Pagination</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "pagination/default.html",
+  "title": "Pagination",
+  "uswdsComponentType": "pagination",
+  "uswdsClass": "usa-pagination",
+  "description": "Navigation for paginated content to move between pages.",
+  "section": "navigation",
+  "variant": "default",
+  "useWhen": [
+    "Long lists of results that span multiple pages",
+    "Content organized into distinct page segments",
+    "Search results, article archives, or data tables",
+    "When showing all content on one page would be overwhelming"
+  ],
+  "avoidWhen": [
+    "Single-page content",
+    "Fewer than 10-15 items",
+    "Content that changes frequently (real-time feeds)"
+  ],
+  "agentPrompt": "Update aria-label to describe pagination purpose. Set aria-current='page' on current page number. Add usa-pagination__show-all for showing all pages. Update page URLs in href attributes.",
+  "editableAreas": [
+    "Page numbers and their href URLs",
+    "aria-label describing pagination purpose",
+    "aria-current='page' on current page",
+    "Previous/Next link text and URLs",
+    "Total page count display"
+  ],
+  "preserveElements": [
+    "nav.usa-pagination with aria-label",
+    "ol.usa-pagination__list for page numbers",
+    "li.usa-pagination__page-item for each page",
+    "a.usa-pagination__button for page links",
+    "span.usa-pagination__button for current page",
+    "aria-current='page' attribute"
+  ],
+  "knownLimitations": [
+    "Always provide previous/next navigation for accessibility",
+    "Current page should be a span, not a link",
+    "Ellipsis (...) should be a non-interactive span"
+  ],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click", "focus", "keyboard"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "show-all"],
+  "settings": ["$theme-pagination-border-radius"],
+  "relatedComponents": ["step-indicator", "breadcrumb"],
+  "tokenOverrides": ["$theme-pagination-border-radius"],
+  "tags": ["pagination", "pages", "navigation", "pager", "previous", "next", "numbers"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+</style>
+</head>
+<body>
+<nav class="usa-pagination" aria-label="Pagination">
+  <ul class="usa-pagination__list">
+    <li class="usa-pagination__item usa-pagination__arrow">
+      <a class="usa-pagination__link" href="#" aria-label="Previous page">
+        <span class="usa-pagination__link-text">Previous</span>
+      </a>
+    </li>
+    <li class="usa-pagination__item usa-pagination__page-item">
+      <a class="usa-pagination__button" href="#">1</a>
+    </li>
+    <li class="usa-pagination__item usa-pagination__page-item">
+      <a class="usa-pagination__button" href="#">2</a>
+    </li>
+    <li class="usa-pagination__item usa-pagination__page-item">
+      <span class="usa-pagination__button usa-pagination__current-page" aria-current="page">3</span>
+    </li>
+    <li class="usa-pagination__item usa-pagination__page-item">
+      <a class="usa-pagination__button" href="#">4</a>
+    </li>
+    <li class="usa-pagination__item usa-pagination__page-item">
+      <a class="usa-pagination__button" href="#">5</a>
+    </li>
+    <li class="usa-pagination__item usa-pagination__arrow">
+      <a class="usa-pagination__link" href="#" aria-label="Next page">
+        <span class="usa-pagination__link-text">Next</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+<div class="cap">Pagination default</div>
+</body>
+</html>

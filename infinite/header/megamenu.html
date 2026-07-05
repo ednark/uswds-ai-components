@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Header megamenu variant with dropdown navigation.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Header (Megamenu)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "header/megamenu.html",
+  "title": "Header (Megamenu)",
+  "uswdsComponentType": "header",
+  "uswdsClass": "usa-header usa-header--megamenu",
+  "description": "Header with megamenu dropdown for complex navigation hierarchies.",
+  "section": "navigation",
+  "variant": "megamenu",
+  "useWhen": ["Complex navigation hierarchies", "Sites with many sub-sections", "E-commerce or catalog sites"],
+  "avoidWhen": ["Simple sites", "Mobile-first designs", "Sites with minimal nav"],
+  "agentPrompt": "Add usa-header--megamenu class to usa-header. Requires complex nav structure with dropdown panels.",
+  "editableAreas": ["Agency logo", "Megamenu nav structure", "Dropdown panel content"],
+  "preserveElements": ["header.usa-header usa-header--megamenu", "nav.usa-nav__megamenu", "ul.usa-nav__submenu"],
+  "knownLimitations": ["Most complex header variant", "JavaScript required for dropdown behavior"],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["click", "hover", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "basic", "extended", "megamenu"],
+  "settings": ["$theme-header-font-family", "$theme-header-logo-width"],
+  "relatedComponents": ["side-navigation", "footer", "search"],
+  "tokenOverrides": ["$theme-header-font-family", "$theme-header-logo-width", "$theme-header-min-width"],
+  "tags": ["header", "megamenu", "dropdown", "complex"]
+}
+</script>
+</head>
+<body>
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+<header class="usa-header usa-header--megamenu" id="header">
+  <div class="usa-nav-container">
+    <div class="usa-logo">
+      <em class="usa-logo__text">Agency Name</em>
+    </div>
+    <button class="usa-menu-btn">Menu</button>
+    <nav class="usa-nav" aria-label="Main navigation">
+      <ul class="usa-nav__primary">
+        <li class="usa-nav__primary-item">
+          <button class="usa-nav__link" aria-expanded="false" aria-controls="megamenu-panel-1">
+            Section One
+          </button>
+          <div id="megamenu-panel-1" class="usa-nav__megamenu">
+            <div class="usa-nav__megamenu-inner">
+              <ul class="usa-nav__submenu-list">
+                <li class="usa-nav__submenu-item"><a href="#">Sub item 1a</a></li>
+                <li class="usa-nav__submenu-item"><a href="#">Sub item 1b</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main-content">
+  <p>Main content area</p>
+</main>
+</body>
+</html>

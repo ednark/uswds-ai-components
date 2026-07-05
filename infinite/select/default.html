@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Select component for choosing one option from a dropdown menu.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Select</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "select/default.html",
+  "title": "Select",
+  "uswdsComponentType": "select",
+  "uswdsClass": "usa-select",
+  "description": "Allows users to choose one option from a dropdown menu.",
+  "section": "forms",
+  "variant": "default",
+  "useWhen": [
+    "Single selection from 3-10 options",
+    "When space is limited and options shouldn't be visible",
+    "When users need to see all available options for reference",
+    "Simple categorical selection without typeahead needs"
+  ],
+  "avoidWhen": [
+    "More than 10 options — use combo box for typeahead",
+    "Multiple selections — use checkboxes",
+    "Binary choices — use radio buttons",
+    "When all options need to be visible at once"
+  ],
+  "agentPrompt": "Add usa-select--error for error state styling. Update option elements inside select. Set first option as placeholder with empty value. Add selected attribute for pre-selection.",
+  "editableAreas": [
+    "Select label text",
+    "Option text and values",
+    "Default selected option",
+    "Placeholder option text",
+    "Error variant: usa-select--error"
+  ],
+  "preserveElements": [
+    "label.usa-label with for attribute",
+    "select.usa-select element",
+    "option elements for each choice",
+    "First option as placeholder with empty value"
+  ],
+  "knownLimitations": [
+    "Styling select elements is limited by browser defaults",
+    "JavaScript not required but enhances UX",
+    "Mobile devices handle selects natively"
+  ],
+  "tier": "curated",
+  "requiresJs": "optional",
+  "interaction": ["click", "focus", "keyboard"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "error"],
+  "settings": ["$theme-select-border-radius"],
+  "relatedComponents": ["combo-box", "form", "checkbox"],
+  "tokenOverrides": ["$theme-select-border-radius", "$theme-input-state-border-width"],
+  "tags": ["select", "dropdown", "option", "choose", "form", "pick", "menu"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .form-section {
+    max-width: 400px;
+  }
+</style>
+</head>
+<body>
+<div class="form-section">
+  <label class="usa-label" for="options">Select an option</label>
+  <select class="usa-select" id="options" name="options" required>
+    <option value="">Select an option</option>
+    <option value="option1">Option One</option>
+    <option value="option2">Option Two</option>
+    <option value="option3">Option Three</option>
+    <option value="option4">Option Four</option>
+  </select>
+</div>
+<div class="cap">Select default</div>
+</body>
+</html>

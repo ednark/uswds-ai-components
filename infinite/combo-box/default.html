@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Combo Box component for selecting from large lists with typeahead search.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Combo Box</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "combo-box/default.html",
+  "title": "Combo Box",
+  "uswdsComponentType": "combo-box",
+  "uswdsClass": "usa-combo-box",
+  "description": "Helps users select an item from a large list of options with typeahead search.",
+  "section": "forms",
+  "variant": "default",
+  "useWhen": [
+    "Large lists of 10+ options where users need to search/filter",
+    "When users know what they're looking for and need to find it quickly",
+    "Location selection (states, countries, cities)",
+    "Categorical selection from a defined vocabulary"
+  ],
+  "avoidWhen": [
+    "Small lists of fewer than 7-10 options — use radio buttons or select",
+    "When all options must be visible at once",
+    "Free-form text input needed — use text input instead"
+  ],
+  "agentPrompt": "Update data-options JSON array with actual option values. Ensure each option has value and text properties. Set initial selection with selected attribute on one option. Add data-default-value for programmatic pre-selection.",
+  "editableAreas": [
+    "Options list in data-options attribute",
+    "Label text content",
+    "Placeholder text",
+    "Default selected value"
+  ],
+  "preserveElements": [
+    "div.usa-combo-box wrapper",
+    "select.usa-combo-box__select hidden input",
+    "input.usa-combo-box__input for typeahead",
+    "ul.usa-combo-box__list for dropdown",
+    "data-options attribute with option data"
+  ],
+  "knownLimitations": [
+    "JavaScript required for typeahead functionality",
+    "Options list must be provided in data-options attribute",
+    "Hidden select element handles form submission"
+  ],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["input", "click", "keyboard"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default"],
+  "settings": ["$theme-combo-box-border-radius"],
+  "relatedComponents": ["select", "form", "text-input"],
+  "tokenOverrides": ["$theme-combo-box-border-radius"],
+  "tags": ["combo-box", "select", "dropdown", "typeahead", "search", "autocomplete", "form"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .form-section {
+    max-width: 400px;
+  }
+</style>
+</head>
+<body>
+<div class="form-section">
+  <label class="usa-label" for="state">State</label>
+  <div class="usa-combo-box">
+    <select class="usa-combo-box__select" id="state" name="state">
+      <option value="">Select a state</option>
+      <option value="AL">Alabama</option>
+      <option value="AK">Alaska</option>
+      <option value="AZ">Arizona</option>
+      <option value="AR">Arkansas</option>
+      <option value="CA">California</option>
+      <option value="CO">Colorado</option>
+      <option value="CT">Connecticut</option>
+      <option value="DE">Delaware</option>
+      <option value="FL">Florida</option>
+      <option value="GA">Georgia</option>
+    </select>
+    <input class="usa-combo-box__input" type="text" aria-label="State"/>
+    <ul class="usa-combo-box__list" role="listbox" aria-labelledby="state-label"></ul>
+  </div>
+</div>
+<div class="cap">Combo Box default</div>
+</body>
+</html>

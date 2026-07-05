@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Button component demonstrating the default primary button style.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Button (Default)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "button/default.html",
+  "title": "Button (Default)",
+  "uswdsComponentType": "button",
+  "uswdsClass": "usa-button",
+  "description": "Primary button for important actions like Download, Sign up, or Log out.",
+  "section": "utilities",
+  "variant": "default",
+  "useWhen": [
+    "Important actions users should take on the site",
+    "Primary CTAs that advance to the next step",
+    "Actions like Download, Sign up, Submit, or Log out",
+    "When you want the button to be visually prominent"
+  ],
+  "avoidWhen": [
+    "Linking between pages — use regular links instead",
+    "Less important or less popular actions",
+    "Actions that happen on the current page — use outline buttons"
+  ],
+  "agentPrompt": "Change button text to 'Submit Form', add usa-button--hover, usa-button--active, usa-focus states as additional classes, or switch to variant like usa-button--secondary or usa-button--outline.",
+  "editableAreas": [
+    "Button label text content",
+    "Button type attribute (button, submit, reset)",
+    "Variant class: usa-button--secondary, usa-button--outline, usa-button--big, etc.",
+    "Color variant: usa-button--accent-cool, usa-button--accent-warm, usa-button--base",
+    "Disabled state: disabled='disabled' or aria-disabled='true'",
+    "Size: usa-button--big for larger primary actions"
+  ],
+  "preserveElements": [
+    "usa-button base class on button or link element",
+    "type='button' on non-submit buttons to prevent accidental form submission",
+    "disabled attribute syntax (disabled='disabled' for proper screen reader behavior)",
+    "Button text capitalization (sentence case recommended)"
+  ],
+  "knownLimitations": [
+    "Always set type attribute to define behavior",
+    "Links styled as buttons need both usa-button class and appropriate type",
+    "Big buttons do not automatically resize on mobile"
+  ],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click", "focus", "hover"],
+  "a11y": {
+    "wcag21AA": true,
+    "keyboardNav": true,
+    "screenReader": true,
+    "reducedMotion": true,
+    "forcedColors": true,
+    "ariaAttributes": true
+  },
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "secondary", "accent-cool", "accent-warm", "base", "outline", "outline-inverse", "big", "unstyled"],
+  "settings": ["$theme-button-border-radius", "$theme-button-font-family", "$theme-button-icon-gap"],
+  "relatedComponents": ["button-group", "link"],
+  "tokenOverrides": ["$theme-button-border-radius", "$theme-button-stroke-width"],
+  "tags": ["button", "cta", "action", "submit", "primary", "form"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .demo-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .preview-heading {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #565c65;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .preview-section {
+    margin-bottom: 2rem;
+  }
+</style>
+</head>
+<body>
+<div class="preview-section">
+  <p class="preview-heading">Default</p>
+  <div class="demo-buttons">
+    <button class="usa-button" type="button">Default</button>
+  </div>
+</div>
+
+<div class="preview-section">
+  <p class="preview-heading">With States</p>
+  <div class="demo-buttons">
+    <button class="usa-button usa-button--hover" type="button">Hover</button>
+    <button class="usa-button usa-button--active" type="button">Active</button>
+    <button class="usa-button usa-focus" type="button">Focus</button>
+    <button class="usa-button" type="button" disabled="disabled">Disabled</button>
+    <button class="usa-button" type="button" aria-disabled="true">aria-disabled</button>
+  </div>
+</div>
+
+<div class="preview-section">
+  <p class="preview-heading">Secondary</p>
+  <div class="demo-buttons">
+    <button class="usa-button usa-button--secondary" type="button">Secondary</button>
+  </div>
+</div>
+
+<div class="preview-section">
+  <p class="preview-heading">Outline</p>
+  <div class="demo-buttons">
+    <button class="usa-button usa-button--outline" type="button">Outline</button>
+  </div>
+</div>
+
+<div class="preview-section">
+  <p class="preview-heading">Big</p>
+  <div class="demo-buttons">
+    <button class="usa-button usa-button--big" type="button">Big Button</button>
+  </div>
+</div>
+
+<div class="cap">Button default</div>
+</body>
+</html>

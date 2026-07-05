@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Typography link variant showing styled links within prose.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Typography (Link)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "typography/link.html",
+  "title": "Typography (Link)",
+  "uswdsComponentType": "typography",
+  "uswdsClass": "typography",
+  "description": "Typography example focusing on link styles within prose.",
+  "section": "typography",
+  "variant": "link",
+  "useWhen": ["Content with many links", "Article pages", "Documentation"],
+  "avoidWhen": ["Minimal UI", "Button-heavy interfaces"],
+  "agentPrompt": "Use usa-prose class and ensure proper link styling with usa-link.",
+  "editableAreas": ["Link text and URLs"],
+  "preserveElements": ["div.usa-prose", "a.usa-link"],
+  "knownLimitations": [],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click", "hover", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "typeset", "link", "list"],
+  "settings": ["$theme-type-scale"],
+  "relatedComponents": ["prose", "link"],
+  "tokenOverrides": ["$theme-type-scale"],
+  "tags": ["typography", "link", "prose"]
+}
+</script>
+</head>
+<body>
+<div class="usa-prose">
+  <h2>Links in Context</h2>
+  <p>This is a paragraph with a <a href="#" class="usa-link">link to more information</a> embedded within it.</p>
+  <p>Another paragraph with <a href="#" class="usa-link">another link</a> to show link styling.</p>
+</div>
+</body>
+</html>

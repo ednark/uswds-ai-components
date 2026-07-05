@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Language Selector for switching between languages.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Language Selector</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "language-selector/default.html",
+  "title": "Language Selector",
+  "uswdsComponentType": "language-selector",
+  "uswdsClass": "usa-language",
+  "description": "Allows users to find and access content in their preferred language.",
+  "section": "navigation",
+  "variant": "default",
+  "useWhen": [
+    "Multilingual government websites",
+    "Content available in multiple languages",
+    "When language selection is a primary navigation feature",
+    "Sites serving non-English speaking audiences"
+  ],
+  "avoidWhen": [
+    "Single-language sites",
+    "When all content is not available in all languages",
+    "Mobile interfaces where dropdown is cumbersome"
+  ],
+  "agentPrompt": "Update language names and hrefs for actual translations. Use ISO 639-1 language codes. Add appropriate hreflang attributes. Position in header for visibility.",
+  "editableAreas": [
+    "Language names and labels",
+    "href URLs for translation pages",
+    "hreflang attribute values",
+    "Current language indicator"
+  ],
+  "preserveElements": [
+    "div.usa-language-container",
+    "select.usa-language__select or links",
+    "aria-label for selector purpose",
+    "usa-language__link for link-based selector"
+  ],
+  "knownLimitations": [
+    "JavaScript required for enhanced dropdown behavior",
+    "All translations should link to equivalent content",
+    "hreflang helps search engines understand translations"
+  ],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["click", "focus", "keyboard"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA", "NIST Guidelines"],
+  "variants": ["default", "expanded"],
+  "settings": ["$theme-language-selector-border-radius"],
+  "relatedComponents": ["header", "link", "select"],
+  "tokenOverrides": ["$theme-language-selector-border-radius", "$theme-language-selector-background-color"],
+  "tags": ["language", "translation", "multilingual", "selector", "international", "i18n", "locale"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+</style>
+</head>
+<body>
+<div class="usa-language-container">
+  <ul class="usa-language__list">
+    <li class="usa-language__submenu-item" aria-current="true">
+      <span lang="en">English</span>
+    </li>
+    <li class="usa-language__submenu-item">
+      <a lang="es" hreflang="es" href="#">Espa\u00f1ol</a>
+    </li>
+  </ul>
+</div>
+<div class="cap">Language Selector default</div>
+</body>
+</html>

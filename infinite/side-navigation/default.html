@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Side Navigation component for hierarchical vertical navigation.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Side Navigation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "side-navigation/default.html",
+  "title": "Side Navigation",
+  "uswdsComponentType": "side-navigation",
+  "uswdsClass": "usa-sidenav",
+  "description": "Hierarchical vertical navigation to place at the side of a page.",
+  "section": "navigation",
+  "variant": "default",
+  "useWhen": [
+    "Deep site hierarchies requiring side navigation",
+    "Content organized in categories and subcategories",
+    "Applications with multiple sections requiring persistent navigation",
+    "When primary navigation is already in header"
+  ],
+  "avoidWhen": [
+    "Simple sites with flat hierarchies",
+    "Mobile-first designs (side navs collapse poorly)",
+    "Single-level navigation (breadcrumb is simpler)"
+  ],
+  "agentPrompt": "Add usa-sidenav__sublist for nested navigation items. Update link text and hrefs. Add usa-current to active page link. Group related links in nested lists.",
+  "editableAreas": [
+    "Nav link text and href URLs",
+    "usa-current class on active item",
+    "Nested list structure for sub-navigation",
+    "Group labels (use span.usa-sidenav__category)"
+  ],
+  "preserveElements": [
+    "nav.usa-sidenav with aria-label",
+    "ul.usa-sidenav__list for nav items",
+    "li.usa-sidenav__item for each item",
+    "a.usa-sidenav__link for links",
+    "a.usa-current for active item",
+    "span.usa-sidenav__category for group labels"
+  ],
+  "knownLimitations": [
+    "Side navigation typically hidden on mobile",
+    "Deep nesting (>3 levels) creates UX problems",
+    "Active state styling requires usa-current class"
+  ],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click", "focus", "keyboard"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "sub-list"],
+  "settings": ["$theme-sidenav-border-radius"],
+  "relatedComponents": ["header", "breadcrumb", "in-page-navigation"],
+  "tokenOverrides": ["$theme-sidenav-border-radius", "$theme-sidenav-link-color"],
+  "tags": ["sidenav", "side-nav", "navigation", "sidebar", "vertical", "menu", "hierarchical"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+</style>
+</head>
+<body>
+<nav class="usa-sidenav" aria-label="Side navigation">
+  <ul class="usa-sidenav__list">
+    <li class="usa-sidenav__item">
+      <a class="usa-current" href="#">Current Page</a>
+    </li>
+    <li class="usa-sidenav__item">
+      <a href="#">Parent Link</a>
+    </li>
+    <li class="usa-sidenav__item">
+      <a href="#">Another Link</a>
+    </li>
+    <li class="usa-sidenav__item">
+      <a href="#">Yet Another Link</a>
+    </li>
+  </ul>
+</nav>
+<div class="cap">Side Navigation default</div>
+</body>
+</html>

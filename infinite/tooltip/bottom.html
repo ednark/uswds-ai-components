@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Tooltip bottom variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Tooltip (Bottom)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "tooltip/bottom.html",
+  "title": "Tooltip (Bottom)",
+  "uswdsComponentType": "tooltip",
+  "uswdsClass": "usa-tooltip--bottom",
+  "description": "Tooltip that appears below the trigger element.",
+  "section": "supporting",
+  "variant": "bottom",
+  "useWhen": ["Below-chart labels", "Top-of-element triggers", "When top position has limited space"],
+  "avoidWhen": ["Long content", "Mobile touch interfaces", "Critical information"],
+  "agentPrompt": "Add usa-tooltip--bottom class and data-position=\"bottom\" attribute.",
+  "editableAreas": ["Tooltip text content", "Trigger element"],
+  "preserveElements": ["span.usa-tooltip__trigger", "span.usa-tooltip"],
+  "knownLimitations": ["JavaScript required", "May be obscured by page edges on small screens"],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["hover", "focus", "click"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "top", "bottom", "left", "right"],
+  "settings": [],
+  "relatedComponents": ["button", "icon"],
+  "tokenOverrides": [],
+  "tags": ["tooltip", "bottom", "hover", "hint"]
+}
+</script>
+</head>
+<body>
+<span class="usa-tooltip__trigger" data-position="bottom" title="Tooltip text">Hover or focus for tooltip</span>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Data Visualizations component for charts and graphs.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Data Visualizations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "data-visualizations/default.html",
+  "title": "Data Visualizations",
+  "uswdsComponentType": "data-visualizations",
+  "uswdsClass": "usa-chart",
+  "description": "Charts and graphs that communicate patterns and relationships in data.",
+  "section": "data-display",
+  "variant": "default",
+  "useWhen": [
+    "Presenting statistical or numerical data",
+    "Showing trends over time",
+    "Comparing values across categories",
+    "When visualization aids understanding of data"
+  ],
+  "avoidWhen": [
+    "Simple single-value displays",
+    "When exact values are more important than patterns",
+    "Non-quantitative content"
+  ],
+  "agentPrompt": "Reference USWDS chart specifications. Use appropriate chart type for data: bar for comparison, line for trends, pie for proportions. Ensure accessible color contrast and provide data table alternatives.",
+  "editableAreas": [
+    "Chart title and axis labels",
+    "Data values and labels",
+    "Chart type selection (bar, line, pie)",
+    "Legend labels"
+  ],
+  "preserveElements": [
+    "figure.usa-chart_container wrapper",
+    "figcaption or aria-label for accessibility",
+    "Data table as alternative (visually hidden)",
+    "usa-chart__caption for description"
+  ],
+  "knownLimitations": [
+    "USWDS doesn't include charting library — reference external or custom",
+    "Data tables must accompany all charts for accessibility",
+    "Color is not the only means of conveying information"
+  ],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["passive", "focus", "hover"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["bar", "line", "pie", "table"],
+  "settings": ["$theme-chart-color"],
+  "relatedComponents": ["table", "card"],
+  "tokenOverrides": ["$theme-chart-color", "$theme-chart-background-color"],
+  "tags": ["chart", "graph", "visualization", "data", "bar", "line", "pie", "table", "stats"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+</style>
+</head>
+<body>
+<figure class="usa-chart-container" aria-label="Sample bar chart">
+  <table class="usa-chart" aria-hidden="true">
+    <caption>Sample bar chart showing quarterly data</caption>
+    <thead>
+      <tr>
+        <th scope="col">Q1</th>
+        <th scope="col">Q2</th>
+        <th scope="col">Q3</th>
+        <th scope="col">Q4</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>10</td>
+        <td>15</td>
+        <td>12</td>
+        <td>18</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p><em>Note: USWDS provides chart wrapper styling; chart rendering requires external library or custom implementation.</em></p>
+<div class="cap">Data Visualizations default</div>
+</body>
+</html>

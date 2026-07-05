@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Identifier with logo variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Identifier (With Logo)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "identifier/with-logo.html",
+  "title": "Identifier (With Logo)",
+  "uswdsComponentType": "identifier",
+  "uswdsClass": "usa-identifier--with-logo",
+  "description": "Identifier component including agency logo.",
+  "section": "supporting",
+  "variant": "with-logo",
+  "useWhen": ["Federal agency websites", "Required for government compliance", "Parent agency identification"],
+  "avoidWhen": ["Non-government sites", "Simple footers"],
+  "agentPrompt": "Use usa-identifier with agency logo section for official identification.",
+  "editableAreas": ["Agency name", "Parent agency info", "Required links"],
+  "preserveElements": ["section.usa-identifier", "div.usa-identifier__logo"],
+  "knownLimitations": ["Required on federal government websites"],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA", "Required by US federal agencies"],
+  "variants": ["default", "with-logo"],
+  "settings": [],
+  "relatedComponents": ["footer", "banner"],
+  "tokenOverrides": [],
+  "tags": ["identifier", "logo", "government", "agency"]
+}
+</script>
+</head>
+<body>
+<section class="usa-identifier" aria-labelledby="identifier-heading">
+  <h2 class="usa-identifier__heading" id="identifier-heading">Agency Identifier</h2>
+  <div class="usa-identifier__logos">
+    <a href="#" class="usa-identifier__logo">
+      <img src="https://designsystem.digital.gov/img/logo-img.png" alt="Agency Logo">
+    </a>
+  </div>
+  <div class="usa-identifier__identity">
+    <p>An official website of [Agency Name]</p>
+  </div>
+</section>
+</body>
+</html>

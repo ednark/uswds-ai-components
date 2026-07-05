@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Modal large variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Modal (Large)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "modal/lg.html",
+  "title": "Modal (Large)",
+  "uswdsComponentType": "modal",
+  "uswdsClass": "usa-modal usa-modal--lg",
+  "description": "Large modal dialog for complex content.",
+  "section": "overlays",
+  "variant": "lg",
+  "useWhen": ["Complex forms in modal", "Detailed content requiring more space", "Multi-step workflows"],
+  "avoidWhen": ["Simple confirmations", "Mobile devices with limited space"],
+  "agentPrompt": "Add usa-modal--lg class to usa-modal for larger dialog.",
+  "editableAreas": ["Modal heading", "Modal body content", "Footer actions"],
+  "preserveElements": ["div.usa-modal", "h2.usa-modal__heading", "div.usa-modal__content", "div.usa-modal__footer"],
+  "knownLimitations": ["JavaScript required for open/close behavior"],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["click", "focus", "keyboard"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "lg"],
+  "settings": ["$theme-modal-lg-max-width"],
+  "relatedComponents": ["alert", "button"],
+  "tokenOverrides": ["$theme-modal-lg-max-width"],
+  "tags": ["modal", "dialog", "lg", "large"]
+}
+</script>
+</head>
+<body>
+<div class="usa-modal" aria-labelledby="modal-lg-heading" aria-describedby="modal-lg-description">
+  <div class="usa-modal__content">
+    <div class="usa-modal__main">
+      <h2 class="usa-modal__heading" id="modal-lg-heading">Large Modal Heading</h2>
+      <p id="modal-lg-description">Large modal body content for complex interactions.</p>
+      <div class="usa-modal__footer">
+        <button class="usa-button">Cancel</button>
+        <button class="usa-button usa-button--primary">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

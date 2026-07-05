@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Tooltip right variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Tooltip (Right)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "tooltip/right.html",
+  "title": "Tooltip (Right)",
+  "uswdsComponentType": "tooltip",
+  "uswdsClass": "usa-tooltip--right",
+  "description": "Tooltip that appears to the right of the trigger element.",
+  "section": "supporting",
+  "variant": "right",
+  "useWhen": ["Left-aligned content triggers", "When other positions are taken", "Inline text tooltips"],
+  "avoidWhen": ["Right page edge content", "Long content", "Critical information"],
+  "agentPrompt": "Add usa-tooltip--right class and data-position=\"right\" attribute.",
+  "editableAreas": ["Tooltip text content", "Trigger element"],
+  "preserveElements": ["span.usa-tooltip__trigger", "span.usa-tooltip"],
+  "knownLimitations": ["May be obscured by page right edge"],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["hover", "focus", "click"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "top", "bottom", "left", "right"],
+  "settings": [],
+  "relatedComponents": ["button", "icon"],
+  "tokenOverrides": [],
+  "tags": ["tooltip", "right", "hover", "hint"]
+}
+</script>
+</head>
+<body>
+<span class="usa-tooltip__trigger" data-position="right" title="Tooltip text">Hover or focus for tooltip</span>
+</body>
+</html>

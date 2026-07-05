@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Collection list variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Collection (List)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "collection/list.html",
+  "title": "Collection (List)",
+  "uswdsComponentType": "collection",
+  "uswdsClass": "usa-collection--list",
+  "description": "Collection component in list layout format.",
+  "section": "data-display",
+  "variant": "list",
+  "useWhen": ["Simple lists", "Document lists", "Minimal presentations"],
+  "avoidWhen": ["Complex multi-item displays", "Card-based layouts"],
+  "agentPrompt": "Add usa-collection--list class to usa-collection for list format.",
+  "editableAreas": ["Collection item titles and descriptions"],
+  "preserveElements": ["ul.usa-collection", "li.usa-collection__item"],
+  "knownLimitations": [],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["passive", "click"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "list"],
+  "settings": [],
+  "relatedComponents": ["card", "table"],
+  "tokenOverrides": [],
+  "tags": ["collection", "list", "items"]
+}
+</script>
+</head>
+<body>
+<ul class="usa-collection usa-collection--list">
+  <li class="usa-collection__item">
+    <div class="usa-collection__body">
+      <h3 class="usa-collection__heading"><a href="#">Collection list item one</a></h3>
+      <p class="usa-collection__description">Description of the first collection item.</p>
+    </div>
+  </li>
+  <li class="usa-collection__item">
+    <div class="usa-collection__body">
+      <h3 class="usa-collection__heading"><a href="#">Collection list item two</a></h3>
+      <p class="usa-collection__description">Description of the second collection item.</p>
+    </div>
+  </li>
+</ul>
+</body>
+</html>

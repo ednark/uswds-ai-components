@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Link external variant for offsite links.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Link (External)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "link/external.html",
+  "title": "Link (External)",
+  "uswdsComponentType": "link",
+  "uswdsClass": "usa-link--external",
+  "description": "External link styling with indicator for offsite links.",
+  "section": "navigation",
+  "variant": "external",
+  "useWhen": ["Links to other domains", "Offsite navigation", "External resources"],
+  "avoidWhen": ["Internal links", "Same-site navigation"],
+  "agentPrompt": "Add usa-link--external class to links that go to external sites.",
+  "editableAreas": ["Link text", "href URL"],
+  "preserveElements": ["a.usa-link"],
+  "knownLimitations": ["Should not be used for internal navigation"],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click", "hover", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "external", "download"],
+  "settings": [],
+  "relatedComponents": ["icon", "header"],
+  "tokenOverrides": [],
+  "tags": ["link", "external", "offsite"]
+}
+</script>
+</head>
+<body>
+<p><a href="https://www.example.com" class="usa-link usa-link--external">Visit external website</a></p>
+</body>
+</html>

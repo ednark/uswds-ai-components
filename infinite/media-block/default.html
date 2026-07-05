@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Media Block for image + text combinations.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Media Block</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "media-block/default.html",
+  "title": "Media Block",
+  "uswdsComponentType": "media-block",
+  "uswdsClass": "usa-media-block",
+  "description": "Layout component pairing an image with body text, used in banners and informational displays.",
+  "section": "layout",
+  "variant": "default",
+  "useWhen": ["Image + text side-by-side", "Banner content", "Informational displays with icons"],
+  "avoidWhen": ["Pure text content", "Decorative images only"],
+  "agentPrompt": "Use div.usa-media-block__img for image and div.usa-media-block__body for text. Image floats left.",
+  "editableAreas": ["Image src and alt", "Body text content"],
+  "preserveElements": ["div.usa-media-block__img", "div.usa-media-block__body"],
+  "knownLimitations": [],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["passive"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default"],
+  "settings": [],
+  "relatedComponents": ["banner", "card", "icon-list"],
+  "tokenOverrides": [],
+  "tags": ["media-block", "image", "text", "layout"]
+}
+</script>
+</head>
+<body>
+<div class="usa-media-block">
+  <img class="usa-media-block__img" src="icon.svg" alt="" aria-hidden="true">
+  <div class="usa-media-block__body">
+    <p>Body text that appears next to the image.</p>
+  </div>
+</div>
+</body>
+</html>

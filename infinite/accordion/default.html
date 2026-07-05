@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Accordion component demonstrating borderless style with expand/collapse behavior.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Accordion (Default)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "accordion/default.html",
+  "title": "Accordion (Default)",
+  "uswdsComponentType": "accordion",
+  "uswdsClass": "usa-accordion",
+  "description": "A list of headers that hide or reveal additional content when selected. Borderless variant.",
+  "section": "utilities",
+  "variant": "default",
+  "useWhen": [
+    "Users only need a few specific pieces of content within a page",
+    "There is limited space to display a lot of content",
+    "Information can be organized into clear categories",
+    "Progressive disclosure helps users understand complex processes"
+  ],
+  "avoidWhen": [
+    "Users need to see most or all of the information at once",
+    "Content is brief and doesn't need condensing",
+    "Cognitive load from deciding which headers to click is too high"
+  ],
+  "agentPrompt": "Change button text to 'Section Title', update aria-controls to match content id, add additional accordion sections by duplicating the h4.usa-accordion__heading and div.usa-accordion__content pairs.",
+  "editableAreas": [
+    "Accordion button text (usa-accordion__button content)",
+    "Accordion content text (usa-accordion__content prose)",
+    "aria-expanded initial state (true/false)",
+    "aria-controls ID values (must match content div id)",
+    "Section order and grouping"
+  ],
+  "preserveElements": [
+    "usa-accordion wrapper class",
+    "h4.usa-accordion__heading wrapper",
+    "button.usa-accordion__button with type='button'",
+    "aria-expanded and aria-controls attributes",
+    "div.usa-accordion__content wrapper",
+    "Unique IDs for each aria-controls/content pair"
+  ],
+  "knownLimitations": [
+    "JavaScript required for expand/collapse behavior",
+    "Do not set hidden attribute manually on content areas — component manages this",
+    "Screen readers announce button state changes via aria-expanded"
+  ],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["click", "keyboard"],
+  "a11y": {
+    "wcag21AA": true,
+    "keyboardNav": true,
+    "screenReader": true,
+    "reducedMotion": true,
+    "forcedColors": true,
+    "ariaAttributes": true
+  },
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "bordered", "multiselectable"],
+  "settings": ["$theme-accordion-background-color", "$theme-accordion-border-width", "$theme-accordion-button-background-color"],
+  "relatedComponents": ["process-list", "summary-box"],
+  "tokenOverrides": ["$theme-accordion-background-color", "$theme-accordion-border-color"],
+  "tags": ["accordion", "expand", "collapse", "disclosure", "faq", "navigation"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+</style>
+</head>
+<body>
+<h3 class="site-preview-heading">Default</h3>
+<div class="usa-accordion">
+  <h4 class="usa-accordion__heading">
+    <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="errored-content">
+      First Amendment
+    </button>
+  </h4>
+  <div id="errored-content" class="usa-accordion__content usa-prose">
+    <p>Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.</p>
+  </div>
+  <h4 class="usa-accordion__heading">
+    <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="errored-content-b">
+      Second Amendment
+    </button>
+  </h4>
+  <div id="errored-content-b" class="usa-accordion__content usa-prose">
+    <p>A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed.</p>
+  </div>
+  <h4 class="usa-accordion__heading">
+    <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="errored-content-c">
+      Third Amendment
+    </button>
+  </h4>
+  <div id="errored-content-c" class="usa-accordion__content usa-prose">
+    <p>No Soldier shall, in time of peace be quartered in any house, without the consent of the Owner, nor in time of war, but in a manner to be prescribed by law.</p>
+  </div>
+</div>
+<div class="cap">Accordion default</div>
+</body>
+</html>

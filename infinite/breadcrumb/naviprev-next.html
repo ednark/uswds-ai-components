@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Breadcrumb naviprev-next variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Breadcrumb (Naviprev Next)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "breadcrumb/naviprev-next.html",
+  "title": "Breadcrumb (Naviprev Next)",
+  "uswdsComponentType": "breadcrumb",
+  "uswdsClass": "usa-breadcrumb--naviprev-next",
+  "description": "Breadcrumb variant showing previous and next navigation only.",
+  "section": "navigation",
+  "variant": "naviprev-next",
+  "useWhen": ["Linear content sequences", "Articles with prev/next", "Wizard-style flows"],
+  "avoidWhen": ["Hierarchical site structures", "Deep navigation trails"],
+  "agentPrompt": "Add usa-breadcrumb--naviprev-next class. Shows only prev/next links, no full path.",
+  "editableAreas": ["Previous link text and href", "Next link text and href"],
+  "preserveElements": ["nav.usa-breadcrumb", "ul.usa-breadcrumb__list"],
+  "knownLimitations": ["Loses context of full navigation path"],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "wrap", "naviprev-next"],
+  "settings": [],
+  "relatedComponents": ["header", "link", "pagination"],
+  "tokenOverrides": [],
+  "tags": ["breadcrumb", "naviprev-next", "prev-next", "linear"]
+}
+</script>
+</head>
+<body>
+<nav class="usa-breadcrumb usa-breadcrumb--naviprev-next" aria-label="Breadcrumb">
+  <ul class="usa-breadcrumb__list">
+    <li class="usa-breadcrumb__list-item">
+      <a class="usa-breadcrumb__link" href="#">
+        <span aria-hidden="true">&larr;</span>
+        <span>Previous: Introduction</span>
+      </a>
+    </li>
+    <li class="usa-breadcrumb__list-item">
+      <a class="usa-breadcrumb__link" href="#">
+        <span>Next: Getting Started</span>
+        <span aria-hidden="true">&rarr;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+</body>
+</html>

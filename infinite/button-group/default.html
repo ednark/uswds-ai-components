@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Button Group for grouping related buttons together.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Button Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "button-group/default.html",
+  "title": "Button Group",
+  "uswdsComponentType": "button-group",
+  "uswdsClass": "usa-button-group",
+  "description": "Groups related buttons together for similar or related actions.",
+  "section": "utilities",
+  "variant": "default",
+  "useWhen": [
+    "Multiple related actions that need to be visually connected",
+    "Progressive disclosure of options",
+    "Action toolbars with multiple choices",
+    "When buttons belong together conceptually"
+  ],
+  "avoidWhen": [
+    "Unrelated actions that shouldn't be grouped",
+    "Too many buttons that overwhelm the UI",
+    "Mobile interfaces where button groups become cramped"
+  ],
+  "agentPrompt": "Add usa-button-group__segmented for segmented button group. Wrap each button in li.usa-button-group__item. Use appropriate button variants within the group. Ensure consistent button sizing.",
+  "editableAreas": [
+    "Button labels and actions",
+    "Button variants (outline, secondary, etc.)",
+    "Grouped vs segmented styling",
+    "Button sizes"
+  ],
+  "preserveElements": [
+    "ol or ul.usa-button-group with role='group'",
+    "li.usa-button-group__item for each button",
+    "button.usa-button within buttons",
+    "aria-label on group for accessibility",
+    "usa-button-group__segmented for segmented variant"
+  ],
+  "knownLimitations": [
+    "Segmented buttons require JavaScript for active states",
+    "All buttons in group should be same size",
+    "Mobile may require button wrapping"
+  ],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click", "focus", "hover"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "segmented"],
+  "settings": ["$theme-button-group-border-radius"],
+  "relatedComponents": ["button", "link"],
+  "tokenOverrides": ["$theme-button-group-border-radius"],
+  "tags": ["button-group", "buttons", "group", "toolbar", "actions", "segmented"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+</style>
+</head>
+<body>
+<ul class="usa-button-group" role="group">
+  <li class="usa-button-group__item">
+    <button class="usa-button" type="button">Save</button>
+  </li>
+  <li class="usa-button-group__item">
+    <button class="usa-button usa-button--outline" type="button">Cancel</button>
+  </li>
+  <li class="usa-button-group__item">
+    <button class="usa-button usa-button--outline" type="button">Delete</button>
+  </li>
+</ul>
+<div class="cap">Button Group default</div>
+</body>
+</html>

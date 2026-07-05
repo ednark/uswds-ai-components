@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Summary box error variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Summary Box (Error)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "summary-box/error.html",
+  "title": "Summary Box (Error)",
+  "uswdsComponentType": "summary-box",
+  "uswdsClass": "usa-summary-box--error",
+  "description": "Summary box with error styling for validation errors.",
+  "section": "supporting",
+  "variant": "error",
+  "useWhen": ["Form validation errors", "Error summaries at top of forms", "Multiple error reporting"],
+  "avoidWhen": ["Pure informational content", "Success messages", "Warnings that don't block progress"],
+  "agentPrompt": "Add usa-summary-box--error class to usa-summary-box. Use for form error summaries.",
+  "editableAreas": ["Summary box heading", "Error list items with links to fields"],
+  "preserveElements": ["div.usa-summary-box usa-summary-box--error", "h3.usa-summary-box__heading", "ul.usa-list"],
+  "knownLimitations": [],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["passive"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "info", "warning", "error"],
+  "settings": [],
+  "relatedComponents": ["alert", "validation"],
+  "tokenOverrides": [],
+  "tags": ["summary-box", "error", "validation", "form"]
+}
+</script>
+</head>
+<body>
+<div class="usa-summary-box usa-summary-box--error" role="region" aria-labelledby="summary-box-error-heading">
+  <div class="usa-summary-box__body">
+    <h3 class="usa-summary-box__heading" id="summary-box-error-heading">Error Summary</h3>
+    <ul class="usa-list">
+      <li><a href="#field1">Error 1: Please enter your name</a></li>
+      <li><a href="#field2">Error 2: Please enter a valid email</a></li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

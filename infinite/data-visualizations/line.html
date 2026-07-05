@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Data visualizations line chart variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Data Visualizations (Line)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "data-visualizations/line.html",
+  "title": "Data Visualizations (Line)",
+  "uswdsComponentType": "data-visualizations",
+  "uswdsClass": "usa-chart-data",
+  "description": "Line chart visualization for time series data.",
+  "section": "data-display",
+  "variant": "line",
+  "useWhen": ["Time series data", "Trends over time", "Showing changes between periods"],
+  "avoidWhen": ["Categorical comparisons", "Part-to-whole relationships"],
+  "agentPrompt": "Use figure.usa-chart-container with canvas or SVG for line charts. Include legend.",
+  "editableAreas": ["Chart data labels", "Axis labels", "Legend items"],
+  "preserveElements": ["figure.usa-chart-container", "canvas or svg", "ul.usa-legend"],
+  "knownLimitations": ["JavaScript library needed for dynamic charts"],
+  "tier": "curated",
+  "requiresJs": "optional",
+  "interaction": ["hover", "focus", "click"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "bar", "line", "pie"],
+  "settings": [],
+  "relatedComponents": ["table", "collection"],
+  "tokenOverrides": [],
+  "tags": ["data-visualizations", "line", "chart", "trend"]
+}
+</script>
+</head>
+<body>
+<figure class="usa-chart-container">
+  <canvas id="lineChart" role="img" aria-label="Line chart showing sample data"></canvas>
+  <ul class="usa-legend">
+    <li><span class="usa-legend__color" style="background: #005ea2;"></span> Series A</li>
+    <li><span class="usa-legend__color" style="background: #71767a;"></span> Series B</li>
+  </ul>
+</figure>
+</body>
+</html>

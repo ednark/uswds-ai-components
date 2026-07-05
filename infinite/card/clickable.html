@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Card clickable variant where entire card is a link.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Card (Clickable)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "card/clickable.html",
+  "title": "Card (Clickable)",
+  "uswdsComponentType": "card",
+  "uswdsClass": "usa-card__container make-link",
+  "description": "Card variant where the entire card container is clickable as a single link.",
+  "section": "data-display",
+  "variant": "clickable",
+  "useWhen": ["Topic cards on landing pages", "Navigation cards", "When entire card should be clickable"],
+  "avoidWhen": ["Cards with multiple actions", "Cards with non-link content only"],
+  "agentPrompt": "Add make-link class to usa-card__container. Place an <a> tag wrapping the card header or body content. The entire card becomes clickable.",
+  "editableAreas": ["Card heading", "Card body text", "Link href", "Card image"],
+  "preserveElements": ["li.usa-card", "div.usa-card__container.make-link", "a.card-link", "header.usa-card__header", "div.usa-card__body"],
+  "knownLimitations": ["Entire card is one link - can't have multiple actions", "Need text-no-underline on link to remove underline"],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click", "hover", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "flag", "media", "inset", "header-flag", "group", "clickable"],
+  "settings": ["$theme-card-border-radius", "$theme-card-gap"],
+  "relatedComponents": ["collection", "link"],
+  "tokenOverrides": ["$theme-card-border-radius", "$theme-card-gap"],
+  "tags": ["card", "clickable", "link", "navigation", "make-link"]
+}
+</script>
+</head>
+<body>
+<ul class="usa-card-group">
+  <li class="desktop:grid-col-4 usa-card">
+    <div class="usa-card__container make-link">
+      <div class="usa-card__media">
+        <div class="usa-card__img" style="background: linear-gradient(135deg, #667eea, #764ba2); height: 150px;"></div>
+      </div>
+      <header class="usa-card__header">
+        <a href="/topic-one" class="text-no-underline card-link" title="Topic One">
+          <h2 class="usa-card__heading">Clickable Card Heading</h2>
+        </a>
+      </header>
+      <div class="usa-card__body">
+        <p>The entire card is clickable. The heading wraps a link that makes the whole card navigate.</p>
+      </div>
+    </div>
+  </li>
+</ul>
+</body>
+</html>

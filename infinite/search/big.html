@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Search big variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Search (Big)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "search/big.html",
+  "title": "Search (Big)",
+  "uswdsComponentType": "search",
+  "uswdsClass": "usa-search--big",
+  "description": "Large search input with prominent button.",
+  "section": "forms",
+  "variant": "big",
+  "useWhen": ["Homepage search", "Prominent search functionality", "User expectation of search on entry"],
+  "avoidWhen": ["Inline or secondary search", "Mobile interfaces with limited space"],
+  "agentPrompt": "Add usa-search--big class to usa-search. Larger input and button.",
+  "editableAreas": ["Search label", "Search placeholder", "Submit button text"],
+  "preserveElements": ["form.usa-search", "input.usa-search__input", "button.usa-search__submit"],
+  "knownLimitations": ["Takes significant horizontal space"],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["focus", "input", "submit"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "big", "small"],
+  "settings": ["$theme-search-input-width"],
+  "relatedComponents": ["text-input", "button"],
+  "tokenOverrides": ["$theme-search-input-width"],
+  "tags": ["search", "big", "large", "prominent"]
+}
+</script>
+</head>
+<body>
+<form class="usa-search usa-search--big" role="search">
+  <label class="usa-sr-only" for="search-field-big">Search</label>
+  <input class="usa-input" type="search" id="search-field-big" name="search" placeholder="Search">
+  <button class="usa-button" type="submit">
+    <span class="usa-search__submit-text">Search</span>
+  </button>
+</form>
+</body>
+</html>

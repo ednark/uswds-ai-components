@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Date picker large variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Date Picker (Large)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "date-picker/lg.html",
+  "title": "Date Picker (Large)",
+  "uswdsComponentType": "date-picker",
+  "uswdsClass": "usa-date-picker--lg",
+  "description": "Large date picker variant with enhanced touch targets.",
+  "section": "forms",
+  "variant": "lg",
+  "useWhen": ["Mobile forms", "Touch-friendly date selection", "Prominent date fields"],
+  "avoidWhen": ["Dense forms", "Desktop with keyboard entry preferred"],
+  "agentPrompt": "Add usa-date-picker--lg class to usa-date-picker for larger variant.",
+  "editableAreas": ["Date picker label", "Date input field"],
+  "preserveElements": ["div.usa-date-picker", "input.usa-date-picker__external-input"],
+  "knownLimitations": ["JavaScript required for calendar functionality"],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["click", "select", "type"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "lg"],
+  "settings": [],
+  "relatedComponents": ["text-input", "combo-box"],
+  "tokenOverrides": [],
+  "tags": ["date-picker", "lg", "large", "calendar"]
+}
+</script>
+</head>
+<body>
+<div class="usa-form-group">
+  <label class="usa-label" for="date-picker-lg">Large date picker</label>
+  <div class="usa-date-picker usa-date-picker--lg">
+    <input class="usa-input" id="date-picker-lg" name="date-picker-lg" type="text" aria-label="Enter date">
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Summary Box for highlighting key information or next steps.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Summary Box</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "summary-box/default.html",
+  "title": "Summary Box",
+  "uswdsComponentType": "summary-box",
+  "uswdsClass": "usa-summary-box",
+  "description": "Highlights key information from a longer page or displays next steps.",
+  "section": "feedback",
+  "variant": "default",
+  "useWhen": [
+    "Summarizing key takeaways at the end of content",
+    "Displaying next steps or action items",
+    "Highlighting important warnings or requirements",
+    "Recapping form submission results"
+  ],
+  "avoidWhen": [
+    "Inline within body text (use alert instead)",
+    "Non-essential information that doesn't need emphasis",
+    "Complex data that doesn't benefit from summarization"
+  ],
+  "agentPrompt": "Add usa-summary-box--info, usa-summary-box--warning, or usa-summary-box--error for variants. Update heading and body content. Use for key takeaways, not detailed explanations.",
+  "editableAreas": [
+    "Summary box heading",
+    "Summary content (list or prose)",
+    "Variant: default, info, warning, or error"
+  ],
+  "preserveElements": [
+    "div.usa-summary-box wrapper",
+    "div.usa-summary-box__body",
+    "h3.usa-summary-box__heading for title",
+    "ul.usa-summary-box__list for list content",
+    "Role and aria-labelledby for accessibility"
+  ],
+  "knownLimitations": [
+    "Not for inline use — use alert for that",
+    "Variants provide different severity styling",
+    "Should not be used for critical errors (use alert--error)"
+  ],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["passive", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": false, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "info", "warning", "error"],
+  "settings": ["$theme-summary-box-border-radius"],
+  "relatedComponents": ["alert", "process-list", "validation"],
+  "tokenOverrides": ["$theme-summary-box-border-radius", "$theme-summary-box-background-color"],
+  "tags": ["summary", "recap", "key-points", "takeaways", "next-steps", "box", "highlight"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .demo-section {
+    max-width: 600px;
+  }
+</style>
+</head>
+<body>
+<div class="demo-section">
+  <div class="usa-summary-box" role="region" aria-labelledby="summary-heading">
+    <div class="usa-summary-box__body">
+      <h3 class="usa-summary-box__heading" id="summary-heading">Key takeaways</h3>
+      <div class="usa-summary-box__text">
+        <ul class="usa-list">
+          <li>First important point about this content</li>
+          <li>Second key takeaway for users</li>
+          <li>Third summary item</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="cap">Summary Box default</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Table borderless variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Table (Borderless)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "table/borderless.html",
+  "title": "Table (Borderless)",
+  "uswdsComponentType": "table",
+  "uswdsClass": "usa-table--borderless",
+  "description": "Table without visible borders for cleaner visual design.",
+  "section": "data-display",
+  "variant": "borderless",
+  "useWhen": ["Clean, minimal data display", "Dashboards", "When grid lines distract"],
+  "avoidWhen": ["Need clear row separation", "Dense data requiring visual guides"],
+  "agentPrompt": "Add usa-table--borderless class to usa-table. Removes all borders.",
+  "editableAreas": ["Table headers", "Table data cells", "Caption if needed"],
+  "preserveElements": ["table.usa-table", "thead", "tbody", "tr", "th", "td"],
+  "knownLimitations": ["Row boundaries less clear without borders"],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["passive"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "borderless", "striped", "scrollable", "stacked"],
+  "settings": [],
+  "relatedComponents": ["card", "collection"],
+  "tokenOverrides": [],
+  "tags": ["table", "borderless", "clean", "minimal"]
+}
+</script>
+</head>
+<body>
+<table class="usa-table usa-table--borderless">
+  <thead>
+    <tr>
+      <th>Column A</th>
+      <th>Column B</th>
+      <th>Column C</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Data A1</td>
+      <td>Data B1</td>
+      <td>Data C1</td>
+    </tr>
+    <tr>
+      <td>Data A2</td>
+      <td>Data B2</td>
+      <td>Data C2</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

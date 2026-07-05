@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Prose component for rich text content areas.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Prose</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "prose.html",
+  "title": "Prose",
+  "uswdsComponentType": "prose",
+  "uswdsClass": "usa-prose",
+  "description": "Prose wrapper for applying USWDS typography styles to content areas.",
+  "section": "typography",
+  "variant": "default",
+  "useWhen": ["Article content", "Documentation pages", "Rich text areas"],
+  "avoidWhen": ["UI components", "Dashboard interfaces", "Minimal styling needed"],
+  "agentPrompt": "Add usa-prose class to a container div to apply USWDS typography scale.",
+  "editableAreas": ["All heading, paragraph, and list content within"],
+  "preserveElements": ["div.usa-prose", "h1-h6", "p", "ul", "ol", "li"],
+  "knownLimitations": [],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["passive"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default"],
+  "settings": ["$theme-lead-font-family", "$theme-type-scale"],
+  "relatedComponents": ["typography", "link", "list"],
+  "tokenOverrides": ["$theme-lead-font-family", "$theme-type-scale"],
+  "tags": ["prose", "typography", "content", "text"]
+}
+</script>
+</head>
+<body>
+<div class="usa-prose">
+  <h1>Heading One</h1>
+  <p class="usa-intro">Intro paragraph with larger text for leading content.</p>
+  <h2>Heading Two</h2>
+  <p>Regular paragraph text that follows headings. The prose class applies consistent typography.</p>
+  <h3>Heading Three</h3>
+  <p>More paragraph content with <a href="#" class="usa-link">a link</a> embedded within it.</p>
+  <ul class="usa-list">
+    <li>List item one</li>
+    <li>List item two</li>
+  </ul>
+</div>
+</body>
+</html>

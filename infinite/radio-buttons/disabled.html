@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Radio button disabled variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Radio Button (Disabled)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "radio-buttons/disabled.html",
+  "title": "Radio Button (Disabled)",
+  "uswdsComponentType": "radio-buttons",
+  "uswdsClass": "usa-radio__input--disabled",
+  "description": "Radio button in disabled state.",
+  "section": "forms",
+  "variant": "disabled",
+  "useWhen": ["Conditional selections", "Pre-selected read-only options", "Form steps"],
+  "avoidWhen": ["Active user selection"],
+  "agentPrompt": "Add disabled attribute to radio input.",
+  "editableAreas": ["Label only (radio not editable)"],
+  "preserveElements": ["input.usa-radio__input[disabled]", "label.usa-radio__label"],
+  "knownLimitations": ["Not focusable by keyboard"],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["passive"],
+  "a11y": {"wcag21AA": true, "keyboardNav": false, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "tile", "error", "success", "disabled"],
+  "settings": [],
+  "relatedComponents": ["radio-buttons"],
+  "tokenOverrides": [],
+  "tags": ["radio", "disabled", "readonly"]
+}
+</script>
+</head>
+<body>
+<fieldset class="usa-fieldset">
+  <legend class="usa-legend">Radio options</legend>
+  <div class="usa-radio__group">
+    <input class="usa-radio__input" id="radio-disabled" type="radio" name="radio-disabled" value="1" disabled checked>
+    <label class="usa-radio__label" for="radio-disabled">Disabled radio (pre-selected)</label>
+  </div>
+</fieldset>
+</body>
+</html>

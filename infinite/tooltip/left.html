@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Tooltip left variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Tooltip (Left)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "tooltip/left.html",
+  "title": "Tooltip (Left)",
+  "uswdsComponentType": "tooltip",
+  "uswdsClass": "usa-tooltip--left",
+  "description": "Tooltip that appears to the left of the trigger element.",
+  "section": "supporting",
+  "variant": "left",
+  "useWhen": ["Right-aligned content triggers", "When above/below positions are taken", "Table cell tooltips"],
+  "avoidWhen": ["Left page edge content", "Long content", "Critical information"],
+  "agentPrompt": "Add usa-tooltip--left class and data-position=\"left\" attribute.",
+  "editableAreas": ["Tooltip text content", "Trigger element"],
+  "preserveElements": ["span.usa-tooltip__trigger", "span.usa-tooltip"],
+  "knownLimitations": ["May be obscured by page left edge"],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["hover", "focus", "click"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "top", "bottom", "left", "right"],
+  "settings": [],
+  "relatedComponents": ["button", "icon"],
+  "tokenOverrides": [],
+  "tags": ["tooltip", "left", "hover", "hint"]
+}
+</script>
+</head>
+<body>
+<span class="usa-tooltip__trigger" data-position="left" title="Tooltip text">Hover or focus for tooltip</span>
+</body>
+</html>

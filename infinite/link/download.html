@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Link download variant for downloadable files.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Link (Download)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "link/download.html",
+  "title": "Link (Download)",
+  "uswdsComponentType": "link",
+  "uswdsClass": "usa-link--download",
+  "description": "Download link styling for file downloads.",
+  "section": "navigation",
+  "variant": "download",
+  "useWhen": ["File downloads", "PDF links", "Document links"],
+  "avoidWhen": ["Web page links", "Same-page anchors"],
+  "agentPrompt": "Add usa-link--download class to links that trigger file downloads.",
+  "editableAreas": ["Link text", "href URL", "download attribute"],
+  "preserveElements": ["a.usa-link"],
+  "knownLimitations": ["Include file type and size in link text when possible"],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click", "hover", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "external", "download"],
+  "settings": [],
+  "relatedComponents": ["icon", "file-input"],
+  "tokenOverrides": [],
+  "tags": ["link", "download", "file", "pdf"]
+}
+</script>
+</head>
+<body>
+<p><a href="document.pdf" class="usa-link usa-link--download" download>Download the PDF report (2.4 MB)</a></p>
+</body>
+</html>

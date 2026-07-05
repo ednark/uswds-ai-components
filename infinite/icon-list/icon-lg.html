@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Icon list large variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Icon List (Icon Large)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "icon-list/icon-lg.html",
+  "title": "Icon List (Icon Large)",
+  "uswdsComponentType": "icon-list",
+  "uswdsClass": "usa-icon-list--icon-lg",
+  "description": "Icon list with larger icon size for emphasis.",
+  "section": "data-display",
+  "variant": "icon-lg",
+  "useWhen": ["Featured lists", "Landing page content", "When icons need more prominence"],
+  "avoidWhen": ["Dense content", "Mobile with limited space"],
+  "agentPrompt": "Add usa-icon-list--icon-lg class to usa-icon-list. Larger icons.",
+  "editableAreas": ["List item text", "Icon content"],
+  "preserveElements": ["ul.usa-icon-list usa-icon-list--icon-lg", "li.usa-icon-list__item"],
+  "knownLimitations": ["Takes more vertical space"],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["passive"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "checklist", "icon-lg"],
+  "settings": [],
+  "relatedComponents": ["list", "process-list"],
+  "tokenOverrides": [],
+  "tags": ["icon-list", "icon-lg", "large", "featured"]
+}
+</script>
+</head>
+<body>
+<ul class="usa-icon-list usa-icon-list--icon-lg">
+  <li class="usa-icon-list__item">
+    <div class="usa-icon-list__icon"><svg class="usa-icon" aria-hidden="true" role="img"><use xlink:href="#arrow-right"></use></svg></div>
+    <div class="usa-icon-list__content">List item with large icon</div>
+  </li>
+  <li class="usa-icon-list__item">
+    <div class="usa-icon-list__icon"><svg class="usa-icon" aria-hidden="true" role="img"><use xlink:href="#arrow-right"></use></svg></div>
+    <div class="usa-icon-list__content">Another list item</div>
+  </li>
+</ul>
+</body>
+</html>

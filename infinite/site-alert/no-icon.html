@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Site alert no-icon variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Site Alert (No Icon)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "site-alert/no-icon.html",
+  "title": "Site Alert (No Icon)",
+  "uswdsComponentType": "site-alert",
+  "uswdsClass": "usa-site-alert--no-icon",
+  "description": "Site alert without the default icon.",
+  "section": "notifications",
+  "variant": "no-icon",
+  "useWhen": ["Minimal alert styling", "When icons don't fit design", "Custom styled alerts"],
+  "avoidWhen": ["Standard alert presentation", "When icons aid quick recognition"],
+  "agentPrompt": "Add usa-site-alert--no-icon class to remove the default icon.",
+  "editableAreas": ["Alert heading", "Alert body text"],
+  "preserveElements": ["div.usa-site-alert usa-site-alert--no-icon", "div.usa-alert__body"],
+  "knownLimitations": ["Less scannable without icon"],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["dismiss"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "emergency", "no-icon"],
+  "settings": [],
+  "relatedComponents": ["alert", "banner"],
+  "tokenOverrides": [],
+  "tags": ["site-alert", "no-icon", "minimal"]
+}
+</script>
+</head>
+<body>
+<div class="usa-site-alert usa-site-alert--no-icon">
+  <div class="usa-alert">
+    <div class="usa-alert__body">
+      <p class="usa-alert__text">This site alert has no icon.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

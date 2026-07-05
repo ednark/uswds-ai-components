@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Footer collapsible variant with collapsible primary sections.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Footer (Collapsible)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "footer/collapsible.html",
+  "title": "Footer (Collapsible)",
+  "uswdsComponentType": "footer",
+  "uswdsClass": "usa-footer__primary-content--collapsible",
+  "description": "Footer with collapsible primary content sections for mobile-friendly navigation.",
+  "section": "layout",
+  "variant": "collapsible",
+  "useWhen": ["Big footer with many links", "Mobile-responsive footers", "Government sites with extensive nav"],
+  "avoidWhen": ["Simple footers", "Slim footer variants"],
+  "agentPrompt": "Add usa-footer__primary-content--collapsible class to each section in usa-footer--big. Collapses on mobile.",
+  "editableAreas": ["Section headings", "Link lists within each section"],
+  "preserveElements": ["section.usa-footer__primary-content--collapsible", "h3.usa-footer__primary-link", "ul.usa-list--unstyled"],
+  "knownLimitations": ["JavaScript may be needed for toggle on mobile"],
+  "tier": "curated",
+  "requiresJs": "optional",
+  "interaction": ["click", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "slim", "big", "collapsible"],
+  "settings": ["$theme-footer-font-family"],
+  "relatedComponents": ["header", "identifier", "link"],
+  "tokenOverrides": ["$theme-footer-font-family"],
+  "tags": ["footer", "collapsible", "mobile", "responsive", "big"]
+}
+</script>
+</head>
+<body>
+<footer class="usa-footer usa-footer--big">
+  <div class="usa-footer__primary-section">
+    <div class="grid-container">
+      <nav class="usa-footer__nav" aria-label="Footer navigation">
+        <div class="grid-row grid-gap-4">
+          <div class="mobile-lg:grid-col-6 desktop:grid-col-3">
+            <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+              <h3 class="usa-footer__primary-link">Government information</h3>
+              <ul class="usa-list usa-list--unstyled">
+                <li class="usa-footer__secondary-link"><a href="#">All topics</a></li>
+                <li class="usa-footer__secondary-link"><a href="#">Agency directory</a></li>
+              </ul>
+            </section>
+          </div>
+          <div class="mobile-lg:grid-col-6 desktop:grid-col-3">
+            <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+              <h3 class="usa-footer__primary-link">About us</h3>
+              <ul class="usa-list usa-list--unstyled">
+                <li class="usa-footer__secondary-link"><a href="#">About</a></li>
+                <li class="usa-footer__secondary-link"><a href="#">Report issue</a></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

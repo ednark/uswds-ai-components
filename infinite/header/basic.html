@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Header basic variant with minimal navigation.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Header (Basic)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "header/basic.html",
+  "title": "Header (Basic)",
+  "uswdsComponentType": "header",
+  "uswdsClass": "usa-header usa-header--basic",
+  "description": "Header with basic styling, logo and minimal nav.",
+  "section": "navigation",
+  "variant": "basic",
+  "useWhen": ["Simple sites with minimal navigation", "When extended nav isn't needed", "Mobile-friendly basic header"],
+  "avoidWhen": ["Complex multi-section sites", "Sites requiring megamenu"],
+  "agentPrompt": "Add usa-header--basic class to usa-header. Simpler than extended, hides nav on mobile by default.",
+  "editableAreas": ["Agency logo and name", "Nav links", "Search if needed"],
+  "preserveElements": ["header.usa-header usa-header--basic", "div.usa-logo", "nav.usa-nav"],
+  "knownLimitations": ["JavaScript required for mobile menu"],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["click", "hover", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "basic", "extended", "megamenu"],
+  "settings": ["$theme-header-font-family", "$theme-header-logo-width"],
+  "relatedComponents": ["side-navigation", "footer", "search"],
+  "tokenOverrides": ["$theme-header-font-family", "$theme-header-logo-width", "$theme-header-min-width"],
+  "tags": ["header", "basic", "simple", "minimal"]
+}
+</script>
+</head>
+<body>
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+<header class="usa-header usa-header--basic" id="header">
+  <div class="usa-logo">
+    <em class="usa-logo__text">Agency Name</em>
+  </div>
+  <button class="usa-menu-btn">Menu</button>
+  <nav class="usa-nav" aria-label="Main navigation">
+    <ul class="usa-list--unstyled">
+      <li class="usa-nav__primary-item">
+        <a class="usa-nav__link" href="#">Section One</a>
+      </li>
+      <li class="usa-nav__primary-item">
+        <a class="usa-nav__link" href="#">Section Two</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main id="main-content">
+  <p>Main content area</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Checkbox tile variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Checkbox (Tile)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "checkbox/tile.html",
+  "title": "Checkbox (Tile)",
+  "uswdsComponentType": "checkbox",
+  "uswdsClass": "usa-checkbox__input--tile",
+  "description": "Checkbox styled as a large tile for touch-friendly selection.",
+  "section": "forms",
+  "variant": "tile",
+  "useWhen": ["Mobile forms", "Touch-friendly selection", "Large clickable options"],
+  "avoidWhen": ["Dense form layouts", "Standard desktop forms"],
+  "agentPrompt": "Add usa-checkbox__input--tile class to checkbox input.",
+  "editableAreas": ["Checkbox label text", "Optional description"],
+  "preserveElements": ["input.usa-checkbox__input", "label.usa-checkbox__label"],
+  "knownLimitations": [],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "tile", "error", "success", "disabled"],
+  "settings": [],
+  "relatedComponents": ["radio-button", "text-input"],
+  "tokenOverrides": [],
+  "tags": ["checkbox", "tile", "touch", "large"]
+}
+</script>
+</head>
+<body>
+<fieldset class="usa-fieldset">
+  <legend class="usa-legend">Select an option</legend>
+  <div class="usa-checkbox__group">
+    <input class="usa-checkbox__input usa-checkbox__input--tile" id="checkbox-tile-1" type="checkbox" name="checkbox-tile" value="1">
+    <label class="usa-checkbox__label" for="checkbox-tile-1">
+      Tile option one
+    </label>
+  </div>
+  <div class="usa-checkbox__group">
+    <input class="usa-checkbox__input usa-checkbox__input--tile" id="checkbox-tile-2" type="checkbox" name="checkbox-tile" value="2">
+    <label class="usa-checkbox__label" for="checkbox-tile-2">
+      Tile option two
+    </label>
+  </div>
+</fieldset>
+</body>
+</html>

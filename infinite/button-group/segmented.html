@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Button group segmented variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Button Group (Segmented)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "button-group/segmented.html",
+  "title": "Button Group (Segmented)",
+  "uswdsComponentType": "button-group",
+  "uswdsClass": "usa-button-group--segmented",
+  "description": "Segmented button group with connected buttons.",
+  "section": "buttons",
+  "variant": "segmented",
+  "useWhen": ["Toggle actions", "View switches", "Connected related actions"],
+  "avoidWhen": ["Unrelated actions", "Single buttons"],
+  "agentPrompt": "Add usa-button-group--segmented class to usa-button-group. Connected buttons without gaps.",
+  "editableAreas": ["Button labels and texts"],
+  "preserveElements": ["ul.usa-button-group", "li.usa-button-group__item", "button.usa-button"],
+  "knownLimitations": [],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "segmented"],
+  "settings": [],
+  "relatedComponents": ["button"],
+  "tokenOverrides": [],
+  "tags": ["button-group", "segmented", "toggle", "connected"]
+}
+</script>
+</head>
+<body>
+<ul class="usa-button-group usa-button-group--segmented">
+  <li class="usa-button-group__item">
+    <button class="usa-button usa-button--active" type="button">Left</button>
+  </li>
+  <li class="usa-button-group__item">
+    <button class="usa-button" type="button">Center</button>
+  </li>
+  <li class="usa-button-group__item">
+    <button class="usa-button" type="button">Right</button>
+  </li>
+</ul>
+</body>
+</html>

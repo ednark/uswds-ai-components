@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Footer big variant with multiple columns.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Footer (Big)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "footer/big.html",
+  "title": "Footer (Big)",
+  "uswdsComponentType": "footer",
+  "uswdsClass": "usa-footer usa-footer--big",
+  "description": "Large footer with multiple columns for complex site navigation.",
+  "section": "layout",
+  "variant": "big",
+  "useWhen": ["Complex sites with multiple sections", "E-commerce sites", "Sites needing extensive footer navigation"],
+  "avoidWhen": ["Simple sites", "Mobile interfaces"],
+  "agentPrompt": "Add usa-footer--big class to usa-footer. Multiple link columns in header area.",
+  "editableAreas": ["Agency info", "Multiple column links", "Contact information"],
+  "preserveElements": ["footer.usa-footer usa-footer--big", "div.usa-footer__primary-section with columns"],
+  "knownLimitations": ["Takes significant vertical space"],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "slim", "big"],
+  "settings": ["$theme-footer-font-family"],
+  "relatedComponents": ["header", "identifier", "link"],
+  "tokenOverrides": ["$theme-footer-font-family"],
+  "tags": ["footer", "big", "columns", "navigation"]
+}
+</script>
+</head>
+<body>
+<footer class="usa-footer usa-footer--big">
+  <div class="usa-footer__primary-section">
+    <nav class="usa-footer__nav" aria-label="Footer navigation">
+      <div class="usa-footer__grid">
+        <div class="usa-footer__col">
+          <h3 class="usa-footer__heading">Topic One</h3>
+          <ul class="usa-list--unstyled">
+            <li><a href="#">Footer link</a></li>
+            <li><a href="#">Footer link</a></li>
+          </ul>
+        </div>
+        <div class="usa-footer__col">
+          <h3 class="usa-footer__heading">Topic Two</h3>
+          <ul class="usa-list--unstyled">
+            <li><a href="#">Footer link</a></li>
+            <li><a href="#">Footer link</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="usa-footer__secondary-section">
+    <p><a href="#main-content">Return to top</a></p>
+    <p>Agency Name | Washington, DC</p>
+  </div>
+</footer>
+</body>
+</html>

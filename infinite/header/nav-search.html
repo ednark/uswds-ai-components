@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Header with search dropdown panel in navigation.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Header (Nav Search)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "header/nav-search.html",
+  "title": "Header (Nav Search)",
+  "uswdsComponentType": "header",
+  "uswdsClass": "usa-header usa-header--basic",
+  "description": "Header with search icon in navigation that expands to a search dropdown panel.",
+  "section": "navigation",
+  "variant": "nav-search",
+  "useWhen": ["Compact headers", "When search should be in nav not toolbar", "Icon-triggered search"],
+  "avoidWhen": ["When search should always be visible", "Extended headers with search bar"],
+  "agentPrompt": "Add search-container as last usa-nav__primary-item. Use button with search icon that controls a usa-nav__submenu panel containing usa-search form.",
+  "editableAreas": ["Search icon", "Search placeholder text", "Search form action URL"],
+  "preserveElements": ["li.usa-nav__primary-item.search-container", "button.usa-nav__link", "div.usa-nav__submenu", "form.usa-search"],
+  "knownLimitations": ["JavaScript required for toggle", "Extra click to search"],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["click", "focus", "input"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "basic", "extended", "megamenu", "basic-megamenu", "nav-search"],
+  "settings": ["$theme-header-font-family"],
+  "relatedComponents": ["search", "header"],
+  "tokenOverrides": ["$theme-header-font-family"],
+  "tags": ["header", "nav-search", "search", "dropdown", "icon", "navigation"]
+}
+</script>
+</head>
+<body>
+<a href="#main-content" class="usa-skipnav">Skip to main content</a>
+<div class="usa-overlay"></div>
+<header class="usa-header usa-header--basic" id="header">
+  <div class="usa-nav-container">
+    <div class="usa-navbar">
+      <div class="usa-logo">
+        <em class="usa-logo__text"><a href="/">Agency Name</a></em>
+      </div>
+      <button class="usa-menu-btn">Menu</button>
+    </div>
+    <nav class="usa-nav" aria-label="Main navigation">
+      <button class="usa-nav__close">Close</button>
+      <ul class="usa-nav__primary usa-accordion">
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav__link"><span>Home</span></a>
+        </li>
+        <li class="usa-nav__primary-item">
+          <a href="#" class="usa-nav__link"><span>About</span></a>
+        </li>
+        <li class="usa-nav__primary-item search-container">
+          <button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="nav-search-panel">
+            <img src="search-icon.svg" alt="Search">
+          </button>
+          <div id="nav-search-panel" class="usa-nav__submenu" hidden>
+            <div class="padding-6 width-full">
+              <form class="usa-search usa-search--small" action="/search" method="get" role="search">
+                <label class="usa-sr-only" for="nav-search-input">Search</label>
+                <input class="usa-input" id="nav-search-input" type="search" placeholder="Search..." name="query">
+                <button class="usa-button" type="submit">
+                  <img src="search--white.svg" alt="Search">
+                </button>
+              </form>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+</body>
+</html>

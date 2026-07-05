@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Radio button success variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Radio Button (Success)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "radio-buttons/success.html",
+  "title": "Radio Button (Success)",
+  "uswdsComponentType": "radio-buttons",
+  "uswdsClass": "usa-radio__input--success",
+  "description": "Radio button group showing success validation state.",
+  "section": "forms",
+  "variant": "success",
+  "useWhen": ["Confirmed selection", "Completed selection"],
+  "avoidWhen": ["Errors", "Pending selection"],
+  "agentPrompt": "Add usa-radio__input--success class for success state styling.",
+  "editableAreas": ["Radio labels", "Success message text"],
+  "preserveElements": ["div.usa-form-group", "fieldset.usa-fieldset"],
+  "knownLimitations": [],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "tile", "error", "success", "disabled"],
+  "settings": [],
+  "relatedComponents": ["checkbox", "validation"],
+  "tokenOverrides": [],
+  "tags": ["radio", "success", "validation"]
+}
+</script>
+</head>
+<body>
+<div class="usa-form-group">
+  <fieldset class="usa-fieldset">
+    <legend class="usa-legend">Select an option</legend>
+    <span class="usa-success-message" id="radio-success-message" role="status">Selection confirmed</span>
+    <div class="usa-radio__group">
+      <input class="usa-radio__input usa-radio__input--success" id="radio-success-1" type="radio" name="radio-success" value="1" checked>
+      <label class="usa-radio__label" for="radio-success-1">Option one (selected)</label>
+    </div>
+    <div class="usa-radio__group">
+      <input class="usa-radio__input" id="radio-success-2" type="radio" name="radio-success" value="2">
+      <label class="usa-radio__label" for="radio-success-2">Option two</label>
+    </div>
+  </fieldset>
+</div>
+</body>
+</html>

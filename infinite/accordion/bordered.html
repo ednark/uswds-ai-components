@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Accordion bordered variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Accordion (Bordered)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "accordion/bordered.html",
+  "title": "Accordion (Bordered)",
+  "uswdsComponentType": "accordion",
+  "uswdsClass": "usa-accordion--bordered",
+  "description": "Accordion with visible borders around each item.",
+  "section": "data-display",
+  "variant": "bordered",
+  "useWhen": ["Clear visual separation needed", "When borders aid scanning", "Formal document styles"],
+  "avoidWhen": ["Minimal styling preferred", "Dense accordion content"],
+  "agentPrompt": "Add usa-accordion--bordered class to usa-accordion for bordered variant.",
+  "editableAreas": ["Accordion button text", "Accordion panel content"],
+  "preserveElements": ["ul.usa-accordion", "li.usa-accordion__item", "button.usa-accordion__button", "div.usa-accordion__content"],
+  "knownLimitations": ["JavaScript required for expand/collapse"],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["click", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "bordered", "multiselectable"],
+  "settings": [],
+  "relatedComponents": ["accordion"],
+  "tokenOverrides": [],
+  "tags": ["accordion", "bordered", "expand", "collapse"]
+}
+</script>
+</head>
+<body>
+<ul class="usa-accordion usa-accordion--bordered">
+  <li class="usa-accordion__item">
+    <button class="usa-accordion__button" aria-controls="errored-bordered">
+      Bordered Accordion Item
+    </button>
+    <div id="errored-bordered" class="usa-accordion__content">
+      <p>This accordion has borders around each item for visual separation.</p>
+    </div>
+  </li>
+  <li class="usa-accordion__item">
+    <button class="usa-accordion__button" aria-controls="errored-bordered-2">
+      Second Bordered Item
+    </button>
+    <div id="errored-bordered-2" class="usa-accordion__content">
+      <p>More content in the second bordered accordion item.</p>
+    </div>
+  </li>
+</ul>
+</body>
+</html>

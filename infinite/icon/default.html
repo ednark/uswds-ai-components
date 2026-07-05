@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Icon component using SVG sprite for consistent iconography.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Icon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "icon/default.html",
+  "title": "Icon",
+  "uswdsComponentType": "icon",
+  "uswdsClass": "usa-icon",
+  "description": "Icons that communicate meaning, actions, status, or feedback using USWDS sprite.",
+  "section": "data-display",
+  "variant": "default",
+  "useWhen": [
+    "Visual reinforcement of actions or status",
+    "When icons add meaning beyond text labels",
+    "Navigation indicators",
+    "Form input prefixes (search, calendar, etc.)"
+  ],
+  "avoidWhen": [
+    "Icons alone without text labels for actions",
+    "Decorative use that adds no semantic meaning",
+    "Overcrowding interfaces with too many icons"
+  ],
+  "agentPrompt": "Reference USWDS icon sprite at /assets/img/usa-icons.svg#icon-name. Available icons include: search, close, menu, arrow-forward, check, warning, error, info, etc. Use size classes: usa-icon--size-3 through usa-icon--size-12.",
+  "editableAreas": [
+    "Icon name in sprite reference (after #)",
+    "Size variant class",
+    "Color (via parent text color or usa-icon--[color])",
+    "aria-label for decorative vs. semantic icons"
+  ],
+  "preserveElements": [
+    "svg.usa-icon wrapper",
+    "use href to sprite with icon name",
+    "aria-hidden='true' for decorative icons",
+    "aria-label on parent for standalone semantic icons"
+  ],
+  "knownLimitations": [
+    "Icons require sprite file hosted at correct path",
+    "Always provide text label alongside icon for screen readers",
+    "Use aria-hidden='true' for purely decorative icons"
+  ],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["passive"],
+  "a11y": {"wcag21AA": true, "keyboardNav": false, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default"],
+  "settings": ["$theme-icon-image-path"],
+  "relatedComponents": ["icon-list", "link", "button"],
+  "tokenOverrides": ["$theme-icon-image-path"],
+  "tags": ["icon", "svg", "sprite", "symbol", "image", "graphic"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .icon-demo {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .icon-demo .usa-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+</style>
+</head>
+<body>
+<div class="icon-demo">
+  <svg class="usa-icon" aria-hidden="true"><use href="#check"></use></svg>
+  <svg class="usa-icon" aria-hidden="true"><use href="#close"></use></svg>
+  <svg class="usa-icon" aria-hidden="true"><use href="#search"></use></svg>
+  <svg class="usa-icon" aria-hidden="true"><use href="#menu"></use></svg>
+  <svg class="usa-icon" aria-hidden="true"><use href="#warning"></use></svg>
+  <svg class="usa-icon" aria-hidden="true"><use href="#info"></use></svg>
+</div>
+<p><em>Icons require USWDS sprite at /assets/img/usa-icons.svg</em></p>
+<div class="cap">Icon default</div>
+</body>
+</html>

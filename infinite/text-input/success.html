@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Text input success variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Text Input (Success)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "text-input/success.html",
+  "title": "Text Input (Success)",
+  "uswdsComponentType": "text-input",
+  "uswdsClass": "usa-input--success",
+  "description": "Text input showing success validation state.",
+  "section": "forms",
+  "variant": "success",
+  "useWhen": ["Successful validation feedback", "Confirmed input", "Completed fields"],
+  "avoidWhen": ["Errors", "Pending validation"],
+  "agentPrompt": "Add usa-input--success class for success state styling.",
+  "editableAreas": ["Input label", "Success message text"],
+  "preserveElements": ["div.usa-form-group", "input.usa-input--success"],
+  "knownLimitations": [],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["focus", "input"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "tile", "error", "success", "disabled"],
+  "settings": [],
+  "relatedComponents": ["validation", "summary-box"],
+  "tokenOverrides": [],
+  "tags": ["text-input", "success", "validation", "form"]
+}
+</script>
+</head>
+<body>
+<div class="usa-form-group">
+  <label class="usa-label" for="text-input-success">Text input with success</label>
+  <span class="usa-success-message" id="text-input-success-message" role="status">Success: Input is valid</span>
+  <input class="usa-input usa-input--success" id="text-input-success" name="text-input-success" aria-describedby="text-input-success-message" type="text">
+</div>
+</body>
+</html>

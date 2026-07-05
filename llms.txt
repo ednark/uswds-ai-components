@@ -1,0 +1,198 @@
+> USWDS AI Components — Plain-text agent protocol
+> Free to browse and download. Components are part of USWDS 3.13.0, in the public domain.
+> Home: https://github.com/ednark/uswds-ai-components
+> Base layer: https://github.com/ednark/ai-component-registry-spec (submodule at _base/)
+
+---
+
+## Overview
+
+USWDS AI Components is a component registry for AI coding agents building government websites with the U.S. Web Design System (USWDS 3.13.0). The registry contains 146 accessible, mobile-friendly components, each with rich adaptation metadata. It extends the ai-component-registry-spec base layer.
+
+## Machine manifest
+
+> https://raw.githubusercontent.com/ednark/uswds-ai-components/main/agents.json
+
+## Sitemap
+
+> https://raw.githubusercontent.com/ednark/uswds-ai-components/main/sitemap.xml
+
+---
+
+## Quick start
+
+1. Filter vocab (tiny): GET https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/facets.json
+2. Discovery index (lean): GET https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/components.index.json
+3. Component source: GET https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/{file}
+
+---
+
+## Facets
+
+- uswdsComponentType — accordion, alert, banner, breadcrumb, button, card, checkbox, combo-box, etc.
+- section — forms (16), navigation (10), feedback (8), data-display (6), layout (4), utilities (3)
+- variant — component variant (e.g., bordered, multiselectable for accordion)
+- interaction — passive, click, hover, keyboard, focus, drag, pointer
+- requiresJs — no, optional, required
+- govCompliance — Section 508, WCAG 2.1 AA, 21st Century IDEA, NIST Guidelines
+- a11y — wcag21AA, keyboardNav, screenReader, reducedMotion, forcedColors, ariaAttributes
+
+---
+
+## Decision strategy
+
+When selecting a component for a government UI task:
+
+1. Filter by section (forms, navigation, feedback, data-display, layout, utilities)
+2. Check requiresJs — prefer "no" unless task explicitly needs JS behavior
+3. Verify govCompliance includes applicable requirements
+4. Prefer components with wcag21AA: true and keyboardNav: true
+5. Check relatedComponents for commonly paired components
+6. Only generate custom UI if no suitable component exists
+
+---
+
+## Filtering example
+
+components
+  .filter(c => c.section === 'forms')
+  .filter(c => c.requiresJs === 'no')
+  .filter(c => c.a11y.wcag21AA === true)
+
+---
+
+## Component schema
+
+Each component record in the index contains:
+
+- id — unique identifier
+- file — fetch URL path
+- uswdsComponentType — official USWDS component name
+- uswdsClass — primary CSS class
+- title — component name + variant
+- description — one-line summary
+- section — forms | navigation | feedback | data-display | layout | utilities
+- variant — primary variant name
+- variants — all available variant class names
+- requiresJs — no | optional | required
+- interaction — array of interaction types
+- a11y — accessibility features object
+- govCompliance — applicable government compliance requirements
+- settings — USWDS Sass settings that affect this component
+- relatedComponents — commonly paired components
+- tokenOverrides — design tokens commonly overridden
+
+Full adaptation guidance is embedded in each tile's <script id="uswds-agent-meta"> block.
+
+---
+
+## Government compliance
+
+All 146 USWDS component tiles pass WCAG 2.1 AA and support Section 508 accessibility requirements.
+
+Components support:
+- Section 508 (36 CFR 1194)
+- WCAG 2.1 AA
+- 21st Century Integrated Digital Experience Act
+- NIST Guidelines
+
+---
+
+## USWDS Components by Section
+
+### Forms (16)
+text-input, checkbox, radio-buttons, select, combo-box, date-picker, date-range-picker, file-input, memorable-date, time-picker, range-slider, character-count, input-mask, input-prefix-suffix, form, validation
+
+### Navigation (10)
+header, side-navigation, breadcrumb, pagination, step-indicator, in-page-navigation, search, language-selector, icon-list, link
+
+### Feedback (8)
+alert, site-alert, modal, tooltip, banner, process-list, summary-box, tag
+
+### Data Display (6)
+table, card, collection, identifier, icon, data-visualizations
+
+### Layout (4)
+footer, header, prose, typography
+
+### Utilities (3)
+button, button-group, accordion
+
+---
+
+## Adaptation metadata fields
+
+Each tile includes:
+
+- useWhen — situations this component fits well
+- avoidWhen — situations to avoid this component
+- agentPrompt — example adaptation instruction with actual class names
+- editableAreas — CSS classes, tokens, attributes safe to change
+- preserveElements — markup patterns and ARIA that must be kept
+- knownLimitations — caveats and constraints
+- tokenOverrides — USWDS design tokens commonly overridden
+- relatedComponents — USWDS components often used together
+
+---
+
+## Key USWDS classes
+
+- usa-accordion, usa-accordion--bordered, usa-accordion--multiselectable
+- usa-alert, usa-alert--success, usa-alert--warning, usa-alert--error, usa-alert--slim
+- usa-button, usa-button--secondary, usa-button--outline, usa-button--big
+- usa-card, usa-card--flag, usa-card--media
+- usa-form, usa-input, usa-select, usa-checkbox__input, usa-radio__input
+- usa-header, usa-header--basic, usa-header--extended
+- usa-table, usa-table--striped, usa-table--borderless, usa-table--scrollable
+- usa-modal, usa-modal--lg
+- usa-search, usa-search--big, usa-search--small
+- usa-step-indicator, usa-step-indicator--centered
+- usa-tooltip
+- usa-banner
+- usa-site-alert, usa-site-alert--emergency
+
+---
+
+## USWDS Sass settings
+
+Common customization settings:
+
+- $theme-button-border-radius, $theme-button-font-family
+- $theme-color-primary, $theme-color-secondary
+- $theme-input-border-radius, $theme-input-focus-border-color
+- $theme-card-border-radius, $theme-card-gap
+- $theme-header-font-family, $theme-header-logo-width
+- $theme-footer-font-family
+- $theme-alert-status-color
+- $theme-font-family-sans, $theme-font-family-serif
+- $theme-link-color, $theme-link-font-family
+- $theme-spacing-unit
+- $theme-step-indicator-border-color
+
+---
+
+## Patterns
+
+When building common government UI patterns:
+
+| Pattern | Components to retrieve |
+|---|---|
+| Multi-step form | step-indicator + form + text-input + validation |
+| Alert-heavy page | alert + site-alert + summary-box |
+| Navigation-heavy | header + side-navigation + breadcrumb + in-page-navigation |
+| Data display | table + card + data-visualizations + collection |
+| Form submission | form + text-input + checkbox/radio + validation + character-count |
+| Search interface | header + search + pagination + breadcrumb |
+
+---
+
+## Output contract
+
+When returning components to a user, include:
+
+1. Reason: why this component was selected over alternatives
+2. Selected components: file paths and titles
+3. USWDS classes needed: the exact class names to apply
+4. Token overrides: the design tokens to customize
+5. Remaining work: what the component does not yet cover
+6. Related components: what to retrieve or build next

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Banner slim variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Banner (Slim)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "banner/slim.html",
+  "title": "Banner (Slim)",
+  "uswdsComponentType": "banner",
+  "uswdsClass": "usa-banner--slim",
+  "description": "Compact banner for limited vertical space.",
+  "section": "supporting",
+  "variant": "slim",
+  "useWhen": ["Mobile headers", "Compact layouts", "When full banner takes too much space"],
+  "avoidWhen": ["Desktop with ample space", "When full recognition is needed"],
+  "agentPrompt": "Add usa-banner--slim class to usa-banner. Condensed single-line version.",
+  "editableAreas": ["Banner text only"],
+  "preserveElements": ["div.usa-banner usa-banner--slim", "div.usa-banner__text"],
+  "knownLimitations": ["Less prominent, may be missed"],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA", "Required by US federal agencies"],
+  "variants": ["default", "medium", "slim"],
+  "settings": [],
+  "relatedComponents": ["header", "identifier"],
+  "tokenOverrides": [],
+  "tags": ["banner", "slim", "compact", "mobile"]
+}
+</script>
+</head>
+<body>
+<div class="usa-banner usa-banner--slim">
+  <div class="usa-banner__header">
+    <div class="usa-banner__inner">
+      <div class="usa-banner__text">
+        <p class="usa-banner__header-text">An official website of the United States government</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

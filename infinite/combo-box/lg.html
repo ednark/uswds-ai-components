@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Combo box large variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Combo Box (Large)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "combo-box/lg.html",
+  "title": "Combo Box (Large)",
+  "uswdsComponentType": "combo-box",
+  "uswdsClass": "usa-combo-box--lg",
+  "description": "Large combo box variant with enhanced visibility.",
+  "section": "forms",
+  "variant": "lg",
+  "useWhen": ["Prominent form fields", "Mobile interfaces", "Touch-friendly selection"],
+  "avoidWhen": ["Dense forms", "Compact layouts"],
+  "agentPrompt": "Add usa-combo-box--lg class to usa-combo-box for larger variant.",
+  "editableAreas": ["Combo box label", "Options list"],
+  "preserveElements": ["div.usa-combo-box", "select.usa-combo-box__select", "ul.usa-combo-box__list"],
+  "knownLimitations": ["JavaScript required for filtering behavior"],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["click", "type", "select"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "lg"],
+  "settings": [],
+  "relatedComponents": ["select", "text-input"],
+  "tokenOverrides": [],
+  "tags": ["combo-box", "lg", "large", "dropdown"]
+}
+</script>
+</head>
+<body>
+<div class="usa-form-group">
+  <label class="usa-label" for="combo-box-lg">Large combo box</label>
+  <div class="usa-combo-box usa-combo-box--lg">
+    <select class="usa-combo-box__select" id="combo-box-lg" name="combo-box-lg">
+      <option value="">Select...</option>
+      <option value="1">Option one</option>
+      <option value="2">Option two</option>
+      <option value="3">Option three</option>
+    </select>
+  </div>
+</div>
+</body>
+</html>

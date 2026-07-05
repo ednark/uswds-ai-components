@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS File Input component for uploading one or multiple files.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS File Input</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "file-input/default.html",
+  "title": "File Input",
+  "uswdsComponentType": "file-input",
+  "uswdsClass": "usa-file-input",
+  "description": "Allows users to attach one or multiple files for upload.",
+  "section": "forms",
+  "variant": "default",
+  "useWhen": [
+    "Document uploads (PDF, images, documents)",
+    "Resume or application submissions",
+    "Any file attachment requirements",
+    "Multi-file submissions when allowed"
+  ],
+  "avoidWhen": [
+    "Sensitive files requiring secure transmission (use dedicated secure upload)",
+    "Large files without appropriate server handling",
+    "When a simple link or email is more appropriate"
+  ],
+  "agentPrompt": "Update accept attribute for allowed file types. Add multiple attribute for multi-file upload. Update instructions text. Use data-default-value for pre-selected files.",
+  "editableAreas": [
+    "Accepted file types (accept attribute)",
+    "Instructions text",
+    "multiple attribute for multi-file support",
+    "Label text"
+  ],
+  "preserveElements": [
+    "div.usa-file-input wrapper",
+    "label.usa-file-input__label with aria-describedby",
+    "input.usa-file-input__input type='file'",
+    "span.usa-file-input__instructions",
+    "accept attribute for file type restrictions"
+  ],
+  "knownLimitations": [
+    "JavaScript enhances drag-and-drop but isn't required",
+    "Styling file inputs is limited by browser defaults",
+    "accept attribute should specify allowed MIME types"
+  ],
+  "tier": "curated",
+  "requiresJs": "optional",
+  "interaction": ["click", "drag", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "error"],
+  "settings": ["$theme-file-input-border-radius"],
+  "relatedComponents": ["form", "text-input", "button"],
+  "tokenOverrides": ["$theme-file-input-border-radius", "$theme-file-input-button-background-color"],
+  "tags": ["file", "upload", "input", "attach", "drag", "drop", "document", "image"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .form-section {
+    max-width: 400px;
+  }
+</style>
+</head>
+<body>
+<div class="form-section">
+  <label class="usa-label" id="file-input-label">Upload a file</label>
+  <span class="usa-hint" id="file-input-hint">Accepted file types: PDF, DOC, DOCX, JPG, PNG</span>
+  <div class="usa-file-input">
+    <input type="file" class="usa-file-input__input" id="file-input" aria-describedby="file-input-label file-input-hint" accept=".pdf,.doc,.docx,.jpg,.png">
+    <label class="usa-file-input__label" for="file-input">
+      <span class="usa-file-input__instructions">Upload file</span>
+      <span class="usa-file-input__choose">Choose file</span>
+    </label>
+  </div>
+</div>
+<div class="cap">File Input default</div>
+</body>
+</html>

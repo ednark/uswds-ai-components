@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Data visualizations pie chart variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Data Visualizations (Pie)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "data-visualizations/pie.html",
+  "title": "Data Visualizations (Pie)",
+  "uswdsComponentType": "data-visualizations",
+  "uswdsClass": "usa-chart-data",
+  "description": "Pie/donut chart for part-to-whole relationships.",
+  "section": "data-display",
+  "variant": "pie",
+  "useWhen": ["Part-to-whole relationships", "Percentage distributions", "Budget breakdowns"],
+  "avoidWhen": ["Time series data", "Comparing multiple categories across groups"],
+  "agentPrompt": "Use figure.usa-chart-container with canvas or SVG for pie/donut charts.",
+  "editableAreas": ["Chart data labels", "Legend items", "Percentage labels"],
+  "preserveElements": ["figure.usa-chart-container", "canvas or svg", "ul.usa-legend"],
+  "knownLimitations": ["Hard to compare multiple pie charts", "JavaScript library needed"],
+  "tier": "curated",
+  "requiresJs": "optional",
+  "interaction": ["hover", "focus", "click"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "bar", "line", "pie"],
+  "settings": [],
+  "relatedComponents": ["table", "collection"],
+  "tokenOverrides": [],
+  "tags": ["data-visualizations", "pie", "donut", "percentage"]
+}
+</script>
+</head>
+<body>
+<figure class="usa-chart-container">
+  <canvas id="pieChart" role="img" aria-label="Pie chart showing sample data"></canvas>
+  <ul class="usa-legend">
+    <li><span class="usa-legend__color" style="background: #005ea2;"></span> 40% Category A</li>
+    <li><span class="usa-legend__color" style="background: #71767a;"></span> 35% Category B</li>
+    <li><span class="usa-legend__color" style="background: #00a91c;"></span> 25% Category C</li>
+  </ul>
+</figure>
+</body>
+</html>

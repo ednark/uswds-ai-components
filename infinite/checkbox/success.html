@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Checkbox success variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Checkbox (Success)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "checkbox/success.html",
+  "title": "Checkbox (Success)",
+  "uswdsComponentType": "checkbox",
+  "uswdsClass": "usa-checkbox__input--success",
+  "description": "Checkbox showing success validation state.",
+  "section": "forms",
+  "variant": "success",
+  "useWhen": ["Confirmed checkbox selection", "Completed agreement"],
+  "avoidWhen": ["Errors", "Unconfirmed selections"],
+  "agentPrompt": "Add usa-checkbox__input--success class for success state styling.",
+  "editableAreas": ["Checkbox label", "Success message text"],
+  "preserveElements": ["div.usa-form-group", "input.usa-checkbox__input--success"],
+  "knownLimitations": [],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "tile", "error", "success", "disabled"],
+  "settings": [],
+  "relatedComponents": ["radio-button", "validation"],
+  "tokenOverrides": [],
+  "tags": ["checkbox", "success", "validation"]
+}
+</script>
+</head>
+<body>
+<div class="usa-form-group">
+  <fieldset class="usa-fieldset">
+    <legend class="usa-legend">Select options</legend>
+    <span class="usa-success-message" id="checkbox-success-message" role="status">Selection confirmed</span>
+    <div class="usa-checkbox__group">
+      <input class="usa-checkbox__input usa-checkbox__input--success" id="checkbox-success-1" type="checkbox" name="checkbox-success" value="1" checked>
+      <label class="usa-checkbox__label" for="checkbox-success-1">Option one (confirmed)</label>
+    </div>
+  </fieldset>
+</div>
+</body>
+</html>

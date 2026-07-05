@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Card group wrapper variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Card (Group)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "card/group.html",
+  "title": "Card (Group)",
+  "uswdsComponentType": "card",
+  "uswdsClass": "usa-card-group",
+  "description": "Card group container for laying out multiple cards in a grid.",
+  "section": "data-display",
+  "variant": "group",
+  "useWhen": ["Multiple cards in a grid", "Topic cards on landing pages", "Dashboard card layouts"],
+  "avoidWhen": ["Single card display", "Non-card grid layouts"],
+  "agentPrompt": "Use ul.usa-card-group as container. Each li contains a usa-card. Grid layout applied automatically.",
+  "editableAreas": ["Individual card content within the group"],
+  "preserveElements": ["ul.usa-card-group", "li.usa-card__container", "article.usa-card"],
+  "knownLimitations": [],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["passive", "click"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "flag", "media", "inset", "header-flag", "group"],
+  "settings": ["$theme-card-border-radius", "$theme-card-gap"],
+  "relatedComponents": ["collection", "table"],
+  "tokenOverrides": ["$theme-card-border-radius", "$theme-card-gap"],
+  "tags": ["card", "group", "grid", "container", "layout"]
+}
+</script>
+</head>
+<body>
+<ul class="usa-card-group">
+  <li class="usa-card__container">
+    <article class="usa-card">
+      <div class="usa-card__header">
+        <h2 class="usa-card__heading">Card One</h2>
+      </div>
+      <div class="usa-card__body">
+        <p>First card in the group.</p>
+      </div>
+    </article>
+  </li>
+  <li class="usa-card__container">
+    <article class="usa-card">
+      <div class="usa-card__header">
+        <h2 class="usa-card__heading">Card Two</h2>
+      </div>
+      <div class="usa-card__body">
+        <p>Second card in the group.</p>
+      </div>
+    </article>
+  </li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Table stacked variant for mobile.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Table (Stacked)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "table/stacked.html",
+  "title": "Table (Stacked)",
+  "uswdsComponentType": "table",
+  "uswdsClass": "usa-table--stacked",
+  "description": "Table that stacks into card-like rows on mobile.",
+  "section": "data-display",
+  "variant": "stacked",
+  "useWhen": ["Mobile-first responsive tables", "Tables that become unreadable on mobile", "Card-like data display on small screens"],
+  "avoidWhen": ["Wide desktop tables", "Data-heavy displays that need comparison view"],
+  "agentPrompt": "Add usa-table--stacked class to usa-table. Headers become row labels on mobile.",
+  "editableAreas": ["Table headers (become labels)", "Table data cells"],
+  "preserveElements": ["table.usa-table usa-table--stacked", "thead", "tbody", "th[datalabel]"],
+  "knownLimitations": ["Data comparison across rows becomes harder"],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["passive"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "borderless", "striped", "scrollable", "stacked"],
+  "settings": [],
+  "relatedComponents": ["card", "collection"],
+  "tokenOverrides": [],
+  "tags": ["table", "stacked", "mobile", "responsive"]
+}
+</script>
+</head>
+<body>
+<table class="usa-table usa-table--stacked">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Name">Item One</td>
+      <td data-label="Description">Description of item one</td>
+      <td data-label="Status">Active</td>
+    </tr>
+    <tr>
+      <td data-label="Name">Item Two</td>
+      <td data-label="Description">Description of item two</td>
+      <td data-label="Status">Pending</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

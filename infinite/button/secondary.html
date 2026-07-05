@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Button component - secondary color variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Button (Secondary)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "button/secondary.html",
+  "title": "Button (Secondary)",
+  "uswdsComponentType": "button",
+  "uswdsClass": "usa-button usa-button--secondary",
+  "description": "Secondary color button for actions that happen on the current page rather than advancing.",
+  "section": "utilities",
+  "variant": "secondary",
+  "useWhen": ["Actions on current page", "Cancel or Back buttons", "Less prominent actions"],
+  "avoidWhen": ["Primary CTAs", "Actions advancing to next step", "Important actions"],
+  "agentPrompt": "Use usa-button--secondary class. Same structure as default button.",
+  "editableAreas": ["Button label text", "type attribute", "disabled state"],
+  "preserveElements": ["usa-button base class", "usa-button--secondary variant", "type attribute"],
+  "knownLimitations": ["Always set type attribute"],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click", "focus", "hover"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "secondary", "accent-cool", "accent-warm", "base", "outline", "outline-inverse", "big", "unstyled"],
+  "settings": ["$theme-button-border-radius", "$theme-color-secondary"],
+  "relatedComponents": ["button-group", "link"],
+  "tokenOverrides": ["$theme-button-border-radius", "$theme-color-secondary"],
+  "tags": ["button", "secondary", "outline", "cancel"]
+}
+</script>
+</head>
+<body>
+<button class="usa-button usa-button--secondary" type="button">Secondary Button</button>
+</body>
+</html>

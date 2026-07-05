@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Prose component for formatting blocks of running text.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Prose</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "prose/default.html",
+  "title": "Prose",
+  "uswdsComponentType": "prose",
+  "uswdsClass": "usa-prose",
+  "description": "Formats a block of running text for readable, accessible body copy.",
+  "section": "layout",
+  "variant": "default",
+  "useWhen": [
+    "Long-form text content",
+    "Articles, descriptions, explanations",
+    "When standard body text formatting is needed",
+    "Content areas with paragraphs and lists"
+  ],
+  "avoidWhen": [
+    "Short isolated text fragments",
+    "Form labels or UI text",
+    "Data-heavy content that needs tables"
+  ],
+  "agentPrompt": "Apply usa-prose class to container div for proper typography. USWDS sets typography variables. Update font family settings if needed. Use semantic HTML inside prose.",
+  "editableAreas": [
+    "Prose content (paragraphs, lists, headings)",
+    "Maximum content width",
+    "Font family settings"
+  ],
+  "preserveElements": [
+    "div.usa-prose wrapper",
+    "p for paragraphs",
+    "h2, h3, h4 for headings within prose",
+    "ul, ol, li for lists",
+    "a.usa-link for links"
+  ],
+  "knownLimitations": [
+    "Prose styling requires USWDS typography settings",
+    "Headings inside prose need appropriate hierarchy",
+    "Links should use usa-link class"
+  ],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["passive"],
+  "a11y": {"wcag21AA": true, "keyboardNav": false, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": false},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default"],
+  "settings": ["$theme-prose-font-family", "$theme-prose-line-height"],
+  "relatedComponents": ["typography", "list"],
+  "tokenOverrides": ["$theme-prose-font-family", "$theme-prose-line-height"],
+  "tags": ["prose", "text", "typography", "body", "content", "paragraph", "article"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .demo-section {
+    max-width: 600px;
+  }
+</style>
+</head>
+<body>
+<div class="demo-section">
+  <div class="usa-prose">
+    <h2>Section Heading</h2>
+    <p>This is a paragraph of text that demonstrates the prose component. It provides readable, accessible body copy with appropriate line height and spacing.</p>
+    <p>Another paragraph follows, showing how multiple paragraphs work together in the prose component.</p>
+    <h3>Subsection Heading</h3>
+    <ul>
+      <li>First list item in the prose</li>
+      <li>Second list item in the prose</li>
+      <li>Third list item in the prose</li>
+    </ul>
+  </div>
+</div>
+<div class="cap">Prose default</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Table scrollable variant with horizontal scroll.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Table (Scrollable)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "table/scrollable.html",
+  "title": "Table (Scrollable)",
+  "uswdsComponentType": "table",
+  "uswdsClass": "usa-table-container--scrollable",
+  "description": "Table with horizontal scroll for wide tables on smaller screens.",
+  "section": "data-display",
+  "variant": "scrollable",
+  "useWhen": ["Wide tables with many columns", "Responsive tables", "Mobile-friendly data display"],
+  "avoidWhen": ["Narrow containers already", "Tables that should be redesigned for narrow views"],
+  "agentPrompt": "Wrap usa-table in div.usa-table-container--scrollable to enable horizontal scroll.",
+  "editableAreas": ["Table headers", "Table data cells", "Column widths"],
+  "preserveElements": ["div.usa-table-container--scrollable", "table.usa-table", "thead", "tbody"],
+  "knownLimitations": ["Scroll indicator may not be obvious on touch devices"],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["passive", "scroll"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "borderless", "striped", "scrollable", "stacked"],
+  "settings": [],
+  "relatedComponents": ["card", "collection"],
+  "tokenOverrides": [],
+  "tags": ["table", "scrollable", "horizontal", "responsive"]
+}
+</script>
+</head>
+<body>
+<div class="usa-table-container--scrollable">
+  <table class="usa-table">
+    <thead>
+      <tr>
+        <th>Very Long Header A</th>
+        <th>Very Long Header B</th>
+        <th>Very Long Header C</th>
+        <th>Very Long Header D</th>
+        <th>Very Long Header E</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Data A1</td>
+        <td>Data B1</td>
+        <td>Data C1</td>
+        <td>Data D1</td>
+        <td>Data E1</td>
+      </tr>
+      <tr>
+        <td>Data A2</td>
+        <td>Data B2</td>
+        <td>Data C2</td>
+        <td>Data D2</td>
+        <td>Data E2</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

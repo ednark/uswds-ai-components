@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Select error variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Select (Error)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "select/error.html",
+  "title": "Select (Error)",
+  "uswdsComponentType": "select",
+  "uswdsClass": "usa-select--error",
+  "description": "Select dropdown showing error validation state.",
+  "section": "forms",
+  "variant": "error",
+  "useWhen": ["Required select validation", "Invalid selection errors"],
+  "avoidWhen": ["Valid selections", "Optional selects"],
+  "agentPrompt": "Add usa-select--error class and usa-form-group--error parent.",
+  "editableAreas": ["Select label", "Error message text"],
+  "preserveElements": ["div.usa-form-group--error", "select.usa-select"],
+  "knownLimitations": [],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click", "change"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "tile", "error", "success", "disabled"],
+  "settings": [],
+  "relatedComponents": ["text-input", "validation"],
+  "tokenOverrides": [],
+  "tags": ["select", "error", "validation"]
+}
+</script>
+</head>
+<body>
+<div class="usa-form-group usa-form-group--error">
+  <label class="usa-label" for="select-error">Select with error</label>
+  <span class="usa-error-message" id="select-error-message" role="alert">Error: Please select an option</span>
+  <select class="usa-select" id="select-error" name="select-error" aria-describedby="select-error-message">
+    <option value="">Select an option</option>
+    <option value="1">Option one</option>
+    <option value="2">Option two</option>
+  </select>
+</div>
+</body>
+</html>

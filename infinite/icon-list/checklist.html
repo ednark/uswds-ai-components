@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Icon list checklist variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Icon List (Checklist)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "icon-list/checklist.html",
+  "title": "Icon List (Checklist)",
+  "uswdsComponentType": "icon-list",
+  "uswdsClass": "usa-icon-list--checklist",
+  "description": "Icon list with checkmark icons for completed items.",
+  "section": "data-display",
+  "variant": "checklist",
+  "useWhen": ["Completed task lists", "Requirements checklists", "Feature lists with success state"],
+  "avoidWhen": ["Error states", "Neutral lists", "When no icons are preferred"],
+  "agentPrompt": "Add usa-icon-list--checklist class to usa-icon-list. Uses check icons.",
+  "editableAreas": ["List item text", "Icon content"],
+  "preserveElements": ["ul.usa-icon-list", "li.usa-icon-list__item"],
+  "knownLimitations": [],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["passive"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "checklist", "icon-lg"],
+  "settings": [],
+  "relatedComponents": ["list", "process-list"],
+  "tokenOverrides": [],
+  "tags": ["icon-list", "checklist", "check", "completed"]
+}
+</script>
+</head>
+<body>
+<ul class="usa-icon-list usa-icon-list--checklist">
+  <li class="usa-icon-list__item">
+    <div class="usa-icon-list__icon"><svg class="usa-icon" aria-hidden="true" role="img"><use xlink:href="#check"></use></svg></div>
+    <div class="usa-icon-list__content">Completed item one</div>
+  </li>
+  <li class="usa-icon-list__item">
+    <div class="usa-icon-list__icon"><svg class="usa-icon" aria-hidden="true" role="img"><use xlink:href="#check"></use></svg></div>
+    <div class="usa-icon-list__content">Completed item two</div>
+  </li>
+</ul>
+</body>
+</html>

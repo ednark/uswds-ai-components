@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Text Input component for entering text data.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Text Input</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "text-input/default.html",
+  "title": "Text Input",
+  "uswdsComponentType": "text-input",
+  "uswdsClass": "usa-input",
+  "description": "Allows users to enter any combination of letters, numbers, or symbols in a text field.",
+  "section": "forms",
+  "variant": "default",
+  "useWhen": [
+    "Collecting free-form text input",
+    "Name, address, or other personal information",
+    "Search queries",
+    "Any single-line text data"
+  ],
+  "avoidWhen": [
+    "Multiple lines of text — use textarea",
+    "Structured data with fixed formats — use specific input types",
+    "Boolean inputs — use checkboxes or toggles"
+  ],
+  "agentPrompt": "Add usa-input--error for error states, usa-input--success for validation success. Set autocomplete attribute for browser autofill. Update input type for specific data (email, tel, url, etc.).",
+  "editableAreas": [
+    "Input label text",
+    "Input type (text, email, tel, url, password)",
+    "Placeholder text",
+    "autocomplete attribute for better UX",
+    "Error/success variants"
+  ],
+  "preserveElements": [
+    "label.usa-label with for attribute",
+    "input.usa-input with id matching label",
+    "span.usa-hint for helper text",
+    "usa-input--error or usa-input--success variants"
+  ],
+  "knownLimitations": [
+    "autocomplete attributes improve form UX significantly",
+    "Input types provide browser-native validation",
+    "Error messages need separate error styling"
+  ],
+  "tier": "curated",
+  "requiresJs": "optional",
+  "interaction": ["focus", "input", "validation"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "error", "success", "disabled"],
+  "settings": ["$theme-input-border-radius", "$theme-input-state-border-width"],
+  "relatedComponents": ["form", "validation", "character-count"],
+  "tokenOverrides": ["$theme-input-border-radius", "$theme-input-focus-border-color", "$theme-input-state-border-width"],
+  "tags": ["text", "input", "field", "form", "entry", "textbox", "textfield"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .form-section {
+    max-width: 400px;
+  }
+</style>
+</head>
+<body>
+<div class="form-section">
+  <label class="usa-label" for="text-input">Text input label</label>
+  <span class="usa-hint" id="text-input-hint">Helper text goes here</span>
+  <input class="usa-input" id="text-input" aria-describedby="text-input-hint" type="text" name="text-input">
+</div>
+<div class="form-section">
+  <label class="usa-label" for="text-input-error">Error state</label>
+  <span class="usa-error-message" role="alert">Displayed error message</span>
+  <input class="usa-input usa-input--error" id="text-input-error" type="text" name="text-input-error" aria-invalid="true">
+</div>
+<div class="form-section">
+  <label class="usa-label" for="text-input-disabled">Disabled</label>
+  <input class="usa-input" id="text-input-disabled" type="text" name="text-input-disabled" disabled>
+</div>
+<div class="cap">Text Input default</div>
+</body>
+</html>

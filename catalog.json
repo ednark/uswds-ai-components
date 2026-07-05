@@ -1,0 +1,79 @@
+{
+  "name": "uswds-ai-components",
+  "description": "USWDS 3.13.0 component registry with AI agent adaptation metadata. 146 accessible, mobile-friendly government website components.",
+  "version": "1.0.0",
+  "designSystem": {
+    "name": "U.S. Web Design System",
+    "version": "3.13.0",
+    "url": "https://designsystem.digital.gov"
+  },
+  "totals": {
+    "components": 146,
+    "variants": 156,
+    "states": 8
+  },
+  "conventions": {
+    "selfContained": "Each component is a single .html file demonstrating USWDS markup with embedded adaptation metadata.",
+    "tiles": "infinite/<component-name>/<variant>.html — one variant per file, demonstrates component with USWDS classes, embedded uswds-agent-meta block",
+    "adaptationMetadata": "infinite/<component-name>/<variant>.html contains <script type='application/json' id='uswds-agent-meta'> with full agent guidance"
+  },
+  "componentSchema": {
+    "uswdsComponentType": "string — official USWDS component name (e.g., accordion, button, modal)",
+    "uswdsClass": "string — primary CSS class (e.g., usa-accordion, usa-button)",
+    "uswdsVariant": "string — variant modifier class (e.g., usa-accordion--bordered, usa-button--secondary)",
+    "variants": "string[] — all available variant class names for this component",
+    "settings": "string[] — USWDS Sass settings that affect this component",
+    "requiresJs": "enum — no | optional | required",
+    "jsBehavior": "string — description of JavaScript behavior if required/optional",
+    "a11y": {
+      "wcagLevel": "WCAG 2.1 AA",
+      "keyboardNav": "boolean — component is keyboard navigable",
+      "screenReader": "boolean — has proper ARIA labeling",
+      "reducedMotion": "boolean — honors prefers-reduced-motion",
+      "forcedColors": "boolean — supports forced-colors mode"
+    },
+    "section": "string — USWDS section (forms, navigation, feedback, data-display, layout, utilities)",
+    "govCompliance": "string[] — applicable government compliance requirements",
+    "description": "string — one-sentence description of what this component does",
+    "useWhen": "string[] — contexts where this component is appropriate",
+    "avoidWhen": "string[] — contexts where this component should not be used",
+    "agentPrompt": "string — example AI adaptation instruction with actual USWDS class names",
+    "editableAreas": "string[] — CSS custom property names or class variants that can be changed",
+    "preserveElements": "string[] — markup patterns and ARIA attributes that must be preserved",
+    "knownLimitations": "string[] — caveats about browser support or USWDS behavior",
+    "relatedComponents": "string[] — USWDS components often used with this one",
+    "tokenOverrides": "string[] — USWDS design tokens (color, spacing, etc.) commonly overridden for this component"
+  },
+  "sections": [
+    {
+      "id": "forms",
+      "title": "Forms",
+      "components": ["text-input", "checkbox", "radio-buttons", "select", "date-picker", "date-range-picker", "file-input", "memorable-date", "time-picker", "character-count", "validation", "input-mask", "input-prefix-suffix", "combo-box", "range-slider", "form"]
+    },
+    {
+      "id": "navigation",
+      "title": "Navigation",
+      "components": ["header", "side-navigation", "breadcrumb", "pagination", "step-indicator", "in-page-navigation", "search", "language-selector", "icon-list", "link"]
+    },
+    {
+      "id": "feedback",
+      "title": "Feedback",
+      "components": ["alert", "site-alert", "modal", "tooltip", "banner", "process-list", "summary-box", "tag"]
+    },
+    {
+      "id": "data-display",
+      "title": "Data Display",
+      "components": ["table", "card", "collection", "identifier", "icon", "data-visualizations"]
+    },
+    {
+      "id": "layout",
+      "title": "Layout",
+      "components": ["footer", "header", "prose", "typography"]
+    },
+    {
+      "id": "utilities",
+      "title": "Utilities & Interactive",
+      "components": ["button", "button-group", "list", "accordion"]
+    }
+  ]
+}

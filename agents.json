@@ -1,0 +1,41 @@
+{
+  "name": "uswds-ai-components",
+  "description": "USWDS (U.S. Web Design System) component registry for AI coding agents. 146 accessible, mobile-friendly government components with full adaptation metadata.",
+  "repo": "https://github.com/ednark/uswds-ai-components",
+  "base": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main",
+  "count": 146,
+  "facetsUrl": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/facets.json",
+  "index": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/components.index.json",
+  "indexSchemaVersion": 1,
+  "tileFetchPattern": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/{file}",
+  "designSystem": {
+    "name": "U.S. Web Design System (USWDS)",
+    "version": "3.13.0",
+    "url": "https://designsystem.digital.gov",
+    "components": 146
+  },
+  "facets": [
+    "uswdsComponentType",
+    "variant",
+    "interaction",
+    "requiresJs",
+    "a11y",
+    "section",
+    "govCompliance"
+  ],
+  "adaptationDetail": "embedded in each tile as <script type=\"application/json\" id=\"uswds-agent-meta\">",
+  "flow": [
+    "GET facets.json",
+    "GET components.index.json",
+    "filter by facet in code",
+    "GET tile by file",
+    "read uswds-agent-meta block"
+  ],
+  "govCompliance": [
+    "Section 508",
+    "WCAG 2.1 AA",
+    "21st Century IDEA",
+    "NIST Guidelines"
+  ],
+  "updated": "1.0.0"
+}

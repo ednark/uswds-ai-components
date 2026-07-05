@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Checkbox error variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Checkbox (Error)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "checkbox/error.html",
+  "title": "Checkbox (Error)",
+  "uswdsComponentType": "checkbox",
+  "uswdsClass": "usa-checkbox__input--error",
+  "description": "Checkbox showing error validation state.",
+  "section": "forms",
+  "variant": "error",
+  "useWhen": ["Required checkbox validation", "Agreement checkbox errors"],
+  "avoidWhen": ["Valid checkboxes", "Optional selections"],
+  "agentPrompt": "Add usa-checkbox__input--error class and usa-form-group--error parent.",
+  "editableAreas": ["Checkbox label", "Error message text"],
+  "preserveElements": ["div.usa-form-group--error", "input.usa-checkbox__input"],
+  "knownLimitations": [],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "tile", "error", "success", "disabled"],
+  "settings": [],
+  "relatedComponents": ["radio-button", "validation"],
+  "tokenOverrides": [],
+  "tags": ["checkbox", "error", "validation"]
+}
+</script>
+</head>
+<body>
+<div class="usa-form-group usa-form-group--error">
+  <fieldset class="usa-fieldset">
+    <legend class="usa-legend">Select options</legend>
+    <span class="usa-error-message" id="checkbox-error-message" role="alert">Error: Please select at least one option</span>
+    <div class="usa-checkbox__group">
+      <input class="usa-checkbox__input" id="checkbox-error-1" type="checkbox" name="checkbox-error" value="1">
+      <label class="usa-checkbox__label" for="checkbox-error-1">Option one</label>
+    </div>
+  </fieldset>
+</div>
+</body>
+</html>

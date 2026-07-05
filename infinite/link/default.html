@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Link component for navigating to different pages or information.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Link</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "link/default.html",
+  "title": "Link",
+  "uswdsComponentType": "link",
+  "uswdsClass": "usa-link",
+  "description": "Connects users to a different page or further information.",
+  "section": "navigation",
+  "variant": "default",
+  "useWhen": [
+    "Navigating between pages",
+    "Providing additional information or resources",
+    "Inline references within content",
+    "CTAs that don't require button styling"
+  ],
+  "avoidWhen": [
+    "Primary actions that should be buttons",
+    "Navigating within a page (use anchor links)",
+    "Submitting forms (use submit button)"
+  ],
+  "agentPrompt": "Add usa-link--external for links to other domains. Add usa-link--download for downloadable files. Update href for destination. Use sentence case for link text.",
+  "editableAreas": [
+    "Link text content",
+    "href destination URL",
+    "External indicator: usa-link--external",
+    "Download indicator: usa-link--download",
+    "Target attribute for new windows"
+  ],
+  "preserveElements": [
+    "a.usa-link class on anchor elements",
+    "usa-link--external for off-site links",
+    "usa-link--download for downloadable content",
+    "aria-label when icon accompanies text",
+    "Title attribute for context on hover"
+  ],
+  "knownLimitations": [
+    "External links should indicate they go to other sites",
+    "Download links should indicate file type and size",
+    "Links should have descriptive text, not 'click here'"
+  ],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click", "focus", "hover"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "external", "download"],
+  "settings": ["$theme-link-font-family"],
+  "relatedComponents": ["button", "icon"],
+  "tokenOverrides": ["$theme-link-font-family", "$theme-link-color"],
+  "tags": ["link", "anchor", "navigation", "href", "external", "download"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .link-demo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 400px;
+  }
+</style>
+</head>
+<body>
+<div class="link-demo">
+  <a href="#">Regular link</a>
+  <a class="usa-link" href="#">usa-link default</a>
+  <a class="usa-link usa-link--external" href="#">External link</a>
+  <a class="usa-link usa-link--download" href="#">Download PDF</a>
+</div>
+<div class="cap">Link default</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS In-Page Navigation for navigating to sections on a page.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS In-Page Navigation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "in-page-navigation/default.html",
+  "title": "In-Page Navigation",
+  "uswdsComponentType": "in-page-navigation",
+  "uswdsClass": "usa-in-page-nav",
+  "description": "Allows navigation to specific sections on a lengthy content page.",
+  "section": "navigation",
+  "variant": "default",
+  "useWhen": [
+    "Long-form content with distinct sections",
+    "Documentation or article pages",
+    "When users need to jump between topics",
+    "Reference material with numbered sections"
+  ],
+  "avoidWhen": [
+    "Short pages where scroll is minimal",
+    "Single-section pages",
+    "Mobile interfaces where in-page nav takes too much space"
+  ],
+  "agentPrompt": "Update navItems array with section titles and IDs. Set data-page-nav-items via JavaScript or server-side rendering. Match section IDs to heading IDs in content.",
+  "editableAreas": [
+    "Section titles in navItems",
+    "Section IDs that match content headings",
+    "aria-label for the nav element"
+  ],
+  "preserveElements": [
+    "nav.usa-in-page-nav with aria-label",
+    "aria-labelledby on nav",
+    "data-page-nav-items attribute",
+    "a.usa-in-page-nav__link for each section"
+  ],
+  "knownLimitations": [
+    "JavaScript required to initialize with section list",
+    "Sections need unique IDs matching nav items",
+    "Active state tracking requires scroll spy"
+  ],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["click", "focus", "scroll"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default"],
+  "settings": ["$theme-in-page-nav-border-radius"],
+  "relatedComponents": ["side-navigation", "breadcrumb", "step-indicator"],
+  "tokenOverrides": ["$theme-in-page-nav-border-radius", "$theme-in-page-nav-link-color"],
+  "tags": ["in-page", "navigation", "nav", "sidebar", "toc", "table-of-contents", "anchor", "jump"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+</style>
+</head>
+<body>
+<nav class="usa-in-page-nav" aria-label="Page navigation">
+  <ul class="usa-in-page-nav__list">
+    <li class="usa-in-page-nav__item">
+      <a class="usa-in-page-nav__link" href="#section-1">Section One</a>
+    </li>
+    <li class="usa-in-page-nav__item">
+      <a class="usa-in-page-nav__link" href="#section-2">Section Two</a>
+    </li>
+    <li class="usa-in-page-nav__item">
+      <a class="usa-in-page-nav__link" href="#section-3">Section Three</a>
+    </li>
+  </ul>
+</nav>
+<div class="cap">In-Page Navigation default</div>
+</body>
+</html>

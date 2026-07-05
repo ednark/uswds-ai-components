@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Accordion multiselectable variant allowing multiple sections open at once.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Accordion (Multiselectable)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "accordion/multiselectable.html",
+  "title": "Accordion (Multiselectable)",
+  "uswdsComponentType": "accordion",
+  "uswdsClass": "usa-accordion",
+  "description": "Accordion allowing multiple sections to be open simultaneously via data-allow-multiple.",
+  "section": "utilities",
+  "variant": "multiselectable",
+  "useWhen": ["When users need to compare content across sections", "FAQ where multiple topics may be relevant", "Reference content where users may want all context visible"],
+  "avoidWhen": ["Linear step-by-step content", "When section exclusivity is important", "Space-constrained interfaces"],
+  "agentPrompt": "Add usa-accordion--multiselectable class and data-allow-multiple attribute to usa-accordion wrapper. Same button/content structure as default.",
+  "editableAreas": ["Accordion button text", "Accordion content text", "Initial aria-expanded states"],
+  "preserveElements": ["usa-accordion wrapper", "usa-accordion--multiselectable class", "data-allow-multiple attribute", "button.usa-accordion__button", "aria-expanded and aria-controls"],
+  "knownLimitations": ["JavaScript required", "Do not set hidden manually"],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["click", "keyboard"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "bordered", "multiselectable"],
+  "settings": ["$theme-accordion-background-color", "$theme-accordion-border-width"],
+  "relatedComponents": ["process-list", "summary-box"],
+  "tokenOverrides": ["$theme-accordion-background-color"],
+  "tags": ["accordion", "multiselect", "expand", "multiple", "faq"]
+}
+</script>
+</head>
+<body>
+<h3 class="site-preview-heading">Multiselectable</h3>
+<div class="usa-accordion usa-accordion--multiselectable" data-allow-multiple>
+  <h4 class="usa-accordion__heading">
+    <button type="button" class="usa-accordion__button" aria-expanded="true" aria-controls="errored-content-m">
+      First Amendment
+    </button>
+  </h4>
+  <div id="errored-content-m" class="usa-accordion__content usa-prose">
+    <p>Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof.</p>
+  </div>
+  <h4 class="usa-accordion__heading">
+    <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="errored-content-m2">
+      Second Amendment
+    </button>
+  </h4>
+  <div id="errored-content-m2" class="usa-accordion__content usa-prose">
+    <p>A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed.</p>
+  </div>
+</div>
+</body>
+</html>

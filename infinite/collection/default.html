@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Collection component for displaying compact related items.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Collection</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "collection/default.html",
+  "title": "Collection",
+  "uswdsComponentType": "collection",
+  "uswdsClass": "usa-collection",
+  "description": "Displays a compact list of multiple related items like articles or events.",
+  "section": "data-display",
+  "variant": "default",
+  "useWhen": [
+    "Lists of related articles or resources",
+    "Event listings",
+    "News or announcement lists",
+    "When compact display of related items is needed"
+  ],
+  "avoidWhen": [
+    "Single-item displays",
+    "When each item needs detailed information",
+    "Visual-heavy content that needs cards"
+  ],
+  "agentPrompt": "Update collection items with actual content. Add date, category, or metadata as needed. Each item should link to full content. Use usa-collection__body for item description.",
+  "editableAreas": [
+    "Collection item title and link",
+    "Item description or excerpt",
+    "Item metadata (date, author, category)",
+    "Image if using media variant"
+  ],
+  "preserveElements": [
+    "ul.usa-collection for list",
+    "li.usa-collection__item for each item",
+    "a.usa-collection__link wrapper",
+    "div.usa-collection__body for content",
+    "p.usa-collection__meta for metadata"
+  ],
+  "knownLimitations": [
+    "Collections are read-only display components",
+    "Items should link to full content pages",
+    "Media variant requires image in specific position"
+  ],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default"],
+  "settings": ["$theme-collection-border-radius"],
+  "relatedComponents": ["card", "table", "list"],
+  "tokenOverrides": ["$theme-collection-border-radius", "$theme-collection-header-tag-font-family"],
+  "tags": ["collection", "list", "articles", "news", "events", "related", "items"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+</style>
+</head>
+<body>
+<ul class="usa-collection">
+  <li class="usa-collection__item">
+    <a class="usa-collection__link" href="#">
+      <div class="usa-collection__body">
+        <h3 class="usa-collection__heading">Article Title One</h3>
+        <p class="usa-collection__description">Brief description of the article content goes here.</p>
+        <p class="usa-collection__meta"><span>By Author Name</span> — <span>Date</span></p>
+      </div>
+    </a>
+  </li>
+  <li class="usa-collection__item">
+    <a class="usa-collection__link" href="#">
+      <div class="usa-collection__body">
+        <h3 class="usa-collection__heading">Article Title Two</h3>
+        <p class="usa-collection__description">Brief description of the article content goes here.</p>
+        <p class="usa-collection__meta"><span>By Author Name</span> — <span>Date</span></p>
+      </div>
+    </a>
+  </li>
+</ul>
+<div class="cap">Collection default</div>
+</body>
+</html>

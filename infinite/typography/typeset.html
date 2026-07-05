@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Typography typeset variant showing heading and paragraph styles.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Typography (Typeset)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "typography/typeset.html",
+  "title": "Typography (Typeset)",
+  "uswdsComponentType": "typography",
+  "uswdsClass": "typography",
+  "description": "Complete typeset example with headings and body text hierarchy.",
+  "section": "typography",
+  "variant": "typeset",
+  "useWhen": ["Article content", "Documentation pages", "Content-focused layouts"],
+  "avoidWhen": ["Minimal UI", "Dashboard interfaces"],
+  "agentPrompt": "Use usa-prose class to apply USWDS typography styles to content areas.",
+  "editableAreas": ["All heading and paragraph content"],
+  "preserveElements": ["h1", "h2", "h3", "p", "usa-prose"],
+  "knownLimitations": [],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["passive"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "typeset", "link", "list"],
+  "settings": ["$theme-type-scale"],
+  "relatedComponents": ["prose", "link"],
+  "tokenOverrides": ["$theme-type-scale", "$theme-lead-font-family"],
+  "tags": ["typography", "typeset", "headings", "paragraph"]
+}
+</script>
+</head>
+<body>
+<div class="usa-prose">
+  <h1>Page Title</h1>
+  <p class="usa-intro">Lead paragraph text that introduces the content.</p>
+  <h2>Section Heading</h2>
+  <p>Regular body text that follows the heading hierarchy.</p>
+  <h3>Subsection Heading</h3>
+  <p>More detailed content in the subsection.</p>
+</div>
+</body>
+</html>

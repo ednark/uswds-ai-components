@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Date Picker component for selecting dates via a calendar interface.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Date Picker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "date-picker/default.html",
+  "title": "Date Picker",
+  "uswdsComponentType": "date-picker",
+  "uswdsClass": "usa-date-picker",
+  "description": "Helps users select a single date via a calendar-based interface.",
+  "section": "forms",
+  "variant": "default",
+  "useWhen": [
+    "When dates are the primary input type",
+    "Appointment or reservation scheduling",
+    "Event date selection",
+    "When a calendar view aids date discovery"
+  ],
+  "avoidWhen": [
+    "Dates in the far past or future (navigation can be tedious)",
+    "Mobile interfaces where picker takes too much screen",
+    "Simple date entries where text input is faster"
+  ],
+  "agentPrompt": "Set min/max dates with data-min-date and data-max-date. Use data-default-value for programmatic pre-selection. Update label and hint text. Reference appropriate USWDS JS initialization.",
+  "editableAreas": [
+    "Date picker label",
+    "Hint text for format guidance",
+    "data-min-date and data-max-date for range",
+    "data-default-value for pre-selection"
+  ],
+  "preserveElements": [
+    "div.usa-date-picker__wrapper",
+    "label.usa-label with for attribute",
+    "input.usa-date-picker__input",
+    "data-min-date and data-max-date attributes"
+  ],
+  "knownLimitations": [
+    "JavaScript required for calendar functionality",
+    "Calendar navigation can be tedious for distant dates",
+    "Touch devices may prefer native date input"
+  ],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["click", "focus", "keyboard"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default"],
+  "settings": ["$theme-date-picker-border-radius"],
+  "relatedComponents": ["memorable-date", "date-range-picker", "text-input"],
+  "tokenOverrides": ["$theme-date-picker-border-radius", "$theme-date-picker-focus-border-color"],
+  "tags": ["date", "picker", "calendar", "schedule", "appointment", "select", "form"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .form-section {
+    max-width: 400px;
+  }
+</style>
+</head>
+<body>
+<div class="form-section">
+  <label class="usa-label" for="date-picker">Date</label>
+  <span class="usa-hint" id="date-picker-hint">mm/dd/yyyy</span>
+  <div class="usa-date-picker">
+    <input class="usa-input" id="date-picker" aria-describedby="date-picker-hint" type="text" name="date-picker">
+  </div>
+</div>
+<div class="cap">Date Picker default</div>
+</body>
+</html>

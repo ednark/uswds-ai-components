@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Character count error variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Character Count (Error)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "character-count/error.html",
+  "title": "Character Count (Error)",
+  "uswdsComponentType": "character-count",
+  "uswdsClass": "usa-character-count--error",
+  "description": "Character count showing error state when limit exceeded.",
+  "section": "forms",
+  "variant": "error",
+  "useWhen": ["Text fields with strict length limits", "Character-restricted inputs", "When over-limit errors needed"],
+  "avoidWhen": ["No character limits", "Soft limits that don't block input"],
+  "agentPrompt": "Add usa-character-count--error class to usa-character-count__wrapper when limit exceeded.",
+  "editableAreas": ["Character count message", "Input field text"],
+  "preserveElements": ["div.usa-character-count__wrapper", "span.usa-character-count__status"],
+  "knownLimitations": ["JavaScript needed for real-time count updates"],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["input", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "error"],
+  "settings": [],
+  "relatedComponents": ["text-input", "validation"],
+  "tokenOverrides": [],
+  "tags": ["character-count", "error", "limit", "validation"]
+}
+</script>
+</head>
+<body>
+<div class="usa-form-group usa-character-count__wrapper">
+  <label class="usa-label" for="with-hint-input">Text field with limit</label>
+  <span id="with-hint-input-hint" class="usa-hint">Max 50 characters</span>
+  <input id="with-hint-input" class="usa-input" name="with-hint-input" maxlength="50" aria-describedby="with-hint-input-hint with-hint-input-info">
+  <span id="with-hint-input-info" class="usa-character-count__status" aria-live="polite"></span>
+</div>
+</body>
+</html>

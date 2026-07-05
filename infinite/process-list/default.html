@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Process List component for displaying steps or stages of processes.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Process List</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "process-list/default.html",
+  "title": "Process List",
+  "uswdsComponentType": "process-list",
+  "uswdsClass": "usa-process-list",
+  "description": "Displays steps or stages of important instructions or processes.",
+  "section": "feedback",
+  "variant": "default",
+  "useWhen": [
+    "Step-by-step instructions or procedures",
+    "Onboarding or getting started workflows",
+    "Multi-step forms or wizards",
+    "Processes users need to follow in order"
+  ],
+  "avoidWhen": [
+    "Parallel processes without sequence",
+    "Simple, single-step actions",
+    "When content doesn't need numbered steps"
+  ],
+  "agentPrompt": "Add step titles in h3 or h4 with usa-process-list__heading. Numbering is automatic via CSS. Update step titles and descriptions. Steps should be followed in order.",
+  "editableAreas": [
+    "Step titles (usa-process-list__heading)",
+    "Step descriptions (usa-process-list__description)",
+    "Step details (usa-process-list__details)",
+    "Number of steps"
+  ],
+  "preserveElements": [
+    "ol.usa-process-list wrapper",
+    "li.usa-process-list__item for each step",
+    "div.usa-process-list__header for step heading",
+    "h3 or h4.usa-process-list__heading for title",
+    "div.usa-process-list__description for body"
+  ],
+  "knownLimitations": [
+    "CSS automatically handles numbering",
+    "Steps are always displayed in order",
+    "Not suitable for non-sequential content"
+  ],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["passive", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": false},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default"],
+  "settings": ["$theme-process-list-border-radius"],
+  "relatedComponents": ["step-indicator", "summary-box", "accordion"],
+  "tokenOverrides": ["$theme-process-list-border-color"],
+  "tags": ["process", "steps", "instructions", "numbered", "workflow", "onboarding", "guide"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .demo-section {
+    max-width: 600px;
+  }
+</style>
+</head>
+<body>
+<div class="demo-section">
+  <ol class="usa-process-list">
+    <li class="usa-process-list__item">
+      <div class="usa-process-list__header">
+        <h3 class="usa-process-list__heading">Step One</h3>
+      </div>
+      <div class="usa-process-list__description">
+        <p>Description of step one goes here. Explain what users need to do in this step.</p>
+      </div>
+    </li>
+    <li class="usa-process-list__item">
+      <div class="usa-process-list__header">
+        <h3 class="usa-process-list__heading">Step Two</h3>
+      </div>
+      <div class="usa-process-list__description">
+        <p>Description of step two goes here. Continue explaining the process.</p>
+      </div>
+    </li>
+    <li class="usa-process-list__item">
+      <div class="usa-process-list__header">
+        <h3 class="usa-process-list__heading">Step Three</h3>
+      </div>
+      <div class="usa-process-list__description">
+        <p>Final step description. Wrap up the process with this step.</p>
+      </div>
+    </li>
+  </ol>
+</div>
+<div class="cap">Process List default</div>
+</body>
+</html>

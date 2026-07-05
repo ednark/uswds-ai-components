@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Card header-flag variant with image in header.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Card (Header Flag)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "card/header-flag.html",
+  "title": "Card (Header Flag)",
+  "uswdsComponentType": "card",
+  "uswdsClass": "usa-card usa-card--header-flag",
+  "description": "Card with image positioned in the header area alongside title.",
+  "section": "data-display",
+  "variant": "header-flag",
+  "useWhen": ["Image + title side by side", "Avatar + name displays", "Compact image+title layouts"],
+  "avoidWhen": ["Large hero images", "Mobile where horizontal space is limited"],
+  "agentPrompt": "Add usa-card--header-flag class to usa-card. Image in header div, text beside it.",
+  "editableAreas": ["Card heading text", "Image src and alt", "Body content", "Footer actions"],
+  "preserveElements": ["article.usa-card usa-card--header-flag", "div.usa-card__header with media", "div.usa-card__body"],
+  "knownLimitations": ["Header image limited in height"],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["passive", "click"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "flag", "media", "inset", "header-flag"],
+  "settings": ["$theme-card-border-radius", "$theme-card-gap"],
+  "relatedComponents": ["collection", "table"],
+  "tokenOverrides": ["$theme-card-border-radius", "$theme-card-gap"],
+  "tags": ["card", "header-flag", "avatar", "compact"]
+}
+</script>
+</head>
+<body>
+<article class="usa-card usa-card--header-flag">
+  <div class="usa-card__header">
+    <div class="usa-card__media">
+      <div class="usa-card__img" style="background: #3b3b3b; width: 60px; height: 60px; border-radius: 50%;"></div>
+    </div>
+    <h2 class="usa-card__heading">Header Flag Card</h2>
+  </div>
+  <div class="usa-card__body">
+    <p>Card with image in header alongside title text.</p>
+  </div>
+</article>
+</body>
+</html>

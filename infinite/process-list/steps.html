@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Process list steps variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Process List (Steps)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "process-list/steps.html",
+  "title": "Process List (Steps)",
+  "uswdsComponentType": "process-list",
+  "uswdsClass": "usa-process-list--steps",
+  "description": "Process list with numbered steps for workflows.",
+  "section": "navigation",
+  "variant": "steps",
+  "useWhen": ["Step-by-step instructions", "Multi-step workflows", "Procedural content"],
+  "avoidWhen": ["Simple lists", "Non-sequential content"],
+  "agentPrompt": "Add usa-process-list--steps class to usa-process-list for numbered variant.",
+  "editableAreas": ["Step titles and descriptions"],
+  "preserveElements": ["ol.usa-process-list", "li.usa-process-list__item"],
+  "knownLimitations": [],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["passive"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "steps"],
+  "settings": [],
+  "relatedComponents": ["step-indicator", "list"],
+  "tokenOverrides": [],
+  "tags": ["process-list", "steps", "numbered", "workflow"]
+}
+</script>
+</head>
+<body>
+<ol class="usa-process-list usa-process-list--steps">
+  <li class="usa-process-list__item">
+    <span class="usa-process-list__heading">Step One</span>
+    <p>Description for step one of the process.</p>
+  </li>
+  <li class="usa-process-list__item">
+    <span class="usa-process-list__heading">Step Two</span>
+    <p>Description for step two of the process.</p>
+  </li>
+  <li class="usa-process-list__item">
+    <span class="usa-process-list__heading">Step Three</span>
+    <p>Description for step three of the process.</p>
+  </li>
+</ol>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Button component - outline variant with transparent background.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Button (Outline)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "button/outline.html",
+  "title": "Button (Outline)",
+  "uswdsComponentType": "button",
+  "uswdsClass": "usa-button usa-button--outline",
+  "description": "Transparent button with a color stroke for less prominent actions.",
+  "section": "utilities",
+  "variant": "outline",
+  "useWhen": ["Secondary actions", "Less prominent buttons", "On colored backgrounds"],
+  "avoidWhen": ["Primary CTAs", "Important actions", "On crowded interfaces"],
+  "agentPrompt": "Use usa-button--outline class. Same structure as default button.",
+  "editableAreas": ["Button label text", "type attribute", "disabled state"],
+  "preserveElements": ["usa-button base class", "usa-button--outline variant", "type attribute"],
+  "knownLimitations": ["Always set type attribute"],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click", "focus", "hover"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "secondary", "accent-cool", "accent-warm", "base", "outline", "outline-inverse", "big", "unstyled"],
+  "settings": ["$theme-button-border-radius", "$theme-button-stroke-width"],
+  "relatedComponents": ["button-group", "link"],
+  "tokenOverrides": ["$theme-button-border-radius", "$theme-button-stroke-width"],
+  "tags": ["button", "outline", "transparent", "stroke"]
+}
+</script>
+</head>
+<body>
+<button class="usa-button usa-button--outline" type="button">Outline Button</button>
+</body>
+</html>

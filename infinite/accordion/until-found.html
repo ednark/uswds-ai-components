@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Accordion with hidden until-found pattern for searchable collapsible content.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Accordion (Until Found)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "accordion/until-found.html",
+  "title": "Accordion (Until Found)",
+  "uswdsComponentType": "accordion",
+  "uswdsClass": "usa-accordion",
+  "description": "Accordion using hidden='until-found' so collapsed content stays searchable via browser find-in-page.",
+  "section": "data-display",
+  "variant": "until-found",
+  "useWhen": ["Long content that should remain searchable", "Browser find-in-page should find collapsed content", "usa.gov pattern"],
+  "avoidWhen": ["Older browsers without hidden=until-found support"],
+  "agentPrompt": "Add hidden='until-found' attribute to usa-accordion__content. Use onbeforematch to update aria-expanded.",
+  "editableAreas": ["Accordion button text", "Accordion panel content"],
+  "preserveElements": ["button.usa-accordion__button", "div.usa-accordion__content[hidden='until-found']", "aria-expanded attribute"],
+  "knownLimitations": ["Requires JavaScript for onbeforematch handling", "Firefox < 124 and Safari < 18 don't support"],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["click", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "bordered", "multiselectable", "until-found"],
+  "settings": [],
+  "relatedComponents": ["banner", "card"],
+  "tokenOverrides": [],
+  "tags": ["accordion", "until-found", "hidden", "searchable", "html5"]
+}
+</script>
+</head>
+<body>
+<ul class="usa-accordion">
+  <li class="usa-accordion__item">
+    <h2 class="usa-accordion__heading">
+      <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-until-found-1">
+        Searchable Accordion Item
+      </button>
+    </h2>
+    <div id="accordion-until-found-1" class="usa-accordion__content usa-prose" hidden="until-found">
+      <p>This content is hidden but still searchable via browser find-in-page. The browser will reveal it when found.</p>
+    </div>
+  </li>
+  <li class="usa-accordion__item">
+    <h2 class="usa-accordion__heading">
+      <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-until-found-2">
+        Second Searchable Item
+      </button>
+    </h2>
+    <div id="accordion-until-found-2" class="usa-accordion__content usa-prose" hidden="until-found">
+      <p>More searchable content that stays hidden until expanded or found via search.</p>
+    </div>
+  </li>
+</ul>
+<script>
+  document.querySelectorAll(".usa-accordion__content").forEach((content) => {
+    content.onbeforematch = () => {
+      document.querySelector("[aria-controls='" + content.id + "']").setAttribute("aria-expanded", "true");
+    };
+  });
+</script>
+</body>
+</html>

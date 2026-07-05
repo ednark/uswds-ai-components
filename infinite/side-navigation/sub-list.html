@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Side navigation sub-list variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Side Navigation (Sub-list)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "side-navigation/sub-list.html",
+  "title": "Side Navigation (Sub-list)",
+  "uswdsComponentType": "side-navigation",
+  "uswdsClass": "usa-nav__submenu",
+  "description": "Side navigation with expandable sub-menu items.",
+  "section": "navigation",
+  "variant": "sub-list",
+  "useWhen": ["Hierarchical navigation", "Sections with sub-pages", "Collapsible navigation trees"],
+  "avoidWhen": ["Flat navigation structures", "Simple 2-level menus"],
+  "agentPrompt": "Use usa-nav__submenu class for dropdown sub-lists within side navigation.",
+  "editableAreas": ["Navigation link text", "Sub-menu items"],
+  "preserveElements": ["nav.usa-nav", "ul.usa-nav__primary", "li.usa-nav__item", "ul.usa-nav__submenu"],
+  "knownLimitations": ["JavaScript required for toggle behavior"],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["click", "hover", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "sub-list"],
+  "settings": ["$theme-navigation-width"],
+  "relatedComponents": ["header", "link", "in-page-navigation"],
+  "tokenOverrides": ["$theme-navigation-width"],
+  "tags": ["side-navigation", "sub-list", "hierarchical", "dropdown"]
+}
+</script>
+</head>
+<body>
+<nav class="usa-nav" aria-label="Side navigation">
+  <ul class="usa-nav__primary">
+    <li class="usa-nav__primary-item">
+      <a class="usa-nav__link" href="#">Section</a>
+    </li>
+    <li class="usa-nav__primary-item">
+      <button class="usa-nav__link" aria-expanded="false" aria-controls="submenu-1">
+        Section with Sub-items
+      </button>
+      <ul id="submenu-1" class="usa-nav__submenu">
+        <li class="usa-nav__submenu-item">
+          <a href="#">Sub-item One</a>
+        </li>
+        <li class="usa-nav__submenu-item">
+          <a href="#">Sub-item Two</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</body>
+</html>

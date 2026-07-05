@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Navbar wrapper component for header logo and menu button.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Navbar</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "navbar/default.html",
+  "title": "Navbar",
+  "uswdsComponentType": "navbar",
+  "uswdsClass": "usa-navbar",
+  "description": "Navbar wrapper inside header containing logo and mobile menu button.",
+  "section": "navigation",
+  "variant": "default",
+  "useWhen": ["Header layouts", "Logo + menu button combination", "Mobile-responsive headers"],
+  "avoidWhen": ["Standalone use without header"],
+  "agentPrompt": "Use div.usa-navbar inside usa-header. Contains usa-logo and usa-menu-btn button.",
+  "editableAreas": ["Logo image and text", "Menu button label"],
+  "preserveElements": ["div.usa-navbar", "div.usa-logo", "em.usa-logo-text", "button.usa-menu-btn"],
+  "knownLimitations": ["Only visible on mobile when used with extended header"],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["click"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default"],
+  "settings": [],
+  "relatedComponents": ["header", "logo", "button"],
+  "tokenOverrides": [],
+  "tags": ["navbar", "header", "logo", "menu", "mobile"]
+}
+</script>
+</head>
+<body>
+<header class="usa-header usa-header--extended">
+  <div class="usa-navbar">
+    <div class="usa-logo" id="logo">
+      <em class="usa-logo-text">
+        <a href="/" title="Home">
+          <img src="logo.png" alt="Agency Logo">
+        </a>
+      </em>
+    </div>
+    <button class="usa-menu-btn">Menu</button>
+  </div>
+</header>
+</body>
+</html>

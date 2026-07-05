@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Card flag variant with horizontal layout.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Card (Flag)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "card/flag.html",
+  "title": "Card (Flag)",
+  "uswdsComponentType": "card",
+  "uswdsClass": "usa-card usa-card--flag",
+  "description": "Card with horizontal layout, image on left and content on right.",
+  "section": "data-display",
+  "variant": "flag",
+  "useWhen": ["Image + content side by side", "Horizontal layouts", "News or article cards"],
+  "avoidWhen": ["Vertical mobile layouts", "Image-first displays"],
+  "agentPrompt": "Add usa-card--flag class to usa-card. Image goes in header, content in body. Specific DOM order required.",
+  "editableAreas": ["Card heading and body text", "Image src and alt", "Footer actions"],
+  "preserveElements": ["article.usa-card usa-card--flag", "div.usa-card__header with media", "div.usa-card__body"],
+  "knownLimitations": ["Requires specific DOM order (media first)"],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["passive", "click"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "flag", "media", "inset", "header-flag"],
+  "settings": ["$theme-card-border-radius", "$theme-card-gap"],
+  "relatedComponents": ["collection", "table"],
+  "tokenOverrides": ["$theme-card-border-radius", "$theme-card-gap"],
+  "tags": ["card", "flag", "horizontal", "media"]
+}
+</script>
+</head>
+<body>
+<article class="usa-card usa-card--flag">
+  <div class="usa-card__header">
+    <div class="usa-card__media">
+      <div class="usa-card__img" style="background: #ccc; width: 100px; height: 80px;"></div>
+    </div>
+    <h2 class="usa-card__heading">Flag Card Heading</h2>
+  </div>
+  <div class="usa-card__body">
+    <p>Card body content goes here. The flag variant displays image and content side by side.</p>
+  </div>
+</article>
+</body>
+</html>

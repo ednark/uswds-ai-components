@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Typography component for consistent text styling.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Typography</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "typography/default.html",
+  "title": "Typography",
+  "uswdsComponentType": "typography",
+  "uswdsClass": "usa-typography",
+  "description": "Clear headings, legible body text, labels, and input fields following government standards.",
+  "section": "layout",
+  "variant": "default",
+  "useWhen": [
+    "Establishing consistent typography across the site",
+    "When USWDS type scale is needed",
+    "Government sites requiring accessibility compliance",
+    "Standardized font stacking"
+  ],
+  "avoidWhen": [
+    "When brand fonts are required and can't be overridden",
+    "Non-government sites without USWDS requirement"
+  ],
+  "agentPrompt": "Use USWDS typography classes: .usa-display for large headings, .usa-intro for lead text. Update $theme-typeface-font-family setting. Use heading classes h1-h6 with appropriate usa-typography classes.",
+  "editableAreas": [
+    "Font family setting",
+    "Type scale classes",
+    "Heading levels (h1-h6)",
+    "Display text styling"
+  ],
+  "preserveElements": [
+    "usa-display classes for large headings",
+    "usa-intro for lead/intro text",
+    "usa-link for links",
+    "usa標題series for headings",
+    "Proper heading hierarchy"
+  ],
+  "knownLimitations": [
+    "Typography requires USWDS font settings",
+    "Source Sans Pro is the default — can be overridden",
+    "Heading classes need proper semantic hierarchy"
+  ],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["passive"],
+  "a11y": {"wcag21AA": true, "keyboardNav": false, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": false},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["typeset", "link", "list"],
+  "settings": ["$theme-typeface-font-family", "$theme-font-weight-normal"],
+  "relatedComponents": ["prose", "link", "list"],
+  "tokenOverrides": ["$theme-typeface-font-family", "$theme-font-weight-normal", "$theme-line-height-heading"],
+  "tags": ["typography", "type", "font", "heading", "text", "typeface", "scale"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .demo-section {
+    max-width: 600px;
+  }
+</style>
+</head>
+<body>
+<div class="demo-section">
+  <h1 class="usa-display">Display Heading</h1>
+  <p class="usa-intro">This is introductory text that is longer than a typical sentence and sets context for the content that follows.</p>
+  <h2>Section Heading</h2>
+  <p>Body text demonstrates the standard typography styles used throughout a government website.</p>
+  <h3>Subsection Heading</h3>
+  <p>More body text with <a href="#">an example link</a> demonstrating link styling.</p>
+</div>
+<div class="cap">Typography default</div>
+</body>
+</html>

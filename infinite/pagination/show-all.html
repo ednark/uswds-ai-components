@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Pagination show-all variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Pagination (Show All)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "pagination/show-all.html",
+  "title": "Pagination (Show All)",
+  "uswdsComponentType": "pagination",
+  "uswdsClass": "usa-pagination--show-all",
+  "description": "Pagination component showing all page numbers.",
+  "section": "navigation",
+  "variant": "show-all",
+  "useWhen": ["Small datasets", "When user needs to jump to specific pages", "Limited number of total pages"],
+  "avoidWhen": ["Large datasets", "Performance concerns with many rendered links"],
+  "agentPrompt": "Add usa-pagination--show-all class. Displays all page numbers without ellipsis.",
+  "editableAreas": ["Page numbers", "Current page indicator", "Prev/Next labels"],
+  "preserveElements": ["nav.usa-pagination", "ul.usa-pagination__list", "li.usa-pagination__item"],
+  "knownLimitations": ["Doesn't scale well for large page counts"],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "show-all"],
+  "settings": [],
+  "relatedComponents": ["pager", "step-indicator"],
+  "tokenOverrides": [],
+  "tags": ["pagination", "show-all", "pages", "navigation"]
+}
+</script>
+</head>
+<body>
+<nav class="usa-pagination usa-pagination--show-all" aria-label="Pagination">
+  <ul class="usa-pagination__list">
+    <li class="usa-pagination__item usa-pagination__arrow">
+      <a href="#" class="usa-pagination__link" aria-label="Previous page">
+        <span class="usa-pagination__link-text">Previous</span>
+      </a>
+    </li>
+    <li class="usa-pagination__item"><a class="usa-pagination__button" href="#">1</a></li>
+    <li class="usa-pagination__item"><a class="usa-pagination__button" href="#">2</a></li>
+    <li class="usa-pagination__item"><a class="usa-pagination__button" href="#">3</a></li>
+    <li class="usa-pagination__item"><a class="usa-pagination__button" href="#">4</a></li>
+    <li class="usa-pagination__item usa-pagination__item--current">
+      <span class="usa-pagination__button" aria-current="page">5</span>
+    </li>
+    <li class="usa-pagination__item usa-pagination__arrow">
+      <a href="#" class="usa-pagination__link" aria-label="Next page">
+        <span class="usa-pagination__link-text">Next</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+</body>
+</html>

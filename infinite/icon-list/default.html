@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Icon List component with leading icons for list items.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Icon List</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "icon-list/default.html",
+  "title": "Icon List",
+  "uswdsComponentType": "icon-list",
+  "uswdsClass": "usa-icon-list",
+  "description": "Reinforces meaning and visibility of individual list items with a leading icon.",
+  "section": "navigation",
+  "variant": "default",
+  "useWhen": [
+    "Lists where icons reinforce meaning",
+    "Feature or benefit lists",
+    "Checklists or task lists",
+    "When visual scanning aids understanding"
+  ],
+  "avoidWhen": [
+    "Simple text-only lists",
+    "When icons add no semantic value",
+    "Densely packed content"
+  ],
+  "agentPrompt": "Update icon names in the href attributes (#check, #warning, etc.). Add usa-icon-list--checklist for checklist style. Add usa-icon-list--icon-lg for larger icons. Update list item content.",
+  "editableAreas": [
+    "Icon name in href attribute (after #)",
+    "List item text content",
+    "Icon size variant: default, lg",
+    "Style variant: default, checklist"
+  ],
+  "preserveElements": [
+    "ul.usa-icon-list",
+    "li.usa-icon-list__item",
+    "div.usa-icon-list__icon for icon container",
+    "svg.usa-icon for the icon itself",
+    "div.usa-icon-list__content for text"
+  ],
+  "knownLimitations": [
+    "Icons require USWDS sprite file",
+    "Icons should reinforce, not replace, text meaning",
+    "Checklist variant has specific styling"
+  ],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["passive", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": false, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": false},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "usa-icon-list--checklist", "usa-icon-list--icon-lg"],
+  "settings": ["$theme-icon-list-font-family"],
+  "relatedComponents": ["list", "link", "icon"],
+  "tokenOverrides": ["$theme-icon-list-font-family", "$theme-icon-list-icon-size"],
+  "tags": ["icon-list", "icon", "list", "checklist", "features", "benefits", "icons"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+</style>
+</head>
+<body>
+<ul class="usa-icon-list">
+  <li class="usa-icon-list__item">
+    <div class="usa-icon-list__icon"><svg class="usa-icon" aria-hidden="true"><use href="#check"></use></svg></div>
+    <div class="usa-icon-list__content">First item with icon</div>
+  </li>
+  <li class="usa-icon-list__item">
+    <div class="usa-icon-list__icon"><svg class="usa-icon" aria-hidden="true"><use href="#check"></use></svg></div>
+    <div class="usa-icon-list__content">Second item with icon</div>
+  </li>
+  <li class="usa-icon-list__item">
+    <div class="usa-icon-list__icon"><svg class="usa-icon" aria-hidden="true"><use href="#check"></use></svg></div>
+    <div class="usa-icon-list__content">Third item with icon</div>
+  </li>
+</ul>
+<p><em>Icons require USWDS sprite at /assets/img/usa-icons.svg</em></p>
+<div class="cap">Icon List default</div>
+</body>
+</html>

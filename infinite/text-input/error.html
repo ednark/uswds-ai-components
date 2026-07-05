@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Text input error variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Text Input (Error)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "text-input/error.html",
+  "title": "Text Input (Error)",
+  "uswdsComponentType": "text-input",
+  "uswdsClass": "usa-input--error",
+  "description": "Text input showing error validation state.",
+  "section": "forms",
+  "variant": "error",
+  "useWhen": ["Form validation errors", "Required field validation", "Format errors"],
+  "avoidWhen": ["Valid inputs", "Success states"],
+  "agentPrompt": "Add usa-input--error class and use usa-form-group--error on parent.",
+  "editableAreas": ["Input label", "Error message text"],
+  "preserveElements": ["div.usa-form-group--error", "input.usa-input", "span.usa-error-message"],
+  "knownLimitations": [],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["focus", "input"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "tile", "error", "success", "disabled"],
+  "settings": [],
+  "relatedComponents": ["validation", "summary-box"],
+  "tokenOverrides": [],
+  "tags": ["text-input", "error", "validation", "form"]
+}
+</script>
+</head>
+<body>
+<div class="usa-form-group usa-form-group--error">
+  <label class="usa-label" for="text-input-error">Text input with error</label>
+  <span class="usa-error-message" id="text-input-error-message" role="alert">Error: Please enter a valid value</span>
+  <input class="usa-input" id="text-input-error" name="text-input-error" aria-describedby="text-input-error-message" type="text">
+</div>
+</body>
+</html>

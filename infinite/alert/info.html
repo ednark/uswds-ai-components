@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Alert component demonstrating info, success, warning, and error variants.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Alert (Info)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "alert/info.html",
+  "title": "Alert (Info)",
+  "uswdsComponentType": "alert",
+  "uswdsClass": "usa-alert",
+  "description": "Informational alert for general messages that need user's attention but aren't urgent.",
+  "section": "feedback",
+  "variant": "info",
+  "useWhen": [
+    "General information messages that need user attention",
+    "Non-urgent updates about system status or requirements",
+    "Informational context that helps users understand their current state",
+    "Messages that aren't time-sensitive"
+  ],
+  "avoidWhen": [
+    "Urgent messages requiring immediate attention — use usa-alert--error",
+    "Success confirmations — use usa-alert--success",
+    "Warnings about potential issues — use usa-alert--warning",
+    "Slim layouts where space is limited"
+  ],
+  "agentPrompt": "Add usa-alert--success, usa-alert--warning, or usa-alert--error class for different severity levels. Add usa-alert--slim for reduced vertical height. Update role='alert' or role='status' based on urgency.",
+  "editableAreas": [
+    "Alert text content",
+    "Alert variant class: usa-alert--success, usa-alert--warning, usa-alert--error",
+    "Slim variant: usa-alert--slim",
+    "No-icon variant: usa-alert--no-icon",
+    "Role attribute: role='alert' for urgent, role='status' for informational",
+    "aria-live attribute for screen reader announcements"
+  ],
+  "preserveElements": [
+    "usa-alert wrapper class",
+    "usa-alert__body container div",
+    "usa-alert__heading for titled alerts",
+    "usa-alert__text for alert body content",
+    "Role and aria-live attributes for accessibility"
+  ],
+  "knownLimitations": [
+    "No JavaScript required — purely CSS-styled component",
+    "role='alert' interrupts screen reader flow — use judiciously",
+    "Slim variant may lose visual impact for important messages"
+  ],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["passive"],
+  "a11y": {
+    "wcag21AA": true,
+    "keyboardNav": false,
+    "screenReader": true,
+    "reducedMotion": true,
+    "forcedColors": true,
+    "ariaAttributes": true
+  },
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["info", "success", "warning", "error", "slim"],
+  "settings": ["$theme-alert-status-color"],
+  "relatedComponents": ["site-alert", "banner", "validation"],
+  "tokenOverrides": ["$theme-alert-status-color", "$theme-alert-text-color"],
+  "tags": ["alert", "notification", "message", "feedback", "status", "info", "warning", "error"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .preview-section {
+    margin-bottom: 2rem;
+  }
+  .preview-heading {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #565c65;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+</style>
+</head>
+<body>
+<div class="preview-section">
+  <p class="preview-heading">Info</p>
+  <div class="usa-alert usa-alert--info">
+    <div class="usa-alert__body">
+      <p class="usa-alert__text"><strong>informational notice</strong> — This is an informational alert.</p>
+    </div>
+  </div>
+</div>
+
+<div class="preview-section">
+  <p class="preview-heading">Success</p>
+  <div class="usa-alert usa-alert--success">
+    <div class="usa-alert__body">
+      <p class="usa-alert__text"><strong>Success:</strong> Your changes have been saved successfully.</p>
+    </div>
+  </div>
+</div>
+
+<div class="preview-section">
+  <p class="preview-heading">Warning</p>
+  <div class="usa-alert usa-alert--warning">
+    <div class="usa-alert__body">
+      <p class="usa-alert__text"><strong>Warning:</strong> Your session will expire in 5 minutes.</p>
+    </div>
+  </div>
+</div>
+
+<div class="preview-section">
+  <p class="preview-heading">Error</p>
+  <div class="usa-alert usa-alert--error">
+    <div class="usa-alert__body">
+      <p class="usa-alert__text"><strong>Error:</strong> Please correct the errors below.</p>
+    </div>
+  </div>
+</div>
+
+<div class="preview-section">
+  <p class="preview-heading">Slim</p>
+  <div class="usa-alert usa-alert--info usa-alert--slim">
+    <div class="usa-alert__body">
+      <p class="usa-alert__text">This is a slim informational alert.</p>
+    </div>
+  </div>
+</div>
+
+<div class="cap">Alert variants</div>
+</body>
+</html>

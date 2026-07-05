@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Side navigation with usa-current page marker.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Side Navigation (Current Page)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "side-navigation/current.html",
+  "title": "Side Navigation (Current Page)",
+  "uswdsComponentType": "side-navigation",
+  "uswdsClass": "usa-sidenav",
+  "description": "Sidenav variant showing usa-current class for marking the current/active page.",
+  "section": "navigation",
+  "variant": "current",
+  "useWhen": ["Content pages with sidebar nav", "Marking current page in hierarchy", "Documentation sites"],
+  "avoidWhen": ["Single-level navigation", "When current page indicator isn't needed"],
+  "agentPrompt": "Add usa-current class to the active link or a div wrapping non-link current page text. Use active-trail on parent items.",
+  "editableAreas": ["Navigation links", "Current page label"],
+  "preserveElements": ["ul.usa-sidenav", "li.usa-sidenav__item", "a.usa-current", "div.usa-current"],
+  "knownLimitations": [],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "sidenav", "sub-list", "current"],
+  "settings": ["$theme-sidenav-font-family"],
+  "relatedComponents": ["layout-docs", "breadcrumb", "header"],
+  "tokenOverrides": ["$theme-sidenav-font-family"],
+  "tags": ["sidenav", "current", "active", "page-marker", "usa-current"]
+}
+</script>
+</head>
+<body>
+<nav aria-label="Secondary">
+  <ul class="usa-sidenav">
+    <li class="usa-sidenav__item">
+      <a href="/about" class="active-trail">About Us</a>
+      <ul class="usa-sidenav__sublist">
+        <li class="usa-sidenav__item">
+          <div class="active-trail usa-current">
+            <p class="usa-sr-only">current page</p>
+            Current Page
+          </div>
+        </li>
+        <li class="usa-sidenav__item">
+          <a href="/strategic-plan">Strategic Plan</a>
+        </li>
+        <li class="usa-sidenav__item">
+          <a href="/committee">Committee Members</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</body>
+</html>

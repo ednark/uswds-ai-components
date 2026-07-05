@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Skip Navigation link for accessibility.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Skip Nav</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "skip-nav/default.html",
+  "title": "Skip Navigation",
+  "uswdsComponentType": "skip-nav",
+  "uswdsClass": "usa-skipnav",
+  "description": "Skip navigation link that allows keyboard users to bypass repetitive navigation and jump to main content.",
+  "section": "navigation",
+  "variant": "default",
+  "useWhen": ["Every government website", "Accessibility compliance", "Keyboard navigation support"],
+  "avoidWhen": ["Single-page apps without nav"],
+  "agentPrompt": "Add as first element in body. Use href='#main-content' pointing to main content id. Visually hidden until focused.",
+  "editableAreas": ["Link text (typically 'Skip to main content')", "href target id"],
+  "preserveElements": ["a.usa-skipnav", "usa-sr-only class for visual hiding"],
+  "knownLimitations": ["Must have matching id on main content container"],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["focus", "click"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA", "Required for keyboard accessibility"],
+  "variants": ["default"],
+  "settings": [],
+  "relatedComponents": ["header", "in-page-navigation"],
+  "tokenOverrides": [],
+  "tags": ["skip-nav", "accessibility", "keyboard", "a11y", "skip"]
+}
+</script>
+</head>
+<body>
+<a href="#main-content" class="usa-skipnav usa-sr-only focusable">
+  Skip to main content
+</a>
+<main id="main-content">
+  <p>Main content</p>
+</main>
+</body>
+</html>

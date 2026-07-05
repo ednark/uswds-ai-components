@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Button component - big size variant for primary actions.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Button (Big)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "button/big.html",
+  "title": "Button (Big)",
+  "uswdsComponentType": "button",
+  "uswdsClass": "usa-button usa-button--big",
+  "description": "Larger button for primary actions that need visual emphasis.",
+  "section": "utilities",
+  "variant": "big",
+  "useWhen": ["Primary CTAs", "Important actions needing emphasis", "Mobile-friendly large targets"],
+  "avoidWhen": ["Minor actions", "Dense interfaces", "Button groups with many buttons"],
+  "agentPrompt": "Use usa-button--big class. Same structure as default button.",
+  "editableAreas": ["Button label text", "type attribute", "disabled state"],
+  "preserveElements": ["usa-button base class", "usa-button--big variant", "type attribute"],
+  "knownLimitations": ["Does not auto-resize on mobile"],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click", "focus", "hover"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "secondary", "accent-cool", "accent-warm", "base", "outline", "outline-inverse", "big", "unstyled"],
+  "settings": ["$theme-button-border-radius"],
+  "relatedComponents": ["button-group", "link"],
+  "tokenOverrides": ["$theme-button-border-radius"],
+  "tags": ["button", "big", "large", "primary", "cta"]
+}
+</script>
+</head>
+<body>
+<button class="usa-button usa-button--big" type="button">Big Button</button>
+</body>
+</html>

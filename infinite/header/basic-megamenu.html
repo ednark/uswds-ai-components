@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Basic header with mega-menu style dropdown panels.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Header (Basic Megamenu)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "header/basic-megamenu.html",
+  "title": "Header (Basic Megamenu)",
+  "uswdsComponentType": "header",
+  "uswdsClass": "usa-header usa-header--basic",
+  "description": "Basic header variant with mega-menu style dropdown panels using usa-nav__submenu with multi-column grids.",
+  "section": "navigation",
+  "variant": "basic-megamenu",
+  "useWhen": ["Basic header with complex dropdowns", "Multi-column nav submenus", "When extended header is too much but megamenu is needed"],
+  "avoidWhen": ["Simple single-column dropdowns", "Mobile-only navigation"],
+  "agentPrompt": "Use usa-header--basic with usa-nav__primary usa-accordion. Each nav item uses button.usa-accordion__button usa-nav__link with aria-controls pointing to div.usa-nav__submenu containing ul.usa-nav__submenu-items with grid columns.",
+  "editableAreas": ["Nav section labels", "Submenu items with titles and descriptions", "Grid column counts per submenu"],
+  "preserveElements": ["header.usa-header--basic", "ul.usa-nav__primary usa-accordion", "button.usa-accordion__button usa-nav__link", "div.usa-nav__submenu", "ul.usa-nav__submenu-items"],
+  "knownLimitations": ["More complex than standard basic header", "JavaScript required for accordion behavior"],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["click", "hover", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "basic", "extended", "megamenu", "basic-megamenu"],
+  "settings": ["$theme-header-font-family", "$theme-header-logo-width"],
+  "relatedComponents": ["side-navigation", "footer", "search"],
+  "tokenOverrides": ["$theme-header-font-family", "$theme-header-logo-width", "$theme-header-min-width"],
+  "tags": ["header", "basic", "megamenu", "dropdown", "multi-column", "submenu"]
+}
+</script>
+</head>
+<body>
+<a href="#main-content" class="usa-skipnav">Skip to main content</a>
+<div class="usa-overlay"></div>
+<header class="usa-header usa-header--basic" id="header">
+  <div class="usa-nav-container">
+    <div class="usa-navbar">
+      <div class="usa-logo">
+        <em class="usa-logo__text">
+          <a href="/">Agency Name</a>
+        </em>
+      </div>
+      <button class="usa-menu-btn">Menu</button>
+    </div>
+    <nav class="usa-nav" aria-label="Main navigation">
+      <button class="usa-nav__close">Close</button>
+      <ul class="usa-nav__primary usa-accordion">
+        <li class="usa-nav__primary-item">
+          <button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="nav-section-1">
+            <span>About Us</span>
+          </button>
+          <div id="nav-section-1" class="grid-container usa-nav__submenu" hidden>
+            <ul class="mobile-lg:grid-col-6 desktop:grid-col-12 grid-row grid-gap usa-nav__submenu-items">
+              <li class="desktop:grid-col-6 usa-nav__submenu-item">
+                <a href="/about">
+                  <div class="item-title">About Us</div>
+                  <div class="item-description">Who we are and what we do</div>
+                </a>
+              </li>
+              <li class="desktop:grid-col-6 usa-nav__submenu-item">
+                <a href="/strategic-plan">
+                  <div class="item-title">Strategic Plan</div>
+                  <div class="item-description">Our plans for the future</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="usa-nav__primary-item">
+          <button class="usa-accordion__button usa-nav__link" aria-expanded="false" aria-controls="nav-section-2">
+            <span>Reports</span>
+          </button>
+          <div id="nav-section-2" class="grid-container usa-nav__submenu" hidden>
+            <ul class="desktop:grid-col-12 grid-row grid-gap usa-nav__submenu-items">
+              <li class="desktop:grid-col-4 usa-nav__submenu-item">
+                <a href="/reports">
+                  <div class="item-title">Reports Library</div>
+                  <div class="item-description">Search all reports</div>
+                </a>
+              </li>
+              <li class="desktop:grid-col-4 usa-nav__submenu-item">
+                <a href="/recommendations">
+                  <div class="item-title">Recommendations</div>
+                  <div class="item-description">What we've recommended</div>
+                </a>
+              </li>
+              <li class="desktop:grid-col-4 usa-nav__submenu-item">
+                <a href="/publications">
+                  <div class="item-title">Publications</div>
+                  <div class="item-description">Our published work</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+</body>
+</html>

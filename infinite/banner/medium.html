@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Banner medium variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Banner (Medium)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "banner/medium.html",
+  "title": "Banner (Medium)",
+  "uswdsComponentType": "banner",
+  "uswdsClass": "usa-banner--medium",
+  "description": "Banner with medium-sized government emblem.",
+  "section": "supporting",
+  "variant": "medium",
+  "useWhen": ["Standard government sites", "When larger emblem aids recognition"],
+  "avoidWhen": ["Compact headers", "Mobile with limited space"],
+  "agentPrompt": "Add usa-banner--medium class to usa-banner for medium emblem size.",
+  "editableAreas": ["Agency name", "Official website notice"],
+  "preserveElements": ["div.usa-banner", "div.usa-banner__header", "div.usa-banner__content"],
+  "knownLimitations": ["Medium size may not scale well on all screens"],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA", "Required by US federal agencies"],
+  "variants": ["default", "medium", "slim"],
+  "settings": [],
+  "relatedComponents": ["header", "identifier"],
+  "tokenOverrides": [],
+  "tags": ["banner", "medium", "government", "official"]
+}
+</script>
+</head>
+<body>
+<div class="usa-banner usa-banner--medium">
+  <div class="usa-banner__header">
+    <div class="usa-banner__inner">
+      <div class="usa-banner__text">
+        <p class="usa-banner__header-text">An official website of the United States government</p>
+      </div>
+    </div>
+  </div>
+  <div class="usa-banner__content">
+    <div class="usa-banner__guidance">
+      <p>Here's how you know</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

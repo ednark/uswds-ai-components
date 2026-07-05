@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Header component for site identification and main navigation.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Header</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "header/default.html",
+  "title": "Header",
+  "uswdsComponentType": "header",
+  "uswdsClass": "usa-header",
+  "description": "Identifies where users are and provides quick access to main site sections.",
+  "section": "navigation",
+  "variant": "default",
+  "useWhen": [
+    "Every website needs a header for identity and primary navigation",
+    "Users need to navigate between main sections",
+    "Site identity (logo, agency name) needs to be visible",
+    "Search functionality is needed site-wide"
+  ],
+  "avoidWhen": [
+    "Standalone applications without page navigation",
+    "Modal-only interfaces"
+  ],
+  "agentPrompt": "Add usa-header--basic for minimal header, usa-header--extended for full-width navigation. Add usa-nav for navigation links. Include mobile menu button with usa-menu-btn class. Add language selector dropdown if needed.",
+  "editableAreas": [
+    "Agency logo and name",
+    "Navigation link text and hrefs",
+    "Search input and button",
+    "Mobile menu toggle text",
+    "Variant class: basic, extended, or megamenu"
+  ],
+  "preserveElements": [
+    "header.usa-header with id='header'",
+    "div.usa-logo for agency branding",
+    "nav.usa-nav for main navigation",
+    "a.usa-menu-btn for mobile toggle",
+    "Skip to main content link",
+    "main#main-content target for skip link"
+  ],
+  "knownLimitations": [
+    "JavaScript required for mobile menu toggle",
+    "Megamenu variant has complex nested navigation",
+    "Skip link should be first focusable element on page"
+  ],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["click", "hover", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "basic", "extended", "megamenu"],
+  "settings": ["$theme-header-font-family", "$theme-header-logo-width"],
+  "relatedComponents": ["side-navigation", "footer", "search"],
+  "tokenOverrides": ["$theme-header-font-family", "$theme-header-logo-width", "$theme-header-min-width"],
+  "tags": ["header", "navigation", "logo", "agency", "top", "nav", "menu"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  a { color: #005ea2; }
+</style>
+</head>
+<body>
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
+<header class="usa-header" id="header">
+  <div class="usa-logo">
+    <em class="usa-logo__text">Agency Name</em>
+  </div>
+  <button class="usa-menu-btn">Menu</button>
+  <nav class="usa-nav" aria-label="Main navigation">
+    <ul class="usa-list--unstyled">
+      <li class="usa-nav__primary-item">
+        <a class="usa-nav__link" href="#">Section One</a>
+      </li>
+      <li class="usa-nav__primary-item">
+        <a class="usa-nav__link" href="#">Section Two</a>
+      </li>
+      <li class="usa-nav__primary-item">
+        <a class="usa-nav__link" href="#">Section Three</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main id="main-content">
+  <p>Main content area</p>
+</main>
+</body>
+</html>

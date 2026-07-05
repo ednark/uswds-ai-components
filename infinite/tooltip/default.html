@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Tooltip component for short descriptive messages on hover or focus.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Tooltip</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "tooltip/default.html",
+  "title": "Tooltip",
+  "uswdsComponentType": "tooltip",
+  "uswdsClass": "usa-tooltip",
+  "description": "Short descriptive message appearing on hover or focus when users need more information.",
+  "section": "feedback",
+  "variant": "default",
+  "useWhen": [
+    "Clarifying ambiguous labels or icons",
+    "Providing additional context for form fields",
+    "Explaining abbreviations or technical terms",
+    "Non-critical supplementary information"
+  ],
+  "avoidWhen": [
+    "Critical information that must always be visible",
+    "Interactive elements (use dedicated instructions)",
+    "Essential instructions for completing a task",
+    "Long text (use a different pattern)"
+  ],
+  "agentPrompt": "Add usa-tooltip__wrapper--top, --bottom, --left, or --right for positioning. Set aria-describedby on the trigger element. Update title attribute for tooltip content. Add usa-tooltip__trigger class to the trigger element.",
+  "editableAreas": [
+    "Tooltip content (title attribute)",
+    "Trigger element text or icon",
+    "Position: top, bottom, left, right",
+    "Trigger element id"
+  ],
+  "preserveElements": [
+    "Element with usa-tooltip__trigger class",
+    "title attribute on trigger for tooltip content",
+    "aria-describedby linking to tooltip element",
+    "data-tooltip-position attribute",
+    "Element with usa-tooltip class"
+  ],
+  "knownLimitations": [
+    "JavaScript required for tooltip behavior",
+    "Touch devices may not show hover tooltips",
+    "Content in title attribute is not accessible on mobile",
+    "Not suitable for critical information"
+  ],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["hover", "focus", "keyboard"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "top", "bottom", "left", "right"],
+  "settings": ["$theme-tooltip-font-family"],
+  "relatedComponents": ["modal", "alert", "tag"],
+  "tokenOverrides": ["$theme-tooltip-font-family", "$theme-tooltip-background-color"],
+  "tags": ["tooltip", "hover", "hint", "info", "description", "context"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+</style>
+</head>
+<body>
+<span class="usa-tooltip__trigger" data-tooltip-position="top" title="Tooltip text">Hover or focus for tooltip</span>
+<div class="cap">Tooltip default</div>
+</body>
+</html>

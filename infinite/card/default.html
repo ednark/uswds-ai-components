@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Card component for content and actions about a single subject.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "card/default.html",
+  "title": "Card",
+  "uswdsComponentType": "card",
+  "uswdsClass": "usa-card",
+  "description": "Container for content and actions about a single subject.",
+  "section": "data-display",
+  "variant": "default",
+  "useWhen": [
+    "Grouping related content about a single topic",
+    "Displaying discrete items in a grid or list layout",
+    "When content needs a visible container with clear boundaries",
+    "Articles, products, or service offerings"
+  ],
+  "avoidWhen": [
+    "Single column layouts where cards add unnecessary complexity",
+    "Dense data tables where cards would waste space",
+    "When semantic HTML sections or articles are more appropriate"
+  ],
+  "agentPrompt": "Add usa-card--flag for horizontal layout, usa-card--media for image + content, usa-card--inset for content with background, usa-card--header-flag for header image variant. Update heading level to match page hierarchy.",
+  "editableAreas": [
+    "Card heading text and heading level (h2-h6)",
+    "Card body content and media",
+    "Card footer actions (buttons, links)",
+    "Image src and alt text for media variants"
+  ],
+  "preserveElements": [
+    "article.usa-card container",
+    "div.usa-card__header for card heading area",
+    "div.usa-card__body for main content",
+    "div.usa-card__footer for actions if present",
+    "Heading uses usa-card__heading class"
+  ],
+  "knownLimitations": [
+    "Cards are not responsive by default — use CSS Grid or Flexbox for responsive layouts",
+    "Flag variant requires specific DOM order (image first in header)",
+    "Media variant image must be in the header"
+  ],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["passive", "click"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "flag", "media", "inset", "header-flag"],
+  "settings": ["$theme-card-border-radius", "$theme-card-gap"],
+  "relatedComponents": ["collection", "table"],
+  "tokenOverrides": ["$theme-card-border-radius", "$theme-card-gap"],
+  "tags": ["card", "container", "content", "article", "grid", "display"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .card-grid {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 1200px;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+</style>
+</head>
+<body>
+<div class="card-grid">
+  <article class="usa-card">
+    <div class="usa-card__header">
+      <h2 class="usa-card__heading">Card Heading</h2>
+    </div>
+    <div class="usa-card__body">
+      <p>Card body content goes here. This is where the main content of the card lives.</p>
+    </div>
+    <div class="usa-card__footer">
+      <button class="usa-button" type="button">Action</button>
+    </div>
+  </article>
+</div>
+<div class="cap">Card default</div>
+</body>
+</html>

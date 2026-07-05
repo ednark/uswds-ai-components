@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Footer with email newsletter signup.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Footer (Email Signup)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "footer/email-signup.html",
+  "title": "Footer (Email Signup)",
+  "uswdsComponentType": "footer",
+  "uswdsClass": "usa-footer usa-footer--big",
+  "description": "Footer variant with integrated email newsletter signup form in the primary section.",
+  "section": "layout",
+  "variant": "email-signup",
+  "useWhen": ["Newsletter subscription", "Email list building", "Government communications"],
+  "avoidWhen": ["Sites without newsletter", "Simple footers without forms"],
+  "agentPrompt": "Add usa-footer__email-container div before usa-footer__primary-content. Include heading, description, email input, and subscribe button.",
+  "editableAreas": ["Newsletter heading", "Description text", "Email placeholder", "Subscribe button text"],
+  "preserveElements": ["div.usa-footer__email-container", "form.email-signup-form", "input[type='email']", "input[type='submit']"],
+  "knownLimitations": ["Requires backend integration with email service (e.g., GovDelivery)"],
+  "tier": "curated",
+  "requiresJs": "optional",
+  "interaction": ["click", "submit"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "slim", "big", "collapsible", "email-signup"],
+  "settings": ["$theme-footer-font-family"],
+  "relatedComponents": ["form", "text-input", "button"],
+  "tokenOverrides": ["$theme-footer-font-family"],
+  "tags": ["footer", "email", "signup", "newsletter", "subscribe", "govdelivery"]
+}
+</script>
+</head>
+<body>
+<footer class="usa-footer usa-footer--big">
+  <div class="usa-footer__primary-section">
+    <div class="usa-footer__email-container">
+      <div class="grid-container">
+        <div class="email-signup">
+          <div class="grid-row">
+            <div class="grid-col-12 desktop:grid-col-6">
+              <h2>Sign up for email updates</h2>
+              <div>Get news delivered right to your inbox.</div>
+            </div>
+            <div class="grid-col-12 desktop:grid-col-6">
+              <form action="https://public.govdelivery.com/accounts/USCIGIE/subscribers/qualify" method="post" class="email-signup-form">
+                <div class="input-container">
+                  <label class="usa-sr-only" for="email">Input Email</label>
+                  <input type="email" name="email" placeholder="example@website.com" id="email" required>
+                </div>
+                <input class="usa-button" type="submit" value="Subscribe">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="usa-footer__primary-content">
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="usa-footer__logo desktop:grid-col-6">
+            <h4 class="usa-footer__logo-heading">Agency Name</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

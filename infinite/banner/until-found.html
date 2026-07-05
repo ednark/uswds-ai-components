@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Banner with hidden until-found pattern.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Banner (Until Found)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "banner/until-found.html",
+  "title": "Banner (Until Found)",
+  "uswdsComponentType": "banner",
+  "uswdsClass": "usa-banner",
+  "description": "Banner using hidden='until-found' HTML5 pattern for content that remains searchable but hidden until expanded.",
+  "section": "supporting",
+  "variant": "until-found",
+  "useWhen": ["Modern browsers supporting HTML5 hidden until-found", "Searchable collapsible content", "usa.gov pattern"],
+  "avoidWhen": ["Older browser support needed", "Simple banner without accordion"],
+  "agentPrompt": "Add hidden='until-found' attribute to usa-banner__content. Content is searchable but hidden until expanded via JS.",
+  "editableAreas": ["Banner text content", "Accordion expand/collapse behavior"],
+  "preserveElements": ["div.usa-banner__content[hidden='until-found']", "button.usa-accordion__button"],
+  "knownLimitations": ["Not supported in older browsers (Firefox < 124, Safari < 18)"],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["click", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA", "Required by US federal agencies"],
+  "variants": ["default", "medium", "slim", "until-found"],
+  "settings": [],
+  "relatedComponents": ["accordion", "header", "identifier"],
+  "tokenOverrides": [],
+  "tags": ["banner", "until-found", "hidden", "html5", "searchable"]
+}
+</script>
+</head>
+<body>
+<section class="usa-banner" aria-label="An official website of the United States government">
+  <div class="usa-accordion">
+    <div class="usa-banner__header" role="banner">
+      <div class="usa-banner__inner">
+        <div class="grid-col-auto">
+          <img aria-hidden="true" class="usa-banner__header-flag" src="favicon-57.png" alt="">
+        </div>
+        <div class="grid-col-fill tablet:grid-col-auto">
+          <p class="usa-banner__header-text">An official website of the United States government</p>
+          <p class="usa-banner__header-action usa-banner__header-action-mobile">Here's how you know</p>
+        </div>
+        <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner">
+          <span class="usa-banner__button-text">Here's how you know</span>
+        </button>
+      </div>
+    </div>
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner" hidden="until-found">
+      <div class="grid-row grid-gap-lg">
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <div class="usa-media-block__body">
+            <p><strong>Official websites use .gov</strong><br>A .gov website belongs to an official government organization in the United States.</p>
+          </div>
+        </div>
+        <div class="usa-banner__guidance tablet:grid-col-6">
+          <div class="usa-media-block__body">
+            <p><strong>Secure .gov websites use HTTPS</strong><br>A lock or https:// means you've safely connected to the .gov website.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  document.getElementById('gov-banner').setAttribute('hidden', 'until-found');
+</script>
+</body>
+</html>

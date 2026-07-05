@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Checkbox component for selecting multiple options from a list.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Checkbox</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "checkbox/default.html",
+  "title": "Checkbox",
+  "uswdsComponentType": "checkbox",
+  "uswdsClass": "usa-checkbox__input",
+  "description": "Allows users to select one or more options from a list.",
+  "section": "forms",
+  "variant": "default",
+  "useWhen": [
+    "Users need to select multiple options from a list",
+    "Binary yes/no decisions for a single option",
+    "When all options should be visible at once",
+    "Grouping related selections"
+  ],
+  "avoidWhen": [
+    "Single selection only — use radio buttons instead",
+    "Long lists of more than 7-10 options — use a combo box",
+    "When space is extremely limited"
+  ],
+  "agentPrompt": "Add usa-checkbox__input--tile for tile style. Update for attribute to match input id. Group related checkboxes in fieldset/legend for proper labeling. Add checked attribute for pre-selected options.",
+  "editableAreas": [
+    "Checkbox label text",
+    "input id and for attribute values (must match)",
+    "name attribute for form submission grouping",
+    "value attribute for form data",
+    "Checked state: add checked attribute"
+  ],
+  "preserveElements": [
+    "fieldset/legend wrapper for checkbox groups",
+    "usa-checkbox__input class on input element",
+    "usa-checkbox__label wrapper around input + span",
+    "usa-checkbox__label-text for visible label text",
+    "input type='checkbox'"
+  ],
+  "knownLimitations": [
+    "Always wrap checkbox groups in fieldset with legend for accessibility",
+    "id attributes must be unique per page",
+    "name attribute groups checkboxes for form submission"
+  ],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["click", "focus", "keyboard"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "tile"],
+  "settings": ["$theme-checkbox-border-radius"],
+  "relatedComponents": ["radio-buttons", "form", "select"],
+  "tokenOverrides": ["$theme-checkbox-border-radius", "$theme-input-state-border-width"],
+  "tags": ["checkbox", "form", "input", "select", "multi-select", "check"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .form-section {
+    max-width: 400px;
+    margin-bottom: 2rem;
+  }
+</style>
+</head>
+<body>
+<fieldset class="usa-fieldset">
+  <legend class="usa-legend">Select your interests</legend>
+  <div class="usa-checkbox">
+    <input class="usa-checkbox__input" id="check-1" type="checkbox" name="interests" value="design">
+    <label class="usa-checkbox__label" for="check-1">Design</label>
+  </div>
+  <div class="usa-checkbox">
+    <input class="usa-checkbox__input" id="check-2" type="checkbox" name="interests" value="development">
+    <label class="usa-checkbox__label" for="check-2">Development</label>
+  </div>
+  <div class="usa-checkbox">
+    <input class="usa-checkbox__input" id="check-3" type="checkbox" name="interests" value="research">
+    <label class="usa-checkbox__label" for="check-3">Research</label>
+  </div>
+</fieldset>
+<div class="cap">Checkbox default</div>
+</body>
+</html>

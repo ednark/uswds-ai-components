@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Tooltip top variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Tooltip (Top)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "tooltip/top.html",
+  "title": "Tooltip (Top)",
+  "uswdsComponentType": "tooltip",
+  "uswdsClass": "usa-tooltip--top",
+  "description": "Tooltip that appears above the trigger element.",
+  "section": "supporting",
+  "variant": "top",
+  "useWhen": ["Brief supplemental information", "Icon explanations", "Keyboard-accessible hover info"],
+  "avoidWhen": ["Long content", "Mobile touch interfaces", "Critical information"],
+  "agentPrompt": "Add usa-tooltip--top class and data-position=\"top\" attribute. Tooltip shows above element.",
+  "editableAreas": ["Tooltip text content", "Trigger element"],
+  "preserveElements": ["span.usa-tooltip__trigger", "span.usa-tooltip"],
+  "knownLimitations": ["JavaScript required for show/hide", "Touch devices may not show on hover"],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["hover", "focus", "click"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "top", "bottom", "left", "right"],
+  "settings": [],
+  "relatedComponents": ["button", "icon"],
+  "tokenOverrides": [],
+  "tags": ["tooltip", "top", "hover", "hint"]
+}
+</script>
+</head>
+<body>
+<span class="usa-tooltip__trigger" data-position="top" title="Tooltip text">Hover or focus for tooltip</span>
+</body>
+</html>

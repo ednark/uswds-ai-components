@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Site alert emergency variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Site Alert (Emergency)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "site-alert/emergency.html",
+  "title": "Site Alert (Emergency)",
+  "uswdsComponentType": "site-alert",
+  "uswdsClass": "usa-site-alert--emergency",
+  "description": "Emergency site alert for critical situations.",
+  "section": "notifications",
+  "variant": "emergency",
+  "useWhen": ["Critical emergency notices", "Service outages", "Public safety messages"],
+  "avoidWhen": ["Routine information", "Non-urgent notices", "Success messages"],
+  "agentPrompt": "Add usa-site-alert--emergency class to usa-site-alert. Use sparingly for true emergencies.",
+  "editableAreas": ["Alert heading", "Alert body text", "Dismissible link if applicable"],
+  "preserveElements": ["div.usa-site-alert usa-site-alert--emergency", "div.usa-alert__body"],
+  "knownLimitations": ["Should not be overused or users will ignore"],
+  "tier": "curated",
+  "requiresJs": "no",
+  "interaction": ["dismiss"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "emergency", "no-icon"],
+  "settings": [],
+  "relatedComponents": ["alert", "banner"],
+  "tokenOverrides": [],
+  "tags": ["site-alert", "emergency", "critical", "emergency-alert"]
+}
+</script>
+</head>
+<body>
+<div class="usa-site-alert usa-site-alert--emergency" aria-live="assertive">
+  <div class="usa-alert">
+    <div class="usa-alert__body">
+      <h3 class="usa-alert__heading">Emergency Alert</h3>
+      <p class="usa-alert__text">This is an emergency notification. Take action immediately.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

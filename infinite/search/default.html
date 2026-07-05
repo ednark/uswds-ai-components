@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS Search component for finding content across the site.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS Search</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "search/default.html",
+  "title": "Search",
+  "uswdsComponentType": "search",
+  "uswdsClass": "usa-search",
+  "description": "Allows users to search for specific content by entering search terms.",
+  "section": "navigation",
+  "variant": "default",
+  "useWhen": [
+    "Users need to find specific content on large sites",
+    "Content-rich sites with many pages",
+    "When site navigation alone isn't sufficient for discovery",
+    "Documentation or knowledge base sites"
+  ],
+  "avoidWhen": [
+    "Small sites with minimal content",
+    "Single-page applications",
+    "Sites where search isn't a primary user need"
+  ],
+  "agentPrompt": "Add usa-search--big or usa-search--small for size variants. Update action URL for search results page. Add name attribute for form submission. Include role='search' on form for accessibility.",
+  "editableAreas": [
+    "Search input placeholder text",
+    "Search button text",
+    "form action URL for results page",
+    "Size variant: usa-search--big or usa-search--small",
+    "name attribute for search query parameter"
+  ],
+  "preserveElements": [
+    "form.usa-search role='search'",
+    "input.usa-search__input for query input",
+    "button.usa-search__submit for search button",
+    "usa-search__submit-icon for search icon",
+    "required attributes for accessibility"
+  ],
+  "knownLimitations": [
+    "JavaScript enhances but doesn't enable search",
+    "Search icon should be visible in button",
+    "Form action must point to actual search results handler"
+  ],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["input", "submit", "focus"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "big", "small"],
+  "settings": ["$theme-search-font-family"],
+  "relatedComponents": ["header", "link", "side-navigation"],
+  "tokenOverrides": ["$theme-search-font-family"],
+  "tags": ["search", "find", "query", "filter", "discover", "header", "nav"]
+}
+</script>
+<style>
+  body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #1b1b1b;
+    line-height: 1.5;
+  }
+  .cap {
+    position: fixed;
+    bottom: 12px;
+    left: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #717171;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+</style>
+</head>
+<body>
+<form class="usa-search" role="search" action="#">
+  <label class="usa-sr-only" for="search-field">Search</label>
+  <input class="usa-input" id="search-field" type="search" name="search" placeholder="Search" required>
+  <button class="usa-search__submit" type="submit">
+    <span class="usa-search__submit-text">Search</span>
+  </button>
+</form>
+<div class="cap">Search default</div>
+</body>
+</html>

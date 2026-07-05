@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS File input error variant.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USWDS File Input (Error)</title>
+<script type="application/json" id="uswds-agent-meta">
+{
+  "file": "file-input/error.html",
+  "title": "File Input (Error)",
+  "uswdsComponentType": "file-input",
+  "uswdsClass": "usa-file-input--error",
+  "description": "File input showing error state for invalid files.",
+  "section": "forms",
+  "variant": "error",
+  "useWhen": ["Required file uploads", "File type validation", "When upload errors need display"],
+  "avoidWhen": ["Optional uploads", "Single simple uploads"],
+  "agentPrompt": "Add usa-file-input--error class to usa-file-input when validation fails.",
+  "editableAreas": ["File input label", "Error message text"],
+  "preserveElements": ["div.usa-file-input", "input.usa-file-input__input", "label.usa-file-input__label"],
+  "knownLimitations": ["JavaScript needed for drag-drop and preview"],
+  "tier": "curated",
+  "requiresJs": "required",
+  "interaction": ["click", "drag", "drop"],
+  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
+  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
+  "variants": ["default", "error"],
+  "settings": [],
+  "relatedComponents": ["text-input", "validation", "button"],
+  "tokenOverrides": [],
+  "tags": ["file-input", "error", "upload", "validation"]
+}
+</script>
+</head>
+<body>
+<div class="usa-form-group">
+  <label class="usa-label" for="file-input-error">Upload a file</label>
+  <div class="usa-file-input usa-file-input--error">
+    <input type="file" id="file-input-error" class="usa-file-input__input" aria-describedby="file-input-error-message">
+    <label for="file-input-error" class="usa-file-input__label">
+      <span class="usa-file-input__choose">Choose file</span>
+    </label>
+    <div id="file-input-error-message" class="usa-file-input__message" role="alert">Error: Invalid file type</div>
+  </div>
+</div>
+</body>
+</html>
