@@ -58,6 +58,19 @@
       ],
       "migrationPath": "Fully additive — no tile changes required for existing consumers. Agents should re-fetch facets.json for the extended facet vocabulary. Index records gained lean summary fields (costTier, prerequisites, incompatibleWith, compositionRecipes, fedRampLevel, piiHandling, touchTargetSize).",
       "notes": "Surface 4 recipes (contact-form, login-flow, data-table-with-sorting, error-handling-stack, navigation-hierarchy); MCP get_recipe, query_compliance, get_versions; validate-registry/compliance-scorer/cost-modeler CLI tools; compatibility.json cross-system maps"
+    },
+    {
+      "version": "2.1.1",
+      "releaseDate": "2026-09-06",
+      "componentCount": 146,
+      "breakingChanges": [
+        "components.index.json no longer carries adaptation prose: agentPrompt, useWhen, avoidWhen, preserveElements, editableAreas, knownLimitations, portableInvariants, portability.classMapping, settings, tokenOverrides were removed from index records (they were never supposed to be there — see tile-format.md leanness rule)"
+      ],
+      "metadataChanges": [
+        "Index slimmed from ~2414B to ~1440B per record (352KB to 205KB)"
+      ],
+      "migrationPath": "Agents that read prose from the index must now fetch the tile and parse its uswds-agent-meta block (which the retrieval flow already required). Facet filtering is unchanged — all discovery facets and lean summaries remain in the index.",
+      "notes": "Leanness alignment with the forever-ai-components origin concept: discovery stays lean, enrichment travels in tiles"
     }
   ],
   "designSystemVersions": [

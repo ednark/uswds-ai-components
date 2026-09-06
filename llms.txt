@@ -93,11 +93,18 @@ Each component record in the index contains:
 - interaction — array of interaction types
 - a11y — accessibility features object
 - govCompliance — applicable government compliance requirements
-- settings — USWDS Sass settings that affect this component
 - relatedComponents — commonly paired components
-- tokenOverrides — design tokens commonly overridden
+- costTier — cheap | moderate | expensive (composition cost)
+- prerequisites / incompatibleWith — coordination summaries (component names)
+- compositionRecipes — recipes this component participates in
+- fedRampLevel / piiHandling / auditTrailCompatible / nistControls — compliance summaries
+- touchTargetSize — guaranteed mobile touch target
+- supportedTokenProfiles — token profiles supported
 
-Full adaptation guidance is embedded in each tile's <script id="uswds-agent-meta"> block.
+The index carries discovery facets and lean summaries ONLY. Adaptation prose
+(useWhen, avoidWhen, agentPrompt, editable/preserve areas, limitations,
+classMapping, settings, tokenOverrides) is embedded in each tile's
+<script id="uswds-agent-meta"> block — fetch the tile for it.
 
 ---
 
