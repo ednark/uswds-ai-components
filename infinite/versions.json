@@ -71,6 +71,17 @@
       ],
       "migrationPath": "Agents that read prose from the index must now fetch the tile and parse its uswds-agent-meta block (which the retrieval flow already required). Facet filtering is unchanged — all discovery facets and lean summaries remain in the index.",
       "notes": "Leanness alignment with the forever-ai-components origin concept: discovery stays lean, enrichment travels in tiles"
+    },
+    {
+      "version": "0.2.0",
+      "releaseDate": "2026-09-06",
+      "componentCount": 152,
+      "breakingChanges": [],
+      "addedCategories": ["provenance"],
+      "addedFacets": [],
+      "metadataChanges": ["provenance block on coverage-audit tiles (observed/source/method)"],
+      "migrationPath": "Fully additive.",
+      "notes": "Field-research pass: 5 missing official components added as 6 tiles (date-range-picker, time-picker, memorable-date, input-mask, input-prefix-suffix); provenance.json research log added; llms.txt over-claim corrected"
     }
   ],
   "designSystemVersions": [

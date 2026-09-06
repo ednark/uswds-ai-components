@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS date range picker connecting a start and end date picker.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Date range picker (Default)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "date-range-picker",
+    "uswdClass": "usa-date-range-picker",
+    "section": "forms",
+    "variant": "default",
+    "requiresJs": "required",
+    "interaction": [
+      "type",
+      "focus",
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "date",
+      "range",
+      "start",
+      "end",
+      "form"
+    ],
+    "description": "USWDS date range picker connecting a start and end date picker.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    }
+  },
+  "selection": {
+    "useWhen": [
+      "Selecting a start and end date range in one control",
+      "Booking or reporting periods"
+    ],
+    "avoidWhen": [
+      "A single date is needed — use date-picker"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Set data-min-date on the end picker to the chosen start date so the range stays valid. Both pickers initialize from the usa-date-range-picker wrapper.",
+    "relatedComponents": [
+      "date-picker",
+      "time-picker"
+    ]
+  },
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 331,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Wrap both usa-date-picker instances in the usa-date-range-picker wrapper",
+      "2. Set data-min-date on the end picker to mirror the start date",
+      "3. Give each input its own label and hint"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "usa-date-range-picker wrapper around both usa-date-picker instances",
+      "Label + hint association via aria-describedby on each input"
+    ],
+    "editable": [
+      "Labels",
+      "Default values via data-default-value",
+      "min/max date constraints"
+    ],
+    "limitations": [
+      "Calendar requires USWDS JS — without it users type dates manually",
+      "Keep the end date constrained to the start date"
+    ],
+    "portableInvariants": [
+      "Two labelled inputs with type=\"text\" and hint association",
+      "data-min-date relationship between the pickers"
+    ]
+  },
+  "provenance": {
+    "observed": "2026-09-06",
+    "source": "https://designsystem.digital.gov/components/",
+    "method": "coverage audit"
+  },
+  "file": "date-range-picker/default.html",
+  "title": "Date range picker (Default)"
+}
+</script>
+<style>
+  body { font-family: 'Source Sans 3','Source Sans Pro',-apple-system,BlinkMacSystemFont,sans-serif; margin: 0; padding: 2rem; background: #f5f5f5; color: #1b1b1b; line-height: 1.5; }
+  .cap { position: fixed; bottom: 12px; left: 16px; font-size: 11px; letter-spacing: 0.08em; color: #717171; text-transform: uppercase; font-weight: 400; }
+  .preview-heading { font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; color: #565c65; text-transform: uppercase; letter-spacing: 0.05em; }
+  .preview-section { margin-bottom: 2rem; }
+
+.usa-date-range-picker .usa-form-group{margin-bottom:1.5rem}
+.usa-label{display:block;font-weight:400;margin-bottom:.5rem;max-width:30rem}
+.usa-hint{color:#71767a;margin:0 0 .5rem}
+.usa-input{font:inherit;display:block;width:100%;max-width:20rem;padding:.5rem .6rem;border:1px solid #565c65;border-radius:0;box-sizing:border-box;color:#1b1b1b;background:#fff}
+.usa-input:focus{outline:3px solid #2491ff;outline-offset:0}
+</style>
+</head>
+<body>
+<div class="preview-section">
+  <div class="usa-date-range-picker">
+    <div class="usa-form-group">
+      <label class="usa-label" for="event-date-start">Event start date</label>
+      <div class="usa-hint" id="event-date-start-hint">MM/DD/YYYY</div>
+      <div class="usa-date-picker">
+        <input class="usa-input" id="event-date-start" name="event-date-start" type="text" aria-describedby="event-date-start-hint">
+      </div>
+    </div>
+    <div class="usa-form-group">
+      <label class="usa-label" for="event-date-end">Event end date</label>
+      <div class="usa-hint" id="event-date-end-hint">MM/DD/YYYY</div>
+      <div class="usa-date-picker" data-min-date="2026-01-01">
+        <input class="usa-input" id="event-date-end" name="event-date-end" type="text" aria-describedby="event-date-end-hint">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="cap">date-range-picker default</div>
+</body>
+</html>

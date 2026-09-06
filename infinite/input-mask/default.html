@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS input mask guiding formatted entry (Social Security Number).">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Input mask (Default)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "input-mask",
+    "uswdClass": "usa-input--mask",
+    "section": "forms",
+    "variant": "default",
+    "requiresJs": "required",
+    "interaction": [
+      "type",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "mask",
+      "ssn",
+      "format",
+      "form"
+    ],
+    "description": "USWDS input mask guiding formatted entry (Social Security Number).",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": true
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    }
+  },
+  "selection": {
+    "useWhen": [
+      "Fields with a strict format (SSN, phone, ZIP) where the mask guides typing"
+    ],
+    "avoidWhen": [
+      "Flexible formats",
+      "Sensitive values where masking reveals format to observers"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Set the data-mask pattern (underscores are editable slots). The mask is a visual guide — validate the final value server-side.",
+    "relatedComponents": [
+      "text-input",
+      "input-prefix-suffix"
+    ]
+  },
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 215,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    }
+  },
+  "constraints": {
+    "preserve": [
+      "data-mask attribute with the slot pattern",
+      "Placeholder matching the mask",
+      "Hint association via aria-describedby"
+    ],
+    "editable": [
+      "Label",
+      "Mask pattern",
+      "Placeholder"
+    ],
+    "limitations": [
+      "Masks change value formatting — store the raw value server-side",
+      "Do not mask security-critical fields where the pattern leaks information"
+    ],
+    "portableInvariants": [
+      "data-mask pattern preserved",
+      "Labelled input with hint association"
+    ]
+  },
+  "provenance": {
+    "observed": "2026-09-06",
+    "source": "https://designsystem.digital.gov/components/",
+    "method": "coverage audit"
+  },
+  "file": "input-mask/default.html",
+  "title": "Input mask (Default)"
+}
+</script>
+<style>
+  body { font-family: 'Source Sans 3','Source Sans Pro',-apple-system,BlinkMacSystemFont,sans-serif; margin: 0; padding: 2rem; background: #f5f5f5; color: #1b1b1b; line-height: 1.5; }
+  .cap { position: fixed; bottom: 12px; left: 16px; font-size: 11px; letter-spacing: 0.08em; color: #717171; text-transform: uppercase; font-weight: 400; }
+  .preview-heading { font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; color: #565c65; text-transform: uppercase; letter-spacing: 0.05em; }
+  .preview-section { margin-bottom: 2rem; }
+
+.usa-form-group{margin-bottom:1.5rem;max-width:20rem}
+.usa-label{display:block;font-weight:400;margin-bottom:.5rem}
+.usa-hint{color:#71767a;margin:0 0 .5rem}
+.usa-input--mask{font:inherit;font-family:monospace;display:block;width:100%;padding:.5rem .6rem;border:1px solid #565c65;border-radius:0;box-sizing:border-box;color:#1b1b1b;background:#fff;letter-spacing:.1em}
+.usa-input--mask:focus{outline:3px solid #2491ff;outline-offset:0}
+</style>
+</head>
+<body>
+<div class="preview-section">
+  <div class="usa-form-group">
+    <label class="usa-label" for="ssn">Social Security Number</label>
+    <div class="usa-hint" id="ssn-hint">For example, 123 45 6789</div>
+    <input class="usa-input usa-input--mask" id="ssn" inputmode="numeric" name="ssn" placeholder="___ __ ____" aria-describedby="ssn-hint" data-mask="___ __ ____">
+  </div>
+</div>
+<div class="cap">input-mask default</div>
+</body>
+</html>

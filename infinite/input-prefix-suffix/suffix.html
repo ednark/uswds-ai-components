@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS input with a text suffix (weight in pounds).">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Input suffix (Default)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "input-prefix-suffix",
+    "uswdClass": "usa-input-group",
+    "section": "forms",
+    "variant": "suffix",
+    "requiresJs": "no",
+    "interaction": [
+      "type",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "suffix",
+      "unit",
+      "input",
+      "form"
+    ],
+    "description": "USWDS input with a text suffix (weight in pounds).",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    }
+  },
+  "selection": {
+    "useWhen": [
+      "Clarifying units (lbs, %, USD) without repeating them in the label"
+    ],
+    "avoidWhen": [
+      "Units that vary by user locale"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Same usa-input-group structure as the prefix; the suffix text is aria-hidden so units must also be stated in the label or hint.",
+    "relatedComponents": [
+      "text-input",
+      "input-mask"
+    ]
+  },
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 245,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    }
+  },
+  "constraints": {
+    "preserve": [
+      "usa-input-group wrapper",
+      "usa-input-suffix with aria-hidden=\"true\""
+    ],
+    "editable": [
+      "Label",
+      "Suffix text"
+    ],
+    "limitations": [
+      "State the unit in the label or hint too — screen readers skip the suffix"
+    ],
+    "portableInvariants": [
+      "Suffix is aria-hidden",
+      "Unit stated in label or hint"
+    ]
+  },
+  "provenance": {
+    "observed": "2026-09-06",
+    "source": "https://designsystem.digital.gov/components/",
+    "method": "coverage audit"
+  },
+  "file": "input-prefix-suffix/suffix.html",
+  "title": "Input suffix (Default)"
+}
+</script>
+<style>
+  body { font-family: 'Source Sans 3','Source Sans Pro',-apple-system,BlinkMacSystemFont,sans-serif; margin: 0; padding: 2rem; background: #f5f5f5; color: #1b1b1b; line-height: 1.5; }
+  .cap { position: fixed; bottom: 12px; left: 16px; font-size: 11px; letter-spacing: 0.08em; color: #717171; text-transform: uppercase; font-weight: 400; }
+  .preview-heading { font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; color: #565c65; text-transform: uppercase; letter-spacing: 0.05em; }
+  .preview-section { margin-bottom: 2rem; }
+
+.usa-form-group{margin-bottom:1.5rem;max-width:14rem}
+.usa-label{display:block;font-weight:400;margin-bottom:.5rem}
+.usa-hint{color:#71767a;margin:0 0 .5rem}
+.usa-input-group{display:flex;align-items:stretch;border:1px solid #565c65;border-radius:0;background:#fff}
+.usa-input-group:focus-within{outline:3px solid #2491ff;outline-offset:0}
+.usa-input-suffix{display:flex;align-items:center;padding:0 .6rem;color:#565c65;background:#f0f0f0;font-weight:700}
+.usa-input-group .usa-input{border:0;flex:1;font:inherit;padding:.5rem .6rem;color:#1b1b1b;background:transparent}
+</style>
+</head>
+<body>
+<div class="preview-section">
+  <div class="usa-form-group">
+    <label class="usa-label" for="input-suffix">Weight, in pounds</label>
+    <div class="usa-input-group">
+      <input class="usa-input" id="input-suffix" name="weight" type="number" inputmode="numeric">
+      <div class="usa-input-suffix" aria-hidden="true">lbs</div>
+    </div>
+  </div>
+</div>
+<div class="cap">input-prefix-suffix suffix</div>
+</body>
+</html>

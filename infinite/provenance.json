@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "registry": "uswds-ai-components",
+  "note": "Session log of field research and coverage audits. Per-tile provenance lives in each tile's provenance block.",
+  "sessions": [
+    {
+      "date": "2026-09-06",
+      "source": "https://www.usa.gov/",
+      "title": "USAGov homepage (live-site observation)",
+      "method": "live-site observation",
+      "findings": [
+        "usa-banner identifier with expandable \"Here's how you know\" — already covered by infinite/banner/*",
+        "Spanish language toggle (Español) — custom pattern, not an official USWDS component; noted as recipe candidate",
+        "\"How do I...\" quick-action link list — content pattern (no official component)",
+        "Icon topic-card grid — card customization (usa-card + media/icon)",
+        "Back-to-top link — minor pattern"
+      ],
+      "tilesAdded": []
+    },
+    {
+      "date": "2026-09-06",
+      "source": "https://designsystem.digital.gov/components/",
+      "title": "USWDS design-system documentation coverage audit",
+      "method": "coverage audit",
+      "findings": [
+        "llms.txt over-claimed five official components that had no tiles: date-range-picker, time-picker, memorable-date, input-mask, input-prefix-suffix",
+        "All five added as tiles in this session; llms.txt corrected"
+      ],
+      "tilesAdded": [
+        "date-range-picker/default",
+        "time-picker/default",
+        "memorable-date/default",
+        "input-mask/default",
+        "input-prefix-suffix/prefix",
+        "input-prefix-suffix/suffix"
+      ]
+    }
+  ]
+}

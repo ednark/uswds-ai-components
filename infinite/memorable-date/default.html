@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS memorable date with separate month, day, and year inputs.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Memorable date (Default)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "memorable-date",
+    "uswdClass": "usa-memorable-date",
+    "section": "forms",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "type",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "date",
+      "month",
+      "day",
+      "year",
+      "form"
+    ],
+    "description": "USWDS memorable date with separate month, day, and year inputs.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    }
+  },
+  "selection": {
+    "useWhen": [
+      "Known dates (date of birth, expiry) entered from memory"
+    ],
+    "avoidWhen": [
+      "Picking unknown dates from a calendar — use date-picker"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Keep the three separate numeric inputs with month as a select or number, day and year as number inputs. Autocomplete attributes (bday-month, bday-day, bday-year) where applicable.",
+    "relatedComponents": [
+      "date-picker",
+      "date-range-picker"
+    ]
+  },
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 460,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    }
+  },
+  "constraints": {
+    "preserve": [
+      "usa-memorable-date structure with three labelled inline inputs",
+      "Numeric inputmode on day/year",
+      "Legend + hint association"
+    ],
+    "editable": [
+      "Legend text",
+      "Field names",
+      "Widths (usa-input--width-2 / --width-4)"
+    ],
+    "limitations": [
+      "No calendar — deliberate design",
+      "Validate ranges server-side"
+    ],
+    "portableInvariants": [
+      "Three labelled fields",
+      "Numeric inputmode preserved"
+    ]
+  },
+  "provenance": {
+    "observed": "2026-09-06",
+    "source": "https://designsystem.digital.gov/components/",
+    "method": "coverage audit"
+  },
+  "file": "memorable-date/default.html",
+  "title": "Memorable date (Default)"
+}
+</script>
+<style>
+  body { font-family: 'Source Sans 3','Source Sans Pro',-apple-system,BlinkMacSystemFont,sans-serif; margin: 0; padding: 2rem; background: #f5f5f5; color: #1b1b1b; line-height: 1.5; }
+  .cap { position: fixed; bottom: 12px; left: 16px; font-size: 11px; letter-spacing: 0.08em; color: #717171; text-transform: uppercase; font-weight: 400; }
+  .preview-heading { font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; color: #565c65; text-transform: uppercase; letter-spacing: 0.05em; }
+  .preview-section { margin-bottom: 2rem; }
+
+.usa-fieldset{border:0;padding:0;margin:0 0 1.5rem}
+.usa-legend{font-weight:400;margin:0 0 .5rem;max-width:30rem}
+.usa-hint{color:#71767a;margin:0 0 .75rem}
+.usa-memorable-date{display:flex;gap:1rem;flex-wrap:wrap}
+.usa-memorable-date [class*=--month]{width:8rem}
+.usa-memorable-date [class*=--day]{width:5rem}
+.usa-memorable-date [class*=--year]{width:7rem}
+.usa-label{display:block;margin-bottom:.35rem}
+.usa-input{font:inherit;display:block;width:100%;padding:.5rem .6rem;border:1px solid #565c65;border-radius:0;box-sizing:border-box;color:#1b1b1b;background:#fff}
+.usa-input:focus{outline:3px solid #2491ff;outline-offset:0}
+</style>
+</head>
+<body>
+<div class="preview-section">
+  <fieldset class="usa-fieldset">
+    <legend class="usa-legend">Date of birth</legend>
+    <span id="dob-hint" class="usa-hint">For example, January 28 1986</span>
+    <div class="usa-memorable-date">
+      <div class="usa-form-group usa-form-group--month">
+        <label class="usa-label" for="dob-month">Month</label>
+        <input class="usa-input" aria-describedby="dob-hint" id="dob-month" name="dob_month" type="number" min="1" max="12" inputmode="numeric" autocomplete="bday-month">
+      </div>
+      <div class="usa-form-group usa-form-group--day">
+        <label class="usa-label" for="dob-day">Day</label>
+        <input class="usa-input" aria-describedby="dob-hint" id="dob-day" name="dob_day" type="number" min="1" max="31" inputmode="numeric" autocomplete="bday-day">
+      </div>
+      <div class="usa-form-group usa-form-group--year">
+        <label class="usa-label" for="dob-year">Year</label>
+        <input class="usa-input" aria-describedby="dob-hint" id="dob-year" name="dob_year" type="number" min="1900" max="2026" inputmode="numeric" autocomplete="bday-year">
+      </div>
+    </div>
+  </fieldset>
+</div>
+<div class="cap">memorable-date default</div>
+</body>
+</html>

@@ -3,7 +3,7 @@
   "metadataSchemaVersion": 2,
   "generatedBy": "_base/generate-index.mjs",
   "counts": {
-    "total": 146,
+    "total": 152,
     "bySection": {
       "data-display": 25,
       "utilities": 12,
@@ -11,7 +11,7 @@
       "supporting": 11,
       "navigation": 30,
       "buttons": 1,
-      "forms": 36,
+      "forms": 42,
       "layout": 11,
       "typography": 5,
       "overlays": 1,
@@ -3121,6 +3121,55 @@
       "costTier": "moderate"
     },
     {
+      "file": "date-range-picker/default.html",
+      "title": "Date range picker (Default)",
+      "_schemaVersion": 2,
+      "uswdsComponentType": "date-range-picker",
+      "uswdClass": "usa-date-range-picker",
+      "section": "forms",
+      "variant": "default",
+      "requiresJs": "required",
+      "interaction": [
+        "type",
+        "focus",
+        "click"
+      ],
+      "a11y": {
+        "wcag21AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "Section 508",
+        "WCAG 2.1 AA",
+        "21st Century IDEA"
+      ],
+      "tier": "curated",
+      "tags": [
+        "date",
+        "range",
+        "start",
+        "end",
+        "form"
+      ],
+      "description": "USWDS date range picker connecting a start and end date picker.",
+      "fedRampLevel": "IL2+",
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "relatedComponents": [
+        "date-picker",
+        "time-picker"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "moderate"
+    },
+    {
       "file": "file-input/default.html",
       "title": "File Input",
       "_schemaVersion": 2,
@@ -4469,6 +4518,147 @@
       ]
     },
     {
+      "file": "input-mask/default.html",
+      "title": "Input mask (Default)",
+      "_schemaVersion": 2,
+      "uswdsComponentType": "input-mask",
+      "uswdClass": "usa-input--mask",
+      "section": "forms",
+      "variant": "default",
+      "requiresJs": "required",
+      "interaction": [
+        "type",
+        "focus"
+      ],
+      "a11y": {
+        "wcag21AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "Section 508",
+        "WCAG 2.1 AA",
+        "21st Century IDEA"
+      ],
+      "tier": "curated",
+      "tags": [
+        "mask",
+        "ssn",
+        "format",
+        "form"
+      ],
+      "description": "USWDS input mask guiding formatted entry (Social Security Number).",
+      "fedRampLevel": "IL2+",
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "relatedComponents": [
+        "text-input",
+        "input-prefix-suffix"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "moderate"
+    },
+    {
+      "file": "input-prefix-suffix/prefix.html",
+      "title": "Input prefix (Default)",
+      "_schemaVersion": 2,
+      "uswdsComponentType": "input-prefix-suffix",
+      "uswdClass": "usa-input-group",
+      "section": "forms",
+      "variant": "prefix",
+      "requiresJs": "no",
+      "interaction": [
+        "type",
+        "focus"
+      ],
+      "a11y": {
+        "wcag21AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "Section 508",
+        "WCAG 2.1 AA",
+        "21st Century IDEA"
+      ],
+      "tier": "curated",
+      "tags": [
+        "prefix",
+        "icon",
+        "input",
+        "form"
+      ],
+      "description": "USWDS input with an icon prefix (credit card).",
+      "fedRampLevel": "IL2+",
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "relatedComponents": [
+        "text-input",
+        "input-mask"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "cheap"
+    },
+    {
+      "file": "input-prefix-suffix/suffix.html",
+      "title": "Input suffix (Default)",
+      "_schemaVersion": 2,
+      "uswdsComponentType": "input-prefix-suffix",
+      "uswdClass": "usa-input-group",
+      "section": "forms",
+      "variant": "suffix",
+      "requiresJs": "no",
+      "interaction": [
+        "type",
+        "focus"
+      ],
+      "a11y": {
+        "wcag21AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "Section 508",
+        "WCAG 2.1 AA",
+        "21st Century IDEA"
+      ],
+      "tier": "curated",
+      "tags": [
+        "suffix",
+        "unit",
+        "input",
+        "form"
+      ],
+      "description": "USWDS input with a text suffix (weight in pounds).",
+      "fedRampLevel": "IL2+",
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "relatedComponents": [
+        "text-input",
+        "input-mask"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "cheap"
+    },
+    {
       "file": "language-selector/default.html",
       "title": "Language Selector",
       "_schemaVersion": 2,
@@ -5029,6 +5219,54 @@
       ],
       "variants": [
         "default"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "cheap"
+    },
+    {
+      "file": "memorable-date/default.html",
+      "title": "Memorable date (Default)",
+      "_schemaVersion": 2,
+      "uswdsComponentType": "memorable-date",
+      "uswdClass": "usa-memorable-date",
+      "section": "forms",
+      "variant": "default",
+      "requiresJs": "no",
+      "interaction": [
+        "type",
+        "focus"
+      ],
+      "a11y": {
+        "wcag21AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "Section 508",
+        "WCAG 2.1 AA",
+        "21st Century IDEA"
+      ],
+      "tier": "curated",
+      "tags": [
+        "date",
+        "month",
+        "day",
+        "year",
+        "form"
+      ],
+      "description": "USWDS memorable date with separate month, day, and year inputs.",
+      "fedRampLevel": "IL2+",
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "relatedComponents": [
+        "date-picker",
+        "date-range-picker"
       ],
       "prerequisites": [],
       "incompatibleWith": [],
@@ -8144,6 +8382,53 @@
         "error-handling-stack",
         "login-flow"
       ]
+    },
+    {
+      "file": "time-picker/default.html",
+      "title": "Time picker (Default)",
+      "_schemaVersion": 2,
+      "uswdsComponentType": "time-picker",
+      "uswdClass": "usa-time-picker",
+      "section": "forms",
+      "variant": "default",
+      "requiresJs": "required",
+      "interaction": [
+        "type",
+        "focus"
+      ],
+      "a11y": {
+        "wcag21AA": true,
+        "keyboardNav": true,
+        "screenReader": true,
+        "reducedMotion": true,
+        "forcedColors": true,
+        "ariaAttributes": true
+      },
+      "govCompliance": [
+        "Section 508",
+        "WCAG 2.1 AA",
+        "21st Century IDEA"
+      ],
+      "tier": "curated",
+      "tags": [
+        "time",
+        "clock",
+        "appointment",
+        "form"
+      ],
+      "description": "USWDS time picker with min/max constraints.",
+      "fedRampLevel": "IL2+",
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "relatedComponents": [
+        "date-picker",
+        "date-range-picker"
+      ],
+      "prerequisites": [],
+      "incompatibleWith": [],
+      "costTier": "moderate"
     },
     {
       "file": "tooltip/bottom.html",

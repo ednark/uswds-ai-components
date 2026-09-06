@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS time picker with min/max constraints.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Time picker (Default)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "time-picker",
+    "uswdClass": "usa-time-picker",
+    "section": "forms",
+    "variant": "default",
+    "requiresJs": "required",
+    "interaction": [
+      "type",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "time",
+      "clock",
+      "appointment",
+      "form"
+    ],
+    "description": "USWDS time picker with min/max constraints.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    }
+  },
+  "selection": {
+    "useWhen": [
+      "Selecting a time of day for appointments or deadlines"
+    ],
+    "avoidWhen": [
+      "Users must pick a time zone — state it separately"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Set data-min-time and data-max-time to constrain the suggestion list. USWDS JS replaces typed values with a validated time list.",
+    "relatedComponents": [
+      "date-picker",
+      "date-range-picker"
+    ]
+  },
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 223,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    }
+  },
+  "constraints": {
+    "preserve": [
+      "usa-time-picker wrapper around the input",
+      "Hint association via aria-describedby"
+    ],
+    "editable": [
+      "Label",
+      "min/max time constraints",
+      "Placeholder hint"
+    ],
+    "limitations": [
+      "24-hour suggestions only — state the time zone separately",
+      "Requires USWDS JS for the validated time list"
+    ],
+    "portableInvariants": [
+      "Labelled text input with hint association",
+      "data-min-time / data-max-time constraints preserved"
+    ]
+  },
+  "provenance": {
+    "observed": "2026-09-06",
+    "source": "https://designsystem.digital.gov/components/",
+    "method": "coverage audit"
+  },
+  "file": "time-picker/default.html",
+  "title": "Time picker (Default)"
+}
+</script>
+<style>
+  body { font-family: 'Source Sans 3','Source Sans Pro',-apple-system,BlinkMacSystemFont,sans-serif; margin: 0; padding: 2rem; background: #f5f5f5; color: #1b1b1b; line-height: 1.5; }
+  .cap { position: fixed; bottom: 12px; left: 16px; font-size: 11px; letter-spacing: 0.08em; color: #717171; text-transform: uppercase; font-weight: 400; }
+  .preview-heading { font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; color: #565c65; text-transform: uppercase; letter-spacing: 0.05em; }
+  .preview-section { margin-bottom: 2rem; }
+
+.usa-form-group{margin-bottom:1.5rem;max-width:20rem}
+.usa-label{display:block;font-weight:400;margin-bottom:.5rem}
+.usa-hint{color:#71767a;margin:0 0 .5rem}
+.usa-input{font:inherit;display:block;width:100%;padding:.5rem .6rem;border:1px solid #565c65;border-radius:0;box-sizing:border-box;color:#1b1b1b;background:#fff}
+.usa-input:focus{outline:3px solid #2491ff;outline-offset:0}
+</style>
+</head>
+<body>
+<div class="preview-section">
+  <div class="usa-form-group">
+    <label class="usa-label" for="appointment-time">Appointment time</label>
+    <div class="usa-hint" id="appointment-time-hint">Select a time between 9:00 and 17:00</div>
+    <div class="usa-time-picker">
+      <input class="usa-input" id="appointment-time" name="appointment-time" type="text" aria-describedby="appointment-time-hint" data-min-time="9:00" data-max-time="17:00">
+    </div>
+  </div>
+</div>
+<div class="cap">time-picker default</div>
+</body>
+</html>

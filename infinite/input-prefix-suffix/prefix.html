@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="USWDS input with an icon prefix (credit card).">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Input prefix (Default)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/json" id="uswds-agent-meta">
+{
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "input-prefix-suffix",
+    "uswdClass": "usa-input-group",
+    "section": "forms",
+    "variant": "prefix",
+    "requiresJs": "no",
+    "interaction": [
+      "type",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "prefix",
+      "icon",
+      "input",
+      "form"
+    ],
+    "description": "USWDS input with an icon prefix (credit card).",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    }
+  },
+  "selection": {
+    "useWhen": [
+      "Clarifying a field's expected content with an icon before the input"
+    ],
+    "avoidWhen": [
+      "Prefix is decorative only — skip it"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Keep the usa-input-group wrapper; the prefix is aria-hidden so screen readers skip it. Inline the icon SVG rather than referencing the sprite.",
+    "relatedComponents": [
+      "text-input",
+      "input-mask"
+    ]
+  },
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 303,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    }
+  },
+  "constraints": {
+    "preserve": [
+      "usa-input-group wrapper",
+      "usa-input-prefix with aria-hidden=\"true\"",
+      "Icon remains decorative (aria-hidden)"
+    ],
+    "editable": [
+      "Label",
+      "Icon",
+      "Input type"
+    ],
+    "limitations": [
+      "The icon must not carry information the label does not"
+    ],
+    "portableInvariants": [
+      "Prefix is aria-hidden",
+      "Label association intact"
+    ]
+  },
+  "provenance": {
+    "observed": "2026-09-06",
+    "source": "https://designsystem.digital.gov/components/",
+    "method": "coverage audit"
+  },
+  "file": "input-prefix-suffix/prefix.html",
+  "title": "Input prefix (Default)"
+}
+</script>
+<style>
+  body { font-family: 'Source Sans 3','Source Sans Pro',-apple-system,BlinkMacSystemFont,sans-serif; margin: 0; padding: 2rem; background: #f5f5f5; color: #1b1b1b; line-height: 1.5; }
+  .cap { position: fixed; bottom: 12px; left: 16px; font-size: 11px; letter-spacing: 0.08em; color: #717171; text-transform: uppercase; font-weight: 400; }
+  .preview-heading { font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; color: #565c65; text-transform: uppercase; letter-spacing: 0.05em; }
+  .preview-section { margin-bottom: 2rem; }
+
+.usa-form-group{margin-bottom:1.5rem;max-width:20rem}
+.usa-label{display:block;font-weight:400;margin-bottom:.5rem}
+.usa-input-group{display:flex;align-items:stretch;border:1px solid #565c65;border-radius:0;background:#fff}
+.usa-input-group:focus-within{outline:3px solid #2491ff;outline-offset:0}
+.usa-input-prefix,.usa-input-suffix{display:flex;align-items:center;padding:0 .6rem;color:#565c65;background:#f0f0f0}
+.usa-input-prefix svg{width:1.25rem;height:1.25rem;fill:#565c65}
+.usa-input-group .usa-input{border:0;flex:1;font:inherit;padding:.5rem .6rem;color:#1b1b1b;background:transparent}
+</style>
+</head>
+<body>
+<div class="preview-section">
+  <div class="usa-form-group">
+    <label class="usa-label" for="input-prefix">Credit card number</label>
+    <div class="usa-input-group">
+      <div class="usa-input-prefix" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8h16v10zM4 4h16v2H4zM7 12h4v3H7z"/></svg>
+      </div>
+      <input class="usa-input" id="input-prefix" name="credit-card" type="text">
+    </div>
+  </div>
+</div>
+<div class="cap">input-prefix-suffix prefix</div>
+</body>
+</html>

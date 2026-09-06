@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "metadataSchemaVersion": 2,
   "generatedBy": "_base/generate-index.mjs",
-  "total": 146,
+  "total": 152,
   "designSystem": "U.S. Web Design System 3.13.0",
   "facets": {
     "section": {
@@ -12,7 +12,7 @@
       "supporting": 11,
       "navigation": 30,
       "buttons": 1,
-      "forms": 36,
+      "forms": 42,
       "layout": 11,
       "typography": 5,
       "overlays": 1,
@@ -32,6 +32,7 @@
       "combo-box": 2,
       "data-visualizations": 4,
       "date-picker": 2,
+      "date-range-picker": 1,
       "file-input": 2,
       "footer": 5,
       "form": 2,
@@ -40,12 +41,15 @@
       "icon-list": 3,
       "identifier": 2,
       "in-page-navigation": 1,
+      "input-mask": 1,
+      "input-prefix-suffix": 2,
       "language-selector": 2,
       "layout-docs": 1,
       "link": 3,
       "list": 2,
       "logo": 1,
       "media-block": 1,
+      "memorable-date": 1,
       "modal": 2,
       "navbar": 1,
       "overlay": 1,
@@ -64,23 +68,24 @@
       "table": 5,
       "tag": 2,
       "text-input": 5,
+      "time-picker": 1,
       "tooltip": 5,
       "typography": 4,
       "validation": 2
     },
     "requiresJs": {
-      "required": 35,
-      "no": 99,
+      "required": 38,
+      "no": 102,
       "optional": 12
     },
     "interaction": {
-      "click": 96,
-      "focus": 81,
+      "click": 97,
+      "focus": 87,
       "keyboard": 14,
       "passive": 46,
       "hover": 30,
       "input": 13,
-      "type": 2,
+      "type": 8,
       "select": 2,
       "drag": 4,
       "drop": 1,
@@ -91,24 +96,24 @@
       "dismiss": 2
     },
     "a11y": {
-      "wcag21AA": 146,
-      "keyboardNav": 128,
-      "screenReader": 145,
-      "reducedMotion": 146,
-      "forcedColors": 146,
-      "ariaAttributes": 138
+      "wcag21AA": 152,
+      "keyboardNav": 134,
+      "screenReader": 151,
+      "reducedMotion": 152,
+      "forcedColors": 152,
+      "ariaAttributes": 144
     },
     "govCompliance": {
-      "Section 508": 146,
-      "WCAG 2.1 AA": 146,
-      "21st Century IDEA": 146,
+      "Section 508": 152,
+      "WCAG 2.1 AA": 152,
+      "21st Century IDEA": 152,
       "NIST Guidelines": 4,
       "Required by US federal agencies": 4,
       "Required for keyboard accessibility": 1
     },
     "variant": {
       "bordered": 1,
-      "default": 47,
+      "default": 51,
       "multiselectable": 1,
       "until-found": 2,
       "error": 8,
@@ -152,6 +157,8 @@
       "checklist": 1,
       "icon-lg": 1,
       "with-logo": 1,
+      "prefix": 1,
+      "suffix": 1,
       "expanded": 1,
       "download": 1,
       "external": 1,
@@ -179,8 +186,8 @@
       "alert": 1
     },
     "costTier": {
-      "moderate": 70,
-      "cheap": 72,
+      "moderate": 73,
+      "cheap": 75,
       "expensive": 4
     },
     "prerequisites": {
@@ -195,15 +202,15 @@
       "data-table-with-sorting": 11
     },
     "fedRampLevel": {
-      "IL2+": 146
+      "IL2+": 152
     },
     "piiHandling": {
       "displays_only": 95,
       "none": 16,
-      "accepts_input": 35
+      "accepts_input": 41
     },
     "touchTargetSize": {
-      "44px": 146
+      "44px": 152
     },
     "supportedTokenProfiles": {
       "highContrast": 146
