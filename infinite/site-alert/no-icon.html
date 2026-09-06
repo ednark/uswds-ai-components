@@ -7,29 +7,109 @@
 <title>USWDS Site Alert (No Icon)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "site-alert",
+    "uswdsClass": "usa-site-alert--no-icon",
+    "section": "notifications",
+    "variant": "no-icon",
+    "requiresJs": "no",
+    "interaction": [
+      "dismiss"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "site-alert",
+      "no-icon",
+      "minimal"
+    ],
+    "description": "Site alert without the default icon.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Minimal alert styling",
+      "When icons don't fit design",
+      "Custom styled alerts"
+    ],
+    "avoidWhen": [
+      "Standard alert presentation",
+      "When icons aid quick recognition"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-site-alert--no-icon class to remove the default icon.",
+    "relatedComponents": [
+      "alert",
+      "banner"
+    ],
+    "variants": [
+      "default",
+      "emergency",
+      "no-icon"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-site-alert usa-site-alert--no-icon",
+      "div.usa-alert__body"
+    ],
+    "editable": [
+      "Alert heading",
+      "Alert body text"
+    ],
+    "limitations": [
+      "Less scannable without icon"
+    ]
+  },
   "file": "site-alert/no-icon.html",
   "title": "Site Alert (No Icon)",
-  "uswdsComponentType": "site-alert",
-  "uswdsClass": "usa-site-alert--no-icon",
-  "description": "Site alert without the default icon.",
-  "section": "notifications",
-  "variant": "no-icon",
-  "useWhen": ["Minimal alert styling", "When icons don't fit design", "Custom styled alerts"],
-  "avoidWhen": ["Standard alert presentation", "When icons aid quick recognition"],
-  "agentPrompt": "Add usa-site-alert--no-icon class to remove the default icon.",
-  "editableAreas": ["Alert heading", "Alert body text"],
-  "preserveElements": ["div.usa-site-alert usa-site-alert--no-icon", "div.usa-alert__body"],
-  "knownLimitations": ["Less scannable without icon"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["dismiss"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "emergency", "no-icon"],
-  "settings": [],
-  "relatedComponents": ["alert", "banner"],
-  "tokenOverrides": [],
-  "tags": ["site-alert", "no-icon", "minimal"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 635,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place site-alert above the header, below banner",
+      "2. Keep it dismissible only if persistence is handled (slim variant is static)"
+    ]
+  }
 }
 </script>
 </head>

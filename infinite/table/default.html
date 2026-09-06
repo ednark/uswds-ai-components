@@ -10,55 +10,136 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "table",
+    "uswdsClass": "usa-table",
+    "section": "data-display",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "passive",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": false
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "table",
+      "data",
+      "grid",
+      "rows",
+      "columns",
+      "spreadsheet",
+      "list"
+    ],
+    "description": "Displays information in columns and rows for easy scanning and comparison.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Comparing data across multiple items",
+      "Showing structured numerical or text data",
+      "When users need to scan for specific values",
+      "Data that benefits from column sorting"
+    ],
+    "avoidWhen": [
+      "Single items or simple lists (use card or list)",
+      "Highly visual content (use imagery instead)",
+      "Complex hierarchical data (consider nested lists)",
+      "Mobile-heavy interfaces where tables don't fit"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-table--borderless, usa-table--striped, usa-table--scrollable, or usa-table--stacked for variants. Update header scope to 'col' for column headers. Add sortable functionality with data-sortable.",
+    "relatedComponents": [
+      "card",
+      "data-visualizations"
+    ],
+    "variants": [
+      "default",
+      "borderless",
+      "striped",
+      "scrollable",
+      "stacked"
+    ],
+    "settings": [
+      "$theme-table-border-radius"
+    ],
+    "tokenOverrides": [
+      "$theme-table-border-color",
+      "$theme-table-text-color"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "table.usa-table wrapper",
+      "caption for table description",
+      "thead for header section",
+      "th scope='col' for column headers",
+      "tbody for data rows",
+      "tr for each row"
+    ],
+    "editable": [
+      "Header cell content and scope",
+      "Data cell values",
+      "Caption text for accessibility",
+      "Variant: borderless, striped, scrollable, stacked"
+    ],
+    "limitations": [
+      "Scrollable variant needs JS for proper horizontal scroll",
+      "Stacked variant stacks cells vertically on mobile",
+      "Tables need caption or aria-label for accessibility"
+    ]
+  },
   "file": "table/default.html",
   "title": "Table",
-  "uswdsComponentType": "table",
-  "uswdsClass": "usa-table",
-  "description": "Displays information in columns and rows for easy scanning and comparison.",
-  "section": "data-display",
-  "variant": "default",
-  "useWhen": [
-    "Comparing data across multiple items",
-    "Showing structured numerical or text data",
-    "When users need to scan for specific values",
-    "Data that benefits from column sorting"
-  ],
-  "avoidWhen": [
-    "Single items or simple lists (use card or list)",
-    "Highly visual content (use imagery instead)",
-    "Complex hierarchical data (consider nested lists)",
-    "Mobile-heavy interfaces where tables don't fit"
-  ],
-  "agentPrompt": "Add usa-table--borderless, usa-table--striped, usa-table--scrollable, or usa-table--stacked for variants. Update header scope to 'col' for column headers. Add sortable functionality with data-sortable.",
-  "editableAreas": [
-    "Header cell content and scope",
-    "Data cell values",
-    "Caption text for accessibility",
-    "Variant: borderless, striped, scrollable, stacked"
-  ],
-  "preserveElements": [
-    "table.usa-table wrapper",
-    "caption for table description",
-    "thead for header section",
-    "th scope='col' for column headers",
-    "tbody for data rows",
-    "tr for each row"
-  ],
-  "knownLimitations": [
-    "Scrollable variant needs JS for proper horizontal scroll",
-    "Stacked variant stacks cells vertically on mobile",
-    "Tables need caption or aria-label for accessibility"
-  ],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": false},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "borderless", "striped", "scrollable", "stacked"],
-  "settings": ["$theme-table-border-radius"],
-  "relatedComponents": ["card", "data-visualizations"],
-  "tokenOverrides": ["$theme-table-border-color", "$theme-table-text-color"],
-  "tags": ["table", "data", "grid", "rows", "columns", "spreadsheet", "list"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1194,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Wrap the table in a scrollable container for small screens (keep .usa-table-container--scrollable)",
+      "2. Provide a caption element — required for accessibility",
+      "3. Use scope='col'/'row' on headers; for sortable tables keep the JS"
+    ],
+    "compositionRecipes": [
+      "data-table-with-sorting"
+    ]
+  }
 }
 </script>
 <style>

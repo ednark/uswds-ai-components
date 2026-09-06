@@ -7,29 +7,113 @@
 <title>USWDS Typography (Link)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "typography",
+    "uswdsClass": "typography",
+    "section": "typography",
+    "variant": "link",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "hover",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "typography",
+      "link",
+      "prose"
+    ],
+    "description": "Typography example focusing on link styles within prose.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Content with many links",
+      "Article pages",
+      "Documentation"
+    ],
+    "avoidWhen": [
+      "Minimal UI",
+      "Button-heavy interfaces"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Use usa-prose class and ensure proper link styling with usa-link.",
+    "relatedComponents": [
+      "prose",
+      "link"
+    ],
+    "variants": [
+      "default",
+      "typeset",
+      "link",
+      "list"
+    ],
+    "settings": [
+      "$theme-type-scale"
+    ],
+    "tokenOverrides": [
+      "$theme-type-scale"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-prose",
+      "a.usa-link"
+    ],
+    "editable": [
+      "Link text and URLs"
+    ],
+    "limitations": []
+  },
   "file": "typography/link.html",
   "title": "Typography (Link)",
-  "uswdsComponentType": "typography",
-  "uswdsClass": "typography",
-  "description": "Typography example focusing on link styles within prose.",
-  "section": "typography",
-  "variant": "link",
-  "useWhen": ["Content with many links", "Article pages", "Documentation"],
-  "avoidWhen": ["Minimal UI", "Button-heavy interfaces"],
-  "agentPrompt": "Use usa-prose class and ensure proper link styling with usa-link.",
-  "editableAreas": ["Link text and URLs"],
-  "preserveElements": ["div.usa-prose", "a.usa-link"],
-  "knownLimitations": [],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "hover", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "typeset", "link", "list"],
-  "settings": ["$theme-type-scale"],
-  "relatedComponents": ["prose", "link"],
-  "tokenOverrides": ["$theme-type-scale"],
-  "tags": ["typography", "link", "prose"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 649,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Keep font-family tokens (Source Sans 3 / Public Sans / Merriweather per USWDS roles)",
+      "2. Line length: cap body text near 68ch for readability"
+    ]
+  }
 }
 </script>
 </head>

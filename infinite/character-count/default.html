@@ -10,51 +10,136 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "character-count",
+    "uswdsClass": "usa-character-count",
+    "section": "forms",
+    "variant": "default",
+    "requiresJs": "required",
+    "interaction": [
+      "input",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "character",
+      "count",
+      "limit",
+      "length",
+      "text",
+      "textarea",
+      "remaining"
+    ],
+    "description": "Shows users how much text they can enter when there's a character limit.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Text fields with character limits",
+      "Bio or description fields with limited space",
+      "Social media-style input fields",
+      "Compliance or regulatory text limits"
+    ],
+    "avoidWhen": [
+      "Fields without limits",
+      "Short text fields where limits are obvious",
+      "Rich text editors with separate limits"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Set maxlength attribute on textarea for character limit. Add data-maxlength with same value. Update aria-describedby on input to reference character count element.",
+    "relatedComponents": [
+      "text-input",
+      "form",
+      "validation"
+    ],
+    "variants": [
+      "default",
+      "error"
+    ],
+    "settings": [
+      "$theme-input-border-radius"
+    ],
+    "tokenOverrides": [
+      "$theme-input-border-radius"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-character-count with data-maxlength",
+      "textarea.usa-textarea with maxlength",
+      "div.usa-character-count__status for remaining count",
+      "aria-describedby linking input to status"
+    ],
+    "editable": [
+      "Character limit value (maxlength and data-maxlength)",
+      "Input or textarea element",
+      "Character count message text"
+    ],
+    "limitations": [
+      "JavaScript updates the displayed count automatically",
+      "maxlength prevents exceeding the limit",
+      "Warning styling triggers at 90% of limit"
+    ]
+  },
   "file": "character-count/default.html",
   "title": "Character Count",
-  "uswdsComponentType": "character-count",
-  "uswdsClass": "usa-character-count",
-  "description": "Shows users how much text they can enter when there's a character limit.",
-  "section": "forms",
-  "variant": "default",
-  "useWhen": [
-    "Text fields with character limits",
-    "Bio or description fields with limited space",
-    "Social media-style input fields",
-    "Compliance or regulatory text limits"
-  ],
-  "avoidWhen": [
-    "Fields without limits",
-    "Short text fields where limits are obvious",
-    "Rich text editors with separate limits"
-  ],
-  "agentPrompt": "Set maxlength attribute on textarea for character limit. Add data-maxlength with same value. Update aria-describedby on input to reference character count element.",
-  "editableAreas": [
-    "Character limit value (maxlength and data-maxlength)",
-    "Input or textarea element",
-    "Character count message text"
-  ],
-  "preserveElements": [
-    "div.usa-character-count with data-maxlength",
-    "textarea.usa-textarea with maxlength",
-    "div.usa-character-count__status for remaining count",
-    "aria-describedby linking input to status"
-  ],
-  "knownLimitations": [
-    "JavaScript updates the displayed count automatically",
-    "maxlength prevents exceeding the limit",
-    "Warning styling triggers at 90% of limit"
-  ],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["input", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "error"],
-  "settings": ["$theme-input-border-radius"],
-  "relatedComponents": ["text-input", "form", "validation"],
-  "tokenOverrides": ["$theme-input-border-radius"],
-  "tags": ["character", "count", "limit", "length", "text", "textarea", "remaining"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Provides form context; place this input inside a form wrapper"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1152,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Fetch the form wrapper first",
+      "2. Keep data-maxlength and the aria-live status region — both are required for announcements",
+      "3. Wrap the input and the message span in the character-count container"
+    ],
+    "compositionRecipes": [
+      "contact-form"
+    ]
+  }
 }
 </script>
 <style>

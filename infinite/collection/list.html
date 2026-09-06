@@ -7,29 +7,106 @@
 <title>USWDS Collection (List)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "collection",
+    "uswdsClass": "usa-collection--list",
+    "section": "data-display",
+    "variant": "list",
+    "requiresJs": "no",
+    "interaction": [
+      "passive",
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "collection",
+      "list",
+      "items"
+    ],
+    "description": "Collection component in list layout format.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Simple lists",
+      "Document lists",
+      "Minimal presentations"
+    ],
+    "avoidWhen": [
+      "Complex multi-item displays",
+      "Card-based layouts"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-collection--list class to usa-collection for list format.",
+    "relatedComponents": [
+      "card",
+      "table"
+    ],
+    "variants": [
+      "default",
+      "list"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "ul.usa-collection",
+      "li.usa-collection__item"
+    ],
+    "editable": [
+      "Collection item titles and descriptions"
+    ],
+    "limitations": []
+  },
   "file": "collection/list.html",
   "title": "Collection (List)",
-  "uswdsComponentType": "collection",
-  "uswdsClass": "usa-collection--list",
-  "description": "Collection component in list layout format.",
-  "section": "data-display",
-  "variant": "list",
-  "useWhen": ["Simple lists", "Document lists", "Minimal presentations"],
-  "avoidWhen": ["Complex multi-item displays", "Card-based layouts"],
-  "agentPrompt": "Add usa-collection--list class to usa-collection for list format.",
-  "editableAreas": ["Collection item titles and descriptions"],
-  "preserveElements": ["ul.usa-collection", "li.usa-collection__item"],
-  "knownLimitations": [],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive", "click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "list"],
-  "settings": [],
-  "relatedComponents": ["card", "table"],
-  "tokenOverrides": [],
-  "tags": ["collection", "list", "items"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 702,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Use for media-rich item lists (events, articles)",
+      "2. Keep bookmark/media-header structure; one primary link per item"
+    ]
+  }
 }
 </script>
 </head>

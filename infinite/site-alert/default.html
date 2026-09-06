@@ -10,53 +10,129 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "site-alert",
+    "uswdsClass": "usa-site-alert",
+    "section": "feedback",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "passive"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": false,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA",
+      "NIST Guidelines"
+    ],
+    "tier": "curated",
+    "tags": [
+      "site-alert",
+      "alert",
+      "announcement",
+      "emergency",
+      "warning",
+      "system",
+      "outage"
+    ],
+    "description": "Communicates urgent sitewide information that affects all users.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Urgent system announcements",
+      "Service outages or maintenance windows",
+      "Emergency information affecting entire site",
+      "Required compliance notices"
+    ],
+    "avoidWhen": [
+      "Non-urgent, page-specific information",
+      "Normal operational messages",
+      "When alert fatigue is a concern"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-site-alert--emergency for emergency severity. Add usa-site-alert--no-icon to hide icon. Update alert heading and body content. Use role='alert' for critical announcements.",
+    "relatedComponents": [
+      "alert",
+      "banner",
+      "identifier"
+    ],
+    "variants": [
+      "default",
+      "emergency",
+      "no-icon"
+    ],
+    "settings": [
+      "$theme-site-alert-border-radius"
+    ],
+    "tokenOverrides": [
+      "$theme-site-alert-border-radius",
+      "$theme-site-alert-background-color"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-site-alert wrapper",
+      "div.usa-site-alert__body",
+      "div.usa-site-alert__heading for title",
+      "div.usa-site-alert__text for body",
+      "role='alert' for critical alerts"
+    ],
+    "editable": [
+      "Site alert heading text",
+      "Site alert body content",
+      "Severity variant: default, emergency",
+      "Icon variant: with icon, no icon"
+    ],
+    "limitations": [
+      "Site alerts are typically in fixed position",
+      "Overuse reduces effectiveness",
+      "Emergency alerts should be used sparingly"
+    ]
+  },
   "file": "site-alert/default.html",
   "title": "Site Alert",
-  "uswdsComponentType": "site-alert",
-  "uswdsClass": "usa-site-alert",
-  "description": "Communicates urgent sitewide information that affects all users.",
-  "section": "feedback",
-  "variant": "default",
-  "useWhen": [
-    "Urgent system announcements",
-    "Service outages or maintenance windows",
-    "Emergency information affecting entire site",
-    "Required compliance notices"
-  ],
-  "avoidWhen": [
-    "Non-urgent, page-specific information",
-    "Normal operational messages",
-    "When alert fatigue is a concern"
-  ],
-  "agentPrompt": "Add usa-site-alert--emergency for emergency severity. Add usa-site-alert--no-icon to hide icon. Update alert heading and body content. Use role='alert' for critical announcements.",
-  "editableAreas": [
-    "Site alert heading text",
-    "Site alert body content",
-    "Severity variant: default, emergency",
-    "Icon variant: with icon, no icon"
-  ],
-  "preserveElements": [
-    "div.usa-site-alert wrapper",
-    "div.usa-site-alert__body",
-    "div.usa-site-alert__heading for title",
-    "div.usa-site-alert__text for body",
-    "role='alert' for critical alerts"
-  ],
-  "knownLimitations": [
-    "Site alerts are typically in fixed position",
-    "Overuse reduces effectiveness",
-    "Emergency alerts should be used sparingly"
-  ],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive"],
-  "a11y": {"wcag21AA": true, "keyboardNav": false, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA", "NIST Guidelines"],
-  "variants": ["default", "emergency", "no-icon"],
-  "settings": ["$theme-site-alert-border-radius"],
-  "relatedComponents": ["alert", "banner", "identifier"],
-  "tokenOverrides": ["$theme-site-alert-border-radius", "$theme-site-alert-background-color"],
-  "tags": ["site-alert", "alert", "announcement", "emergency", "warning", "system", "outage"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1037,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place site-alert above the header, below banner",
+      "2. Keep it dismissible only if persistence is handled (slim variant is static)"
+    ]
+  }
 }
 </script>
 <style>

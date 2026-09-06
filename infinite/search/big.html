@@ -7,29 +7,126 @@
 <title>USWDS Search (Big)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "search",
+    "uswdsClass": "usa-search--big",
+    "section": "forms",
+    "variant": "big",
+    "requiresJs": "no",
+    "interaction": [
+      "focus",
+      "input",
+      "submit"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "search",
+      "big",
+      "large",
+      "prominent"
+    ],
+    "description": "Large search input with prominent button.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Homepage search",
+      "Prominent search functionality",
+      "User expectation of search on entry"
+    ],
+    "avoidWhen": [
+      "Inline or secondary search",
+      "Mobile interfaces with limited space"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-search--big class to usa-search. Larger input and button.",
+    "relatedComponents": [
+      "text-input",
+      "button"
+    ],
+    "variants": [
+      "default",
+      "big",
+      "small"
+    ],
+    "settings": [
+      "$theme-search-input-width"
+    ],
+    "tokenOverrides": [
+      "$theme-search-input-width"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "form.usa-search",
+      "input.usa-search__input",
+      "button.usa-search__submit"
+    ],
+    "editable": [
+      "Search label",
+      "Search placeholder",
+      "Submit button text"
+    ],
+    "limitations": [
+      "Takes significant horizontal space"
+    ]
+  },
   "file": "search/big.html",
   "title": "Search (Big)",
-  "uswdsComponentType": "search",
-  "uswdsClass": "usa-search--big",
-  "description": "Large search input with prominent button.",
-  "section": "forms",
-  "variant": "big",
-  "useWhen": ["Homepage search", "Prominent search functionality", "User expectation of search on entry"],
-  "avoidWhen": ["Inline or secondary search", "Mobile interfaces with limited space"],
-  "agentPrompt": "Add usa-search--big class to usa-search. Larger input and button.",
-  "editableAreas": ["Search label", "Search placeholder", "Submit button text"],
-  "preserveElements": ["form.usa-search", "input.usa-search__input", "button.usa-search__submit"],
-  "knownLimitations": ["Takes significant horizontal space"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["focus", "input", "submit"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "big", "small"],
-  "settings": ["$theme-search-input-width"],
-  "relatedComponents": ["text-input", "button"],
-  "tokenOverrides": ["$theme-search-input-width"],
-  "tags": ["search", "big", "large", "prominent"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Search is a form submission; wrap in a form with role='search'"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 746,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Wrap in form role='search' with action pointing to the search endpoint",
+      "2. Keep the visually-hidden label for screen readers",
+      "3. In header context, use the small variant"
+    ]
+  }
 }
 </script>
 </head>

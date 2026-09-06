@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "generatedBy": "hand-authored (tools/add-coordination.mjs consumes this)",
+  "spec": "Surface 4: Component Recipes (ai-component-registry-spec/protocol.md)",
+  "count": 5,
+  "urlPattern": "infinite/recipes/{recipe}.json",
+  "recipes": [
+    {
+      "name": "contact-form",
+      "title": "Contact Form",
+      "description": "Accessible contact form: labeled inputs, message field with character limit, error summary, submit button",
+      "componentCount": 6,
+      "url": "infinite/recipes/contact-form.json"
+    },
+    {
+      "name": "login-flow",
+      "title": "Login Flow",
+      "description": "Accessible sign-in form with credentials fields, failure feedback, and recovery links",
+      "componentCount": 5,
+      "url": "infinite/recipes/login-flow.json"
+    },
+    {
+      "name": "data-table-with-sorting",
+      "title": "Data Table with Sorting and Pagination",
+      "description": "Accessible data table with sortable columns, scrollable container, and pagination",
+      "componentCount": 3,
+      "url": "infinite/recipes/data-table-with-sorting.json"
+    },
+    {
+      "name": "error-handling-stack",
+      "title": "Error Handling Stack",
+      "description": "Layered error feedback: validation summary, contextual alert, callout, field-level error state",
+      "componentCount": 4,
+      "url": "infinite/recipes/error-handling-stack.json"
+    },
+    {
+      "name": "navigation-hierarchy",
+      "title": "Government Page Navigation Hierarchy",
+      "description": "Complete official page chrome in canonical DOM order: skip-nav, banner, header, breadcrumb, section navs, footer, identifier",
+      "componentCount": 8,
+      "url": "infinite/recipes/navigation-hierarchy.json"
+    }
+  ]
+}

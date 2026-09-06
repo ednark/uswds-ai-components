@@ -7,29 +7,120 @@
 <title>USWDS Combo Box (Large)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "combo-box",
+    "uswdsClass": "usa-combo-box--lg",
+    "section": "forms",
+    "variant": "lg",
+    "requiresJs": "required",
+    "interaction": [
+      "click",
+      "type",
+      "select"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "combo-box",
+      "lg",
+      "large",
+      "dropdown"
+    ],
+    "description": "Large combo box variant with enhanced visibility.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Prominent form fields",
+      "Mobile interfaces",
+      "Touch-friendly selection"
+    ],
+    "avoidWhen": [
+      "Dense forms",
+      "Compact layouts"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-combo-box--lg class to usa-combo-box for larger variant.",
+    "relatedComponents": [
+      "select",
+      "text-input"
+    ],
+    "variants": [
+      "default",
+      "lg"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-combo-box",
+      "select.usa-combo-box__select",
+      "ul.usa-combo-box__list"
+    ],
+    "editable": [
+      "Combo box label",
+      "Options list"
+    ],
+    "limitations": [
+      "JavaScript required for filtering behavior"
+    ]
+  },
   "file": "combo-box/lg.html",
   "title": "Combo Box (Large)",
-  "uswdsComponentType": "combo-box",
-  "uswdsClass": "usa-combo-box--lg",
-  "description": "Large combo box variant with enhanced visibility.",
-  "section": "forms",
-  "variant": "lg",
-  "useWhen": ["Prominent form fields", "Mobile interfaces", "Touch-friendly selection"],
-  "avoidWhen": ["Dense forms", "Compact layouts"],
-  "agentPrompt": "Add usa-combo-box--lg class to usa-combo-box for larger variant.",
-  "editableAreas": ["Combo box label", "Options list"],
-  "preserveElements": ["div.usa-combo-box", "select.usa-combo-box__select", "ul.usa-combo-box__list"],
-  "knownLimitations": ["JavaScript required for filtering behavior"],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["click", "type", "select"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "lg"],
-  "settings": [],
-  "relatedComponents": ["select", "text-input"],
-  "tokenOverrides": [],
-  "tags": ["combo-box", "lg", "large", "dropdown"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Provides form context; place this combo-box inside a form wrapper"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 740,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Fetch the form wrapper first",
+      "2. Keep the underlying select element — JS enhances it, it must remain for no-JS fallback",
+      "3. Initialize after DOM ready (combo-box JS is required)"
+    ]
+  }
 }
 </script>
 </head>

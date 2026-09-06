@@ -7,29 +7,120 @@
 <title>USWDS Footer (Slim)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "footer",
+    "uswdsClass": "usa-footer usa-footer--slim",
+    "section": "layout",
+    "variant": "slim",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "footer",
+      "slim",
+      "compact",
+      "minimal"
+    ],
+    "description": "Compact footer with minimal content for simple sites.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Simple sites with minimal footer needs",
+      "Mobile apps",
+      "When full footer is excessive"
+    ],
+    "avoidWhen": [
+      "Sites requiring full navigation footer",
+      "Complex agency sites"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-footer--slim class to usa-footer. Removes some sections from default footer.",
+    "relatedComponents": [
+      "header",
+      "identifier",
+      "link"
+    ],
+    "variants": [
+      "default",
+      "slim",
+      "big"
+    ],
+    "settings": [
+      "$theme-footer-font-family"
+    ],
+    "tokenOverrides": [
+      "$theme-footer-font-family"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "footer.usa-footer usa-footer--slim",
+      "div.usa-footer__primary-section"
+    ],
+    "editable": [
+      "Agency name",
+      "Footer links"
+    ],
+    "limitations": [
+      "Limited link capacity"
+    ]
+  },
   "file": "footer/slim.html",
   "title": "Footer (Slim)",
-  "uswdsComponentType": "footer",
-  "uswdsClass": "usa-footer usa-footer--slim",
-  "description": "Compact footer with minimal content for simple sites.",
-  "section": "layout",
-  "variant": "slim",
-  "useWhen": ["Simple sites with minimal footer needs", "Mobile apps", "When full footer is excessive"],
-  "avoidWhen": ["Sites requiring full navigation footer", "Complex agency sites"],
-  "agentPrompt": "Add usa-footer--slim class to usa-footer. Removes some sections from default footer.",
-  "editableAreas": ["Agency name", "Footer links"],
-  "preserveElements": ["footer.usa-footer usa-footer--slim", "div.usa-footer__primary-section"],
-  "knownLimitations": ["Limited link capacity"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "slim", "big"],
-  "settings": ["$theme-footer-font-family"],
-  "relatedComponents": ["header", "identifier", "link"],
-  "tokenOverrides": ["$theme-footer-font-family"],
-  "tags": ["footer", "slim", "compact", "minimal"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 740,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place footer as the last element in body",
+      "2. Pair with identifier below it for official government branding",
+      "3. Keep footer nav links flat — no nested menus"
+    ],
+    "compositionRecipes": [
+      "navigation-hierarchy"
+    ]
+  }
 }
 </script>
 </head>

@@ -7,29 +7,157 @@
 <title>USWDS Button (Big)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "button",
+    "uswdsClass": "usa-button usa-button--big",
+    "section": "utilities",
+    "variant": "big",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus",
+      "hover"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "button",
+      "big",
+      "large",
+      "primary",
+      "cta"
+    ],
+    "description": "Larger button for primary actions that need visual emphasis.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "none",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Primary CTAs",
+      "Important actions needing emphasis",
+      "Mobile-friendly large targets"
+    ],
+    "avoidWhen": [
+      "Minor actions",
+      "Dense interfaces",
+      "Button groups with many buttons"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Use usa-button--big class. Same structure as default button.",
+    "relatedComponents": [
+      "button-group",
+      "link"
+    ],
+    "variants": [
+      "default",
+      "secondary",
+      "accent-cool",
+      "accent-warm",
+      "base",
+      "outline",
+      "outline-inverse",
+      "big",
+      "unstyled"
+    ],
+    "settings": [
+      "$theme-button-border-radius"
+    ],
+    "tokenOverrides": [
+      "$theme-button-border-radius"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "usa-button base class",
+      "usa-button--big variant",
+      "type attribute"
+    ],
+    "editable": [
+      "Button label text",
+      "type attribute",
+      "disabled state"
+    ],
+    "limitations": [
+      "Does not auto-resize on mobile"
+    ]
+  },
   "file": "button/big.html",
   "title": "Button (Big)",
-  "uswdsComponentType": "button",
-  "uswdsClass": "usa-button usa-button--big",
-  "description": "Larger button for primary actions that need visual emphasis.",
-  "section": "utilities",
-  "variant": "big",
-  "useWhen": ["Primary CTAs", "Important actions needing emphasis", "Mobile-friendly large targets"],
-  "avoidWhen": ["Minor actions", "Dense interfaces", "Button groups with many buttons"],
-  "agentPrompt": "Use usa-button--big class. Same structure as default button.",
-  "editableAreas": ["Button label text", "type attribute", "disabled state"],
-  "preserveElements": ["usa-button base class", "usa-button--big variant", "type attribute"],
-  "knownLimitations": ["Does not auto-resize on mobile"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "focus", "hover"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "secondary", "accent-cool", "accent-warm", "base", "outline", "outline-inverse", "big", "unstyled"],
-  "settings": ["$theme-button-border-radius"],
-  "relatedComponents": ["button-group", "link"],
-  "tokenOverrides": ["$theme-button-border-radius"],
-  "tags": ["button", "big", "large", "primary", "cta"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [
+      {
+        "name": "button-group",
+        "reason": "Button groups override individual button event handlers; style buttons directly instead"
+      }
+    ],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 749,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "variantRules": {
+      "note": "Color variants are mutually exclusive (pick one); size and state classes combine with any color variant",
+      "exclusiveGroups": [
+        [
+          "default",
+          "secondary",
+          "accent-cool",
+          "accent-warm",
+          "base",
+          "outline",
+          "outline-inverse",
+          "unstyled"
+        ]
+      ],
+      "combinable": [
+        "big",
+        "hover",
+        "active",
+        "focus"
+      ]
+    },
+    "agentPromptSequence": [
+      "1. Inside forms, set type='submit'; standalone buttons use type='button'",
+      "2. Use one primary button per view; other actions become secondary/outline",
+      "3. Place the button as the last interactive element of its form or section"
+    ],
+    "compositionRecipes": [
+      "contact-form",
+      "login-flow"
+    ]
+  }
 }
 </script>
 </head>

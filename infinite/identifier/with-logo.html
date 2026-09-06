@@ -7,29 +7,114 @@
 <title>USWDS Identifier (With Logo)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "identifier",
+    "uswdsClass": "usa-identifier--with-logo",
+    "section": "supporting",
+    "variant": "with-logo",
+    "requiresJs": "no",
+    "interaction": [
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA",
+      "Required by US federal agencies"
+    ],
+    "tier": "curated",
+    "tags": [
+      "identifier",
+      "logo",
+      "government",
+      "agency"
+    ],
+    "description": "Identifier component including agency logo.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Federal agency websites",
+      "Required for government compliance",
+      "Parent agency identification"
+    ],
+    "avoidWhen": [
+      "Non-government sites",
+      "Simple footers"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Use usa-identifier with agency logo section for official identification.",
+    "relatedComponents": [
+      "footer",
+      "banner"
+    ],
+    "variants": [
+      "default",
+      "with-logo"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "section.usa-identifier",
+      "div.usa-identifier__logo"
+    ],
+    "editable": [
+      "Agency name",
+      "Parent agency info",
+      "Required links"
+    ],
+    "limitations": [
+      "Required on federal government websites"
+    ]
+  },
   "file": "identifier/with-logo.html",
   "title": "Identifier (With Logo)",
-  "uswdsComponentType": "identifier",
-  "uswdsClass": "usa-identifier--with-logo",
-  "description": "Identifier component including agency logo.",
-  "section": "supporting",
-  "variant": "with-logo",
-  "useWhen": ["Federal agency websites", "Required for government compliance", "Parent agency identification"],
-  "avoidWhen": ["Non-government sites", "Simple footers"],
-  "agentPrompt": "Use usa-identifier with agency logo section for official identification.",
-  "editableAreas": ["Agency name", "Parent agency info", "Required links"],
-  "preserveElements": ["section.usa-identifier", "div.usa-identifier__logo"],
-  "knownLimitations": ["Required on federal government websites"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA", "Required by US federal agencies"],
-  "variants": ["default", "with-logo"],
-  "settings": [],
-  "relatedComponents": ["footer", "banner"],
-  "tokenOverrides": [],
-  "tags": ["identifier", "logo", "government", "agency"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 710,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place identifier directly below the footer",
+      "2. Keep the required agency links and logo slots intact"
+    ],
+    "compositionRecipes": [
+      "navigation-hierarchy"
+    ]
+  }
 }
 </script>
 </head>

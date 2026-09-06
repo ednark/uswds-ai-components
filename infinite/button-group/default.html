@@ -10,53 +10,127 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "button-group",
+    "uswdsClass": "usa-button-group",
+    "section": "utilities",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus",
+      "hover"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "button-group",
+      "buttons",
+      "group",
+      "toolbar",
+      "actions",
+      "segmented"
+    ],
+    "description": "Groups related buttons together for similar or related actions.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "none",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Multiple related actions that need to be visually connected",
+      "Progressive disclosure of options",
+      "Action toolbars with multiple choices",
+      "When buttons belong together conceptually"
+    ],
+    "avoidWhen": [
+      "Unrelated actions that shouldn't be grouped",
+      "Too many buttons that overwhelm the UI",
+      "Mobile interfaces where button groups become cramped"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-button-group__segmented for segmented button group. Wrap each button in li.usa-button-group__item. Use appropriate button variants within the group. Ensure consistent button sizing.",
+    "relatedComponents": [
+      "button",
+      "link"
+    ],
+    "variants": [
+      "default",
+      "segmented"
+    ],
+    "settings": [
+      "$theme-button-group-border-radius"
+    ],
+    "tokenOverrides": [
+      "$theme-button-group-border-radius"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "ol or ul.usa-button-group with role='group'",
+      "li.usa-button-group__item for each button",
+      "button.usa-button within buttons",
+      "aria-label on group for accessibility",
+      "usa-button-group__segmented for segmented variant"
+    ],
+    "editable": [
+      "Button labels and actions",
+      "Button variants (outline, secondary, etc.)",
+      "Grouped vs segmented styling",
+      "Button sizes"
+    ],
+    "limitations": [
+      "Segmented buttons require JavaScript for active states",
+      "All buttons in group should be same size",
+      "Mobile may require button wrapping"
+    ]
+  },
   "file": "button-group/default.html",
   "title": "Button Group",
-  "uswdsComponentType": "button-group",
-  "uswdsClass": "usa-button-group",
-  "description": "Groups related buttons together for similar or related actions.",
-  "section": "utilities",
-  "variant": "default",
-  "useWhen": [
-    "Multiple related actions that need to be visually connected",
-    "Progressive disclosure of options",
-    "Action toolbars with multiple choices",
-    "When buttons belong together conceptually"
-  ],
-  "avoidWhen": [
-    "Unrelated actions that shouldn't be grouped",
-    "Too many buttons that overwhelm the UI",
-    "Mobile interfaces where button groups become cramped"
-  ],
-  "agentPrompt": "Add usa-button-group__segmented for segmented button group. Wrap each button in li.usa-button-group__item. Use appropriate button variants within the group. Ensure consistent button sizing.",
-  "editableAreas": [
-    "Button labels and actions",
-    "Button variants (outline, secondary, etc.)",
-    "Grouped vs segmented styling",
-    "Button sizes"
-  ],
-  "preserveElements": [
-    "ol or ul.usa-button-group with role='group'",
-    "li.usa-button-group__item for each button",
-    "button.usa-button within buttons",
-    "aria-label on group for accessibility",
-    "usa-button-group__segmented for segmented variant"
-  ],
-  "knownLimitations": [
-    "Segmented buttons require JavaScript for active states",
-    "All buttons in group should be same size",
-    "Mobile may require button wrapping"
-  ],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "focus", "hover"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "segmented"],
-  "settings": ["$theme-button-group-border-radius"],
-  "relatedComponents": ["button", "link"],
-  "tokenOverrides": ["$theme-button-group-border-radius"],
-  "tags": ["button-group", "buttons", "group", "toolbar", "actions", "segmented"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [
+      {
+        "name": "button",
+        "reason": "Do not nest individually-styled buttons; button-group manages its own segment styling"
+      }
+    ],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1082,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    }
+  }
 }
 </script>
 <style>

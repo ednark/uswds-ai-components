@@ -7,29 +7,124 @@
 <title>USWDS Accordion (Multiselectable)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "accordion",
+    "uswdsClass": "usa-accordion",
+    "section": "utilities",
+    "variant": "multiselectable",
+    "requiresJs": "required",
+    "interaction": [
+      "click",
+      "keyboard"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "accordion",
+      "multiselect",
+      "expand",
+      "multiple",
+      "faq"
+    ],
+    "description": "Accordion allowing multiple sections to be open simultaneously via data-allow-multiple.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "When users need to compare content across sections",
+      "FAQ where multiple topics may be relevant",
+      "Reference content where users may want all context visible"
+    ],
+    "avoidWhen": [
+      "Linear step-by-step content",
+      "When section exclusivity is important",
+      "Space-constrained interfaces"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-accordion--multiselectable class and data-allow-multiple attribute to usa-accordion wrapper. Same button/content structure as default.",
+    "relatedComponents": [
+      "process-list",
+      "summary-box"
+    ],
+    "variants": [
+      "default",
+      "bordered",
+      "multiselectable"
+    ],
+    "settings": [
+      "$theme-accordion-background-color",
+      "$theme-accordion-border-width"
+    ],
+    "tokenOverrides": [
+      "$theme-accordion-background-color"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "usa-accordion wrapper",
+      "usa-accordion--multiselectable class",
+      "data-allow-multiple attribute",
+      "button.usa-accordion__button",
+      "aria-expanded and aria-controls"
+    ],
+    "editable": [
+      "Accordion button text",
+      "Accordion content text",
+      "Initial aria-expanded states"
+    ],
+    "limitations": [
+      "JavaScript required",
+      "Do not set hidden manually"
+    ]
+  },
   "file": "accordion/multiselectable.html",
   "title": "Accordion (Multiselectable)",
-  "uswdsComponentType": "accordion",
-  "uswdsClass": "usa-accordion",
-  "description": "Accordion allowing multiple sections to be open simultaneously via data-allow-multiple.",
-  "section": "utilities",
-  "variant": "multiselectable",
-  "useWhen": ["When users need to compare content across sections", "FAQ where multiple topics may be relevant", "Reference content where users may want all context visible"],
-  "avoidWhen": ["Linear step-by-step content", "When section exclusivity is important", "Space-constrained interfaces"],
-  "agentPrompt": "Add usa-accordion--multiselectable class and data-allow-multiple attribute to usa-accordion wrapper. Same button/content structure as default.",
-  "editableAreas": ["Accordion button text", "Accordion content text", "Initial aria-expanded states"],
-  "preserveElements": ["usa-accordion wrapper", "usa-accordion--multiselectable class", "data-allow-multiple attribute", "button.usa-accordion__button", "aria-expanded and aria-controls"],
-  "knownLimitations": ["JavaScript required", "Do not set hidden manually"],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["click", "keyboard"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "bordered", "multiselectable"],
-  "settings": ["$theme-accordion-background-color", "$theme-accordion-border-width"],
-  "relatedComponents": ["process-list", "summary-box"],
-  "tokenOverrides": ["$theme-accordion-background-color"],
-  "tags": ["accordion", "multiselect", "expand", "multiple", "faq"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1024,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Keep the accordion JS — without it all sections must render open",
+      "2. Keep button+region pairing (aria-controls/aria-expanded) intact",
+      "3. Do not nest accordions more than one level deep"
+    ]
+  }
 }
 </script>
 </head>

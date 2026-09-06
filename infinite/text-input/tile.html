@@ -7,29 +7,128 @@
 <title>USWDS Text Input (Tile)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "text-input",
+    "uswdsClass": "usa-input--tile",
+    "section": "forms",
+    "variant": "tile",
+    "requiresJs": "no",
+    "interaction": [
+      "focus",
+      "input",
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "text-input",
+      "tile",
+      "large",
+      "touch"
+    ],
+    "description": "Text input styled as a tile for checkbox/radio-like behavior.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Large clickable inputs",
+      "Mobile-friendly forms",
+      "Touch-friendly selection"
+    ],
+    "avoidWhen": [
+      "Standard form fields",
+      "Dense form layouts"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-input--tile class to usa-input for tile-style inputs.",
+    "relatedComponents": [
+      "checkbox",
+      "radio-button",
+      "text-input"
+    ],
+    "variants": [
+      "default",
+      "tile",
+      "error",
+      "success",
+      "disabled"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "input.usa-input usa-input--tile"
+    ],
+    "editable": [
+      "Input label",
+      "Input value"
+    ],
+    "limitations": [
+      "Not standard for text input - more common with checkboxes/radios"
+    ]
+  },
   "file": "text-input/tile.html",
   "title": "Text Input (Tile)",
-  "uswdsComponentType": "text-input",
-  "uswdsClass": "usa-input--tile",
-  "description": "Text input styled as a tile for checkbox/radio-like behavior.",
-  "section": "forms",
-  "variant": "tile",
-  "useWhen": ["Large clickable inputs", "Mobile-friendly forms", "Touch-friendly selection"],
-  "avoidWhen": ["Standard form fields", "Dense form layouts"],
-  "agentPrompt": "Add usa-input--tile class to usa-input for tile-style inputs.",
-  "editableAreas": ["Input label", "Input value"],
-  "preserveElements": ["input.usa-input usa-input--tile"],
-  "knownLimitations": ["Not standard for text input - more common with checkboxes/radios"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["focus", "input", "click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "tile", "error", "success", "disabled"],
-  "settings": [],
-  "relatedComponents": ["checkbox", "radio-button", "text-input"],
-  "tokenOverrides": [],
-  "tags": ["text-input", "tile", "large", "touch"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Provides form context; place this input inside a form wrapper"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 720,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Fetch the form wrapper first (unless one already exists)",
+      "2. Pair this input with a label element via matching for/id attributes",
+      "3. Link error/hint messages with aria-describedby",
+      "4. Add inputmode/autocomplete attributes where appropriate"
+    ],
+    "compositionRecipes": [
+      "contact-form",
+      "error-handling-stack",
+      "login-flow"
+    ]
+  }
 }
 </script>
 </head>

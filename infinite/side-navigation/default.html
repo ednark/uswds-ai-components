@@ -10,54 +10,134 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "side-navigation",
+    "uswdsClass": "usa-sidenav",
+    "section": "navigation",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus",
+      "keyboard"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "sidenav",
+      "side-nav",
+      "navigation",
+      "sidebar",
+      "vertical",
+      "menu",
+      "hierarchical"
+    ],
+    "description": "Hierarchical vertical navigation to place at the side of a page.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Deep site hierarchies requiring side navigation",
+      "Content organized in categories and subcategories",
+      "Applications with multiple sections requiring persistent navigation",
+      "When primary navigation is already in header"
+    ],
+    "avoidWhen": [
+      "Simple sites with flat hierarchies",
+      "Mobile-first designs (side navs collapse poorly)",
+      "Single-level navigation (breadcrumb is simpler)"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-sidenav__sublist for nested navigation items. Update link text and hrefs. Add usa-current to active page link. Group related links in nested lists.",
+    "relatedComponents": [
+      "header",
+      "breadcrumb",
+      "in-page-navigation"
+    ],
+    "variants": [
+      "default",
+      "sub-list"
+    ],
+    "settings": [
+      "$theme-sidenav-border-radius"
+    ],
+    "tokenOverrides": [
+      "$theme-sidenav-border-radius",
+      "$theme-sidenav-link-color"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "nav.usa-sidenav with aria-label",
+      "ul.usa-sidenav__list for nav items",
+      "li.usa-sidenav__item for each item",
+      "a.usa-sidenav__link for links",
+      "a.usa-current for active item",
+      "span.usa-sidenav__category for group labels"
+    ],
+    "editable": [
+      "Nav link text and href URLs",
+      "usa-current class on active item",
+      "Nested list structure for sub-navigation",
+      "Group labels (use span.usa-sidenav__category)"
+    ],
+    "limitations": [
+      "Side navigation typically hidden on mobile",
+      "Deep nesting (>3 levels) creates UX problems",
+      "Active state styling requires usa-current class"
+    ]
+  },
   "file": "side-navigation/default.html",
   "title": "Side Navigation",
-  "uswdsComponentType": "side-navigation",
-  "uswdsClass": "usa-sidenav",
-  "description": "Hierarchical vertical navigation to place at the side of a page.",
-  "section": "navigation",
-  "variant": "default",
-  "useWhen": [
-    "Deep site hierarchies requiring side navigation",
-    "Content organized in categories and subcategories",
-    "Applications with multiple sections requiring persistent navigation",
-    "When primary navigation is already in header"
-  ],
-  "avoidWhen": [
-    "Simple sites with flat hierarchies",
-    "Mobile-first designs (side navs collapse poorly)",
-    "Single-level navigation (breadcrumb is simpler)"
-  ],
-  "agentPrompt": "Add usa-sidenav__sublist for nested navigation items. Update link text and hrefs. Add usa-current to active page link. Group related links in nested lists.",
-  "editableAreas": [
-    "Nav link text and href URLs",
-    "usa-current class on active item",
-    "Nested list structure for sub-navigation",
-    "Group labels (use span.usa-sidenav__category)"
-  ],
-  "preserveElements": [
-    "nav.usa-sidenav with aria-label",
-    "ul.usa-sidenav__list for nav items",
-    "li.usa-sidenav__item for each item",
-    "a.usa-sidenav__link for links",
-    "a.usa-current for active item",
-    "span.usa-sidenav__category for group labels"
-  ],
-  "knownLimitations": [
-    "Side navigation typically hidden on mobile",
-    "Deep nesting (>3 levels) creates UX problems",
-    "Active state styling requires usa-current class"
-  ],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "focus", "keyboard"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "sub-list"],
-  "settings": ["$theme-sidenav-border-radius"],
-  "relatedComponents": ["header", "breadcrumb", "in-page-navigation"],
-  "tokenOverrides": ["$theme-sidenav-border-radius", "$theme-sidenav-link-color"],
-  "tags": ["sidenav", "side-nav", "navigation", "sidebar", "vertical", "menu", "hierarchical"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1159,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place in a sidebar column next to main content",
+      "2. Highlight the current page item with aria-current='page' + usa-current class",
+      "3. Pair with in-page-navigation only when page is long enough to warrant both"
+    ],
+    "compositionRecipes": [
+      "navigation-hierarchy"
+    ]
+  }
 }
 </script>
 <style>

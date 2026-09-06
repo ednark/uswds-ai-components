@@ -10,54 +10,137 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "checkbox",
+    "uswdsClass": "usa-checkbox__input",
+    "section": "forms",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus",
+      "keyboard"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "checkbox",
+      "form",
+      "input",
+      "select",
+      "multi-select",
+      "check"
+    ],
+    "description": "Allows users to select one or more options from a list.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Users need to select multiple options from a list",
+      "Binary yes/no decisions for a single option",
+      "When all options should be visible at once",
+      "Grouping related selections"
+    ],
+    "avoidWhen": [
+      "Single selection only — use radio buttons instead",
+      "Long lists of more than 7-10 options — use a combo box",
+      "When space is extremely limited"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-checkbox__input--tile for tile style. Update for attribute to match input id. Group related checkboxes in fieldset/legend for proper labeling. Add checked attribute for pre-selected options.",
+    "relatedComponents": [
+      "radio-buttons",
+      "form",
+      "select"
+    ],
+    "variants": [
+      "default",
+      "tile"
+    ],
+    "settings": [
+      "$theme-checkbox-border-radius"
+    ],
+    "tokenOverrides": [
+      "$theme-checkbox-border-radius",
+      "$theme-input-state-border-width"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "fieldset/legend wrapper for checkbox groups",
+      "usa-checkbox__input class on input element",
+      "usa-checkbox__label wrapper around input + span",
+      "usa-checkbox__label-text for visible label text",
+      "input type='checkbox'"
+    ],
+    "editable": [
+      "Checkbox label text",
+      "input id and for attribute values (must match)",
+      "name attribute for form submission grouping",
+      "value attribute for form data",
+      "Checked state: add checked attribute"
+    ],
+    "limitations": [
+      "Always wrap checkbox groups in fieldset with legend for accessibility",
+      "id attributes must be unique per page",
+      "name attribute groups checkboxes for form submission"
+    ]
+  },
   "file": "checkbox/default.html",
   "title": "Checkbox",
-  "uswdsComponentType": "checkbox",
-  "uswdsClass": "usa-checkbox__input",
-  "description": "Allows users to select one or more options from a list.",
-  "section": "forms",
-  "variant": "default",
-  "useWhen": [
-    "Users need to select multiple options from a list",
-    "Binary yes/no decisions for a single option",
-    "When all options should be visible at once",
-    "Grouping related selections"
-  ],
-  "avoidWhen": [
-    "Single selection only — use radio buttons instead",
-    "Long lists of more than 7-10 options — use a combo box",
-    "When space is extremely limited"
-  ],
-  "agentPrompt": "Add usa-checkbox__input--tile for tile style. Update for attribute to match input id. Group related checkboxes in fieldset/legend for proper labeling. Add checked attribute for pre-selected options.",
-  "editableAreas": [
-    "Checkbox label text",
-    "input id and for attribute values (must match)",
-    "name attribute for form submission grouping",
-    "value attribute for form data",
-    "Checked state: add checked attribute"
-  ],
-  "preserveElements": [
-    "fieldset/legend wrapper for checkbox groups",
-    "usa-checkbox__input class on input element",
-    "usa-checkbox__label wrapper around input + span",
-    "usa-checkbox__label-text for visible label text",
-    "input type='checkbox'"
-  ],
-  "knownLimitations": [
-    "Always wrap checkbox groups in fieldset with legend for accessibility",
-    "id attributes must be unique per page",
-    "name attribute groups checkboxes for form submission"
-  ],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "focus", "keyboard"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "tile"],
-  "settings": ["$theme-checkbox-border-radius"],
-  "relatedComponents": ["radio-buttons", "form", "select"],
-  "tokenOverrides": ["$theme-checkbox-border-radius", "$theme-input-state-border-width"],
-  "tags": ["checkbox", "form", "input", "select", "multi-select", "check"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Provides form context; place checkboxes inside a form wrapper"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1258,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Fetch the form wrapper first",
+      "2. Use fieldset+legend when grouping related checkboxes",
+      "3. Keep each label associated via for/id"
+    ]
+  }
 }
 </script>
 <style>

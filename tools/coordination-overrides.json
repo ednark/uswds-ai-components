@@ -1,0 +1,553 @@
+{
+  "_comment": "Curated coordination metadata overrides. Keyed by component dir (applies to all variants) with optional per-variant refinements under 'variants'. Merged over generated defaults by tools/add-coordination.mjs.",
+  "_fieldShape": {
+    "prerequisiteComponents": [{ "name": "component-dir", "reason": "why" }],
+    "incompatibleWith": [{ "name": "component-dir", "reason": "why" }],
+    "compositionCost": { "costTier": "cheap|moderate|expensive", "estimatedTokens": 0, "renderingTimeMs": 0, "recommendedModel": "haiku|sonnet" },
+    "agentPromptSequence": ["1. ...", "2. ..."]
+  },
+  "component": {
+    "form": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "incompatibleWith": [
+          { "name": "navbar", "reason": "Nested forms are invalid HTML; never place a form inside a nav form" }
+        ],
+        "agentPromptSequence": [
+          "1. Use this form element as the root container for a group of inputs",
+          "2. Add one label+input pair per field (text-input, select, checkbox, etc.)",
+          "3. Add a submit button as the last child",
+          "4. Link validation messages to inputs with aria-describedby"
+        ]
+      }
+    },
+    "header": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "incompatibleWith": [
+          { "name": "modal", "reason": "Header already establishes page chrome; nested modals in header break focus order" }
+        ],
+        "agentPromptSequence": [
+          "1. Place header as the first element in body",
+          "2. Nest navigation (primary, secondary) inside header",
+          "3. Pair with banner above it when a required-agency banner is needed"
+        ]
+      }
+    },
+    "footer": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Place footer as the last element in body",
+          "2. Pair with identifier below it for official government branding",
+          "3. Keep footer nav links flat — no nested menus"
+        ]
+      }
+    },
+    "banner": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Place banner as the very first element in body, above header",
+          "2. Keep the expand/collapse JS intact — it is required for the official.gov domain message",
+          "3. Do not add content inside the banner beyond the standard copy"
+        ]
+      }
+    },
+    "identifier": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Place identifier directly below the footer",
+          "2. Keep the required agency links and logo slots intact"
+        ]
+      }
+    },
+    "button": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "incompatibleWith": [
+          { "name": "button-group", "reason": "Button groups override individual button event handlers; style buttons directly instead" }
+        ],
+        "variantRules": {
+          "note": "Color variants are mutually exclusive (pick one); size and state classes combine with any color variant",
+          "exclusiveGroups": [
+            ["default", "secondary", "accent-cool", "accent-warm", "base", "outline", "outline-inverse", "unstyled"]
+          ],
+          "combinable": ["big", "hover", "active", "focus"]
+        },
+        "agentPromptSequence": [
+          "1. Inside forms, set type='submit'; standalone buttons use type='button'",
+          "2. Use one primary button per view; other actions become secondary/outline",
+          "3. Place the button as the last interactive element of its form or section"
+        ]
+      }
+    },
+    "button-group": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "incompatibleWith": [
+          { "name": "button", "reason": "Do not nest individually-styled buttons; button-group manages its own segment styling" }
+        ]
+      }
+    },
+    "text-input": {
+      "coordination": {
+        "prerequisiteComponents": [
+          { "name": "form", "reason": "Provides form context; place this input inside a form wrapper" }
+        ],
+        "agentPromptSequence": [
+          "1. Fetch the form wrapper first (unless one already exists)",
+          "2. Pair this input with a label element via matching for/id attributes",
+          "3. Link error/hint messages with aria-describedby",
+          "4. Add inputmode/autocomplete attributes where appropriate"
+        ]
+      }
+    },
+    "select": {
+      "coordination": {
+        "prerequisiteComponents": [
+          { "name": "form", "reason": "Provides form context; place this select inside a form wrapper" }
+        ],
+        "agentPromptSequence": [
+          "1. Fetch the form wrapper first (unless one already exists)",
+          "2. Pair with a label via for/id",
+          "3. For more than 7 options, prefer combo-box over select",
+          "4. Keep the first option as a placeholder ('- Select -')"
+        ]
+      }
+    },
+    "combo-box": {
+      "coordination": {
+        "prerequisiteComponents": [
+          { "name": "form", "reason": "Provides form context; place this combo-box inside a form wrapper" }
+        ],
+        "agentPromptSequence": [
+          "1. Fetch the form wrapper first",
+          "2. Keep the underlying select element — JS enhances it, it must remain for no-JS fallback",
+          "3. Initialize after DOM ready (combo-box JS is required)"
+        ]
+      }
+    },
+    "date-picker": {
+      "coordination": {
+        "prerequisiteComponents": [
+          { "name": "form", "reason": "Provides form context; place this date input inside a form wrapper" }
+        ],
+        "agentPromptSequence": [
+          "1. Fetch the form wrapper first",
+          "2. Keep the input type='text' with date format hint — JS replaces it with the calendar",
+          "3. Do not swap to type='date'; the USWDS calendar provides the accessible behavior"
+        ]
+      }
+    },
+    "checkbox": {
+      "coordination": {
+        "prerequisiteComponents": [
+          { "name": "form", "reason": "Provides form context; place checkboxes inside a form wrapper" }
+        ],
+        "agentPromptSequence": [
+          "1. Fetch the form wrapper first",
+          "2. Use fieldset+legend when grouping related checkboxes",
+          "3. Keep each label associated via for/id"
+        ]
+      }
+    },
+    "radio-buttons": {
+      "coordination": {
+        "prerequisiteComponents": [
+          { "name": "form", "reason": "Provides form context; place radios inside a form wrapper" }
+        ],
+        "agentPromptSequence": [
+          "1. Fetch the form wrapper first",
+          "2. Always wrap a radio group in fieldset+legend",
+          "3. Give every radio in a group the same name and unique id"
+        ]
+      }
+    },
+    "file-input": {
+      "coordination": {
+        "prerequisiteComponents": [
+          { "name": "form", "reason": "Provides form context; place this input inside a form wrapper" }
+        ],
+        "compositionCost": {
+          "costTier": "moderate"
+        }
+      }
+    },
+    "character-count": {
+      "coordination": {
+        "prerequisiteComponents": [
+          { "name": "form", "reason": "Provides form context; place this input inside a form wrapper" }
+        ],
+        "agentPromptSequence": [
+          "1. Fetch the form wrapper first",
+          "2. Keep data-maxlength and the aria-live status region — both are required for announcements",
+          "3. Wrap the input and the message span in the character-count container"
+        ]
+      }
+    },
+    "range-slider": {
+      "coordination": {
+        "prerequisiteComponents": [
+          { "name": "form", "reason": "Provides form context; place this input inside a form wrapper" }
+        ]
+      }
+    },
+    "validation": {
+      "coordination": {
+        "prerequisiteComponents": [
+          { "name": "form", "reason": "Validation summary belongs to a form; reference inputs by id" }
+        ],
+        "agentPromptSequence": [
+          "1. Place the validation summary above the form or at the top of the form",
+          "2. Link each error item to the offending input via anchor href='#input-id'",
+          "3. Move focus to the summary when validation fails (JS required)"
+        ]
+      }
+    },
+    "alert": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Place alerts above the content they describe",
+          "2. For page-level status, pair with role='status' or role='alert' (keep the JS behavior)",
+          "3. Use site-alert for government-wide banners instead"
+        ]
+      }
+    },
+    "site-alert": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Place site-alert above the header, below banner",
+          "2. Keep it dismissible only if persistence is handled (slim variant is static)"
+        ]
+      }
+    },
+    "summary-box": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Use for key content the user must not miss (e.g. important callouts)",
+          "2. For error feedback, use validation + alert instead"
+        ]
+      }
+    },
+    "accordion": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Keep the accordion JS — without it all sections must render open",
+          "2. Keep button+region pairing (aria-controls/aria-expanded) intact",
+          "3. Do not nest accordions more than one level deep"
+        ]
+      }
+    },
+    "modal": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "incompatibleWith": [
+          { "name": "header", "reason": "Do not place modals inside page chrome components; modal belongs at body level" },
+          { "name": "form", "reason": "A form wrapper inside a modal is fine, but the modal itself must not be nested inside another form" }
+        ],
+        "agentPromptSequence": [
+          "1. Place the modal wrapper at the end of body",
+          "2. Keep open/close JS and focus trap intact",
+          "3. Trigger buttons reference the modal id via data attributes"
+        ]
+      }
+    },
+    "tooltip": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Attach tooltips to interactive elements only (buttons, links)",
+          "2. Keep aria-describedby wiring — tooltip text must reach screen readers",
+          "3. Never put critical information solely in a tooltip"
+        ]
+      }
+    },
+    "table": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Wrap the table in a scrollable container for small screens (keep .usa-table-container--scrollable)",
+          "2. Provide a caption element — required for accessibility",
+          "3. Use scope='col'/'row' on headers; for sortable tables keep the JS"
+        ]
+      }
+    },
+    "card": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Cards work in grid layouts — pair with layout utilities for columns",
+          "2. Keep the header/body/media block structure; do not flatten",
+          "3. One primary action per card; the whole card may link if content is single-purpose"
+        ]
+      }
+    },
+    "breadcrumb": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Place below header, above page h1",
+          "2. Keep the ordered-list structure and aria-label='Breadcrumb'",
+          "3. Last item is the current page — keep aria-current='page'"
+        ]
+      }
+    },
+    "side-navigation": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Place in a sidebar column next to main content",
+          "2. Highlight the current page item with aria-current='page' + usa-current class",
+          "3. Pair with in-page-navigation only when page is long enough to warrant both"
+        ]
+      }
+    },
+    "in-page-navigation": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Links must match heading ids on the page — sync hrefs with actual h2/h3 ids",
+          "2. Keep usa-current highlighting in sync on scroll (JS required)"
+        ]
+      }
+    },
+    "pagination": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Place below the table or list it paginates",
+          "2. Keep aria-current='page' on the active page",
+          "3. Preserve prev/next aria-labels"
+        ]
+      }
+    },
+    "search": {
+      "coordination": {
+        "prerequisiteComponents": [
+          { "name": "form", "reason": "Search is a form submission; wrap in a form with role='search'" }
+        ],
+        "agentPromptSequence": [
+          "1. Wrap in form role='search' with action pointing to the search endpoint",
+          "2. Keep the visually-hidden label for screen readers",
+          "3. In header context, use the small variant"
+        ]
+      }
+    },
+    "step-indicator": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Place above multi-step form sections",
+          "2. Mark completed/current steps with status classes; keep aria attributes",
+          "3. Pair each step with its own form section or page"
+        ]
+      }
+    },
+    "process-list": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Use for sequential guidance; keep the ordered-list semantics",
+          "2. Mark current step with usa-process-list__item--current"
+        ]
+      }
+    },
+    "collection": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Use for media-rich item lists (events, articles)",
+          "2. Keep bookmark/media-header structure; one primary link per item"
+        ]
+      }
+    },
+    "language-selector": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Place in header (dropdown) or footer (list) — never both",
+          "2. Keep hreflang and lang attributes on language links"
+        ]
+      }
+    },
+    "skip-nav": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Place as the first focusable element in body",
+          "2. Target id must exist on main content region",
+          "3. Keep it visually hidden until focused"
+        ]
+      }
+    },
+    "tag": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Tags label content; do not use as interactive buttons",
+          "2. For removable tags, pair with an accessible remove button"
+        ]
+      }
+    },
+    "icon-list": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Keep icon + text pairing; icons need aria-hidden='true' when decorative",
+          "2. Pair with USWDS icon sprite or inline SVG"
+        ]
+      }
+    },
+    "link": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. For external links, add the external-link icon and indicate in text or aria-label",
+          "2. Use distinct links/variants — never style links as buttons without button behavior"
+        ]
+      }
+    },
+    "list": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Keep semantic ul/ol structure",
+          "2. For check/cross lists keep the icon spans aria-hidden"
+        ]
+      }
+    },
+    "media-block": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Keep the media+body two-column structure; stack on mobile via provided classes"
+        ]
+      }
+    },
+    "logo": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Place in header; link to homepage with aria-label",
+          "2. Keep img alt text meaningful"
+        ]
+      }
+    },
+    "navbar": {
+      "coordination": {
+        "prerequisiteComponents": [
+          { "name": "header", "reason": "Navbar extends the header component; nest inside header" }
+        ],
+        "agentPromptSequence": [
+          "1. Fetch header first; navbar lives inside it",
+          "2. Keep the mobile menu toggle JS intact"
+        ]
+      }
+    },
+    "overlay": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "incompatibleWith": [
+          { "name": "modal", "reason": "Overlay is a low-level backdrop; use modal for interactive dialogs" }
+        ]
+      }
+    },
+    "prose": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Wrap long-form content; keep heading hierarchy h2→h3",
+          "2. Pair with in-page-navigation for long documents"
+        ]
+      }
+    },
+    "typography": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Keep font-family tokens (Source Sans 3 / Public Sans / Merriweather per USWDS roles)",
+          "2. Line length: cap body text near 68ch for readability"
+        ]
+      }
+    },
+    "layout-docs": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Use grid utilities as the layout root",
+          "2. Maintain mobile-first stacking; use tablet: / desktop: prefixes for breakpoints"
+        ]
+      }
+    },
+    "icon": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "agentPromptSequence": [
+          "1. Decorative icons: aria-hidden='true'; meaningful icons need accessible text",
+          "2. Prefer the USWDS sprite reference or inline SVG; keep size via em units"
+        ]
+      }
+    },
+    "data-visualizations": {
+      "coordination": {
+        "prerequisiteComponents": [],
+        "compositionCost": {
+          "costTier": "expensive"
+        },
+        "agentPromptSequence": [
+          "1. Charts require USWDS charts JS — keep the init call",
+          "2. Provide a data table fallback or aria-label summary for screen readers",
+          "3. Do not hardcode colors; use USWDS data-viz tokens"
+        ]
+      }
+    }
+  },
+  "variants": {
+    "header/extended.html": {
+      "coordination": {
+        "compositionCost": { "costTier": "moderate" }
+      }
+    },
+    "header/extended-mega.html": {
+      "coordination": {
+        "compositionCost": { "costTier": "moderate" }
+      }
+    },
+    "table/scrollable.html": {
+      "coordination": {
+        "compositionCost": { "costTier": "moderate" }
+      }
+    },
+    "table/stacked.html": {
+      "coordination": {
+        "compositionCost": { "costTier": "moderate" }
+      }
+    },
+    "accordion/multiselectable.html": {
+      "coordination": {
+        "compositionCost": { "costTier": "moderate" }
+      }
+    },
+    "text-input/error.html": {
+      "coordination": {
+        "agentPromptSequence": [
+          "1. Fetch the form wrapper first (unless one already exists)",
+          "2. Pair with a label via for/id",
+          "3. Link the error message span with aria-describedby and set aria-invalid='true'",
+          "4. Add a matching entry to the form's validation summary"
+        ]
+      }
+    },
+    "tooltip/default.html": {
+      "coordination": {
+        "compositionCost": { "costTier": "moderate" }
+      }
+    }
+  }
+}

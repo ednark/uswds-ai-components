@@ -7,29 +7,123 @@
 <title>USWDS Footer (Collapsible)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "footer",
+    "uswdsClass": "usa-footer__primary-content--collapsible",
+    "section": "layout",
+    "variant": "collapsible",
+    "requiresJs": "optional",
+    "interaction": [
+      "click",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "footer",
+      "collapsible",
+      "mobile",
+      "responsive",
+      "big"
+    ],
+    "description": "Footer with collapsible primary content sections for mobile-friendly navigation.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Big footer with many links",
+      "Mobile-responsive footers",
+      "Government sites with extensive nav"
+    ],
+    "avoidWhen": [
+      "Simple footers",
+      "Slim footer variants"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-footer__primary-content--collapsible class to each section in usa-footer--big. Collapses on mobile.",
+    "relatedComponents": [
+      "header",
+      "identifier",
+      "link"
+    ],
+    "variants": [
+      "default",
+      "slim",
+      "big",
+      "collapsible"
+    ],
+    "settings": [
+      "$theme-footer-font-family"
+    ],
+    "tokenOverrides": [
+      "$theme-footer-font-family"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "section.usa-footer__primary-content--collapsible",
+      "h3.usa-footer__primary-link",
+      "ul.usa-list--unstyled"
+    ],
+    "editable": [
+      "Section headings",
+      "Link lists within each section"
+    ],
+    "limitations": [
+      "JavaScript may be needed for toggle on mobile"
+    ]
+  },
   "file": "footer/collapsible.html",
   "title": "Footer (Collapsible)",
-  "uswdsComponentType": "footer",
-  "uswdsClass": "usa-footer__primary-content--collapsible",
-  "description": "Footer with collapsible primary content sections for mobile-friendly navigation.",
-  "section": "layout",
-  "variant": "collapsible",
-  "useWhen": ["Big footer with many links", "Mobile-responsive footers", "Government sites with extensive nav"],
-  "avoidWhen": ["Simple footers", "Slim footer variants"],
-  "agentPrompt": "Add usa-footer__primary-content--collapsible class to each section in usa-footer--big. Collapses on mobile.",
-  "editableAreas": ["Section headings", "Link lists within each section"],
-  "preserveElements": ["section.usa-footer__primary-content--collapsible", "h3.usa-footer__primary-link", "ul.usa-list--unstyled"],
-  "knownLimitations": ["JavaScript may be needed for toggle on mobile"],
-  "tier": "curated",
-  "requiresJs": "optional",
-  "interaction": ["click", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "slim", "big", "collapsible"],
-  "settings": ["$theme-footer-font-family"],
-  "relatedComponents": ["header", "identifier", "link"],
-  "tokenOverrides": ["$theme-footer-font-family"],
-  "tags": ["footer", "collapsible", "mobile", "responsive", "big"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1021,
+      "renderingTimeMs": 35,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place footer as the last element in body",
+      "2. Pair with identifier below it for official government branding",
+      "3. Keep footer nav links flat — no nested menus"
+    ],
+    "compositionRecipes": [
+      "navigation-hierarchy"
+    ]
+  }
 }
 </script>
 </head>

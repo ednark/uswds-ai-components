@@ -7,29 +7,125 @@
 <title>USWDS Search (Small)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "search",
+    "uswdsClass": "usa-search--small",
+    "section": "forms",
+    "variant": "small",
+    "requiresJs": "no",
+    "interaction": [
+      "focus",
+      "input",
+      "submit"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "search",
+      "small",
+      "compact",
+      "inline"
+    ],
+    "description": "Compact search input for inline or sidebar use.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Header search",
+      "Sidebar search",
+      "Compact interfaces"
+    ],
+    "avoidWhen": [
+      "Primary search on homepage",
+      "When search is main feature"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-search--small class to usa-search. Compact inline version.",
+    "relatedComponents": [
+      "text-input",
+      "button"
+    ],
+    "variants": [
+      "default",
+      "big",
+      "small"
+    ],
+    "settings": [
+      "$theme-search-input-width"
+    ],
+    "tokenOverrides": [
+      "$theme-search-input-width"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "form.usa-search",
+      "input.usa-search__input",
+      "button.usa-search__submit"
+    ],
+    "editable": [
+      "Search placeholder",
+      "Submit button (icon only)"
+    ],
+    "limitations": [
+      "Less prominent, may be missed by users"
+    ]
+  },
   "file": "search/small.html",
   "title": "Search (Small)",
-  "uswdsComponentType": "search",
-  "uswdsClass": "usa-search--small",
-  "description": "Compact search input for inline or sidebar use.",
-  "section": "forms",
-  "variant": "small",
-  "useWhen": ["Header search", "Sidebar search", "Compact interfaces"],
-  "avoidWhen": ["Primary search on homepage", "When search is main feature"],
-  "agentPrompt": "Add usa-search--small class to usa-search. Compact inline version.",
-  "editableAreas": ["Search placeholder", "Submit button (icon only)"],
-  "preserveElements": ["form.usa-search", "input.usa-search__input", "button.usa-search__submit"],
-  "knownLimitations": ["Less prominent, may be missed by users"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["focus", "input", "submit"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "big", "small"],
-  "settings": ["$theme-search-input-width"],
-  "relatedComponents": ["text-input", "button"],
-  "tokenOverrides": ["$theme-search-input-width"],
-  "tags": ["search", "small", "compact", "inline"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Search is a form submission; wrap in a form with role='search'"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 736,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Wrap in form role='search' with action pointing to the search endpoint",
+      "2. Keep the visually-hidden label for screen readers",
+      "3. In header context, use the small variant"
+    ]
+  }
 }
 </script>
 </head>

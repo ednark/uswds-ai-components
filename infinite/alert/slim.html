@@ -7,29 +7,123 @@
 <title>USWDS Alert (Slim)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "alert",
+    "uswdsClass": "usa-alert",
+    "section": "feedback",
+    "variant": "slim",
+    "requiresJs": "no",
+    "interaction": [
+      "passive"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": false,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "alert",
+      "slim",
+      "compact",
+      "minimal"
+    ],
+    "description": "Slim alert variant with reduced vertical height for space-constrained interfaces.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Space-constrained layouts",
+      "Multiple alerts stacking",
+      "Subtle notifications"
+    ],
+    "avoidWhen": [
+      "Important messages needing emphasis",
+      "Mobile interfaces where slim alerts might be missed"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-alert--slim class. Use with any alert variant: usa-alert--info--slim, usa-alert--success--slim, etc.",
+    "relatedComponents": [
+      "site-alert",
+      "banner",
+      "validation"
+    ],
+    "variants": [
+      "info",
+      "success",
+      "warning",
+      "error",
+      "slim"
+    ],
+    "settings": [
+      "$theme-alert-status-color"
+    ],
+    "tokenOverrides": [
+      "$theme-alert-status-color"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "usa-alert wrapper",
+      "usa-alert--slim class",
+      "usa-alert__body",
+      "usa-alert__text"
+    ],
+    "editable": [
+      "Alert text content"
+    ],
+    "limitations": [
+      "Reduced visual impact"
+    ]
+  },
   "file": "alert/slim.html",
   "title": "Alert (Slim)",
-  "uswdsComponentType": "alert",
-  "uswdsClass": "usa-alert",
-  "description": "Slim alert variant with reduced vertical height for space-constrained interfaces.",
-  "section": "feedback",
-  "variant": "slim",
-  "useWhen": ["Space-constrained layouts", "Multiple alerts stacking", "Subtle notifications"],
-  "avoidWhen": ["Important messages needing emphasis", "Mobile interfaces where slim alerts might be missed"],
-  "agentPrompt": "Add usa-alert--slim class. Use with any alert variant: usa-alert--info--slim, usa-alert--success--slim, etc.",
-  "editableAreas": ["Alert text content"],
-  "preserveElements": ["usa-alert wrapper", "usa-alert--slim class", "usa-alert__body", "usa-alert__text"],
-  "knownLimitations": ["Reduced visual impact"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive"],
-  "a11y": {"wcag21AA": true, "keyboardNav": false, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["info", "success", "warning", "error", "slim"],
-  "settings": ["$theme-alert-status-color"],
-  "relatedComponents": ["site-alert", "banner", "validation"],
-  "tokenOverrides": ["$theme-alert-status-color"],
-  "tags": ["alert", "slim", "compact", "minimal"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 700,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place alerts above the content they describe",
+      "2. For page-level status, pair with role='status' or role='alert' (keep the JS behavior)",
+      "3. Use site-alert for government-wide banners instead"
+    ],
+    "compositionRecipes": [
+      "error-handling-stack",
+      "login-flow"
+    ]
+  }
 }
 </script>
 </head>

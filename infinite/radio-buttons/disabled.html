@@ -7,29 +7,116 @@
 <title>USWDS Radio Button (Disabled)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "radio-buttons",
+    "uswdsClass": "usa-radio__input--disabled",
+    "section": "forms",
+    "variant": "disabled",
+    "requiresJs": "no",
+    "interaction": [
+      "passive"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": false,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "radio",
+      "disabled",
+      "readonly"
+    ],
+    "description": "Radio button in disabled state.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Conditional selections",
+      "Pre-selected read-only options",
+      "Form steps"
+    ],
+    "avoidWhen": [
+      "Active user selection"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add disabled attribute to radio input.",
+    "relatedComponents": [
+      "radio-buttons"
+    ],
+    "variants": [
+      "default",
+      "tile",
+      "error",
+      "success",
+      "disabled"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "input.usa-radio__input[disabled]",
+      "label.usa-radio__label"
+    ],
+    "editable": [
+      "Label only (radio not editable)"
+    ],
+    "limitations": [
+      "Not focusable by keyboard"
+    ]
+  },
   "file": "radio-buttons/disabled.html",
   "title": "Radio Button (Disabled)",
-  "uswdsComponentType": "radio-buttons",
-  "uswdsClass": "usa-radio__input--disabled",
-  "description": "Radio button in disabled state.",
-  "section": "forms",
-  "variant": "disabled",
-  "useWhen": ["Conditional selections", "Pre-selected read-only options", "Form steps"],
-  "avoidWhen": ["Active user selection"],
-  "agentPrompt": "Add disabled attribute to radio input.",
-  "editableAreas": ["Label only (radio not editable)"],
-  "preserveElements": ["input.usa-radio__input[disabled]", "label.usa-radio__label"],
-  "knownLimitations": ["Not focusable by keyboard"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive"],
-  "a11y": {"wcag21AA": true, "keyboardNav": false, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "tile", "error", "success", "disabled"],
-  "settings": [],
-  "relatedComponents": ["radio-buttons"],
-  "tokenOverrides": [],
-  "tags": ["radio", "disabled", "readonly"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Provides form context; place radios inside a form wrapper"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 690,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Fetch the form wrapper first",
+      "2. Always wrap a radio group in fieldset+legend",
+      "3. Give every radio in a group the same name and unique id"
+    ]
+  }
 }
 </script>
 </head>

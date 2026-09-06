@@ -10,53 +10,139 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "validation",
+    "uswdsClass": "usa-form-error-message",
+    "section": "forms",
+    "variant": "default",
+    "requiresJs": "optional",
+    "interaction": [
+      "input",
+      "submit",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "validation",
+      "error",
+      "form",
+      "invalid",
+      "message",
+      "feedback",
+      "required"
+    ],
+    "description": "Provides inline error feedback when users submit invalid form data.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Form fields requiring validation",
+      "When users submit incorrect or incomplete data",
+      "Required field indicators",
+      "Real-time or post-submission error display"
+    ],
+    "avoidWhen": [
+      "Before user has interacted with field (show on submit, not on load)",
+      "Non-form content",
+      "When errors can be prevented client-side"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add role='alert' to error message for screen reader announcement. Set aria-invalid='true' on invalid inputs. Use usa-form-error-message for error text. Use usa-form-group--error on the parent group.",
+    "relatedComponents": [
+      "form",
+      "text-input",
+      "alert"
+    ],
+    "variants": [
+      "default",
+      "alert"
+    ],
+    "settings": [
+      "$theme-input-error-border-color"
+    ],
+    "tokenOverrides": [
+      "$theme-input-error-border-color",
+      "$theme-input-error-message-color"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-form-group--error on parent group",
+      "span.usa-error-message with role='alert'",
+      "aria-invalid='true' on invalid input",
+      "span.usa-label--required or * for required",
+      "aria-describedby linking input to error"
+    ],
+    "editable": [
+      "Error message text",
+      "Input that triggered the error",
+      "Field label text",
+      "Required indicator text"
+    ],
+    "limitations": [
+      "JavaScript typically needed to show/hide errors",
+      "Errors should be announced via role='alert'",
+      "Invalid state should persist until error is corrected"
+    ]
+  },
   "file": "validation/default.html",
   "title": "Form Validation",
-  "uswdsComponentType": "validation",
-  "uswdsClass": "usa-form-error-message",
-  "description": "Provides inline error feedback when users submit invalid form data.",
-  "section": "forms",
-  "variant": "default",
-  "useWhen": [
-    "Form fields requiring validation",
-    "When users submit incorrect or incomplete data",
-    "Required field indicators",
-    "Real-time or post-submission error display"
-  ],
-  "avoidWhen": [
-    "Before user has interacted with field (show on submit, not on load)",
-    "Non-form content",
-    "When errors can be prevented client-side"
-  ],
-  "agentPrompt": "Add role='alert' to error message for screen reader announcement. Set aria-invalid='true' on invalid inputs. Use usa-form-error-message for error text. Use usa-form-group--error on the parent group.",
-  "editableAreas": [
-    "Error message text",
-    "Input that triggered the error",
-    "Field label text",
-    "Required indicator text"
-  ],
-  "preserveElements": [
-    "div.usa-form-group--error on parent group",
-    "span.usa-error-message with role='alert'",
-    "aria-invalid='true' on invalid input",
-    "span.usa-label--required or * for required",
-    "aria-describedby linking input to error"
-  ],
-  "knownLimitations": [
-    "JavaScript typically needed to show/hide errors",
-    "Errors should be announced via role='alert'",
-    "Invalid state should persist until error is corrected"
-  ],
-  "tier": "curated",
-  "requiresJs": "optional",
-  "interaction": ["input", "submit", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "alert"],
-  "settings": ["$theme-input-error-border-color"],
-  "relatedComponents": ["form", "text-input", "alert"],
-  "tokenOverrides": ["$theme-input-error-border-color", "$theme-input-error-message-color"],
-  "tags": ["validation", "error", "form", "invalid", "message", "feedback", "required"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Validation summary belongs to a form; reference inputs by id"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1216,
+      "renderingTimeMs": 35,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place the validation summary above the form or at the top of the form",
+      "2. Link each error item to the offending input via anchor href='#input-id'",
+      "3. Move focus to the summary when validation fails (JS required)"
+    ],
+    "compositionRecipes": [
+      "contact-form",
+      "error-handling-stack"
+    ]
+  }
 }
 </script>
 <style>

@@ -10,53 +10,129 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "icon-list",
+    "uswdsClass": "usa-icon-list",
+    "section": "navigation",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "passive",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": false,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": false
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "icon-list",
+      "icon",
+      "list",
+      "checklist",
+      "features",
+      "benefits",
+      "icons"
+    ],
+    "description": "Reinforces meaning and visibility of individual list items with a leading icon.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Lists where icons reinforce meaning",
+      "Feature or benefit lists",
+      "Checklists or task lists",
+      "When visual scanning aids understanding"
+    ],
+    "avoidWhen": [
+      "Simple text-only lists",
+      "When icons add no semantic value",
+      "Densely packed content"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Update icon names in the href attributes (#check, #warning, etc.). Add usa-icon-list--checklist for checklist style. Add usa-icon-list--icon-lg for larger icons. Update list item content.",
+    "relatedComponents": [
+      "list",
+      "link",
+      "icon"
+    ],
+    "variants": [
+      "default",
+      "usa-icon-list--checklist",
+      "usa-icon-list--icon-lg"
+    ],
+    "settings": [
+      "$theme-icon-list-font-family"
+    ],
+    "tokenOverrides": [
+      "$theme-icon-list-font-family",
+      "$theme-icon-list-icon-size"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "ul.usa-icon-list",
+      "li.usa-icon-list__item",
+      "div.usa-icon-list__icon for icon container",
+      "svg.usa-icon for the icon itself",
+      "div.usa-icon-list__content for text"
+    ],
+    "editable": [
+      "Icon name in href attribute (after #)",
+      "List item text content",
+      "Icon size variant: default, lg",
+      "Style variant: default, checklist"
+    ],
+    "limitations": [
+      "Icons require USWDS sprite file",
+      "Icons should reinforce, not replace, text meaning",
+      "Checklist variant has specific styling"
+    ]
+  },
   "file": "icon-list/default.html",
   "title": "Icon List",
-  "uswdsComponentType": "icon-list",
-  "uswdsClass": "usa-icon-list",
-  "description": "Reinforces meaning and visibility of individual list items with a leading icon.",
-  "section": "navigation",
-  "variant": "default",
-  "useWhen": [
-    "Lists where icons reinforce meaning",
-    "Feature or benefit lists",
-    "Checklists or task lists",
-    "When visual scanning aids understanding"
-  ],
-  "avoidWhen": [
-    "Simple text-only lists",
-    "When icons add no semantic value",
-    "Densely packed content"
-  ],
-  "agentPrompt": "Update icon names in the href attributes (#check, #warning, etc.). Add usa-icon-list--checklist for checklist style. Add usa-icon-list--icon-lg for larger icons. Update list item content.",
-  "editableAreas": [
-    "Icon name in href attribute (after #)",
-    "List item text content",
-    "Icon size variant: default, lg",
-    "Style variant: default, checklist"
-  ],
-  "preserveElements": [
-    "ul.usa-icon-list",
-    "li.usa-icon-list__item",
-    "div.usa-icon-list__icon for icon container",
-    "svg.usa-icon for the icon itself",
-    "div.usa-icon-list__content for text"
-  ],
-  "knownLimitations": [
-    "Icons require USWDS sprite file",
-    "Icons should reinforce, not replace, text meaning",
-    "Checklist variant has specific styling"
-  ],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": false, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": false},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "usa-icon-list--checklist", "usa-icon-list--icon-lg"],
-  "settings": ["$theme-icon-list-font-family"],
-  "relatedComponents": ["list", "link", "icon"],
-  "tokenOverrides": ["$theme-icon-list-font-family", "$theme-icon-list-icon-size"],
-  "tags": ["icon-list", "icon", "list", "checklist", "features", "benefits", "icons"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1163,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Keep icon + text pairing; icons need aria-hidden='true' when decorative",
+      "2. Pair with USWDS icon sprite or inline SVG"
+    ]
+  }
 }
 </script>
 <style>

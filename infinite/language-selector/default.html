@@ -10,52 +10,129 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "language-selector",
+    "uswdsClass": "usa-language",
+    "section": "navigation",
+    "variant": "default",
+    "requiresJs": "required",
+    "interaction": [
+      "click",
+      "focus",
+      "keyboard"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA",
+      "NIST Guidelines"
+    ],
+    "tier": "curated",
+    "tags": [
+      "language",
+      "translation",
+      "multilingual",
+      "selector",
+      "international",
+      "i18n",
+      "locale"
+    ],
+    "description": "Allows users to find and access content in their preferred language.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Multilingual government websites",
+      "Content available in multiple languages",
+      "When language selection is a primary navigation feature",
+      "Sites serving non-English speaking audiences"
+    ],
+    "avoidWhen": [
+      "Single-language sites",
+      "When all content is not available in all languages",
+      "Mobile interfaces where dropdown is cumbersome"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Update language names and hrefs for actual translations. Use ISO 639-1 language codes. Add appropriate hreflang attributes. Position in header for visibility.",
+    "relatedComponents": [
+      "header",
+      "link",
+      "select"
+    ],
+    "variants": [
+      "default",
+      "expanded"
+    ],
+    "settings": [
+      "$theme-language-selector-border-radius"
+    ],
+    "tokenOverrides": [
+      "$theme-language-selector-border-radius",
+      "$theme-language-selector-background-color"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-language-container",
+      "select.usa-language__select or links",
+      "aria-label for selector purpose",
+      "usa-language__link for link-based selector"
+    ],
+    "editable": [
+      "Language names and labels",
+      "href URLs for translation pages",
+      "hreflang attribute values",
+      "Current language indicator"
+    ],
+    "limitations": [
+      "JavaScript required for enhanced dropdown behavior",
+      "All translations should link to equivalent content",
+      "hreflang helps search engines understand translations"
+    ]
+  },
   "file": "language-selector/default.html",
   "title": "Language Selector",
-  "uswdsComponentType": "language-selector",
-  "uswdsClass": "usa-language",
-  "description": "Allows users to find and access content in their preferred language.",
-  "section": "navigation",
-  "variant": "default",
-  "useWhen": [
-    "Multilingual government websites",
-    "Content available in multiple languages",
-    "When language selection is a primary navigation feature",
-    "Sites serving non-English speaking audiences"
-  ],
-  "avoidWhen": [
-    "Single-language sites",
-    "When all content is not available in all languages",
-    "Mobile interfaces where dropdown is cumbersome"
-  ],
-  "agentPrompt": "Update language names and hrefs for actual translations. Use ISO 639-1 language codes. Add appropriate hreflang attributes. Position in header for visibility.",
-  "editableAreas": [
-    "Language names and labels",
-    "href URLs for translation pages",
-    "hreflang attribute values",
-    "Current language indicator"
-  ],
-  "preserveElements": [
-    "div.usa-language-container",
-    "select.usa-language__select or links",
-    "aria-label for selector purpose",
-    "usa-language__link for link-based selector"
-  ],
-  "knownLimitations": [
-    "JavaScript required for enhanced dropdown behavior",
-    "All translations should link to equivalent content",
-    "hreflang helps search engines understand translations"
-  ],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["click", "focus", "keyboard"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA", "NIST Guidelines"],
-  "variants": ["default", "expanded"],
-  "settings": ["$theme-language-selector-border-radius"],
-  "relatedComponents": ["header", "link", "select"],
-  "tokenOverrides": ["$theme-language-selector-border-radius", "$theme-language-selector-background-color"],
-  "tags": ["language", "translation", "multilingual", "selector", "international", "i18n", "locale"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1077,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place in header (dropdown) or footer (list) — never both",
+      "2. Keep hreflang and lang attributes on language links"
+    ]
+  }
 }
 </script>
 <style>

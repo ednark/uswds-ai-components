@@ -7,29 +7,151 @@
 <title>USWDS Button (Unstyled)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "button",
+    "uswdsClass": "usa-button usa-button--unstyled",
+    "section": "utilities",
+    "variant": "unstyled",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus",
+      "hover"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "button",
+      "unstyled",
+      "link",
+      "text",
+      "minimal"
+    ],
+    "description": "Button with no visual styling, appearing like a text link.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "none",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Less prominent actions",
+      "Inline text actions",
+      "When button needs to blend with link styling"
+    ],
+    "avoidWhen": [
+      "Primary CTAs",
+      "When button needs to be visually distinct"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Use usa-button--unstyled class. Same structure as default button.",
+    "relatedComponents": [
+      "button-group",
+      "link"
+    ],
+    "variants": [
+      "default",
+      "secondary",
+      "accent-cool",
+      "accent-warm",
+      "base",
+      "outline",
+      "outline-inverse",
+      "big",
+      "unstyled"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "usa-button base class",
+      "usa-button--unstyled variant",
+      "type attribute"
+    ],
+    "editable": [
+      "Button label text",
+      "type attribute"
+    ],
+    "limitations": [
+      "Minimal visual distinction from links"
+    ]
+  },
   "file": "button/unstyled.html",
   "title": "Button (Unstyled)",
-  "uswdsComponentType": "button",
-  "uswdsClass": "usa-button usa-button--unstyled",
-  "description": "Button with no visual styling, appearing like a text link.",
-  "section": "utilities",
-  "variant": "unstyled",
-  "useWhen": ["Less prominent actions", "Inline text actions", "When button needs to blend with link styling"],
-  "avoidWhen": ["Primary CTAs", "When button needs to be visually distinct"],
-  "agentPrompt": "Use usa-button--unstyled class. Same structure as default button.",
-  "editableAreas": ["Button label text", "type attribute"],
-  "preserveElements": ["usa-button base class", "usa-button--unstyled variant", "type attribute"],
-  "knownLimitations": ["Minimal visual distinction from links"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "focus", "hover"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "secondary", "accent-cool", "accent-warm", "base", "outline", "outline-inverse", "big", "unstyled"],
-  "settings": [],
-  "relatedComponents": ["button-group", "link"],
-  "tokenOverrides": [],
-  "tags": ["button", "unstyled", "link", "text", "minimal"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [
+      {
+        "name": "button-group",
+        "reason": "Button groups override individual button event handlers; style buttons directly instead"
+      }
+    ],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 732,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "variantRules": {
+      "note": "Color variants are mutually exclusive (pick one); size and state classes combine with any color variant",
+      "exclusiveGroups": [
+        [
+          "default",
+          "secondary",
+          "accent-cool",
+          "accent-warm",
+          "base",
+          "outline",
+          "outline-inverse",
+          "unstyled"
+        ]
+      ],
+      "combinable": [
+        "big",
+        "hover",
+        "active",
+        "focus"
+      ]
+    },
+    "agentPromptSequence": [
+      "1. Inside forms, set type='submit'; standalone buttons use type='button'",
+      "2. Use one primary button per view; other actions become secondary/outline",
+      "3. Place the button as the last interactive element of its form or section"
+    ],
+    "compositionRecipes": [
+      "contact-form",
+      "login-flow"
+    ]
+  }
 }
 </script>
 </head>

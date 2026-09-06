@@ -7,29 +7,128 @@
 <title>USWDS Modal (Large)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "modal",
+    "uswdsClass": "usa-modal usa-modal--lg",
+    "section": "overlays",
+    "variant": "lg",
+    "requiresJs": "required",
+    "interaction": [
+      "click",
+      "focus",
+      "keyboard"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "modal",
+      "dialog",
+      "lg",
+      "large"
+    ],
+    "description": "Large modal dialog for complex content.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Complex forms in modal",
+      "Detailed content requiring more space",
+      "Multi-step workflows"
+    ],
+    "avoidWhen": [
+      "Simple confirmations",
+      "Mobile devices with limited space"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-modal--lg class to usa-modal for larger dialog.",
+    "relatedComponents": [
+      "alert",
+      "button"
+    ],
+    "variants": [
+      "default",
+      "lg"
+    ],
+    "settings": [
+      "$theme-modal-lg-max-width"
+    ],
+    "tokenOverrides": [
+      "$theme-modal-lg-max-width"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-modal",
+      "h2.usa-modal__heading",
+      "div.usa-modal__content",
+      "div.usa-modal__footer"
+    ],
+    "editable": [
+      "Modal heading",
+      "Modal body content",
+      "Footer actions"
+    ],
+    "limitations": [
+      "JavaScript required for open/close behavior"
+    ]
+  },
   "file": "modal/lg.html",
   "title": "Modal (Large)",
-  "uswdsComponentType": "modal",
-  "uswdsClass": "usa-modal usa-modal--lg",
-  "description": "Large modal dialog for complex content.",
-  "section": "overlays",
-  "variant": "lg",
-  "useWhen": ["Complex forms in modal", "Detailed content requiring more space", "Multi-step workflows"],
-  "avoidWhen": ["Simple confirmations", "Mobile devices with limited space"],
-  "agentPrompt": "Add usa-modal--lg class to usa-modal for larger dialog.",
-  "editableAreas": ["Modal heading", "Modal body content", "Footer actions"],
-  "preserveElements": ["div.usa-modal", "h2.usa-modal__heading", "div.usa-modal__content", "div.usa-modal__footer"],
-  "knownLimitations": ["JavaScript required for open/close behavior"],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["click", "focus", "keyboard"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "lg"],
-  "settings": ["$theme-modal-lg-max-width"],
-  "relatedComponents": ["alert", "button"],
-  "tokenOverrides": ["$theme-modal-lg-max-width"],
-  "tags": ["modal", "dialog", "lg", "large"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [
+      {
+        "name": "header",
+        "reason": "Do not place modals inside page chrome components; modal belongs at body level"
+      },
+      {
+        "name": "form",
+        "reason": "A form wrapper inside a modal is fine, but the modal itself must not be nested inside another form"
+      }
+    ],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 837,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place the modal wrapper at the end of body",
+      "2. Keep open/close JS and focus trap intact",
+      "3. Trigger buttons reference the modal id via data attributes"
+    ]
+  }
 }
 </script>
 </head>

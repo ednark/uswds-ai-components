@@ -1,0 +1,55 @@
+{
+  "recipe": "data-table-with-sorting",
+  "title": "Data Table with Sorting and Pagination",
+  "description": "Accessible tabular data display with sortable columns, scrollable container for small screens, and pagination for large datasets.",
+  "aliases": ["collection:data-table-with-sorting"],
+  "components": [
+    {
+      "order": 1,
+      "component": "table",
+      "variant": "default",
+      "file": "table/default.html",
+      "role": "data-display",
+      "required": true,
+      "reason": "Core data table; add USWDS sortable-table JS to enable column sorting. Use table/scrollable.html when there are more than 4 columns"
+    },
+    {
+      "order": 2,
+      "component": "pagination",
+      "variant": "default",
+      "file": "pagination/default.html",
+      "role": "navigation",
+      "required": false,
+      "reason": "Add when the dataset exceeds ~20 rows"
+    },
+    {
+      "order": 3,
+      "component": "summary-box",
+      "variant": "info",
+      "file": "summary-box/info.html",
+      "role": "supporting",
+      "required": false,
+      "reason": "Optional data-source note or 'last updated' callout above the table"
+    }
+  ],
+  "nesting": "Component 1 is the primary region; wrap it in .usa-table-container--scrollable; component 2 sits directly below component 1; component 3 sits above component 1 when present",
+  "validationOrder": [
+    "Every table has a caption element",
+    "All header cells carry scope='col' or scope='row'",
+    "Sortable headers expose aria-sort and are focusable buttons",
+    "Pagination reflects the current page with aria-current='page'"
+  ],
+  "a11yNotes": [
+    "Caption is required — describe what the table shows",
+    "Sorting controls must be keyboard-operable and announce direction via aria-sort",
+    "Keep the scrollable wrapper so wide tables never break page layout on mobile",
+    "Provide a text alternative or downloadable data link for complex tables"
+  ],
+  "agentPromptSequence": [
+    "1. Fetch the table tile (order 1); switch to table/scrollable.html if column count is high",
+    "2. Add scope attributes to all header cells and a caption",
+    "3. Include the USWDS sortable-table initialization if sorting is required",
+    "4. Fetch pagination (order 2) only if the dataset is large; place it below the table",
+    "5. Optionally add the info summary box above the table"
+  ]
+}

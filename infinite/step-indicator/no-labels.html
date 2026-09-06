@@ -7,29 +7,114 @@
 <title>USWDS Step Indicator (No Labels)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "step-indicator",
+    "uswdsClass": "usa-step-indicator--no-labels",
+    "section": "navigation",
+    "variant": "no-labels",
+    "requiresJs": "required",
+    "interaction": [
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": false,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "step-indicator",
+      "no-labels",
+      "minimal",
+      "compact"
+    ],
+    "description": "Step indicator showing only visual steps without text labels.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Compact spaces",
+      "When step names are shown elsewhere",
+      "Minimal UI approach"
+    ],
+    "avoidWhen": [
+      "Users need to understand what each step means",
+      "Accessibility is critical"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-step-indicator--no-labels class to usa-step-indicator. Segments only, no text.",
+    "relatedComponents": [
+      "process-list",
+      "button-group"
+    ],
+    "variants": [
+      "default",
+      "centered",
+      "no-labels"
+    ],
+    "settings": [
+      "$theme-step-indicator-counter-gap"
+    ],
+    "tokenOverrides": [
+      "$theme-step-indicator-counter-gap"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "ol.usa-step-indicator",
+      "li.usa-step-indicator__segment"
+    ],
+    "editable": [
+      "Step visual states only"
+    ],
+    "limitations": [
+      "Less accessible - users can't understand steps without labels"
+    ]
+  },
   "file": "step-indicator/no-labels.html",
   "title": "Step Indicator (No Labels)",
-  "uswdsComponentType": "step-indicator",
-  "uswdsClass": "usa-step-indicator--no-labels",
-  "description": "Step indicator showing only visual steps without text labels.",
-  "section": "navigation",
-  "variant": "no-labels",
-  "useWhen": ["Compact spaces", "When step names are shown elsewhere", "Minimal UI approach"],
-  "avoidWhen": ["Users need to understand what each step means", "Accessibility is critical"],
-  "agentPrompt": "Add usa-step-indicator--no-labels class to usa-step-indicator. Segments only, no text.",
-  "editableAreas": ["Step visual states only"],
-  "preserveElements": ["ol.usa-step-indicator", "li.usa-step-indicator__segment"],
-  "knownLimitations": ["Less accessible - users can't understand steps without labels"],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": false, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "centered", "no-labels"],
-  "settings": ["$theme-step-indicator-counter-gap"],
-  "relatedComponents": ["process-list", "button-group"],
-  "tokenOverrides": ["$theme-step-indicator-counter-gap"],
-  "tags": ["step-indicator", "no-labels", "minimal", "compact"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 754,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place above multi-step form sections",
+      "2. Mark completed/current steps with status classes; keep aria attributes",
+      "3. Pair each step with its own form section or page"
+    ]
+  }
 }
 </script>
 </head>

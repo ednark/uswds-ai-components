@@ -7,29 +7,138 @@
 <title>USWDS Header (Basic Megamenu)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "header",
+    "uswdsClass": "usa-header usa-header--basic",
+    "section": "navigation",
+    "variant": "basic-megamenu",
+    "requiresJs": "required",
+    "interaction": [
+      "click",
+      "hover",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "header",
+      "basic",
+      "megamenu",
+      "dropdown",
+      "multi-column",
+      "submenu"
+    ],
+    "description": "Basic header variant with mega-menu style dropdown panels using usa-nav__submenu with multi-column grids.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Basic header with complex dropdowns",
+      "Multi-column nav submenus",
+      "When extended header is too much but megamenu is needed"
+    ],
+    "avoidWhen": [
+      "Simple single-column dropdowns",
+      "Mobile-only navigation"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Use usa-header--basic with usa-nav__primary usa-accordion. Each nav item uses button.usa-accordion__button usa-nav__link with aria-controls pointing to div.usa-nav__submenu containing ul.usa-nav__submenu-items with grid columns.",
+    "relatedComponents": [
+      "side-navigation",
+      "footer",
+      "search"
+    ],
+    "variants": [
+      "default",
+      "basic",
+      "extended",
+      "megamenu",
+      "basic-megamenu"
+    ],
+    "settings": [
+      "$theme-header-font-family",
+      "$theme-header-logo-width"
+    ],
+    "tokenOverrides": [
+      "$theme-header-font-family",
+      "$theme-header-logo-width",
+      "$theme-header-min-width"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "header.usa-header--basic",
+      "ul.usa-nav__primary usa-accordion",
+      "button.usa-accordion__button usa-nav__link",
+      "div.usa-nav__submenu",
+      "ul.usa-nav__submenu-items"
+    ],
+    "editable": [
+      "Nav section labels",
+      "Submenu items with titles and descriptions",
+      "Grid column counts per submenu"
+    ],
+    "limitations": [
+      "More complex than standard basic header",
+      "JavaScript required for accordion behavior"
+    ]
+  },
   "file": "header/basic-megamenu.html",
   "title": "Header (Basic Megamenu)",
-  "uswdsComponentType": "header",
-  "uswdsClass": "usa-header usa-header--basic",
-  "description": "Basic header variant with mega-menu style dropdown panels using usa-nav__submenu with multi-column grids.",
-  "section": "navigation",
-  "variant": "basic-megamenu",
-  "useWhen": ["Basic header with complex dropdowns", "Multi-column nav submenus", "When extended header is too much but megamenu is needed"],
-  "avoidWhen": ["Simple single-column dropdowns", "Mobile-only navigation"],
-  "agentPrompt": "Use usa-header--basic with usa-nav__primary usa-accordion. Each nav item uses button.usa-accordion__button usa-nav__link with aria-controls pointing to div.usa-nav__submenu containing ul.usa-nav__submenu-items with grid columns.",
-  "editableAreas": ["Nav section labels", "Submenu items with titles and descriptions", "Grid column counts per submenu"],
-  "preserveElements": ["header.usa-header--basic", "ul.usa-nav__primary usa-accordion", "button.usa-accordion__button usa-nav__link", "div.usa-nav__submenu", "ul.usa-nav__submenu-items"],
-  "knownLimitations": ["More complex than standard basic header", "JavaScript required for accordion behavior"],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["click", "hover", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "basic", "extended", "megamenu", "basic-megamenu"],
-  "settings": ["$theme-header-font-family", "$theme-header-logo-width"],
-  "relatedComponents": ["side-navigation", "footer", "search"],
-  "tokenOverrides": ["$theme-header-font-family", "$theme-header-logo-width", "$theme-header-min-width"],
-  "tags": ["header", "basic", "megamenu", "dropdown", "multi-column", "submenu"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [
+      {
+        "name": "modal",
+        "reason": "Header already establishes page chrome; nested modals in header break focus order"
+      }
+    ],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1587,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place header as the first element in body",
+      "2. Nest navigation (primary, secondary) inside header",
+      "3. Pair with banner above it when a required-agency banner is needed"
+    ],
+    "compositionRecipes": [
+      "navigation-hierarchy"
+    ]
+  }
 }
 </script>
 </head>

@@ -7,29 +7,108 @@
 <title>USWDS Overlay</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "overlay",
+    "uswdsClass": "usa-overlay",
+    "section": "layout",
+    "variant": "default",
+    "requiresJs": "required",
+    "interaction": [
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "overlay",
+      "mobile",
+      "menu",
+      "modal",
+      "background"
+    ],
+    "description": "Semi-transparent overlay that covers page content when mobile menu or modal is open.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "none",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Mobile menu activation",
+      "Modal dialog backgrounds",
+      "Dismissible overlays"
+    ],
+    "avoidWhen": [
+      "Static content",
+      "Page without overlay needs"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add empty div.usa-overlay element. USWDS JS toggles 'is-visible' class when active.",
+    "relatedComponents": [
+      "header",
+      "modal",
+      "side-navigation"
+    ],
+    "variants": [
+      "default"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-overlay"
+    ],
+    "editable": [],
+    "limitations": [
+      "Requires JavaScript to toggle visibility",
+      "Typically placed at top of body"
+    ]
+  },
   "file": "overlay/default.html",
   "title": "Overlay",
-  "uswdsComponentType": "overlay",
-  "uswdsClass": "usa-overlay",
-  "description": "Semi-transparent overlay that covers page content when mobile menu or modal is open.",
-  "section": "layout",
-  "variant": "default",
-  "useWhen": ["Mobile menu activation", "Modal dialog backgrounds", "Dismissible overlays"],
-  "avoidWhen": ["Static content", "Page without overlay needs"],
-  "agentPrompt": "Add empty div.usa-overlay element. USWDS JS toggles 'is-visible' class when active.",
-  "editableAreas": [],
-  "preserveElements": ["div.usa-overlay"],
-  "knownLimitations": ["Requires JavaScript to toggle visibility", "Typically placed at top of body"],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default"],
-  "settings": [],
-  "relatedComponents": ["header", "modal", "side-navigation"],
-  "tokenOverrides": [],
-  "tags": ["overlay", "mobile", "menu", "modal", "background"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [
+      {
+        "name": "modal",
+        "reason": "Overlay is a low-level backdrop; use modal for interactive dialogs"
+      }
+    ],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 576,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    }
+  }
 }
 </script>
 </head>

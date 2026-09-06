@@ -1,0 +1,64 @@
+{
+  "recipe": "error-handling-stack",
+  "title": "Error Handling Stack",
+  "description": "Layered error feedback pattern: page-level validation summary, contextual alert, highlighted callout, and field-level error state.",
+  "aliases": ["collection:error-handling-stack"],
+  "components": [
+    {
+      "order": 1,
+      "component": "validation",
+      "variant": "alert",
+      "file": "validation/alert.html",
+      "role": "feedback",
+      "required": true,
+      "reason": "Page-level error summary; the focus target when submission fails"
+    },
+    {
+      "order": 2,
+      "component": "alert",
+      "variant": "error",
+      "file": "alert/error.html",
+      "role": "feedback",
+      "required": false,
+      "reason": "Contextual error message for a section of the page"
+    },
+    {
+      "order": 3,
+      "component": "summary-box",
+      "variant": "error",
+      "file": "summary-box/error.html",
+      "role": "feedback",
+      "required": false,
+      "reason": "Highlighted callout for critical information the user must not miss"
+    },
+    {
+      "order": 4,
+      "component": "text-input",
+      "variant": "error",
+      "file": "text-input/error.html",
+      "role": "input",
+      "required": false,
+      "reason": "Field-level error pattern: instantiate the errored input with aria-invalid and a linked error message"
+    }
+  ],
+  "nesting": "Use the highest layer that fits: component 1 at the top of the form/page; component 2 within the failing section; component 3 for critical one-off callouts; component 4 is the field-level pattern applied inside the form (requires form wrapper prerequisite)",
+  "validationOrder": [
+    "Every error message is linked to its control via aria-describedby",
+    "Failing controls carry aria-invalid='true'",
+    "Error summary items anchor to the offending input ids",
+    "Only one page-level error summary per view"
+  ],
+  "a11yNotes": [
+    "Move focus to the validation summary on failed submission",
+    "Do not rely on color alone — each error carries text",
+    "role='alert' on dynamically rendered errors only, not on static page load",
+    "Keep error text actionable: state what is wrong and how to fix it"
+  ],
+  "agentPromptSequence": [
+    "1. Fetch the validation alert (order 1) and place it above the form",
+    "2. Apply the field-level error pattern (order 4) to each failing input inside the form wrapper",
+    "3. Add the section-level error alert (order 2) only when a whole section fails",
+    "4. Reserve the summary-box (order 3) for critical non-form callouts",
+    "5. Verify every error is linked to its control before finishing"
+  ]
+}

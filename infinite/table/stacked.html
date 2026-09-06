@@ -7,29 +7,118 @@
 <title>USWDS Table (Stacked)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "table",
+    "uswdsClass": "usa-table--stacked",
+    "section": "data-display",
+    "variant": "stacked",
+    "requiresJs": "no",
+    "interaction": [
+      "passive"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "table",
+      "stacked",
+      "mobile",
+      "responsive"
+    ],
+    "description": "Table that stacks into card-like rows on mobile.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Mobile-first responsive tables",
+      "Tables that become unreadable on mobile",
+      "Card-like data display on small screens"
+    ],
+    "avoidWhen": [
+      "Wide desktop tables",
+      "Data-heavy displays that need comparison view"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-table--stacked class to usa-table. Headers become row labels on mobile.",
+    "relatedComponents": [
+      "card",
+      "collection"
+    ],
+    "variants": [
+      "default",
+      "borderless",
+      "striped",
+      "scrollable",
+      "stacked"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "table.usa-table usa-table--stacked",
+      "thead",
+      "tbody",
+      "th[datalabel]"
+    ],
+    "editable": [
+      "Table headers (become labels)",
+      "Table data cells"
+    ],
+    "limitations": [
+      "Data comparison across rows becomes harder"
+    ]
+  },
   "file": "table/stacked.html",
   "title": "Table (Stacked)",
-  "uswdsComponentType": "table",
-  "uswdsClass": "usa-table--stacked",
-  "description": "Table that stacks into card-like rows on mobile.",
-  "section": "data-display",
-  "variant": "stacked",
-  "useWhen": ["Mobile-first responsive tables", "Tables that become unreadable on mobile", "Card-like data display on small screens"],
-  "avoidWhen": ["Wide desktop tables", "Data-heavy displays that need comparison view"],
-  "agentPrompt": "Add usa-table--stacked class to usa-table. Headers become row labels on mobile.",
-  "editableAreas": ["Table headers (become labels)", "Table data cells"],
-  "preserveElements": ["table.usa-table usa-table--stacked", "thead", "tbody", "th[datalabel]"],
-  "knownLimitations": ["Data comparison across rows becomes harder"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "borderless", "striped", "scrollable", "stacked"],
-  "settings": [],
-  "relatedComponents": ["card", "collection"],
-  "tokenOverrides": [],
-  "tags": ["table", "stacked", "mobile", "responsive"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 781,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Wrap the table in a scrollable container for small screens (keep .usa-table-container--scrollable)",
+      "2. Provide a caption element — required for accessibility",
+      "3. Use scope='col'/'row' on headers; for sortable tables keep the JS"
+    ],
+    "compositionRecipes": [
+      "data-table-with-sorting"
+    ]
+  }
 }
 </script>
 </head>

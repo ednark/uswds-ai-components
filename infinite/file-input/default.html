@@ -10,53 +10,134 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "file-input",
+    "uswdsClass": "usa-file-input",
+    "section": "forms",
+    "variant": "default",
+    "requiresJs": "optional",
+    "interaction": [
+      "click",
+      "drag",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "file",
+      "upload",
+      "input",
+      "attach",
+      "drag",
+      "drop",
+      "document",
+      "image"
+    ],
+    "description": "Allows users to attach one or multiple files for upload.",
+    "compliance": {
+      "nistControls": [
+        "AU-12",
+        "AC-3"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Document uploads (PDF, images, documents)",
+      "Resume or application submissions",
+      "Any file attachment requirements",
+      "Multi-file submissions when allowed"
+    ],
+    "avoidWhen": [
+      "Sensitive files requiring secure transmission (use dedicated secure upload)",
+      "Large files without appropriate server handling",
+      "When a simple link or email is more appropriate"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Update accept attribute for allowed file types. Add multiple attribute for multi-file upload. Update instructions text. Use data-default-value for pre-selected files.",
+    "relatedComponents": [
+      "form",
+      "text-input",
+      "button"
+    ],
+    "variants": [
+      "default",
+      "error"
+    ],
+    "settings": [
+      "$theme-file-input-border-radius"
+    ],
+    "tokenOverrides": [
+      "$theme-file-input-border-radius",
+      "$theme-file-input-button-background-color"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-file-input wrapper",
+      "label.usa-file-input__label with aria-describedby",
+      "input.usa-file-input__input type='file'",
+      "span.usa-file-input__instructions",
+      "accept attribute for file type restrictions"
+    ],
+    "editable": [
+      "Accepted file types (accept attribute)",
+      "Instructions text",
+      "multiple attribute for multi-file support",
+      "Label text"
+    ],
+    "limitations": [
+      "JavaScript enhances drag-and-drop but isn't required",
+      "Styling file inputs is limited by browser defaults",
+      "accept attribute should specify allowed MIME types"
+    ]
+  },
   "file": "file-input/default.html",
   "title": "File Input",
-  "uswdsComponentType": "file-input",
-  "uswdsClass": "usa-file-input",
-  "description": "Allows users to attach one or multiple files for upload.",
-  "section": "forms",
-  "variant": "default",
-  "useWhen": [
-    "Document uploads (PDF, images, documents)",
-    "Resume or application submissions",
-    "Any file attachment requirements",
-    "Multi-file submissions when allowed"
-  ],
-  "avoidWhen": [
-    "Sensitive files requiring secure transmission (use dedicated secure upload)",
-    "Large files without appropriate server handling",
-    "When a simple link or email is more appropriate"
-  ],
-  "agentPrompt": "Update accept attribute for allowed file types. Add multiple attribute for multi-file upload. Update instructions text. Use data-default-value for pre-selected files.",
-  "editableAreas": [
-    "Accepted file types (accept attribute)",
-    "Instructions text",
-    "multiple attribute for multi-file support",
-    "Label text"
-  ],
-  "preserveElements": [
-    "div.usa-file-input wrapper",
-    "label.usa-file-input__label with aria-describedby",
-    "input.usa-file-input__input type='file'",
-    "span.usa-file-input__instructions",
-    "accept attribute for file type restrictions"
-  ],
-  "knownLimitations": [
-    "JavaScript enhances drag-and-drop but isn't required",
-    "Styling file inputs is limited by browser defaults",
-    "accept attribute should specify allowed MIME types"
-  ],
-  "tier": "curated",
-  "requiresJs": "optional",
-  "interaction": ["click", "drag", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "error"],
-  "settings": ["$theme-file-input-border-radius"],
-  "relatedComponents": ["form", "text-input", "button"],
-  "tokenOverrides": ["$theme-file-input-border-radius", "$theme-file-input-button-background-color"],
-  "tags": ["file", "upload", "input", "attach", "drag", "drop", "document", "image"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Provides form context; place this input inside a form wrapper"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1150,
+      "renderingTimeMs": 35,
+      "recommendedModel": "haiku"
+    }
+  }
 }
 </script>
 <style>

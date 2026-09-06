@@ -7,29 +7,126 @@
 <title>USWDS Text Input (Error)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "text-input",
+    "uswdsClass": "usa-input--error",
+    "section": "forms",
+    "variant": "error",
+    "requiresJs": "no",
+    "interaction": [
+      "focus",
+      "input"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "text-input",
+      "error",
+      "validation",
+      "form"
+    ],
+    "description": "Text input showing error validation state.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Form validation errors",
+      "Required field validation",
+      "Format errors"
+    ],
+    "avoidWhen": [
+      "Valid inputs",
+      "Success states"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-input--error class and use usa-form-group--error on parent.",
+    "relatedComponents": [
+      "validation",
+      "summary-box"
+    ],
+    "variants": [
+      "default",
+      "tile",
+      "error",
+      "success",
+      "disabled"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-form-group--error",
+      "input.usa-input",
+      "span.usa-error-message"
+    ],
+    "editable": [
+      "Input label",
+      "Error message text"
+    ],
+    "limitations": []
+  },
   "file": "text-input/error.html",
   "title": "Text Input (Error)",
-  "uswdsComponentType": "text-input",
-  "uswdsClass": "usa-input--error",
-  "description": "Text input showing error validation state.",
-  "section": "forms",
-  "variant": "error",
-  "useWhen": ["Form validation errors", "Required field validation", "Format errors"],
-  "avoidWhen": ["Valid inputs", "Success states"],
-  "agentPrompt": "Add usa-input--error class and use usa-form-group--error on parent.",
-  "editableAreas": ["Input label", "Error message text"],
-  "preserveElements": ["div.usa-form-group--error", "input.usa-input", "span.usa-error-message"],
-  "knownLimitations": [],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["focus", "input"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "tile", "error", "success", "disabled"],
-  "settings": [],
-  "relatedComponents": ["validation", "summary-box"],
-  "tokenOverrides": [],
-  "tags": ["text-input", "error", "validation", "form"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Provides form context; place this input inside a form wrapper"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 737,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Fetch the form wrapper first (unless one already exists)",
+      "2. Pair with a label via for/id",
+      "3. Link the error message span with aria-describedby and set aria-invalid='true'",
+      "4. Add a matching entry to the form's validation summary"
+    ],
+    "compositionRecipes": [
+      "contact-form",
+      "error-handling-stack",
+      "login-flow"
+    ]
+  }
 }
 </script>
 </head>

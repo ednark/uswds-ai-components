@@ -7,29 +7,116 @@
 <title>USWDS Tooltip (Left)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "tooltip",
+    "uswdsClass": "usa-tooltip--left",
+    "section": "supporting",
+    "variant": "left",
+    "requiresJs": "required",
+    "interaction": [
+      "hover",
+      "focus",
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "tooltip",
+      "left",
+      "hover",
+      "hint"
+    ],
+    "description": "Tooltip that appears to the left of the trigger element.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Right-aligned content triggers",
+      "When above/below positions are taken",
+      "Table cell tooltips"
+    ],
+    "avoidWhen": [
+      "Left page edge content",
+      "Long content",
+      "Critical information"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-tooltip--left class and data-position=\"left\" attribute.",
+    "relatedComponents": [
+      "button",
+      "icon"
+    ],
+    "variants": [
+      "default",
+      "top",
+      "bottom",
+      "left",
+      "right"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "span.usa-tooltip__trigger",
+      "span.usa-tooltip"
+    ],
+    "editable": [
+      "Tooltip text content",
+      "Trigger element"
+    ],
+    "limitations": [
+      "May be obscured by page left edge"
+    ]
+  },
   "file": "tooltip/left.html",
   "title": "Tooltip (Left)",
-  "uswdsComponentType": "tooltip",
-  "uswdsClass": "usa-tooltip--left",
-  "description": "Tooltip that appears to the left of the trigger element.",
-  "section": "supporting",
-  "variant": "left",
-  "useWhen": ["Right-aligned content triggers", "When above/below positions are taken", "Table cell tooltips"],
-  "avoidWhen": ["Left page edge content", "Long content", "Critical information"],
-  "agentPrompt": "Add usa-tooltip--left class and data-position=\"left\" attribute.",
-  "editableAreas": ["Tooltip text content", "Trigger element"],
-  "preserveElements": ["span.usa-tooltip__trigger", "span.usa-tooltip"],
-  "knownLimitations": ["May be obscured by page left edge"],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["hover", "focus", "click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "top", "bottom", "left", "right"],
-  "settings": [],
-  "relatedComponents": ["button", "icon"],
-  "tokenOverrides": [],
-  "tags": ["tooltip", "left", "hover", "hint"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 646,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Attach tooltips to interactive elements only (buttons, links)",
+      "2. Keep aria-describedby wiring — tooltip text must reach screen readers",
+      "3. Never put critical information solely in a tooltip"
+    ]
+  }
 }
 </script>
 </head>

@@ -7,29 +7,114 @@
 <title>USWDS Banner (Slim)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "banner",
+    "uswdsClass": "usa-banner--slim",
+    "section": "supporting",
+    "variant": "slim",
+    "requiresJs": "no",
+    "interaction": [
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA",
+      "Required by US federal agencies"
+    ],
+    "tier": "curated",
+    "tags": [
+      "banner",
+      "slim",
+      "compact",
+      "mobile"
+    ],
+    "description": "Compact banner for limited vertical space.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Mobile headers",
+      "Compact layouts",
+      "When full banner takes too much space"
+    ],
+    "avoidWhen": [
+      "Desktop with ample space",
+      "When full recognition is needed"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-banner--slim class to usa-banner. Condensed single-line version.",
+    "relatedComponents": [
+      "header",
+      "identifier"
+    ],
+    "variants": [
+      "default",
+      "medium",
+      "slim"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-banner usa-banner--slim",
+      "div.usa-banner__text"
+    ],
+    "editable": [
+      "Banner text only"
+    ],
+    "limitations": [
+      "Less prominent, may be missed"
+    ]
+  },
   "file": "banner/slim.html",
   "title": "Banner (Slim)",
-  "uswdsComponentType": "banner",
-  "uswdsClass": "usa-banner--slim",
-  "description": "Compact banner for limited vertical space.",
-  "section": "supporting",
-  "variant": "slim",
-  "useWhen": ["Mobile headers", "Compact layouts", "When full banner takes too much space"],
-  "avoidWhen": ["Desktop with ample space", "When full recognition is needed"],
-  "agentPrompt": "Add usa-banner--slim class to usa-banner. Condensed single-line version.",
-  "editableAreas": ["Banner text only"],
-  "preserveElements": ["div.usa-banner usa-banner--slim", "div.usa-banner__text"],
-  "knownLimitations": ["Less prominent, may be missed"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA", "Required by US federal agencies"],
-  "variants": ["default", "medium", "slim"],
-  "settings": [],
-  "relatedComponents": ["header", "identifier"],
-  "tokenOverrides": [],
-  "tags": ["banner", "slim", "compact", "mobile"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 677,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place banner as the very first element in body, above header",
+      "2. Keep the expand/collapse JS intact — it is required for the official.gov domain message",
+      "3. Do not add content inside the banner beyond the standard copy"
+    ],
+    "compositionRecipes": [
+      "navigation-hierarchy"
+    ]
+  }
 }
 </script>
 </head>

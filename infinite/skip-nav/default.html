@@ -7,29 +7,114 @@
 <title>USWDS Skip Nav</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "skip-nav",
+    "uswdsClass": "usa-skipnav",
+    "section": "navigation",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "focus",
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA",
+      "Required for keyboard accessibility"
+    ],
+    "tier": "curated",
+    "tags": [
+      "skip-nav",
+      "accessibility",
+      "keyboard",
+      "a11y",
+      "skip"
+    ],
+    "description": "Skip navigation link that allows keyboard users to bypass repetitive navigation and jump to main content.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "none",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Every government website",
+      "Accessibility compliance",
+      "Keyboard navigation support"
+    ],
+    "avoidWhen": [
+      "Single-page apps without nav"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add as first element in body. Use href='#main-content' pointing to main content id. Visually hidden until focused.",
+    "relatedComponents": [
+      "header",
+      "in-page-navigation"
+    ],
+    "variants": [
+      "default"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "a.usa-skipnav",
+      "usa-sr-only class for visual hiding"
+    ],
+    "editable": [
+      "Link text (typically 'Skip to main content')",
+      "href target id"
+    ],
+    "limitations": [
+      "Must have matching id on main content container"
+    ]
+  },
   "file": "skip-nav/default.html",
   "title": "Skip Navigation",
-  "uswdsComponentType": "skip-nav",
-  "uswdsClass": "usa-skipnav",
-  "description": "Skip navigation link that allows keyboard users to bypass repetitive navigation and jump to main content.",
-  "section": "navigation",
-  "variant": "default",
-  "useWhen": ["Every government website", "Accessibility compliance", "Keyboard navigation support"],
-  "avoidWhen": ["Single-page apps without nav"],
-  "agentPrompt": "Add as first element in body. Use href='#main-content' pointing to main content id. Visually hidden until focused.",
-  "editableAreas": ["Link text (typically 'Skip to main content')", "href target id"],
-  "preserveElements": ["a.usa-skipnav", "usa-sr-only class for visual hiding"],
-  "knownLimitations": ["Must have matching id on main content container"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["focus", "click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA", "Required for keyboard accessibility"],
-  "variants": ["default"],
-  "settings": [],
-  "relatedComponents": ["header", "in-page-navigation"],
-  "tokenOverrides": [],
-  "tags": ["skip-nav", "accessibility", "keyboard", "a11y", "skip"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 667,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place as the first focusable element in body",
+      "2. Target id must exist on main content region",
+      "3. Keep it visually hidden until focused"
+    ],
+    "compositionRecipes": [
+      "navigation-hierarchy"
+    ]
+  }
 }
 </script>
 </head>

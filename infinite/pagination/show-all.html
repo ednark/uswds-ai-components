@@ -7,29 +7,115 @@
 <title>USWDS Pagination (Show All)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "pagination",
+    "uswdsClass": "usa-pagination--show-all",
+    "section": "navigation",
+    "variant": "show-all",
+    "requiresJs": "no",
+    "interaction": [
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "pagination",
+      "show-all",
+      "pages",
+      "navigation"
+    ],
+    "description": "Pagination component showing all page numbers.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Small datasets",
+      "When user needs to jump to specific pages",
+      "Limited number of total pages"
+    ],
+    "avoidWhen": [
+      "Large datasets",
+      "Performance concerns with many rendered links"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-pagination--show-all class. Displays all page numbers without ellipsis.",
+    "relatedComponents": [
+      "pager",
+      "step-indicator"
+    ],
+    "variants": [
+      "default",
+      "show-all"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "nav.usa-pagination",
+      "ul.usa-pagination__list",
+      "li.usa-pagination__item"
+    ],
+    "editable": [
+      "Page numbers",
+      "Current page indicator",
+      "Prev/Next labels"
+    ],
+    "limitations": [
+      "Doesn't scale well for large page counts"
+    ]
+  },
   "file": "pagination/show-all.html",
   "title": "Pagination (Show All)",
-  "uswdsComponentType": "pagination",
-  "uswdsClass": "usa-pagination--show-all",
-  "description": "Pagination component showing all page numbers.",
-  "section": "navigation",
-  "variant": "show-all",
-  "useWhen": ["Small datasets", "When user needs to jump to specific pages", "Limited number of total pages"],
-  "avoidWhen": ["Large datasets", "Performance concerns with many rendered links"],
-  "agentPrompt": "Add usa-pagination--show-all class. Displays all page numbers without ellipsis.",
-  "editableAreas": ["Page numbers", "Current page indicator", "Prev/Next labels"],
-  "preserveElements": ["nav.usa-pagination", "ul.usa-pagination__list", "li.usa-pagination__item"],
-  "knownLimitations": ["Doesn't scale well for large page counts"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "show-all"],
-  "settings": [],
-  "relatedComponents": ["pager", "step-indicator"],
-  "tokenOverrides": [],
-  "tags": ["pagination", "show-all", "pages", "navigation"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 882,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place below the table or list it paginates",
+      "2. Keep aria-current='page' on the active page",
+      "3. Preserve prev/next aria-labels"
+    ],
+    "compositionRecipes": [
+      "data-table-with-sorting"
+    ]
+  }
 }
 </script>
 </head>

@@ -7,29 +7,121 @@
 <title>USWDS Table (Borderless)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "table",
+    "uswdsClass": "usa-table--borderless",
+    "section": "data-display",
+    "variant": "borderless",
+    "requiresJs": "no",
+    "interaction": [
+      "passive"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "table",
+      "borderless",
+      "clean",
+      "minimal"
+    ],
+    "description": "Table without visible borders for cleaner visual design.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Clean, minimal data display",
+      "Dashboards",
+      "When grid lines distract"
+    ],
+    "avoidWhen": [
+      "Need clear row separation",
+      "Dense data requiring visual guides"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-table--borderless class to usa-table. Removes all borders.",
+    "relatedComponents": [
+      "card",
+      "collection"
+    ],
+    "variants": [
+      "default",
+      "borderless",
+      "striped",
+      "scrollable",
+      "stacked"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "table.usa-table",
+      "thead",
+      "tbody",
+      "tr",
+      "th",
+      "td"
+    ],
+    "editable": [
+      "Table headers",
+      "Table data cells",
+      "Caption if needed"
+    ],
+    "limitations": [
+      "Row boundaries less clear without borders"
+    ]
+  },
   "file": "table/borderless.html",
   "title": "Table (Borderless)",
-  "uswdsComponentType": "table",
-  "uswdsClass": "usa-table--borderless",
-  "description": "Table without visible borders for cleaner visual design.",
-  "section": "data-display",
-  "variant": "borderless",
-  "useWhen": ["Clean, minimal data display", "Dashboards", "When grid lines distract"],
-  "avoidWhen": ["Need clear row separation", "Dense data requiring visual guides"],
-  "agentPrompt": "Add usa-table--borderless class to usa-table. Removes all borders.",
-  "editableAreas": ["Table headers", "Table data cells", "Caption if needed"],
-  "preserveElements": ["table.usa-table", "thead", "tbody", "tr", "th", "td"],
-  "knownLimitations": ["Row boundaries less clear without borders"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "borderless", "striped", "scrollable", "stacked"],
-  "settings": [],
-  "relatedComponents": ["card", "collection"],
-  "tokenOverrides": [],
-  "tags": ["table", "borderless", "clean", "minimal"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 731,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Wrap the table in a scrollable container for small screens (keep .usa-table-container--scrollable)",
+      "2. Provide a caption element — required for accessibility",
+      "3. Use scope='col'/'row' on headers; for sortable tables keep the JS"
+    ],
+    "compositionRecipes": [
+      "data-table-with-sorting"
+    ]
+  }
 }
 </script>
 </head>

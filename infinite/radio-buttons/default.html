@@ -10,54 +10,139 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "radio-buttons",
+    "uswdsClass": "usa-radio__input",
+    "section": "forms",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus",
+      "keyboard"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "radio",
+      "buttons",
+      "form",
+      "input",
+      "select",
+      "single",
+      "choice",
+      "mutually-exclusive"
+    ],
+    "description": "Allows users to select exactly one choice from a group of options.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Single selection from mutually exclusive options",
+      "When only one option can be chosen",
+      "Options that need to be visible at once for comparison",
+      "2-7 options where visual scanning helps decision-making"
+    ],
+    "avoidWhen": [
+      "Multiple selections needed — use checkboxes",
+      "More than 7 options — use select dropdown",
+      "Single binary yes/no — use checkbox"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-radio__input--tile for tile style. Group with fieldset/legend. Add checked attribute for pre-selected option. Ensure all options in a group have the same name attribute.",
+    "relatedComponents": [
+      "checkbox",
+      "form",
+      "select"
+    ],
+    "variants": [
+      "default",
+      "tile"
+    ],
+    "settings": [
+      "$theme-radio-border-radius"
+    ],
+    "tokenOverrides": [
+      "$theme-radio-border-radius",
+      "$theme-input-state-border-width"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "fieldset/legend wrapper for radio groups",
+      "div.usa-radio wrapper for each option",
+      "input.usa-radio__input type='radio'",
+      "label.usa-radio__label wrapper",
+      "Same name attribute for all options in group"
+    ],
+    "editable": [
+      "Radio label text",
+      "input id and for attribute values",
+      "name attribute (must be same for all in group)",
+      "value attribute for form submission",
+      "checked state for default selection"
+    ],
+    "limitations": [
+      "Always wrap radio groups in fieldset with legend",
+      "id attributes must be unique per page",
+      "name attribute groups radios for form submission"
+    ]
+  },
   "file": "radio-buttons/default.html",
   "title": "Radio Buttons",
-  "uswdsComponentType": "radio-buttons",
-  "uswdsClass": "usa-radio__input",
-  "description": "Allows users to select exactly one choice from a group of options.",
-  "section": "forms",
-  "variant": "default",
-  "useWhen": [
-    "Single selection from mutually exclusive options",
-    "When only one option can be chosen",
-    "Options that need to be visible at once for comparison",
-    "2-7 options where visual scanning helps decision-making"
-  ],
-  "avoidWhen": [
-    "Multiple selections needed — use checkboxes",
-    "More than 7 options — use select dropdown",
-    "Single binary yes/no — use checkbox"
-  ],
-  "agentPrompt": "Add usa-radio__input--tile for tile style. Group with fieldset/legend. Add checked attribute for pre-selected option. Ensure all options in a group have the same name attribute.",
-  "editableAreas": [
-    "Radio label text",
-    "input id and for attribute values",
-    "name attribute (must be same for all in group)",
-    "value attribute for form submission",
-    "checked state for default selection"
-  ],
-  "preserveElements": [
-    "fieldset/legend wrapper for radio groups",
-    "div.usa-radio wrapper for each option",
-    "input.usa-radio__input type='radio'",
-    "label.usa-radio__label wrapper",
-    "Same name attribute for all options in group"
-  ],
-  "knownLimitations": [
-    "Always wrap radio groups in fieldset with legend",
-    "id attributes must be unique per page",
-    "name attribute groups radios for form submission"
-  ],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "focus", "keyboard"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "tile"],
-  "settings": ["$theme-radio-border-radius"],
-  "relatedComponents": ["checkbox", "form", "select"],
-  "tokenOverrides": ["$theme-radio-border-radius", "$theme-input-state-border-width"],
-  "tags": ["radio", "buttons", "form", "input", "select", "single", "choice", "mutually-exclusive"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Provides form context; place radios inside a form wrapper"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1272,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Fetch the form wrapper first",
+      "2. Always wrap a radio group in fieldset+legend",
+      "3. Give every radio in a group the same name and unique id"
+    ]
+  }
 }
 </script>
 <style>

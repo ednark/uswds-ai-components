@@ -7,29 +7,108 @@
 <title>USWDS Button Group (Segmented)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "button-group",
+    "uswdsClass": "usa-button-group--segmented",
+    "section": "buttons",
+    "variant": "segmented",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "button-group",
+      "segmented",
+      "toggle",
+      "connected"
+    ],
+    "description": "Segmented button group with connected buttons.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "none",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Toggle actions",
+      "View switches",
+      "Connected related actions"
+    ],
+    "avoidWhen": [
+      "Unrelated actions",
+      "Single buttons"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-button-group--segmented class to usa-button-group. Connected buttons without gaps.",
+    "relatedComponents": [
+      "button"
+    ],
+    "variants": [
+      "default",
+      "segmented"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "ul.usa-button-group",
+      "li.usa-button-group__item",
+      "button.usa-button"
+    ],
+    "editable": [
+      "Button labels and texts"
+    ],
+    "limitations": []
+  },
   "file": "button-group/segmented.html",
   "title": "Button Group (Segmented)",
-  "uswdsComponentType": "button-group",
-  "uswdsClass": "usa-button-group--segmented",
-  "description": "Segmented button group with connected buttons.",
-  "section": "buttons",
-  "variant": "segmented",
-  "useWhen": ["Toggle actions", "View switches", "Connected related actions"],
-  "avoidWhen": ["Unrelated actions", "Single buttons"],
-  "agentPrompt": "Add usa-button-group--segmented class to usa-button-group. Connected buttons without gaps.",
-  "editableAreas": ["Button labels and texts"],
-  "preserveElements": ["ul.usa-button-group", "li.usa-button-group__item", "button.usa-button"],
-  "knownLimitations": [],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "segmented"],
-  "settings": [],
-  "relatedComponents": ["button"],
-  "tokenOverrides": [],
-  "tags": ["button-group", "segmented", "toggle", "connected"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [
+      {
+        "name": "button",
+        "reason": "Do not nest individually-styled buttons; button-group manages its own segment styling"
+      }
+    ],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 669,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    }
+  }
 }
 </script>
 </head>

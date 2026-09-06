@@ -7,29 +7,112 @@
 <title>USWDS Site Alert (Emergency)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "site-alert",
+    "uswdsClass": "usa-site-alert--emergency",
+    "section": "notifications",
+    "variant": "emergency",
+    "requiresJs": "no",
+    "interaction": [
+      "dismiss"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "site-alert",
+      "emergency",
+      "critical",
+      "emergency-alert"
+    ],
+    "description": "Emergency site alert for critical situations.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Critical emergency notices",
+      "Service outages",
+      "Public safety messages"
+    ],
+    "avoidWhen": [
+      "Routine information",
+      "Non-urgent notices",
+      "Success messages"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-site-alert--emergency class to usa-site-alert. Use sparingly for true emergencies.",
+    "relatedComponents": [
+      "alert",
+      "banner"
+    ],
+    "variants": [
+      "default",
+      "emergency",
+      "no-icon"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-site-alert usa-site-alert--emergency",
+      "div.usa-alert__body"
+    ],
+    "editable": [
+      "Alert heading",
+      "Alert body text",
+      "Dismissible link if applicable"
+    ],
+    "limitations": [
+      "Should not be overused or users will ignore"
+    ]
+  },
   "file": "site-alert/emergency.html",
   "title": "Site Alert (Emergency)",
-  "uswdsComponentType": "site-alert",
-  "uswdsClass": "usa-site-alert--emergency",
-  "description": "Emergency site alert for critical situations.",
-  "section": "notifications",
-  "variant": "emergency",
-  "useWhen": ["Critical emergency notices", "Service outages", "Public safety messages"],
-  "avoidWhen": ["Routine information", "Non-urgent notices", "Success messages"],
-  "agentPrompt": "Add usa-site-alert--emergency class to usa-site-alert. Use sparingly for true emergencies.",
-  "editableAreas": ["Alert heading", "Alert body text", "Dismissible link if applicable"],
-  "preserveElements": ["div.usa-site-alert usa-site-alert--emergency", "div.usa-alert__body"],
-  "knownLimitations": ["Should not be overused or users will ignore"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["dismiss"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "emergency", "no-icon"],
-  "settings": [],
-  "relatedComponents": ["alert", "banner"],
-  "tokenOverrides": [],
-  "tags": ["site-alert", "emergency", "critical", "emergency-alert"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 697,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place site-alert above the header, below banner",
+      "2. Keep it dismissible only if persistence is handled (slim variant is static)"
+    ]
+  }
 }
 </script>
 </head>

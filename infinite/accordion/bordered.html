@@ -7,29 +7,113 @@
 <title>USWDS Accordion (Bordered)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "accordion",
+    "uswdsClass": "usa-accordion--bordered",
+    "section": "data-display",
+    "variant": "bordered",
+    "requiresJs": "required",
+    "interaction": [
+      "click",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "accordion",
+      "bordered",
+      "expand",
+      "collapse"
+    ],
+    "description": "Accordion with visible borders around each item.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Clear visual separation needed",
+      "When borders aid scanning",
+      "Formal document styles"
+    ],
+    "avoidWhen": [
+      "Minimal styling preferred",
+      "Dense accordion content"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-accordion--bordered class to usa-accordion for bordered variant.",
+    "relatedComponents": [
+      "accordion"
+    ],
+    "variants": [
+      "default",
+      "bordered",
+      "multiselectable"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "ul.usa-accordion",
+      "li.usa-accordion__item",
+      "button.usa-accordion__button",
+      "div.usa-accordion__content"
+    ],
+    "editable": [
+      "Accordion button text",
+      "Accordion panel content"
+    ],
+    "limitations": [
+      "JavaScript required for expand/collapse"
+    ]
+  },
   "file": "accordion/bordered.html",
   "title": "Accordion (Bordered)",
-  "uswdsComponentType": "accordion",
-  "uswdsClass": "usa-accordion--bordered",
-  "description": "Accordion with visible borders around each item.",
-  "section": "data-display",
-  "variant": "bordered",
-  "useWhen": ["Clear visual separation needed", "When borders aid scanning", "Formal document styles"],
-  "avoidWhen": ["Minimal styling preferred", "Dense accordion content"],
-  "agentPrompt": "Add usa-accordion--bordered class to usa-accordion for bordered variant.",
-  "editableAreas": ["Accordion button text", "Accordion panel content"],
-  "preserveElements": ["ul.usa-accordion", "li.usa-accordion__item", "button.usa-accordion__button", "div.usa-accordion__content"],
-  "knownLimitations": ["JavaScript required for expand/collapse"],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["click", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "bordered", "multiselectable"],
-  "settings": [],
-  "relatedComponents": ["accordion"],
-  "tokenOverrides": [],
-  "tags": ["accordion", "bordered", "expand", "collapse"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 803,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Keep the accordion JS — without it all sections must render open",
+      "2. Keep button+region pairing (aria-controls/aria-expanded) intact",
+      "3. Do not nest accordions more than one level deep"
+    ]
+  }
 }
 </script>
 </head>

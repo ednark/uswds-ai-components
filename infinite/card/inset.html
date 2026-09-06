@@ -7,29 +7,121 @@
 <title>USWDS Card (Inset)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "card",
+    "uswdsClass": "usa-card usa-card--inset",
+    "section": "data-display",
+    "variant": "inset",
+    "requiresJs": "no",
+    "interaction": [
+      "passive",
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "card",
+      "inset",
+      "callout",
+      "emphasis"
+    ],
+    "description": "Card with content inset from edges, often on colored background.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Colored background cards",
+      "Callout or emphasis cards",
+      "Content that needs visual separation"
+    ],
+    "avoidWhen": [
+      "Simple flat cards",
+      "Minimal design approaches"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-card--inset class to usa-card. Often used with colored background parent.",
+    "relatedComponents": [
+      "collection",
+      "table"
+    ],
+    "variants": [
+      "default",
+      "flag",
+      "media",
+      "inset",
+      "header-flag"
+    ],
+    "settings": [
+      "$theme-card-border-radius",
+      "$theme-card-gap"
+    ],
+    "tokenOverrides": [
+      "$theme-card-border-radius",
+      "$theme-card-gap"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "article.usa-card usa-card--inset",
+      "div.usa-card__header",
+      "div.usa-card__body"
+    ],
+    "editable": [
+      "Card heading and body text",
+      "Footer actions"
+    ],
+    "limitations": [
+      "Looks best on colored backgrounds"
+    ]
+  },
   "file": "card/inset.html",
   "title": "Card (Inset)",
-  "uswdsComponentType": "card",
-  "uswdsClass": "usa-card usa-card--inset",
-  "description": "Card with content inset from edges, often on colored background.",
-  "section": "data-display",
-  "variant": "inset",
-  "useWhen": ["Colored background cards", "Callout or emphasis cards", "Content that needs visual separation"],
-  "avoidWhen": ["Simple flat cards", "Minimal design approaches"],
-  "agentPrompt": "Add usa-card--inset class to usa-card. Often used with colored background parent.",
-  "editableAreas": ["Card heading and body text", "Footer actions"],
-  "preserveElements": ["article.usa-card usa-card--inset", "div.usa-card__header", "div.usa-card__body"],
-  "knownLimitations": ["Looks best on colored backgrounds"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive", "click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "flag", "media", "inset", "header-flag"],
-  "settings": ["$theme-card-border-radius", "$theme-card-gap"],
-  "relatedComponents": ["collection", "table"],
-  "tokenOverrides": ["$theme-card-border-radius", "$theme-card-gap"],
-  "tags": ["card", "inset", "callout", "emphasis"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 748,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Cards work in grid layouts — pair with layout utilities for columns",
+      "2. Keep the header/body/media block structure; do not flatten",
+      "3. One primary action per card; the whole card may link if content is single-purpose"
+    ]
+  }
 }
 </script>
 </head>

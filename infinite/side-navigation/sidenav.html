@@ -7,29 +7,124 @@
 <title>USWDS Side Navigation (Sidenav)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "side-navigation",
+    "uswdsClass": "usa-sidenav",
+    "section": "navigation",
+    "variant": "sidenav",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "sidenav",
+      "sidebar",
+      "navigation",
+      "hierarchical",
+      "usa-sidenav"
+    ],
+    "description": "USWDS sidenav component for sidebar navigation with nested lists and current page indicator.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Sidebar navigation on content pages",
+      "Documentation sites",
+      "Hierarchical page structures"
+    ],
+    "avoidWhen": [
+      "Top navigation",
+      "Mobile primary nav"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Use ul.usa-sidenav with li.usa-sidenav__item. Nest usa-sidenav__sublist for sub-items. Use usa-current for current page.",
+    "relatedComponents": [
+      "layout-docs",
+      "breadcrumb",
+      "header"
+    ],
+    "variants": [
+      "default",
+      "sidenav",
+      "sub-list"
+    ],
+    "settings": [
+      "$theme-sidenav-font-family"
+    ],
+    "tokenOverrides": [
+      "$theme-sidenav-font-family"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "ul.usa-sidenav",
+      "li.usa-sidenav__item",
+      "ul.usa-sidenav__sublist",
+      "a.usa-current"
+    ],
+    "editable": [
+      "Navigation links",
+      "Current page indicator",
+      "Sub-list items"
+    ],
+    "limitations": [
+      "Different from usa-nav which is for header navigation"
+    ]
+  },
   "file": "side-navigation/sidenav.html",
   "title": "Side Navigation (Sidenav)",
-  "uswdsComponentType": "side-navigation",
-  "uswdsClass": "usa-sidenav",
-  "description": "USWDS sidenav component for sidebar navigation with nested lists and current page indicator.",
-  "section": "navigation",
-  "variant": "sidenav",
-  "useWhen": ["Sidebar navigation on content pages", "Documentation sites", "Hierarchical page structures"],
-  "avoidWhen": ["Top navigation", "Mobile primary nav"],
-  "agentPrompt": "Use ul.usa-sidenav with li.usa-sidenav__item. Nest usa-sidenav__sublist for sub-items. Use usa-current for current page.",
-  "editableAreas": ["Navigation links", "Current page indicator", "Sub-list items"],
-  "preserveElements": ["ul.usa-sidenav", "li.usa-sidenav__item", "ul.usa-sidenav__sublist", "a.usa-current"],
-  "knownLimitations": ["Different from usa-nav which is for header navigation"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "sidenav", "sub-list"],
-  "settings": ["$theme-sidenav-font-family"],
-  "relatedComponents": ["layout-docs", "breadcrumb", "header"],
-  "tokenOverrides": ["$theme-sidenav-font-family"],
-  "tags": ["sidenav", "sidebar", "navigation", "hierarchical", "usa-sidenav"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 842,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place in a sidebar column next to main content",
+      "2. Highlight the current page item with aria-current='page' + usa-current class",
+      "3. Pair with in-page-navigation only when page is long enough to warrant both"
+    ],
+    "compositionRecipes": [
+      "navigation-hierarchy"
+    ]
+  }
 }
 </script>
 </head>

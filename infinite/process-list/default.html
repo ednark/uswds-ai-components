@@ -10,53 +10,126 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "process-list",
+    "uswdsClass": "usa-process-list",
+    "section": "feedback",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "passive",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": false
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "process",
+      "steps",
+      "instructions",
+      "numbered",
+      "workflow",
+      "onboarding",
+      "guide"
+    ],
+    "description": "Displays steps or stages of important instructions or processes.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Step-by-step instructions or procedures",
+      "Onboarding or getting started workflows",
+      "Multi-step forms or wizards",
+      "Processes users need to follow in order"
+    ],
+    "avoidWhen": [
+      "Parallel processes without sequence",
+      "Simple, single-step actions",
+      "When content doesn't need numbered steps"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add step titles in h3 or h4 with usa-process-list__heading. Numbering is automatic via CSS. Update step titles and descriptions. Steps should be followed in order.",
+    "relatedComponents": [
+      "step-indicator",
+      "summary-box",
+      "accordion"
+    ],
+    "variants": [
+      "default"
+    ],
+    "settings": [
+      "$theme-process-list-border-radius"
+    ],
+    "tokenOverrides": [
+      "$theme-process-list-border-color"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "ol.usa-process-list wrapper",
+      "li.usa-process-list__item for each step",
+      "div.usa-process-list__header for step heading",
+      "h3 or h4.usa-process-list__heading for title",
+      "div.usa-process-list__description for body"
+    ],
+    "editable": [
+      "Step titles (usa-process-list__heading)",
+      "Step descriptions (usa-process-list__description)",
+      "Step details (usa-process-list__details)",
+      "Number of steps"
+    ],
+    "limitations": [
+      "CSS automatically handles numbering",
+      "Steps are always displayed in order",
+      "Not suitable for non-sequential content"
+    ]
+  },
   "file": "process-list/default.html",
   "title": "Process List",
-  "uswdsComponentType": "process-list",
-  "uswdsClass": "usa-process-list",
-  "description": "Displays steps or stages of important instructions or processes.",
-  "section": "feedback",
-  "variant": "default",
-  "useWhen": [
-    "Step-by-step instructions or procedures",
-    "Onboarding or getting started workflows",
-    "Multi-step forms or wizards",
-    "Processes users need to follow in order"
-  ],
-  "avoidWhen": [
-    "Parallel processes without sequence",
-    "Simple, single-step actions",
-    "When content doesn't need numbered steps"
-  ],
-  "agentPrompt": "Add step titles in h3 or h4 with usa-process-list__heading. Numbering is automatic via CSS. Update step titles and descriptions. Steps should be followed in order.",
-  "editableAreas": [
-    "Step titles (usa-process-list__heading)",
-    "Step descriptions (usa-process-list__description)",
-    "Step details (usa-process-list__details)",
-    "Number of steps"
-  ],
-  "preserveElements": [
-    "ol.usa-process-list wrapper",
-    "li.usa-process-list__item for each step",
-    "div.usa-process-list__header for step heading",
-    "h3 or h4.usa-process-list__heading for title",
-    "div.usa-process-list__description for body"
-  ],
-  "knownLimitations": [
-    "CSS automatically handles numbering",
-    "Steps are always displayed in order",
-    "Not suitable for non-sequential content"
-  ],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": false},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default"],
-  "settings": ["$theme-process-list-border-radius"],
-  "relatedComponents": ["step-indicator", "summary-box", "accordion"],
-  "tokenOverrides": ["$theme-process-list-border-color"],
-  "tags": ["process", "steps", "instructions", "numbered", "workflow", "onboarding", "guide"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1243,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Use for sequential guidance; keep the ordered-list semantics",
+      "2. Mark current step with usa-process-list__item--current"
+    ]
+  }
 }
 </script>
 <style>

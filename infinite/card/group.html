@@ -7,29 +7,120 @@
 <title>USWDS Card (Group)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "card",
+    "uswdsClass": "usa-card-group",
+    "section": "data-display",
+    "variant": "group",
+    "requiresJs": "no",
+    "interaction": [
+      "passive",
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "card",
+      "group",
+      "grid",
+      "container",
+      "layout"
+    ],
+    "description": "Card group container for laying out multiple cards in a grid.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Multiple cards in a grid",
+      "Topic cards on landing pages",
+      "Dashboard card layouts"
+    ],
+    "avoidWhen": [
+      "Single card display",
+      "Non-card grid layouts"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Use ul.usa-card-group as container. Each li contains a usa-card. Grid layout applied automatically.",
+    "relatedComponents": [
+      "collection",
+      "table"
+    ],
+    "variants": [
+      "default",
+      "flag",
+      "media",
+      "inset",
+      "header-flag",
+      "group"
+    ],
+    "settings": [
+      "$theme-card-border-radius",
+      "$theme-card-gap"
+    ],
+    "tokenOverrides": [
+      "$theme-card-border-radius",
+      "$theme-card-gap"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "ul.usa-card-group",
+      "li.usa-card__container",
+      "article.usa-card"
+    ],
+    "editable": [
+      "Individual card content within the group"
+    ],
+    "limitations": []
+  },
   "file": "card/group.html",
   "title": "Card (Group)",
-  "uswdsComponentType": "card",
-  "uswdsClass": "usa-card-group",
-  "description": "Card group container for laying out multiple cards in a grid.",
-  "section": "data-display",
-  "variant": "group",
-  "useWhen": ["Multiple cards in a grid", "Topic cards on landing pages", "Dashboard card layouts"],
-  "avoidWhen": ["Single card display", "Non-card grid layouts"],
-  "agentPrompt": "Use ul.usa-card-group as container. Each li contains a usa-card. Grid layout applied automatically.",
-  "editableAreas": ["Individual card content within the group"],
-  "preserveElements": ["ul.usa-card-group", "li.usa-card__container", "article.usa-card"],
-  "knownLimitations": [],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive", "click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "flag", "media", "inset", "header-flag", "group"],
-  "settings": ["$theme-card-border-radius", "$theme-card-gap"],
-  "relatedComponents": ["collection", "table"],
-  "tokenOverrides": ["$theme-card-border-radius", "$theme-card-gap"],
-  "tags": ["card", "group", "grid", "container", "layout"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 804,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Cards work in grid layouts — pair with layout utilities for columns",
+      "2. Keep the header/body/media block structure; do not flatten",
+      "3. One primary action per card; the whole card may link if content is single-purpose"
+    ]
+  }
 }
 </script>
 </head>

@@ -10,53 +10,131 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "range-slider",
+    "uswdsClass": "usa-range",
+    "section": "forms",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "drag",
+      "click",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "range",
+      "slider",
+      "input",
+      "select",
+      "value",
+      "drag",
+      "form",
+      "approximate"
+    ],
+    "description": "Allows users to choose an approximate number from a range by sliding a control.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Selecting approximate values within a range",
+      "Budget or quantity selection",
+      "When visual representation of range helps understanding",
+      "Settings that benefit from immediate visual feedback"
+    ],
+    "avoidWhen": [
+      "Precise values needed — use text input instead",
+      "Very large ranges where slider is imprecise",
+      "Mobile interfaces where slider is hard to control precisely"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Update min, max, and step attributes. Add value display element and update with JS. Use aria-label for accessibility if label is not visually present. Set appropriate default value.",
+    "relatedComponents": [
+      "form",
+      "text-input"
+    ],
+    "variants": [
+      "default"
+    ],
+    "settings": [
+      "$theme-range-border-radius"
+    ],
+    "tokenOverrides": [
+      "$theme-range-border-radius",
+      "$theme-range-thumb-border-color"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "input.usa-range type='range'",
+      "min, max, step attributes",
+      "Label associated with for attribute",
+      "aria-label or aria-labelledby for screen readers"
+    ],
+    "editable": [
+      "Minimum value (min attribute)",
+      "Maximum value (max attribute)",
+      "Step increment (step attribute)",
+      "Default value",
+      "Label text"
+    ],
+    "limitations": [
+      "Precise selection is difficult — always show current value",
+      "Mobile touch targets can be small",
+      "May not work well for very large or precise ranges"
+    ]
+  },
   "file": "range-slider/default.html",
   "title": "Range Slider",
-  "uswdsComponentType": "range-slider",
-  "uswdsClass": "usa-range",
-  "description": "Allows users to choose an approximate number from a range by sliding a control.",
-  "section": "forms",
-  "variant": "default",
-  "useWhen": [
-    "Selecting approximate values within a range",
-    "Budget or quantity selection",
-    "When visual representation of range helps understanding",
-    "Settings that benefit from immediate visual feedback"
-  ],
-  "avoidWhen": [
-    "Precise values needed — use text input instead",
-    "Very large ranges where slider is imprecise",
-    "Mobile interfaces where slider is hard to control precisely"
-  ],
-  "agentPrompt": "Update min, max, and step attributes. Add value display element and update with JS. Use aria-label for accessibility if label is not visually present. Set appropriate default value.",
-  "editableAreas": [
-    "Minimum value (min attribute)",
-    "Maximum value (max attribute)",
-    "Step increment (step attribute)",
-    "Default value",
-    "Label text"
-  ],
-  "preserveElements": [
-    "input.usa-range type='range'",
-    "min, max, step attributes",
-    "Label associated with for attribute",
-    "aria-label or aria-labelledby for screen readers"
-  ],
-  "knownLimitations": [
-    "Precise selection is difficult — always show current value",
-    "Mobile touch targets can be small",
-    "May not work well for very large or precise ranges"
-  ],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["drag", "click", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default"],
-  "settings": ["$theme-range-border-radius"],
-  "relatedComponents": ["form", "text-input"],
-  "tokenOverrides": ["$theme-range-border-radius", "$theme-range-thumb-border-color"],
-  "tags": ["range", "slider", "input", "select", "value", "drag", "form", "approximate"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Provides form context; place this input inside a form wrapper"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1038,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    }
+  }
 }
 </script>
 <style>

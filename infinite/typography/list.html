@@ -7,29 +7,113 @@
 <title>USWDS Typography (List)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "typography",
+    "uswdsClass": "typography",
+    "section": "typography",
+    "variant": "list",
+    "requiresJs": "no",
+    "interaction": [
+      "passive"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "typography",
+      "list",
+      "prose",
+      "ordered",
+      "unordered"
+    ],
+    "description": "Typography example showing list styles within prose.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Content with lists",
+      "Instructions",
+      "Enumerated information"
+    ],
+    "avoidWhen": [
+      "Minimal UI"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Use usa-prose class with usa-list for proper list styling.",
+    "relatedComponents": [
+      "prose",
+      "list"
+    ],
+    "variants": [
+      "default",
+      "typeset",
+      "link",
+      "list"
+    ],
+    "settings": [
+      "$theme-type-scale"
+    ],
+    "tokenOverrides": [
+      "$theme-type-scale"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-prose",
+      "ul.usa-list",
+      "ol.usa-list"
+    ],
+    "editable": [
+      "List items content"
+    ],
+    "limitations": []
+  },
   "file": "typography/list.html",
   "title": "Typography (List)",
-  "uswdsComponentType": "typography",
-  "uswdsClass": "typography",
-  "description": "Typography example showing list styles within prose.",
-  "section": "typography",
-  "variant": "list",
-  "useWhen": ["Content with lists", "Instructions", "Enumerated information"],
-  "avoidWhen": ["Minimal UI"],
-  "agentPrompt": "Use usa-prose class with usa-list for proper list styling.",
-  "editableAreas": ["List items content"],
-  "preserveElements": ["div.usa-prose", "ul.usa-list", "ol.usa-list"],
-  "knownLimitations": [],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "typeset", "link", "list"],
-  "settings": ["$theme-type-scale"],
-  "relatedComponents": ["prose", "list"],
-  "tokenOverrides": ["$theme-type-scale"],
-  "tags": ["typography", "list", "prose", "ordered", "unordered"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 665,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Keep font-family tokens (Source Sans 3 / Public Sans / Merriweather per USWDS roles)",
+      "2. Line length: cap body text near 68ch for readability"
+    ]
+  }
 }
 </script>
 </head>

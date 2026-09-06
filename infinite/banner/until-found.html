@@ -7,29 +7,119 @@
 <title>USWDS Banner (Until Found)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "banner",
+    "uswdsClass": "usa-banner",
+    "section": "supporting",
+    "variant": "until-found",
+    "requiresJs": "required",
+    "interaction": [
+      "click",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA",
+      "Required by US federal agencies"
+    ],
+    "tier": "curated",
+    "tags": [
+      "banner",
+      "until-found",
+      "hidden",
+      "html5",
+      "searchable"
+    ],
+    "description": "Banner using hidden='until-found' HTML5 pattern for content that remains searchable but hidden until expanded.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Modern browsers supporting HTML5 hidden until-found",
+      "Searchable collapsible content",
+      "usa.gov pattern"
+    ],
+    "avoidWhen": [
+      "Older browser support needed",
+      "Simple banner without accordion"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add hidden='until-found' attribute to usa-banner__content. Content is searchable but hidden until expanded via JS.",
+    "relatedComponents": [
+      "accordion",
+      "header",
+      "identifier"
+    ],
+    "variants": [
+      "default",
+      "medium",
+      "slim",
+      "until-found"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-banner__content[hidden='until-found']",
+      "button.usa-accordion__button"
+    ],
+    "editable": [
+      "Banner text content",
+      "Accordion expand/collapse behavior"
+    ],
+    "limitations": [
+      "Not supported in older browsers (Firefox < 124, Safari < 18)"
+    ]
+  },
   "file": "banner/until-found.html",
   "title": "Banner (Until Found)",
-  "uswdsComponentType": "banner",
-  "uswdsClass": "usa-banner",
-  "description": "Banner using hidden='until-found' HTML5 pattern for content that remains searchable but hidden until expanded.",
-  "section": "supporting",
-  "variant": "until-found",
-  "useWhen": ["Modern browsers supporting HTML5 hidden until-found", "Searchable collapsible content", "usa.gov pattern"],
-  "avoidWhen": ["Older browser support needed", "Simple banner without accordion"],
-  "agentPrompt": "Add hidden='until-found' attribute to usa-banner__content. Content is searchable but hidden until expanded via JS.",
-  "editableAreas": ["Banner text content", "Accordion expand/collapse behavior"],
-  "preserveElements": ["div.usa-banner__content[hidden='until-found']", "button.usa-accordion__button"],
-  "knownLimitations": ["Not supported in older browsers (Firefox < 124, Safari < 18)"],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["click", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA", "Required by US federal agencies"],
-  "variants": ["default", "medium", "slim", "until-found"],
-  "settings": [],
-  "relatedComponents": ["accordion", "header", "identifier"],
-  "tokenOverrides": [],
-  "tags": ["banner", "until-found", "hidden", "html5", "searchable"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1131,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place banner as the very first element in body, above header",
+      "2. Keep the expand/collapse JS intact — it is required for the official.gov domain message",
+      "3. Do not add content inside the banner beyond the standard copy"
+    ],
+    "compositionRecipes": [
+      "navigation-hierarchy"
+    ]
+  }
 }
 </script>
 </head>

@@ -7,29 +7,116 @@
 <title>USWDS Data Visualizations (Bar)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "data-visualizations",
+    "uswdsClass": "usa-chart-data",
+    "section": "data-display",
+    "variant": "bar",
+    "requiresJs": "optional",
+    "interaction": [
+      "hover",
+      "focus",
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "data-visualizations",
+      "bar",
+      "chart",
+      "graph"
+    ],
+    "description": "Bar chart visualization for categorical data.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Comparing categories",
+      "Showing distributions",
+      "Dashboard metrics"
+    ],
+    "avoidWhen": [
+      "Time series data",
+      "Part-to-whole relationships"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Use figure.usa-chart-container with canvas or SVG for bar charts. Include legend.",
+    "relatedComponents": [
+      "table",
+      "collection"
+    ],
+    "variants": [
+      "default",
+      "bar",
+      "line",
+      "pie"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "figure.usa-chart-container",
+      "canvas or svg",
+      "ul.usa-legend"
+    ],
+    "editable": [
+      "Chart data labels",
+      "Axis labels",
+      "Legend items"
+    ],
+    "limitations": [
+      "JavaScript library needed for dynamic charts"
+    ]
+  },
   "file": "data-visualizations/bar.html",
   "title": "Data Visualizations (Bar)",
-  "uswdsComponentType": "data-visualizations",
-  "uswdsClass": "usa-chart-data",
-  "description": "Bar chart visualization for categorical data.",
-  "section": "data-display",
-  "variant": "bar",
-  "useWhen": ["Comparing categories", "Showing distributions", "Dashboard metrics"],
-  "avoidWhen": ["Time series data", "Part-to-whole relationships"],
-  "agentPrompt": "Use figure.usa-chart-container with canvas or SVG for bar charts. Include legend.",
-  "editableAreas": ["Chart data labels", "Axis labels", "Legend items"],
-  "preserveElements": ["figure.usa-chart-container", "canvas or svg", "ul.usa-legend"],
-  "knownLimitations": ["JavaScript library needed for dynamic charts"],
-  "tier": "curated",
-  "requiresJs": "optional",
-  "interaction": ["hover", "focus", "click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "bar", "line", "pie"],
-  "settings": [],
-  "relatedComponents": ["table", "collection"],
-  "tokenOverrides": [],
-  "tags": ["data-visualizations", "bar", "chart", "graph"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "expensive",
+      "estimatedTokens": 744,
+      "renderingTimeMs": 35,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Charts require USWDS charts JS — keep the init call",
+      "2. Provide a data table fallback or aria-label summary for screen readers",
+      "3. Do not hardcode colors; use USWDS data-viz tokens"
+    ]
+  }
 }
 </script>
 </head>

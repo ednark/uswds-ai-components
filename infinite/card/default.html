@@ -10,53 +10,131 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "card",
+    "uswdsClass": "usa-card",
+    "section": "data-display",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "passive",
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "card",
+      "container",
+      "content",
+      "article",
+      "grid",
+      "display"
+    ],
+    "description": "Container for content and actions about a single subject.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Grouping related content about a single topic",
+      "Displaying discrete items in a grid or list layout",
+      "When content needs a visible container with clear boundaries",
+      "Articles, products, or service offerings"
+    ],
+    "avoidWhen": [
+      "Single column layouts where cards add unnecessary complexity",
+      "Dense data tables where cards would waste space",
+      "When semantic HTML sections or articles are more appropriate"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-card--flag for horizontal layout, usa-card--media for image + content, usa-card--inset for content with background, usa-card--header-flag for header image variant. Update heading level to match page hierarchy.",
+    "relatedComponents": [
+      "collection",
+      "table"
+    ],
+    "variants": [
+      "default",
+      "flag",
+      "media",
+      "inset",
+      "header-flag"
+    ],
+    "settings": [
+      "$theme-card-border-radius",
+      "$theme-card-gap"
+    ],
+    "tokenOverrides": [
+      "$theme-card-border-radius",
+      "$theme-card-gap"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "article.usa-card container",
+      "div.usa-card__header for card heading area",
+      "div.usa-card__body for main content",
+      "div.usa-card__footer for actions if present",
+      "Heading uses usa-card__heading class"
+    ],
+    "editable": [
+      "Card heading text and heading level (h2-h6)",
+      "Card body content and media",
+      "Card footer actions (buttons, links)",
+      "Image src and alt text for media variants"
+    ],
+    "limitations": [
+      "Cards are not responsive by default — use CSS Grid or Flexbox for responsive layouts",
+      "Flag variant requires specific DOM order (image first in header)",
+      "Media variant image must be in the header"
+    ]
+  },
   "file": "card/default.html",
   "title": "Card",
-  "uswdsComponentType": "card",
-  "uswdsClass": "usa-card",
-  "description": "Container for content and actions about a single subject.",
-  "section": "data-display",
-  "variant": "default",
-  "useWhen": [
-    "Grouping related content about a single topic",
-    "Displaying discrete items in a grid or list layout",
-    "When content needs a visible container with clear boundaries",
-    "Articles, products, or service offerings"
-  ],
-  "avoidWhen": [
-    "Single column layouts where cards add unnecessary complexity",
-    "Dense data tables where cards would waste space",
-    "When semantic HTML sections or articles are more appropriate"
-  ],
-  "agentPrompt": "Add usa-card--flag for horizontal layout, usa-card--media for image + content, usa-card--inset for content with background, usa-card--header-flag for header image variant. Update heading level to match page hierarchy.",
-  "editableAreas": [
-    "Card heading text and heading level (h2-h6)",
-    "Card body content and media",
-    "Card footer actions (buttons, links)",
-    "Image src and alt text for media variants"
-  ],
-  "preserveElements": [
-    "article.usa-card container",
-    "div.usa-card__header for card heading area",
-    "div.usa-card__body for main content",
-    "div.usa-card__footer for actions if present",
-    "Heading uses usa-card__heading class"
-  ],
-  "knownLimitations": [
-    "Cards are not responsive by default — use CSS Grid or Flexbox for responsive layouts",
-    "Flag variant requires specific DOM order (image first in header)",
-    "Media variant image must be in the header"
-  ],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive", "click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "flag", "media", "inset", "header-flag"],
-  "settings": ["$theme-card-border-radius", "$theme-card-gap"],
-  "relatedComponents": ["collection", "table"],
-  "tokenOverrides": ["$theme-card-border-radius", "$theme-card-gap"],
-  "tags": ["card", "container", "content", "article", "grid", "display"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1184,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Cards work in grid layouts — pair with layout utilities for columns",
+      "2. Keep the header/body/media block structure; do not flatten",
+      "3. One primary action per card; the whole card may link if content is single-purpose"
+    ]
+  }
 }
 </script>
 <style>

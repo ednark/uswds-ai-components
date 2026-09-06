@@ -7,29 +7,110 @@
 <title>USWDS Icon List (Icon Large)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "icon-list",
+    "uswdsClass": "usa-icon-list--icon-lg",
+    "section": "data-display",
+    "variant": "icon-lg",
+    "requiresJs": "no",
+    "interaction": [
+      "passive"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "icon-list",
+      "icon-lg",
+      "large",
+      "featured"
+    ],
+    "description": "Icon list with larger icon size for emphasis.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Featured lists",
+      "Landing page content",
+      "When icons need more prominence"
+    ],
+    "avoidWhen": [
+      "Dense content",
+      "Mobile with limited space"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-icon-list--icon-lg class to usa-icon-list. Larger icons.",
+    "relatedComponents": [
+      "list",
+      "process-list"
+    ],
+    "variants": [
+      "default",
+      "checklist",
+      "icon-lg"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "ul.usa-icon-list usa-icon-list--icon-lg",
+      "li.usa-icon-list__item"
+    ],
+    "editable": [
+      "List item text",
+      "Icon content"
+    ],
+    "limitations": [
+      "Takes more vertical space"
+    ]
+  },
   "file": "icon-list/icon-lg.html",
   "title": "Icon List (Icon Large)",
-  "uswdsComponentType": "icon-list",
-  "uswdsClass": "usa-icon-list--icon-lg",
-  "description": "Icon list with larger icon size for emphasis.",
-  "section": "data-display",
-  "variant": "icon-lg",
-  "useWhen": ["Featured lists", "Landing page content", "When icons need more prominence"],
-  "avoidWhen": ["Dense content", "Mobile with limited space"],
-  "agentPrompt": "Add usa-icon-list--icon-lg class to usa-icon-list. Larger icons.",
-  "editableAreas": ["List item text", "Icon content"],
-  "preserveElements": ["ul.usa-icon-list usa-icon-list--icon-lg", "li.usa-icon-list__item"],
-  "knownLimitations": ["Takes more vertical space"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "checklist", "icon-lg"],
-  "settings": [],
-  "relatedComponents": ["list", "process-list"],
-  "tokenOverrides": [],
-  "tags": ["icon-list", "icon-lg", "large", "featured"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 721,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Keep icon + text pairing; icons need aria-hidden='true' when decorative",
+      "2. Pair with USWDS icon sprite or inline SVG"
+    ]
+  }
 }
 </script>
 </head>

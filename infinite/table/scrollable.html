@@ -7,29 +7,120 @@
 <title>USWDS Table (Scrollable)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "table",
+    "uswdsClass": "usa-table-container--scrollable",
+    "section": "data-display",
+    "variant": "scrollable",
+    "requiresJs": "no",
+    "interaction": [
+      "passive",
+      "scroll"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "table",
+      "scrollable",
+      "horizontal",
+      "responsive"
+    ],
+    "description": "Table with horizontal scroll for wide tables on smaller screens.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Wide tables with many columns",
+      "Responsive tables",
+      "Mobile-friendly data display"
+    ],
+    "avoidWhen": [
+      "Narrow containers already",
+      "Tables that should be redesigned for narrow views"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Wrap usa-table in div.usa-table-container--scrollable to enable horizontal scroll.",
+    "relatedComponents": [
+      "card",
+      "collection"
+    ],
+    "variants": [
+      "default",
+      "borderless",
+      "striped",
+      "scrollable",
+      "stacked"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-table-container--scrollable",
+      "table.usa-table",
+      "thead",
+      "tbody"
+    ],
+    "editable": [
+      "Table headers",
+      "Table data cells",
+      "Column widths"
+    ],
+    "limitations": [
+      "Scroll indicator may not be obvious on touch devices"
+    ]
+  },
   "file": "table/scrollable.html",
   "title": "Table (Scrollable)",
-  "uswdsComponentType": "table",
-  "uswdsClass": "usa-table-container--scrollable",
-  "description": "Table with horizontal scroll for wide tables on smaller screens.",
-  "section": "data-display",
-  "variant": "scrollable",
-  "useWhen": ["Wide tables with many columns", "Responsive tables", "Mobile-friendly data display"],
-  "avoidWhen": ["Narrow containers already", "Tables that should be redesigned for narrow views"],
-  "agentPrompt": "Wrap usa-table in div.usa-table-container--scrollable to enable horizontal scroll.",
-  "editableAreas": ["Table headers", "Table data cells", "Column widths"],
-  "preserveElements": ["div.usa-table-container--scrollable", "table.usa-table", "thead", "tbody"],
-  "knownLimitations": ["Scroll indicator may not be obvious on touch devices"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive", "scroll"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "borderless", "striped", "scrollable", "stacked"],
-  "settings": [],
-  "relatedComponents": ["card", "collection"],
-  "tokenOverrides": [],
-  "tags": ["table", "scrollable", "horizontal", "responsive"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 831,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Wrap the table in a scrollable container for small screens (keep .usa-table-container--scrollable)",
+      "2. Provide a caption element — required for accessibility",
+      "3. Use scope='col'/'row' on headers; for sortable tables keep the JS"
+    ],
+    "compositionRecipes": [
+      "data-table-with-sorting"
+    ]
+  }
 }
 </script>
 </head>

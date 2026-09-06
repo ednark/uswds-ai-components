@@ -1,0 +1,85 @@
+{
+  "recipe": "contact-form",
+  "title": "Contact Form",
+  "description": "Accessible government contact form: labeled inputs, message field with character limit, error summary, and submit button.",
+  "aliases": ["collection:contact-form"],
+  "components": [
+    {
+      "order": 1,
+      "component": "form",
+      "variant": "default",
+      "file": "form/default.html",
+      "role": "root-container",
+      "reason": "Provides the form context every input requires (see coordination.prerequisites)"
+    },
+    {
+      "order": 2,
+      "component": "text-input",
+      "variant": "default",
+      "file": "text-input/default.html",
+      "role": "input",
+      "label": "Full name",
+      "required": true,
+      "reason": "Name field; instantiate once per additional text field (email, phone)"
+    },
+    {
+      "order": 3,
+      "component": "select",
+      "variant": "default",
+      "file": "select/default.html",
+      "role": "input",
+      "label": "Topic",
+      "required": true,
+      "reason": "Routes the message; swap for combo-box when there are more than 7 options"
+    },
+    {
+      "order": 4,
+      "component": "character-count",
+      "variant": "default",
+      "file": "character-count/default.html",
+      "role": "input",
+      "label": "Message",
+      "required": true,
+      "reason": "Message body with visible character limit"
+    },
+    {
+      "order": 5,
+      "component": "button",
+      "variant": "default",
+      "file": "button/default.html",
+      "role": "action",
+      "label": "Submit",
+      "required": true,
+      "reason": "Primary submit action; set type='submit'"
+    },
+    {
+      "order": 6,
+      "component": "validation",
+      "variant": "default",
+      "file": "validation/default.html",
+      "role": "feedback",
+      "label": "Error summary",
+      "required": false,
+      "reason": "Page-level error summary rendered when validation fails"
+    }
+  ],
+  "nesting": "Components 2-4 are children of component 1; component 5 is the last child of component 1; component 6 sits above component 1 at page level",
+  "validationOrder": [
+    "Full name is required",
+    "Topic is selected",
+    "Message is required and within character limit",
+    "Email format valid (when an email field is instantiated)"
+  ],
+  "a11yNotes": [
+    "Link each error message to its input with aria-describedby",
+    "Set aria-invalid='true' on failing inputs",
+    "Move focus to the validation summary when submission fails",
+    "Associate every label with its input via matching for/id attributes"
+  ],
+  "agentPromptSequence": [
+    "1. Fetch the form tile (order 1) and place it as the root container",
+    "2. Fetch input tiles (orders 2-4); instantiate text-input once per field needed",
+    "3. Fetch the button tile and place it as the last child of the form",
+    "4. On validation failure, render the validation summary above the form and link each error to its input id"
+  ]
+}

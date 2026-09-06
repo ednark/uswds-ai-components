@@ -7,29 +7,118 @@
 <title>USWDS Step Indicator (Centered)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "step-indicator",
+    "uswdsClass": "usa-step-indicator--centered",
+    "section": "navigation",
+    "variant": "centered",
+    "requiresJs": "required",
+    "interaction": [
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "step-indicator",
+      "centered",
+      "wizard",
+      "multistep"
+    ],
+    "description": "Step indicator with centered labels.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Multi-step forms",
+      "Wizard flows",
+      "Process documentation"
+    ],
+    "avoidWhen": [
+      "Simple 2-step processes",
+      "Mobile with limited space"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-step-indicator--centered class to usa-step-indicator.",
+    "relatedComponents": [
+      "process-list",
+      "button-group"
+    ],
+    "variants": [
+      "default",
+      "centered",
+      "no-labels"
+    ],
+    "settings": [
+      "$theme-step-indicator-counter-gap"
+    ],
+    "tokenOverrides": [
+      "$theme-step-indicator-counter-gap"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "ol.usa-step-indicator",
+      "li.usa-step-indicator__segment",
+      "span.usa-step-indicator__label"
+    ],
+    "editable": [
+      "Step labels",
+      "Current/completed states",
+      "Step numbers"
+    ],
+    "limitations": [
+      "JavaScript needed for state updates",
+      "Many steps may require scroll"
+    ]
+  },
   "file": "step-indicator/centered.html",
   "title": "Step Indicator (Centered)",
-  "uswdsComponentType": "step-indicator",
-  "uswdsClass": "usa-step-indicator--centered",
-  "description": "Step indicator with centered labels.",
-  "section": "navigation",
-  "variant": "centered",
-  "useWhen": ["Multi-step forms", "Wizard flows", "Process documentation"],
-  "avoidWhen": ["Simple 2-step processes", "Mobile with limited space"],
-  "agentPrompt": "Add usa-step-indicator--centered class to usa-step-indicator.",
-  "editableAreas": ["Step labels", "Current/completed states", "Step numbers"],
-  "preserveElements": ["ol.usa-step-indicator", "li.usa-step-indicator__segment", "span.usa-step-indicator__label"],
-  "knownLimitations": ["JavaScript needed for state updates", "Many steps may require scroll"],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "centered", "no-labels"],
-  "settings": ["$theme-step-indicator-counter-gap"],
-  "relatedComponents": ["process-list", "button-group"],
-  "tokenOverrides": ["$theme-step-indicator-counter-gap"],
-  "tags": ["step-indicator", "centered", "wizard", "multistep"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 847,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place above multi-step form sections",
+      "2. Mark completed/current steps with status classes; keep aria attributes",
+      "3. Pair each step with its own form section or page"
+    ]
+  }
 }
 </script>
 </head>

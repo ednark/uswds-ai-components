@@ -7,29 +7,117 @@
 <title>USWDS Radio Button (Error)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "radio-buttons",
+    "uswdsClass": "usa-radio__input--error",
+    "section": "forms",
+    "variant": "error",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "radio",
+      "error",
+      "validation"
+    ],
+    "description": "Radio button group showing error validation state.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Required radio validation",
+      "Must-select option errors"
+    ],
+    "avoidWhen": [
+      "Valid radio groups",
+      "Optional selections"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-radio__input--error class and usa-form-group--error parent.",
+    "relatedComponents": [
+      "checkbox",
+      "validation"
+    ],
+    "variants": [
+      "default",
+      "tile",
+      "error",
+      "success",
+      "disabled"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-form-group--error",
+      "fieldset.usa-fieldset"
+    ],
+    "editable": [
+      "Radio labels",
+      "Error message text"
+    ],
+    "limitations": []
+  },
   "file": "radio-buttons/error.html",
   "title": "Radio Button (Error)",
-  "uswdsComponentType": "radio-buttons",
-  "uswdsClass": "usa-radio__input--error",
-  "description": "Radio button group showing error validation state.",
-  "section": "forms",
-  "variant": "error",
-  "useWhen": ["Required radio validation", "Must-select option errors"],
-  "avoidWhen": ["Valid radio groups", "Optional selections"],
-  "agentPrompt": "Add usa-radio__input--error class and usa-form-group--error parent.",
-  "editableAreas": ["Radio labels", "Error message text"],
-  "preserveElements": ["div.usa-form-group--error", "fieldset.usa-fieldset"],
-  "knownLimitations": [],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "tile", "error", "success", "disabled"],
-  "settings": [],
-  "relatedComponents": ["checkbox", "validation"],
-  "tokenOverrides": [],
-  "tags": ["radio", "error", "validation"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Provides form context; place radios inside a form wrapper"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 788,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Fetch the form wrapper first",
+      "2. Always wrap a radio group in fieldset+legend",
+      "3. Give every radio in a group the same name and unique id"
+    ]
+  }
 }
 </script>
 </head>

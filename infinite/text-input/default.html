@@ -10,53 +10,147 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "text-input",
+    "uswdsClass": "usa-input",
+    "section": "forms",
+    "variant": "default",
+    "requiresJs": "optional",
+    "interaction": [
+      "focus",
+      "input",
+      "validation"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "text",
+      "input",
+      "field",
+      "form",
+      "entry",
+      "textbox",
+      "textfield"
+    ],
+    "description": "Allows users to enter any combination of letters, numbers, or symbols in a text field.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Collecting free-form text input",
+      "Name, address, or other personal information",
+      "Search queries",
+      "Any single-line text data"
+    ],
+    "avoidWhen": [
+      "Multiple lines of text — use textarea",
+      "Structured data with fixed formats — use specific input types",
+      "Boolean inputs — use checkboxes or toggles"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-input--error for error states, usa-input--success for validation success. Set autocomplete attribute for browser autofill. Update input type for specific data (email, tel, url, etc.).",
+    "relatedComponents": [
+      "form",
+      "validation",
+      "character-count"
+    ],
+    "variants": [
+      "default",
+      "error",
+      "success",
+      "disabled"
+    ],
+    "settings": [
+      "$theme-input-border-radius",
+      "$theme-input-state-border-width"
+    ],
+    "tokenOverrides": [
+      "$theme-input-border-radius",
+      "$theme-input-focus-border-color",
+      "$theme-input-state-border-width"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "label.usa-label with for attribute",
+      "input.usa-input with id matching label",
+      "span.usa-hint for helper text",
+      "usa-input--error or usa-input--success variants"
+    ],
+    "editable": [
+      "Input label text",
+      "Input type (text, email, tel, url, password)",
+      "Placeholder text",
+      "autocomplete attribute for better UX",
+      "Error/success variants"
+    ],
+    "limitations": [
+      "autocomplete attributes improve form UX significantly",
+      "Input types provide browser-native validation",
+      "Error messages need separate error styling"
+    ]
+  },
   "file": "text-input/default.html",
   "title": "Text Input",
-  "uswdsComponentType": "text-input",
-  "uswdsClass": "usa-input",
-  "description": "Allows users to enter any combination of letters, numbers, or symbols in a text field.",
-  "section": "forms",
-  "variant": "default",
-  "useWhen": [
-    "Collecting free-form text input",
-    "Name, address, or other personal information",
-    "Search queries",
-    "Any single-line text data"
-  ],
-  "avoidWhen": [
-    "Multiple lines of text — use textarea",
-    "Structured data with fixed formats — use specific input types",
-    "Boolean inputs — use checkboxes or toggles"
-  ],
-  "agentPrompt": "Add usa-input--error for error states, usa-input--success for validation success. Set autocomplete attribute for browser autofill. Update input type for specific data (email, tel, url, etc.).",
-  "editableAreas": [
-    "Input label text",
-    "Input type (text, email, tel, url, password)",
-    "Placeholder text",
-    "autocomplete attribute for better UX",
-    "Error/success variants"
-  ],
-  "preserveElements": [
-    "label.usa-label with for attribute",
-    "input.usa-input with id matching label",
-    "span.usa-hint for helper text",
-    "usa-input--error or usa-input--success variants"
-  ],
-  "knownLimitations": [
-    "autocomplete attributes improve form UX significantly",
-    "Input types provide browser-native validation",
-    "Error messages need separate error styling"
-  ],
-  "tier": "curated",
-  "requiresJs": "optional",
-  "interaction": ["focus", "input", "validation"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "error", "success", "disabled"],
-  "settings": ["$theme-input-border-radius", "$theme-input-state-border-width"],
-  "relatedComponents": ["form", "validation", "character-count"],
-  "tokenOverrides": ["$theme-input-border-radius", "$theme-input-focus-border-color", "$theme-input-state-border-width"],
-  "tags": ["text", "input", "field", "form", "entry", "textbox", "textfield"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Provides form context; place this input inside a form wrapper"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1292,
+      "renderingTimeMs": 35,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Fetch the form wrapper first (unless one already exists)",
+      "2. Pair this input with a label element via matching for/id attributes",
+      "3. Link error/hint messages with aria-describedby",
+      "4. Add inputmode/autocomplete attributes where appropriate"
+    ],
+    "compositionRecipes": [
+      "contact-form",
+      "error-handling-stack",
+      "login-flow"
+    ]
+  }
 }
 </script>
 <style>

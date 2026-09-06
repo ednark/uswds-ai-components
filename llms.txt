@@ -24,6 +24,14 @@ USWDS AI Components is a component registry for AI coding agents building govern
 1. Filter vocab (tiny): GET https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/facets.json
 2. Discovery index (lean): GET https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/components.index.json
 3. Component source: GET https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/{file}
+4. Recipes (multi-component patterns): GET https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/recipes/index.json
+   Ordered, nestable component sets for common patterns (contact-form, login-flow,
+   data-table-with-sorting, error-handling-stack, navigation-hierarchy). When the task
+   matches a recipe, fetch it first — one atomic fetch replaces N component lookups
+   plus assembly guesswork.
+5. Version history: GET https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/versions.json
+   Registry-level history: what changed between registry versions (breakingChanges,
+   addedFacets, migrationPath). Check after any gap between your fetches.
 
 ---
 
@@ -36,6 +44,13 @@ USWDS AI Components is a component registry for AI coding agents building govern
 - requiresJs — no, optional, required
 - govCompliance — Section 508, WCAG 2.1 AA, 21st Century IDEA, NIST Guidelines
 - a11y — wcag21AA, keyboardNav, screenReader, reducedMotion, forcedColors, ariaAttributes
+- costTier — cheap, moderate, expensive (composition cost: fetch size + JS behavior)
+- prerequisites — components that must be fetched/placed first (e.g., form before inputs)
+- compositionRecipes — recipes this component participates in
+- fedRampLevel — conservative suitability floor (IL2/IL2+/IL4/IL5); all tiles currently assert IL2+ pending compliance review
+- piiHandling — accepts_input (35), displays_only (95), none (16); nistControls and auditTrailCompatible in tile metadata
+- touchTargetSize — guaranteed mobile touch target (44px across all tiles)
+- supportedTokenProfiles — token profiles supported (highContrast on all tiles; darkMode/compactDensity defined in registry config, not yet asserted)
 
 ---
 
@@ -132,6 +147,10 @@ Each tile includes:
 - knownLimitations — caveats and constraints
 - tokenOverrides — USWDS design tokens commonly overridden
 - relatedComponents — USWDS components often used together
+- coordination — prerequisites, incompatibleWith, compositionCost, agentPromptSequence, compositionRecipes, variantRules
+- compliance — nistControls, fedRampLevel, section508, wcag21AA, piiHandling, auditTrailCompatible, dataMaskingCompatible
+- mobileUX — touchTargetSize, requiredMinSpacing, orientationLocked, fullscreenSafe
+- supportedTokenProfiles — token profiles this component supports (see registry.config.json tokenProfiles)
 
 ---
 
@@ -173,15 +192,19 @@ Common customization settings:
 
 ## Patterns
 
-When building common government UI patterns:
+When building common government UI patterns, check recipes first
+(recipes/index.json — they include fetch order, nesting, validation, and a11y notes):
 
 | Pattern | Components to retrieve |
 |---|---|
+| Contact form (recipe) | form + text-input + select + character-count + button + validation |
+| Login flow (recipe) | form + text-input + button + link + alert |
+| Error handling stack (recipe) | validation/alert + alert/error + summary-box/error + text-input/error |
+| Navigation hierarchy (recipe) | skip-nav + banner + header + breadcrumb + side-navigation + footer + identifier |
+| Data table (recipe) | table + pagination + summary-box |
 | Multi-step form | step-indicator + form + text-input + validation |
 | Alert-heavy page | alert + site-alert + summary-box |
-| Navigation-heavy | header + side-navigation + breadcrumb + in-page-navigation |
 | Data display | table + card + data-visualizations + collection |
-| Form submission | form + text-input + checkbox/radio + validation + character-count |
 | Search interface | header + search + pagination + breadcrumb |
 
 ---

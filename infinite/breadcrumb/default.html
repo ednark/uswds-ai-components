@@ -10,53 +10,131 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "breadcrumb",
+    "uswdsClass": "usa-breadcrumb",
+    "section": "navigation",
+    "variant": "default",
+    "requiresJs": "optional",
+    "interaction": [
+      "click",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "breadcrumb",
+      "navigation",
+      "path",
+      "hierarchy",
+      "secondary-nav"
+    ],
+    "description": "Secondary navigation showing user's location within the site hierarchy.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Users need to understand where they are in a multi-level website",
+      "Deep site hierarchies where users need to backtrack",
+      "Content organized in a clear hierarchy (3+ levels)",
+      "E-commerce, documentation, or organizational sites"
+    ],
+    "avoidWhen": [
+      "Shallow sites with only 1-2 levels",
+      "Mobile interfaces where space is extremely limited",
+      "When breadcrumbs would be longer than the main content"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add aria-label='Breadcrumb' to the nav element. Change list items to match actual page hierarchy. Update href values to point to correct parent pages. Add usa-breadcrumb--wrap for wrapping long breadcrumbs or usa-breadcrumb--naviprev-next for previous/next navigation.",
+    "relatedComponents": [
+      "pagination",
+      "side-navigation",
+      "step-indicator"
+    ],
+    "variants": [
+      "default",
+      "wrap",
+      "naviprev-next"
+    ],
+    "settings": [
+      "$theme-breadcrumb-font-family"
+    ],
+    "tokenOverrides": [
+      "$theme-breadcrumb-font-family",
+      "$theme-breadcrumb-background-color"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "nav.usa-breadcrumb wrapper with aria-label",
+      "ol.usa-breadcrumb__list for the trail",
+      "li.usa-breadcrumb__item for each level",
+      "Current page: span inside li (not a link) with aria-current='page'",
+      "usa-breadcrumb__link class on anchor elements"
+    ],
+    "editable": [
+      "Breadcrumb link text and href values",
+      "Current page text (should not be a link)",
+      "aria-label on the nav element",
+      "Variant: usa-breadcrumb--wrap or usa-breadcrumb--naviprev-next"
+    ],
+    "limitations": [
+      "Current page should never be a link — use span with aria-current",
+      "First item should typically be 'Home' linking to root",
+      "Long breadcrumb trails can wrap awkwardly on mobile"
+    ]
+  },
   "file": "breadcrumb/default.html",
   "title": "Breadcrumb",
-  "uswdsComponentType": "breadcrumb",
-  "uswdsClass": "usa-breadcrumb",
-  "description": "Secondary navigation showing user's location within the site hierarchy.",
-  "section": "navigation",
-  "variant": "default",
-  "useWhen": [
-    "Users need to understand where they are in a multi-level website",
-    "Deep site hierarchies where users need to backtrack",
-    "Content organized in a clear hierarchy (3+ levels)",
-    "E-commerce, documentation, or organizational sites"
-  ],
-  "avoidWhen": [
-    "Shallow sites with only 1-2 levels",
-    "Mobile interfaces where space is extremely limited",
-    "When breadcrumbs would be longer than the main content"
-  ],
-  "agentPrompt": "Add aria-label='Breadcrumb' to the nav element. Change list items to match actual page hierarchy. Update href values to point to correct parent pages. Add usa-breadcrumb--wrap for wrapping long breadcrumbs or usa-breadcrumb--naviprev-next for previous/next navigation.",
-  "editableAreas": [
-    "Breadcrumb link text and href values",
-    "Current page text (should not be a link)",
-    "aria-label on the nav element",
-    "Variant: usa-breadcrumb--wrap or usa-breadcrumb--naviprev-next"
-  ],
-  "preserveElements": [
-    "nav.usa-breadcrumb wrapper with aria-label",
-    "ol.usa-breadcrumb__list for the trail",
-    "li.usa-breadcrumb__item for each level",
-    "Current page: span inside li (not a link) with aria-current='page'",
-    "usa-breadcrumb__link class on anchor elements"
-  ],
-  "knownLimitations": [
-    "Current page should never be a link — use span with aria-current",
-    "First item should typically be 'Home' linking to root",
-    "Long breadcrumb trails can wrap awkwardly on mobile"
-  ],
-  "tier": "curated",
-  "requiresJs": "optional",
-  "interaction": ["click", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "wrap", "naviprev-next"],
-  "settings": ["$theme-breadcrumb-font-family"],
-  "relatedComponents": ["pagination", "side-navigation", "step-indicator"],
-  "tokenOverrides": ["$theme-breadcrumb-font-family", "$theme-breadcrumb-background-color"],
-  "tags": ["breadcrumb", "navigation", "path", "hierarchy", "secondary-nav"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1220,
+      "renderingTimeMs": 35,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place below header, above page h1",
+      "2. Keep the ordered-list structure and aria-label='Breadcrumb'",
+      "3. Last item is the current page — keep aria-current='page'"
+    ],
+    "compositionRecipes": [
+      "navigation-hierarchy"
+    ]
+  }
 }
 </script>
 <style>

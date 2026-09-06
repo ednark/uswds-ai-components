@@ -10,54 +10,142 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "select",
+    "uswdsClass": "usa-select",
+    "section": "forms",
+    "variant": "default",
+    "requiresJs": "optional",
+    "interaction": [
+      "click",
+      "focus",
+      "keyboard"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "select",
+      "dropdown",
+      "option",
+      "choose",
+      "form",
+      "pick",
+      "menu"
+    ],
+    "description": "Allows users to choose one option from a dropdown menu.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Single selection from 3-10 options",
+      "When space is limited and options shouldn't be visible",
+      "When users need to see all available options for reference",
+      "Simple categorical selection without typeahead needs"
+    ],
+    "avoidWhen": [
+      "More than 10 options — use combo box for typeahead",
+      "Multiple selections — use checkboxes",
+      "Binary choices — use radio buttons",
+      "When all options need to be visible at once"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-select--error for error state styling. Update option elements inside select. Set first option as placeholder with empty value. Add selected attribute for pre-selection.",
+    "relatedComponents": [
+      "combo-box",
+      "form",
+      "checkbox"
+    ],
+    "variants": [
+      "default",
+      "error"
+    ],
+    "settings": [
+      "$theme-select-border-radius"
+    ],
+    "tokenOverrides": [
+      "$theme-select-border-radius",
+      "$theme-input-state-border-width"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "label.usa-label with for attribute",
+      "select.usa-select element",
+      "option elements for each choice",
+      "First option as placeholder with empty value"
+    ],
+    "editable": [
+      "Select label text",
+      "Option text and values",
+      "Default selected option",
+      "Placeholder option text",
+      "Error variant: usa-select--error"
+    ],
+    "limitations": [
+      "Styling select elements is limited by browser defaults",
+      "JavaScript not required but enhances UX",
+      "Mobile devices handle selects natively"
+    ]
+  },
   "file": "select/default.html",
   "title": "Select",
-  "uswdsComponentType": "select",
-  "uswdsClass": "usa-select",
-  "description": "Allows users to choose one option from a dropdown menu.",
-  "section": "forms",
-  "variant": "default",
-  "useWhen": [
-    "Single selection from 3-10 options",
-    "When space is limited and options shouldn't be visible",
-    "When users need to see all available options for reference",
-    "Simple categorical selection without typeahead needs"
-  ],
-  "avoidWhen": [
-    "More than 10 options — use combo box for typeahead",
-    "Multiple selections — use checkboxes",
-    "Binary choices — use radio buttons",
-    "When all options need to be visible at once"
-  ],
-  "agentPrompt": "Add usa-select--error for error state styling. Update option elements inside select. Set first option as placeholder with empty value. Add selected attribute for pre-selection.",
-  "editableAreas": [
-    "Select label text",
-    "Option text and values",
-    "Default selected option",
-    "Placeholder option text",
-    "Error variant: usa-select--error"
-  ],
-  "preserveElements": [
-    "label.usa-label with for attribute",
-    "select.usa-select element",
-    "option elements for each choice",
-    "First option as placeholder with empty value"
-  ],
-  "knownLimitations": [
-    "Styling select elements is limited by browser defaults",
-    "JavaScript not required but enhances UX",
-    "Mobile devices handle selects natively"
-  ],
-  "tier": "curated",
-  "requiresJs": "optional",
-  "interaction": ["click", "focus", "keyboard"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "error"],
-  "settings": ["$theme-select-border-radius"],
-  "relatedComponents": ["combo-box", "form", "checkbox"],
-  "tokenOverrides": ["$theme-select-border-radius", "$theme-input-state-border-width"],
-  "tags": ["select", "dropdown", "option", "choose", "form", "pick", "menu"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Provides form context; place this select inside a form wrapper"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1165,
+      "renderingTimeMs": 35,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Fetch the form wrapper first (unless one already exists)",
+      "2. Pair with a label via for/id",
+      "3. For more than 7 options, prefer combo-box over select",
+      "4. Keep the first option as a placeholder ('- Select -')"
+    ],
+    "compositionRecipes": [
+      "contact-form"
+    ]
+  }
 }
 </script>
 <style>

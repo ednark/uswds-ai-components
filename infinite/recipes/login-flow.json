@@ -1,0 +1,74 @@
+{
+  "recipe": "login-flow",
+  "title": "Login Flow",
+  "description": "Accessible sign-in form with credentials fields, error feedback for failed attempts, and recovery links.",
+  "aliases": ["collection:login-flow"],
+  "components": [
+    {
+      "order": 1,
+      "component": "form",
+      "variant": "default",
+      "file": "form/default.html",
+      "role": "root-container",
+      "reason": "Root form context for credential inputs"
+    },
+    {
+      "order": 2,
+      "component": "text-input",
+      "variant": "default",
+      "file": "text-input/default.html",
+      "role": "input",
+      "label": "Username or email",
+      "required": true,
+      "reason": "Instantiate twice: once for username (autocomplete='username'), once for password (type='password', autocomplete='current-password')"
+    },
+    {
+      "order": 3,
+      "component": "button",
+      "variant": "default",
+      "file": "button/default.html",
+      "role": "action",
+      "label": "Sign in",
+      "required": true,
+      "reason": "Primary submit action; the only primary button on the page"
+    },
+    {
+      "order": 4,
+      "component": "link",
+      "variant": "default",
+      "file": "link/default.html",
+      "role": "recovery",
+      "label": "Forgot password?",
+      "required": false,
+      "reason": "Recovery path placed below the form"
+    },
+    {
+      "order": 5,
+      "component": "alert",
+      "variant": "error",
+      "file": "alert/error.html",
+      "role": "feedback",
+      "required": false,
+      "reason": "Rendered above the form only when authentication fails"
+    }
+  ],
+  "nesting": "Components 2-3 are children of component 1 (button last); component 4 is a sibling below the form; component 5 sits above component 1 when present",
+  "validationOrder": [
+    "Username is required",
+    "Password is required",
+    "On authentication failure, show the error alert with a generic message"
+  ],
+  "a11yNotes": [
+    "Use autocomplete='username' and autocomplete='current-password'",
+    "Password field must have type='password' and an associated label",
+    "Error alert must use role='alert' so screen readers announce failures",
+    "Do not disable the submit button while typing; validate on submit"
+  ],
+  "agentPromptSequence": [
+    "1. Fetch the form tile (order 1) as the page's root container",
+    "2. Instantiate text-input twice inside the form: username then password",
+    "3. Add the sign-in button as the last child of the form",
+    "4. Add the recovery link below the form",
+    "5. Conditionally render the error alert above the form on failed sign-in"
+  ]
+}

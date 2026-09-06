@@ -1,5 +1,6 @@
 {
   "schemaVersion": 1,
+  "metadataSchemaVersion": 2,
   "generatedBy": "_base/generate-index.mjs",
   "total": 146,
   "designSystem": "U.S. Web Design System 3.13.0",
@@ -176,6 +177,36 @@
       "link": 1,
       "typeset": 1,
       "alert": 1
+    },
+    "costTier": {
+      "moderate": 70,
+      "cheap": 72,
+      "expensive": 4
+    },
+    "prerequisites": {
+      "form": 35,
+      "header": 1
+    },
+    "compositionRecipes": {
+      "error-handling-stack": 16,
+      "login-flow": 24,
+      "navigation-hierarchy": 26,
+      "contact-form": 25,
+      "data-table-with-sorting": 11
+    },
+    "fedRampLevel": {
+      "IL2+": 146
+    },
+    "piiHandling": {
+      "displays_only": 95,
+      "none": 16,
+      "accepts_input": 35
+    },
+    "touchTargetSize": {
+      "44px": 146
+    },
+    "supportedTokenProfiles": {
+      "highContrast": 146
     }
   }
 }

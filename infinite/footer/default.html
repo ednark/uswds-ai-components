@@ -10,53 +10,131 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "footer",
+    "uswdsClass": "usa-footer",
+    "section": "layout",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "footer",
+      "navigation",
+      "links",
+      "legal",
+      "agency",
+      "contact"
+    ],
+    "description": "Serves visitors who reach the bottom of a page without finding what they need.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Every page needs a footer for complete navigation",
+      "Providing secondary links and resources",
+      "Displaying required legal/agency information",
+      "Offering contact information and support links"
+    ],
+    "avoidWhen": [
+      "Full-screen applications without page metaphor",
+      "Landing pages where footer links would distract from CTA"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Update agency name and links. Add usa-footer--slim for compact version, usa-footer--big for extensive footer with multiple columns. Update logo and contact information. Add required agency links per federal guidelines.",
+    "relatedComponents": [
+      "header",
+      "identifier",
+      "link"
+    ],
+    "variants": [
+      "default",
+      "slim",
+      "big"
+    ],
+    "settings": [
+      "$theme-footer-font-family"
+    ],
+    "tokenOverrides": [
+      "$theme-footer-font-family"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "footer.usa-footer wrapper",
+      "div.usa-footer__primary-section for main links",
+      "div.usa-footer__secondary-section for additional info",
+      "usa-footer__logo for agency branding",
+      "Return to top link with anchor href='#main-content'"
+    ],
+    "editable": [
+      "Agency name and logo",
+      "Footer link text and href values",
+      "Contact information",
+      "Legal links (privacy, terms, accessibility)",
+      "Variant: usa-footer--slim or usa-footer--big"
+    ],
+    "limitations": [
+      "Federal websites require specific links per 21st Century IDEA",
+      "Identifier component is often required below the footer",
+      "Slim variant removes some navigation sections"
+    ]
+  },
   "file": "footer/default.html",
   "title": "Footer",
-  "uswdsComponentType": "footer",
-  "uswdsClass": "usa-footer",
-  "description": "Serves visitors who reach the bottom of a page without finding what they need.",
-  "section": "layout",
-  "variant": "default",
-  "useWhen": [
-    "Every page needs a footer for complete navigation",
-    "Providing secondary links and resources",
-    "Displaying required legal/agency information",
-    "Offering contact information and support links"
-  ],
-  "avoidWhen": [
-    "Full-screen applications without page metaphor",
-    "Landing pages where footer links would distract from CTA"
-  ],
-  "agentPrompt": "Update agency name and links. Add usa-footer--slim for compact version, usa-footer--big for extensive footer with multiple columns. Update logo and contact information. Add required agency links per federal guidelines.",
-  "editableAreas": [
-    "Agency name and logo",
-    "Footer link text and href values",
-    "Contact information",
-    "Legal links (privacy, terms, accessibility)",
-    "Variant: usa-footer--slim or usa-footer--big"
-  ],
-  "preserveElements": [
-    "footer.usa-footer wrapper",
-    "div.usa-footer__primary-section for main links",
-    "div.usa-footer__secondary-section for additional info",
-    "usa-footer__logo for agency branding",
-    "Return to top link with anchor href='#main-content'"
-  ],
-  "knownLimitations": [
-    "Federal websites require specific links per 21st Century IDEA",
-    "Identifier component is often required below the footer",
-    "Slim variant removes some navigation sections"
-  ],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "slim", "big"],
-  "settings": ["$theme-footer-font-family"],
-  "relatedComponents": ["header", "identifier", "link"],
-  "tokenOverrides": ["$theme-footer-font-family"],
-  "tags": ["footer", "navigation", "links", "legal", "agency", "contact"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1196,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place footer as the last element in body",
+      "2. Pair with identifier below it for official government branding",
+      "3. Keep footer nav links flat — no nested menus"
+    ],
+    "compositionRecipes": [
+      "navigation-hierarchy"
+    ]
+  }
 }
 </script>
 <style>

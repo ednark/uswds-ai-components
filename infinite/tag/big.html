@@ -7,29 +7,113 @@
 <title>USWDS Tag (Big)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "tag",
+    "uswdsClass": "usa-tag--big",
+    "section": "data-display",
+    "variant": "big",
+    "requiresJs": "no",
+    "interaction": [
+      "passive",
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "tag",
+      "big",
+      "large",
+      "label"
+    ],
+    "description": "Larger tag variant for emphasis.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Featured categories",
+      "Status emphasis",
+      "Large card tags"
+    ],
+    "avoidWhen": [
+      "Compact interfaces",
+      "Inline text tags",
+      "Dense data displays"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-tag--big class to usa-tag. Larger text and padding.",
+    "relatedComponents": [
+      "link",
+      "badge"
+    ],
+    "variants": [
+      "default",
+      "big"
+    ],
+    "settings": [
+      "$theme-tag-font-family"
+    ],
+    "tokenOverrides": [
+      "$theme-tag-font-family"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "span.usa-tag"
+    ],
+    "editable": [
+      "Tag text content"
+    ],
+    "limitations": [
+      "Uses more visual space"
+    ]
+  },
   "file": "tag/big.html",
   "title": "Tag (Big)",
-  "uswdsComponentType": "tag",
-  "uswdsClass": "usa-tag--big",
-  "description": "Larger tag variant for emphasis.",
-  "section": "data-display",
-  "variant": "big",
-  "useWhen": ["Featured categories", "Status emphasis", "Large card tags"],
-  "avoidWhen": ["Compact interfaces", "Inline text tags", "Dense data displays"],
-  "agentPrompt": "Add usa-tag--big class to usa-tag. Larger text and padding.",
-  "editableAreas": ["Tag text content"],
-  "preserveElements": ["span.usa-tag"],
-  "knownLimitations": ["Uses more visual space"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive", "click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "big"],
-  "settings": ["$theme-tag-font-family"],
-  "relatedComponents": ["link", "badge"],
-  "tokenOverrides": ["$theme-tag-font-family"],
-  "tags": ["tag", "big", "large", "label"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 566,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Tags label content; do not use as interactive buttons",
+      "2. For removable tags, pair with an accessible remove button"
+    ]
+  }
 }
 </script>
 </head>

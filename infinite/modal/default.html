@@ -10,58 +10,144 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "modal",
+    "uswdsClass": "usa-modal",
+    "section": "feedback",
+    "variant": "default",
+    "requiresJs": "required",
+    "interaction": [
+      "click",
+      "keyboard",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "modal",
+      "dialog",
+      "popup",
+      "overlay",
+      "confirm",
+      "focus",
+      "alert"
+    ],
+    "description": "Disables page content and focuses user's attention on a single task or message.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Critical confirmations before destructive actions",
+      "Focused tasks that shouldn't be interrupted",
+      "Important alerts requiring immediate attention",
+      "Quick data entry or editing"
+    ],
+    "avoidWhen": [
+      "Non-critical information that doesn't need focus",
+      "Complex multi-step workflows (use page flow instead)",
+      "Content users need to reference while working elsewhere",
+      "Mobile interfaces where modals are disruptive"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-modal--lg for larger modal. Update modal heading and body content. Add aria-labelledby and aria-describedby to link to heading and body content. Add close button with usa-modal__close class.",
+    "relatedComponents": [
+      "alert",
+      "tooltip",
+      "banner"
+    ],
+    "variants": [
+      "default",
+      "lg"
+    ],
+    "settings": [
+      "$theme-modal-border-radius"
+    ],
+    "tokenOverrides": [
+      "$theme-modal-border-radius",
+      "$theme-modal-lg-max-width"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-modal-wrapper for overlay",
+      "div.usa-modal for the dialog",
+      "h2.usa-modal__heading for title",
+      "div.usa-modal__content for body",
+      "div.usa-modal__footer for actions",
+      "button.usa-modal__close for dismiss",
+      "aria-labelledby and aria-describedby"
+    ],
+    "editable": [
+      "Modal heading text",
+      "Modal body content",
+      "Action buttons in footer",
+      "Close button text",
+      "Size variant: default or usa-modal--lg"
+    ],
+    "limitations": [
+      "JavaScript required for open/close behavior",
+      "Focus is trapped within modal when open",
+      "Body scroll is locked when modal is open",
+      "Must provide aria-label or aria-labelledby"
+    ]
+  },
   "file": "modal/default.html",
   "title": "Modal",
-  "uswdsComponentType": "modal",
-  "uswdsClass": "usa-modal",
-  "description": "Disables page content and focuses user's attention on a single task or message.",
-  "section": "feedback",
-  "variant": "default",
-  "useWhen": [
-    "Critical confirmations before destructive actions",
-    "Focused tasks that shouldn't be interrupted",
-    "Important alerts requiring immediate attention",
-    "Quick data entry or editing"
-  ],
-  "avoidWhen": [
-    "Non-critical information that doesn't need focus",
-    "Complex multi-step workflows (use page flow instead)",
-    "Content users need to reference while working elsewhere",
-    "Mobile interfaces where modals are disruptive"
-  ],
-  "agentPrompt": "Add usa-modal--lg for larger modal. Update modal heading and body content. Add aria-labelledby and aria-describedby to link to heading and body content. Add close button with usa-modal__close class.",
-  "editableAreas": [
-    "Modal heading text",
-    "Modal body content",
-    "Action buttons in footer",
-    "Close button text",
-    "Size variant: default or usa-modal--lg"
-  ],
-  "preserveElements": [
-    "div.usa-modal-wrapper for overlay",
-    "div.usa-modal for the dialog",
-    "h2.usa-modal__heading for title",
-    "div.usa-modal__content for body",
-    "div.usa-modal__footer for actions",
-    "button.usa-modal__close for dismiss",
-    "aria-labelledby and aria-describedby"
-  ],
-  "knownLimitations": [
-    "JavaScript required for open/close behavior",
-    "Focus is trapped within modal when open",
-    "Body scroll is locked when modal is open",
-    "Must provide aria-label or aria-labelledby"
-  ],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["click", "keyboard", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "lg"],
-  "settings": ["$theme-modal-border-radius"],
-  "relatedComponents": ["alert", "tooltip", "banner"],
-  "tokenOverrides": ["$theme-modal-border-radius", "$theme-modal-lg-max-width"],
-  "tags": ["modal", "dialog", "popup", "overlay", "confirm", "focus", "alert"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [
+      {
+        "name": "header",
+        "reason": "Do not place modals inside page chrome components; modal belongs at body level"
+      },
+      {
+        "name": "form",
+        "reason": "A form wrapper inside a modal is fine, but the modal itself must not be nested inside another form"
+      }
+    ],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1304,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place the modal wrapper at the end of body",
+      "2. Keep open/close JS and focus trap intact",
+      "3. Trigger buttons reference the modal id via data attributes"
+    ]
+  }
 }
 </script>
 <style>

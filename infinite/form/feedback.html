@@ -7,29 +7,128 @@
 <title>USWDS Form (Feedback)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "form",
+    "uswdsClass": "usa-form",
+    "section": "forms",
+    "variant": "feedback",
+    "requiresJs": "required",
+    "interaction": [
+      "click",
+      "submit"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "form",
+      "feedback",
+      "helpful",
+      "yes-no",
+      "survey",
+      "page-feedback"
+    ],
+    "description": "Feedback form pattern asking 'Was this page helpful?' with Yes/No buttons.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Page feedback collection",
+      "User satisfaction tracking",
+      "Content improvement metrics"
+    ],
+    "avoidWhen": [
+      "Forms requiring detailed input",
+      "When feedback isn't actionable"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Use usa-form class. Include a span with question text and two usa-button submit buttons (Yes/No). Handle via AJAX or form post.",
+    "relatedComponents": [
+      "button",
+      "validation"
+    ],
+    "variants": [
+      "default",
+      "feedback"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "form.usa-form",
+      "span.helpful_title",
+      "input.usa-button"
+    ],
+    "editable": [
+      "Question text",
+      "Button labels",
+      "Response messages"
+    ],
+    "limitations": [
+      "Requires backend handling",
+      "Typically needs AJAX for inline response"
+    ]
+  },
   "file": "form/feedback.html",
   "title": "Form (Feedback)",
-  "uswdsComponentType": "form",
-  "uswdsClass": "usa-form",
-  "description": "Feedback form pattern asking 'Was this page helpful?' with Yes/No buttons.",
-  "section": "forms",
-  "variant": "feedback",
-  "useWhen": ["Page feedback collection", "User satisfaction tracking", "Content improvement metrics"],
-  "avoidWhen": ["Forms requiring detailed input", "When feedback isn't actionable"],
-  "agentPrompt": "Use usa-form class. Include a span with question text and two usa-button submit buttons (Yes/No). Handle via AJAX or form post.",
-  "editableAreas": ["Question text", "Button labels", "Response messages"],
-  "preserveElements": ["form.usa-form", "span.helpful_title", "input.usa-button"],
-  "knownLimitations": ["Requires backend handling", "Typically needs AJAX for inline response"],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["click", "submit"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "feedback"],
-  "settings": [],
-  "relatedComponents": ["button", "validation"],
-  "tokenOverrides": [],
-  "tags": ["form", "feedback", "helpful", "yes-no", "survey", "page-feedback"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [
+      {
+        "name": "navbar",
+        "reason": "Nested forms are invalid HTML; never place a form inside a nav form"
+      }
+    ],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 796,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Use this form element as the root container for a group of inputs",
+      "2. Add one label+input pair per field (text-input, select, checkbox, etc.)",
+      "3. Add a submit button as the last child",
+      "4. Link validation messages to inputs with aria-describedby"
+    ],
+    "compositionRecipes": [
+      "contact-form",
+      "login-flow"
+    ]
+  }
 }
 </script>
 </head>

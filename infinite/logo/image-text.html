@@ -7,29 +7,120 @@
 <title>USWDS Logo (Image + Text)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "logo",
+    "uswdsClass": "usa-logo",
+    "section": "navigation",
+    "variant": "image-text",
+    "requiresJs": "no",
+    "interaction": [
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "logo",
+      "image",
+      "text",
+      "tagline",
+      "branding",
+      "agency"
+    ],
+    "description": "Logo variant combining an image with text and optional tagline.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Agency branding",
+      "When logo image alone isn't enough",
+      "Sites needing name + tagline"
+    ],
+    "avoidWhen": [
+      "Simple text-only logos",
+      "When image alone suffices"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Use usa-logo with usa-logo__text containing an <a> with both img.usa-logo-img and a div.logo-text with strong and tagline.",
+    "relatedComponents": [
+      "header",
+      "navbar"
+    ],
+    "variants": [
+      "default",
+      "image-text"
+    ],
+    "settings": [
+      "$theme-header-logo-width"
+    ],
+    "tokenOverrides": [
+      "$theme-header-logo-width"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-logo",
+      "em.usa-logo__text",
+      "a.logo-img",
+      "img.usa-logo-img",
+      "div.logo-text"
+    ],
+    "editable": [
+      "Logo image src and alt",
+      "Logo text",
+      "Tagline text"
+    ],
+    "limitations": [
+      "Needs custom CSS for text layout",
+      "Image + text may overflow on small screens"
+    ]
+  },
   "file": "logo/image-text.html",
   "title": "Logo (Image + Text)",
-  "uswdsComponentType": "logo",
-  "uswdsClass": "usa-logo",
-  "description": "Logo variant combining an image with text and optional tagline.",
-  "section": "navigation",
-  "variant": "image-text",
-  "useWhen": ["Agency branding", "When logo image alone isn't enough", "Sites needing name + tagline"],
-  "avoidWhen": ["Simple text-only logos", "When image alone suffices"],
-  "agentPrompt": "Use usa-logo with usa-logo__text containing an <a> with both img.usa-logo-img and a div.logo-text with strong and tagline.",
-  "editableAreas": ["Logo image src and alt", "Logo text", "Tagline text"],
-  "preserveElements": ["div.usa-logo", "em.usa-logo__text", "a.logo-img", "img.usa-logo-img", "div.logo-text"],
-  "knownLimitations": ["Needs custom CSS for text layout", "Image + text may overflow on small screens"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "image-text"],
-  "settings": ["$theme-header-logo-width"],
-  "relatedComponents": ["header", "navbar"],
-  "tokenOverrides": ["$theme-header-logo-width"],
-  "tags": ["logo", "image", "text", "tagline", "branding", "agency"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 745,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place in header; link to homepage with aria-label",
+      "2. Keep img alt text meaningful"
+    ]
+  }
 }
 </script>
 </head>

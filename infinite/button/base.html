@@ -7,29 +7,154 @@
 <title>USWDS Button (Base)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "button",
+    "uswdsClass": "usa-button usa-button--base",
+    "section": "utilities",
+    "variant": "base",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus",
+      "hover"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "button",
+      "base",
+      "gray",
+      "neutral"
+    ],
+    "description": "Button using the base gray color, less prominent than default primary.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "none",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Less prominent actions",
+      "Secondary actions in groups",
+      "Neutral interfaces"
+    ],
+    "avoidWhen": [
+      "Primary CTAs",
+      "When maximum contrast is needed"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Use usa-button--base class. Same structure as default button.",
+    "relatedComponents": [
+      "button-group",
+      "link"
+    ],
+    "variants": [
+      "default",
+      "secondary",
+      "accent-cool",
+      "accent-warm",
+      "base",
+      "outline",
+      "outline-inverse",
+      "big",
+      "unstyled"
+    ],
+    "settings": [
+      "$theme-button-border-radius"
+    ],
+    "tokenOverrides": [
+      "$theme-button-border-radius"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "usa-button base class",
+      "usa-button--base variant",
+      "type attribute"
+    ],
+    "editable": [
+      "Button label text",
+      "type attribute"
+    ],
+    "limitations": [
+      "Always set type attribute"
+    ]
+  },
   "file": "button/base.html",
   "title": "Button (Base)",
-  "uswdsComponentType": "button",
-  "uswdsClass": "usa-button usa-button--base",
-  "description": "Button using the base gray color, less prominent than default primary.",
-  "section": "utilities",
-  "variant": "base",
-  "useWhen": ["Less prominent actions", "Secondary actions in groups", "Neutral interfaces"],
-  "avoidWhen": ["Primary CTAs", "When maximum contrast is needed"],
-  "agentPrompt": "Use usa-button--base class. Same structure as default button.",
-  "editableAreas": ["Button label text", "type attribute"],
-  "preserveElements": ["usa-button base class", "usa-button--base variant", "type attribute"],
-  "knownLimitations": ["Always set type attribute"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "focus", "hover"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "secondary", "accent-cool", "accent-warm", "base", "outline", "outline-inverse", "big", "unstyled"],
-  "settings": ["$theme-button-border-radius"],
-  "relatedComponents": ["button-group", "link"],
-  "tokenOverrides": ["$theme-button-border-radius"],
-  "tags": ["button", "base", "gray", "neutral"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [
+      {
+        "name": "button-group",
+        "reason": "Button groups override individual button event handlers; style buttons directly instead"
+      }
+    ],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 727,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "variantRules": {
+      "note": "Color variants are mutually exclusive (pick one); size and state classes combine with any color variant",
+      "exclusiveGroups": [
+        [
+          "default",
+          "secondary",
+          "accent-cool",
+          "accent-warm",
+          "base",
+          "outline",
+          "outline-inverse",
+          "unstyled"
+        ]
+      ],
+      "combinable": [
+        "big",
+        "hover",
+        "active",
+        "focus"
+      ]
+    },
+    "agentPromptSequence": [
+      "1. Inside forms, set type='submit'; standalone buttons use type='button'",
+      "2. Use one primary button per view; other actions become secondary/outline",
+      "3. Place the button as the last interactive element of its form or section"
+    ],
+    "compositionRecipes": [
+      "contact-form",
+      "login-flow"
+    ]
+  }
 }
 </script>
 </head>

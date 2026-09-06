@@ -7,29 +7,158 @@
 <title>USWDS Button (Outline)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "button",
+    "uswdsClass": "usa-button usa-button--outline",
+    "section": "utilities",
+    "variant": "outline",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus",
+      "hover"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "button",
+      "outline",
+      "transparent",
+      "stroke"
+    ],
+    "description": "Transparent button with a color stroke for less prominent actions.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "none",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Secondary actions",
+      "Less prominent buttons",
+      "On colored backgrounds"
+    ],
+    "avoidWhen": [
+      "Primary CTAs",
+      "Important actions",
+      "On crowded interfaces"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Use usa-button--outline class. Same structure as default button.",
+    "relatedComponents": [
+      "button-group",
+      "link"
+    ],
+    "variants": [
+      "default",
+      "secondary",
+      "accent-cool",
+      "accent-warm",
+      "base",
+      "outline",
+      "outline-inverse",
+      "big",
+      "unstyled"
+    ],
+    "settings": [
+      "$theme-button-border-radius",
+      "$theme-button-stroke-width"
+    ],
+    "tokenOverrides": [
+      "$theme-button-border-radius",
+      "$theme-button-stroke-width"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "usa-button base class",
+      "usa-button--outline variant",
+      "type attribute"
+    ],
+    "editable": [
+      "Button label text",
+      "type attribute",
+      "disabled state"
+    ],
+    "limitations": [
+      "Always set type attribute"
+    ]
+  },
   "file": "button/outline.html",
   "title": "Button (Outline)",
-  "uswdsComponentType": "button",
-  "uswdsClass": "usa-button usa-button--outline",
-  "description": "Transparent button with a color stroke for less prominent actions.",
-  "section": "utilities",
-  "variant": "outline",
-  "useWhen": ["Secondary actions", "Less prominent buttons", "On colored backgrounds"],
-  "avoidWhen": ["Primary CTAs", "Important actions", "On crowded interfaces"],
-  "agentPrompt": "Use usa-button--outline class. Same structure as default button.",
-  "editableAreas": ["Button label text", "type attribute", "disabled state"],
-  "preserveElements": ["usa-button base class", "usa-button--outline variant", "type attribute"],
-  "knownLimitations": ["Always set type attribute"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "focus", "hover"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "secondary", "accent-cool", "accent-warm", "base", "outline", "outline-inverse", "big", "unstyled"],
-  "settings": ["$theme-button-border-radius", "$theme-button-stroke-width"],
-  "relatedComponents": ["button-group", "link"],
-  "tokenOverrides": ["$theme-button-border-radius", "$theme-button-stroke-width"],
-  "tags": ["button", "outline", "transparent", "stroke"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [
+      {
+        "name": "button-group",
+        "reason": "Button groups override individual button event handlers; style buttons directly instead"
+      }
+    ],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 771,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "variantRules": {
+      "note": "Color variants are mutually exclusive (pick one); size and state classes combine with any color variant",
+      "exclusiveGroups": [
+        [
+          "default",
+          "secondary",
+          "accent-cool",
+          "accent-warm",
+          "base",
+          "outline",
+          "outline-inverse",
+          "unstyled"
+        ]
+      ],
+      "combinable": [
+        "big",
+        "hover",
+        "active",
+        "focus"
+      ]
+    },
+    "agentPromptSequence": [
+      "1. Inside forms, set type='submit'; standalone buttons use type='button'",
+      "2. Use one primary button per view; other actions become secondary/outline",
+      "3. Place the button as the last interactive element of its form or section"
+    ],
+    "compositionRecipes": [
+      "contact-form",
+      "login-flow"
+    ]
+  }
 }
 </script>
 </head>

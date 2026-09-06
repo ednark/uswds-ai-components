@@ -10,51 +10,130 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "in-page-navigation",
+    "uswdsClass": "usa-in-page-nav",
+    "section": "navigation",
+    "variant": "default",
+    "requiresJs": "required",
+    "interaction": [
+      "click",
+      "focus",
+      "scroll"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "in-page",
+      "navigation",
+      "nav",
+      "sidebar",
+      "toc",
+      "table-of-contents",
+      "anchor",
+      "jump"
+    ],
+    "description": "Allows navigation to specific sections on a lengthy content page.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Long-form content with distinct sections",
+      "Documentation or article pages",
+      "When users need to jump between topics",
+      "Reference material with numbered sections"
+    ],
+    "avoidWhen": [
+      "Short pages where scroll is minimal",
+      "Single-section pages",
+      "Mobile interfaces where in-page nav takes too much space"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Update navItems array with section titles and IDs. Set data-page-nav-items via JavaScript or server-side rendering. Match section IDs to heading IDs in content.",
+    "relatedComponents": [
+      "side-navigation",
+      "breadcrumb",
+      "step-indicator"
+    ],
+    "variants": [
+      "default"
+    ],
+    "settings": [
+      "$theme-in-page-nav-border-radius"
+    ],
+    "tokenOverrides": [
+      "$theme-in-page-nav-border-radius",
+      "$theme-in-page-nav-link-color"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "nav.usa-in-page-nav with aria-label",
+      "aria-labelledby on nav",
+      "data-page-nav-items attribute",
+      "a.usa-in-page-nav__link for each section"
+    ],
+    "editable": [
+      "Section titles in navItems",
+      "Section IDs that match content headings",
+      "aria-label for the nav element"
+    ],
+    "limitations": [
+      "JavaScript required to initialize with section list",
+      "Sections need unique IDs matching nav items",
+      "Active state tracking requires scroll spy"
+    ]
+  },
   "file": "in-page-navigation/default.html",
   "title": "In-Page Navigation",
-  "uswdsComponentType": "in-page-navigation",
-  "uswdsClass": "usa-in-page-nav",
-  "description": "Allows navigation to specific sections on a lengthy content page.",
-  "section": "navigation",
-  "variant": "default",
-  "useWhen": [
-    "Long-form content with distinct sections",
-    "Documentation or article pages",
-    "When users need to jump between topics",
-    "Reference material with numbered sections"
-  ],
-  "avoidWhen": [
-    "Short pages where scroll is minimal",
-    "Single-section pages",
-    "Mobile interfaces where in-page nav takes too much space"
-  ],
-  "agentPrompt": "Update navItems array with section titles and IDs. Set data-page-nav-items via JavaScript or server-side rendering. Match section IDs to heading IDs in content.",
-  "editableAreas": [
-    "Section titles in navItems",
-    "Section IDs that match content headings",
-    "aria-label for the nav element"
-  ],
-  "preserveElements": [
-    "nav.usa-in-page-nav with aria-label",
-    "aria-labelledby on nav",
-    "data-page-nav-items attribute",
-    "a.usa-in-page-nav__link for each section"
-  ],
-  "knownLimitations": [
-    "JavaScript required to initialize with section list",
-    "Sections need unique IDs matching nav items",
-    "Active state tracking requires scroll spy"
-  ],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["click", "focus", "scroll"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default"],
-  "settings": ["$theme-in-page-nav-border-radius"],
-  "relatedComponents": ["side-navigation", "breadcrumb", "step-indicator"],
-  "tokenOverrides": ["$theme-in-page-nav-border-radius", "$theme-in-page-nav-link-color"],
-  "tags": ["in-page", "navigation", "nav", "sidebar", "toc", "table-of-contents", "anchor", "jump"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1101,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Links must match heading ids on the page — sync hrefs with actual h2/h3 ids",
+      "2. Keep usa-current highlighting in sync on scroll (JS required)"
+    ],
+    "compositionRecipes": [
+      "navigation-hierarchy"
+    ]
+  }
 }
 </script>
 <style>

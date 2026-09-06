@@ -10,52 +10,135 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "date-picker",
+    "uswdsClass": "usa-date-picker",
+    "section": "forms",
+    "variant": "default",
+    "requiresJs": "required",
+    "interaction": [
+      "click",
+      "focus",
+      "keyboard"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "date",
+      "picker",
+      "calendar",
+      "schedule",
+      "appointment",
+      "select",
+      "form"
+    ],
+    "description": "Helps users select a single date via a calendar-based interface.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "When dates are the primary input type",
+      "Appointment or reservation scheduling",
+      "Event date selection",
+      "When a calendar view aids date discovery"
+    ],
+    "avoidWhen": [
+      "Dates in the far past or future (navigation can be tedious)",
+      "Mobile interfaces where picker takes too much screen",
+      "Simple date entries where text input is faster"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Set min/max dates with data-min-date and data-max-date. Use data-default-value for programmatic pre-selection. Update label and hint text. Reference appropriate USWDS JS initialization.",
+    "relatedComponents": [
+      "memorable-date",
+      "date-range-picker",
+      "text-input"
+    ],
+    "variants": [
+      "default"
+    ],
+    "settings": [
+      "$theme-date-picker-border-radius"
+    ],
+    "tokenOverrides": [
+      "$theme-date-picker-border-radius",
+      "$theme-date-picker-focus-border-color"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-date-picker__wrapper",
+      "label.usa-label with for attribute",
+      "input.usa-date-picker__input",
+      "data-min-date and data-max-date attributes"
+    ],
+    "editable": [
+      "Date picker label",
+      "Hint text for format guidance",
+      "data-min-date and data-max-date for range",
+      "data-default-value for pre-selection"
+    ],
+    "limitations": [
+      "JavaScript required for calendar functionality",
+      "Calendar navigation can be tedious for distant dates",
+      "Touch devices may prefer native date input"
+    ]
+  },
   "file": "date-picker/default.html",
   "title": "Date Picker",
-  "uswdsComponentType": "date-picker",
-  "uswdsClass": "usa-date-picker",
-  "description": "Helps users select a single date via a calendar-based interface.",
-  "section": "forms",
-  "variant": "default",
-  "useWhen": [
-    "When dates are the primary input type",
-    "Appointment or reservation scheduling",
-    "Event date selection",
-    "When a calendar view aids date discovery"
-  ],
-  "avoidWhen": [
-    "Dates in the far past or future (navigation can be tedious)",
-    "Mobile interfaces where picker takes too much screen",
-    "Simple date entries where text input is faster"
-  ],
-  "agentPrompt": "Set min/max dates with data-min-date and data-max-date. Use data-default-value for programmatic pre-selection. Update label and hint text. Reference appropriate USWDS JS initialization.",
-  "editableAreas": [
-    "Date picker label",
-    "Hint text for format guidance",
-    "data-min-date and data-max-date for range",
-    "data-default-value for pre-selection"
-  ],
-  "preserveElements": [
-    "div.usa-date-picker__wrapper",
-    "label.usa-label with for attribute",
-    "input.usa-date-picker__input",
-    "data-min-date and data-max-date attributes"
-  ],
-  "knownLimitations": [
-    "JavaScript required for calendar functionality",
-    "Calendar navigation can be tedious for distant dates",
-    "Touch devices may prefer native date input"
-  ],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["click", "focus", "keyboard"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default"],
-  "settings": ["$theme-date-picker-border-radius"],
-  "relatedComponents": ["memorable-date", "date-range-picker", "text-input"],
-  "tokenOverrides": ["$theme-date-picker-border-radius", "$theme-date-picker-focus-border-color"],
-  "tags": ["date", "picker", "calendar", "schedule", "appointment", "select", "form"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Provides form context; place this date input inside a form wrapper"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1136,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Fetch the form wrapper first",
+      "2. Keep the input type='text' with date format hint — JS replaces it with the calendar",
+      "3. Do not swap to type='date'; the USWDS calendar provides the accessible behavior"
+    ]
+  }
 }
 </script>
 <style>

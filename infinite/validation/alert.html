@@ -7,29 +7,121 @@
 <title>USWDS Validation (Alert)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "validation",
+    "uswdsClass": "usa-alert--validation",
+    "section": "forms",
+    "variant": "alert",
+    "requiresJs": "no",
+    "interaction": [
+      "passive"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "validation",
+      "alert",
+      "error",
+      "form"
+    ],
+    "description": "Validation message styled as an alert for inline errors.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Inline form validation errors",
+      "Error messages next to fields",
+      "Multi-error display"
+    ],
+    "avoidWhen": [
+      "Success messages",
+      "General warnings",
+      "Informational messages"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-alert--validation class to usa-alert. Used with validation-message.",
+    "relatedComponents": [
+      "alert",
+      "summary-box",
+      "text-input"
+    ],
+    "variants": [
+      "default",
+      "alert"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-alert usa-alert--validation",
+      "div.usa-alert__body"
+    ],
+    "editable": [
+      "Alert body text",
+      "Error descriptions"
+    ],
+    "limitations": [
+      "Should be used with aria-describedby for screen readers"
+    ]
+  },
   "file": "validation/alert.html",
   "title": "Validation (Alert)",
-  "uswdsComponentType": "validation",
-  "uswdsClass": "usa-alert--validation",
-  "description": "Validation message styled as an alert for inline errors.",
-  "section": "forms",
-  "variant": "alert",
-  "useWhen": ["Inline form validation errors", "Error messages next to fields", "Multi-error display"],
-  "avoidWhen": ["Success messages", "General warnings", "Informational messages"],
-  "agentPrompt": "Add usa-alert--validation class to usa-alert. Used with validation-message.",
-  "editableAreas": ["Alert body text", "Error descriptions"],
-  "preserveElements": ["div.usa-alert usa-alert--validation", "div.usa-alert__body"],
-  "knownLimitations": ["Should be used with aria-describedby for screen readers"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "alert"],
-  "settings": [],
-  "relatedComponents": ["alert", "summary-box", "text-input"],
-  "tokenOverrides": [],
-  "tags": ["validation", "alert", "error", "form"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Validation summary belongs to a form; reference inputs by id"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 702,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place the validation summary above the form or at the top of the form",
+      "2. Link each error item to the offending input via anchor href='#input-id'",
+      "3. Move focus to the summary when validation fails (JS required)"
+    ],
+    "compositionRecipes": [
+      "contact-form",
+      "error-handling-stack"
+    ]
+  }
 }
 </script>
 </head>

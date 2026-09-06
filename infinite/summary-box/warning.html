@@ -7,29 +7,114 @@
 <title>USWDS Summary Box (Warning)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "summary-box",
+    "uswdsClass": "usa-summary-box--warning",
+    "section": "supporting",
+    "variant": "warning",
+    "requiresJs": "no",
+    "interaction": [
+      "passive"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "summary-box",
+      "warning",
+      "caution"
+    ],
+    "description": "Summary box with warning styling.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Warning messages",
+      "Cautionary information",
+      "Pre-form warnings"
+    ],
+    "avoidWhen": [
+      "Pure informational content",
+      "Success messages",
+      "Errors that need immediate action"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-summary-box--warning class to usa-summary-box.",
+    "relatedComponents": [
+      "alert",
+      "validation"
+    ],
+    "variants": [
+      "default",
+      "info",
+      "warning",
+      "error"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-summary-box usa-summary-box--warning",
+      "h3.usa-summary-box__heading",
+      "ul.usa-list"
+    ],
+    "editable": [
+      "Summary box heading",
+      "Summary list items"
+    ],
+    "limitations": []
+  },
   "file": "summary-box/warning.html",
   "title": "Summary Box (Warning)",
-  "uswdsComponentType": "summary-box",
-  "uswdsClass": "usa-summary-box--warning",
-  "description": "Summary box with warning styling.",
-  "section": "supporting",
-  "variant": "warning",
-  "useWhen": ["Warning messages", "Cautionary information", "Pre-form warnings"],
-  "avoidWhen": ["Pure informational content", "Success messages", "Errors that need immediate action"],
-  "agentPrompt": "Add usa-summary-box--warning class to usa-summary-box.",
-  "editableAreas": ["Summary box heading", "Summary list items"],
-  "preserveElements": ["div.usa-summary-box usa-summary-box--warning", "h3.usa-summary-box__heading", "ul.usa-list"],
-  "knownLimitations": [],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "info", "warning", "error"],
-  "settings": [],
-  "relatedComponents": ["alert", "validation"],
-  "tokenOverrides": [],
-  "tags": ["summary-box", "warning", "caution"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 679,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Use for key content the user must not miss (e.g. important callouts)",
+      "2. For error feedback, use validation + alert instead"
+    ],
+    "compositionRecipes": [
+      "data-table-with-sorting",
+      "error-handling-stack"
+    ]
+  }
 }
 </script>
 </head>

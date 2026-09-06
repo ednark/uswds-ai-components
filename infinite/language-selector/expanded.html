@@ -7,29 +7,109 @@
 <title>USWDS Language Selector (Expanded)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "language-selector",
+    "uswdsClass": "usa-language-switcher--expanded",
+    "section": "navigation",
+    "variant": "expanded",
+    "requiresJs": "optional",
+    "interaction": [
+      "click",
+      "change"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "language-selector",
+      "expanded",
+      "multilingual",
+      "translation"
+    ],
+    "description": "Language selector showing all available languages.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Multi-language sites",
+      "Government services for diverse populations",
+      "When all languages should be visible"
+    ],
+    "avoidWhen": [
+      "Single language sites",
+      "Space-constrained headers"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-language-switcher--expanded class. Shows full language list.",
+    "relatedComponents": [
+      "header",
+      "link"
+    ],
+    "variants": [
+      "default",
+      "expanded"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-language-switcher",
+      "select or ul element"
+    ],
+    "editable": [
+      "Language options and labels"
+    ],
+    "limitations": [
+      "JavaScript may be needed for some interactions"
+    ]
+  },
   "file": "language-selector/expanded.html",
   "title": "Language Selector (Expanded)",
-  "uswdsComponentType": "language-selector",
-  "uswdsClass": "usa-language-switcher--expanded",
-  "description": "Language selector showing all available languages.",
-  "section": "navigation",
-  "variant": "expanded",
-  "useWhen": ["Multi-language sites", "Government services for diverse populations", "When all languages should be visible"],
-  "avoidWhen": ["Single language sites", "Space-constrained headers"],
-  "agentPrompt": "Add usa-language-switcher--expanded class. Shows full language list.",
-  "editableAreas": ["Language options and labels"],
-  "preserveElements": ["div.usa-language-switcher", "select or ul element"],
-  "knownLimitations": ["JavaScript may be needed for some interactions"],
-  "tier": "curated",
-  "requiresJs": "optional",
-  "interaction": ["click", "change"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "expanded"],
-  "settings": [],
-  "relatedComponents": ["header", "link"],
-  "tokenOverrides": [],
-  "tags": ["language-selector", "expanded", "multilingual", "translation"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 705,
+      "renderingTimeMs": 35,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place in header (dropdown) or footer (list) — never both",
+      "2. Keep hreflang and lang attributes on language links"
+    ]
+  }
 }
 </script>
 </head>

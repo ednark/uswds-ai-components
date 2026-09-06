@@ -7,29 +7,111 @@
 <title>USWDS Range Slider (Large)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "range-slider",
+    "uswdsClass": "usa-range--lg",
+    "section": "forms",
+    "variant": "lg",
+    "requiresJs": "no",
+    "interaction": [
+      "drag",
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "range-slider",
+      "lg",
+      "large",
+      "slider"
+    ],
+    "description": "Large range slider variant with bigger track and thumb.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Mobile sliders",
+      "Touch-friendly inputs",
+      "Prominent range selection"
+    ],
+    "avoidWhen": [
+      "Compact forms",
+      "Precise numeric entry"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-range--lg class to usa-range input for larger slider.",
+    "relatedComponents": [
+      "text-input"
+    ],
+    "variants": [
+      "default",
+      "lg"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "input.usa-range"
+    ],
+    "editable": [
+      "Slider label",
+      "Min/max values"
+    ],
+    "limitations": [
+      "May not work well for precise values"
+    ]
+  },
   "file": "range-slider/lg.html",
   "title": "Range Slider (Large)",
-  "uswdsComponentType": "range-slider",
-  "uswdsClass": "usa-range--lg",
-  "description": "Large range slider variant with bigger track and thumb.",
-  "section": "forms",
-  "variant": "lg",
-  "useWhen": ["Mobile sliders", "Touch-friendly inputs", "Prominent range selection"],
-  "avoidWhen": ["Compact forms", "Precise numeric entry"],
-  "agentPrompt": "Add usa-range--lg class to usa-range input for larger slider.",
-  "editableAreas": ["Slider label", "Min/max values"],
-  "preserveElements": ["input.usa-range"],
-  "knownLimitations": ["May not work well for precise values"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["drag", "click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "lg"],
-  "settings": [],
-  "relatedComponents": ["text-input"],
-  "tokenOverrides": [],
-  "tags": ["range-slider", "lg", "large", "slider"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Provides form context; place this input inside a form wrapper"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 605,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    }
+  }
 }
 </script>
 </head>

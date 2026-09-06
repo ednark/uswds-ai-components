@@ -7,29 +7,117 @@
 <title>USWDS Checkbox (Success)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "checkbox",
+    "uswdsClass": "usa-checkbox__input--success",
+    "section": "forms",
+    "variant": "success",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "checkbox",
+      "success",
+      "validation"
+    ],
+    "description": "Checkbox showing success validation state.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Confirmed checkbox selection",
+      "Completed agreement"
+    ],
+    "avoidWhen": [
+      "Errors",
+      "Unconfirmed selections"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-checkbox__input--success class for success state styling.",
+    "relatedComponents": [
+      "radio-button",
+      "validation"
+    ],
+    "variants": [
+      "default",
+      "tile",
+      "error",
+      "success",
+      "disabled"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-form-group",
+      "input.usa-checkbox__input--success"
+    ],
+    "editable": [
+      "Checkbox label",
+      "Success message text"
+    ],
+    "limitations": []
+  },
   "file": "checkbox/success.html",
   "title": "Checkbox (Success)",
-  "uswdsComponentType": "checkbox",
-  "uswdsClass": "usa-checkbox__input--success",
-  "description": "Checkbox showing success validation state.",
-  "section": "forms",
-  "variant": "success",
-  "useWhen": ["Confirmed checkbox selection", "Completed agreement"],
-  "avoidWhen": ["Errors", "Unconfirmed selections"],
-  "agentPrompt": "Add usa-checkbox__input--success class for success state styling.",
-  "editableAreas": ["Checkbox label", "Success message text"],
-  "preserveElements": ["div.usa-form-group", "input.usa-checkbox__input--success"],
-  "knownLimitations": [],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "tile", "error", "success", "disabled"],
-  "settings": [],
-  "relatedComponents": ["radio-button", "validation"],
-  "tokenOverrides": [],
-  "tags": ["checkbox", "success", "validation"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Provides form context; place checkboxes inside a form wrapper"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 740,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Fetch the form wrapper first",
+      "2. Use fieldset+legend when grouping related checkboxes",
+      "3. Keep each label associated via for/id"
+    ]
+  }
 }
 </script>
 </head>

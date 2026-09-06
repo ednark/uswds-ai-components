@@ -7,29 +7,113 @@
 <title>USWDS Breadcrumb (Wrap)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "breadcrumb",
+    "uswdsClass": "usa-breadcrumb--wrap",
+    "section": "navigation",
+    "variant": "wrap",
+    "requiresJs": "no",
+    "interaction": [
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "breadcrumb",
+      "wrap",
+      "navigation",
+      "hierarchy"
+    ],
+    "description": "Breadcrumb that wraps to multiple lines on narrow screens.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Long breadcrumb trails",
+      "Mobile views with limited horizontal space"
+    ],
+    "avoidWhen": [
+      "Single-level breadcrumbs",
+      "Wide layouts where inline is better"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-breadcrumb--wrap class to usa-breadcrumb. Allows text wrapping.",
+    "relatedComponents": [
+      "header",
+      "link"
+    ],
+    "variants": [
+      "default",
+      "wrap",
+      "naviprev-next"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "nav.usa-breadcrumb",
+      "ol.usa-breadcrumb__list",
+      "li.usa-breadcrumb__list-item"
+    ],
+    "editable": [
+      "Breadcrumb links and text"
+    ],
+    "limitations": [
+      "Wrapped text may be harder to scan visually"
+    ]
+  },
   "file": "breadcrumb/wrap.html",
   "title": "Breadcrumb (Wrap)",
-  "uswdsComponentType": "breadcrumb",
-  "uswdsClass": "usa-breadcrumb--wrap",
-  "description": "Breadcrumb that wraps to multiple lines on narrow screens.",
-  "section": "navigation",
-  "variant": "wrap",
-  "useWhen": ["Long breadcrumb trails", "Mobile views with limited horizontal space"],
-  "avoidWhen": ["Single-level breadcrumbs", "Wide layouts where inline is better"],
-  "agentPrompt": "Add usa-breadcrumb--wrap class to usa-breadcrumb. Allows text wrapping.",
-  "editableAreas": ["Breadcrumb links and text"],
-  "preserveElements": ["nav.usa-breadcrumb", "ol.usa-breadcrumb__list", "li.usa-breadcrumb__list-item"],
-  "knownLimitations": ["Wrapped text may be harder to scan visually"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "wrap", "naviprev-next"],
-  "settings": [],
-  "relatedComponents": ["header", "link"],
-  "tokenOverrides": [],
-  "tags": ["breadcrumb", "wrap", "navigation", "hierarchy"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 748,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place below header, above page h1",
+      "2. Keep the ordered-list structure and aria-label='Breadcrumb'",
+      "3. Last item is the current page — keep aria-current='page'"
+    ],
+    "compositionRecipes": [
+      "navigation-hierarchy"
+    ]
+  }
 }
 </script>
 </head>

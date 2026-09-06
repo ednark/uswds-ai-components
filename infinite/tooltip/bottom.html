@@ -7,29 +7,117 @@
 <title>USWDS Tooltip (Bottom)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "tooltip",
+    "uswdsClass": "usa-tooltip--bottom",
+    "section": "supporting",
+    "variant": "bottom",
+    "requiresJs": "required",
+    "interaction": [
+      "hover",
+      "focus",
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "tooltip",
+      "bottom",
+      "hover",
+      "hint"
+    ],
+    "description": "Tooltip that appears below the trigger element.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Below-chart labels",
+      "Top-of-element triggers",
+      "When top position has limited space"
+    ],
+    "avoidWhen": [
+      "Long content",
+      "Mobile touch interfaces",
+      "Critical information"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-tooltip--bottom class and data-position=\"bottom\" attribute.",
+    "relatedComponents": [
+      "button",
+      "icon"
+    ],
+    "variants": [
+      "default",
+      "top",
+      "bottom",
+      "left",
+      "right"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "span.usa-tooltip__trigger",
+      "span.usa-tooltip"
+    ],
+    "editable": [
+      "Tooltip text content",
+      "Trigger element"
+    ],
+    "limitations": [
+      "JavaScript required",
+      "May be obscured by page edges on small screens"
+    ]
+  },
   "file": "tooltip/bottom.html",
   "title": "Tooltip (Bottom)",
-  "uswdsComponentType": "tooltip",
-  "uswdsClass": "usa-tooltip--bottom",
-  "description": "Tooltip that appears below the trigger element.",
-  "section": "supporting",
-  "variant": "bottom",
-  "useWhen": ["Below-chart labels", "Top-of-element triggers", "When top position has limited space"],
-  "avoidWhen": ["Long content", "Mobile touch interfaces", "Critical information"],
-  "agentPrompt": "Add usa-tooltip--bottom class and data-position=\"bottom\" attribute.",
-  "editableAreas": ["Tooltip text content", "Trigger element"],
-  "preserveElements": ["span.usa-tooltip__trigger", "span.usa-tooltip"],
-  "knownLimitations": ["JavaScript required", "May be obscured by page edges on small screens"],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["hover", "focus", "click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "top", "bottom", "left", "right"],
-  "settings": [],
-  "relatedComponents": ["button", "icon"],
-  "tokenOverrides": [],
-  "tags": ["tooltip", "bottom", "hover", "hint"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 657,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Attach tooltips to interactive elements only (buttons, links)",
+      "2. Keep aria-describedby wiring — tooltip text must reach screen readers",
+      "3. Never put critical information solely in a tooltip"
+    ]
+  }
 }
 </script>
 </head>

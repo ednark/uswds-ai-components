@@ -7,29 +7,119 @@
 <title>USWDS Radio Button (Tile)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "radio-buttons",
+    "uswdsClass": "usa-radio__input--tile",
+    "section": "forms",
+    "variant": "tile",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "radio",
+      "tile",
+      "touch",
+      "large"
+    ],
+    "description": "Radio button styled as a large tile for touch-friendly selection.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Mobile forms",
+      "Touch-friendly selection",
+      "Large clickable options"
+    ],
+    "avoidWhen": [
+      "Dense form layouts",
+      "Standard desktop forms"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-radio__input--tile class to radio input.",
+    "relatedComponents": [
+      "checkbox",
+      "text-input"
+    ],
+    "variants": [
+      "default",
+      "tile",
+      "error",
+      "success",
+      "disabled"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "input.usa-radio__input",
+      "label.usa-radio__label"
+    ],
+    "editable": [
+      "Radio label text",
+      "Optional description"
+    ],
+    "limitations": []
+  },
   "file": "radio-buttons/tile.html",
   "title": "Radio Button (Tile)",
-  "uswdsComponentType": "radio-buttons",
-  "uswdsClass": "usa-radio__input--tile",
-  "description": "Radio button styled as a large tile for touch-friendly selection.",
-  "section": "forms",
-  "variant": "tile",
-  "useWhen": ["Mobile forms", "Touch-friendly selection", "Large clickable options"],
-  "avoidWhen": ["Dense form layouts", "Standard desktop forms"],
-  "agentPrompt": "Add usa-radio__input--tile class to radio input.",
-  "editableAreas": ["Radio label text", "Optional description"],
-  "preserveElements": ["input.usa-radio__input", "label.usa-radio__label"],
-  "knownLimitations": [],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "tile", "error", "success", "disabled"],
-  "settings": [],
-  "relatedComponents": ["checkbox", "text-input"],
-  "tokenOverrides": [],
-  "tags": ["radio", "tile", "touch", "large"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Provides form context; place radios inside a form wrapper"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 765,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Fetch the form wrapper first",
+      "2. Always wrap a radio group in fieldset+legend",
+      "3. Give every radio in a group the same name and unique id"
+    ]
+  }
 }
 </script>
 </head>

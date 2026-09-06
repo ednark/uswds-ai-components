@@ -7,29 +7,122 @@
 <title>USWDS Side Navigation (Current Page)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "side-navigation",
+    "uswdsClass": "usa-sidenav",
+    "section": "navigation",
+    "variant": "current",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "sidenav",
+      "current",
+      "active",
+      "page-marker",
+      "usa-current"
+    ],
+    "description": "Sidenav variant showing usa-current class for marking the current/active page.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Content pages with sidebar nav",
+      "Marking current page in hierarchy",
+      "Documentation sites"
+    ],
+    "avoidWhen": [
+      "Single-level navigation",
+      "When current page indicator isn't needed"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-current class to the active link or a div wrapping non-link current page text. Use active-trail on parent items.",
+    "relatedComponents": [
+      "layout-docs",
+      "breadcrumb",
+      "header"
+    ],
+    "variants": [
+      "default",
+      "sidenav",
+      "sub-list",
+      "current"
+    ],
+    "settings": [
+      "$theme-sidenav-font-family"
+    ],
+    "tokenOverrides": [
+      "$theme-sidenav-font-family"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "ul.usa-sidenav",
+      "li.usa-sidenav__item",
+      "a.usa-current",
+      "div.usa-current"
+    ],
+    "editable": [
+      "Navigation links",
+      "Current page label"
+    ],
+    "limitations": []
+  },
   "file": "side-navigation/current.html",
   "title": "Side Navigation (Current Page)",
-  "uswdsComponentType": "side-navigation",
-  "uswdsClass": "usa-sidenav",
-  "description": "Sidenav variant showing usa-current class for marking the current/active page.",
-  "section": "navigation",
-  "variant": "current",
-  "useWhen": ["Content pages with sidebar nav", "Marking current page in hierarchy", "Documentation sites"],
-  "avoidWhen": ["Single-level navigation", "When current page indicator isn't needed"],
-  "agentPrompt": "Add usa-current class to the active link or a div wrapping non-link current page text. Use active-trail on parent items.",
-  "editableAreas": ["Navigation links", "Current page label"],
-  "preserveElements": ["ul.usa-sidenav", "li.usa-sidenav__item", "a.usa-current", "div.usa-current"],
-  "knownLimitations": [],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "sidenav", "sub-list", "current"],
-  "settings": ["$theme-sidenav-font-family"],
-  "relatedComponents": ["layout-docs", "breadcrumb", "header"],
-  "tokenOverrides": ["$theme-sidenav-font-family"],
-  "tags": ["sidenav", "current", "active", "page-marker", "usa-current"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 842,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place in a sidebar column next to main content",
+      "2. Highlight the current page item with aria-current='page' + usa-current class",
+      "3. Pair with in-page-navigation only when page is long enough to warrant both"
+    ],
+    "compositionRecipes": [
+      "navigation-hierarchy"
+    ]
+  }
 }
 </script>
 </head>

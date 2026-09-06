@@ -7,29 +7,113 @@
 <title>USWDS Link (External)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "link",
+    "uswdsClass": "usa-link--external",
+    "section": "navigation",
+    "variant": "external",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "hover",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "link",
+      "external",
+      "offsite"
+    ],
+    "description": "External link styling with indicator for offsite links.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Links to other domains",
+      "Offsite navigation",
+      "External resources"
+    ],
+    "avoidWhen": [
+      "Internal links",
+      "Same-site navigation"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-link--external class to links that go to external sites.",
+    "relatedComponents": [
+      "icon",
+      "header"
+    ],
+    "variants": [
+      "default",
+      "external",
+      "download"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "a.usa-link"
+    ],
+    "editable": [
+      "Link text",
+      "href URL"
+    ],
+    "limitations": [
+      "Should not be used for internal navigation"
+    ]
+  },
   "file": "link/external.html",
   "title": "Link (External)",
-  "uswdsComponentType": "link",
-  "uswdsClass": "usa-link--external",
-  "description": "External link styling with indicator for offsite links.",
-  "section": "navigation",
-  "variant": "external",
-  "useWhen": ["Links to other domains", "Offsite navigation", "External resources"],
-  "avoidWhen": ["Internal links", "Same-site navigation"],
-  "agentPrompt": "Add usa-link--external class to links that go to external sites.",
-  "editableAreas": ["Link text", "href URL"],
-  "preserveElements": ["a.usa-link"],
-  "knownLimitations": ["Should not be used for internal navigation"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "hover", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "external", "download"],
-  "settings": [],
-  "relatedComponents": ["icon", "header"],
-  "tokenOverrides": [],
-  "tags": ["link", "external", "offsite"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 605,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. For external links, add the external-link icon and indicate in text or aria-label",
+      "2. Use distinct links/variants — never style links as buttons without button behavior"
+    ],
+    "compositionRecipes": [
+      "login-flow"
+    ]
+  }
 }
 </script>
 </head>

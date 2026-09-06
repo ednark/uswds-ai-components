@@ -7,29 +7,121 @@
 <title>USWDS Character Count (Error)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "character-count",
+    "uswdsClass": "usa-character-count--error",
+    "section": "forms",
+    "variant": "error",
+    "requiresJs": "required",
+    "interaction": [
+      "input",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "character-count",
+      "error",
+      "limit",
+      "validation"
+    ],
+    "description": "Character count showing error state when limit exceeded.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Text fields with strict length limits",
+      "Character-restricted inputs",
+      "When over-limit errors needed"
+    ],
+    "avoidWhen": [
+      "No character limits",
+      "Soft limits that don't block input"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-character-count--error class to usa-character-count__wrapper when limit exceeded.",
+    "relatedComponents": [
+      "text-input",
+      "validation"
+    ],
+    "variants": [
+      "default",
+      "error"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-character-count__wrapper",
+      "span.usa-character-count__status"
+    ],
+    "editable": [
+      "Character count message",
+      "Input field text"
+    ],
+    "limitations": [
+      "JavaScript needed for real-time count updates"
+    ]
+  },
   "file": "character-count/error.html",
   "title": "Character Count (Error)",
-  "uswdsComponentType": "character-count",
-  "uswdsClass": "usa-character-count--error",
-  "description": "Character count showing error state when limit exceeded.",
-  "section": "forms",
-  "variant": "error",
-  "useWhen": ["Text fields with strict length limits", "Character-restricted inputs", "When over-limit errors needed"],
-  "avoidWhen": ["No character limits", "Soft limits that don't block input"],
-  "agentPrompt": "Add usa-character-count--error class to usa-character-count__wrapper when limit exceeded.",
-  "editableAreas": ["Character count message", "Input field text"],
-  "preserveElements": ["div.usa-character-count__wrapper", "span.usa-character-count__status"],
-  "knownLimitations": ["JavaScript needed for real-time count updates"],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["input", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "error"],
-  "settings": [],
-  "relatedComponents": ["text-input", "validation"],
-  "tokenOverrides": [],
-  "tags": ["character-count", "error", "limit", "validation"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Provides form context; place this input inside a form wrapper"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 786,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Fetch the form wrapper first",
+      "2. Keep data-maxlength and the aria-live status region — both are required for announcements",
+      "3. Wrap the input and the message span in the character-count container"
+    ],
+    "compositionRecipes": [
+      "contact-form"
+    ]
+  }
 }
 </script>
 </head>

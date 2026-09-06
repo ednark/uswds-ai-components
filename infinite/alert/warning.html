@@ -7,29 +7,125 @@
 <title>USWDS Alert (Warning)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "alert",
+    "uswdsClass": "usa-alert",
+    "section": "feedback",
+    "variant": "warning",
+    "requiresJs": "no",
+    "interaction": [
+      "passive"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": false,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "alert",
+      "warning",
+      "caution",
+      "yellow"
+    ],
+    "description": "Warning alert for situations that need user's attention and may need action.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Cautionary messages",
+      "Time-sensitive warnings",
+      "Potential issue notifications"
+    ],
+    "avoidWhen": [
+      "Critical errors",
+      "Success confirmations",
+      "Slim layouts"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Use usa-alert--warning class for warning variant. Same structure as default.",
+    "relatedComponents": [
+      "site-alert",
+      "banner",
+      "validation"
+    ],
+    "variants": [
+      "info",
+      "success",
+      "warning",
+      "error",
+      "slim"
+    ],
+    "settings": [
+      "$theme-alert-status-color"
+    ],
+    "tokenOverrides": [
+      "$theme-alert-status-color"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "usa-alert wrapper",
+      "usa-alert--warning class",
+      "usa-alert__body",
+      "usa-alert__text"
+    ],
+    "editable": [
+      "Alert text content",
+      "Heading if present"
+    ],
+    "limitations": [
+      "Pure CSS - no JavaScript required"
+    ]
+  },
   "file": "alert/warning.html",
   "title": "Alert (Warning)",
-  "uswdsComponentType": "alert",
-  "uswdsClass": "usa-alert",
-  "description": "Warning alert for situations that need user's attention and may need action.",
-  "section": "feedback",
-  "variant": "warning",
-  "useWhen": ["Cautionary messages", "Time-sensitive warnings", "Potential issue notifications"],
-  "avoidWhen": ["Critical errors", "Success confirmations", "Slim layouts"],
-  "agentPrompt": "Use usa-alert--warning class for warning variant. Same structure as default.",
-  "editableAreas": ["Alert text content", "Heading if present"],
-  "preserveElements": ["usa-alert wrapper", "usa-alert--warning class", "usa-alert__body", "usa-alert__text"],
-  "knownLimitations": ["Pure CSS - no JavaScript required"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive"],
-  "a11y": {"wcag21AA": true, "keyboardNav": false, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["info", "success", "warning", "error", "slim"],
-  "settings": ["$theme-alert-status-color"],
-  "relatedComponents": ["site-alert", "banner", "validation"],
-  "tokenOverrides": ["$theme-alert-status-color"],
-  "tags": ["alert", "warning", "caution", "yellow"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 705,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place alerts above the content they describe",
+      "2. For page-level status, pair with role='status' or role='alert' (keep the JS behavior)",
+      "3. Use site-alert for government-wide banners instead"
+    ],
+    "compositionRecipes": [
+      "error-handling-stack",
+      "login-flow"
+    ]
+  }
 }
 </script>
 </head>

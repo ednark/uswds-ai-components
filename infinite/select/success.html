@@ -7,29 +7,121 @@
 <title>USWDS Select (Success)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "select",
+    "uswdsClass": "usa-select--success",
+    "section": "forms",
+    "variant": "success",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "change"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "select",
+      "success",
+      "validation"
+    ],
+    "description": "Select dropdown showing success validation state.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Successful selection validation",
+      "Confirmed dropdown selection"
+    ],
+    "avoidWhen": [
+      "Errors",
+      "Pending validation"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-select--success class for success state styling.",
+    "relatedComponents": [
+      "text-input",
+      "validation"
+    ],
+    "variants": [
+      "default",
+      "tile",
+      "error",
+      "success",
+      "disabled"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-form-group",
+      "select.usa-select--success"
+    ],
+    "editable": [
+      "Select label",
+      "Success message text"
+    ],
+    "limitations": []
+  },
   "file": "select/success.html",
   "title": "Select (Success)",
-  "uswdsComponentType": "select",
-  "uswdsClass": "usa-select--success",
-  "description": "Select dropdown showing success validation state.",
-  "section": "forms",
-  "variant": "success",
-  "useWhen": ["Successful selection validation", "Confirmed dropdown selection"],
-  "avoidWhen": ["Errors", "Pending validation"],
-  "agentPrompt": "Add usa-select--success class for success state styling.",
-  "editableAreas": ["Select label", "Success message text"],
-  "preserveElements": ["div.usa-form-group", "select.usa-select--success"],
-  "knownLimitations": [],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "change"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "tile", "error", "success", "disabled"],
-  "settings": [],
-  "relatedComponents": ["text-input", "validation"],
-  "tokenOverrides": [],
-  "tags": ["select", "success", "validation"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Provides form context; place this select inside a form wrapper"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 750,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Fetch the form wrapper first (unless one already exists)",
+      "2. Pair with a label via for/id",
+      "3. For more than 7 options, prefer combo-box over select",
+      "4. Keep the first option as a placeholder ('- Select -')"
+    ],
+    "compositionRecipes": [
+      "contact-form"
+    ]
+  }
 }
 </script>
 </head>

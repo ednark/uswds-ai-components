@@ -7,29 +7,115 @@
 <title>USWDS Link (Download)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "link",
+    "uswdsClass": "usa-link--download",
+    "section": "navigation",
+    "variant": "download",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "hover",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "link",
+      "download",
+      "file",
+      "pdf"
+    ],
+    "description": "Download link styling for file downloads.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "File downloads",
+      "PDF links",
+      "Document links"
+    ],
+    "avoidWhen": [
+      "Web page links",
+      "Same-page anchors"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-link--download class to links that trigger file downloads.",
+    "relatedComponents": [
+      "icon",
+      "file-input"
+    ],
+    "variants": [
+      "default",
+      "external",
+      "download"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "a.usa-link"
+    ],
+    "editable": [
+      "Link text",
+      "href URL",
+      "download attribute"
+    ],
+    "limitations": [
+      "Include file type and size in link text when possible"
+    ]
+  },
   "file": "link/download.html",
   "title": "Link (Download)",
-  "uswdsComponentType": "link",
-  "uswdsClass": "usa-link--download",
-  "description": "Download link styling for file downloads.",
-  "section": "navigation",
-  "variant": "download",
-  "useWhen": ["File downloads", "PDF links", "Document links"],
-  "avoidWhen": ["Web page links", "Same-page anchors"],
-  "agentPrompt": "Add usa-link--download class to links that trigger file downloads.",
-  "editableAreas": ["Link text", "href URL", "download attribute"],
-  "preserveElements": ["a.usa-link"],
-  "knownLimitations": ["Include file type and size in link text when possible"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "hover", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "external", "download"],
-  "settings": [],
-  "relatedComponents": ["icon", "file-input"],
-  "tokenOverrides": [],
-  "tags": ["link", "download", "file", "pdf"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 612,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. For external links, add the external-link icon and indicate in text or aria-label",
+      "2. Use distinct links/variants — never style links as buttons without button behavior"
+    ],
+    "compositionRecipes": [
+      "login-flow"
+    ]
+  }
 }
 </script>
 </head>

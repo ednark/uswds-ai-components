@@ -7,6 +7,24 @@
   "facetsUrl": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/facets.json",
   "index": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/components.index.json",
   "indexSchemaVersion": 1,
+  "metadataSchemaVersion": 2,
+  "recipesUrl": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/recipes/index.json",
+  "versionsUrl": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/versions.json",
+  "compatibilityUrl": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/compatibility.json",
+  "compatibilityTargets": ["govuk", "carbon"],
+  "recipes": [
+    "contact-form",
+    "login-flow",
+    "data-table-with-sorting",
+    "error-handling-stack",
+    "navigation-hierarchy"
+  ],
+  "supportedDesignSystems": [
+    "material",
+    "bootstrap"
+  ],
+  "adapterBase": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/adapters",
+  "adapterManifest": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/adapters/adapters.json",
   "tileFetchPattern": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/{file}",
   "designSystem": {
     "name": "U.S. Web Design System (USWDS)",
@@ -23,19 +41,60 @@
     "section",
     "govCompliance"
   ],
+  "metadataCategories": {
+    "discovery": "Facets for filtering in code (not sent to model)",
+    "selection": "useWhen/avoidWhen — helps choose the right component",
+    "instruction": "agentPrompt — direct guidance for adaptation",
+    "constraints": "preserve/editable/limitations — hard boundaries on changes"
+  },
+  "constraintPriority": [
+    "constraints.preserve (never modify)",
+    "constraints.limitations (respect caveats)",
+    "instruction.agentPrompt (adapt within boundaries)",
+    "constraints.editable (prefer changes listed here)"
+  ],
   "adaptationDetail": "embedded in each tile as <script type=\"application/json\" id=\"uswds-agent-meta\">",
   "flow": [
     "GET facets.json",
     "GET components.index.json",
     "filter by facet in code",
     "GET tile by file",
-    "read uswds-agent-meta block"
+    "read uswds-agent-meta block",
+    "check _schemaVersion (v2 = categorized metadata)",
+    "validate selection against useWhen/avoidWhen",
+    "adapt following instruction.agentPrompt",
+    "enforce constraints.preserve boundaries",
+    "verify all preserved elements intact in output"
   ],
+  "crossSystemTransfer": {
+    "description": "Translate any USWDS tile to a target design system using portableInvariants + classMapping + adapter registry.",
+    "decisionOrder": [
+      "1. Parse tile portableInvariants (always enforce)",
+      "2. IF portability.classMapping has target entry → simple class substitution",
+      "3. ELSE IF adapter registry has component entry → fetch {adapterBase}/{component}.json, follow structuralMapping",
+      "4. ELSE → fall back to portableInvariants only, note 'No mapping available for {target}'"
+    ],
+    "adapterFormat": "https://raw.githubusercontent.com/ednark/ai-component-registry-spec/main/adapter-format.md"
+  },
+  "mcp": {
+    "enabled": true,
+    "transport": "stdio",
+    "server": "_base/mcp/server.mjs",
+    "tools": [
+      "search_components",
+      "get_component",
+      "list_facets",
+      "get_index",
+      "get_adapter",
+      "translate_component"
+    ],
+    "note": "When an MCP client is connected, prefer these tools over raw HTTP fetches."
+  },
   "govCompliance": [
     "Section 508",
     "WCAG 2.1 AA",
     "21st Century IDEA",
     "NIST Guidelines"
   ],
-  "updated": "1.0.0"
+  "updated": "2.0.0"
 }

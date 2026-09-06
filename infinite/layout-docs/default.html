@@ -7,29 +7,113 @@
 <title>USWDS Layout Docs</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "layout-docs",
+    "uswdsClass": "usa-layout-docs",
+    "section": "layout",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "passive",
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "layout",
+      "docs",
+      "sidenav",
+      "documentation",
+      "sidebar"
+    ],
+    "description": "Documentation layout with sidebar navigation and main content area.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "none",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Documentation pages",
+      "Content with sidebar navigation",
+      "Article pages with table of contents"
+    ],
+    "avoidWhen": [
+      "Full-width content",
+      "Landing pages",
+      "App-like interfaces"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Use usa-layout-docs on main element. Add usa-layout-docs__sidenav for sidebar and usa-layout-docs__main for content.",
+    "relatedComponents": [
+      "side-navigation",
+      "breadcrumb",
+      "prose"
+    ],
+    "variants": [
+      "default"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "main.usa-layout-docs",
+      "aside.usa-layout-docs__sidenav",
+      "div.usa-layout-docs__main"
+    ],
+    "editable": [
+      "Sidenav content",
+      "Main content"
+    ],
+    "limitations": [
+      "Requires grid system for proper layout"
+    ]
+  },
   "file": "layout-docs/default.html",
   "title": "Layout Docs",
-  "uswdsComponentType": "layout-docs",
-  "uswdsClass": "usa-layout-docs",
-  "description": "Documentation layout with sidebar navigation and main content area.",
-  "section": "layout",
-  "variant": "default",
-  "useWhen": ["Documentation pages", "Content with sidebar navigation", "Article pages with table of contents"],
-  "avoidWhen": ["Full-width content", "Landing pages", "App-like interfaces"],
-  "agentPrompt": "Use usa-layout-docs on main element. Add usa-layout-docs__sidenav for sidebar and usa-layout-docs__main for content.",
-  "editableAreas": ["Sidenav content", "Main content"],
-  "preserveElements": ["main.usa-layout-docs", "aside.usa-layout-docs__sidenav", "div.usa-layout-docs__main"],
-  "knownLimitations": ["Requires grid system for proper layout"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive", "click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default"],
-  "settings": [],
-  "relatedComponents": ["side-navigation", "breadcrumb", "prose"],
-  "tokenOverrides": [],
-  "tags": ["layout", "docs", "sidenav", "documentation", "sidebar"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 810,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Use grid utilities as the layout root",
+      "2. Maintain mobile-first stacking; use tablet: / desktop: prefixes for breakpoints"
+    ]
+  }
 }
 </script>
 </head>

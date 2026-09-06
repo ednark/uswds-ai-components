@@ -7,29 +7,122 @@
 <title>USWDS Card (Media)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "card",
+    "uswdsClass": "usa-card usa-card--media",
+    "section": "data-display",
+    "variant": "media",
+    "requiresJs": "no",
+    "interaction": [
+      "passive",
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "card",
+      "media",
+      "image",
+      "photo"
+    ],
+    "description": "Card with large image positioned at top of card.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Image-heavy content",
+      "Photo articles",
+      "Visual-first cards"
+    ],
+    "avoidWhen": [
+      "Text-only content",
+      "Mobile where large images take too much space"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-card--media class to usa-card. Image goes in usa-card__media container at top.",
+    "relatedComponents": [
+      "collection",
+      "table"
+    ],
+    "variants": [
+      "default",
+      "flag",
+      "media",
+      "inset",
+      "header-flag"
+    ],
+    "settings": [
+      "$theme-card-border-radius",
+      "$theme-card-gap"
+    ],
+    "tokenOverrides": [
+      "$theme-card-border-radius",
+      "$theme-card-gap"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "article.usa-card usa-card--media",
+      "div.usa-card__media",
+      "div.usa-card__body"
+    ],
+    "editable": [
+      "Card heading and body text",
+      "Image src and alt",
+      "Footer actions"
+    ],
+    "limitations": [
+      "Image at top, takes significant vertical space"
+    ]
+  },
   "file": "card/media.html",
   "title": "Card (Media)",
-  "uswdsComponentType": "card",
-  "uswdsClass": "usa-card usa-card--media",
-  "description": "Card with large image positioned at top of card.",
-  "section": "data-display",
-  "variant": "media",
-  "useWhen": ["Image-heavy content", "Photo articles", "Visual-first cards"],
-  "avoidWhen": ["Text-only content", "Mobile where large images take too much space"],
-  "agentPrompt": "Add usa-card--media class to usa-card. Image goes in usa-card__media container at top.",
-  "editableAreas": ["Card heading and body text", "Image src and alt", "Footer actions"],
-  "preserveElements": ["article.usa-card usa-card--media", "div.usa-card__media", "div.usa-card__body"],
-  "knownLimitations": ["Image at top, takes significant vertical space"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive", "click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "flag", "media", "inset", "header-flag"],
-  "settings": ["$theme-card-border-radius", "$theme-card-gap"],
-  "relatedComponents": ["collection", "table"],
-  "tokenOverrides": ["$theme-card-border-radius", "$theme-card-gap"],
-  "tags": ["card", "media", "image", "photo"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 776,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Cards work in grid layouts — pair with layout utilities for columns",
+      "2. Keep the header/body/media block structure; do not flatten",
+      "3. One primary action per card; the whole card may link if content is single-purpose"
+    ]
+  }
 }
 </script>
 </head>

@@ -7,29 +7,121 @@
 <title>USWDS Footer (Big)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "footer",
+    "uswdsClass": "usa-footer usa-footer--big",
+    "section": "layout",
+    "variant": "big",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "footer",
+      "big",
+      "columns",
+      "navigation"
+    ],
+    "description": "Large footer with multiple columns for complex site navigation.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Complex sites with multiple sections",
+      "E-commerce sites",
+      "Sites needing extensive footer navigation"
+    ],
+    "avoidWhen": [
+      "Simple sites",
+      "Mobile interfaces"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-footer--big class to usa-footer. Multiple link columns in header area.",
+    "relatedComponents": [
+      "header",
+      "identifier",
+      "link"
+    ],
+    "variants": [
+      "default",
+      "slim",
+      "big"
+    ],
+    "settings": [
+      "$theme-footer-font-family"
+    ],
+    "tokenOverrides": [
+      "$theme-footer-font-family"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "footer.usa-footer usa-footer--big",
+      "div.usa-footer__primary-section with columns"
+    ],
+    "editable": [
+      "Agency info",
+      "Multiple column links",
+      "Contact information"
+    ],
+    "limitations": [
+      "Takes significant vertical space"
+    ]
+  },
   "file": "footer/big.html",
   "title": "Footer (Big)",
-  "uswdsComponentType": "footer",
-  "uswdsClass": "usa-footer usa-footer--big",
-  "description": "Large footer with multiple columns for complex site navigation.",
-  "section": "layout",
-  "variant": "big",
-  "useWhen": ["Complex sites with multiple sections", "E-commerce sites", "Sites needing extensive footer navigation"],
-  "avoidWhen": ["Simple sites", "Mobile interfaces"],
-  "agentPrompt": "Add usa-footer--big class to usa-footer. Multiple link columns in header area.",
-  "editableAreas": ["Agency info", "Multiple column links", "Contact information"],
-  "preserveElements": ["footer.usa-footer usa-footer--big", "div.usa-footer__primary-section with columns"],
-  "knownLimitations": ["Takes significant vertical space"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "slim", "big"],
-  "settings": ["$theme-footer-font-family"],
-  "relatedComponents": ["header", "identifier", "link"],
-  "tokenOverrides": ["$theme-footer-font-family"],
-  "tags": ["footer", "big", "columns", "navigation"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 868,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place footer as the last element in body",
+      "2. Pair with identifier below it for official government branding",
+      "3. Keep footer nav links flat — no nested menus"
+    ],
+    "compositionRecipes": [
+      "navigation-hierarchy"
+    ]
+  }
 }
 </script>
 </head>

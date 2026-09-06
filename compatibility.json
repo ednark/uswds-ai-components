@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "designSystem": "U.S. Web Design System",
+    "version": "3.13.0",
+    "registry": "uswds-ai-components"
+  },
+  "_fieldShape": {
+    "adaptation": "css-only = class substitution may work; structural = markup reorganization needed; framework = component-library adoption, not class translation",
+    "classMap": "source class → target class; null = drop the class (no equivalent)",
+    "mismatches": "known semantic or behavioral differences",
+    "notes": "context an agent must state in its output"
+  },
+  "_scope": "Family-level compatibility hints (one entry per component family). The MCP translate_component tool prefers tile classMapping, then adapter registry entries (material/bootstrap), then these maps. Advisory entries (framework/structural) are returned as guidance only — the tool does not fabricate translations.",
+  "uswds-to-govuk": {
+    "target": {
+      "designSystem": "GOV.UK Design System",
+      "version": "5.x",
+      "docs": "https://design-system.service.gov.uk"
+    },
+    "button": {
+      "target_component": "button",
+      "adaptation": "css-only",
+      "classMap": {
+        "usa-button": "govuk-button",
+        "usa-button--secondary": null,
+        "usa-button--base": "govuk-button govuk-button--secondary",
+        "usa-button--outline": null,
+        "usa-button--big": null
+      },
+      "mismatches": [
+        "GOV.UK has no secondary/outline button variants — use govuk-button--secondary for what USWDS calls 'base'",
+        "Disabled is disabled='disabled' in both; GOV.UK discourages disabled buttons entirely",
+        "GOV.UK buttons start with 'Start' styling for first CTA of a service"
+      ],
+      "notes": "Same <button> semantics; sentence case both"
+    },
+    "text-input": {
+      "target_component": "text-input",
+      "adaptation": "css-only",
+      "classMap": {
+        "usa-input": "govuk-input",
+        "usa-input--error": "govuk-input govuk-input--error"
+      },
+      "mismatches": [
+        "GOV.UK requires govuk-label + govuk-hint structure; USWDS label/hint pairing differs",
+        "Error messaging uses govuk-error-message linked via aria-describedby (same pattern, different component)"
+      ],
+      "notes": "Nearly identical input semantics"
+    },
+    "select": {
+      "target_component": "select",
+      "adaptation": "css-only",
+      "classMap": { "usa-select": "govuk-select" },
+      "mismatches": ["GOV.UK select styling is minimal; no arrow customization API"],
+      "notes": "Direct swap"
+    },
+    "checkbox": {
+      "target_component": "checkboxes",
+      "adaptation": "css-only",
+      "classMap": {
+        "usa-checkbox__input": "govuk-checkboxes__input",
+        "usa-checkbox__label": "govuk-label govuk-checkboxes__label"
+      },
+      "mismatches": [
+        "GOV.UK checkboxes render the whole control via a wrapper div pattern; DOM structure differs more than class names suggest"
+      ],
+      "notes": "Verify rendered structure after class swap"
+    },
+    "radio-buttons": {
+      "target_component": "radios",
+      "adaptation": "css-only",
+      "classMap": {
+        "usa-radio__input": "govuk-radios__input",
+        "usa-radio__label": "govuk-label govuk-radios__label"
+      },
+      "mismatches": ["Same wrapper-pattern caveat as checkboxes"],
+      "notes": "Fieldset+legend carries over directly"
+    },
+    "alert": {
+      "target_component": "notification-banner",
+      "adaptation": "structural",
+      "classMap": { "usa-alert": "govuk-notification-banner" },
+      "mismatches": [
+        "GOV.UK notification banner is page-level with heading + html content; USWDS alert is more granular (slim, no-icon variants have no GOV.UK equivalent)",
+        "role/aria conventions differ: govuk-notification-banner manages role='region' + tabindex"
+      ],
+      "notes": "Restructure markup; keep heading semantics"
+    },
+    "accordion": {
+      "target_component": "accordion",
+      "adaptation": "css-only",
+      "classMap": {
+        "usa-accordion": "govuk-accordion",
+        "usa-accordion__heading": "govuk-accordion__section-heading"
+      },
+      "mismatches": [
+        "GOV.UK accordion sections are h2-wrapped buttons; USWDS uses h3/h4-size headings — adjust heading level",
+        "GOV.UK accordion has no multiselectable toggle; behavior is always multi-open"
+      ],
+      "notes": "JS behavior differs — use GOV.UK JS"
+    },
+    "breadcrumb": {
+      "target_component": "breadcrumb",
+      "adaptation": "css-only",
+      "classMap": { "usa-breadcrumb": "govuk-breadcrumb", "usa-breadcrumb__list": "govuk-breadcrumb__list" },
+      "mismatches": [],
+      "notes": "Direct swap; aria-current='page' convention identical"
+    },
+    "header": {
+      "target_component": "header",
+      "adaptation": "structural",
+      "classMap": { "usa-header": "govuk-header", "usa-logo": "govuk-header__logo" },
+      "mismatches": [
+        "GOV.UK header is product-name + service-name oriented; USWDS extended/megamenu variants have no GOV.UK equivalent",
+        "Navigation markup completely different (govuk-service-navigation)"
+      ],
+      "notes": "Rebuild nav internals; keep landmark roles"
+    },
+    "footer": {
+      "target_component": "footer",
+      "adaptation": "structural",
+      "classMap": { "usa-footer": "govuk-footer" },
+      "mismatches": ["GOV.UK footer has fixed sections (meta, navigation, licence, OGL); USWDS big/collapsible footers have no equivalent"],
+      "notes": "Adapt content into GOV.UK footer sections"
+    },
+    "table": {
+      "target_component": "table",
+      "adaptation": "css-only",
+      "classMap": { "usa-table": "govuk-table", "usa-table--striped": null },
+      "mismatches": ["GOV.UK table has no striped variant; caption is required in both"],
+      "notes": "scope attributes carry over directly"
+    },
+    "date-picker": {
+      "target_component": "date-input",
+      "adaptation": "structural",
+      "mismatches": [
+        "GOV.UK deliberately has NO calendar component — it uses three separate day/month/year inputs",
+        "This is a UX-philosophy difference, not a styling one; do not port the USWDS calendar"
+      ],
+      "notes": "Rebuild as govuk-date-input with three fields"
+    }
+  },
+  "uswds-to-carbon": {
+    "target": {
+      "designSystem": "Carbon Design System (IBM)",
+      "version": "11.x",
+      "docs": "https://carbondesignsystem.com"
+    },
+    "_scope": "Carbon is a React/Vue/Web-Components component library, not a CSS class system. All mappings below are advisory: adopt the target component, carry over portableInvariants, do not attempt class substitution.",
+    "button": {
+      "target_component": "<Button>",
+      "adaptation": "framework",
+      "mismatches": [
+        "Prop-based variants (kind='primary'|'secondary'|'tertiary'|'ghost'|'danger') replace modifier classes",
+        "Carbon buttons are React components; event handling moves to props"
+      ],
+      "notes": "Carry over: semantic <button>, type attribute, accessible name"
+    },
+    "text-input": {
+      "target_component": "<TextInput>",
+      "adaptation": "framework",
+      "mismatches": ["Label + helper + error are props/subcomponents, not sibling elements"],
+      "notes": "Carry over: id/for pairing becomes controlId; aria-invalid via invalid prop"
+    },
+    "select": {
+      "target_component": "<Select>",
+      "adaptation": "framework",
+      "mismatches": ["Options are <SelectItem> children; placeholder handling differs"],
+      "notes": ""
+    },
+    "checkbox": {
+      "target_component": "<Checkbox>",
+      "adaptation": "framework",
+      "mismatches": ["Grouping via <CheckboxGroup legendText>; fieldset/legend generated for you"],
+      "notes": ""
+    },
+    "radio-buttons": {
+      "target_component": "<RadioButtonGroup>",
+      "adaptation": "framework",
+      "mismatches": ["RadioButtonGroup replaces manual fieldset+legend"],
+      "notes": ""
+    },
+    "alert": {
+      "target_component": "<InlineNotification> / <ToastNotification>",
+      "adaptation": "framework",
+      "mismatches": [
+        "USWDS alert kinds map: error→critical, warning→warning, success→success, info→info",
+        "Persistent vs auto-dismiss semantics differ (lowContrast, timeout props)"
+      ],
+      "notes": "Choose InlineNotification for in-form, Toast for transient"
+    },
+    "accordion": {
+      "target_component": "<Accordion>",
+      "adaptation": "framework",
+      "mismatches": ["AccordionItem children replace button+region pairing"],
+      "notes": "Multiselectable is default behavior"
+    },
+    "modal": {
+      "target_component": "<Modal>",
+      "adaptation": "framework",
+      "mismatches": ["Managed via state + modal-launcher conventions; focus trap is built in"],
+      "notes": "Carry over: aria-modal, labelledby semantics via props"
+    },
+    "table": {
+      "target_component": "<DataTable>",
+      "adaptation": "framework",
+      "mismatches": ["DataTable is a suite (TableContainer/Table/Toolbar) with sorting/selection props replacing USWDS JS"],
+      "notes": "Caption equivalent: TableTitle/beginner description props"
+    },
+    "date-picker": {
+      "target_component": "<DatePicker>",
+      "adaptation": "framework",
+      "mismatches": ["Flatpickr-based; single/range variants; no day/month/year-only mode without configuration"],
+      "notes": ""
+    },
+    "tag": {
+      "target_component": "<Tag>",
+      "adaptation": "framework",
+      "mismatches": ["Carbon tags are filterable/dismissible via props; USWDS tags are static"],
+      "notes": ""
+    },
+    "tooltip": {
+      "target_component": "<Tooltip>",
+      "adaptation": "framework",
+      "mismatches": ["Definition vs icon tooltips are separate components (Tooltip / Toggletip)"],
+      "notes": "Never put critical info solely in a tooltip — same rule both systems"
+    }
+  }
+}

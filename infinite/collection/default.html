@@ -10,53 +10,127 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "collection",
+    "uswdsClass": "usa-collection",
+    "section": "data-display",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "collection",
+      "list",
+      "articles",
+      "news",
+      "events",
+      "related",
+      "items"
+    ],
+    "description": "Displays a compact list of multiple related items like articles or events.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Lists of related articles or resources",
+      "Event listings",
+      "News or announcement lists",
+      "When compact display of related items is needed"
+    ],
+    "avoidWhen": [
+      "Single-item displays",
+      "When each item needs detailed information",
+      "Visual-heavy content that needs cards"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Update collection items with actual content. Add date, category, or metadata as needed. Each item should link to full content. Use usa-collection__body for item description.",
+    "relatedComponents": [
+      "card",
+      "table",
+      "list"
+    ],
+    "variants": [
+      "default"
+    ],
+    "settings": [
+      "$theme-collection-border-radius"
+    ],
+    "tokenOverrides": [
+      "$theme-collection-border-radius",
+      "$theme-collection-header-tag-font-family"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "ul.usa-collection for list",
+      "li.usa-collection__item for each item",
+      "a.usa-collection__link wrapper",
+      "div.usa-collection__body for content",
+      "p.usa-collection__meta for metadata"
+    ],
+    "editable": [
+      "Collection item title and link",
+      "Item description or excerpt",
+      "Item metadata (date, author, category)",
+      "Image if using media variant"
+    ],
+    "limitations": [
+      "Collections are read-only display components",
+      "Items should link to full content pages",
+      "Media variant requires image in specific position"
+    ]
+  },
   "file": "collection/default.html",
   "title": "Collection",
-  "uswdsComponentType": "collection",
-  "uswdsClass": "usa-collection",
-  "description": "Displays a compact list of multiple related items like articles or events.",
-  "section": "data-display",
-  "variant": "default",
-  "useWhen": [
-    "Lists of related articles or resources",
-    "Event listings",
-    "News or announcement lists",
-    "When compact display of related items is needed"
-  ],
-  "avoidWhen": [
-    "Single-item displays",
-    "When each item needs detailed information",
-    "Visual-heavy content that needs cards"
-  ],
-  "agentPrompt": "Update collection items with actual content. Add date, category, or metadata as needed. Each item should link to full content. Use usa-collection__body for item description.",
-  "editableAreas": [
-    "Collection item title and link",
-    "Item description or excerpt",
-    "Item metadata (date, author, category)",
-    "Image if using media variant"
-  ],
-  "preserveElements": [
-    "ul.usa-collection for list",
-    "li.usa-collection__item for each item",
-    "a.usa-collection__link wrapper",
-    "div.usa-collection__body for content",
-    "p.usa-collection__meta for metadata"
-  ],
-  "knownLimitations": [
-    "Collections are read-only display components",
-    "Items should link to full content pages",
-    "Media variant requires image in specific position"
-  ],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default"],
-  "settings": ["$theme-collection-border-radius"],
-  "relatedComponents": ["card", "table", "list"],
-  "tokenOverrides": ["$theme-collection-border-radius", "$theme-collection-header-tag-font-family"],
-  "tags": ["collection", "list", "articles", "news", "events", "related", "items"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1183,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Use for media-rich item lists (events, articles)",
+      "2. Keep bookmark/media-header structure; one primary link per item"
+    ]
+  }
 }
 </script>
 <style>

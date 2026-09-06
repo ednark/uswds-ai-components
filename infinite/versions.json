@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "registry": "uswds-ai-components",
+  "designSystem": {
+    "name": "U.S. Web Design System",
+    "version": "3.13.0",
+    "url": "https://designsystem.digital.gov"
+  },
+  "versions": [
+    {
+      "version": "1.0.0",
+      "releaseDate": "2026-07-05",
+      "componentCount": 146,
+      "breakingChanges": [],
+      "metadataChanges": [
+        "Initial registry: 146 USWDS tiles with flat (schema v1) adaptation metadata"
+      ],
+      "migrationPath": "none required"
+    },
+    {
+      "version": "2.0.0",
+      "releaseDate": "2026-07-09",
+      "componentCount": 146,
+      "breakingChanges": [
+        "Tile metadata restructured from flat (v1) to categorized (v2): discovery / selection / instruction / constraints"
+      ],
+      "addedCategories": [
+        "constraints.portableInvariants",
+        "portability.classMapping (material, bootstrap)"
+      ],
+      "metadataChanges": [
+        "Agent metadata separated into processing categories (constraint priority order documented)"
+      ],
+      "migrationPath": "Tiles embed _schemaVersion; readers detect v1/v2 automatically. Agents that parsed flat fields must read categorized fields (constraints.preserve replaces preserveElements at tile level; index still normalizes to flat).",
+      "notes": "Cross-design-system transfer layer added: portableInvariants + classMapping + adapter registry (adapters/adapters.json); MCP server with search/get/translate tools"
+    },
+    {
+      "version": "2.1.0",
+      "releaseDate": "2026-09-06",
+      "componentCount": 146,
+      "breakingChanges": [],
+      "addedCategories": [
+        "coordination (prerequisiteComponents, incompatibleWith, compositionCost, agentPromptSequence, compositionRecipes, variantRules)"
+      ],
+      "addedFacets": [
+        "costTier",
+        "prerequisites",
+        "compositionRecipes",
+        "fedRampLevel",
+        "piiHandling",
+        "touchTargetSize",
+        "supportedTokenProfiles"
+      ],
+      "metadataChanges": [
+        "discovery.compliance (nistControls, fedRampLevel, section508, wcag21AA, piiHandling, auditTrailCompatible, dataMaskingCompatible)",
+        "discovery.mobileUX (touchTargetSize, requiredMinSpacing, orientationLocked, fullscreenSafe)",
+        "supportedTokenProfiles (highContrast asserted; darkMode/compactDensity defined in registry config)"
+      ],
+      "migrationPath": "Fully additive — no tile changes required for existing consumers. Agents should re-fetch facets.json for the extended facet vocabulary. Index records gained lean summary fields (costTier, prerequisites, incompatibleWith, compositionRecipes, fedRampLevel, piiHandling, touchTargetSize).",
+      "notes": "Surface 4 recipes (contact-form, login-flow, data-table-with-sorting, error-handling-stack, navigation-hierarchy); MCP get_recipe, query_compliance, get_versions; validate-registry/compliance-scorer/cost-modeler CLI tools; compatibility.json cross-system maps"
+    }
+  ],
+  "designSystemVersions": [
+    {
+      "version": "3.13.0",
+      "status": "current",
+      "notes": "All 146 tiles target USWDS 3.13.0"
+    }
+  ]
+}

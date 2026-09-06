@@ -10,53 +10,135 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "combo-box",
+    "uswdsClass": "usa-combo-box",
+    "section": "forms",
+    "variant": "default",
+    "requiresJs": "required",
+    "interaction": [
+      "input",
+      "click",
+      "keyboard"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "combo-box",
+      "select",
+      "dropdown",
+      "typeahead",
+      "search",
+      "autocomplete",
+      "form"
+    ],
+    "description": "Helps users select an item from a large list of options with typeahead search.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Large lists of 10+ options where users need to search/filter",
+      "When users know what they're looking for and need to find it quickly",
+      "Location selection (states, countries, cities)",
+      "Categorical selection from a defined vocabulary"
+    ],
+    "avoidWhen": [
+      "Small lists of fewer than 7-10 options — use radio buttons or select",
+      "When all options must be visible at once",
+      "Free-form text input needed — use text input instead"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Update data-options JSON array with actual option values. Ensure each option has value and text properties. Set initial selection with selected attribute on one option. Add data-default-value for programmatic pre-selection.",
+    "relatedComponents": [
+      "select",
+      "form",
+      "text-input"
+    ],
+    "variants": [
+      "default"
+    ],
+    "settings": [
+      "$theme-combo-box-border-radius"
+    ],
+    "tokenOverrides": [
+      "$theme-combo-box-border-radius"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-combo-box wrapper",
+      "select.usa-combo-box__select hidden input",
+      "input.usa-combo-box__input for typeahead",
+      "ul.usa-combo-box__list for dropdown",
+      "data-options attribute with option data"
+    ],
+    "editable": [
+      "Options list in data-options attribute",
+      "Label text content",
+      "Placeholder text",
+      "Default selected value"
+    ],
+    "limitations": [
+      "JavaScript required for typeahead functionality",
+      "Options list must be provided in data-options attribute",
+      "Hidden select element handles form submission"
+    ]
+  },
   "file": "combo-box/default.html",
   "title": "Combo Box",
-  "uswdsComponentType": "combo-box",
-  "uswdsClass": "usa-combo-box",
-  "description": "Helps users select an item from a large list of options with typeahead search.",
-  "section": "forms",
-  "variant": "default",
-  "useWhen": [
-    "Large lists of 10+ options where users need to search/filter",
-    "When users know what they're looking for and need to find it quickly",
-    "Location selection (states, countries, cities)",
-    "Categorical selection from a defined vocabulary"
-  ],
-  "avoidWhen": [
-    "Small lists of fewer than 7-10 options — use radio buttons or select",
-    "When all options must be visible at once",
-    "Free-form text input needed — use text input instead"
-  ],
-  "agentPrompt": "Update data-options JSON array with actual option values. Ensure each option has value and text properties. Set initial selection with selected attribute on one option. Add data-default-value for programmatic pre-selection.",
-  "editableAreas": [
-    "Options list in data-options attribute",
-    "Label text content",
-    "Placeholder text",
-    "Default selected value"
-  ],
-  "preserveElements": [
-    "div.usa-combo-box wrapper",
-    "select.usa-combo-box__select hidden input",
-    "input.usa-combo-box__input for typeahead",
-    "ul.usa-combo-box__list for dropdown",
-    "data-options attribute with option data"
-  ],
-  "knownLimitations": [
-    "JavaScript required for typeahead functionality",
-    "Options list must be provided in data-options attribute",
-    "Hidden select element handles form submission"
-  ],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["input", "click", "keyboard"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default"],
-  "settings": ["$theme-combo-box-border-radius"],
-  "relatedComponents": ["select", "form", "text-input"],
-  "tokenOverrides": ["$theme-combo-box-border-radius"],
-  "tags": ["combo-box", "select", "dropdown", "typeahead", "search", "autocomplete", "form"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Provides form context; place this combo-box inside a form wrapper"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1291,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Fetch the form wrapper first",
+      "2. Keep the underlying select element — JS enhances it, it must remain for no-JS fallback",
+      "3. Initialize after DOM ready (combo-box JS is required)"
+    ]
+  }
 }
 </script>
 <style>

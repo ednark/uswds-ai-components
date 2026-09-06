@@ -10,54 +10,132 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "link",
+    "uswdsClass": "usa-link",
+    "section": "navigation",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus",
+      "hover"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "link",
+      "anchor",
+      "navigation",
+      "href",
+      "external",
+      "download"
+    ],
+    "description": "Connects users to a different page or further information.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Navigating between pages",
+      "Providing additional information or resources",
+      "Inline references within content",
+      "CTAs that don't require button styling"
+    ],
+    "avoidWhen": [
+      "Primary actions that should be buttons",
+      "Navigating within a page (use anchor links)",
+      "Submitting forms (use submit button)"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-link--external for links to other domains. Add usa-link--download for downloadable files. Update href for destination. Use sentence case for link text.",
+    "relatedComponents": [
+      "button",
+      "icon"
+    ],
+    "variants": [
+      "default",
+      "external",
+      "download"
+    ],
+    "settings": [
+      "$theme-link-font-family"
+    ],
+    "tokenOverrides": [
+      "$theme-link-font-family",
+      "$theme-link-color"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "a.usa-link class on anchor elements",
+      "usa-link--external for off-site links",
+      "usa-link--download for downloadable content",
+      "aria-label when icon accompanies text",
+      "Title attribute for context on hover"
+    ],
+    "editable": [
+      "Link text content",
+      "href destination URL",
+      "External indicator: usa-link--external",
+      "Download indicator: usa-link--download",
+      "Target attribute for new windows"
+    ],
+    "limitations": [
+      "External links should indicate they go to other sites",
+      "Download links should indicate file type and size",
+      "Links should have descriptive text, not 'click here'"
+    ]
+  },
   "file": "link/default.html",
   "title": "Link",
-  "uswdsComponentType": "link",
-  "uswdsClass": "usa-link",
-  "description": "Connects users to a different page or further information.",
-  "section": "navigation",
-  "variant": "default",
-  "useWhen": [
-    "Navigating between pages",
-    "Providing additional information or resources",
-    "Inline references within content",
-    "CTAs that don't require button styling"
-  ],
-  "avoidWhen": [
-    "Primary actions that should be buttons",
-    "Navigating within a page (use anchor links)",
-    "Submitting forms (use submit button)"
-  ],
-  "agentPrompt": "Add usa-link--external for links to other domains. Add usa-link--download for downloadable files. Update href for destination. Use sentence case for link text.",
-  "editableAreas": [
-    "Link text content",
-    "href destination URL",
-    "External indicator: usa-link--external",
-    "Download indicator: usa-link--download",
-    "Target attribute for new windows"
-  ],
-  "preserveElements": [
-    "a.usa-link class on anchor elements",
-    "usa-link--external for off-site links",
-    "usa-link--download for downloadable content",
-    "aria-label when icon accompanies text",
-    "Title attribute for context on hover"
-  ],
-  "knownLimitations": [
-    "External links should indicate they go to other sites",
-    "Download links should indicate file type and size",
-    "Links should have descriptive text, not 'click here'"
-  ],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "focus", "hover"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "external", "download"],
-  "settings": ["$theme-link-font-family"],
-  "relatedComponents": ["button", "icon"],
-  "tokenOverrides": ["$theme-link-font-family", "$theme-link-color"],
-  "tags": ["link", "anchor", "navigation", "href", "external", "download"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1077,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. For external links, add the external-link icon and indicate in text or aria-label",
+      "2. Use distinct links/variants — never style links as buttons without button behavior"
+    ],
+    "compositionRecipes": [
+      "login-flow"
+    ]
+  }
 }
 </script>
 <style>

@@ -10,53 +10,126 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "list",
+    "uswdsClass": "usa-list",
+    "section": "layout",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "passive"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": false,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": false
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "list",
+      "ul",
+      "ol",
+      "li",
+      "bullet",
+      "numbered",
+      "items"
+    ],
+    "description": "Organizes information into discrete sequential sections.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Presenting groups of related items",
+      "Step-by-step instructions",
+      "Enumerated content that needs to be scannable",
+      "Navigation menus"
+    ],
+    "avoidWhen": [
+      "Paragraph text that flows continuously",
+      "Densely packed tables of data",
+      "One-off items without grouping"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Use ol.usa-list for ordered (numbered) lists, ul.usa-list for unordered (bulleted). Use usa-list--unstyled to remove default bullets. Use usa-list--bordered for visual separation between items.",
+    "relatedComponents": [
+      "prose",
+      "icon-list"
+    ],
+    "variants": [
+      "ul",
+      "ol",
+      "li"
+    ],
+    "settings": [
+      "$theme-list-font-family"
+    ],
+    "tokenOverrides": [
+      "$theme-list-font-family"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "ol.usa-list or ul.usa-list wrapper",
+      "li.usa-list__item for each item",
+      "Semantic list structure for screen readers",
+      "Proper nesting of lists"
+    ],
+    "editable": [
+      "List item text content",
+      "ol vs ul element choice",
+      "usa-list--unstyled to remove bullets",
+      "usa-list--bordered for bordered items",
+      "List item nesting depth"
+    ],
+    "limitations": [
+      "List resets should be used if mixing with custom content",
+      "过度 nesting makes content hard to read",
+      "Lists inside prose content have special spacing"
+    ]
+  },
   "file": "list/default.html",
   "title": "List",
-  "uswdsComponentType": "list",
-  "uswdsClass": "usa-list",
-  "description": "Organizes information into discrete sequential sections.",
-  "section": "layout",
-  "variant": "default",
-  "useWhen": [
-    "Presenting groups of related items",
-    "Step-by-step instructions",
-    "Enumerated content that needs to be scannable",
-    "Navigation menus"
-  ],
-  "avoidWhen": [
-    "Paragraph text that flows continuously",
-    "Densely packed tables of data",
-    "One-off items without grouping"
-  ],
-  "agentPrompt": "Use ol.usa-list for ordered (numbered) lists, ul.usa-list for unordered (bulleted). Use usa-list--unstyled to remove default bullets. Use usa-list--bordered for visual separation between items.",
-  "editableAreas": [
-    "List item text content",
-    "ol vs ul element choice",
-    "usa-list--unstyled to remove bullets",
-    "usa-list--bordered for bordered items",
-    "List item nesting depth"
-  ],
-  "preserveElements": [
-    "ol.usa-list or ul.usa-list wrapper",
-    "li.usa-list__item for each item",
-    "Semantic list structure for screen readers",
-    "Proper nesting of lists"
-  ],
-  "knownLimitations": [
-    "List resets should be used if mixing with custom content",
-    "过度 nesting makes content hard to read",
-    "Lists inside prose content have special spacing"
-  ],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive"],
-  "a11y": {"wcag21AA": true, "keyboardNav": false, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": false},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["ul", "ol", "li"],
-  "settings": ["$theme-list-font-family"],
-  "relatedComponents": ["prose", "icon-list"],
-  "tokenOverrides": ["$theme-list-font-family"],
-  "tags": ["list", "ul", "ol", "li", "bullet", "numbered", "items"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1126,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Keep semantic ul/ol structure",
+      "2. For check/cross lists keep the icon spans aria-hidden"
+    ]
+  }
 }
 </script>
 <style>

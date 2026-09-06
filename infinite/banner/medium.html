@@ -7,29 +7,115 @@
 <title>USWDS Banner (Medium)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "banner",
+    "uswdsClass": "usa-banner--medium",
+    "section": "supporting",
+    "variant": "medium",
+    "requiresJs": "no",
+    "interaction": [
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA",
+      "Required by US federal agencies"
+    ],
+    "tier": "curated",
+    "tags": [
+      "banner",
+      "medium",
+      "government",
+      "official"
+    ],
+    "description": "Banner with medium-sized government emblem.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Standard government sites",
+      "When larger emblem aids recognition"
+    ],
+    "avoidWhen": [
+      "Compact headers",
+      "Mobile with limited space"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-banner--medium class to usa-banner for medium emblem size.",
+    "relatedComponents": [
+      "header",
+      "identifier"
+    ],
+    "variants": [
+      "default",
+      "medium",
+      "slim"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-banner",
+      "div.usa-banner__header",
+      "div.usa-banner__content"
+    ],
+    "editable": [
+      "Agency name",
+      "Official website notice"
+    ],
+    "limitations": [
+      "Medium size may not scale well on all screens"
+    ]
+  },
   "file": "banner/medium.html",
   "title": "Banner (Medium)",
-  "uswdsComponentType": "banner",
-  "uswdsClass": "usa-banner--medium",
-  "description": "Banner with medium-sized government emblem.",
-  "section": "supporting",
-  "variant": "medium",
-  "useWhen": ["Standard government sites", "When larger emblem aids recognition"],
-  "avoidWhen": ["Compact headers", "Mobile with limited space"],
-  "agentPrompt": "Add usa-banner--medium class to usa-banner for medium emblem size.",
-  "editableAreas": ["Agency name", "Official website notice"],
-  "preserveElements": ["div.usa-banner", "div.usa-banner__header", "div.usa-banner__content"],
-  "knownLimitations": ["Medium size may not scale well on all screens"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA", "Required by US federal agencies"],
-  "variants": ["default", "medium", "slim"],
-  "settings": [],
-  "relatedComponents": ["header", "identifier"],
-  "tokenOverrides": [],
-  "tags": ["banner", "medium", "government", "official"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 721,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place banner as the very first element in body, above header",
+      "2. Keep the expand/collapse JS intact — it is required for the official.gov domain message",
+      "3. Do not add content inside the banner beyond the standard copy"
+    ],
+    "compositionRecipes": [
+      "navigation-hierarchy"
+    ]
+  }
 }
 </script>
 </head>

@@ -7,29 +7,115 @@
 <title>USWDS Accordion (Until Found)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "accordion",
+    "uswdsClass": "usa-accordion",
+    "section": "data-display",
+    "variant": "until-found",
+    "requiresJs": "required",
+    "interaction": [
+      "click",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "accordion",
+      "until-found",
+      "hidden",
+      "searchable",
+      "html5"
+    ],
+    "description": "Accordion using hidden='until-found' so collapsed content stays searchable via browser find-in-page.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Long content that should remain searchable",
+      "Browser find-in-page should find collapsed content",
+      "usa.gov pattern"
+    ],
+    "avoidWhen": [
+      "Older browsers without hidden=until-found support"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add hidden='until-found' attribute to usa-accordion__content. Use onbeforematch to update aria-expanded.",
+    "relatedComponents": [
+      "banner",
+      "card"
+    ],
+    "variants": [
+      "default",
+      "bordered",
+      "multiselectable",
+      "until-found"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "button.usa-accordion__button",
+      "div.usa-accordion__content[hidden='until-found']",
+      "aria-expanded attribute"
+    ],
+    "editable": [
+      "Accordion button text",
+      "Accordion panel content"
+    ],
+    "limitations": [
+      "Requires JavaScript for onbeforematch handling",
+      "Firefox < 124 and Safari < 18 don't support"
+    ]
+  },
   "file": "accordion/until-found.html",
   "title": "Accordion (Until Found)",
-  "uswdsComponentType": "accordion",
-  "uswdsClass": "usa-accordion",
-  "description": "Accordion using hidden='until-found' so collapsed content stays searchable via browser find-in-page.",
-  "section": "data-display",
-  "variant": "until-found",
-  "useWhen": ["Long content that should remain searchable", "Browser find-in-page should find collapsed content", "usa.gov pattern"],
-  "avoidWhen": ["Older browsers without hidden=until-found support"],
-  "agentPrompt": "Add hidden='until-found' attribute to usa-accordion__content. Use onbeforematch to update aria-expanded.",
-  "editableAreas": ["Accordion button text", "Accordion panel content"],
-  "preserveElements": ["button.usa-accordion__button", "div.usa-accordion__content[hidden='until-found']", "aria-expanded attribute"],
-  "knownLimitations": ["Requires JavaScript for onbeforematch handling", "Firefox < 124 and Safari < 18 don't support"],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["click", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "bordered", "multiselectable", "until-found"],
-  "settings": [],
-  "relatedComponents": ["banner", "card"],
-  "tokenOverrides": [],
-  "tags": ["accordion", "until-found", "hidden", "searchable", "html5"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1006,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Keep the accordion JS — without it all sections must render open",
+      "2. Keep button+region pairing (aria-controls/aria-expanded) intact",
+      "3. Do not nest accordions more than one level deep"
+    ]
+  }
 }
 </script>
 </head>

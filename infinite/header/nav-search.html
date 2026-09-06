@@ -7,29 +7,134 @@
 <title>USWDS Header (Nav Search)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "header",
+    "uswdsClass": "usa-header usa-header--basic",
+    "section": "navigation",
+    "variant": "nav-search",
+    "requiresJs": "required",
+    "interaction": [
+      "click",
+      "focus",
+      "input"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "header",
+      "nav-search",
+      "search",
+      "dropdown",
+      "icon",
+      "navigation"
+    ],
+    "description": "Header with search icon in navigation that expands to a search dropdown panel.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Compact headers",
+      "When search should be in nav not toolbar",
+      "Icon-triggered search"
+    ],
+    "avoidWhen": [
+      "When search should always be visible",
+      "Extended headers with search bar"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add search-container as last usa-nav__primary-item. Use button with search icon that controls a usa-nav__submenu panel containing usa-search form.",
+    "relatedComponents": [
+      "search",
+      "header"
+    ],
+    "variants": [
+      "default",
+      "basic",
+      "extended",
+      "megamenu",
+      "basic-megamenu",
+      "nav-search"
+    ],
+    "settings": [
+      "$theme-header-font-family"
+    ],
+    "tokenOverrides": [
+      "$theme-header-font-family"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "li.usa-nav__primary-item.search-container",
+      "button.usa-nav__link",
+      "div.usa-nav__submenu",
+      "form.usa-search"
+    ],
+    "editable": [
+      "Search icon",
+      "Search placeholder text",
+      "Search form action URL"
+    ],
+    "limitations": [
+      "JavaScript required for toggle",
+      "Extra click to search"
+    ]
+  },
   "file": "header/nav-search.html",
   "title": "Header (Nav Search)",
-  "uswdsComponentType": "header",
-  "uswdsClass": "usa-header usa-header--basic",
-  "description": "Header with search icon in navigation that expands to a search dropdown panel.",
-  "section": "navigation",
-  "variant": "nav-search",
-  "useWhen": ["Compact headers", "When search should be in nav not toolbar", "Icon-triggered search"],
-  "avoidWhen": ["When search should always be visible", "Extended headers with search bar"],
-  "agentPrompt": "Add search-container as last usa-nav__primary-item. Use button with search icon that controls a usa-nav__submenu panel containing usa-search form.",
-  "editableAreas": ["Search icon", "Search placeholder text", "Search form action URL"],
-  "preserveElements": ["li.usa-nav__primary-item.search-container", "button.usa-nav__link", "div.usa-nav__submenu", "form.usa-search"],
-  "knownLimitations": ["JavaScript required for toggle", "Extra click to search"],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["click", "focus", "input"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "basic", "extended", "megamenu", "basic-megamenu", "nav-search"],
-  "settings": ["$theme-header-font-family"],
-  "relatedComponents": ["search", "header"],
-  "tokenOverrides": ["$theme-header-font-family"],
-  "tags": ["header", "nav-search", "search", "dropdown", "icon", "navigation"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [
+      {
+        "name": "modal",
+        "reason": "Header already establishes page chrome; nested modals in header break focus order"
+      }
+    ],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1192,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place header as the first element in body",
+      "2. Nest navigation (primary, secondary) inside header",
+      "3. Pair with banner above it when a required-agency banner is needed"
+    ],
+    "compositionRecipes": [
+      "navigation-hierarchy"
+    ]
+  }
 }
 </script>
 </head>

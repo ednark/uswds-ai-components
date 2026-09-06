@@ -10,53 +10,129 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "identifier",
+    "uswdsClass": "usa-identifier",
+    "section": "data-display",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "passive",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": false,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": false
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA",
+      "NIST Guidelines"
+    ],
+    "tier": "curated",
+    "tags": [
+      "identifier",
+      "agency",
+      "legal",
+      "footer",
+      "federal",
+      "compliance",
+      "branding"
+    ],
+    "description": "Communicates a site's parent agency and displays required agency links per federal law.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Federal government websites requiring agency identification",
+      "Pages needing to display parent agency information",
+      "Compliance with 21st Century IDEA requirements",
+      "Sites requiring specific legal and accessibility links"
+    ],
+    "avoidWhen": [
+      "Non-government websites",
+      "Internal-only applications"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Update agency name, parent agency, and links. Ensure all required links are present: Privacy Policy, Terms of Service, Accessibility, Contact. Update USA.gov link for correct government portal.",
+    "relatedComponents": [
+      "footer",
+      "link"
+    ],
+    "variants": [
+      "default"
+    ],
+    "settings": [
+      "$theme-identifier-font-family"
+    ],
+    "tokenOverrides": [
+      "$theme-identifier-font-family"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "section.usa-identifier wrapper",
+      "div.usa-identifier__masthead",
+      "div.usa-identifier__agency-name",
+      "div.usa-identifier__links for required links",
+      "Required link: Privacy Policy, Terms of Service, Accessibility"
+    ],
+    "editable": [
+      "Agency name",
+      "Parent agency name",
+      "All link text and URLs",
+      "Logo and masthead if applicable",
+      "Copyright year"
+    ],
+    "limitations": [
+      "Federal websites are required to display identifier per federal guidelines",
+      "Links must point to actual agency pages, not placeholders",
+      "USA.gov link is required for federal sites"
+    ]
+  },
   "file": "identifier/default.html",
   "title": "Identifier",
-  "uswdsComponentType": "identifier",
-  "uswdsClass": "usa-identifier",
-  "description": "Communicates a site's parent agency and displays required agency links per federal law.",
-  "section": "data-display",
-  "variant": "default",
-  "useWhen": [
-    "Federal government websites requiring agency identification",
-    "Pages needing to display parent agency information",
-    "Compliance with 21st Century IDEA requirements",
-    "Sites requiring specific legal and accessibility links"
-  ],
-  "avoidWhen": [
-    "Non-government websites",
-    "Internal-only applications"
-  ],
-  "agentPrompt": "Update agency name, parent agency, and links. Ensure all required links are present: Privacy Policy, Terms of Service, Accessibility, Contact. Update USA.gov link for correct government portal.",
-  "editableAreas": [
-    "Agency name",
-    "Parent agency name",
-    "All link text and URLs",
-    "Logo and masthead if applicable",
-    "Copyright year"
-  ],
-  "preserveElements": [
-    "section.usa-identifier wrapper",
-    "div.usa-identifier__masthead",
-    "div.usa-identifier__agency-name",
-    "div.usa-identifier__links for required links",
-    "Required link: Privacy Policy, Terms of Service, Accessibility"
-  ],
-  "knownLimitations": [
-    "Federal websites are required to display identifier per federal guidelines",
-    "Links must point to actual agency pages, not placeholders",
-    "USA.gov link is required for federal sites"
-  ],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": false, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": false},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA", "NIST Guidelines"],
-  "variants": ["default"],
-  "settings": ["$theme-identifier-font-family"],
-  "relatedComponents": ["footer", "link"],
-  "tokenOverrides": ["$theme-identifier-font-family"],
-  "tags": ["identifier", "agency", "legal", "footer", "federal", "compliance", "branding"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1069,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place identifier directly below the footer",
+      "2. Keep the required agency links and logo slots intact"
+    ],
+    "compositionRecipes": [
+      "navigation-hierarchy"
+    ]
+  }
 }
 </script>
 <style>

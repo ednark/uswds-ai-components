@@ -7,29 +7,115 @@
 <title>USWDS Breadcrumb (Naviprev Next)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "breadcrumb",
+    "uswdsClass": "usa-breadcrumb--naviprev-next",
+    "section": "navigation",
+    "variant": "naviprev-next",
+    "requiresJs": "no",
+    "interaction": [
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "breadcrumb",
+      "naviprev-next",
+      "prev-next",
+      "linear"
+    ],
+    "description": "Breadcrumb variant showing previous and next navigation only.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Linear content sequences",
+      "Articles with prev/next",
+      "Wizard-style flows"
+    ],
+    "avoidWhen": [
+      "Hierarchical site structures",
+      "Deep navigation trails"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-breadcrumb--naviprev-next class. Shows only prev/next links, no full path.",
+    "relatedComponents": [
+      "header",
+      "link",
+      "pagination"
+    ],
+    "variants": [
+      "default",
+      "wrap",
+      "naviprev-next"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "nav.usa-breadcrumb",
+      "ul.usa-breadcrumb__list"
+    ],
+    "editable": [
+      "Previous link text and href",
+      "Next link text and href"
+    ],
+    "limitations": [
+      "Loses context of full navigation path"
+    ]
+  },
   "file": "breadcrumb/naviprev-next.html",
   "title": "Breadcrumb (Naviprev Next)",
-  "uswdsComponentType": "breadcrumb",
-  "uswdsClass": "usa-breadcrumb--naviprev-next",
-  "description": "Breadcrumb variant showing previous and next navigation only.",
-  "section": "navigation",
-  "variant": "naviprev-next",
-  "useWhen": ["Linear content sequences", "Articles with prev/next", "Wizard-style flows"],
-  "avoidWhen": ["Hierarchical site structures", "Deep navigation trails"],
-  "agentPrompt": "Add usa-breadcrumb--naviprev-next class. Shows only prev/next links, no full path.",
-  "editableAreas": ["Previous link text and href", "Next link text and href"],
-  "preserveElements": ["nav.usa-breadcrumb", "ul.usa-breadcrumb__list"],
-  "knownLimitations": ["Loses context of full navigation path"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "wrap", "naviprev-next"],
-  "settings": [],
-  "relatedComponents": ["header", "link", "pagination"],
-  "tokenOverrides": [],
-  "tags": ["breadcrumb", "naviprev-next", "prev-next", "linear"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 759,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place below header, above page h1",
+      "2. Keep the ordered-list structure and aria-label='Breadcrumb'",
+      "3. Last item is the current page — keep aria-current='page'"
+    ],
+    "compositionRecipes": [
+      "navigation-hierarchy"
+    ]
+  }
 }
 </script>
 </head>

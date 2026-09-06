@@ -7,29 +7,132 @@
 <title>USWDS Header (Extended)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "header",
+    "uswdsClass": "usa-header usa-header--extended",
+    "section": "navigation",
+    "variant": "extended",
+    "requiresJs": "required",
+    "interaction": [
+      "click",
+      "hover",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "header",
+      "extended",
+      "full-width",
+      "desktop"
+    ],
+    "description": "Header with extended navigation, full-width links always visible on desktop.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Sites with multiple main sections",
+      "Desktop-focused navigation",
+      "Full nav visibility required"
+    ],
+    "avoidWhen": [
+      "Mobile-first designs",
+      "Simple sites needing minimal nav"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-header--extended class to usa-header. Full nav always visible on desktop.",
+    "relatedComponents": [
+      "side-navigation",
+      "footer",
+      "search"
+    ],
+    "variants": [
+      "default",
+      "basic",
+      "extended",
+      "megamenu"
+    ],
+    "settings": [
+      "$theme-header-font-family",
+      "$theme-header-logo-width"
+    ],
+    "tokenOverrides": [
+      "$theme-header-font-family",
+      "$theme-header-logo-width",
+      "$theme-header-min-width"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "header.usa-header usa-header--extended",
+      "div.usa-logo",
+      "nav.usa-nav"
+    ],
+    "editable": [
+      "Agency logo and name",
+      "Extended nav links",
+      "Search if needed"
+    ],
+    "limitations": [
+      "Nav always visible (doesn't collapse to hamburger on desktop)"
+    ]
+  },
   "file": "header/extended.html",
   "title": "Header (Extended)",
-  "uswdsComponentType": "header",
-  "uswdsClass": "usa-header usa-header--extended",
-  "description": "Header with extended navigation, full-width links always visible on desktop.",
-  "section": "navigation",
-  "variant": "extended",
-  "useWhen": ["Sites with multiple main sections", "Desktop-focused navigation", "Full nav visibility required"],
-  "avoidWhen": ["Mobile-first designs", "Simple sites needing minimal nav"],
-  "agentPrompt": "Add usa-header--extended class to usa-header. Full nav always visible on desktop.",
-  "editableAreas": ["Agency logo and name", "Extended nav links", "Search if needed"],
-  "preserveElements": ["header.usa-header usa-header--extended", "div.usa-logo", "nav.usa-nav"],
-  "knownLimitations": ["Nav always visible (doesn't collapse to hamburger on desktop)"],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["click", "hover", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "basic", "extended", "megamenu"],
-  "settings": ["$theme-header-font-family", "$theme-header-logo-width"],
-  "relatedComponents": ["side-navigation", "footer", "search"],
-  "tokenOverrides": ["$theme-header-font-family", "$theme-header-logo-width", "$theme-header-min-width"],
-  "tags": ["header", "extended", "full-width", "desktop"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [
+      {
+        "name": "modal",
+        "reason": "Header already establishes page chrome; nested modals in header break focus order"
+      }
+    ],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 959,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place header as the first element in body",
+      "2. Nest navigation (primary, secondary) inside header",
+      "3. Pair with banner above it when a required-agency banner is needed"
+    ],
+    "compositionRecipes": [
+      "navigation-hierarchy"
+    ]
+  }
 }
 </script>
 </head>

@@ -7,29 +7,106 @@
 <title>USWDS Process List (Steps)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "process-list",
+    "uswdsClass": "usa-process-list--steps",
+    "section": "navigation",
+    "variant": "steps",
+    "requiresJs": "no",
+    "interaction": [
+      "passive"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "process-list",
+      "steps",
+      "numbered",
+      "workflow"
+    ],
+    "description": "Process list with numbered steps for workflows.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Step-by-step instructions",
+      "Multi-step workflows",
+      "Procedural content"
+    ],
+    "avoidWhen": [
+      "Simple lists",
+      "Non-sequential content"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-process-list--steps class to usa-process-list for numbered variant.",
+    "relatedComponents": [
+      "step-indicator",
+      "list"
+    ],
+    "variants": [
+      "default",
+      "steps"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "ol.usa-process-list",
+      "li.usa-process-list__item"
+    ],
+    "editable": [
+      "Step titles and descriptions"
+    ],
+    "limitations": []
+  },
   "file": "process-list/steps.html",
   "title": "Process List (Steps)",
-  "uswdsComponentType": "process-list",
-  "uswdsClass": "usa-process-list--steps",
-  "description": "Process list with numbered steps for workflows.",
-  "section": "navigation",
-  "variant": "steps",
-  "useWhen": ["Step-by-step instructions", "Multi-step workflows", "Procedural content"],
-  "avoidWhen": ["Simple lists", "Non-sequential content"],
-  "agentPrompt": "Add usa-process-list--steps class to usa-process-list for numbered variant.",
-  "editableAreas": ["Step titles and descriptions"],
-  "preserveElements": ["ol.usa-process-list", "li.usa-process-list__item"],
-  "knownLimitations": [],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "steps"],
-  "settings": [],
-  "relatedComponents": ["step-indicator", "list"],
-  "tokenOverrides": [],
-  "tags": ["process-list", "steps", "numbered", "workflow"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 699,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Use for sequential guidance; keep the ordered-list semantics",
+      "2. Mark current step with usa-process-list__item--current"
+    ]
+  }
 }
 </script>
 </head>

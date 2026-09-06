@@ -7,29 +7,106 @@
 <title>USWDS Media Block</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "media-block",
+    "uswdsClass": "usa-media-block",
+    "section": "layout",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "passive"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "media-block",
+      "image",
+      "text",
+      "layout"
+    ],
+    "description": "Layout component pairing an image with body text, used in banners and informational displays.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Image + text side-by-side",
+      "Banner content",
+      "Informational displays with icons"
+    ],
+    "avoidWhen": [
+      "Pure text content",
+      "Decorative images only"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Use div.usa-media-block__img for image and div.usa-media-block__body for text. Image floats left.",
+    "relatedComponents": [
+      "banner",
+      "card",
+      "icon-list"
+    ],
+    "variants": [
+      "default"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-media-block__img",
+      "div.usa-media-block__body"
+    ],
+    "editable": [
+      "Image src and alt",
+      "Body text content"
+    ],
+    "limitations": []
+  },
   "file": "media-block/default.html",
   "title": "Media Block",
-  "uswdsComponentType": "media-block",
-  "uswdsClass": "usa-media-block",
-  "description": "Layout component pairing an image with body text, used in banners and informational displays.",
-  "section": "layout",
-  "variant": "default",
-  "useWhen": ["Image + text side-by-side", "Banner content", "Informational displays with icons"],
-  "avoidWhen": ["Pure text content", "Decorative images only"],
-  "agentPrompt": "Use div.usa-media-block__img for image and div.usa-media-block__body for text. Image floats left.",
-  "editableAreas": ["Image src and alt", "Body text content"],
-  "preserveElements": ["div.usa-media-block__img", "div.usa-media-block__body"],
-  "knownLimitations": [],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default"],
-  "settings": [],
-  "relatedComponents": ["banner", "card", "icon-list"],
-  "tokenOverrides": [],
-  "tags": ["media-block", "image", "text", "layout"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 625,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Keep the media+body two-column structure; stack on mobile via provided classes"
+    ]
+  }
 }
 </script>
 </head>

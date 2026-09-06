@@ -10,52 +10,133 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "summary-box",
+    "uswdsClass": "usa-summary-box",
+    "section": "feedback",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "passive",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": false,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "summary",
+      "recap",
+      "key-points",
+      "takeaways",
+      "next-steps",
+      "box",
+      "highlight"
+    ],
+    "description": "Highlights key information from a longer page or displays next steps.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Summarizing key takeaways at the end of content",
+      "Displaying next steps or action items",
+      "Highlighting important warnings or requirements",
+      "Recapping form submission results"
+    ],
+    "avoidWhen": [
+      "Inline within body text (use alert instead)",
+      "Non-essential information that doesn't need emphasis",
+      "Complex data that doesn't benefit from summarization"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-summary-box--info, usa-summary-box--warning, or usa-summary-box--error for variants. Update heading and body content. Use for key takeaways, not detailed explanations.",
+    "relatedComponents": [
+      "alert",
+      "process-list",
+      "validation"
+    ],
+    "variants": [
+      "default",
+      "info",
+      "warning",
+      "error"
+    ],
+    "settings": [
+      "$theme-summary-box-border-radius"
+    ],
+    "tokenOverrides": [
+      "$theme-summary-box-border-radius",
+      "$theme-summary-box-background-color"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-summary-box wrapper",
+      "div.usa-summary-box__body",
+      "h3.usa-summary-box__heading for title",
+      "ul.usa-summary-box__list for list content",
+      "Role and aria-labelledby for accessibility"
+    ],
+    "editable": [
+      "Summary box heading",
+      "Summary content (list or prose)",
+      "Variant: default, info, warning, or error"
+    ],
+    "limitations": [
+      "Not for inline use — use alert for that",
+      "Variants provide different severity styling",
+      "Should not be used for critical errors (use alert--error)"
+    ]
+  },
   "file": "summary-box/default.html",
   "title": "Summary Box",
-  "uswdsComponentType": "summary-box",
-  "uswdsClass": "usa-summary-box",
-  "description": "Highlights key information from a longer page or displays next steps.",
-  "section": "feedback",
-  "variant": "default",
-  "useWhen": [
-    "Summarizing key takeaways at the end of content",
-    "Displaying next steps or action items",
-    "Highlighting important warnings or requirements",
-    "Recapping form submission results"
-  ],
-  "avoidWhen": [
-    "Inline within body text (use alert instead)",
-    "Non-essential information that doesn't need emphasis",
-    "Complex data that doesn't benefit from summarization"
-  ],
-  "agentPrompt": "Add usa-summary-box--info, usa-summary-box--warning, or usa-summary-box--error for variants. Update heading and body content. Use for key takeaways, not detailed explanations.",
-  "editableAreas": [
-    "Summary box heading",
-    "Summary content (list or prose)",
-    "Variant: default, info, warning, or error"
-  ],
-  "preserveElements": [
-    "div.usa-summary-box wrapper",
-    "div.usa-summary-box__body",
-    "h3.usa-summary-box__heading for title",
-    "ul.usa-summary-box__list for list content",
-    "Role and aria-labelledby for accessibility"
-  ],
-  "knownLimitations": [
-    "Not for inline use — use alert for that",
-    "Variants provide different severity styling",
-    "Should not be used for critical errors (use alert--error)"
-  ],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": false, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "info", "warning", "error"],
-  "settings": ["$theme-summary-box-border-radius"],
-  "relatedComponents": ["alert", "process-list", "validation"],
-  "tokenOverrides": ["$theme-summary-box-border-radius", "$theme-summary-box-background-color"],
-  "tags": ["summary", "recap", "key-points", "takeaways", "next-steps", "box", "highlight"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1138,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Use for key content the user must not miss (e.g. important callouts)",
+      "2. For error feedback, use validation + alert instead"
+    ],
+    "compositionRecipes": [
+      "data-table-with-sorting",
+      "error-handling-stack"
+    ]
+  }
 }
 </script>
 <style>

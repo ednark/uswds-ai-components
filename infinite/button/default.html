@@ -10,61 +10,194 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "button",
+    "uswdsClass": "usa-button",
+    "section": "utilities",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus",
+      "hover"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "button",
+      "cta",
+      "action",
+      "submit",
+      "primary",
+      "form"
+    ],
+    "description": "Primary button for important actions like Download, Sign up, or Log out.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "none",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Important actions users should take on the site",
+      "Primary CTAs that advance to the next step",
+      "Actions like Download, Sign up, Submit, or Log out",
+      "When you want the button to be visually prominent"
+    ],
+    "avoidWhen": [
+      "Linking between pages — use regular links instead",
+      "Less important or less popular actions",
+      "Actions that happen on the current page — use outline buttons"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Change button text to 'Submit Form', add usa-button--hover, usa-button--active, usa-focus states as additional classes, or switch to variant like usa-button--secondary or usa-button--outline.",
+    "relatedComponents": [
+      "button-group",
+      "link"
+    ],
+    "variants": [
+      "default",
+      "secondary",
+      "accent-cool",
+      "accent-warm",
+      "base",
+      "outline",
+      "outline-inverse",
+      "big",
+      "unstyled"
+    ],
+    "settings": [
+      "$theme-button-border-radius",
+      "$theme-button-font-family",
+      "$theme-button-icon-gap"
+    ],
+    "tokenOverrides": [
+      "$theme-button-border-radius",
+      "$theme-button-stroke-width"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "usa-button base class on button or link element",
+      "type='button' on non-submit buttons to prevent accidental form submission",
+      "disabled attribute syntax (disabled='disabled' for proper screen reader behavior)",
+      "Button text capitalization (sentence case recommended)"
+    ],
+    "editable": [
+      "Button label text content",
+      "Button type attribute (button, submit, reset)",
+      "Variant class: usa-button--secondary, usa-button--outline, usa-button--big, etc.",
+      "Color variant: usa-button--accent-cool, usa-button--accent-warm, usa-button--base",
+      "Disabled state: disabled='disabled' or aria-disabled='true'",
+      "Size: usa-button--big for larger primary actions"
+    ],
+    "limitations": [
+      "Always set type attribute to define behavior",
+      "Links styled as buttons need both usa-button class and appropriate type",
+      "Big buttons do not automatically resize on mobile"
+    ],
+    "portableInvariants": [
+      "Semantic <button> or <a> element must remain the root element",
+      "type attribute must be preserved on the interactive element",
+      "Accessible name (text content) must remain readable by screen readers",
+      "Disabled state must be conveyed via disabled or aria-disabled"
+    ]
+  },
+  "portability": {
+    "classMapping": {
+      "material": {
+        "base": "mdc-button",
+        "default": "mdc-button",
+        "secondary": "mdc-button mdc-button--unelevated",
+        "outline": "mdc-button mdc-button--outlined",
+        "big": "mdc-button mdc-button--touch",
+        "unstyled": "mdc-button mdc-button--text"
+      },
+      "bootstrap": {
+        "base": "btn btn-primary",
+        "default": "btn btn-primary",
+        "secondary": "btn btn-secondary",
+        "outline": "btn btn-outline-primary",
+        "big": "btn btn-lg btn-primary",
+        "unstyled": "btn btn-link"
+      }
+    }
+  },
   "file": "button/default.html",
   "title": "Button (Default)",
-  "uswdsComponentType": "button",
-  "uswdsClass": "usa-button",
-  "description": "Primary button for important actions like Download, Sign up, or Log out.",
-  "section": "utilities",
-  "variant": "default",
-  "useWhen": [
-    "Important actions users should take on the site",
-    "Primary CTAs that advance to the next step",
-    "Actions like Download, Sign up, Submit, or Log out",
-    "When you want the button to be visually prominent"
-  ],
-  "avoidWhen": [
-    "Linking between pages — use regular links instead",
-    "Less important or less popular actions",
-    "Actions that happen on the current page — use outline buttons"
-  ],
-  "agentPrompt": "Change button text to 'Submit Form', add usa-button--hover, usa-button--active, usa-focus states as additional classes, or switch to variant like usa-button--secondary or usa-button--outline.",
-  "editableAreas": [
-    "Button label text content",
-    "Button type attribute (button, submit, reset)",
-    "Variant class: usa-button--secondary, usa-button--outline, usa-button--big, etc.",
-    "Color variant: usa-button--accent-cool, usa-button--accent-warm, usa-button--base",
-    "Disabled state: disabled='disabled' or aria-disabled='true'",
-    "Size: usa-button--big for larger primary actions"
-  ],
-  "preserveElements": [
-    "usa-button base class on button or link element",
-    "type='button' on non-submit buttons to prevent accidental form submission",
-    "disabled attribute syntax (disabled='disabled' for proper screen reader behavior)",
-    "Button text capitalization (sentence case recommended)"
-  ],
-  "knownLimitations": [
-    "Always set type attribute to define behavior",
-    "Links styled as buttons need both usa-button class and appropriate type",
-    "Big buttons do not automatically resize on mobile"
-  ],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "focus", "hover"],
-  "a11y": {
-    "wcag21AA": true,
-    "keyboardNav": true,
-    "screenReader": true,
-    "reducedMotion": true,
-    "forcedColors": true,
-    "ariaAttributes": true
-  },
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "secondary", "accent-cool", "accent-warm", "base", "outline", "outline-inverse", "big", "unstyled"],
-  "settings": ["$theme-button-border-radius", "$theme-button-font-family", "$theme-button-icon-gap"],
-  "relatedComponents": ["button-group", "link"],
-  "tokenOverrides": ["$theme-button-border-radius", "$theme-button-stroke-width"],
-  "tags": ["button", "cta", "action", "submit", "primary", "form"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [
+      {
+        "name": "button-group",
+        "reason": "Button groups override individual button event handlers; style buttons directly instead"
+      }
+    ],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1842,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "variantRules": {
+      "note": "Color variants are mutually exclusive (pick one); size and state classes combine with any color variant",
+      "exclusiveGroups": [
+        [
+          "default",
+          "secondary",
+          "accent-cool",
+          "accent-warm",
+          "base",
+          "outline",
+          "outline-inverse",
+          "unstyled"
+        ]
+      ],
+      "combinable": [
+        "big",
+        "hover",
+        "active",
+        "focus"
+      ]
+    },
+    "agentPromptSequence": [
+      "1. Inside forms, set type='submit'; standalone buttons use type='button'",
+      "2. Use one primary button per view; other actions become secondary/outline",
+      "3. Place the button as the last interactive element of its form or section"
+    ],
+    "compositionRecipes": [
+      "contact-form",
+      "login-flow"
+    ]
+  }
 }
 </script>
 <style>

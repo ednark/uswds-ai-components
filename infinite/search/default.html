@@ -10,54 +10,138 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "search",
+    "uswdsClass": "usa-search",
+    "section": "navigation",
+    "variant": "default",
+    "requiresJs": "required",
+    "interaction": [
+      "input",
+      "submit",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "search",
+      "find",
+      "query",
+      "filter",
+      "discover",
+      "header",
+      "nav"
+    ],
+    "description": "Allows users to search for specific content by entering search terms.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Users need to find specific content on large sites",
+      "Content-rich sites with many pages",
+      "When site navigation alone isn't sufficient for discovery",
+      "Documentation or knowledge base sites"
+    ],
+    "avoidWhen": [
+      "Small sites with minimal content",
+      "Single-page applications",
+      "Sites where search isn't a primary user need"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-search--big or usa-search--small for size variants. Update action URL for search results page. Add name attribute for form submission. Include role='search' on form for accessibility.",
+    "relatedComponents": [
+      "header",
+      "link",
+      "side-navigation"
+    ],
+    "variants": [
+      "default",
+      "big",
+      "small"
+    ],
+    "settings": [
+      "$theme-search-font-family"
+    ],
+    "tokenOverrides": [
+      "$theme-search-font-family"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "form.usa-search role='search'",
+      "input.usa-search__input for query input",
+      "button.usa-search__submit for search button",
+      "usa-search__submit-icon for search icon",
+      "required attributes for accessibility"
+    ],
+    "editable": [
+      "Search input placeholder text",
+      "Search button text",
+      "form action URL for results page",
+      "Size variant: usa-search--big or usa-search--small",
+      "name attribute for search query parameter"
+    ],
+    "limitations": [
+      "JavaScript enhances but doesn't enable search",
+      "Search icon should be visible in button",
+      "Form action must point to actual search results handler"
+    ]
+  },
   "file": "search/default.html",
   "title": "Search",
-  "uswdsComponentType": "search",
-  "uswdsClass": "usa-search",
-  "description": "Allows users to search for specific content by entering search terms.",
-  "section": "navigation",
-  "variant": "default",
-  "useWhen": [
-    "Users need to find specific content on large sites",
-    "Content-rich sites with many pages",
-    "When site navigation alone isn't sufficient for discovery",
-    "Documentation or knowledge base sites"
-  ],
-  "avoidWhen": [
-    "Small sites with minimal content",
-    "Single-page applications",
-    "Sites where search isn't a primary user need"
-  ],
-  "agentPrompt": "Add usa-search--big or usa-search--small for size variants. Update action URL for search results page. Add name attribute for form submission. Include role='search' on form for accessibility.",
-  "editableAreas": [
-    "Search input placeholder text",
-    "Search button text",
-    "form action URL for results page",
-    "Size variant: usa-search--big or usa-search--small",
-    "name attribute for search query parameter"
-  ],
-  "preserveElements": [
-    "form.usa-search role='search'",
-    "input.usa-search__input for query input",
-    "button.usa-search__submit for search button",
-    "usa-search__submit-icon for search icon",
-    "required attributes for accessibility"
-  ],
-  "knownLimitations": [
-    "JavaScript enhances but doesn't enable search",
-    "Search icon should be visible in button",
-    "Form action must point to actual search results handler"
-  ],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["input", "submit", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "big", "small"],
-  "settings": ["$theme-search-font-family"],
-  "relatedComponents": ["header", "link", "side-navigation"],
-  "tokenOverrides": ["$theme-search-font-family"],
-  "tags": ["search", "find", "query", "filter", "discover", "header", "nav"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Search is a form submission; wrap in a form with role='search'"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1130,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Wrap in form role='search' with action pointing to the search endpoint",
+      "2. Keep the visually-hidden label for screen readers",
+      "3. In header context, use the small variant"
+    ]
+  }
 }
 </script>
 <style>

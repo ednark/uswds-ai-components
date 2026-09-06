@@ -10,52 +10,123 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "icon",
+    "uswdsClass": "usa-icon",
+    "section": "data-display",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "passive"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": false,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "icon",
+      "svg",
+      "sprite",
+      "symbol",
+      "image",
+      "graphic"
+    ],
+    "description": "Icons that communicate meaning, actions, status, or feedback using USWDS sprite.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "none",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Visual reinforcement of actions or status",
+      "When icons add meaning beyond text labels",
+      "Navigation indicators",
+      "Form input prefixes (search, calendar, etc.)"
+    ],
+    "avoidWhen": [
+      "Icons alone without text labels for actions",
+      "Decorative use that adds no semantic meaning",
+      "Overcrowding interfaces with too many icons"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Reference USWDS icon sprite at /assets/img/usa-icons.svg#icon-name. Available icons include: search, close, menu, arrow-forward, check, warning, error, info, etc. Use size classes: usa-icon--size-3 through usa-icon--size-12.",
+    "relatedComponents": [
+      "icon-list",
+      "link",
+      "button"
+    ],
+    "variants": [
+      "default"
+    ],
+    "settings": [
+      "$theme-icon-image-path"
+    ],
+    "tokenOverrides": [
+      "$theme-icon-image-path"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "svg.usa-icon wrapper",
+      "use href to sprite with icon name",
+      "aria-hidden='true' for decorative icons",
+      "aria-label on parent for standalone semantic icons"
+    ],
+    "editable": [
+      "Icon name in sprite reference (after #)",
+      "Size variant class",
+      "Color (via parent text color or usa-icon--[color])",
+      "aria-label for decorative vs. semantic icons"
+    ],
+    "limitations": [
+      "Icons require sprite file hosted at correct path",
+      "Always provide text label alongside icon for screen readers",
+      "Use aria-hidden='true' for purely decorative icons"
+    ]
+  },
   "file": "icon/default.html",
   "title": "Icon",
-  "uswdsComponentType": "icon",
-  "uswdsClass": "usa-icon",
-  "description": "Icons that communicate meaning, actions, status, or feedback using USWDS sprite.",
-  "section": "data-display",
-  "variant": "default",
-  "useWhen": [
-    "Visual reinforcement of actions or status",
-    "When icons add meaning beyond text labels",
-    "Navigation indicators",
-    "Form input prefixes (search, calendar, etc.)"
-  ],
-  "avoidWhen": [
-    "Icons alone without text labels for actions",
-    "Decorative use that adds no semantic meaning",
-    "Overcrowding interfaces with too many icons"
-  ],
-  "agentPrompt": "Reference USWDS icon sprite at /assets/img/usa-icons.svg#icon-name. Available icons include: search, close, menu, arrow-forward, check, warning, error, info, etc. Use size classes: usa-icon--size-3 through usa-icon--size-12.",
-  "editableAreas": [
-    "Icon name in sprite reference (after #)",
-    "Size variant class",
-    "Color (via parent text color or usa-icon--[color])",
-    "aria-label for decorative vs. semantic icons"
-  ],
-  "preserveElements": [
-    "svg.usa-icon wrapper",
-    "use href to sprite with icon name",
-    "aria-hidden='true' for decorative icons",
-    "aria-label on parent for standalone semantic icons"
-  ],
-  "knownLimitations": [
-    "Icons require sprite file hosted at correct path",
-    "Always provide text label alongside icon for screen readers",
-    "Use aria-hidden='true' for purely decorative icons"
-  ],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive"],
-  "a11y": {"wcag21AA": true, "keyboardNav": false, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default"],
-  "settings": ["$theme-icon-image-path"],
-  "relatedComponents": ["icon-list", "link", "button"],
-  "tokenOverrides": ["$theme-icon-image-path"],
-  "tags": ["icon", "svg", "sprite", "symbol", "image", "graphic"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1154,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Decorative icons: aria-hidden='true'; meaningful icons need accessible text",
+      "2. Prefer the USWDS sprite reference or inline SVG; keep size via em units"
+    ]
+  }
 }
 </script>
 <style>

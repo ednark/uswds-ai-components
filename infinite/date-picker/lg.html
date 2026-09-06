@@ -7,29 +7,119 @@
 <title>USWDS Date Picker (Large)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "date-picker",
+    "uswdsClass": "usa-date-picker--lg",
+    "section": "forms",
+    "variant": "lg",
+    "requiresJs": "required",
+    "interaction": [
+      "click",
+      "select",
+      "type"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "date-picker",
+      "lg",
+      "large",
+      "calendar"
+    ],
+    "description": "Large date picker variant with enhanced touch targets.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Mobile forms",
+      "Touch-friendly date selection",
+      "Prominent date fields"
+    ],
+    "avoidWhen": [
+      "Dense forms",
+      "Desktop with keyboard entry preferred"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-date-picker--lg class to usa-date-picker for larger variant.",
+    "relatedComponents": [
+      "text-input",
+      "combo-box"
+    ],
+    "variants": [
+      "default",
+      "lg"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-date-picker",
+      "input.usa-date-picker__external-input"
+    ],
+    "editable": [
+      "Date picker label",
+      "Date input field"
+    ],
+    "limitations": [
+      "JavaScript required for calendar functionality"
+    ]
+  },
   "file": "date-picker/lg.html",
   "title": "Date Picker (Large)",
-  "uswdsComponentType": "date-picker",
-  "uswdsClass": "usa-date-picker--lg",
-  "description": "Large date picker variant with enhanced touch targets.",
-  "section": "forms",
-  "variant": "lg",
-  "useWhen": ["Mobile forms", "Touch-friendly date selection", "Prominent date fields"],
-  "avoidWhen": ["Dense forms", "Desktop with keyboard entry preferred"],
-  "agentPrompt": "Add usa-date-picker--lg class to usa-date-picker for larger variant.",
-  "editableAreas": ["Date picker label", "Date input field"],
-  "preserveElements": ["div.usa-date-picker", "input.usa-date-picker__external-input"],
-  "knownLimitations": ["JavaScript required for calendar functionality"],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["click", "select", "type"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "lg"],
-  "settings": [],
-  "relatedComponents": ["text-input", "combo-box"],
-  "tokenOverrides": [],
-  "tags": ["date-picker", "lg", "large", "calendar"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Provides form context; place this date input inside a form wrapper"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 717,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Fetch the form wrapper first",
+      "2. Keep the input type='text' with date format hint — JS replaces it with the calendar",
+      "3. Do not swap to type='date'; the USWDS calendar provides the accessible behavior"
+    ]
+  }
 }
 </script>
 </head>

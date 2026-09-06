@@ -7,29 +7,123 @@
 <title>USWDS Card (Header Flag)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "card",
+    "uswdsClass": "usa-card usa-card--header-flag",
+    "section": "data-display",
+    "variant": "header-flag",
+    "requiresJs": "no",
+    "interaction": [
+      "passive",
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "card",
+      "header-flag",
+      "avatar",
+      "compact"
+    ],
+    "description": "Card with image positioned in the header area alongside title.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Image + title side by side",
+      "Avatar + name displays",
+      "Compact image+title layouts"
+    ],
+    "avoidWhen": [
+      "Large hero images",
+      "Mobile where horizontal space is limited"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-card--header-flag class to usa-card. Image in header div, text beside it.",
+    "relatedComponents": [
+      "collection",
+      "table"
+    ],
+    "variants": [
+      "default",
+      "flag",
+      "media",
+      "inset",
+      "header-flag"
+    ],
+    "settings": [
+      "$theme-card-border-radius",
+      "$theme-card-gap"
+    ],
+    "tokenOverrides": [
+      "$theme-card-border-radius",
+      "$theme-card-gap"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "article.usa-card usa-card--header-flag",
+      "div.usa-card__header with media",
+      "div.usa-card__body"
+    ],
+    "editable": [
+      "Card heading text",
+      "Image src and alt",
+      "Body content",
+      "Footer actions"
+    ],
+    "limitations": [
+      "Header image limited in height"
+    ]
+  },
   "file": "card/header-flag.html",
   "title": "Card (Header Flag)",
-  "uswdsComponentType": "card",
-  "uswdsClass": "usa-card usa-card--header-flag",
-  "description": "Card with image positioned in the header area alongside title.",
-  "section": "data-display",
-  "variant": "header-flag",
-  "useWhen": ["Image + title side by side", "Avatar + name displays", "Compact image+title layouts"],
-  "avoidWhen": ["Large hero images", "Mobile where horizontal space is limited"],
-  "agentPrompt": "Add usa-card--header-flag class to usa-card. Image in header div, text beside it.",
-  "editableAreas": ["Card heading text", "Image src and alt", "Body content", "Footer actions"],
-  "preserveElements": ["article.usa-card usa-card--header-flag", "div.usa-card__header with media", "div.usa-card__body"],
-  "knownLimitations": ["Header image limited in height"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["passive", "click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "flag", "media", "inset", "header-flag"],
-  "settings": ["$theme-card-border-radius", "$theme-card-gap"],
-  "relatedComponents": ["collection", "table"],
-  "tokenOverrides": ["$theme-card-border-radius", "$theme-card-gap"],
-  "tags": ["card", "header-flag", "avatar", "compact"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 800,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Cards work in grid layouts — pair with layout utilities for columns",
+      "2. Keep the header/body/media block structure; do not flatten",
+      "3. One primary action per card; the whole card may link if content is single-purpose"
+    ]
+  }
 }
 </script>
 </head>

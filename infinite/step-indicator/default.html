@@ -10,54 +10,133 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "step-indicator",
+    "uswdsClass": "usa-step-indicator",
+    "section": "navigation",
+    "variant": "default",
+    "requiresJs": "required",
+    "interaction": [
+      "click",
+      "focus",
+      "keyboard"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "step",
+      "indicator",
+      "progress",
+      "wizard",
+      "multi-step",
+      "form",
+      "phases",
+      "checkout"
+    ],
+    "description": "Shows users their progress through a multi-step process with numbered steps.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Multi-step forms or wizards",
+      "Processes with distinct phases",
+      "Onboarding or application workflows",
+      "Checkout or registration flows"
+    ],
+    "avoidWhen": [
+      "Single-step processes",
+      "Parallel workflows without sequence",
+      "Content-heavy interfaces where step indicator would clutter"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-step-indicator--centered for centered variant, usa-step-indicator--no-labels for labels-hidden variant. Update step labels and aria-current='step' on current step. Steps must be in order.",
+    "relatedComponents": [
+      "process-list",
+      "pagination",
+      "breadcrumb"
+    ],
+    "variants": [
+      "default",
+      "centered",
+      "no-labels"
+    ],
+    "settings": [
+      "$theme-step-indicator-border-radius"
+    ],
+    "tokenOverrides": [
+      "$theme-step-indicator-border-color",
+      "$theme-step-indicator-current-color"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "ol.usa-step-indicator__segments",
+      "li.usa-step-indicator__segment for each step",
+      "span.usa-step-indicator__segment-label for labels",
+      "aria-current='step' on current step",
+      "Segment number is CSS-generated"
+    ],
+    "editable": [
+      "Step numbers and labels",
+      "Step descriptions",
+      "Current step: aria-current='step' attribute",
+      "Completed vs incomplete styling",
+      "Variant: centered or no-labels"
+    ],
+    "limitations": [
+      "JavaScript required to update current step state",
+      "Segments must be in DOM order",
+      "Segment counters are CSS-based"
+    ]
+  },
   "file": "step-indicator/default.html",
   "title": "Step Indicator",
-  "uswdsComponentType": "step-indicator",
-  "uswdsClass": "usa-step-indicator",
-  "description": "Shows users their progress through a multi-step process with numbered steps.",
-  "section": "navigation",
-  "variant": "default",
-  "useWhen": [
-    "Multi-step forms or wizards",
-    "Processes with distinct phases",
-    "Onboarding or application workflows",
-    "Checkout or registration flows"
-  ],
-  "avoidWhen": [
-    "Single-step processes",
-    "Parallel workflows without sequence",
-    "Content-heavy interfaces where step indicator would clutter"
-  ],
-  "agentPrompt": "Add usa-step-indicator--centered for centered variant, usa-step-indicator--no-labels for labels-hidden variant. Update step labels and aria-current='step' on current step. Steps must be in order.",
-  "editableAreas": [
-    "Step numbers and labels",
-    "Step descriptions",
-    "Current step: aria-current='step' attribute",
-    "Completed vs incomplete styling",
-    "Variant: centered or no-labels"
-  ],
-  "preserveElements": [
-    "ol.usa-step-indicator__segments",
-    "li.usa-step-indicator__segment for each step",
-    "span.usa-step-indicator__segment-label for labels",
-    "aria-current='step' on current step",
-    "Segment number is CSS-generated"
-  ],
-  "knownLimitations": [
-    "JavaScript required to update current step state",
-    "Segments must be in DOM order",
-    "Segment counters are CSS-based"
-  ],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["click", "focus", "keyboard"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "centered", "no-labels"],
-  "settings": ["$theme-step-indicator-border-radius"],
-  "relatedComponents": ["process-list", "pagination", "breadcrumb"],
-  "tokenOverrides": ["$theme-step-indicator-border-color", "$theme-step-indicator-current-color"],
-  "tags": ["step", "indicator", "progress", "wizard", "multi-step", "form", "phases", "checkout"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1249,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place above multi-step form sections",
+      "2. Mark completed/current steps with status classes; keep aria attributes",
+      "3. Pair each step with its own form section or page"
+    ]
+  }
 }
 </script>
 <style>

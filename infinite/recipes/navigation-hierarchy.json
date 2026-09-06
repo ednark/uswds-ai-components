@@ -1,0 +1,100 @@
+{
+  "recipe": "navigation-hierarchy",
+  "title": "Government Page Navigation Hierarchy",
+  "description": "Complete official page chrome: skip link, banner, header with nav, breadcrumb, section navigation, footer, and identifier — in canonical DOM order.",
+  "aliases": ["collection:navigation-hierarchy"],
+  "components": [
+    {
+      "order": 1,
+      "component": "skip-nav",
+      "variant": "default",
+      "file": "skip-nav/default.html",
+      "role": "a11y",
+      "required": true,
+      "reason": "Must be the first focusable element in body; targets the main content region"
+    },
+    {
+      "order": 2,
+      "component": "banner",
+      "variant": "default",
+      "file": "banner/default.html",
+      "role": "government-branding",
+      "required": true,
+      "reason": "Official government website banner; always the first visible element"
+    },
+    {
+      "order": 3,
+      "component": "header",
+      "variant": "default",
+      "file": "header/default.html",
+      "role": "page-chrome",
+      "required": true,
+      "reason": "Site header; navbar and search live inside it (use navbar/default.html and search/small.html as children)"
+    },
+    {
+      "order": 4,
+      "component": "breadcrumb",
+      "variant": "default",
+      "file": "breadcrumb/default.html",
+      "role": "navigation",
+      "required": false,
+      "reason": "Place below header, above the page h1, when the site is more than two levels deep"
+    },
+    {
+      "order": 5,
+      "component": "side-navigation",
+      "variant": "default",
+      "file": "side-navigation/default.html",
+      "role": "navigation",
+      "required": false,
+      "reason": "Sidebar nav for section-heavy pages; place in a column beside main content"
+    },
+    {
+      "order": 6,
+      "component": "in-page-navigation",
+      "variant": "default",
+      "file": "in-page-navigation/default.html",
+      "role": "navigation",
+      "required": false,
+      "reason": "Table of contents for long articles; links must match heading ids"
+    },
+    {
+      "order": 7,
+      "component": "footer",
+      "variant": "default",
+      "file": "footer/default.html",
+      "role": "page-chrome",
+      "required": true,
+      "reason": "Site footer; last major element in body"
+    },
+    {
+      "order": 8,
+      "component": "identifier",
+      "variant": "default",
+      "file": "identifier/default.html",
+      "role": "government-branding",
+      "required": true,
+      "reason": "Official agency identifier; directly below the footer"
+    }
+  ],
+  "nesting": "Canonical DOM order is 1→2→3→(content: 4, 5, 6)→7→8. Component 1 targets the main region. Navbar (navbar/default.html) and search (search/small.html) are children of component 3. Components 4-6 are content-level and mutually optional",
+  "validationOrder": [
+    "Skip-nav target id exists on the main content region",
+    "Banner is the first visible element; identifier is the last",
+    "Breadcrumb's last item has aria-current='page'",
+    "Side-navigation current item has class usa-current and aria-current='page'"
+  ],
+  "a11yNotes": [
+    "Never remove the skip link — it is the first tab stop",
+    "Landmarks: banner, header (role omitted, it is implicit), nav elements each need a distinct aria-label when multiple navs exist",
+    "Identifier links to the agency's official site",
+    "Keep heading hierarchy h1 (page title) → h2 sections below the breadcrumb"
+  ],
+  "agentPromptSequence": [
+    "1. Place skip-nav as the first element in body",
+    "2. Add banner, then header (nest navbar/search inside as needed)",
+    "3. Add breadcrumb below header when depth warrants it",
+    "4. Choose side-navigation (sections) or in-page-navigation (long article) — rarely both",
+    "5. Close with footer, then identifier"
+  ]
+}

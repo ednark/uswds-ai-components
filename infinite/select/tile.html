@@ -7,29 +7,124 @@
 <title>USWDS Select (Tile)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "select",
+    "uswdsClass": "usa-select--tile",
+    "section": "forms",
+    "variant": "tile",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "change"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "select",
+      "tile",
+      "dropdown",
+      "touch"
+    ],
+    "description": "Select dropdown styled as tiles.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Large clickable selections",
+      "Touch-friendly dropdowns"
+    ],
+    "avoidWhen": [
+      "Dense forms",
+      "Standard select needs"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-select--tile class to usa-select for tile-style dropdown.",
+    "relatedComponents": [
+      "text-input",
+      "checkbox",
+      "radio-button"
+    ],
+    "variants": [
+      "default",
+      "tile",
+      "error",
+      "success",
+      "disabled"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "select.usa-select"
+    ],
+    "editable": [
+      "Select options",
+      "Label text"
+    ],
+    "limitations": [
+      "Not standard USWDS variant - custom styling"
+    ]
+  },
   "file": "select/tile.html",
   "title": "Select (Tile)",
-  "uswdsComponentType": "select",
-  "uswdsClass": "usa-select--tile",
-  "description": "Select dropdown styled as tiles.",
-  "section": "forms",
-  "variant": "tile",
-  "useWhen": ["Large clickable selections", "Touch-friendly dropdowns"],
-  "avoidWhen": ["Dense forms", "Standard select needs"],
-  "agentPrompt": "Add usa-select--tile class to usa-select for tile-style dropdown.",
-  "editableAreas": ["Select options", "Label text"],
-  "preserveElements": ["select.usa-select"],
-  "knownLimitations": ["Not standard USWDS variant - custom styling"],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "change"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "tile", "error", "success", "disabled"],
-  "settings": [],
-  "relatedComponents": ["text-input", "checkbox", "radio-button"],
-  "tokenOverrides": [],
-  "tags": ["select", "tile", "dropdown", "touch"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Provides form context; place this select inside a form wrapper"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 705,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Fetch the form wrapper first (unless one already exists)",
+      "2. Pair with a label via for/id",
+      "3. For more than 7 options, prefer combo-box over select",
+      "4. Keep the first option as a placeholder ('- Select -')"
+    ],
+    "compositionRecipes": [
+      "contact-form"
+    ]
+  }
 }
 </script>
 </head>

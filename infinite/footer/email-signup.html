@@ -7,29 +7,128 @@
 <title>USWDS Footer (Email Signup)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "footer",
+    "uswdsClass": "usa-footer usa-footer--big",
+    "section": "layout",
+    "variant": "email-signup",
+    "requiresJs": "optional",
+    "interaction": [
+      "click",
+      "submit"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "footer",
+      "email",
+      "signup",
+      "newsletter",
+      "subscribe",
+      "govdelivery"
+    ],
+    "description": "Footer variant with integrated email newsletter signup form in the primary section.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Newsletter subscription",
+      "Email list building",
+      "Government communications"
+    ],
+    "avoidWhen": [
+      "Sites without newsletter",
+      "Simple footers without forms"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-footer__email-container div before usa-footer__primary-content. Include heading, description, email input, and subscribe button.",
+    "relatedComponents": [
+      "form",
+      "text-input",
+      "button"
+    ],
+    "variants": [
+      "default",
+      "slim",
+      "big",
+      "collapsible",
+      "email-signup"
+    ],
+    "settings": [
+      "$theme-footer-font-family"
+    ],
+    "tokenOverrides": [
+      "$theme-footer-font-family"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-footer__email-container",
+      "form.email-signup-form",
+      "input[type='email']",
+      "input[type='submit']"
+    ],
+    "editable": [
+      "Newsletter heading",
+      "Description text",
+      "Email placeholder",
+      "Subscribe button text"
+    ],
+    "limitations": [
+      "Requires backend integration with email service (e.g., GovDelivery)"
+    ]
+  },
   "file": "footer/email-signup.html",
   "title": "Footer (Email Signup)",
-  "uswdsComponentType": "footer",
-  "uswdsClass": "usa-footer usa-footer--big",
-  "description": "Footer variant with integrated email newsletter signup form in the primary section.",
-  "section": "layout",
-  "variant": "email-signup",
-  "useWhen": ["Newsletter subscription", "Email list building", "Government communications"],
-  "avoidWhen": ["Sites without newsletter", "Simple footers without forms"],
-  "agentPrompt": "Add usa-footer__email-container div before usa-footer__primary-content. Include heading, description, email input, and subscribe button.",
-  "editableAreas": ["Newsletter heading", "Description text", "Email placeholder", "Subscribe button text"],
-  "preserveElements": ["div.usa-footer__email-container", "form.email-signup-form", "input[type='email']", "input[type='submit']"],
-  "knownLimitations": ["Requires backend integration with email service (e.g., GovDelivery)"],
-  "tier": "curated",
-  "requiresJs": "optional",
-  "interaction": ["click", "submit"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "slim", "big", "collapsible", "email-signup"],
-  "settings": ["$theme-footer-font-family"],
-  "relatedComponents": ["form", "text-input", "button"],
-  "tokenOverrides": ["$theme-footer-font-family"],
-  "tags": ["footer", "email", "signup", "newsletter", "subscribe", "govdelivery"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1055,
+      "renderingTimeMs": 35,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place footer as the last element in body",
+      "2. Pair with identifier below it for official government branding",
+      "3. Keep footer nav links flat — no nested menus"
+    ],
+    "compositionRecipes": [
+      "navigation-hierarchy"
+    ]
+  }
 }
 </script>
 </head>

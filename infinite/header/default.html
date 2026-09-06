@@ -10,54 +10,143 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "header",
+    "uswdsClass": "usa-header",
+    "section": "navigation",
+    "variant": "default",
+    "requiresJs": "required",
+    "interaction": [
+      "click",
+      "hover",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "header",
+      "navigation",
+      "logo",
+      "agency",
+      "top",
+      "nav",
+      "menu"
+    ],
+    "description": "Identifies where users are and provides quick access to main site sections.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Every website needs a header for identity and primary navigation",
+      "Users need to navigate between main sections",
+      "Site identity (logo, agency name) needs to be visible",
+      "Search functionality is needed site-wide"
+    ],
+    "avoidWhen": [
+      "Standalone applications without page navigation",
+      "Modal-only interfaces"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-header--basic for minimal header, usa-header--extended for full-width navigation. Add usa-nav for navigation links. Include mobile menu button with usa-menu-btn class. Add language selector dropdown if needed.",
+    "relatedComponents": [
+      "side-navigation",
+      "footer",
+      "search"
+    ],
+    "variants": [
+      "default",
+      "basic",
+      "extended",
+      "megamenu"
+    ],
+    "settings": [
+      "$theme-header-font-family",
+      "$theme-header-logo-width"
+    ],
+    "tokenOverrides": [
+      "$theme-header-font-family",
+      "$theme-header-logo-width",
+      "$theme-header-min-width"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "header.usa-header with id='header'",
+      "div.usa-logo for agency branding",
+      "nav.usa-nav for main navigation",
+      "a.usa-menu-btn for mobile toggle",
+      "Skip to main content link",
+      "main#main-content target for skip link"
+    ],
+    "editable": [
+      "Agency logo and name",
+      "Navigation link text and hrefs",
+      "Search input and button",
+      "Mobile menu toggle text",
+      "Variant class: basic, extended, or megamenu"
+    ],
+    "limitations": [
+      "JavaScript required for mobile menu toggle",
+      "Megamenu variant has complex nested navigation",
+      "Skip link should be first focusable element on page"
+    ]
+  },
   "file": "header/default.html",
   "title": "Header",
-  "uswdsComponentType": "header",
-  "uswdsClass": "usa-header",
-  "description": "Identifies where users are and provides quick access to main site sections.",
-  "section": "navigation",
-  "variant": "default",
-  "useWhen": [
-    "Every website needs a header for identity and primary navigation",
-    "Users need to navigate between main sections",
-    "Site identity (logo, agency name) needs to be visible",
-    "Search functionality is needed site-wide"
-  ],
-  "avoidWhen": [
-    "Standalone applications without page navigation",
-    "Modal-only interfaces"
-  ],
-  "agentPrompt": "Add usa-header--basic for minimal header, usa-header--extended for full-width navigation. Add usa-nav for navigation links. Include mobile menu button with usa-menu-btn class. Add language selector dropdown if needed.",
-  "editableAreas": [
-    "Agency logo and name",
-    "Navigation link text and hrefs",
-    "Search input and button",
-    "Mobile menu toggle text",
-    "Variant class: basic, extended, or megamenu"
-  ],
-  "preserveElements": [
-    "header.usa-header with id='header'",
-    "div.usa-logo for agency branding",
-    "nav.usa-nav for main navigation",
-    "a.usa-menu-btn for mobile toggle",
-    "Skip to main content link",
-    "main#main-content target for skip link"
-  ],
-  "knownLimitations": [
-    "JavaScript required for mobile menu toggle",
-    "Megamenu variant has complex nested navigation",
-    "Skip link should be first focusable element on page"
-  ],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["click", "hover", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "basic", "extended", "megamenu"],
-  "settings": ["$theme-header-font-family", "$theme-header-logo-width"],
-  "relatedComponents": ["side-navigation", "footer", "search"],
-  "tokenOverrides": ["$theme-header-font-family", "$theme-header-logo-width", "$theme-header-min-width"],
-  "tags": ["header", "navigation", "logo", "agency", "top", "nav", "menu"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [
+      {
+        "name": "modal",
+        "reason": "Header already establishes page chrome; nested modals in header break focus order"
+      }
+    ],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1215,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place header as the first element in body",
+      "2. Nest navigation (primary, secondary) inside header",
+      "3. Pair with banner above it when a required-agency banner is needed"
+    ],
+    "compositionRecipes": [
+      "navigation-hierarchy"
+    ]
+  }
 }
 </script>
 <style>

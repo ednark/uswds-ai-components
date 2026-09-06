@@ -7,29 +7,125 @@
 <title>USWDS Text Input (Success)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "text-input",
+    "uswdsClass": "usa-input--success",
+    "section": "forms",
+    "variant": "success",
+    "requiresJs": "no",
+    "interaction": [
+      "focus",
+      "input"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "text-input",
+      "success",
+      "validation",
+      "form"
+    ],
+    "description": "Text input showing success validation state.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Successful validation feedback",
+      "Confirmed input",
+      "Completed fields"
+    ],
+    "avoidWhen": [
+      "Errors",
+      "Pending validation"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-input--success class for success state styling.",
+    "relatedComponents": [
+      "validation",
+      "summary-box"
+    ],
+    "variants": [
+      "default",
+      "tile",
+      "error",
+      "success",
+      "disabled"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-form-group",
+      "input.usa-input--success"
+    ],
+    "editable": [
+      "Input label",
+      "Success message text"
+    ],
+    "limitations": []
+  },
   "file": "text-input/success.html",
   "title": "Text Input (Success)",
-  "uswdsComponentType": "text-input",
-  "uswdsClass": "usa-input--success",
-  "description": "Text input showing success validation state.",
-  "section": "forms",
-  "variant": "success",
-  "useWhen": ["Successful validation feedback", "Confirmed input", "Completed fields"],
-  "avoidWhen": ["Errors", "Pending validation"],
-  "agentPrompt": "Add usa-input--success class for success state styling.",
-  "editableAreas": ["Input label", "Success message text"],
-  "preserveElements": ["div.usa-form-group", "input.usa-input--success"],
-  "knownLimitations": [],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["focus", "input"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "tile", "error", "success", "disabled"],
-  "settings": [],
-  "relatedComponents": ["validation", "summary-box"],
-  "tokenOverrides": [],
-  "tags": ["text-input", "success", "validation", "form"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Provides form context; place this input inside a form wrapper"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 734,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Fetch the form wrapper first (unless one already exists)",
+      "2. Pair this input with a label element via matching for/id attributes",
+      "3. Link error/hint messages with aria-describedby",
+      "4. Add inputmode/autocomplete attributes where appropriate"
+    ],
+    "compositionRecipes": [
+      "contact-form",
+      "error-handling-stack",
+      "login-flow"
+    ]
+  }
 }
 </script>
 </head>

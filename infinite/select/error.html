@@ -7,29 +7,121 @@
 <title>USWDS Select (Error)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "select",
+    "uswdsClass": "usa-select--error",
+    "section": "forms",
+    "variant": "error",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "change"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "select",
+      "error",
+      "validation"
+    ],
+    "description": "Select dropdown showing error validation state.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Required select validation",
+      "Invalid selection errors"
+    ],
+    "avoidWhen": [
+      "Valid selections",
+      "Optional selects"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-select--error class and usa-form-group--error parent.",
+    "relatedComponents": [
+      "text-input",
+      "validation"
+    ],
+    "variants": [
+      "default",
+      "tile",
+      "error",
+      "success",
+      "disabled"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-form-group--error",
+      "select.usa-select"
+    ],
+    "editable": [
+      "Select label",
+      "Error message text"
+    ],
+    "limitations": []
+  },
   "file": "select/error.html",
   "title": "Select (Error)",
-  "uswdsComponentType": "select",
-  "uswdsClass": "usa-select--error",
-  "description": "Select dropdown showing error validation state.",
-  "section": "forms",
-  "variant": "error",
-  "useWhen": ["Required select validation", "Invalid selection errors"],
-  "avoidWhen": ["Valid selections", "Optional selects"],
-  "agentPrompt": "Add usa-select--error class and usa-form-group--error parent.",
-  "editableAreas": ["Select label", "Error message text"],
-  "preserveElements": ["div.usa-form-group--error", "select.usa-select"],
-  "knownLimitations": [],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "change"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "tile", "error", "success", "disabled"],
-  "settings": [],
-  "relatedComponents": ["text-input", "validation"],
-  "tokenOverrides": [],
-  "tags": ["select", "error", "validation"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Provides form context; place this select inside a form wrapper"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 738,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Fetch the form wrapper first (unless one already exists)",
+      "2. Pair with a label via for/id",
+      "3. For more than 7 options, prefer combo-box over select",
+      "4. Keep the first option as a placeholder ('- Select -')"
+    ],
+    "compositionRecipes": [
+      "contact-form"
+    ]
+  }
 }
 </script>
 </head>

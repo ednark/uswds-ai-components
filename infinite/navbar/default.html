@@ -7,29 +7,116 @@
 <title>USWDS Navbar</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "navbar",
+    "uswdsClass": "usa-navbar",
+    "section": "navigation",
+    "variant": "default",
+    "requiresJs": "required",
+    "interaction": [
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "navbar",
+      "header",
+      "logo",
+      "menu",
+      "mobile"
+    ],
+    "description": "Navbar wrapper inside header containing logo and mobile menu button.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Header layouts",
+      "Logo + menu button combination",
+      "Mobile-responsive headers"
+    ],
+    "avoidWhen": [
+      "Standalone use without header"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Use div.usa-navbar inside usa-header. Contains usa-logo and usa-menu-btn button.",
+    "relatedComponents": [
+      "header",
+      "logo",
+      "button"
+    ],
+    "variants": [
+      "default"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "div.usa-navbar",
+      "div.usa-logo",
+      "em.usa-logo-text",
+      "button.usa-menu-btn"
+    ],
+    "editable": [
+      "Logo image and text",
+      "Menu button label"
+    ],
+    "limitations": [
+      "Only visible on mobile when used with extended header"
+    ]
+  },
   "file": "navbar/default.html",
   "title": "Navbar",
-  "uswdsComponentType": "navbar",
-  "uswdsClass": "usa-navbar",
-  "description": "Navbar wrapper inside header containing logo and mobile menu button.",
-  "section": "navigation",
-  "variant": "default",
-  "useWhen": ["Header layouts", "Logo + menu button combination", "Mobile-responsive headers"],
-  "avoidWhen": ["Standalone use without header"],
-  "agentPrompt": "Use div.usa-navbar inside usa-header. Contains usa-logo and usa-menu-btn button.",
-  "editableAreas": ["Logo image and text", "Menu button label"],
-  "preserveElements": ["div.usa-navbar", "div.usa-logo", "em.usa-logo-text", "button.usa-menu-btn"],
-  "knownLimitations": ["Only visible on mobile when used with extended header"],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default"],
-  "settings": [],
-  "relatedComponents": ["header", "logo", "button"],
-  "tokenOverrides": [],
-  "tags": ["navbar", "header", "logo", "menu", "mobile"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "header",
+        "reason": "Navbar extends the header component; nest inside header"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 700,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Fetch header first; navbar lives inside it",
+      "2. Keep the mobile menu toggle JS intact"
+    ]
+  }
 }
 </script>
 </head>

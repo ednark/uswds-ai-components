@@ -7,29 +7,119 @@
 <title>USWDS Checkbox (Tile)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "checkbox",
+    "uswdsClass": "usa-checkbox__input--tile",
+    "section": "forms",
+    "variant": "tile",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "checkbox",
+      "tile",
+      "touch",
+      "large"
+    ],
+    "description": "Checkbox styled as a large tile for touch-friendly selection.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Mobile forms",
+      "Touch-friendly selection",
+      "Large clickable options"
+    ],
+    "avoidWhen": [
+      "Dense form layouts",
+      "Standard desktop forms"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-checkbox__input--tile class to checkbox input.",
+    "relatedComponents": [
+      "radio-button",
+      "text-input"
+    ],
+    "variants": [
+      "default",
+      "tile",
+      "error",
+      "success",
+      "disabled"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "input.usa-checkbox__input",
+      "label.usa-checkbox__label"
+    ],
+    "editable": [
+      "Checkbox label text",
+      "Optional description"
+    ],
+    "limitations": []
+  },
   "file": "checkbox/tile.html",
   "title": "Checkbox (Tile)",
-  "uswdsComponentType": "checkbox",
-  "uswdsClass": "usa-checkbox__input--tile",
-  "description": "Checkbox styled as a large tile for touch-friendly selection.",
-  "section": "forms",
-  "variant": "tile",
-  "useWhen": ["Mobile forms", "Touch-friendly selection", "Large clickable options"],
-  "avoidWhen": ["Dense form layouts", "Standard desktop forms"],
-  "agentPrompt": "Add usa-checkbox__input--tile class to checkbox input.",
-  "editableAreas": ["Checkbox label text", "Optional description"],
-  "preserveElements": ["input.usa-checkbox__input", "label.usa-checkbox__label"],
-  "knownLimitations": [],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "tile", "error", "success", "disabled"],
-  "settings": [],
-  "relatedComponents": ["radio-button", "text-input"],
-  "tokenOverrides": [],
-  "tags": ["checkbox", "tile", "touch", "large"]
+  "coordination": {
+    "prerequisiteComponents": [
+      {
+        "name": "form",
+        "reason": "Provides form context; place checkboxes inside a form wrapper"
+      }
+    ],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "cheap",
+      "estimatedTokens": 775,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Fetch the form wrapper first",
+      "2. Use fieldset+legend when grouping related checkboxes",
+      "3. Keep each label associated via for/id"
+    ]
+  }
 }
 </script>
 </head>

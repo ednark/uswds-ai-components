@@ -10,53 +10,142 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "form",
+    "uswdsClass": "usa-form",
+    "section": "forms",
+    "variant": "default",
+    "requiresJs": "optional",
+    "interaction": [
+      "focus",
+      "input",
+      "validation"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "form",
+      "input",
+      "submit",
+      "registration",
+      "search",
+      "contact"
+    ],
+    "description": "Allows users to enter information into a page for processing and submission.",
+    "compliance": {
+      "nistControls": [
+        "AU-12"
+      ],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": true,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Collecting user input for processing",
+      "User registration or profile updates",
+      "Search interfaces",
+      "Any interaction requiring user data submission"
+    ],
+    "avoidWhen": [
+      "Display-only interfaces",
+      "Single actions that don't need input"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-form--large for bigger inputs. Update action and method attributes for form submission. Add autocomplete attributes for browser autofill. Group related fields with fieldset/legend. Include proper error handling markup.",
+    "relatedComponents": [
+      "text-input",
+      "checkbox",
+      "radio-buttons",
+      "validation",
+      "character-count"
+    ],
+    "variants": [
+      "default"
+    ],
+    "settings": [
+      "$theme-form-font-family"
+    ],
+    "tokenOverrides": [
+      "$theme-form-font-family",
+      "$theme-input-border-radius"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "form.usa-form wrapper",
+      "label.usa-label for all inputs",
+      "input.usa-input with proper type and id",
+      "span.usa-hint for helper text",
+      "legend and fieldset for grouped inputs"
+    ],
+    "editable": [
+      "Form action URL",
+      "Form method (GET or POST)",
+      "Field labels and input types",
+      "autocomplete attribute values for better UX",
+      "Required field indicators"
+    ],
+    "limitations": [
+      "Always use proper label-for-input associations",
+      "autocomplete attributes help users fill forms faster",
+      "Required fields need aria-required='true' and visual indicator"
+    ]
+  },
   "file": "form/default.html",
   "title": "Form",
-  "uswdsComponentType": "form",
-  "uswdsClass": "usa-form",
-  "description": "Allows users to enter information into a page for processing and submission.",
-  "section": "forms",
-  "variant": "default",
-  "useWhen": [
-    "Collecting user input for processing",
-    "User registration or profile updates",
-    "Search interfaces",
-    "Any interaction requiring user data submission"
-  ],
-  "avoidWhen": [
-    "Display-only interfaces",
-    "Single actions that don't need input"
-  ],
-  "agentPrompt": "Add usa-form--large for bigger inputs. Update action and method attributes for form submission. Add autocomplete attributes for browser autofill. Group related fields with fieldset/legend. Include proper error handling markup.",
-  "editableAreas": [
-    "Form action URL",
-    "Form method (GET or POST)",
-    "Field labels and input types",
-    "autocomplete attribute values for better UX",
-    "Required field indicators"
-  ],
-  "preserveElements": [
-    "form.usa-form wrapper",
-    "label.usa-label for all inputs",
-    "input.usa-input with proper type and id",
-    "span.usa-hint for helper text",
-    "legend and fieldset for grouped inputs"
-  ],
-  "knownLimitations": [
-    "Always use proper label-for-input associations",
-    "autocomplete attributes help users fill forms faster",
-    "Required fields need aria-required='true' and visual indicator"
-  ],
-  "tier": "curated",
-  "requiresJs": "optional",
-  "interaction": ["focus", "input", "validation"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default"],
-  "settings": ["$theme-form-font-family"],
-  "relatedComponents": ["text-input", "checkbox", "radio-buttons", "validation", "character-count"],
-  "tokenOverrides": ["$theme-form-font-family", "$theme-input-border-radius"],
-  "tags": ["form", "input", "submit", "registration", "search", "contact"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [
+      {
+        "name": "navbar",
+        "reason": "Nested forms are invalid HTML; never place a form inside a nav form"
+      }
+    ],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1217,
+      "renderingTimeMs": 35,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Use this form element as the root container for a group of inputs",
+      "2. Add one label+input pair per field (text-input, select, checkbox, etc.)",
+      "3. Add a submit button as the last child",
+      "4. Link validation messages to inputs with aria-describedby"
+    ],
+    "compositionRecipes": [
+      "contact-form",
+      "login-flow"
+    ]
+  }
 }
 </script>
 <style>

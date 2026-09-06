@@ -10,55 +10,133 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "pagination",
+    "uswdsClass": "usa-pagination",
+    "section": "navigation",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus",
+      "keyboard"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "pagination",
+      "pages",
+      "navigation",
+      "pager",
+      "previous",
+      "next",
+      "numbers"
+    ],
+    "description": "Navigation for paginated content to move between pages.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Long lists of results that span multiple pages",
+      "Content organized into distinct page segments",
+      "Search results, article archives, or data tables",
+      "When showing all content on one page would be overwhelming"
+    ],
+    "avoidWhen": [
+      "Single-page content",
+      "Fewer than 10-15 items",
+      "Content that changes frequently (real-time feeds)"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Update aria-label to describe pagination purpose. Set aria-current='page' on current page number. Add usa-pagination__show-all for showing all pages. Update page URLs in href attributes.",
+    "relatedComponents": [
+      "step-indicator",
+      "breadcrumb"
+    ],
+    "variants": [
+      "default",
+      "show-all"
+    ],
+    "settings": [
+      "$theme-pagination-border-radius"
+    ],
+    "tokenOverrides": [
+      "$theme-pagination-border-radius"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "nav.usa-pagination with aria-label",
+      "ol.usa-pagination__list for page numbers",
+      "li.usa-pagination__page-item for each page",
+      "a.usa-pagination__button for page links",
+      "span.usa-pagination__button for current page",
+      "aria-current='page' attribute"
+    ],
+    "editable": [
+      "Page numbers and their href URLs",
+      "aria-label describing pagination purpose",
+      "aria-current='page' on current page",
+      "Previous/Next link text and URLs",
+      "Total page count display"
+    ],
+    "limitations": [
+      "Always provide previous/next navigation for accessibility",
+      "Current page should be a span, not a link",
+      "Ellipsis (...) should be a non-interactive span"
+    ]
+  },
   "file": "pagination/default.html",
   "title": "Pagination",
-  "uswdsComponentType": "pagination",
-  "uswdsClass": "usa-pagination",
-  "description": "Navigation for paginated content to move between pages.",
-  "section": "navigation",
-  "variant": "default",
-  "useWhen": [
-    "Long lists of results that span multiple pages",
-    "Content organized into distinct page segments",
-    "Search results, article archives, or data tables",
-    "When showing all content on one page would be overwhelming"
-  ],
-  "avoidWhen": [
-    "Single-page content",
-    "Fewer than 10-15 items",
-    "Content that changes frequently (real-time feeds)"
-  ],
-  "agentPrompt": "Update aria-label to describe pagination purpose. Set aria-current='page' on current page number. Add usa-pagination__show-all for showing all pages. Update page URLs in href attributes.",
-  "editableAreas": [
-    "Page numbers and their href URLs",
-    "aria-label describing pagination purpose",
-    "aria-current='page' on current page",
-    "Previous/Next link text and URLs",
-    "Total page count display"
-  ],
-  "preserveElements": [
-    "nav.usa-pagination with aria-label",
-    "ol.usa-pagination__list for page numbers",
-    "li.usa-pagination__page-item for each page",
-    "a.usa-pagination__button for page links",
-    "span.usa-pagination__button for current page",
-    "aria-current='page' attribute"
-  ],
-  "knownLimitations": [
-    "Always provide previous/next navigation for accessibility",
-    "Current page should be a span, not a link",
-    "Ellipsis (...) should be a non-interactive span"
-  ],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "focus", "keyboard"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "show-all"],
-  "settings": ["$theme-pagination-border-radius"],
-  "relatedComponents": ["step-indicator", "breadcrumb"],
-  "tokenOverrides": ["$theme-pagination-border-radius"],
-  "tags": ["pagination", "pages", "navigation", "pager", "previous", "next", "numbers"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1324,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place below the table or list it paginates",
+      "2. Keep aria-current='page' on the active page",
+      "3. Preserve prev/next aria-labels"
+    ],
+    "compositionRecipes": [
+      "data-table-with-sorting"
+    ]
+  }
 }
 </script>
 <style>

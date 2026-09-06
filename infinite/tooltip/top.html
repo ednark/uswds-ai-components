@@ -7,29 +7,117 @@
 <title>USWDS Tooltip (Top)</title>
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "tooltip",
+    "uswdsClass": "usa-tooltip--top",
+    "section": "supporting",
+    "variant": "top",
+    "requiresJs": "required",
+    "interaction": [
+      "hover",
+      "focus",
+      "click"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA"
+    ],
+    "tier": "curated",
+    "tags": [
+      "tooltip",
+      "top",
+      "hover",
+      "hint"
+    ],
+    "description": "Tooltip that appears above the trigger element.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Brief supplemental information",
+      "Icon explanations",
+      "Keyboard-accessible hover info"
+    ],
+    "avoidWhen": [
+      "Long content",
+      "Mobile touch interfaces",
+      "Critical information"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Add usa-tooltip--top class and data-position=\"top\" attribute. Tooltip shows above element.",
+    "relatedComponents": [
+      "button",
+      "icon"
+    ],
+    "variants": [
+      "default",
+      "top",
+      "bottom",
+      "left",
+      "right"
+    ],
+    "settings": [],
+    "tokenOverrides": []
+  },
+  "constraints": {
+    "preserve": [
+      "span.usa-tooltip__trigger",
+      "span.usa-tooltip"
+    ],
+    "editable": [
+      "Tooltip text content",
+      "Trigger element"
+    ],
+    "limitations": [
+      "JavaScript required for show/hide",
+      "Touch devices may not show on hover"
+    ]
+  },
   "file": "tooltip/top.html",
   "title": "Tooltip (Top)",
-  "uswdsComponentType": "tooltip",
-  "uswdsClass": "usa-tooltip--top",
-  "description": "Tooltip that appears above the trigger element.",
-  "section": "supporting",
-  "variant": "top",
-  "useWhen": ["Brief supplemental information", "Icon explanations", "Keyboard-accessible hover info"],
-  "avoidWhen": ["Long content", "Mobile touch interfaces", "Critical information"],
-  "agentPrompt": "Add usa-tooltip--top class and data-position=\"top\" attribute. Tooltip shows above element.",
-  "editableAreas": ["Tooltip text content", "Trigger element"],
-  "preserveElements": ["span.usa-tooltip__trigger", "span.usa-tooltip"],
-  "knownLimitations": ["JavaScript required for show/hide", "Touch devices may not show on hover"],
-  "tier": "curated",
-  "requiresJs": "required",
-  "interaction": ["hover", "focus", "click"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA"],
-  "variants": ["default", "top", "bottom", "left", "right"],
-  "settings": [],
-  "relatedComponents": ["button", "icon"],
-  "tokenOverrides": [],
-  "tags": ["tooltip", "top", "hover", "hint"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 658,
+      "renderingTimeMs": 60,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Attach tooltips to interactive elements only (buttons, links)",
+      "2. Keep aria-describedby wiring — tooltip text must reach screen readers",
+      "3. Never put critical information solely in a tooltip"
+    ]
+  }
 }
 </script>
 </head>

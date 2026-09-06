@@ -10,51 +10,133 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/json" id="uswds-agent-meta">
 {
+  "_schemaVersion": 2,
+  "discovery": {
+    "uswdsComponentType": "banner",
+    "uswdsClass": "usa-banner",
+    "section": "feedback",
+    "variant": "default",
+    "requiresJs": "no",
+    "interaction": [
+      "click",
+      "focus"
+    ],
+    "a11y": {
+      "wcag21AA": true,
+      "keyboardNav": true,
+      "screenReader": true,
+      "reducedMotion": true,
+      "forcedColors": true,
+      "ariaAttributes": true
+    },
+    "govCompliance": [
+      "Section 508",
+      "WCAG 2.1 AA",
+      "21st Century IDEA",
+      "NIST Guidelines"
+    ],
+    "tier": "curated",
+    "tags": [
+      "banner",
+      "official",
+      "government",
+      "gov",
+      "security",
+      "notice",
+      "seal",
+      "header"
+    ],
+    "description": "Identifies official government websites and helps users understand security.",
+    "compliance": {
+      "nistControls": [],
+      "fedRampLevel": "IL2+",
+      "section508": true,
+      "wcag21AA": true,
+      "piiHandling": "displays_only",
+      "auditTrailCompatible": false,
+      "dataMaskingCompatible": false
+    },
+    "mobileUX": {
+      "touchTargetSize": "44px",
+      "requiredMinSpacing": "8px",
+      "orientationLocked": false,
+      "fullscreenSafe": true
+    },
+    "supportedTokenProfiles": [
+      "highContrast"
+    ]
+  },
+  "selection": {
+    "useWhen": [
+      "Required on all official government websites",
+      "Federal agencies must display this banner",
+      "Communicates official status to users",
+      "Provides security awareness information"
+    ],
+    "avoidWhen": [
+      "Non-government websites",
+      "When hiding official status is desired"
+    ]
+  },
+  "instruction": {
+    "agentPrompt": "Update agency name if needed. The banner content is standardized for federal use. Add usa-banner--slim or usa-banner--medium for size variants. Ensure the official .gov domain is shown.",
+    "relatedComponents": [
+      "site-alert",
+      "header",
+      "identifier"
+    ],
+    "variants": [
+      "default",
+      "medium",
+      "slim"
+    ],
+    "settings": [
+      "$theme-banner-font-family"
+    ],
+    "tokenOverrides": [
+      "$theme-banner-font-family",
+      "$theme-banner-background-color"
+    ]
+  },
+  "constraints": {
+    "preserve": [
+      "section.usa-banner wrapper",
+      "div.usa-banner__header for condensed view",
+      "div.usa-banner__content for expanded content",
+      "usa-banner__icon for lock icon",
+      "Links to usa.gov and NIST for more info"
+    ],
+    "editable": [
+      "Agency name",
+      "Official .gov domain display",
+      "Size variant: slim, medium, or default"
+    ],
+    "limitations": [
+      "Required by federal guidelines for government sites",
+      "Toggling expanded/collapsed requires JavaScript",
+      "Should be first element in body"
+    ]
+  },
   "file": "banner/default.html",
   "title": "Banner",
-  "uswdsComponentType": "banner",
-  "uswdsClass": "usa-banner",
-  "description": "Identifies official government websites and helps users understand security.",
-  "section": "feedback",
-  "variant": "default",
-  "useWhen": [
-    "Required on all official government websites",
-    "Federal agencies must display this banner",
-    "Communicates official status to users",
-    "Provides security awareness information"
-  ],
-  "avoidWhen": [
-    "Non-government websites",
-    "When hiding official status is desired"
-  ],
-  "agentPrompt": "Update agency name if needed. The banner content is standardized for federal use. Add usa-banner--slim or usa-banner--medium for size variants. Ensure the official .gov domain is shown.",
-  "editableAreas": [
-    "Agency name",
-    "Official .gov domain display",
-    "Size variant: slim, medium, or default"
-  ],
-  "preserveElements": [
-    "section.usa-banner wrapper",
-    "div.usa-banner__header for condensed view",
-    "div.usa-banner__content for expanded content",
-    "usa-banner__icon for lock icon",
-    "Links to usa.gov and NIST for more info"
-  ],
-  "knownLimitations": [
-    "Required by federal guidelines for government sites",
-    "Toggling expanded/collapsed requires JavaScript",
-    "Should be first element in body"
-  ],
-  "tier": "curated",
-  "requiresJs": "no",
-  "interaction": ["click", "focus"],
-  "a11y": {"wcag21AA": true, "keyboardNav": true, "screenReader": true, "reducedMotion": true, "forcedColors": true, "ariaAttributes": true},
-  "govCompliance": ["Section 508", "WCAG 2.1 AA", "21st Century IDEA", "NIST Guidelines"],
-  "variants": ["default", "medium", "slim"],
-  "settings": ["$theme-banner-font-family"],
-  "relatedComponents": ["site-alert", "header", "identifier"],
-  "tokenOverrides": ["$theme-banner-font-family", "$theme-banner-background-color"],
-  "tags": ["banner", "official", "government", "gov", "security", "notice", "seal", "header"]
+  "coordination": {
+    "prerequisiteComponents": [],
+    "incompatibleWith": [],
+    "compositionCost": {
+      "costTier": "moderate",
+      "estimatedTokens": 1203,
+      "renderingTimeMs": 15,
+      "recommendedModel": "haiku"
+    },
+    "agentPromptSequence": [
+      "1. Place banner as the very first element in body, above header",
+      "2. Keep the expand/collapse JS intact — it is required for the official.gov domain message",
+      "3. Do not add content inside the banner beyond the standard copy"
+    ],
+    "compositionRecipes": [
+      "navigation-hierarchy"
+    ]
+  }
 }
 </script>
 <style>
