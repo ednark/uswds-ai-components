@@ -3156,6 +3156,9 @@
         "form"
       ],
       "description": "USWDS date range picker connecting a start and end date picker.",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
@@ -4551,6 +4554,9 @@
         "form"
       ],
       "description": "USWDS input mask guiding formatted entry (Social Security Number).",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
@@ -4598,6 +4604,9 @@
         "form"
       ],
       "description": "USWDS input with an icon prefix (credit card).",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
@@ -4645,6 +4654,9 @@
         "form"
       ],
       "description": "USWDS input with a text suffix (weight in pounds).",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
@@ -5259,6 +5271,9 @@
         "form"
       ],
       "description": "USWDS memorable date with separate month, day, and year inputs.",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
@@ -8417,6 +8432,9 @@
         "form"
       ],
       "description": "USWDS time picker with min/max constraints.",
+      "supportedTokenProfiles": [
+        "highContrast"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
