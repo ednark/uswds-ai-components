@@ -14,14 +14,30 @@ When building or modifying UI for a USWDS-based government website, query the de
 - **Facets:** https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/facets.json
 - **Tile pattern:** https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/{file}
 - **Agent meta ID:** `uswds-agent-meta`
+- **Metadata schema:** v2 (categorized: discovery/selection/instruction/constraints)
 
 ## Workflow
 
-1. Fetch the index (one JSON array, lean — no prose)
+1. Fetch the index (lean — facets normalized to flat fields)
 2. Filter in code by section, requiresJs, govCompliance, a11y
 3. Fetch only the chosen tiles
 4. Parse the `uswds-agent-meta` JSON block inside each tile
-5. Follow `agentPrompt`, respect `preserveElements`, modify `editableAreas`
+5. Read categorized metadata:
+   - `selection.useWhen` / `selection.avoidWhen` — confirm component fits
+   - `instruction.agentPrompt` — follow this guidance
+   - `constraints.preserve` — NEVER modify these elements
+   - `constraints.editable` — safe to change
+   - `constraints.limitations` — respect caveats
+6. Adapt following `instruction.agentPrompt` within `constraints` boundaries
+7. Verify all `constraints.preserve` elements are intact in output
+
+## Constraint Priority
+
+When constraints conflict, follow this order (highest to lowest):
+1. `constraints.preserve` — never modify (ARIA, semantic HTML, base classes)
+2. `constraints.limitations` — respect known caveats
+3. `instruction.agentPrompt` — adapt within boundaries
+4. `constraints.editable` — prefer changes listed here
 
 ## Facets
 
@@ -37,6 +53,7 @@ When building or modifying UI for a USWDS-based government website, query the de
 - ALWAYS query the registry before generating USWDS markup
 - Do not guess USWDS class names — fetch the tile
 - Prefer `requiresJs: "no"` unless JS is explicitly needed
-- Preserve ARIA attributes and required class structures
+- Preserve all `constraints.preserve` elements (ARIA, classes, structure)
+- Never remove `constraints.preserve` elements to satisfy `instruction.agentPrompt`
 - Check `govCompliance` for Section 508 / WCAG 2.1 AA
 - For Drupal implementation, also query the drupal-uswds-ai-components registry

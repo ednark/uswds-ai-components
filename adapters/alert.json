@@ -1,0 +1,101 @@
+{
+  "source": {
+    "component": "alert",
+    "registry": "uswds-ai-components",
+    "tiles": [
+      "alert/default.html",
+      "alert/info.html",
+      "alert/warning.html",
+      "alert/error.html",
+      "alert/success.html"
+    ]
+  },
+  "mappings": {
+    "material": {
+      "component": "snackbar",
+      "equivalence": "partial",
+      "baseClass": "mdc-snackbar",
+      "semanticNotes": [
+        "Material's closest persistent surface is snackbar; for inline alerts use mdc-banner",
+        "Material has no semantic status color mapping — use mdc-banner__graphic and color tokens"
+      ],
+      "variantMapping": {
+        "default": { "class": "mdc-banner", "notes": "Generic inline banner" },
+        "info": { "class": "mdc-banner", "notes": "Add info color token" },
+        "warning": { "class": "mdc-banner mdc-banner--warning", "notes": "Use warning color token" },
+        "error": { "class": "mdc-banner mdc-banner--error", "notes": "Use error color token" },
+        "success": { "class": "mdc-banner mdc-banner--success", "notes": "Use success color token" }
+      },
+      "attributeMapping": {
+        "role='alert'": "role='status' for non-blocking; 'alert' for blocking",
+        "aria-live='assertive'": "aria-live='assertive'"
+      },
+      "structuralMapping": {
+        "preserve": [
+          "role attribute for screen readers",
+          "aria-live region",
+          "Dismiss control when present"
+        ],
+        "replace": [
+          { "source": "usa-alert", "target": "mdc-banner" },
+          { "source": "usa-alert__body", "target": "mdc-banner__text" },
+          { "source": "usa-alert__heading", "target": "mdc-banner__graphic" }
+        ],
+        "add": [
+          "mdc-banner__actions wrapper for dismiss/snooze controls"
+        ],
+        "remove": [
+          "usa-alert__icon — Material uses graphic slot"
+        ]
+      },
+      "dependencies": [
+        "@material/banner/styles",
+        "@material/banner/mdc-banner"
+      ],
+      "limitations": [
+        "Material has no exact 1:1 inline alert — banner is the closest",
+        "Status color mapping requires custom theming"
+      ]
+    },
+    "bootstrap": {
+      "component": "alert",
+      "equivalence": "close",
+      "baseClass": "alert",
+      "semanticNotes": [
+        "Bootstrap alerts map cleanly to USWDS alert variants",
+        "Bootstrap uses .alert-dismissible for dismissible alerts"
+      ],
+      "variantMapping": {
+        "default": { "class": "alert alert-primary", "notes": "Generic info alert" },
+        "info": { "class": "alert alert-info", "notes": null },
+        "warning": { "class": "alert alert-warning", "notes": null },
+        "error": { "class": "alert alert-danger", "notes": "error → danger" },
+        "success": { "class": "alert alert-success", "notes": null }
+      },
+      "attributeMapping": {
+        "role='alert'": "role='alert'",
+        "aria-live='assertive'": "aria-live='assertive'"
+      },
+      "structuralMapping": {
+        "preserve": [
+          "role attribute for screen readers",
+          "aria-live region",
+          "Dismiss control when present"
+        ],
+        "replace": [
+          { "source": "usa-alert", "target": "alert alert-primary" },
+          { "source": "usa-alert__body", "target": "alert-body" },
+          { "source": "usa-alert__heading", "target": "alert-heading" }
+        ],
+        "add": [],
+        "remove": []
+      },
+      "dependencies": [
+        "bootstrap"
+      ],
+      "limitations": [
+        "Bootstrap has no dedicated 'default' alert — maps to alert-primary"
+      ]
+    }
+  }
+}

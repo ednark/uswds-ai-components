@@ -1,0 +1,91 @@
+{
+  "source": {
+    "component": "card",
+    "registry": "uswds-ai-components",
+    "tiles": [
+      "card/default.html",
+      "card/header.html",
+      "card/media.html",
+      "card/footer.html"
+    ]
+  },
+  "mappings": {
+    "material": {
+      "component": "card",
+      "equivalence": "close",
+      "baseClass": "mdc-card",
+      "semanticNotes": [
+        "Material cards use mdc-card__primary-action for clickable surface",
+        "Material card media uses mdc-card__media with --16-9 or --square modifier"
+      ],
+      "variantMapping": {
+        "default": { "class": "mdc-card", "notes": "Basic card surface" },
+        "header": { "class": "mdc-card mdc-card--outlined", "notes": "Add mdc-card__header slot" },
+        "media": { "class": "mdc-card mdc-card__media", "notes": "Use media modifier" },
+        "footer": { "class": "mdc-card", "notes": "Add mdc-card__actions footer" }
+      },
+      "attributeMapping": {},
+      "structuralMapping": {
+        "preserve": [
+          "Card heading semantics (h2/h3)",
+          "Link or button trigger when present",
+          "Media alt text"
+        ],
+        "replace": [
+          { "source": "usa-card", "target": "mdc-card" },
+          { "source": "usa-card__body", "target": "mdc-card__content" },
+          { "source": "usa-card__header", "target": "mdc-card__header" },
+          { "source": "usa-card__media", "target": "mdc-card__media" },
+          { "source": "usa-card__footer", "target": "mdc-card__actions" }
+        ],
+        "add": [
+          "mdc-card__ripple for interactive cards"
+        ],
+        "remove": []
+      },
+      "dependencies": [
+        "@material/card/styles",
+        "@material/card/mdc-card"
+      ],
+      "limitations": [
+        "Material card media modifiers are limited to square / 16-9"
+      ]
+    },
+    "bootstrap": {
+      "component": "card",
+      "equivalence": "close",
+      "baseClass": "card",
+      "semanticNotes": [
+        "Bootstrap cards map cleanly to USWDS cards",
+        "Bootstrap uses .card-img-top for media, .card-footer for footer"
+      ],
+      "variantMapping": {
+        "default": { "class": "card", "notes": "Basic card" },
+        "header": { "class": "card", "notes": "Add .card-header" },
+        "media": { "class": "card", "notes": "Add .card-img-top" },
+        "footer": { "class": "card", "notes": "Add .card-footer" }
+      },
+      "attributeMapping": {},
+      "structuralMapping": {
+        "preserve": [
+          "Card heading semantics (h2/h3)",
+          "Link or button trigger when present",
+          "Media alt text"
+        ],
+        "replace": [
+          { "source": "usa-card", "target": "card" },
+          { "source": "usa-card__body", "target": "card-body" },
+          { "source": "usa-card__header", "target": "card-header" },
+          { "source": "usa-card__media", "target": "card-img-top" },
+          { "source": "usa-card__footer", "target": "card-footer" }
+        ],
+        "add": [],
+        "remove": []
+      },
+      "dependencies": [
+        "bootstrap"
+      ],
+      "limitations": []
+    }
+  }
+}

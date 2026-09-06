@@ -1,0 +1,114 @@
+{
+  "source": {
+    "component": "button",
+    "registry": "uswds-ai-components",
+    "tiles": [
+      "button/default.html",
+      "button/secondary.html",
+      "button/outline.html",
+      "button/big.html",
+      "button/unstyled.html"
+    ]
+  },
+  "mappings": {
+    "material": {
+      "component": "button",
+      "equivalence": "close",
+      "baseClass": "mdc-button",
+      "semanticNotes": [
+        "Material buttons use ripple effect by default — include JS ripple module",
+        "Material has no direct 'accent-warm' / 'accent-cool' variant — map to color tokens"
+      ],
+      "variantMapping": {
+        "default": { "class": "mdc-button", "notes": "Primary filled button" },
+        "secondary": { "class": "mdc-button mdc-button--unelevated", "notes": null },
+        "outline": { "class": "mdc-button mdc-button--outlined", "notes": null },
+        "big": { "class": "mdc-button mdc-button--touch", "notes": "Wrap in touch target wrapper" },
+        "accent-cool": null,
+        "accent-warm": null,
+        "unstyled": { "class": "mdc-button mdc-button--text", "notes": "Closest equivalent: text button" }
+      },
+      "attributeMapping": {
+        "disabled='disabled'": "disabled",
+        "type='button'": "type='button'",
+        "type='submit'": "type='submit'"
+      },
+      "structuralMapping": {
+        "preserve": [
+          "Semantic <button> or <a> element",
+          "type attribute",
+          "disabled attribute",
+          "Accessible label text"
+        ],
+        "replace": [
+          { "source": "usa-button", "target": "mdc-button" },
+          { "source": "usa-button--secondary", "target": "mdc-button--unelevated" },
+          { "source": "usa-button--outline", "target": "mdc-button--outlined" },
+          { "source": "usa-button--big", "target": "mdc-button--touch" }
+        ],
+        "add": [
+          "<span class=\"mdc-button__label\">{text}</span> wrapper around button text"
+        ],
+        "remove": [
+          "usa-focus class — Material handles focus via ripple"
+        ]
+      },
+      "dependencies": [
+        "@material/button/styles",
+        "@material/button/mdc-button"
+      ],
+      "limitations": [
+        "Material buttons require JS for ripple effect",
+        "No direct equivalent for accent-cool / accent-warm color variants"
+      ]
+    },
+    "bootstrap": {
+      "component": "btn",
+      "equivalence": "close",
+      "baseClass": "btn",
+      "semanticNotes": [
+        "Bootstrap uses .btn with .btn-primary for the default primary button",
+        "Bootstrap has no unstyled button equivalent — use .btn-link as closest"
+      ],
+      "variantMapping": {
+        "default": { "class": "btn btn-primary", "notes": "Primary filled button" },
+        "secondary": { "class": "btn btn-secondary", "notes": null },
+        "outline": { "class": "btn btn-outline-primary", "notes": null },
+        "big": { "class": "btn btn-lg btn-primary", "notes": "Use size modifier" },
+        "accent-cool": null,
+        "accent-warm": null,
+        "unstyled": { "class": "btn btn-link", "notes": "Closest equivalent: link button" }
+      },
+      "attributeMapping": {
+        "disabled='disabled'": "disabled",
+        "type='button'": "type='button'",
+        "type='submit'": "type='submit'"
+      },
+      "structuralMapping": {
+        "preserve": [
+          "Semantic <button> or <a> element",
+          "type attribute",
+          "disabled attribute",
+          "Accessible label text"
+        ],
+        "replace": [
+          { "source": "usa-button", "target": "btn btn-primary" },
+          { "source": "usa-button--secondary", "target": "btn btn-secondary" },
+          { "source": "usa-button--outline", "target": "btn btn-outline-primary" },
+          { "source": "usa-button--big", "target": "btn btn-lg btn-primary" }
+        ],
+        "add": [],
+        "remove": [
+          "usa-focus class — Bootstrap handles focus via :focus-visible"
+        ]
+      },
+      "dependencies": [
+        "bootstrap"
+      ],
+      "limitations": [
+        "Bootstrap buttons need .btn base class on every variant",
+        "No direct equivalent for accent-cool / accent-warm color variants"
+      ]
+    }
+  }
+}
