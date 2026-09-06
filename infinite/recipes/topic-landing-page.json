@@ -1,0 +1,30 @@
+{
+  "recipe": "topic-landing-page",
+  "title": "Topic landing page",
+  "description": "The USAGov homepage pattern: identifier banner, extended header, icon topic-card grid, and footer. Observed live on usa.gov.",
+  "aliases": ["collection:topic-landing-page"],
+  "provenance": { "observed": "2026-09-06", "source": "https://www.usa.gov/", "method": "live-site observation" },
+  "components": [
+    { "order": 1, "component": "banner", "variant": "default", "file": "banner/default.html", "role": "government-branding", "required": true, "reason": "Official-website identifier with expandable 'Here's how you know'" },
+    { "order": 2, "component": "header", "variant": "extended", "file": "header/extended.html", "role": "page-chrome", "required": true, "reason": "Extended header with search and primary navigation (usa.gov adds a language toggle link)" },
+    { "order": 3, "component": "card", "variant": "group", "file": "card/group.html", "role": "data-display", "required": true, "reason": "Topic card grid with descriptions (usa.gov 'All topics and services')" },
+    { "order": 4, "component": "footer", "variant": "default", "file": "footer/default.html", "role": "page-chrome", "required": true, "reason": "Footer with secondary link columns" }
+  ],
+  "nesting": "DOM order 1 → 2 → <main> card grid → 4. The card grid uses usa-card-group with usa-card--media variants",
+  "validationOrder": [
+    "Banner precedes the header",
+    "Card grid is a usa-card-group; each card links its topic page",
+    "Footer closes the page"
+  ],
+  "a11yNotes": [
+    "Banner expandable content is keyboard accessible",
+    "Topic cards: whole-card links need meaningful accessible names",
+    "usa.gov adds a Spanish toggle — pair with a language selection strategy"
+  ],
+  "agentPromptSequence": [
+    "1. Place the identifier banner first",
+    "2. Add the extended header with search",
+    "3. Render the topic card group in main",
+    "4. Close with the footer"
+  ]
+}

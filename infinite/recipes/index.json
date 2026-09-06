@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedBy": "hand-authored (tools/add-coordination.mjs consumes this)",
   "spec": "Surface 4: Component Recipes (ai-component-registry-spec/protocol.md)",
-  "count": 5,
+  "count": 7,
   "urlPattern": "infinite/recipes/{recipe}.json",
   "recipes": [
     {
@@ -39,6 +39,13 @@
       "description": "Complete official page chrome in canonical DOM order: skip-nav, banner, header, breadcrumb, section navs, footer, identifier",
       "componentCount": 8,
       "url": "infinite/recipes/navigation-hierarchy.json"
+    },
+    {
+      "name": "topic-landing-page",
+      "title": "Topic landing page",
+      "description": "USAGov homepage pattern: banner, extended header, topic card grid, footer",
+      "componentCount": 4,
+      "url": "infinite/recipes/topic-landing-page.json"
     }
   ]
 }
