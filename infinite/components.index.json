@@ -3971,6 +3971,7 @@
       "nistControls": [],
       "touchTargetSize": "44px",
       "relatedComponents": [
+        "skip-nav",
         "side-navigation",
         "footer",
         "search"

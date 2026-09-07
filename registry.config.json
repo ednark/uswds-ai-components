@@ -94,5 +94,13 @@
     "21st Century IDEA"
   ],
   "updated": "0.2.1",
-  "language": "en"
+  "language": "en",
+  "gaps": [
+    {
+      "concept": "language-toggle",
+      "status": "not_part_of_design_system",
+      "nearestAlternative": "plain links with lang/hreflang (usa.gov Español pattern)",
+      "reason": "USWDS has no official language component; documented in the header tile guidance"
+    }
+  ]
 }

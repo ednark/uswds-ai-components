@@ -16,7 +16,9 @@
       "usa-footer__heading",
       "usa-footer__contact"
     ],
-    "typography": [],
+    "typography": [
+      "usa-intro"
+    ],
     "elements": [
       "usa-logo",
       "usa-nav",

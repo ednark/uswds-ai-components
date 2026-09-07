@@ -78,8 +78,9 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add usa-header--basic for minimal header, usa-header--extended for full-width navigation. Add usa-nav for navigation links. Include mobile menu button with usa-menu-btn class. Add language selector dropdown if needed.",
+    "agentPrompt": "Add usa-header--basic for minimal header, usa-header--extended for full-width navigation. Add usa-nav for navigation links. Include mobile menu button with usa-menu-btn class. Add language selector dropdown if needed. Every page needs a skip link as the first focusable element — pair this header with the skip-nav tile. USWDS has no official language component — render language toggles as plain links with lang/hreflang attributes (usa.gov uses an Español link).",
     "relatedComponents": [
+      "skip-nav",
       "side-navigation",
       "footer",
       "search"
@@ -139,6 +140,7 @@
       "recommendedModel": "haiku"
     },
     "agentPromptSequence": [
+      "0. Place a skip-nav tile as the first focusable element, targeting #main-content",
       "1. Place header as the first element in body",
       "2. Nest navigation (primary, secondary) inside header",
       "3. Pair with banner above it when a required-agency banner is needed"
