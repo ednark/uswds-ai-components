@@ -92,7 +92,7 @@
       "addedFacets": [],
       "metadataChanges": ["discovery.uswdClass added to all 152 tiles (primary CSS class per component) — enables class-level coverage checking and search by class"],
       "migrationPath": "Fully additive.",
-      "notes": "Round-trip quality check (USAGov home rebuilt with USWDS) exposed the missing uswdClass metadata and the untiled usa-search component; see round-trip-tests/uswds-usagov/findings.md"
+      "notes": "Round-trip quality check (USAGov home rebuilt with USWDS) exposed the missing uswdClass metadata and the search-family tiles invisible to class checking (metadata only); see round-trip-tests/uswds-usagov/findings.md"
     }
   ],
   "designSystemVersions": [
