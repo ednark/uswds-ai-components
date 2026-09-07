@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "registry": "uswds-ai-components",
+  "description": "Real, documented design-system classes that are NOT tiled components — the untiled core layer for page assembly. Consumed by cross-registry coverage checking.",
+  "categories": {
+    "layout": [
+      "usa-container",
+      "usa-section",
+      "usa-section--dark",
+      "usa-grid",
+      "usa-banner__inner",
+      "usa-banner__content",
+      "usa-banner__guidance",
+      "usa-header__inner",
+      "usa-footer__nav",
+      "usa-footer__heading",
+      "usa-footer__contact"
+    ],
+    "typography": [],
+    "elements": [
+      "usa-logo",
+      "usa-nav",
+      "usa-label",
+      "usa-hint",
+      "usa-input-group",
+      "usa-list",
+      "usa-search",
+      "usa-lang-toggle",
+      "usa-phone",
+      "usa-card__header",
+      "usa-card__body",
+      "usa-card__title",
+      "usa-icon-list__item",
+      "usa-icon-list__icon",
+      "usa-process-list__heading",
+      "usa-alert__title",
+      "usa-banner__flag",
+      "usa-banner__action"
+    ],
+    "states": []
+  }
+}

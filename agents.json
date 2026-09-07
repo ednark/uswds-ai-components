@@ -11,7 +11,10 @@
   "recipesUrl": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/recipes/index.json",
   "versionsUrl": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/versions.json",
   "compatibilityUrl": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/compatibility.json",
-  "compatibilityTargets": ["govuk", "carbon"],
+  "compatibilityTargets": [
+    "govuk",
+    "carbon"
+  ],
   "recipes": [
     "contact-form",
     "login-flow",
@@ -96,5 +99,6 @@
     "21st Century IDEA",
     "NIST Guidelines"
   ],
-  "updated": "2.0.0"
+  "updated": "2.0.0",
+  "language": "en"
 }

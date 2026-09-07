@@ -34,17 +34,18 @@
   "mcp": {
     "enabled": true,
     "server": "_base/mcp/server.mjs",
-    "transport": "stdio",        "tools": [
-          "search_components",
-          "get_component",
-          "list_facets",
-          "get_index",
-          "get_adapter",
-          "translate_component",
-          "get_recipe",
-          "query_compliance",
-          "get_versions"
-        ]
+    "transport": "stdio",
+    "tools": [
+      "search_components",
+      "get_component",
+      "list_facets",
+      "get_index",
+      "get_adapter",
+      "translate_component",
+      "get_recipe",
+      "query_compliance",
+      "get_versions"
+    ]
   },
   "repo": "https://github.com/ednark/uswds-ai-components",
   "base": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main",
@@ -92,5 +93,6 @@
     "WCAG 2.1 AA",
     "21st Century IDEA"
   ],
-  "updated": "0.2.1"
+  "updated": "0.2.1",
+  "language": "en"
 }
