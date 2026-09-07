@@ -67,6 +67,23 @@ CLI tools (from the registry root):
 
 Run with `npm run mcp` from the registry root. See `ai-component-registry-spec/mcp/README.md`.
 
+
+## Quality gates and declared gaps
+
+Do not retrieve or deploy a component that:
+
+- Has `costTier: "expensive"` unless the task explicitly requires the richer behavior
+- Has `requiresJs: "required"` when the delivery context has no JavaScript
+- Whose `constraints.knownLimitations` block the delivery context
+- Implements a concept declared in `gaps` (registry.config.json) — use the gap's nearestAlternative; never invent component-style classes
+- Needs layout or typography classes outside the tiles — use `infinite/core-classes.json`
+
+Registry mandates that act as gates:
+
+- Prefer `requiresJs: "no"` and `costTier: "cheap"` unless the task requires otherwise
+- Check `govCompliance` (Section 508 / WCAG 2.1 AA / 21st Century IDEA) for government deployments
+- Pair headers with skip-nav; render language toggles as plain links (no official USWDS language component)
+
 ## Constraint Priority
 
 When constraints conflict, follow this order (highest to lowest):

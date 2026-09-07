@@ -31,9 +31,7 @@
   "tileFetchPattern": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/{file}",
   "designSystem": {
     "name": "U.S. Web Design System (USWDS)",
-    "version": "3.13.0",
-    "url": "https://designsystem.digital.gov",
-    "components": 146
+    "version": "3.13.0"
   },
   "facets": [
     "uswdsComponentType",
@@ -44,19 +42,6 @@
     "section",
     "govCompliance"
   ],
-  "metadataCategories": {
-    "discovery": "Facets for filtering in code (not sent to model)",
-    "selection": "useWhen/avoidWhen — helps choose the right component",
-    "instruction": "agentPrompt — direct guidance for adaptation",
-    "constraints": "preserve/editable/limitations — hard boundaries on changes"
-  },
-  "constraintPriority": [
-    "constraints.preserve (never modify)",
-    "constraints.limitations (respect caveats)",
-    "instruction.agentPrompt (adapt within boundaries)",
-    "constraints.editable (prefer changes listed here)"
-  ],
-  "adaptationDetail": "embedded in each tile as <script type=\"application/json\" id=\"uswds-agent-meta\">",
   "flow": [
     "GET facets.json",
     "GET components.index.json",
@@ -69,16 +54,6 @@
     "enforce constraints.preserve boundaries",
     "verify all preserved elements intact in output"
   ],
-  "crossSystemTransfer": {
-    "description": "Translate any USWDS tile to a target design system using portableInvariants + classMapping + adapter registry.",
-    "decisionOrder": [
-      "1. Parse tile portableInvariants (always enforce)",
-      "2. IF portability.classMapping has target entry → simple class substitution",
-      "3. ELSE IF adapter registry has component entry → fetch {adapterBase}/{component}.json, follow structuralMapping",
-      "4. ELSE → fall back to portableInvariants only, note 'No mapping available for {target}'"
-    ],
-    "adapterFormat": "https://raw.githubusercontent.com/ednark/ai-component-registry-spec/main/adapter-format.md"
-  },
   "mcp": {
     "enabled": true,
     "transport": "stdio",

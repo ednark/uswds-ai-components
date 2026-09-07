@@ -216,6 +216,27 @@ When building common government UI patterns, check recipes first
 
 ---
 
+
+## Quality gates and declared gaps
+
+Do not retrieve or deploy a component that:
+
+- Has `costTier: "expensive"` unless the task explicitly requires the richer behavior — avoid for mobile-primary or static contexts
+- Has `requiresJs: "required"` when the delivery context has no JavaScript
+- Whose `constraints.knownLimitations` block the delivery context
+- Implements a concept declared in `gaps` (registry.config.json) — use the gap's nearestAlternative instead; never invent a component-style class for it
+- Needs layout or typography classes outside the tiles — use `core-classes.json` (the documented untiled layer), never invented component classes
+
+Registry mandates that act as gates:
+
+- Prefer `requiresJs: "no"` and `costTier: "cheap"` unless the task requires otherwise
+- Check `govCompliance` (Section 508 / WCAG 2.1 AA / 21st Century IDEA) for government deployments
+- Pair headers with skip-nav; render language toggles as plain links (no official USWDS language component)
+
+Declared gaps: see `gaps` in registry.config.json. Untiled layout/typography layer: see `infinite/core-classes.json`.
+
+---
+
 ## Output contract
 
 When returning components to a user, include:
