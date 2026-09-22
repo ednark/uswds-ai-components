@@ -55,7 +55,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-collection"
+    "uswdClass": "usa-collection",
+    "limitations": [
+      "usa-collection--list is not a USWDS class; collection list format is the default markup."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -69,7 +72,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add usa-collection--list class to usa-collection for list format.",
+    "agentPrompt": "Add class to usa-collection for list format.",
     "relatedComponents": [
       "card",
       "table"
@@ -110,7 +113,7 @@
 }</script>
 </head>
 <body>
-<ul class="usa-collection usa-collection--list">
+<ul class="usa-collection">
   <li class="usa-collection__item">
     <div class="usa-collection__body">
       <h3 class="usa-collection__heading"><a href="#">Collection list item one</a></h3>

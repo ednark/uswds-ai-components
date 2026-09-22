@@ -56,7 +56,12 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-footer"
+    "uswdClass": "usa-footer",
+    "limitations": [
+      "Footer column layout uses core grid classes (grid-row/grid-col) plus usa-footer__primary-link; demo-footer-grid/__col/__heading were invented and are now demo-* classes.",
+      "Footer column layout uses core grid classes (grid-row/grid-col) plus usa-footer__primary-link; demo-footer-grid/__col/__heading were invented and are now demo-* classes.",
+      "Footer column layout uses core grid classes (grid-row/grid-col) plus usa-footer__primary-link; usa-footer__grid/__col/__heading were invented and are now demo-* classes."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -128,16 +133,16 @@
 <footer class="usa-footer usa-footer--big">
   <div class="usa-footer__primary-section">
     <nav class="usa-footer__nav" aria-label="Footer navigation">
-      <div class="usa-footer__grid">
-        <div class="usa-footer__col">
-          <h3 class="usa-footer__heading">Topic One</h3>
+      <div class="demo-footer-grid">
+        <div class="demo-footer-col">
+          <h3 class="demo-footer-heading">Topic One</h3>
           <ul class="usa-list--unstyled">
             <li><a href="#">Footer link</a></li>
             <li><a href="#">Footer link</a></li>
           </ul>
         </div>
-        <div class="usa-footer__col">
-          <h3 class="usa-footer__heading">Topic Two</h3>
+        <div class="demo-footer-col">
+          <h3 class="demo-footer-heading">Topic Two</h3>
           <ul class="usa-list--unstyled">
             <li><a href="#">Footer link</a></li>
             <li><a href="#">Footer link</a></li>

@@ -56,7 +56,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-accordion"
+    "uswdClass": "usa-accordion",
+    "limitations": [
+      "usa-accordion__item is not a USWDS class; accordion sections are plain <li> containing h2.usa-accordion__heading + div.usa-accordion__content."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -85,7 +88,7 @@
   "constraints": {
     "preserve": [
       "ul.usa-accordion",
-      "li.usa-accordion__item",
+      "li",
       "button.usa-accordion__button",
       "div.usa-accordion__content"
     ],
@@ -118,7 +121,7 @@
 </head>
 <body>
 <ul class="usa-accordion usa-accordion--bordered">
-  <li class="usa-accordion__item">
+  <li>
     <button class="usa-accordion__button" aria-controls="errored-bordered">
       Bordered Accordion Item
     </button>
@@ -126,7 +129,7 @@
       <p>This accordion has borders around each item for visual separation.</p>
     </div>
   </li>
-  <li class="usa-accordion__item">
+  <li>
     <button class="usa-accordion__button" aria-controls="errored-bordered-2">
       Second Bordered Item
     </button>

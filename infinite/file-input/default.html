@@ -67,7 +67,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-file-input"
+    "uswdClass": "usa-file-input",
+    "limitations": [
+      "usa-file-input__label is not a USWDS class; the label is a plain usa-label."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -104,7 +107,7 @@
   "constraints": {
     "preserve": [
       "div.usa-file-input wrapper",
-      "label.usa-file-input__label with aria-describedby",
+      "label with aria-describedby",
       "input.usa-file-input__input type='file'",
       "span.usa-file-input__instructions",
       "accept attribute for file type restrictions"
@@ -169,7 +172,7 @@
   <span class="usa-hint" id="file-input-hint">Accepted file types: PDF, DOC, DOCX, JPG, PNG</span>
   <div class="usa-file-input">
     <input type="file" class="usa-file-input__input" id="file-input" aria-describedby="file-input-label file-input-hint" accept=".pdf,.doc,.docx,.jpg,.png">
-    <label class="usa-file-input__label" for="file-input">
+    <label for="file-input">
       <span class="usa-file-input__instructions">Upload file</span>
       <span class="usa-file-input__choose">Choose file</span>
     </label>

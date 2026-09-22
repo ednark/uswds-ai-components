@@ -57,7 +57,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-logo"
+    "uswdClass": "usa-logo",
+    "limitations": [
+      "usa-logo-img is not a USWDS class; the logo image sits inside usa-logo without a dedicated class."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -71,7 +74,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Use usa-logo with usa-logo__text containing an <a> with both img.usa-logo-img and a div.logo-text with strong and tagline.",
+    "agentPrompt": "Use usa-logo with usa-logo__text containing an <a> with both img and a div.logo-text with strong and tagline.",
     "relatedComponents": [
       "header",
       "navbar"
@@ -92,7 +95,7 @@
       "div.usa-logo",
       "em.usa-logo__text",
       "a.logo-img",
-      "img.usa-logo-img",
+      "img",
       "div.logo-text"
     ],
     "editable": [
@@ -127,7 +130,7 @@
 <div class="usa-logo" id="logo">
   <em class="usa-logo__text">
     <a class="logo-img" href="/" title="Home" aria-label="Home">
-      <img class="usa-logo-img" src="logo.svg" alt="Agency Logo">
+      <img src="logo.svg" alt="Agency Logo">
       <div class="logo-text">
         <strong class="logo-text-bold">Agency Name</strong>
         <div class="logo-tagline">Making government services easier to find</div>

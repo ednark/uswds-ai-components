@@ -57,7 +57,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-accordion"
+    "uswdClass": "usa-accordion",
+    "limitations": [
+      "usa-accordion__item is not a USWDS class; accordion sections are plain <li> with h2.usa-accordion__heading + div.usa-accordion__content (hidden=\"until-found\" for this variant)."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -120,7 +123,7 @@
 </head>
 <body>
 <ul class="usa-accordion">
-  <li class="usa-accordion__item">
+  <li>
     <h2 class="usa-accordion__heading">
       <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-until-found-1">
         Searchable Accordion Item
@@ -130,7 +133,7 @@
       <p>This content is hidden but still searchable via browser find-in-page. The browser will reveal it when found.</p>
     </div>
   </li>
-  <li class="usa-accordion__item">
+  <li>
     <h2 class="usa-accordion__heading">
       <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-until-found-2">
         Second Searchable Item

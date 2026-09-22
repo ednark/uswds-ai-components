@@ -56,7 +56,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-radio"
+    "uswdClass": "usa-radio",
+    "limitations": [
+      "usa-radio__group is not a USWDS class; grouped radios use a plain usa-fieldset + legend."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -122,7 +125,7 @@
 <body>
 <fieldset class="usa-fieldset">
   <legend class="usa-legend">Radio options</legend>
-  <div class="usa-radio__group">
+  <div>
     <input class="usa-radio__input" id="radio-disabled" type="radio" name="radio-disabled" value="1" disabled checked>
     <label class="usa-radio__label" for="radio-disabled">Disabled radio (pre-selected)</label>
   </div>

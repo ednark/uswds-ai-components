@@ -59,7 +59,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-combo-box"
+    "uswdClass": "usa-combo-box",
+    "limitations": [
+      "usa-combo-box--lg is not a USWDS class — combo box has no size variants; larger sizing is a page-level customization."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -73,7 +76,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add usa-combo-box--lg class to usa-combo-box for larger variant.",
+    "agentPrompt": "Add class to usa-combo-box for larger variant.",
     "relatedComponents": [
       "select",
       "text-input"
@@ -126,7 +129,7 @@
 <body>
 <div class="usa-form-group">
   <label class="usa-label" for="combo-box-lg">Large combo box</label>
-  <div class="usa-combo-box usa-combo-box--lg">
+  <div class="usa-combo-box">
     <select class="usa-combo-box__select" id="combo-box-lg" name="combo-box-lg">
       <option value="">Select...</option>
       <option value="1">Option one</option>

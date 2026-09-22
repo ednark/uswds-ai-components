@@ -56,7 +56,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-identifier"
+    "uswdClass": "usa-identifier",
+    "limitations": [
+      "usa-identifier__heading is not a USWDS class; the identifier section is titled via aria-label, not a heading element."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -119,7 +122,7 @@
 </head>
 <body>
 <section class="usa-identifier" aria-labelledby="identifier-heading">
-  <h2 class="usa-identifier__heading" id="identifier-heading">Agency Identifier</h2>
+  <h2 id="identifier-heading">Agency Identifier</h2>
   <div class="usa-identifier__logos">
     <a href="#" class="usa-identifier__logo">
       <img src="https://designsystem.digital.gov/img/logo-img.png" alt="Agency Logo">

@@ -56,7 +56,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-banner"
+    "uswdClass": "usa-banner",
+    "limitations": [
+      "usa-banner--slim is a USWDS 2.x class, removed in USWDS 3 — the banner has one variant (default) plus the <usa-banner> web component."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -70,7 +73,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add usa-banner--slim class to usa-banner. Condensed single-line version.",
+    "agentPrompt": "Add class to usa-banner. Condensed single-line version.",
     "relatedComponents": [
       "header",
       "identifier"
@@ -85,8 +88,8 @@
   },
   "constraints": {
     "preserve": [
-      "div.usa-banner usa-banner--slim",
-      "div.usa-banner__text"
+      "div.usa-banner",
+      "div.usa-banner__header-text"
     ],
     "editable": [
       "Banner text only"
@@ -118,10 +121,10 @@
 }</script>
 </head>
 <body>
-<div class="usa-banner usa-banner--slim">
+<div class="usa-banner">
   <div class="usa-banner__header">
     <div class="usa-banner__inner">
-      <div class="usa-banner__text">
+      <div class="usa-banner__header-text">
         <p class="usa-banner__header-text">An official website of the United States government</p>
       </div>
     </div>

@@ -9,7 +9,7 @@
   "_schemaVersion": 2,
   "discovery": {
     "uswdsComponentType": "summary-box",
-    "uswdsClass": "usa-summary-box--warning",
+    "uswdsClass": "usa-summary-box",
     "section": "supporting",
     "variant": "warning",
     "requiresJs": "no",
@@ -54,7 +54,14 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-summary-box"
+    "uswdClass": "usa-summary-box",
+    "limitations": [
+      "usa-summary-box is not a USWDS class — summary box has no variants (USWDS 3 docs).",
+      "usa-summary-box is not a USWDS class — summary box has no variants (USWDS 3 docs).",
+      "usa-summary-box is not a USWDS class — summary box has no variants (USWDS 3 docs).",
+      "usa-summary-box is not a USWDS class — summary box has no variants (USWDS 3 docs).",
+      "usa-summary-box--warning is not a USWDS class — summary box has no variants (USWDS 3 docs)."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -69,7 +76,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add usa-summary-box--warning class to usa-summary-box.",
+    "agentPrompt": "Add usa-summary-box class to usa-summary-box.",
     "relatedComponents": [
       "alert",
       "validation"
@@ -85,7 +92,7 @@
   },
   "constraints": {
     "preserve": [
-      "div.usa-summary-box usa-summary-box--warning",
+      "div.usa-summary-box usa-summary-box",
       "h3.usa-summary-box__heading",
       "ul.usa-list"
     ],
@@ -118,7 +125,7 @@
 }</script>
 </head>
 <body>
-<div class="usa-summary-box usa-summary-box--warning" role="region" aria-labelledby="summary-box-warning-heading">
+<div class="usa-summary-box usa-summary-box" role="region" aria-labelledby="summary-box-warning-heading">
   <div class="usa-summary-box__body">
     <h3 class="usa-summary-box__heading" id="summary-box-warning-heading">Warning Summary</h3>
     <ul class="usa-list">

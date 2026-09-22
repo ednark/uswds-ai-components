@@ -64,7 +64,12 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-in-page-navigation"
+    "uswdClass": "usa-in-page-navigation",
+    "limitations": [
+      " is not a USWDS class; links inside usa-in-page-nav__item carry no class.",
+      " is not a USWDS class; links inside usa-in-page-nav__item carry no class.",
+      "usa-in-page-nav__link is not a USWDS class; links inside usa-in-page-nav__item carry no class."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -102,7 +107,7 @@
       "nav.usa-in-page-nav with aria-label",
       "aria-labelledby on nav",
       "data-page-nav-items attribute",
-      "a.usa-in-page-nav__link for each section"
+      "a. for each section"
     ],
     "editable": [
       "Section titles in navItems",
@@ -160,13 +165,13 @@
 <nav class="usa-in-page-nav" aria-label="Page navigation">
   <ul class="usa-in-page-nav__list">
     <li class="usa-in-page-nav__item">
-      <a class="usa-in-page-nav__link" href="#section-1">Section One</a>
+      <a class="" href="#section-1">Section One</a>
     </li>
     <li class="usa-in-page-nav__item">
-      <a class="usa-in-page-nav__link" href="#section-2">Section Two</a>
+      <a class="" href="#section-2">Section Two</a>
     </li>
     <li class="usa-in-page-nav__item">
-      <a class="usa-in-page-nav__link" href="#section-3">Section Three</a>
+      <a class="" href="#section-3">Section Three</a>
     </li>
   </ul>
 </nav>

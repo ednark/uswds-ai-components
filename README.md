@@ -29,7 +29,7 @@ This registry extends the [AI Component Registry Spec](https://github.com/ednark
 This project provides the USWDS-specific content:
 
 - **`registry.config.json`** — declares the design system, facets, agentMetaId, and URLs
-- **`infinite/`** — 146 self-contained USWDS component tiles with embedded `uswds-agent-meta` JSON
+- **`infinite/`** — 152 USWDS component tiles with embedded `uswds-agent-meta` JSON (structurally self-contained; component appearance comes from USWDS CSS — standalone preview via generated `*.resolved.html` companions, validated against `@uswds/uswds` at build time)
 - **`agents.json`, `catalog.json`, `llms.txt`** — the manifest, catalog, and protocol
 
 The retrieval protocol was originated by [forever-ai-components](https://github.com/isas1/forever-ai-components). The spec repo extracts and generalizes that protocol so any design system can adopt it.

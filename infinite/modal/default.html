@@ -63,7 +63,12 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-modal"
+    "uswdClass": "usa-modal",
+    "limitations": [
+      "demo-modal-header/__body are not USWDS classes; the real structure is usa-modal__content > usa-modal__main containing heading, close, and body.",
+      "demo-modal-header/__body are not USWDS classes; the real structure is usa-modal__content > usa-modal__main containing heading, close, and body.",
+      "usa-modal__header/__body are not USWDS classes; the real structure is usa-modal__content > usa-modal__main containing heading, close, and body."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -174,11 +179,11 @@
 <div class="usa-modal-wrapper">
   <div class="usa-modal usa-modal--lg" id="example-modal" aria-labelledby="modal-heading">
     <div class="usa-modal__content">
-      <div class="usa-modal__header">
+      <div class="demo-modal-header">
         <h2 class="usa-modal__heading" id="modal-heading">Confirm Action</h2>
         <button class="usa-modal__close" aria-label="Close">Close</button>
       </div>
-      <div class="usa-modal__body">
+      <div class="demo-modal-body">
         <p>Are you sure you want to proceed? This action cannot be undone.</p>
       </div>
       <div class="usa-modal__footer">

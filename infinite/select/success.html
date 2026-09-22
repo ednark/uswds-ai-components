@@ -9,7 +9,7 @@
   "_schemaVersion": 2,
   "discovery": {
     "uswdsComponentType": "select",
-    "uswdsClass": "usa-select--success",
+    "uswdsClass": "usa-input--success",
     "section": "forms",
     "variant": "success",
     "requiresJs": "no",
@@ -57,7 +57,14 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-select"
+    "uswdClass": "usa-select",
+    "limitations": [
+      "usa-input--success is not a USWDS class; the success state class is usa-input--success. usa-success-message does not exist; success feedback uses usa-input--success plus hint text.",
+      "usa-input--success is not a USWDS class; the success state class is usa-input--success. usa-success-message does not exist; success feedback uses usa-input--success plus hint text.",
+      "usa-input--success is not a USWDS class; the success state class is usa-input--success. usa-success-message does not exist; success feedback uses usa-input--success plus hint text.",
+      "usa-input--success is not a USWDS class; the success state class is usa-input--success. usa-success-message does not exist; success feedback uses usa-input--success plus hint text.",
+      "usa-select--success is not a USWDS class; the success state class is usa-input--success. usa-success-message does not exist; success feedback uses usa-input--success plus hint text."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -70,7 +77,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add usa-select--success class for success state styling.",
+    "agentPrompt": "Add usa-input--success class for success state styling.",
     "relatedComponents": [
       "text-input",
       "validation"
@@ -88,7 +95,7 @@
   "constraints": {
     "preserve": [
       "div.usa-form-group",
-      "select.usa-select--success"
+      "select.usa-input--success"
     ],
     "editable": [
       "Select label",
@@ -127,8 +134,8 @@
 <body>
 <div class="usa-form-group">
   <label class="usa-label" for="select-success">Select with success</label>
-  <span class="usa-success-message" id="select-success-message" role="status">Success: Selection confirmed</span>
-  <select class="usa-select usa-select--success" id="select-success" name="select-success" aria-describedby="select-success-message">
+  <span id="select-success-message" role="status">Success: Selection confirmed</span>
+  <select class="usa-select usa-input--success" id="select-success" name="select-success" aria-describedby="select-success-message">
     <option value="">Select an option</option>
     <option value="1" selected>Option one (selected)</option>
     <option value="2">Option two</option>

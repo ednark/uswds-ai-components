@@ -59,7 +59,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-header"
+    "uswdClass": "usa-header",
+    "limitations": [
+      "usa-nav__submenu-items is not a USWDS class; megamenu columns use core grid classes inside usa-nav__submenu."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -162,7 +165,7 @@
             <span>About Us</span>
           </button>
           <div id="nav-section-1" class="grid-container usa-nav__submenu" hidden>
-            <ul class="mobile-lg:grid-col-6 desktop:grid-col-12 grid-row grid-gap usa-nav__submenu-items">
+            <ul class="mobile-lg:grid-col-6 desktop:grid-col-12 grid-row grid-gap">
               <li class="desktop:grid-col-6 usa-nav__submenu-item">
                 <a href="/about">
                   <div class="item-title">About Us</div>
@@ -183,7 +186,7 @@
             <span>Reports</span>
           </button>
           <div id="nav-section-2" class="grid-container usa-nav__submenu" hidden>
-            <ul class="desktop:grid-col-12 grid-row grid-gap usa-nav__submenu-items">
+            <ul class="desktop:grid-col-12 grid-row grid-gap">
               <li class="desktop:grid-col-4 usa-nav__submenu-item">
                 <a href="/reports">
                   <div class="item-title">Reports Library</div>

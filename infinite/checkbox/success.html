@@ -57,7 +57,11 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-checkbox"
+    "uswdClass": "usa-checkbox",
+    "limitations": [
+      "usa-success-message is not a USWDS class; success feedback uses usa-input--success plus hint text.",
+      "usa-checkbox__group and usa-checkbox__input--success are not USWDS classes; success feedback is expressed with usa-input--success on inputs, hint text, and role=\"status\" announcements."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -70,7 +74,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add usa-checkbox__input--success class for success state styling.",
+    "agentPrompt": "Add class for success state styling.",
     "relatedComponents": [
       "radio-button",
       "validation"
@@ -124,9 +128,9 @@
 <div class="usa-form-group">
   <fieldset class="usa-fieldset">
     <legend class="usa-legend">Select options</legend>
-    <span class="usa-success-message" id="checkbox-success-message" role="status">Selection confirmed</span>
-    <div class="usa-checkbox__group">
-      <input class="usa-checkbox__input usa-checkbox__input--success" id="checkbox-success-1" type="checkbox" name="checkbox-success" value="1" checked>
+    <span id="checkbox-success-message" role="status">Selection confirmed</span>
+    <div>
+      <input class="usa-checkbox__input" id="checkbox-success-1" type="checkbox" name="checkbox-success" value="1" checked>
       <label class="usa-checkbox__label" for="checkbox-success-1">Option one (confirmed)</label>
     </div>
   </fieldset>

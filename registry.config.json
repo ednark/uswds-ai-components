@@ -3,7 +3,7 @@
   "description": "USWDS component registry for AI coding agents building government websites.",
   "designSystem": {
     "name": "U.S. Web Design System",
-    "version": "3.13.0",
+    "version": "3.14.0",
     "url": "https://designsystem.digital.gov"
   },
   "agentMetaId": "uswds-agent-meta",
@@ -93,7 +93,7 @@
     "WCAG 2.1 AA",
     "21st Century IDEA"
   ],
-  "updated": "0.2.1",
+  "updated": "0.4.0",
   "language": "en",
   "gaps": [
     {
@@ -102,5 +102,76 @@
       "nearestAlternative": "plain links with lang/hreflang (usa.gov Español pattern)",
       "reason": "USWDS has no official language component; documented in the header tile guidance"
     }
-  ]
+  ],
+  "staticView": {
+    "css": [
+      "node_modules/@uswds/uswds/dist/css/uswds.min.css"
+    ],
+    "viewport": {
+      "width": 1280,
+      "height": 4000
+    },
+    "note": "Resolved-view generation input (see _base/generate-resolved-view.mjs). Design-system CSS injected at build time because USWDS tiles rely on external USWDS styles per tile-format.md self-containment exception.",
+    "classCheck": {
+      "prefix": "usa-",
+      "allowlist": [
+        {
+          "class": "usa-character-count",
+          "reason": "USWDS JavaScript mount (no styling expected)"
+        },
+        {
+          "class": "usa-date-picker",
+          "reason": "USWDS JavaScript mount (no styling expected)"
+        },
+        {
+          "class": "usa-date-range-picker",
+          "reason": "USWDS JavaScript mount (no styling expected)"
+        },
+        {
+          "class": "usa-language-switcher",
+          "reason": "USWDS JavaScript component root"
+        },
+        {
+          "class": "usa-language-switcher--expanded",
+          "reason": "USWDS JavaScript component state"
+        },
+        {
+          "class": "usa-breadcrumb--wrap",
+          "reason": "Documented USWDS 3.14 backward-compat no-op (breadcrumbs wrap by default; class has no effect)"
+        },
+        {
+          "class": "usa-chart",
+          "reason": "Registry demo structure for data-visualizations (USWDS default bundle ships no chart CSS); L3 de-classing deferred"
+        },
+        {
+          "class": "usa-chart-container",
+          "reason": "Registry demo structure for data-visualizations (USWDS default bundle ships no chart CSS); L3 de-classing deferred"
+        },
+        {
+          "class": "usa-summary-box__body",
+          "reason": "Documented USWDS markup class (official docs); no styles in the 3.14 bundle"
+        },
+        {
+          "class": "usa-layout-docs",
+          "reason": "Documented USWDS layout-docs markup; only usa-layout-docs__sidenav is styled in 3.14"
+        },
+        {
+          "class": "usa-layout-docs__main",
+          "reason": "Documented USWDS layout-docs markup; unstyled in the 3.14 bundle"
+        },
+        {
+          "class": "usa-pagination__link-text",
+          "reason": "Documented USWDS pagination markup (official docs); no styles in the 3.14 bundle"
+        },
+        {
+          "class": "usa-combo-box__select",
+          "reason": "Documented USWDS combo-box markup; USWDS JS swaps it for usa-combo-box__input at runtime"
+        },
+        {
+          "class": "usa-pagination__page-no",
+          "reason": "Documented USWDS pagination markup (official docs); no styles in the 3.14 bundle"
+        }
+      ]
+    }
+  }
 }

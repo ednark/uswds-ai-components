@@ -59,7 +59,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-date-picker"
+    "uswdClass": "usa-date-picker",
+    "limitations": [
+      "usa-date-picker--lg is not a USWDS class — date picker has no size variants."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -73,7 +76,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add usa-date-picker--lg class to usa-date-picker for larger variant.",
+    "agentPrompt": "Add class to usa-date-picker for larger variant.",
     "relatedComponents": [
       "text-input",
       "combo-box"
@@ -125,7 +128,7 @@
 <body>
 <div class="usa-form-group">
   <label class="usa-label" for="date-picker-lg">Large date picker</label>
-  <div class="usa-date-picker usa-date-picker--lg">
+  <div class="usa-date-picker">
     <input class="usa-input" id="date-picker-lg" name="date-picker-lg" type="text" aria-label="Enter date">
   </div>
 </div>

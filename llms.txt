@@ -1,5 +1,5 @@
 > USWDS AI Components — Plain-text agent protocol
-> Free to browse and download. Components are part of USWDS 3.13.0, in the public domain.
+> Free to browse and download. Components are part of USWDS 3.14.0, in the public domain.
 > Home: https://github.com/ednark/uswds-ai-components
 > Base layer: https://github.com/ednark/ai-component-registry-spec (submodule at _base/)
 
@@ -7,7 +7,7 @@
 
 ## Overview
 
-USWDS AI Components is a component registry for AI coding agents building government websites with the U.S. Web Design System (USWDS 3.13.0). The registry contains 146 accessible, mobile-friendly components, each with rich adaptation metadata. It extends the ai-component-registry-spec base layer.
+USWDS AI Components is a component registry for AI coding agents building government websites with the U.S. Web Design System (USWDS 3.14.0). The registry contains 146 accessible, mobile-friendly components, each with rich adaptation metadata. It extends the ai-component-registry-spec base layer.
 
 ## Machine manifest
 
@@ -16,6 +16,12 @@ USWDS AI Components is a component registry for AI coding agents building govern
 ## Sitemap
 
 > https://raw.githubusercontent.com/ednark/uswds-ai-components/main/sitemap.xml
+
+---
+
+## Appearance (resolved views)
+
+Tiles are structurally self-contained: markup, class names, and adaptation metadata need nothing external. Component appearance resolves either through a host page that loads USWDS CSS (the normal integration flow), or through each tile's generated resolved view — fetch the tile path with .html replaced by .resolved.html. Resolved views carry computed geometry, colors, and typography inline (design-system CSS injected at build time, validated against @uswds/uswds); index records expose the path as the resolvedView field.
 
 ---
 

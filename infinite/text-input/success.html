@@ -58,7 +58,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-input"
+    "uswdClass": "usa-input",
+    "limitations": [
+      "usa-success-message is not a USWDS class; success feedback uses usa-input--success plus hint text."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -131,7 +134,7 @@
 <body>
 <div class="usa-form-group">
   <label class="usa-label" for="text-input-success">Text input with success</label>
-  <span class="usa-success-message" id="text-input-success-message" role="status">Success: Input is valid</span>
+  <span id="text-input-success-message" role="status">Success: Input is valid</span>
   <input class="usa-input usa-input--success" id="text-input-success" name="text-input-success" aria-describedby="text-input-success-message" type="text">
 </div>
 </body>

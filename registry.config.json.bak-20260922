@@ -1,0 +1,106 @@
+{
+  "name": "uswds-ai-components",
+  "description": "USWDS component registry for AI coding agents building government websites.",
+  "designSystem": {
+    "name": "U.S. Web Design System",
+    "version": "3.13.0",
+    "url": "https://designsystem.digital.gov"
+  },
+  "agentMetaId": "uswds-agent-meta",
+  "tileDir": "infinite",
+  "facets": [
+    "section",
+    "uswdsComponentType",
+    "requiresJs",
+    "interaction",
+    "a11y",
+    "govCompliance",
+    "variant",
+    "costTier",
+    "prerequisites",
+    "compositionRecipes",
+    "fedRampLevel",
+    "piiHandling",
+    "touchTargetSize",
+    "supportedTokenProfiles"
+  ],
+  "indexSchemaVersion": 1,
+  "metadataSchemaVersion": 2,
+  "supportedDesignSystems": [
+    "material",
+    "bootstrap"
+  ],
+  "adapterBase": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/adapters",
+  "mcp": {
+    "enabled": true,
+    "server": "_base/mcp/server.mjs",
+    "transport": "stdio",
+    "tools": [
+      "search_components",
+      "get_component",
+      "list_facets",
+      "get_index",
+      "get_adapter",
+      "translate_component",
+      "get_recipe",
+      "query_compliance",
+      "get_versions"
+    ]
+  },
+  "repo": "https://github.com/ednark/uswds-ai-components",
+  "base": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main",
+  "additionalFields": [
+    "useWhen",
+    "avoidWhen",
+    "agentPrompt",
+    "editableAreas",
+    "preserveElements",
+    "knownLimitations",
+    "variants",
+    "settings",
+    "relatedComponents",
+    "tokenOverrides",
+    "coordination",
+    "compliance",
+    "mobileUX",
+    "supportedTokenProfiles"
+  ],
+  "tokenProfiles": {
+    "highContrast": {
+      "description": "Windows High Contrast / forced-colors mode support",
+      "tokenOverrides": {
+        "button.border": "1px solid currentColor",
+        "button.background": "transparent"
+      }
+    },
+    "darkMode": {
+      "description": "Dark-mode rendering (not yet standard across USWDS components)",
+      "tokenOverrides": {
+        "text.primary": "#ffffff",
+        "background": "#1a1a1a"
+      }
+    },
+    "compactDensity": {
+      "description": "Dense UI profile with reduced spacing (verify touch targets before use on touch devices)",
+      "tokenOverrides": {
+        "spacing.vertical": "6px",
+        "spacing.horizontal": "8px"
+      }
+    }
+  },
+  "govCompliance": [
+    "Section 508",
+    "WCAG 2.1 AA",
+    "21st Century IDEA"
+  ],
+  "updated": "0.4.0",
+  "language": "en",
+  "gaps": [
+    {
+      "concept": "language-toggle",
+      "status": "not_part_of_design_system",
+      "nearestAlternative": "plain links with lang/hreflang (usa.gov Español pattern)",
+      "reason": "USWDS has no official language component; documented in the header tile guidance"
+    }
+  ]
+}

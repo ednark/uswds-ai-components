@@ -64,7 +64,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-language"
+    "uswdClass": "usa-language",
+    "limitations": [
+      "usa-language__list is not a USWDS class; language selector lists use usa-language__primary/__submenu families."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -157,7 +160,7 @@
 </head>
 <body>
 <div class="usa-language-container">
-  <ul class="usa-language__list">
+  <ul class="usa-language__primary">
     <li class="usa-language__submenu-item" aria-current="true">
       <span lang="en">English</span>
     </li>

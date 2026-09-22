@@ -58,7 +58,12 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-footer"
+    "uswdClass": "usa-footer",
+    "limitations": [
+      "demo-footer-email is not a USWDS class; the email signup uses usa-footer__signup and core grid classes.",
+      "demo-footer-email is not a USWDS class; the email signup uses usa-footer__signup and core grid classes.",
+      "usa-footer__email-container is not a USWDS class; the email signup uses usa-footer__signup and core grid classes."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -72,7 +77,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add usa-footer__email-container div before usa-footer__primary-content. Include heading, description, email input, and subscribe button.",
+    "agentPrompt": "Add demo-footer-email div before usa-footer__primary-content. Include heading, description, email input, and subscribe button.",
     "relatedComponents": [
       "form",
       "text-input",
@@ -94,7 +99,7 @@
   },
   "constraints": {
     "preserve": [
-      "div.usa-footer__email-container",
+      "div.demo-footer-email",
       "form.email-signup-form",
       "input[type='email']",
       "input[type='submit']"
@@ -134,7 +139,7 @@
 <body>
 <footer class="usa-footer usa-footer--big">
   <div class="usa-footer__primary-section">
-    <div class="usa-footer__email-container">
+    <div class="demo-footer-email">
       <div class="grid-container">
         <div class="email-signup">
           <div class="grid-row">

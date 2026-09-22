@@ -55,7 +55,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-pagination"
+    "uswdClass": "usa-pagination",
+    "limitations": [
+      "usa-pagination--show-all is not a USWDS class; show-all pagination is the default markup."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -69,7 +72,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add usa-pagination--show-all class. Displays all page numbers without ellipsis.",
+    "agentPrompt": "Add class. Displays all page numbers without ellipsis.",
     "relatedComponents": [
       "pager",
       "step-indicator"
@@ -119,7 +122,7 @@
 }</script>
 </head>
 <body>
-<nav class="usa-pagination usa-pagination--show-all" aria-label="Pagination">
+<nav class="usa-pagination" aria-label="Pagination">
   <ul class="usa-pagination__list">
     <li class="usa-pagination__item usa-pagination__arrow">
       <a href="#" class="usa-pagination__link" aria-label="Previous page">
@@ -130,8 +133,8 @@
     <li class="usa-pagination__item"><a class="usa-pagination__button" href="#">2</a></li>
     <li class="usa-pagination__item"><a class="usa-pagination__button" href="#">3</a></li>
     <li class="usa-pagination__item"><a class="usa-pagination__button" href="#">4</a></li>
-    <li class="usa-pagination__item usa-pagination__item--current">
-      <span class="usa-pagination__button" aria-current="page">5</span>
+    <li class="usa-pagination__item">
+      <span class="usa-pagination__button usa-current" aria-current="page">5</span>
     </li>
     <li class="usa-pagination__item usa-pagination__arrow">
       <a href="#" class="usa-pagination__link" aria-label="Next page">

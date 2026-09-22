@@ -56,7 +56,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-input"
+    "uswdClass": "usa-input",
+    "limitations": [
+      "usa-input--disabled is not a USWDS 3 class; disabled inputs use the disabled attribute."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -70,7 +73,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add disabled attribute and usa-input--disabled class to input.",
+    "agentPrompt": "Add disabled attribute and class to input.",
     "relatedComponents": [
       "text-input"
     ],
@@ -128,7 +131,7 @@
 <body>
 <div class="usa-form-group">
   <label class="usa-label" for="text-input-disabled">Disabled text input</label>
-  <input class="usa-input usa-input--disabled" id="text-input-disabled" name="text-input-disabled" type="text" disabled value="Disabled value">
+  <input class="usa-input" id="text-input-disabled" name="text-input-disabled" type="text" disabled value="Disabled value">
 </div>
 </body>
 </html>

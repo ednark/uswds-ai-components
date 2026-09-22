@@ -3,7 +3,7 @@
   "description": "USWDS (U.S. Web Design System) component registry for AI coding agents. 146 accessible, mobile-friendly government components with full adaptation metadata.",
   "repo": "https://github.com/ednark/uswds-ai-components",
   "base": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main",
-  "count": 146,
+  "count": 152,
   "facetsUrl": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/facets.json",
   "index": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/components.index.json",
   "indexSchemaVersion": 1,
@@ -31,7 +31,7 @@
   "tileFetchPattern": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/{file}",
   "designSystem": {
     "name": "U.S. Web Design System (USWDS)",
-    "version": "3.13.0"
+    "version": "3.14.0"
   },
   "facets": [
     "uswdsComponentType",
@@ -75,5 +75,6 @@
     "NIST Guidelines"
   ],
   "updated": "2.0.0",
-  "language": "en"
+  "language": "en",
+  "appearance": "Every tile has a generated resolved view: fetch {tileDir}/{file with .html replaced by .resolved.html} for a computed-style standalone rendering (geometry + colors inline, design-system CSS injected at build time). Index records expose the path as the resolvedView field. Tile markup alone is structurally self-contained; styled preview requires the resolved view or a host page that loads USWDS CSS."
 }

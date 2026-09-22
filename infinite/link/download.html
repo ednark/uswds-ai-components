@@ -9,7 +9,7 @@
   "_schemaVersion": 2,
   "discovery": {
     "uswdsComponentType": "link",
-    "uswdsClass": "usa-link--download",
+    "uswdsClass": "usa-link",
     "section": "navigation",
     "variant": "download",
     "requiresJs": "no",
@@ -57,7 +57,12 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-link"
+    "uswdClass": "usa-link",
+    "limitations": [
+      "usa-link is not a USWDS class; download links are plain usa-link with an icon.",
+      "usa-link is not a USWDS class; download links are plain usa-link with an icon.",
+      "usa-link--download is not a USWDS class; download links are plain usa-link with an icon."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -71,7 +76,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add usa-link--download class to links that trigger file downloads.",
+    "agentPrompt": "Add usa-link class to links that trigger file downloads.",
     "relatedComponents": [
       "icon",
       "file-input"
@@ -119,6 +124,6 @@
 }</script>
 </head>
 <body>
-<p><a href="document.pdf" class="usa-link usa-link--download" download>Download the PDF report (2.4 MB)</a></p>
+<p><a href="document.pdf" class="usa-link usa-link" download>Download the PDF report (2.4 MB)</a></p>
 </body>
 </html>

@@ -61,7 +61,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-list"
+    "uswdClass": "usa-list",
+    "limitations": [
+      "usa-list__item is not a USWDS class; list items are plain <li> inside .usa-list."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -160,25 +163,25 @@
 <div class="list-demo">
   <h3>Unordered List</h3>
   <ul class="usa-list">
-    <li class="usa-list__item">First item</li>
-    <li class="usa-list__item">Second item</li>
-    <li class="usa-list__item">Third item</li>
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
   </ul>
 </div>
 <div class="list-demo">
   <h3>Ordered List</h3>
   <ol class="usa-list">
-    <li class="usa-list__item">First step</li>
-    <li class="usa-list__item">Second step</li>
-    <li class="usa-list__item">Third step</li>
+    <li>First step</li>
+    <li>Second step</li>
+    <li>Third step</li>
   </ol>
 </div>
 <div class="list-demo">
   <h3>Unstyled List</h3>
   <ul class="usa-list usa-list--unstyled">
-    <li class="usa-list__item">No bullets</li>
-    <li class="usa-list__item">Clean appearance</li>
-    <li class="usa-list__item">Good for navigation</li>
+    <li>No bullets</li>
+    <li>Clean appearance</li>
+    <li>Good for navigation</li>
   </ul>
 </div>
 <div class="cap">List default</div>

@@ -58,7 +58,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-range"
+    "uswdClass": "usa-range",
+    "limitations": [
+      "usa-range--lg is not a USWDS class — range slider has no size variants."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -72,7 +75,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add usa-range--lg class to usa-range input for larger slider.",
+    "agentPrompt": "Add class to usa-range input for larger slider.",
     "relatedComponents": [
       "text-input"
     ],
@@ -117,7 +120,7 @@
 <body>
 <div class="usa-form-group">
   <label class="usa-label" for="range-slider-lg">Large range slider</label>
-  <input class="usa-range usa-range--lg" id="range-slider-lg" name="range-slider-lg" type="range" min="0" max="100" value="50">
+  <input class="usa-range" id="range-slider-lg" name="range-slider-lg" type="range" min="0" max="100" value="50">
 </div>
 </body>
 </html>

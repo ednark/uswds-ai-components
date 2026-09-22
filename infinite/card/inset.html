@@ -9,7 +9,7 @@
   "_schemaVersion": 2,
   "discovery": {
     "uswdsComponentType": "card",
-    "uswdsClass": "usa-card usa-card--inset",
+    "uswdsClass": "usa-card",
     "section": "data-display",
     "variant": "inset",
     "requiresJs": "no",
@@ -56,7 +56,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-card"
+    "uswdClass": "usa-card",
+    "limitations": [
+      "usa-card--inset is not a USWDS 3 class; the real inset is usa-card__media--inset on the card's media element."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -93,7 +96,7 @@
   },
   "constraints": {
     "preserve": [
-      "article.usa-card usa-card--inset",
+      "article.usa-card",
       "div.usa-card__header",
       "div.usa-card__body"
     ],
@@ -125,7 +128,7 @@
 }</script>
 </head>
 <body style="background: #e5e5e5; padding: 2rem;">
-<article class="usa-card usa-card--inset">
+<article class="usa-card">
   <div class="usa-card__header">
     <h2 class="usa-card__heading">Inset Card Heading</h2>
   </div>

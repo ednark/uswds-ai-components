@@ -9,7 +9,7 @@
   "_schemaVersion": 2,
   "discovery": {
     "uswdsComponentType": "summary-box",
-    "uswdsClass": "usa-summary-box--error",
+    "uswdsClass": "usa-summary-box",
     "section": "supporting",
     "variant": "error",
     "requiresJs": "no",
@@ -55,7 +55,14 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-summary-box"
+    "uswdClass": "usa-summary-box",
+    "limitations": [
+      "usa-summary-box is not a USWDS class — summary box has no variants (USWDS 3 docs).",
+      "usa-summary-box is not a USWDS class — summary box has no variants (USWDS 3 docs).",
+      "usa-summary-box is not a USWDS class — summary box has no variants (USWDS 3 docs).",
+      "usa-summary-box is not a USWDS class — summary box has no variants (USWDS 3 docs).",
+      "usa-summary-box--error is not a USWDS class — summary box has no variants (USWDS 3 docs)."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -70,7 +77,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add usa-summary-box--error class to usa-summary-box. Use for form error summaries.",
+    "agentPrompt": "Add usa-summary-box class to usa-summary-box. Use for form error summaries.",
     "relatedComponents": [
       "alert",
       "validation"
@@ -86,7 +93,7 @@
   },
   "constraints": {
     "preserve": [
-      "div.usa-summary-box usa-summary-box--error",
+      "div.usa-summary-box usa-summary-box",
       "h3.usa-summary-box__heading",
       "ul.usa-list"
     ],
@@ -119,7 +126,7 @@
 }</script>
 </head>
 <body>
-<div class="usa-summary-box usa-summary-box--error" role="region" aria-labelledby="summary-box-error-heading">
+<div class="usa-summary-box usa-summary-box" role="region" aria-labelledby="summary-box-error-heading">
   <div class="usa-summary-box__body">
     <h3 class="usa-summary-box__heading" id="summary-box-error-heading">Error Summary</h3>
     <ul class="usa-list">

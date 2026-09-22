@@ -56,7 +56,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-banner"
+    "uswdClass": "usa-banner",
+    "limitations": [
+      "usa-banner--medium is a USWDS 2.x class, removed in USWDS 3 — the banner has one variant (default) plus the <usa-banner> web component."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -69,7 +72,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add usa-banner--medium class to usa-banner for medium emblem size.",
+    "agentPrompt": "Add class to usa-banner for medium emblem size.",
     "relatedComponents": [
       "header",
       "identifier"
@@ -119,10 +122,10 @@
 }</script>
 </head>
 <body>
-<div class="usa-banner usa-banner--medium">
+<div class="usa-banner">
   <div class="usa-banner__header">
     <div class="usa-banner__inner">
-      <div class="usa-banner__text">
+      <div class="usa-banner__header-text">
         <p class="usa-banner__header-text">An official website of the United States government</p>
       </div>
     </div>

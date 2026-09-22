@@ -12,7 +12,7 @@
   "_schemaVersion": 2,
   "discovery": {
     "uswdsComponentType": "input-mask",
-    "uswdClass": "usa-input--mask",
+    "uswdClass": "usa-masked",
     "section": "forms",
     "variant": "default",
     "requiresJs": "required",
@@ -123,8 +123,8 @@
 .usa-form-group{margin-bottom:1.5rem;max-width:20rem}
 .usa-label{display:block;font-weight:400;margin-bottom:.5rem}
 .usa-hint{color:#71767a;margin:0 0 .5rem}
-.usa-input--mask{font:inherit;font-family:monospace;display:block;width:100%;padding:.5rem .6rem;border:1px solid #565c65;border-radius:0;box-sizing:border-box;color:#1b1b1b;background:#fff;letter-spacing:.1em}
-.usa-input--mask:focus{outline:3px solid #2491ff;outline-offset:0}
+.usa-masked{font:inherit;font-family:monospace;display:block;width:100%;padding:.5rem .6rem;border:1px solid #565c65;border-radius:0;box-sizing:border-box;color:#1b1b1b;background:#fff;letter-spacing:.1em}
+.usa-masked:focus{outline:3px solid #2491ff;outline-offset:0}
 </style>
 </head>
 <body>
@@ -132,7 +132,7 @@
   <div class="usa-form-group">
     <label class="usa-label" for="ssn">Social Security Number</label>
     <div class="usa-hint" id="ssn-hint">For example, 123 45 6789</div>
-    <input class="usa-input usa-input--mask" id="ssn" inputmode="numeric" name="ssn" placeholder="___ __ ____" aria-describedby="ssn-hint" data-mask="___ __ ____">
+    <input class="usa-input usa-masked" id="ssn" inputmode="numeric" name="ssn" placeholder="___ __ ____" aria-describedby="ssn-hint" data-mask="___ __ ____">
   </div>
 </div>
 <div class="cap">input-mask default</div>

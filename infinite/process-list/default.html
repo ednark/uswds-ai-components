@@ -62,7 +62,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-process-list"
+    "uswdClass": "usa-process-list",
+    "limitations": [
+      "usa-process-list__description is not a USWDS class; step descriptions are plain content inside usa-process-list__item."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -98,13 +101,13 @@
     "preserve": [
       "ol.usa-process-list wrapper",
       "li.usa-process-list__item for each step",
-      "div.usa-process-list__header for step heading",
+      "div.usa-process-list__heading for step heading",
       "h3 or h4.usa-process-list__heading for title",
-      "div.usa-process-list__description for body"
+      "plain div inside usa-process-list__item for body text"
     ],
     "editable": [
       "Step titles (usa-process-list__heading)",
-      "Step descriptions (usa-process-list__description)",
+      "Step descriptions (plain div inside usa-process-list__item)",
       "Step details (usa-process-list__details)",
       "Number of steps"
     ],
@@ -159,26 +162,26 @@
 <div class="demo-section">
   <ol class="usa-process-list">
     <li class="usa-process-list__item">
-      <div class="usa-process-list__header">
+      <div class="usa-process-list__heading">
         <h3 class="usa-process-list__heading">Step One</h3>
       </div>
-      <div class="usa-process-list__description">
+      <div>
         <p>Description of step one goes here. Explain what users need to do in this step.</p>
       </div>
     </li>
     <li class="usa-process-list__item">
-      <div class="usa-process-list__header">
+      <div class="usa-process-list__heading">
         <h3 class="usa-process-list__heading">Step Two</h3>
       </div>
-      <div class="usa-process-list__description">
+      <div>
         <p>Description of step two goes here. Continue explaining the process.</p>
       </div>
     </li>
     <li class="usa-process-list__item">
-      <div class="usa-process-list__header">
+      <div class="usa-process-list__heading">
         <h3 class="usa-process-list__heading">Step Three</h3>
       </div>
-      <div class="usa-process-list__description">
+      <div>
         <p>Final step description. Wrap up the process with this step.</p>
       </div>
     </li>

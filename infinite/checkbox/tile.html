@@ -58,7 +58,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-checkbox"
+    "uswdClass": "usa-checkbox",
+    "limitations": [
+      "usa-checkbox__group is not a USWDS class; grouped checkboxes use a plain usa-fieldset + legend."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -125,13 +128,13 @@
 <body>
 <fieldset class="usa-fieldset">
   <legend class="usa-legend">Select an option</legend>
-  <div class="usa-checkbox__group">
+  <div>
     <input class="usa-checkbox__input usa-checkbox__input--tile" id="checkbox-tile-1" type="checkbox" name="checkbox-tile" value="1">
     <label class="usa-checkbox__label" for="checkbox-tile-1">
       Tile option one
     </label>
   </div>
-  <div class="usa-checkbox__group">
+  <div>
     <input class="usa-checkbox__input usa-checkbox__input--tile" id="checkbox-tile-2" type="checkbox" name="checkbox-tile" value="2">
     <label class="usa-checkbox__label" for="checkbox-tile-2">
       Tile option two

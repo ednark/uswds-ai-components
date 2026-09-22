@@ -57,7 +57,11 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-radio"
+    "uswdClass": "usa-radio",
+    "limitations": [
+      "usa-success-message is not a USWDS class; success feedback uses usa-input--success plus hint text.",
+      "usa-radio__group and usa-radio__input--success are not USWDS classes; success feedback is expressed with hint text and role=\"status\" announcements."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -70,7 +74,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add usa-radio__input--success class for success state styling.",
+    "agentPrompt": "Add class for success state styling.",
     "relatedComponents": [
       "checkbox",
       "validation"
@@ -124,12 +128,12 @@
 <div class="usa-form-group">
   <fieldset class="usa-fieldset">
     <legend class="usa-legend">Select an option</legend>
-    <span class="usa-success-message" id="radio-success-message" role="status">Selection confirmed</span>
-    <div class="usa-radio__group">
-      <input class="usa-radio__input usa-radio__input--success" id="radio-success-1" type="radio" name="radio-success" value="1" checked>
+    <span id="radio-success-message" role="status">Selection confirmed</span>
+    <div>
+      <input class="usa-radio__input" id="radio-success-1" type="radio" name="radio-success" value="1" checked>
       <label class="usa-radio__label" for="radio-success-1">Option one (selected)</label>
     </div>
-    <div class="usa-radio__group">
+    <div>
       <input class="usa-radio__input" id="radio-success-2" type="radio" name="radio-success" value="2">
       <label class="usa-radio__label" for="radio-success-2">Option two</label>
     </div>

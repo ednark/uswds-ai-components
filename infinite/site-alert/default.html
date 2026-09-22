@@ -62,7 +62,12 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-site-alert"
+    "uswdClass": "usa-site-alert",
+    "limitations": [
+      "usa-site-alert__text is not a USWDS class; site alert content is an .usa-alert element inside the wrapper.",
+      "usa-site-alert__body/__heading/__text are not USWDS classes; site alert content is an .usa-alert element inside the wrapper.",
+      "usa-site-alert__body/__heading/__text are not USWDS classes; site alert content is an .usa-alert element with .usa-alert__heading inside the wrapper."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -102,7 +107,7 @@
       "div.usa-site-alert wrapper",
       "div.usa-site-alert__body",
       "div.usa-site-alert__heading for title",
-      "div.usa-site-alert__text for body",
+      "div. for body",
       "role='alert' for critical alerts"
     ],
     "editable": [
@@ -157,9 +162,9 @@
 </head>
 <body>
 <div class="usa-site-alert">
-  <div class="usa-site-alert__body">
-    <h3 class="usa-site-alert__heading">Informational alert</h3>
-    <p class="usa-site-alert__text">This is an informational alert that displays sitewide information.</p>
+  <div>
+    <h3 class="usa-alert__heading">Informational alert</h3>
+    <p class="">This is an informational alert that displays sitewide information.</p>
   </div>
 </div>
 <div class="cap">Site Alert default</div>

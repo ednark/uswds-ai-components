@@ -62,7 +62,12 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-link"
+    "uswdClass": "usa-link",
+    "limitations": [
+      "usa-link is not a USWDS class; download links are plain usa-link (icon optional via usa-icon).",
+      "usa-link is not a USWDS class; download links are plain usa-link (icon optional via usa-icon).",
+      "usa-link--download is not a USWDS class; download links are plain usa-link (icon optional via usa-icon)."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -78,7 +83,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add usa-link--external for links to other domains. Add usa-link--download for downloadable files. Update href for destination. Use sentence case for link text.",
+    "agentPrompt": "Add usa-link--external for links to other domains. Add usa-link for downloadable files. Update href for destination. Use sentence case for link text.",
     "relatedComponents": [
       "button",
       "icon"
@@ -100,7 +105,7 @@
     "preserve": [
       "a.usa-link class on anchor elements",
       "usa-link--external for off-site links",
-      "usa-link--download for downloadable content",
+      "usa-link for downloadable content",
       "aria-label when icon accompanies text",
       "Title attribute for context on hover"
     ],
@@ -108,7 +113,7 @@
       "Link text content",
       "href destination URL",
       "External indicator: usa-link--external",
-      "Download indicator: usa-link--download",
+      "Download indicator: usa-link",
       "Target attribute for new windows"
     ],
     "limitations": [
@@ -169,7 +174,7 @@
   <a href="#">Regular link</a>
   <a class="usa-link" href="#">usa-link default</a>
   <a class="usa-link usa-link--external" href="#">External link</a>
-  <a class="usa-link usa-link--download" href="#">Download PDF</a>
+  <a class="usa-link usa-link" href="#">Download PDF</a>
 </div>
 <div class="cap">Link default</div>
 </body>

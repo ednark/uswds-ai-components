@@ -79,7 +79,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Update agency name if needed. The banner content is standardized for federal use. Add usa-banner--slim or usa-banner--medium for size variants. Ensure the official .gov domain is shown. Render the .gov and lock guidance icons as inline SVG (the sprite is a site asset — do not reference it).",
+    "agentPrompt": "Update agency name if needed. The banner content is standardized for federal use. USWDS 3 has no usa-banner--slim/--medium (2.x legacy); the banner has one variant plus the <usa-banner> web component for size variants. Ensure the official .gov domain is shown. Render the .gov and lock guidance icons as inline SVG (the sprite is a site asset — do not reference it).",
     "relatedComponents": [
       "site-alert",
       "header",
@@ -158,14 +158,14 @@
   <div class="usa-banner__content">
     <div class="usa-banner__guidance">
       <img class="usa-banner__icon" src="/assets/img/icon-dot-gov.svg" alt="Dot gov">
-      <p class="usa-banner__text">
+      <p class="usa-banner__header-text">
         <strong>Official websites use .gov</strong><br>
         A <strong>.gov</strong> website belongs to an official government organization in the United States.
       </p>
     </div>
     <div class="usa-banner__guidance">
       <img class="usa-banner__icon" src="/assets/img/icon-https.svg" alt="Https">
-      <p class="usa-banner__text">
+      <p class="usa-banner__header-text">
         <strong>Secure .gov websites use HTTPS</strong><br>
         A <strong>lock</strong> or <strong>https://</strong> means you've safely connected to the .gov website.
       </p>

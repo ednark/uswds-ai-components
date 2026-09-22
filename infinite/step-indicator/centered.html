@@ -9,7 +9,7 @@
   "_schemaVersion": 2,
   "discovery": {
     "uswdsComponentType": "step-indicator",
-    "uswdsClass": "usa-step-indicator--centered",
+    "uswdsClass": "usa-step-indicator--center",
     "section": "navigation",
     "variant": "centered",
     "requiresJs": "required",
@@ -69,7 +69,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add usa-step-indicator--centered class to usa-step-indicator.",
+    "agentPrompt": "Add usa-step-indicator--center class to usa-step-indicator.",
     "relatedComponents": [
       "process-list",
       "button-group"
@@ -90,7 +90,7 @@
     "preserve": [
       "ol.usa-step-indicator",
       "li.usa-step-indicator__segment",
-      "span.usa-step-indicator__label"
+      "span.usa-step-indicator__segment-label"
     ],
     "editable": [
       "Step labels",
@@ -122,18 +122,18 @@
 }</script>
 </head>
 <body>
-<ol class="usa-step-indicator usa-step-indicator--centered" aria-label="Progress">
+<ol class="usa-step-indicator usa-step-indicator--center" aria-label="Progress">
   <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
-    <span class="usa-step-indicator__label">Step 1 <span class="usa-sr-only">completed</span></span>
+    <span class="usa-step-indicator__segment-label">Step 1 <span class="usa-sr-only">completed</span></span>
   </li>
   <li class="usa-step-indicator__segment usa-step-indicator__segment--complete">
-    <span class="usa-step-indicator__label">Step 2 <span class="usa-sr-only">completed</span></span>
+    <span class="usa-step-indicator__segment-label">Step 2 <span class="usa-sr-only">completed</span></span>
   </li>
   <li class="usa-step-indicator__segment usa-step-indicator__segment--current">
-    <span class="usa-step-indicator__label">Step 3 <span class="usa-sr-only">current</span></span>
+    <span class="usa-step-indicator__segment-label">Step 3 <span class="usa-sr-only">current</span></span>
   </li>
   <li class="usa-step-indicator__segment">
-    <span class="usa-step-indicator__label">Step 4</span>
+    <span class="usa-step-indicator__segment-label">Step 4</span>
   </li>
 </ol>
 </body>

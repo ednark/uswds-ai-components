@@ -57,7 +57,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-radio"
+    "uswdClass": "usa-radio",
+    "limitations": [
+      "usa-radio__group is not a USWDS class; grouped radios use a plain usa-fieldset + legend."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -125,11 +128,11 @@
   <fieldset class="usa-fieldset">
     <legend class="usa-legend">Select an option</legend>
     <span class="usa-error-message" id="radio-error-message" role="alert">Error: Please select an option</span>
-    <div class="usa-radio__group">
+    <div>
       <input class="usa-radio__input" id="radio-error-1" type="radio" name="radio-error" value="1">
       <label class="usa-radio__label" for="radio-error-1">Option one</label>
     </div>
-    <div class="usa-radio__group">
+    <div>
       <input class="usa-radio__input" id="radio-error-2" type="radio" name="radio-error" value="2">
       <label class="usa-radio__label" for="radio-error-2">Option two</label>
     </div>

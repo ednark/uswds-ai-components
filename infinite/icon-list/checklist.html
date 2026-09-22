@@ -55,7 +55,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-icon-list"
+    "uswdClass": "usa-icon-list",
+    "limitations": [
+      "usa-icon-list--checklist is not a USWDS class; check icons come from the icon hrefs, not a variant class."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -70,7 +73,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add usa-icon-list--checklist class to usa-icon-list. Uses check icons.",
+    "agentPrompt": "Add class to usa-icon-list. Uses check icons.",
     "relatedComponents": [
       "list",
       "process-list"
@@ -113,7 +116,7 @@
 }</script>
 </head>
 <body>
-<ul class="usa-icon-list usa-icon-list--checklist">
+<ul class="usa-icon-list">
   <li class="usa-icon-list__item">
     <div class="usa-icon-list__icon"><svg class="usa-icon" aria-hidden="true" role="img"><use xlink:href="#check"></use></svg></div>
     <div class="usa-icon-list__content">Completed item one</div>

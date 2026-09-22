@@ -57,7 +57,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-checkbox"
+    "uswdClass": "usa-checkbox",
+    "limitations": [
+      "usa-checkbox__group is not a USWDS class; grouped checkboxes use a plain usa-fieldset + legend."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -125,7 +128,7 @@
   <fieldset class="usa-fieldset">
     <legend class="usa-legend">Select options</legend>
     <span class="usa-error-message" id="checkbox-error-message" role="alert">Error: Please select at least one option</span>
-    <div class="usa-checkbox__group">
+    <div>
       <input class="usa-checkbox__input" id="checkbox-error-1" type="checkbox" name="checkbox-error" value="1">
       <label class="usa-checkbox__label" for="checkbox-error-1">Option one</label>
     </div>

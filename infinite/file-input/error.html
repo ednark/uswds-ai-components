@@ -60,7 +60,11 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-file-input"
+    "uswdClass": "usa-file-input",
+    "limitations": [
+      "usa-file-input--error is not a USWDS class; file-input errors use the usa-form-group--error wrapper pattern.",
+      "usa-file-input__label/__message are not USWDS classes; use plain usa-label and usa-hint."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -74,7 +78,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add usa-file-input--error class to usa-file-input when validation fails.",
+    "agentPrompt": "Add class to usa-file-input when validation fails.",
     "relatedComponents": [
       "text-input",
       "validation",
@@ -91,7 +95,7 @@
     "preserve": [
       "div.usa-file-input",
       "input.usa-file-input__input",
-      "label.usa-file-input__label"
+      "label"
     ],
     "editable": [
       "File input label",
@@ -123,12 +127,12 @@
 <body>
 <div class="usa-form-group">
   <label class="usa-label" for="file-input-error">Upload a file</label>
-  <div class="usa-file-input usa-file-input--error">
+  <div class="usa-file-input">
     <input type="file" id="file-input-error" class="usa-file-input__input" aria-describedby="file-input-error-message">
-    <label for="file-input-error" class="usa-file-input__label">
+    <label for="file-input-error">
       <span class="usa-file-input__choose">Choose file</span>
     </label>
-    <div id="file-input-error-message" class="usa-file-input__message" role="alert">Error: Invalid file type</div>
+    <div id="file-input-error-message" class="usa-error-message" role="alert">Error: Invalid file type</div>
   </div>
 </div>
 </body>

@@ -58,7 +58,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-character-count"
+    "uswdClass": "usa-character-count",
+    "limitations": [
+      "usa-character-count__wrapper is not a USWDS class; the wrapper is a plain usa-form-group."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -72,7 +75,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add usa-character-count--error class to usa-character-count__wrapper when limit exceeded.",
+    "agentPrompt": "Add usa-character-count--error class to when limit exceeded.",
     "relatedComponents": [
       "text-input",
       "validation"
@@ -125,7 +128,7 @@
 }</script>
 </head>
 <body>
-<div class="usa-form-group usa-character-count__wrapper">
+<div class="usa-form-group">
   <label class="usa-label" for="with-hint-input">Text field with limit</label>
   <span id="with-hint-input-hint" class="usa-hint">Max 50 characters</span>
   <input id="with-hint-input" class="usa-input" name="with-hint-input" maxlength="50" aria-describedby="with-hint-input-hint with-hint-input-info">

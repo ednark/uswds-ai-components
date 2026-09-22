@@ -59,7 +59,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-input"
+    "uswdClass": "usa-input",
+    "limitations": [
+      "usa-input--tile is not a USWDS class; tile variants exist for checkbox/radio, not text inputs."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -73,7 +76,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add usa-input--tile class to usa-input for tile-style inputs.",
+    "agentPrompt": "Add class to usa-input for tile-style inputs.",
     "relatedComponents": [
       "checkbox",
       "radio-button",
@@ -91,7 +94,7 @@
   },
   "constraints": {
     "preserve": [
-      "input.usa-input usa-input--tile"
+      "input.usa-input"
     ],
     "editable": [
       "Input label",
@@ -134,7 +137,7 @@
 <body>
 <div class="usa-form-group">
   <label class="usa-label" for="text-input-tile">Tile Input</label>
-  <input class="usa-input usa-input--tile" type="text" id="text-input-tile" name="text-input-tile">
+  <input class="usa-input" type="text" id="text-input-tile" name="text-input-tile">
 </div>
 </body>
 </html>

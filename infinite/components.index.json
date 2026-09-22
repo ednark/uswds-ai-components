@@ -57,6 +57,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-accordion",
+      "limitations": [
+        "usa-accordion__item is not a USWDS class; accordion sections are plain <li> containing h2.usa-accordion__heading + div.usa-accordion__content."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -72,7 +75,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "accordion/bordered.resolved.html"
     },
     {
       "file": "accordion/default.html",
@@ -130,7 +134,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "accordion/default.resolved.html"
     },
     {
       "file": "accordion/multiselectable.html",
@@ -187,7 +192,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "accordion/multiselectable.resolved.html"
     },
     {
       "file": "accordion/until-found.html",
@@ -228,6 +234,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-accordion",
+      "limitations": [
+        "usa-accordion__item is not a USWDS class; accordion sections are plain <li> with h2.usa-accordion__heading + div.usa-accordion__content (hidden=\"until-found\" for this variant)."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -245,7 +254,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "accordion/until-found.resolved.html"
     },
     {
       "file": "alert/error.html",
@@ -308,7 +318,8 @@
       "compositionRecipes": [
         "error-handling-stack",
         "login-flow"
-      ]
+      ],
+      "resolvedView": "alert/error.resolved.html"
     },
     {
       "file": "alert/info.html",
@@ -374,7 +385,8 @@
       "compositionRecipes": [
         "error-handling-stack",
         "login-flow"
-      ]
+      ],
+      "resolvedView": "alert/info.resolved.html"
     },
     {
       "file": "alert/slim.html",
@@ -436,7 +448,8 @@
       "compositionRecipes": [
         "error-handling-stack",
         "login-flow"
-      ]
+      ],
+      "resolvedView": "alert/slim.resolved.html"
     },
     {
       "file": "alert/success.html",
@@ -498,7 +511,8 @@
       "compositionRecipes": [
         "error-handling-stack",
         "login-flow"
-      ]
+      ],
+      "resolvedView": "alert/success.resolved.html"
     },
     {
       "file": "alert/warning.html",
@@ -560,7 +574,8 @@
       "compositionRecipes": [
         "error-handling-stack",
         "login-flow"
-      ]
+      ],
+      "resolvedView": "alert/warning.resolved.html"
     },
     {
       "file": "banner/default.html",
@@ -625,7 +640,8 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "banner/default.resolved.html"
     },
     {
       "file": "banner/medium.html",
@@ -665,6 +681,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-banner",
+      "limitations": [
+        "usa-banner--medium is a USWDS 2.x class, removed in USWDS 3 — the banner has one variant (default) plus the <usa-banner> web component."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -684,7 +703,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "banner/medium.resolved.html"
     },
     {
       "file": "banner/slim.html",
@@ -724,6 +744,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-banner",
+      "limitations": [
+        "usa-banner--slim is a USWDS 2.x class, removed in USWDS 3 — the banner has one variant (default) plus the <usa-banner> web component."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -743,7 +766,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "banner/slim.resolved.html"
     },
     {
       "file": "banner/until-found.html",
@@ -806,7 +830,8 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "banner/until-found.resolved.html"
     },
     {
       "file": "breadcrumb/default.html",
@@ -867,7 +892,8 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "breadcrumb/default.resolved.html"
     },
     {
       "file": "breadcrumb/naviprev-next.html",
@@ -906,6 +932,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-breadcrumb",
+      "limitations": [
+        "usa-breadcrumb--naviprev-next is not a USWDS class; prev/next flows use the pagination component."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -926,7 +955,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "breadcrumb/naviprev-next.resolved.html"
     },
     {
       "file": "breadcrumb/wrap.html",
@@ -984,7 +1014,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "breadcrumb/wrap.resolved.html"
     },
     {
       "file": "button/accent-cool.html",
@@ -1053,7 +1084,8 @@
       "compositionRecipes": [
         "contact-form",
         "login-flow"
-      ]
+      ],
+      "resolvedView": "button/accent-cool.resolved.html"
     },
     {
       "file": "button/accent-warm.html",
@@ -1122,7 +1154,8 @@
       "compositionRecipes": [
         "contact-form",
         "login-flow"
-      ]
+      ],
+      "resolvedView": "button/accent-warm.resolved.html"
     },
     {
       "file": "button/base.html",
@@ -1191,7 +1224,8 @@
       "compositionRecipes": [
         "contact-form",
         "login-flow"
-      ]
+      ],
+      "resolvedView": "button/base.resolved.html"
     },
     {
       "file": "button/big.html",
@@ -1261,7 +1295,8 @@
       "compositionRecipes": [
         "contact-form",
         "login-flow"
-      ]
+      ],
+      "resolvedView": "button/big.resolved.html"
     },
     {
       "file": "button/default.html",
@@ -1332,7 +1367,8 @@
       "compositionRecipes": [
         "contact-form",
         "login-flow"
-      ]
+      ],
+      "resolvedView": "button/default.resolved.html"
     },
     {
       "file": "button/outline-inverse.html",
@@ -1402,7 +1438,8 @@
       "compositionRecipes": [
         "contact-form",
         "login-flow"
-      ]
+      ],
+      "resolvedView": "button/outline-inverse.resolved.html"
     },
     {
       "file": "button/outline.html",
@@ -1471,7 +1508,8 @@
       "compositionRecipes": [
         "contact-form",
         "login-flow"
-      ]
+      ],
+      "resolvedView": "button/outline.resolved.html"
     },
     {
       "file": "button/secondary.html",
@@ -1540,7 +1578,8 @@
       "compositionRecipes": [
         "contact-form",
         "login-flow"
-      ]
+      ],
+      "resolvedView": "button/secondary.resolved.html"
     },
     {
       "file": "button/unstyled.html",
@@ -1610,7 +1649,8 @@
       "compositionRecipes": [
         "contact-form",
         "login-flow"
-      ]
+      ],
+      "resolvedView": "button/unstyled.resolved.html"
     },
     {
       "file": "button-group/default.html",
@@ -1670,7 +1710,8 @@
       "incompatibleWith": [
         "button"
       ],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "button-group/default.resolved.html"
     },
     {
       "file": "button-group/segmented.html",
@@ -1726,7 +1767,8 @@
       "incompatibleWith": [
         "button"
       ],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "button-group/segmented.resolved.html"
     },
     {
       "file": "card/clickable.html",
@@ -1788,7 +1830,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "card/clickable.resolved.html"
     },
     {
       "file": "card/default.html",
@@ -1848,7 +1891,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "card/default.resolved.html"
     },
     {
       "file": "card/flag.html",
@@ -1906,7 +1950,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "card/flag.resolved.html"
     },
     {
       "file": "card/group.html",
@@ -1966,14 +2011,15 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "card/group.resolved.html"
     },
     {
       "file": "card/header-flag.html",
       "title": "Card (Header Flag)",
       "_schemaVersion": 2,
       "uswdsComponentType": "card",
-      "uswdsClass": "usa-card usa-card--header-flag",
+      "uswdsClass": "usa-card usa-card--header-first",
       "section": "data-display",
       "variant": "header-flag",
       "requiresJs": "no",
@@ -2024,14 +2070,15 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "card/header-flag.resolved.html"
     },
     {
       "file": "card/inset.html",
       "title": "Card (Inset)",
       "_schemaVersion": 2,
       "uswdsComponentType": "card",
-      "uswdsClass": "usa-card usa-card--inset",
+      "uswdsClass": "usa-card",
       "section": "data-display",
       "variant": "inset",
       "requiresJs": "no",
@@ -2064,6 +2111,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-card",
+      "limitations": [
+        "usa-card--inset is not a USWDS 3 class; the real inset is usa-card__media--inset on the card's media element."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -2082,14 +2132,15 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "card/inset.resolved.html"
     },
     {
       "file": "card/media.html",
       "title": "Card (Media)",
       "_schemaVersion": 2,
       "uswdsComponentType": "card",
-      "uswdsClass": "usa-card usa-card--media",
+      "uswdsClass": "usa-card",
       "section": "data-display",
       "variant": "media",
       "requiresJs": "no",
@@ -2122,6 +2173,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-card",
+      "limitations": [
+        "usa-card--media is not a USWDS 3 class; the image area is the usa-card__media element (used in this markup)."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -2140,7 +2194,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "card/media.resolved.html"
     },
     {
       "file": "character-count/default.html",
@@ -2206,7 +2261,8 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "contact-form"
-      ]
+      ],
+      "resolvedView": "character-count/default.resolved.html"
     },
     {
       "file": "character-count/error.html",
@@ -2246,6 +2302,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-character-count",
+      "limitations": [
+        "usa-character-count__wrapper is not a USWDS class; the wrapper is a plain usa-form-group."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
@@ -2268,7 +2327,8 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "contact-form"
-      ]
+      ],
+      "resolvedView": "character-count/error.resolved.html"
     },
     {
       "file": "checkbox/default.html",
@@ -2331,7 +2391,8 @@
         "form"
       ],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "checkbox/default.resolved.html"
     },
     {
       "file": "checkbox/disabled.html",
@@ -2369,6 +2430,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-checkbox",
+      "limitations": [
+        "usa-checkbox__group is not a USWDS class; grouped checkboxes use a plain usa-fieldset + legend."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
@@ -2390,7 +2454,8 @@
         "form"
       ],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "checkbox/disabled.resolved.html"
     },
     {
       "file": "checkbox/error.html",
@@ -2429,6 +2494,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-checkbox",
+      "limitations": [
+        "usa-checkbox__group is not a USWDS class; grouped checkboxes use a plain usa-fieldset + legend."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
@@ -2451,7 +2519,8 @@
         "form"
       ],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "checkbox/error.resolved.html"
     },
     {
       "file": "checkbox/success.html",
@@ -2490,6 +2559,10 @@
         "highContrast"
       ],
       "uswdClass": "usa-checkbox",
+      "limitations": [
+        "usa-success-message is not a USWDS class; success feedback uses usa-input--success plus hint text.",
+        "usa-checkbox__group and usa-checkbox__input--success are not USWDS classes; success feedback is expressed with usa-input--success on inputs, hint text, and role=\"status\" announcements."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
@@ -2512,7 +2585,8 @@
         "form"
       ],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "checkbox/success.resolved.html"
     },
     {
       "file": "checkbox/tile.html",
@@ -2552,6 +2626,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-checkbox",
+      "limitations": [
+        "usa-checkbox__group is not a USWDS class; grouped checkboxes use a plain usa-fieldset + legend."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
@@ -2574,7 +2651,8 @@
         "form"
       ],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "checkbox/tile.resolved.html"
     },
     {
       "file": "collection/default.html",
@@ -2632,7 +2710,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "collection/default.resolved.html"
     },
     {
       "file": "collection/list.html",
@@ -2671,6 +2750,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-collection",
+      "limitations": [
+        "usa-collection--list is not a USWDS class; collection list format is the default markup."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -2686,7 +2768,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "collection/list.resolved.html"
     },
     {
       "file": "combo-box/default.html",
@@ -2749,7 +2832,8 @@
         "form"
       ],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "combo-box/default.resolved.html"
     },
     {
       "file": "combo-box/lg.html",
@@ -2790,6 +2874,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-combo-box",
+      "limitations": [
+        "usa-combo-box--lg is not a USWDS class — combo box has no size variants; larger sizing is a page-level customization."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
@@ -2809,7 +2896,8 @@
         "form"
       ],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "combo-box/lg.resolved.html"
     },
     {
       "file": "data-visualizations/bar.html",
@@ -2867,7 +2955,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "expensive"
+      "costTier": "expensive",
+      "resolvedView": "data-visualizations/bar.resolved.html"
     },
     {
       "file": "data-visualizations/default.html",
@@ -2930,7 +3019,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "expensive"
+      "costTier": "expensive",
+      "resolvedView": "data-visualizations/default.resolved.html"
     },
     {
       "file": "data-visualizations/line.html",
@@ -2988,7 +3078,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "expensive"
+      "costTier": "expensive",
+      "resolvedView": "data-visualizations/line.resolved.html"
     },
     {
       "file": "data-visualizations/pie.html",
@@ -3046,7 +3137,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "expensive"
+      "costTier": "expensive",
+      "resolvedView": "data-visualizations/pie.resolved.html"
     },
     {
       "file": "date-picker/default.html",
@@ -3109,7 +3201,8 @@
         "form"
       ],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "date-picker/default.resolved.html"
     },
     {
       "file": "date-picker/lg.html",
@@ -3150,6 +3243,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-date-picker",
+      "limitations": [
+        "usa-date-picker--lg is not a USWDS class — date picker has no size variants."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
@@ -3169,7 +3265,8 @@
         "form"
       ],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "date-picker/lg.resolved.html"
     },
     {
       "file": "date-range-picker/default.html",
@@ -3221,7 +3318,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "date-range-picker/default.resolved.html"
     },
     {
       "file": "file-input/default.html",
@@ -3266,6 +3364,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-file-input",
+      "limitations": [
+        "usa-file-input__label is not a USWDS class; the label is a plain usa-label."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
@@ -3287,7 +3388,8 @@
         "form"
       ],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "file-input/default.resolved.html"
     },
     {
       "file": "file-input/error.html",
@@ -3328,6 +3430,10 @@
         "highContrast"
       ],
       "uswdClass": "usa-file-input",
+      "limitations": [
+        "usa-file-input--error is not a USWDS class; file-input errors use the usa-form-group--error wrapper pattern.",
+        "usa-file-input__label/__message are not USWDS classes; use plain usa-label and usa-hint."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
@@ -3349,7 +3455,8 @@
         "form"
       ],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "file-input/error.resolved.html"
     },
     {
       "file": "footer/big.html",
@@ -3389,6 +3496,11 @@
         "highContrast"
       ],
       "uswdClass": "usa-footer",
+      "limitations": [
+        "Footer column layout uses core grid classes (grid-row/grid-col) plus usa-footer__primary-link; demo-footer-grid/__col/__heading were invented and are now demo-* classes.",
+        "Footer column layout uses core grid classes (grid-row/grid-col) plus usa-footer__primary-link; demo-footer-grid/__col/__heading were invented and are now demo-* classes.",
+        "Footer column layout uses core grid classes (grid-row/grid-col) plus usa-footer__primary-link; usa-footer__grid/__col/__heading were invented and are now demo-* classes."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -3409,7 +3521,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "footer/big.resolved.html"
     },
     {
       "file": "footer/collapsible.html",
@@ -3471,7 +3584,8 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "footer/collapsible.resolved.html"
     },
     {
       "file": "footer/default.html",
@@ -3533,7 +3647,8 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "footer/default.resolved.html"
     },
     {
       "file": "footer/email-signup.html",
@@ -3575,6 +3690,11 @@
         "highContrast"
       ],
       "uswdClass": "usa-footer",
+      "limitations": [
+        "demo-footer-email is not a USWDS class; the email signup uses usa-footer__signup and core grid classes.",
+        "demo-footer-email is not a USWDS class; the email signup uses usa-footer__signup and core grid classes.",
+        "usa-footer__email-container is not a USWDS class; the email signup uses usa-footer__signup and core grid classes."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -3597,7 +3717,8 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "footer/email-signup.resolved.html"
     },
     {
       "file": "footer/slim.html",
@@ -3657,7 +3778,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "footer/slim.resolved.html"
     },
     {
       "file": "form/default.html",
@@ -3725,7 +3847,8 @@
       "compositionRecipes": [
         "contact-form",
         "login-flow"
-      ]
+      ],
+      "resolvedView": "form/default.resolved.html"
     },
     {
       "file": "form/feedback.html",
@@ -3790,7 +3913,8 @@
       "compositionRecipes": [
         "contact-form",
         "login-flow"
-      ]
+      ],
+      "resolvedView": "form/feedback.resolved.html"
     },
     {
       "file": "header/basic-megamenu.html",
@@ -3833,6 +3957,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-header",
+      "limitations": [
+        "usa-nav__submenu-items is not a USWDS class; megamenu columns use core grid classes inside usa-nav__submenu."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -3857,7 +3984,8 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "header/basic-megamenu.resolved.html"
     },
     {
       "file": "header/basic.html",
@@ -3921,7 +4049,8 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "header/basic.resolved.html"
     },
     {
       "file": "header/default.html",
@@ -3989,7 +4118,8 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "header/default.resolved.html"
     },
     {
       "file": "header/extended.html",
@@ -4053,7 +4183,8 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "header/extended.resolved.html"
     },
     {
       "file": "header/megamenu.html",
@@ -4117,7 +4248,8 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "header/megamenu.resolved.html"
     },
     {
       "file": "header/nav-search.html",
@@ -4184,7 +4316,8 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "header/nav-search.resolved.html"
     },
     {
       "file": "icon/default.html",
@@ -4240,7 +4373,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "icon/default.resolved.html"
     },
     {
       "file": "icon-list/checklist.html",
@@ -4279,6 +4413,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-icon-list",
+      "limitations": [
+        "usa-icon-list--checklist is not a USWDS class; check icons come from the icon hrefs, not a variant class."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -4295,7 +4432,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "icon-list/checklist.resolved.html"
     },
     {
       "file": "icon-list/default.html",
@@ -4355,7 +4493,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "icon-list/default.resolved.html"
     },
     {
       "file": "icon-list/icon-lg.html",
@@ -4394,6 +4533,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-icon-list",
+      "limitations": [
+        "usa-icon-list--icon-lg is not a USWDS class; icon sizing is not a USWDS 3 icon-list variant."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -4410,7 +4552,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "icon-list/icon-lg.resolved.html"
     },
     {
       "file": "identifier/default.html",
@@ -4471,7 +4614,8 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "identifier/default.resolved.html"
     },
     {
       "file": "identifier/with-logo.html",
@@ -4511,6 +4655,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-identifier",
+      "limitations": [
+        "usa-identifier__heading is not a USWDS class; the identifier section is titled via aria-label, not a heading element."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -4529,7 +4676,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "identifier/with-logo.resolved.html"
     },
     {
       "file": "in-page-navigation/default.html",
@@ -4574,6 +4722,11 @@
         "highContrast"
       ],
       "uswdClass": "usa-in-page-navigation",
+      "limitations": [
+        " is not a USWDS class; links inside usa-in-page-nav__item carry no class.",
+        " is not a USWDS class; links inside usa-in-page-nav__item carry no class.",
+        "usa-in-page-nav__link is not a USWDS class; links inside usa-in-page-nav__item carry no class."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -4592,14 +4745,15 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "in-page-navigation/default.resolved.html"
     },
     {
       "file": "input-mask/default.html",
       "title": "Input mask (Default)",
       "_schemaVersion": 2,
       "uswdsComponentType": "input-mask",
-      "uswdClass": "usa-input--mask",
+      "uswdClass": "usa-masked",
       "section": "forms",
       "variant": "default",
       "requiresJs": "required",
@@ -4642,7 +4796,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "input-mask/default.resolved.html"
     },
     {
       "file": "input-prefix-suffix/prefix.html",
@@ -4692,7 +4847,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "input-prefix-suffix/prefix.resolved.html"
     },
     {
       "file": "input-prefix-suffix/suffix.html",
@@ -4742,7 +4898,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "input-prefix-suffix/suffix.resolved.html"
     },
     {
       "file": "language-selector/default.html",
@@ -4787,6 +4944,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-language",
+      "limitations": [
+        "usa-language__list is not a USWDS class; language selector lists use usa-language__primary/__submenu families."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -4803,7 +4963,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "language-selector/default.resolved.html"
     },
     {
       "file": "language-selector/expanded.html",
@@ -4858,7 +5019,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "language-selector/expanded.resolved.html"
     },
     {
       "file": "layout-docs/default.html",
@@ -4914,7 +5076,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "layout-docs/default.resolved.html"
     },
     {
       "file": "link/default.html",
@@ -4957,6 +5120,11 @@
         "highContrast"
       ],
       "uswdClass": "usa-link",
+      "limitations": [
+        "usa-link is not a USWDS class; download links are plain usa-link (icon optional via usa-icon).",
+        "usa-link is not a USWDS class; download links are plain usa-link (icon optional via usa-icon).",
+        "usa-link--download is not a USWDS class; download links are plain usa-link (icon optional via usa-icon)."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -4976,14 +5144,15 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "login-flow"
-      ]
+      ],
+      "resolvedView": "link/default.resolved.html"
     },
     {
       "file": "link/download.html",
       "title": "Link (Download)",
       "_schemaVersion": 2,
       "uswdsComponentType": "link",
-      "uswdsClass": "usa-link--download",
+      "uswdsClass": "usa-link",
       "section": "navigation",
       "variant": "download",
       "requiresJs": "no",
@@ -5017,6 +5186,11 @@
         "highContrast"
       ],
       "uswdClass": "usa-link",
+      "limitations": [
+        "usa-link is not a USWDS class; download links are plain usa-link with an icon.",
+        "usa-link is not a USWDS class; download links are plain usa-link with an icon.",
+        "usa-link--download is not a USWDS class; download links are plain usa-link with an icon."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -5036,7 +5210,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "login-flow"
-      ]
+      ],
+      "resolvedView": "link/download.resolved.html"
     },
     {
       "file": "link/external.html",
@@ -5095,7 +5270,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "login-flow"
-      ]
+      ],
+      "resolvedView": "link/external.resolved.html"
     },
     {
       "file": "list/default.html",
@@ -5137,6 +5313,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-list",
+      "limitations": [
+        "usa-list__item is not a USWDS class; list items are plain <li> inside .usa-list."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -5153,7 +5332,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "list/default.resolved.html"
     },
     {
       "file": "list/unstyled.html",
@@ -5208,7 +5388,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "list/unstyled.resolved.html"
     },
     {
       "file": "logo/image-text.html",
@@ -5249,6 +5430,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-logo",
+      "limitations": [
+        "usa-logo-img is not a USWDS class; the logo image sits inside usa-logo without a dedicated class."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -5264,7 +5448,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "logo/image-text.resolved.html"
     },
     {
       "file": "media-block/default.html",
@@ -5318,7 +5503,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "media-block/default.resolved.html"
     },
     {
       "file": "memorable-date/default.html",
@@ -5369,7 +5555,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "memorable-date/default.resolved.html"
     },
     {
       "file": "modal/default.html",
@@ -5413,6 +5600,11 @@
         "highContrast"
       ],
       "uswdClass": "usa-modal",
+      "limitations": [
+        "demo-modal-header/__body are not USWDS classes; the real structure is usa-modal__content > usa-modal__main containing heading, close, and body.",
+        "demo-modal-header/__body are not USWDS classes; the real structure is usa-modal__content > usa-modal__main containing heading, close, and body.",
+        "usa-modal__header/__body are not USWDS classes; the real structure is usa-modal__content > usa-modal__main containing heading, close, and body."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -5432,7 +5624,8 @@
         "header",
         "form"
       ],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "modal/default.resolved.html"
     },
     {
       "file": "modal/lg.html",
@@ -5491,7 +5684,8 @@
         "header",
         "form"
       ],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "modal/lg.resolved.html"
     },
     {
       "file": "navbar/default.html",
@@ -5548,7 +5742,8 @@
         "header"
       ],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "navbar/default.resolved.html"
     },
     {
       "file": "overlay/default.html",
@@ -5605,7 +5800,8 @@
       "incompatibleWith": [
         "modal"
       ],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "overlay/default.resolved.html"
     },
     {
       "file": "pagination/default.html",
@@ -5667,7 +5863,8 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "data-table-with-sorting"
-      ]
+      ],
+      "resolvedView": "pagination/default.resolved.html"
     },
     {
       "file": "pagination/show-all.html",
@@ -5706,6 +5903,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-pagination",
+      "limitations": [
+        "usa-pagination--show-all is not a USWDS class; show-all pagination is the default markup."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -5724,7 +5924,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "data-table-with-sorting"
-      ]
+      ],
+      "resolvedView": "pagination/show-all.resolved.html"
     },
     {
       "file": "process-list/default.html",
@@ -5767,6 +5968,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-process-list",
+      "limitations": [
+        "usa-process-list__description is not a USWDS class; step descriptions are plain content inside usa-process-list__item."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -5782,7 +5986,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "process-list/default.resolved.html"
     },
     {
       "file": "process-list/steps.html",
@@ -5821,6 +6026,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-process-list",
+      "limitations": [
+        "usa-process-list--steps is not a USWDS class; the numbered process list is the default markup."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -5836,7 +6044,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "process-list/steps.resolved.html"
     },
     {
       "file": "prose/default.html",
@@ -5892,7 +6101,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "prose/default.resolved.html"
     },
     {
       "file": "prose.html",
@@ -5946,7 +6156,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "prose.resolved.html"
     },
     {
       "file": "radio-buttons/default.html",
@@ -6011,7 +6222,8 @@
         "form"
       ],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "radio-buttons/default.resolved.html"
     },
     {
       "file": "radio-buttons/disabled.html",
@@ -6049,6 +6261,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-radio",
+      "limitations": [
+        "usa-radio__group is not a USWDS class; grouped radios use a plain usa-fieldset + legend."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
@@ -6070,7 +6285,8 @@
         "form"
       ],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "radio-buttons/disabled.resolved.html"
     },
     {
       "file": "radio-buttons/error.html",
@@ -6109,6 +6325,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-radio",
+      "limitations": [
+        "usa-radio__group is not a USWDS class; grouped radios use a plain usa-fieldset + legend."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
@@ -6131,7 +6350,8 @@
         "form"
       ],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "radio-buttons/error.resolved.html"
     },
     {
       "file": "radio-buttons/success.html",
@@ -6170,6 +6390,10 @@
         "highContrast"
       ],
       "uswdClass": "usa-radio",
+      "limitations": [
+        "usa-success-message is not a USWDS class; success feedback uses usa-input--success plus hint text.",
+        "usa-radio__group and usa-radio__input--success are not USWDS classes; success feedback is expressed with hint text and role=\"status\" announcements."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
@@ -6192,7 +6416,8 @@
         "form"
       ],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "radio-buttons/success.resolved.html"
     },
     {
       "file": "radio-buttons/tile.html",
@@ -6232,6 +6457,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-radio",
+      "limitations": [
+        "usa-radio__group is not a USWDS class; grouped radios use a plain usa-fieldset + legend."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
@@ -6254,7 +6482,8 @@
         "form"
       ],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "radio-buttons/tile.resolved.html"
     },
     {
       "file": "range-slider/default.html",
@@ -6317,7 +6546,8 @@
         "form"
       ],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "range-slider/default.resolved.html"
     },
     {
       "file": "range-slider/lg.html",
@@ -6357,6 +6587,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-range",
+      "limitations": [
+        "usa-range--lg is not a USWDS class — range slider has no size variants."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
@@ -6375,7 +6608,8 @@
         "form"
       ],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "range-slider/lg.resolved.html"
     },
     {
       "file": "search/big.html",
@@ -6436,7 +6670,8 @@
         "form"
       ],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "search/big.resolved.html"
     },
     {
       "file": "search/default.html",
@@ -6501,7 +6736,8 @@
         "form"
       ],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "search/default.resolved.html"
     },
     {
       "file": "search/small.html",
@@ -6562,7 +6798,8 @@
         "form"
       ],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "search/small.resolved.html"
     },
     {
       "file": "select/default.html",
@@ -6629,14 +6866,15 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "contact-form"
-      ]
+      ],
+      "resolvedView": "select/default.resolved.html"
     },
     {
       "file": "select/disabled.html",
       "title": "Select (Disabled)",
       "_schemaVersion": 2,
       "uswdsComponentType": "select",
-      "uswdsClass": "usa-select--disabled",
+      "uswdsClass": "usa-select",
       "section": "forms",
       "variant": "disabled",
       "requiresJs": "no",
@@ -6667,6 +6905,13 @@
         "highContrast"
       ],
       "uswdClass": "usa-select",
+      "limitations": [
+        "usa-select is not a USWDS class; disabled selects use the disabled attribute.",
+        "usa-select is not a USWDS class; disabled selects use the disabled attribute.",
+        "usa-select is not a USWDS class; disabled selects use the disabled attribute.",
+        "usa-select is not a USWDS class; disabled selects use the disabled attribute.",
+        "usa-select--disabled is not a USWDS class; disabled selects use the disabled attribute."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
@@ -6691,7 +6936,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "contact-form"
-      ]
+      ],
+      "resolvedView": "select/disabled.resolved.html"
     },
     {
       "file": "select/error.html",
@@ -6755,14 +7001,15 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "contact-form"
-      ]
+      ],
+      "resolvedView": "select/error.resolved.html"
     },
     {
       "file": "select/success.html",
       "title": "Select (Success)",
       "_schemaVersion": 2,
       "uswdsComponentType": "select",
-      "uswdsClass": "usa-select--success",
+      "uswdsClass": "usa-input--success",
       "section": "forms",
       "variant": "success",
       "requiresJs": "no",
@@ -6794,6 +7041,13 @@
         "highContrast"
       ],
       "uswdClass": "usa-select",
+      "limitations": [
+        "usa-input--success is not a USWDS class; the success state class is usa-input--success. usa-success-message does not exist; success feedback uses usa-input--success plus hint text.",
+        "usa-input--success is not a USWDS class; the success state class is usa-input--success. usa-success-message does not exist; success feedback uses usa-input--success plus hint text.",
+        "usa-input--success is not a USWDS class; the success state class is usa-input--success. usa-success-message does not exist; success feedback uses usa-input--success plus hint text.",
+        "usa-input--success is not a USWDS class; the success state class is usa-input--success. usa-success-message does not exist; success feedback uses usa-input--success plus hint text.",
+        "usa-select--success is not a USWDS class; the success state class is usa-input--success. usa-success-message does not exist; success feedback uses usa-input--success plus hint text."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
@@ -6819,7 +7073,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "contact-form"
-      ]
+      ],
+      "resolvedView": "select/success.resolved.html"
     },
     {
       "file": "select/tile.html",
@@ -6859,6 +7114,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-select",
+      "limitations": [
+        "usa-select--tile is not a USWDS class; tile variants exist for checkbox/radio, not select."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
@@ -6885,7 +7143,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "contact-form"
-      ]
+      ],
+      "resolvedView": "select/tile.resolved.html"
     },
     {
       "file": "side-navigation/current.html",
@@ -6947,7 +7206,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "side-navigation/current.resolved.html"
     },
     {
       "file": "side-navigation/default.html",
@@ -7010,7 +7270,8 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "side-navigation/default.resolved.html"
     },
     {
       "file": "side-navigation/sidenav.html",
@@ -7071,7 +7332,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "side-navigation/sidenav.resolved.html"
     },
     {
       "file": "side-navigation/sub-list.html",
@@ -7131,7 +7393,8 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "side-navigation/sub-list.resolved.html"
     },
     {
       "file": "site-alert/default.html",
@@ -7174,6 +7437,11 @@
         "highContrast"
       ],
       "uswdClass": "usa-site-alert",
+      "limitations": [
+        "usa-site-alert__text is not a USWDS class; site alert content is an .usa-alert element inside the wrapper.",
+        "usa-site-alert__body/__heading/__text are not USWDS classes; site alert content is an .usa-alert element inside the wrapper.",
+        "usa-site-alert__body/__heading/__text are not USWDS classes; site alert content is an .usa-alert element with .usa-alert__heading inside the wrapper."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -7191,7 +7459,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "site-alert/default.resolved.html"
     },
     {
       "file": "site-alert/emergency.html",
@@ -7246,7 +7515,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "site-alert/emergency.resolved.html"
     },
     {
       "file": "site-alert/no-icon.html",
@@ -7300,7 +7570,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "site-alert/no-icon.resolved.html"
     },
     {
       "file": "skip-nav/default.html",
@@ -7359,14 +7630,15 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "navigation-hierarchy"
-      ]
+      ],
+      "resolvedView": "skip-nav/default.resolved.html"
     },
     {
       "file": "step-indicator/centered.html",
       "title": "Step Indicator (Centered)",
       "_schemaVersion": 2,
       "uswdsComponentType": "step-indicator",
-      "uswdsClass": "usa-step-indicator--centered",
+      "uswdsClass": "usa-step-indicator--center",
       "section": "navigation",
       "variant": "centered",
       "requiresJs": "required",
@@ -7414,7 +7686,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "step-indicator/centered.resolved.html"
     },
     {
       "file": "step-indicator/default.html",
@@ -7476,7 +7749,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "step-indicator/default.resolved.html"
     },
     {
       "file": "step-indicator/no-labels.html",
@@ -7531,7 +7805,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "step-indicator/no-labels.resolved.html"
     },
     {
       "file": "summary-box/default.html",
@@ -7596,14 +7871,15 @@
       "compositionRecipes": [
         "data-table-with-sorting",
         "error-handling-stack"
-      ]
+      ],
+      "resolvedView": "summary-box/default.resolved.html"
     },
     {
       "file": "summary-box/error.html",
       "title": "Summary Box (Error)",
       "_schemaVersion": 2,
       "uswdsComponentType": "summary-box",
-      "uswdsClass": "usa-summary-box--error",
+      "uswdsClass": "usa-summary-box",
       "section": "supporting",
       "variant": "error",
       "requiresJs": "no",
@@ -7635,6 +7911,13 @@
         "highContrast"
       ],
       "uswdClass": "usa-summary-box",
+      "limitations": [
+        "usa-summary-box is not a USWDS class — summary box has no variants (USWDS 3 docs).",
+        "usa-summary-box is not a USWDS class — summary box has no variants (USWDS 3 docs).",
+        "usa-summary-box is not a USWDS class — summary box has no variants (USWDS 3 docs).",
+        "usa-summary-box is not a USWDS class — summary box has no variants (USWDS 3 docs).",
+        "usa-summary-box--error is not a USWDS class — summary box has no variants (USWDS 3 docs)."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -7656,14 +7939,15 @@
       "compositionRecipes": [
         "data-table-with-sorting",
         "error-handling-stack"
-      ]
+      ],
+      "resolvedView": "summary-box/error.resolved.html"
     },
     {
       "file": "summary-box/info.html",
       "title": "Summary Box (Info)",
       "_schemaVersion": 2,
       "uswdsComponentType": "summary-box",
-      "uswdsClass": "usa-summary-box--info",
+      "uswdsClass": "usa-summary-box",
       "section": "supporting",
       "variant": "info",
       "requiresJs": "no",
@@ -7694,6 +7978,13 @@
         "highContrast"
       ],
       "uswdClass": "usa-summary-box",
+      "limitations": [
+        "usa-summary-box is not a USWDS class — summary box has no variants (USWDS 3 docs).",
+        "usa-summary-box is not a USWDS class — summary box has no variants (USWDS 3 docs).",
+        "usa-summary-box is not a USWDS class — summary box has no variants (USWDS 3 docs).",
+        "usa-summary-box is not a USWDS class — summary box has no variants (USWDS 3 docs).",
+        "usa-summary-box--info is not a USWDS class — summary box has no variants (USWDS 3 docs)."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -7715,14 +8006,15 @@
       "compositionRecipes": [
         "data-table-with-sorting",
         "error-handling-stack"
-      ]
+      ],
+      "resolvedView": "summary-box/info.resolved.html"
     },
     {
       "file": "summary-box/warning.html",
       "title": "Summary Box (Warning)",
       "_schemaVersion": 2,
       "uswdsComponentType": "summary-box",
-      "uswdsClass": "usa-summary-box--warning",
+      "uswdsClass": "usa-summary-box",
       "section": "supporting",
       "variant": "warning",
       "requiresJs": "no",
@@ -7753,6 +8045,13 @@
         "highContrast"
       ],
       "uswdClass": "usa-summary-box",
+      "limitations": [
+        "usa-summary-box is not a USWDS class — summary box has no variants (USWDS 3 docs).",
+        "usa-summary-box is not a USWDS class — summary box has no variants (USWDS 3 docs).",
+        "usa-summary-box is not a USWDS class — summary box has no variants (USWDS 3 docs).",
+        "usa-summary-box is not a USWDS class — summary box has no variants (USWDS 3 docs).",
+        "usa-summary-box--warning is not a USWDS class — summary box has no variants (USWDS 3 docs)."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -7774,7 +8073,8 @@
       "compositionRecipes": [
         "data-table-with-sorting",
         "error-handling-stack"
-      ]
+      ],
+      "resolvedView": "summary-box/warning.resolved.html"
     },
     {
       "file": "table/borderless.html",
@@ -7834,7 +8134,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "data-table-with-sorting"
-      ]
+      ],
+      "resolvedView": "table/borderless.resolved.html"
     },
     {
       "file": "table/default.html",
@@ -7898,7 +8199,8 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "data-table-with-sorting"
-      ]
+      ],
+      "resolvedView": "table/default.resolved.html"
     },
     {
       "file": "table/scrollable.html",
@@ -7959,7 +8261,8 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "data-table-with-sorting"
-      ]
+      ],
+      "resolvedView": "table/scrollable.resolved.html"
     },
     {
       "file": "table/stacked.html",
@@ -8019,7 +8322,8 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "data-table-with-sorting"
-      ]
+      ],
+      "resolvedView": "table/stacked.resolved.html"
     },
     {
       "file": "table/striped.html",
@@ -8079,7 +8383,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "data-table-with-sorting"
-      ]
+      ],
+      "resolvedView": "table/striped.resolved.html"
     },
     {
       "file": "tag/big.html",
@@ -8134,7 +8439,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "tag/big.resolved.html"
     },
     {
       "file": "tag/default.html",
@@ -8194,7 +8500,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "tag/default.resolved.html"
     },
     {
       "file": "text-input/default.html",
@@ -8265,7 +8572,8 @@
         "contact-form",
         "error-handling-stack",
         "login-flow"
-      ]
+      ],
+      "resolvedView": "text-input/default.resolved.html"
     },
     {
       "file": "text-input/disabled.html",
@@ -8303,6 +8611,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-input",
+      "limitations": [
+        "usa-input--disabled is not a USWDS 3 class; disabled inputs use the disabled attribute."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
@@ -8329,7 +8640,8 @@
         "contact-form",
         "error-handling-stack",
         "login-flow"
-      ]
+      ],
+      "resolvedView": "text-input/disabled.resolved.html"
     },
     {
       "file": "text-input/error.html",
@@ -8396,7 +8708,8 @@
         "contact-form",
         "error-handling-stack",
         "login-flow"
-      ]
+      ],
+      "resolvedView": "text-input/error.resolved.html"
     },
     {
       "file": "text-input/success.html",
@@ -8436,6 +8749,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-input",
+      "limitations": [
+        "usa-success-message is not a USWDS class; success feedback uses usa-input--success plus hint text."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
@@ -8463,7 +8779,8 @@
         "contact-form",
         "error-handling-stack",
         "login-flow"
-      ]
+      ],
+      "resolvedView": "text-input/success.resolved.html"
     },
     {
       "file": "text-input/tile.html",
@@ -8504,6 +8821,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-input",
+      "limitations": [
+        "usa-input--tile is not a USWDS class; tile variants exist for checkbox/radio, not text inputs."
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "accepts_input",
       "auditTrailCompatible": true,
@@ -8532,7 +8852,8 @@
         "contact-form",
         "error-handling-stack",
         "login-flow"
-      ]
+      ],
+      "resolvedView": "text-input/tile.resolved.html"
     },
     {
       "file": "time-picker/default.html",
@@ -8582,7 +8903,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "time-picker/default.resolved.html"
     },
     {
       "file": "tooltip/bottom.html",
@@ -8641,7 +8963,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "tooltip/bottom.resolved.html"
     },
     {
       "file": "tooltip/default.html",
@@ -8703,7 +9026,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "tooltip/default.resolved.html"
     },
     {
       "file": "tooltip/left.html",
@@ -8762,7 +9086,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "tooltip/left.resolved.html"
     },
     {
       "file": "tooltip/right.html",
@@ -8821,7 +9146,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "tooltip/right.resolved.html"
     },
     {
       "file": "tooltip/top.html",
@@ -8880,7 +9206,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "tooltip/top.resolved.html"
     },
     {
       "file": "typography/default.html",
@@ -8939,7 +9266,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "moderate"
+      "costTier": "moderate",
+      "resolvedView": "typography/default.resolved.html"
     },
     {
       "file": "typography/link.html",
@@ -8996,7 +9324,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "typography/link.resolved.html"
     },
     {
       "file": "typography/list.html",
@@ -9053,7 +9382,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "typography/list.resolved.html"
     },
     {
       "file": "typography/typeset.html",
@@ -9109,7 +9439,8 @@
       ],
       "prerequisites": [],
       "incompatibleWith": [],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "typography/typeset.resolved.html"
     },
     {
       "file": "validation/alert.html",
@@ -9170,7 +9501,8 @@
       "compositionRecipes": [
         "contact-form",
         "error-handling-stack"
-      ]
+      ],
+      "resolvedView": "validation/alert.resolved.html"
     },
     {
       "file": "validation/default.html",
@@ -9236,7 +9568,8 @@
       "compositionRecipes": [
         "contact-form",
         "error-handling-stack"
-      ]
+      ],
+      "resolvedView": "validation/default.resolved.html"
     }
   ]
 }

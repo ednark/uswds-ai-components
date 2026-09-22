@@ -58,7 +58,10 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-radio"
+    "uswdClass": "usa-radio",
+    "limitations": [
+      "usa-radio__group is not a USWDS class; grouped radios use a plain usa-fieldset + legend."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -125,13 +128,13 @@
 <body>
 <fieldset class="usa-fieldset">
   <legend class="usa-legend">Select an option</legend>
-  <div class="usa-radio__group">
+  <div>
     <input class="usa-radio__input usa-radio__input--tile" id="radio-tile-1" type="radio" name="radio-tile" value="1">
     <label class="usa-radio__label" for="radio-tile-1">
       Tile option one
     </label>
   </div>
-  <div class="usa-radio__group">
+  <div>
     <input class="usa-radio__input usa-radio__input--tile" id="radio-tile-2" type="radio" name="radio-tile" value="2">
     <label class="usa-radio__label" for="radio-tile-2">
       Tile option two

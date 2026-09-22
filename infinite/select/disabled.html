@@ -9,7 +9,7 @@
   "_schemaVersion": 2,
   "discovery": {
     "uswdsComponentType": "select",
-    "uswdsClass": "usa-select--disabled",
+    "uswdsClass": "usa-select",
     "section": "forms",
     "variant": "disabled",
     "requiresJs": "no",
@@ -56,7 +56,14 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-select"
+    "uswdClass": "usa-select",
+    "limitations": [
+      "usa-select is not a USWDS class; disabled selects use the disabled attribute.",
+      "usa-select is not a USWDS class; disabled selects use the disabled attribute.",
+      "usa-select is not a USWDS class; disabled selects use the disabled attribute.",
+      "usa-select is not a USWDS class; disabled selects use the disabled attribute.",
+      "usa-select--disabled is not a USWDS class; disabled selects use the disabled attribute."
+    ]
   },
   "selection": {
     "useWhen": [
@@ -69,7 +76,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add disabled attribute and usa-select--disabled class.",
+    "agentPrompt": "Add disabled attribute and usa-select class.",
     "relatedComponents": [
       "select"
     ],
@@ -125,7 +132,7 @@
 <body>
 <div class="usa-form-group">
   <label class="usa-label" for="select-disabled">Disabled select</label>
-  <select class="usa-select usa-select--disabled" id="select-disabled" name="select-disabled" disabled>
+  <select class="usa-select usa-select" id="select-disabled" name="select-disabled" disabled>
     <option value="1">Option one (pre-selected)</option>
     <option value="2">Option two</option>
   </select>
