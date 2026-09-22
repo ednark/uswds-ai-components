@@ -68,6 +68,24 @@
       "Success messages",
       "Informational notices",
       "Slim layouts"
+    ],
+    "guidance": [
+      {
+        "guidance": true,
+        "description": "State the absolute date alongside any relative time for time-sensitive warnings (e.g. 'expires June 30' as well as 'in 12 days') so users can act without computing."
+      },
+      {
+        "guidance": true,
+        "description": "Keep the alert paired with role='alert' (or role='status') when it announces a state the user must notice now."
+      },
+      {
+        "guidance": false,
+        "description": "Don't show only relative time for a deadline — relative-only countdowns hide the calendar date users need."
+      },
+      {
+        "guidance": false,
+        "description": "Don't separate the action that resolves the warning from the alert body when the alert asks the user to act."
+      }
     ]
   },
   "instruction": {
@@ -127,8 +145,50 @@
       "error-handling-stack",
       "login-flow"
     ]
+  },
+  "customization": {
+    "ladder": [
+      {
+        "rung": 1,
+        "layer": "variant-class",
+        "free": true,
+        "options": [
+          "usa-alert--info",
+          "usa-alert--success",
+          "usa-alert--warning",
+          "usa-alert--error",
+          "usa-alert--slim"
+        ],
+        "note": "swap within the alert family; fetch the target variant tile first — never guess the class"
+      },
+      {
+        "rung": 3,
+        "layer": "inline-style",
+        "free": true,
+        "note": "page-level emphasis (shadow, spacing, prominence) is page-level styling — inline styles only, never invented usa-* classes"
+      },
+      {
+        "rung": 4,
+        "layer": "core-class",
+        "free": true,
+        "source": "core-classes.json",
+        "note": "layout/typography placement via the untiled core layer"
+      },
+      {
+        "rung": 5,
+        "layer": "fork",
+        "free": false,
+        "rule": "diverging from the alert class vocabulary requires a documented divergence in provenance"
+      }
+    ],
+    "verificationAfter": [
+      "constraints.preserve intact",
+      "coverage zero-invented",
+      "role/status semantics unchanged"
+    ]
   }
 }</script>
+<script type="application/json" id="uswds-agent-meta-dense">{"use": ["time-critical failures needing user correction"], "avoid": ["success confirmations", "informational notices"], "do": ["state absolute date alongside relative time", "keep role=alert/status for immediate attention"], "dont": ["relative-only deadlines", "move the resolving action outside the alert body"], "preserve": ["usa-alert wrapper", "usa-alert--error class", "usa-alert__body", "usa-alert__text", "role='alert'"], "adapt": "Use usa-alert--error with role=alert; for deadlines state the absolute date, not just 'in N days'"}</script>
 </head>
 <body>
 <div class="usa-alert usa-alert--error" role="alert">

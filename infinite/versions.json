@@ -77,9 +77,13 @@
       "releaseDate": "2026-09-06",
       "componentCount": 152,
       "breakingChanges": [],
-      "addedCategories": ["provenance"],
+      "addedCategories": [
+        "provenance"
+      ],
       "addedFacets": [],
-      "metadataChanges": ["provenance block on coverage-audit tiles (observed/source/method)"],
+      "metadataChanges": [
+        "provenance block on coverage-audit tiles (observed/source/method)"
+      ],
       "migrationPath": "Fully additive.",
       "notes": "Field-research pass: 5 missing official components added as 6 tiles (date-range-picker, time-picker, memorable-date, input-mask, input-prefix-suffix); provenance.json research log added; llms.txt over-claim corrected"
     },
@@ -90,9 +94,34 @@
       "breakingChanges": [],
       "addedCategories": [],
       "addedFacets": [],
-      "metadataChanges": ["discovery.uswdClass added to all 152 tiles (primary CSS class per component) — enables class-level coverage checking and search by class"],
+      "metadataChanges": [
+        "discovery.uswdClass added to all 152 tiles (primary CSS class per component) — enables class-level coverage checking and search by class"
+      ],
       "migrationPath": "Fully additive.",
       "notes": "Round-trip quality check (USAGov home rebuilt with USWDS) exposed the missing uswdClass metadata and the search-family tiles invisible to class checking (metadata only); see round-trip-tests/uswds-usagov/findings.md"
+    },
+    {
+      "version": "0.3.0",
+      "releaseDate": "2026-09-17",
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "selection.guidance (new, optional): binary do/don't adaptation pairs — first patch on alert/warning, alert/error, button/default from T5 t5-001 evidence (lessons-learned L11/L12)",
+        "dense metadata block ({agentMetaId}-dense, new, optional): token-budgeted compression per spec tile-format.md"
+      ],
+      "migrationPath": "Fully additive — no tile changes required for consumers. Agents reading schema v2 selection.guidance should enforce false-entries as prohibitions. Dense blocks are optional; full meta remains authoritative.",
+      "notes": "T5 t5-001 evidence: relative-only countdown and opaque commitment actions persisted high-severity across turns; guidance added to close those gaps"
+    },
+    {
+      "version": "0.4.0",
+      "releaseDate": "2026-09-17",
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "customization (new, optional): declared Override Ladder — per-component sanctioned override layers with verification obligations (spec tile-format.md, proposal); first patch on alert/warning, alert/error, button/default"
+      ],
+      "migrationPath": "Fully additive — absent customization, agents use the implicit ordering (variants → tokens → inline → core → documented fork).",
+      "notes": "Extends the 0.3.0 guidance patch: makes the override surface enumerable so agents get agent-specific advice about where to customize"
     }
   ],
   "designSystemVersions": [

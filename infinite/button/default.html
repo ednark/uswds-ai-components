@@ -75,6 +75,24 @@
       "Linking between pages — use regular links instead",
       "Less important or less popular actions",
       "Actions that happen on the current page — use outline buttons"
+    ],
+    "guidance": [
+      {
+        "guidance": true,
+        "description": "For commitment actions (upgrade, purchase, subscribe, cancel), state in adjacent copy — before the user reaches the button — the plan, the price with billing cadence (recurring or one-time, introductory or standard), what clicking does next (checkout, modal, immediate effect), and how to back out."
+      },
+      {
+        "guidance": true,
+        "description": "Write sentence-case labels that name the action ('Upgrade plan', 'Delete file') — never vague labels like 'OK'."
+      },
+      {
+        "guidance": false,
+        "description": "Don't render a commitment or destructive button without visible pre-click context: what it costs, what it does, and how to back out."
+      },
+      {
+        "guidance": false,
+        "description": "Don't rely on the button label alone to carry commitment context."
+      }
     ]
   },
   "instruction": {
@@ -197,8 +215,54 @@
       "contact-form",
       "login-flow"
     ]
+  },
+  "customization": {
+    "ladder": [
+      {
+        "rung": 1,
+        "layer": "variant-class",
+        "free": true,
+        "options": [
+          "usa-button",
+          "usa-button--secondary",
+          "usa-button--accent-cool",
+          "usa-button--accent-warm",
+          "usa-button--base",
+          "usa-button--outline",
+          "usa-button--outline-inverse",
+          "usa-button--big",
+          "usa-button--unstyled"
+        ],
+        "note": "color variants are mutually exclusive; size/state classes combine — see coordination.variantRules"
+      },
+      {
+        "rung": 3,
+        "layer": "inline-style",
+        "free": true,
+        "note": "page-level emphasis is inline styling only — never invented usa-* classes"
+      },
+      {
+        "rung": 4,
+        "layer": "core-class",
+        "free": true,
+        "source": "core-classes.json"
+      },
+      {
+        "rung": 5,
+        "layer": "fork",
+        "free": false,
+        "rule": "diverging from the button class vocabulary requires a documented divergence in provenance"
+      }
+    ],
+    "verificationAfter": [
+      "constraints.preserve intact",
+      "coverage zero-invented",
+      "accessible name unchanged",
+      "type attribute preserved"
+    ]
   }
 }</script>
+<script type="application/json" id="uswds-agent-meta-dense">{"use": ["important primary actions", "form submissions"], "avoid": ["navigation (use a link)", "secondary actions"], "do": ["sentence-case action labels", "commitment/destructive buttons need visible pre-click context (cost, effect, undo path)"], "dont": ["vague labels like OK", "commitment context in the label alone"], "preserve": ["usa-button base class", "type attribute", "semantic button/a root element"], "adapt": "One primary per view; commitment actions need plan/price/outcome context nearby"}</script>
 <style>
   body {
     font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
