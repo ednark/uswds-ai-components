@@ -1,7 +1,7 @@
 # USWDS AI Components
 
-[![146 components](https://img.shields.io/badge/components-146-blue?style=flat)](https://designsystem.digital.gov/components/)
-[![USWDS 3.13](https://img.shields.io/badge/USWDS-3.13.0-blue?style=flat)](https://designsystem.digital.gov/)
+[![152 components](https://img.shields.io/badge/components-152-blue?style=flat)](https://designsystem.digital.gov/components/)
+[![USWDS 3.14](https://img.shields.io/badge/USWDS-3.14.0-blue?style=flat)](https://designsystem.digital.gov/)
 [![WCAG 2.1 AA](https://img.shields.io/badge/WCAG-2.1%20AA-green?style=flat)](#accessibility)
 [![Gov Compliance](https://img.shields.io/badge/gov-Section%20508%20%7C%2021st%20Century%20IDEA-blueviolet?style=flat)](#compliance)
 
@@ -21,7 +21,7 @@ Think of it as a **component database with search indexes** — not a UI library
 
 This registry extends the [AI Component Registry Spec](https://github.com/ednark/ai-component-registry-spec) as a git submodule at `_base/`. The base layer provides:
 
-- **Protocol spec** (`_base/protocol.md`) — the retrieval protocol (3-surface architecture, flow, adaptation rules)
+- **Protocol spec** (`_base/protocol.md`) — the retrieval protocol (5-surface architecture, flow, adaptation rules)
 - **Generic generator** (`_base/generate-index.mjs`) — config-driven index generator
 - **Templates** (`_base/agents.template.json`, `_base/llms.template.txt`) — fill-in templates
 - **Tile format spec** (`_base/tile-format.md`) — HTML + embedded metadata block spec
@@ -44,6 +44,14 @@ node tools/generate-uswds.mjs   # delegates to _base/generate-index.mjs
 
 ---
 
+## Quick start
+
+**Agents:** [agents.json](agents.json) → [components.index.json](infinite/components.index.json) (filter in code) → fetch `infinite/{file}` → read the embedded `uswds-agent-meta` block. Machine docs: [AGENTS.md](AGENTS.md) · [llms.txt](llms.txt). MCP: `npm run mcp` (9 tools).
+
+**Humans:** browse `infinite/<component>/<variant>.html` (markup is unstyled without USWDS CSS — use the [resolved views](#resolved-views-appearance) for standalone styled preview). Validate: `node _base/validate-registry.mjs`.
+
+---
+
 ## When to Use This Registry
 
 Use this registry whenever you are building or improving a government website UI and need to:
@@ -61,6 +69,17 @@ Use this registry whenever you are building or improving a government website UI
 **Do not generate custom UI** if a suitable component exists in the registry. Custom UI lacks the government-compliance metadata that this registry provides.
 
 ---
+
+
+## Resolved views (appearance)
+
+USWDS tiles are structurally self-contained (markup, class names, metadata) — their *appearance* comes from USWDS CSS, which lives in the host site. Two ways to see a styled component without a full USWDS build:
+
+1. **Resolved views** — every tile has a generated `{variant}.resolved.html` sibling with computed geometry, colors, and typography flattened inline (USWDS CSS from `@uswds/uswds@3.14.0` injected at build time). Index records expose the path as the `resolvedView` field. Regenerate: `node _base/generate-resolved-view.mjs`.
+2. Any host page that loads USWDS CSS — the normal agent-integration flow.
+
+Tile classes are validated against the USWDS stylesheet at build time (`staticView.classCheck`): a class not defined by USWDS fails conformance unless explicitly allowlisted with a reason. Resolved views carry SHA-256 staleness stamps and are validated by importing into third-party design tools — the OpenPencil field test imported all sampled views with full semantic fidelity.
+
 
 ## How AI Agents Should Use This
 
