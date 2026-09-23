@@ -71,7 +71,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Use ul.usa-card-group as container. Each li contains a usa-card. Grid layout applied automatically.",
+    "agentPrompt": "Use ul.usa-card-group as container. Each li.usa-card holds a div.usa-card__container with header and body. Grid layout applied automatically; column classes go on the li.",
     "relatedComponents": [
       "collection",
       "table"
@@ -96,8 +96,9 @@
   "constraints": {
     "preserve": [
       "ul.usa-card-group",
-      "li.usa-card__container",
-      "article.usa-card"
+      "li.usa-card > div.usa-card__container",
+      "div.usa-card__header with h2.usa-card__heading",
+      "div.usa-card__body"
     ],
     "editable": [
       "Individual card content within the group"
@@ -125,25 +126,25 @@
 </head>
 <body>
 <ul class="usa-card-group">
-  <li class="usa-card__container">
-    <article class="usa-card">
+  <li class="usa-card tablet:grid-col-6 desktop:grid-col-3">
+    <div class="usa-card__container">
       <div class="usa-card__header">
         <h2 class="usa-card__heading">Card One</h2>
       </div>
       <div class="usa-card__body">
         <p>First card in the group.</p>
       </div>
-    </article>
+    </div>
   </li>
-  <li class="usa-card__container">
-    <article class="usa-card">
+  <li class="usa-card tablet:grid-col-6 desktop:grid-col-3">
+    <div class="usa-card__container">
       <div class="usa-card__header">
         <h2 class="usa-card__heading">Card Two</h2>
       </div>
       <div class="usa-card__body">
         <p>Second card in the group.</p>
       </div>
-    </article>
+    </div>
   </li>
 </ul>
 </body>

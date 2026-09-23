@@ -2,7 +2,7 @@
 
 ## What This Is
 
-A structured component knowledge base for AI coding agents building government websites with the U.S. Web Design System (USWDS 3.13.0). 146 component tiles with categorized adaptation metadata (schema v2).
+A structured component knowledge base for AI coding agents building government websites with the U.S. Web Design System (USWDS 3.14.0). 152 component tiles with categorized adaptation metadata (schema v2).
 
 ## How to Query This Registry
 
@@ -107,6 +107,11 @@ When constraints conflict, follow this order (highest to lowest):
 - Preserve all elements in `constraints.preserve` (ARIA, classes, structure)
 - Check `govCompliance` for Section 508 / WCAG 2.1 AA
 - Never remove `constraints.preserve` elements to satisfy `instruction.agentPrompt`
+
+## Reference examples (not registry contract)
+
+- `examples/angular-usagov-demo/` — Angular rebuild of the USA.gov homepage composed from this registry's tiles and recipes, carrying two verification tools: `check-uswds-classes.mjs` (rejects class names not in the pinned USWDS release) and `a11y-check.mjs` (axe-core WCAG 2.1 AA + Section 508 scans plus keyboard/focus behavior checks).
+- Examples are demos and test harnesses, not supported surfaces. The registry contract is `agents.json`, `infinite/`, `adapters/`, `compatibility.json`, and the MCP server. Expect this example to migrate to a companion Angular registry (the Drupal pattern below).
 
 ## Drupal Integration
 

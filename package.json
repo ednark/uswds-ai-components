@@ -14,7 +14,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@uswds/uswds": "^3.14.0",
+    "@uswds/uswds": "3.14.0",
     "puppeteer": "^25.11.0"
   }
 }

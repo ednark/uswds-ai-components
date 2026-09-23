@@ -95,9 +95,11 @@
   },
   "constraints": {
     "preserve": [
-      "header.usa-header usa-header--extended",
-      "div.usa-logo",
-      "nav.usa-nav"
+      "header.usa-header.usa-header--extended",
+      "div.usa-navbar with div.usa-logo and button.usa-menu-btn",
+      "nav.usa-nav > div.usa-nav__inner",
+      "button.usa-nav__close",
+      "ul.usa-nav__primary.usa-accordion with li.usa-nav__primary-item > a.usa-nav__link"
     ],
     "editable": [
       "Agency logo and name",
@@ -105,7 +107,9 @@
       "Search if needed"
     ],
     "limitations": [
-      "Nav always visible (doesn't collapse to hamburger on desktop)"
+      "Nav always visible (doesn't collapse to hamburger on desktop)",
+      "Mobile menu open/close (is-visible class), focus management and the usa-js-mobile-nav--active body class come from USWDS usa-header.js",
+      "The extended header has no usa-nav-container wrapper (that wrapper belongs to the basic variant)"
     ]
   },
   "file": "header/extended.html",
@@ -137,26 +141,34 @@
 </head>
 <body>
 <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+<div class="usa-overlay"></div>
 <header class="usa-header usa-header--extended" id="header">
-  <div class="usa-nav-container">
+  <div class="usa-navbar">
     <div class="usa-logo">
-      <em class="usa-logo__text">Agency Name</em>
+      <em class="usa-logo__text">
+        <a href="/" title="Home">Agency Name</a>
+      </em>
     </div>
-    <button class="usa-menu-btn">Menu</button>
-    <nav class="usa-nav" aria-label="Main navigation">
-      <ul class="usa-list--unstyled usa-nav__primary">
+    <button type="button" class="usa-menu-btn">Menu</button>
+  </div>
+  <nav class="usa-nav" aria-label="Main navigation">
+    <div class="usa-nav__inner">
+      <button type="button" class="usa-nav__close">
+        <img src="/assets/img/usa-icons/close.svg" role="img" alt="Close">
+      </button>
+      <ul class="usa-nav__primary usa-accordion">
         <li class="usa-nav__primary-item">
-          <a class="usa-nav__link" href="#">Section One</a>
+          <a class="usa-nav__link" href="#"><span>Section One</span></a>
         </li>
         <li class="usa-nav__primary-item">
-          <a class="usa-nav__link" href="#">Section Two</a>
+          <a class="usa-nav__link" href="#"><span>Section Two</span></a>
         </li>
         <li class="usa-nav__primary-item">
-          <a class="usa-nav__link" href="#">Section Three</a>
+          <a class="usa-nav__link" href="#"><span>Section Three</span></a>
         </li>
       </ul>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </header>
 <main id="main-content">
   <p>Main content area</p>

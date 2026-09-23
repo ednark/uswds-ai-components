@@ -99,8 +99,14 @@
     {
       "concept": "language-toggle",
       "status": "not_part_of_design_system",
-      "nearestAlternative": "plain links with lang/hreflang (usa.gov Español pattern)",
-      "reason": "USWDS has no official language component; documented in the header tile guidance"
+      "nearestAlternative": "language-selector tiles (language-selector/default.html, language-selector/expanded.html) or plain links with lang/hreflang (usa.gov Español pattern)",
+      "reason": "USWDS has no header-integrated language toggle component; the language-selector tiles cover the standalone list pattern"
+    },
+    {
+      "concept": "hero",
+      "status": "deferred",
+      "nearestAlternative": "usa-section + usa-prose + layout grid (see core-classes.json)",
+      "reason": "USWDS ships a usa-hero component but the registry has no hero tile yet; compose from section/grid/prose or consult the USWDS hero documentation"
     }
   ],
   "staticView": {
@@ -118,6 +124,14 @@
         {
           "class": "usa-character-count",
           "reason": "USWDS JavaScript mount (no styling expected)"
+        },
+        {
+          "class": "usa-character-count__field",
+          "reason": "Documented USWDS character-count markup (official usa-character-count.twig); behavior hook for usa-character-count.js, no styles in the bundle"
+        },
+        {
+          "class": "usa-character-count__message",
+          "reason": "Documented USWDS character-count markup (official usa-character-count.twig); JS creates the live status regions from it, unstyled in the 3.14 bundle"
         },
         {
           "class": "usa-date-picker",

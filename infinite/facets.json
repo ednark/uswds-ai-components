@@ -74,8 +74,8 @@
       "validation": 2
     },
     "requiresJs": {
-      "required": 38,
-      "no": 102,
+      "required": 39,
+      "no": 101,
       "optional": 12
     },
     "interaction": {

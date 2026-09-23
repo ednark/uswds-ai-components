@@ -78,7 +78,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Update agency name, parent agency, and links. Ensure all required links are present: Privacy Policy, Terms of Service, Accessibility, Contact. Update USA.gov link for correct government portal.",
+    "agentPrompt": "Update agency name, parent agency, and links. Required links are Accessibility, Privacy/Security, and FOIA at minimum — Terms of Service is not a federal requirement. Update the USA.gov block for the correct government portal.",
     "relatedComponents": [
       "footer",
       "link"
@@ -95,11 +95,9 @@
   },
   "constraints": {
     "preserve": [
-      "section.usa-identifier wrapper",
-      "div.usa-identifier__section--masthead",
+      "div.usa-identifier with section.usa-identifier__section--masthead",
       "div.usa-identifier__identity-domain",
-      "div.usa-identifier__required-links-list for required links",
-      "Required link: Privacy Policy, Terms of Service, Accessibility"
+      "ul.usa-identifier__required-links-list with li.usa-identifier__required-links-item"
     ],
     "editable": [
       "Agency name",
@@ -111,7 +109,8 @@
     "limitations": [
       "Federal websites are required to display identifier per federal guidelines",
       "Links must point to actual agency pages, not placeholders",
-      "USA.gov link is required for federal sites"
+      "USA.gov link is required for federal sites",
+      "Required links are Accessibility, Privacy/Security, and FOIA — Terms of Service is not a federal requirement and was removed from this tile"
     ]
   },
   "file": "identifier/default.html",
@@ -146,19 +145,39 @@
 </style>
 </head>
 <body>
-<section class="usa-identifier">
-  <div class="usa-identifier__container">
-    <div class="usa-identifier__section--masthead">
-      <div class="usa-identifier__identity-domain">General Services Administration</div>
+<div class="usa-identifier">
+  <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier">
+    <div class="usa-identifier__container">
+      <section class="usa-identifier__identity" aria-label="Agency description">
+        <p class="usa-identifier__identity-domain">Agency.gov</p>
+        <p class="usa-identifier__identity-disclaimer">
+          <span aria-hidden="true">An official website of the</span>
+          <a href="https://www.agency.gov/">U.S. Agency Name</a>
+        </p>
+      </section>
     </div>
-    <div class="usa-identifier__required-links-list">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
-      <a href="#">Accessibility</a>
-      <a href="#">Contact</a>
+  </section>
+  <nav class="usa-identifier__section usa-identifier__section--required-links" aria-label="Important links">
+    <div class="usa-identifier__container">
+      <ul class="usa-identifier__required-links-list">
+        <li class="usa-identifier__required-links-item">
+          <a href="/accessibility" class="usa-identifier__required-link usa-link">Accessibility</a>
+        </li>
+        <li class="usa-identifier__required-links-item">
+          <a href="/privacy" class="usa-identifier__required-link usa-link">Privacy and security policies</a>
+        </li>
+        <li class="usa-identifier__required-links-item">
+          <a href="/foia" class="usa-identifier__required-link usa-link">FOIA requests</a>
+        </li>
+      </ul>
     </div>
-    <p>Looking for U.S. government information and services? <a href="https://www.usa.gov/" target="_blank" rel="noopener">Visit USA.gov</a></p>
-  </div>
-</section>
+  </nav>
+  <section class="usa-identifier__section usa-identifier__section--usagov" aria-label="U.S. government information and services">
+    <div class="usa-identifier__container">
+      <div class="usa-identifier__usagov-description">Looking for U.S. government information and services?</div>
+      <a href="https://www.usa.gov/" class="usa-link">Visit USA.gov</a>
+    </div>
+  </section>
+</div>
 </body>
 </html>

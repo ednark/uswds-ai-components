@@ -72,7 +72,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add usa-input--error class and use usa-form-group--error on parent.",
+    "agentPrompt": "Add usa-input--error on the input and usa-form-group--error on the parent group. Set aria-invalid='true' and link the error message with aria-describedby (see agentPromptSequence step 3).",
     "relatedComponents": [
       "validation",
       "summary-box"
@@ -89,9 +89,10 @@
   },
   "constraints": {
     "preserve": [
-      "div.usa-form-group--error",
-      "input.usa-input",
-      "span.usa-error-message"
+      "div.usa-form-group.usa-form-group--error",
+      "label.usa-label with for matching the input id",
+      "input.usa-input.usa-input--error with aria-invalid='true' and aria-describedby",
+      "span.usa-error-message with role='alert'"
     ],
     "editable": [
       "Input label",
@@ -131,9 +132,9 @@
 </head>
 <body>
 <div class="usa-form-group usa-form-group--error">
-  <label class="usa-label" for="text-input-error">Text input with error</label>
+  <label class="usa-label usa-label--error" for="text-input-error">Text input with error</label>
   <span class="usa-error-message" id="text-input-error-message" role="alert">Error: Please enter a valid value</span>
-  <input class="usa-input" id="text-input-error" name="text-input-error" aria-describedby="text-input-error-message" type="text">
+  <input class="usa-input usa-input--error" id="text-input-error" name="text-input-error" aria-describedby="text-input-error-message" aria-invalid="true" type="text">
 </div>
 </body>
 </html>

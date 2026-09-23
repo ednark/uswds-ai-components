@@ -585,7 +585,7 @@
       "uswdsClass": "usa-banner",
       "section": "feedback",
       "variant": "default",
-      "requiresJs": "no",
+      "requiresJs": "required",
       "interaction": [
         "click",
         "focus"
@@ -1775,7 +1775,7 @@
       "title": "Card (Clickable)",
       "_schemaVersion": 2,
       "uswdsComponentType": "card",
-      "uswdsClass": "usa-card__container make-link",
+      "uswdsClass": "usa-card",
       "section": "data-display",
       "variant": "clickable",
       "requiresJs": "no",
@@ -1803,7 +1803,7 @@
         "clickable",
         "link",
         "navigation",
-        "make-link"
+        "stretched-link"
       ],
       "description": "Card variant where the entire card container is clickable as a single link.",
       "supportedTokenProfiles": [
@@ -3496,11 +3496,6 @@
         "highContrast"
       ],
       "uswdClass": "usa-footer",
-      "limitations": [
-        "Footer column layout uses core grid classes (grid-row/grid-col) plus usa-footer__primary-link; demo-footer-grid/__col/__heading were invented and are now demo-* classes.",
-        "Footer column layout uses core grid classes (grid-row/grid-col) plus usa-footer__primary-link; demo-footer-grid/__col/__heading were invented and are now demo-* classes.",
-        "Footer column layout uses core grid classes (grid-row/grid-col) plus usa-footer__primary-link; usa-footer__grid/__col/__heading were invented and are now demo-* classes."
-      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,

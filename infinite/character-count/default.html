@@ -80,7 +80,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Set maxlength attribute on textarea for character limit. Add data-maxlength with same value. Update aria-describedby on input to reference character count element.",
+    "agentPrompt": "Set maxlength on the textarea and the same value in data-maxlength on .usa-character-count. Keep the message span and the aria-describedby wiring — USWDS JS (usa-character-count.js) builds its live status regions from this structure.",
     "relatedComponents": [
       "text-input",
       "form",
@@ -100,9 +100,9 @@
   "constraints": {
     "preserve": [
       "div.usa-character-count with data-maxlength",
-      "textarea.usa-textarea with maxlength",
-      "div.usa-character-count__status for remaining count",
-      "aria-describedby linking input to status"
+      "textarea.usa-textarea.usa-character-count__field",
+      "span.usa-character-count__message with id referenced by aria-describedby",
+      "aria-describedby linking the textarea to message and hint"
     ],
     "editable": [
       "Character limit value (maxlength and data-maxlength)",
@@ -110,9 +110,9 @@
       "Character count message text"
     ],
     "limitations": [
-      "JavaScript updates the displayed count automatically",
-      "maxlength prevents exceeding the limit",
-      "Warning styling triggers at 90% of limit"
+      "USWDS JS (usa-character-count.js) removes the maxlength attribute at init and enforces the limit via custom validity ('The content is too long.')",
+      "JS creates two status regions (visible .usa-character-count__status plus aria-live .usa-character-count__sr-status) and updates them with '{max} characters allowed' / '{n} character(s) left|over limit' wording on a 1s screen-reader debounce",
+      "Without JS the message span is static fallback text"
     ]
   },
   "file": "character-count/default.html",
@@ -168,12 +168,12 @@
 <body>
 <div class="form-section">
   <div class="usa-character-count" data-maxlength="150">
-    <label class="usa-label" for="with-hint">Description</label>
-    <span class="usa-hint" id="with-hint-hint">150 characters allowed</span>
-    <textarea class="usa-textarea" id="with-hint" aria-describedby="with-hint-hint" maxlength="150"></textarea>
-    <div class="usa-character-count__status" aria-hidden="true">
-      <span class="usa-character-count__status">150</span> characters remaining
+    <div class="usa-form-group">
+      <label class="usa-label" for="with-hint">Description</label>
+      <span class="usa-hint" id="with-hint-hint">150 characters allowed</span>
+      <textarea class="usa-textarea usa-character-count__field" id="with-hint" name="with-hint" maxlength="150" aria-describedby="with-hint-info with-hint-hint"></textarea>
     </div>
+    <span id="with-hint-info" class="usa-character-count__message">You can enter up to 150 characters</span>
   </div>
 </div>
 <div class="cap">Character Count default</div>

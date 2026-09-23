@@ -56,12 +56,7 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-footer",
-    "limitations": [
-      "Footer column layout uses core grid classes (grid-row/grid-col) plus usa-footer__primary-link; demo-footer-grid/__col/__heading were invented and are now demo-* classes.",
-      "Footer column layout uses core grid classes (grid-row/grid-col) plus usa-footer__primary-link; demo-footer-grid/__col/__heading were invented and are now demo-* classes.",
-      "Footer column layout uses core grid classes (grid-row/grid-col) plus usa-footer__primary-link; usa-footer__grid/__col/__heading were invented and are now demo-* classes."
-    ]
+    "uswdClass": "usa-footer"
   },
   "selection": {
     "useWhen": [
@@ -95,8 +90,10 @@
   },
   "constraints": {
     "preserve": [
-      "footer.usa-footer usa-footer--big",
-      "div.usa-footer__primary-section with columns"
+      "footer.usa-footer.usa-footer--big",
+      "div.grid-container.usa-footer__return-to-top",
+      "div.usa-footer__primary-section with nav.usa-footer__nav and column sections",
+      "div.usa-footer__secondary-section"
     ],
     "editable": [
       "Agency info",
@@ -104,7 +101,8 @@
       "Contact information"
     ],
     "limitations": [
-      "Takes significant vertical space"
+      "Takes significant vertical space",
+      "Column layout is core grid classes (grid-row/grid-gap-4 + mobile-lg/desktop:grid-col-*) plus usa-footer__primary-content; the demo-footer-grid/__col/__heading classes this tile once used are not USWDS and are removed"
     ]
   },
   "file": "footer/big.html",
@@ -131,29 +129,54 @@
 </head>
 <body>
 <footer class="usa-footer usa-footer--big">
+  <div class="grid-container usa-footer__return-to-top">
+    <a href="#main-content">Return to top</a>
+  </div>
   <div class="usa-footer__primary-section">
     <nav class="usa-footer__nav" aria-label="Footer navigation">
-      <div class="demo-footer-grid">
-        <div class="demo-footer-col">
-          <h3 class="demo-footer-heading">Topic One</h3>
-          <ul class="usa-list--unstyled">
-            <li><a href="#">Footer link</a></li>
-            <li><a href="#">Footer link</a></li>
-          </ul>
+      <div class="grid-row grid-gap-4">
+        <div class="mobile-lg:grid-col-6 desktop:grid-col-3">
+          <section class="usa-footer__primary-content">
+            <h4 class="usa-footer__primary-link">Topic One</h4>
+            <ul class="usa-list usa-list--unstyled">
+              <li class="usa-footer__secondary-link"><a href="#">Footer link</a></li>
+              <li class="usa-footer__secondary-link"><a href="#">Footer link</a></li>
+            </ul>
+          </section>
         </div>
-        <div class="demo-footer-col">
-          <h3 class="demo-footer-heading">Topic Two</h3>
-          <ul class="usa-list--unstyled">
-            <li><a href="#">Footer link</a></li>
-            <li><a href="#">Footer link</a></li>
-          </ul>
+        <div class="mobile-lg:grid-col-6 desktop:grid-col-3">
+          <section class="usa-footer__primary-content">
+            <h4 class="usa-footer__primary-link">Topic Two</h4>
+            <ul class="usa-list usa-list--unstyled">
+              <li class="usa-footer__secondary-link"><a href="#">Footer link</a></li>
+              <li class="usa-footer__secondary-link"><a href="#">Footer link</a></li>
+            </ul>
+          </section>
         </div>
       </div>
     </nav>
   </div>
   <div class="usa-footer__secondary-section">
-    <p><a href="#main-content">Return to top</a></p>
-    <p>Agency Name | Washington, DC</p>
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="usa-footer__logo grid-row mobile-lg:grid-col-6">
+          <p class="usa-footer__logo-heading">Agency Name</p>
+        </div>
+        <div class="usa-footer__contact-links mobile-lg:grid-col-6">
+          <p class="usa-footer__contact-heading">Agency Contact Center</p>
+          <address class="usa-footer__address">
+            <div class="usa-footer__contact-info grid-row grid-gap">
+              <div class="grid-col-auto">
+                <a href="tel:1-800-555-5555">1-800-555-5555</a>
+              </div>
+              <div class="grid-col-auto">
+                <a href="mailto:info@agency.gov">info@agency.gov</a>
+              </div>
+            </div>
+          </address>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
 </body>

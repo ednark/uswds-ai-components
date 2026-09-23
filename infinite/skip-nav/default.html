@@ -71,7 +71,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add as first element in body. Use href='#main-content' pointing to main content id. Visually hidden until focused.",
+    "agentPrompt": "Add as first element in body. Use href='#main-content' pointing to main content id. USWDS CSS positions it off-screen and slides it into view on :focus — no extra hiding classes needed.",
     "relatedComponents": [
       "header",
       "in-page-navigation"
@@ -84,15 +84,15 @@
   },
   "constraints": {
     "preserve": [
-      "a.usa-skipnav",
-      "usa-sr-only class for visual hiding"
+      "a.usa-skipnav"
     ],
     "editable": [
       "Link text (typically 'Skip to main content')",
       "href target id"
     ],
     "limitations": [
-      "Must have matching id on main content container"
+      "Must have matching id on main content container",
+      "Do not add usa-sr-only or similar hiding classes — USWDS handles the off-screen positioning and the focus reveal"
     ]
   },
   "file": "skip-nav/default.html",
@@ -118,9 +118,7 @@
 }</script>
 </head>
 <body>
-<a href="#main-content" class="usa-skipnav usa-sr-only focusable">
-  Skip to main content
-</a>
+<a class="usa-skipnav" href="#main-content">Skip to main content</a>
 <main id="main-content">
   <p>Main content</p>
 </main>

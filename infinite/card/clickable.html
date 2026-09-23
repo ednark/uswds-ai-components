@@ -9,7 +9,7 @@
   "_schemaVersion": 2,
   "discovery": {
     "uswdsComponentType": "card",
-    "uswdsClass": "usa-card__container make-link",
+    "uswdsClass": "usa-card",
     "section": "data-display",
     "variant": "clickable",
     "requiresJs": "no",
@@ -37,7 +37,7 @@
       "clickable",
       "link",
       "navigation",
-      "make-link"
+      "stretched-link"
     ],
     "description": "Card variant where the entire card container is clickable as a single link.",
     "compliance": {
@@ -72,7 +72,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add make-link class to usa-card__container. Place an <a> tag wrapping the card header or body content. The entire card becomes clickable.",
+    "agentPrompt": "Keep one link per card: the heading wraps the only <a>. The tile's .demo-stretch-link pattern CSS (style block) stretches that link over the card — copy the CSS with the markup. Never invent usa-* classes for this (make-link and card-link were invented and are removed).",
     "relatedComponents": [
       "collection",
       "link"
@@ -97,11 +97,10 @@
   },
   "constraints": {
     "preserve": [
-      "li.usa-card",
-      "div.usa-card__container.make-link",
-      "a.card-link",
-      "header.usa-card__header",
-      "div.usa-card__body"
+      "li.usa-card > div.usa-card__container",
+      "div.usa-card__header with h2.usa-card__heading link",
+      "div.usa-card__body",
+      ".demo-stretch-link pattern CSS (copy with the markup)"
     ],
     "editable": [
       "Card heading",
@@ -111,7 +110,7 @@
     ],
     "limitations": [
       "Entire card is one link - can't have multiple actions",
-      "Need text-no-underline on link to remove underline"
+      ".demo-stretch-link is a pattern helper defined in this tile's style block, not a USWDS class — copy its CSS with the markup"
     ]
   },
   "file": "card/clickable.html",
@@ -132,21 +131,31 @@
     ]
   }
 }</script>
+<style>
+  /* Pattern helper (NOT a USWDS class): stretches the heading link over the
+     whole card. usa-card__container is position: relative in USWDS, so the
+     ::after overlay covers the card. Copy these rules with the markup. */
+  .demo-stretch-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+</style>
 </head>
 <body>
 <ul class="usa-card-group">
-  <li class="desktop:grid-col-4 usa-card">
-    <div class="usa-card__container make-link">
+  <li class="usa-card desktop:grid-col-4">
+    <div class="usa-card__container">
       <div class="usa-card__media">
         <div class="usa-card__img" style="background: linear-gradient(135deg, #667eea, #764ba2); height: 150px;"></div>
       </div>
-      <header class="usa-card__header">
-        <a href="/topic-one" class="text-no-underline card-link" title="Topic One">
-          <h2 class="usa-card__heading">Clickable Card Heading</h2>
-        </a>
-      </header>
+      <div class="usa-card__header">
+        <h2 class="usa-card__heading">
+          <a href="/topic-one" class="demo-stretch-link">Clickable Card Heading</a>
+        </h2>
+      </div>
       <div class="usa-card__body">
-        <p>The entire card is clickable. The heading wraps a link that makes the whole card navigate.</p>
+        <p>The entire card is clickable. The heading link stretches over the card so the whole surface is one link.</p>
       </div>
     </div>
   </li>

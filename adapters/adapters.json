@@ -3,7 +3,7 @@
   "description": "Semantic mappings from USWDS 3.13.0 to Material Design 3 and Bootstrap 5",
   "source": {
     "designSystem": "U.S. Web Design System",
-    "version": "3.13.0",
+    "version": "3.14.0",
     "registry": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main"
   },
   "targets": [
