@@ -1,0 +1,24 @@
+/* Whole-card click target: the heading link stretches over the card, so each card is
+   one link whose accessible name is just the topic title. */
+.topic-card {
+  position: relative;
+}
+
+.topic-card__link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.topic-card:hover {
+  border-color: #005ea2;
+}
+
+.topic-card:focus-within {
+  outline: 0.25rem solid #2491ff;
+  outline-offset: 0;
+}
+
+.topic-card__link:focus {
+  outline: none;
+}

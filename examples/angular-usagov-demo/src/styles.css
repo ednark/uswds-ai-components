@@ -1,0 +1,6 @@
+/* USWDS 3.13.0 is loaded from angular.json. Keep global overrides minimal. */
+
+/* Programmatic focus targets (main, headings, error summary) are not interactive controls. */
+[tabindex='-1']:focus {
+  outline: none;
+}

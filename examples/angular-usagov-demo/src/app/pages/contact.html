@@ -1,0 +1,169 @@
+<div class="grid-container padding-y-5">
+  <div class="grid-row grid-gap">
+    <div class="tablet:grid-col-8">
+      <h1 class="margin-top-0">Contact USAGov</h1>
+      <p class="usa-intro">
+        Ask a question about government services and information. You can also call us at
+        <a class="usa-link" [href]="phoneUrl">1-844-USAGOV1 (1-844-872-4681)</a>.
+      </p>
+
+      @if (sent()) {
+        <div #successAlert class="usa-alert usa-alert--success margin-bottom-4" tabindex="-1">
+          <div class="usa-alert__body">
+            <h2 class="usa-alert__heading">Thank you. We received your message.</h2>
+            <p class="usa-alert__text">
+              This is a demonstration, so your message was not sent or stored.
+            </p>
+          </div>
+        </div>
+      }
+
+      @if (errors().length) {
+        <div #errorSummary class="usa-alert usa-alert--error margin-bottom-4" tabindex="-1">
+          <div class="usa-alert__body">
+            <h2 class="usa-alert__heading">
+              @if (errors().length === 1) {
+                There is 1 error in this form
+              } @else {
+                There are {{ errors().length }} errors in this form
+              }
+            </h2>
+            <p class="usa-alert__text">Fix the following to send your message:</p>
+            <ul class="usa-list">
+              @for (item of errors(); track item.id) {
+                <li><a class="usa-link" [appInPageLink]="item.id">{{ item.message }}</a></li>
+              }
+            </ul>
+          </div>
+        </div>
+      }
+
+      <form class="usa-form usa-form--large" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+        <p class="usa-hint">
+          A red asterisk (<abbr title="required" class="usa-hint usa-hint--required">*</abbr>)
+          indicates a required field. This demo does not send or store what you enter.
+        </p>
+
+        <fieldset class="usa-fieldset">
+          <legend class="usa-legend usa-legend--large">Your contact information</legend>
+
+          <div class="usa-form-group" [class.usa-form-group--error]="error('fullName')">
+            <label class="usa-label" [class.usa-label--error]="error('fullName')" for="full-name">
+              Full name <abbr title="required" class="usa-hint usa-hint--required">*</abbr>
+            </label>
+            @if (error('fullName'); as message) {
+              <span class="usa-error-message" id="full-name-error" role="alert">{{ message }}</span>
+            }
+            <input
+              class="usa-input"
+              [class.usa-input--error]="error('fullName')"
+              id="full-name"
+              name="full-name"
+              type="text"
+              autocomplete="name"
+              formControlName="fullName"
+              required
+              aria-required="true"
+              [attr.aria-invalid]="error('fullName') ? 'true' : null"
+              [attr.aria-describedby]="describedBy('fullName', 'full-name-error')"
+            >
+          </div>
+
+          <div class="usa-form-group" [class.usa-form-group--error]="error('email')">
+            <label class="usa-label" [class.usa-label--error]="error('email')" for="email">
+              Email address <abbr title="required" class="usa-hint usa-hint--required">*</abbr>
+            </label>
+            <span class="usa-hint" id="email-hint">We’ll only use this to reply to you.</span>
+            @if (error('email'); as message) {
+              <span class="usa-error-message" id="email-error" role="alert">{{ message }}</span>
+            }
+            <input
+              class="usa-input"
+              [class.usa-input--error]="error('email')"
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              formControlName="email"
+              required
+              aria-required="true"
+              [attr.aria-invalid]="error('email') ? 'true' : null"
+              [attr.aria-describedby]="describedBy('email', 'email-error', 'email-hint')"
+            >
+          </div>
+        </fieldset>
+
+        <div class="usa-form-group" [class.usa-form-group--error]="error('topic')">
+          <label class="usa-label" [class.usa-label--error]="error('topic')" for="topic">
+            Topic <abbr title="required" class="usa-hint usa-hint--required">*</abbr>
+          </label>
+          @if (error('topic'); as message) {
+            <span class="usa-error-message" id="topic-error" role="alert">{{ message }}</span>
+          }
+          <select
+            class="usa-select"
+            [class.usa-input--error]="error('topic')"
+            id="topic"
+            name="topic"
+            formControlName="topic"
+            required
+            aria-required="true"
+            [attr.aria-invalid]="error('topic') ? 'true' : null"
+            [attr.aria-describedby]="describedBy('topic', 'topic-error')"
+          >
+            <option value="">- Select -</option>
+            @for (topic of topics; track topic.value) {
+              <option [value]="topic.value">{{ topic.label }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="usa-character-count" [attr.data-maxlength]="maxLength">
+          <div
+            class="usa-form-group"
+            [class.usa-form-group--error]="error('message') || overLimit()"
+          >
+            <label
+              class="usa-label"
+              [class.usa-label--error]="error('message') || overLimit()"
+              for="message"
+            >
+              Message <abbr title="required" class="usa-hint usa-hint--required">*</abbr>
+            </label>
+            <span class="usa-hint" id="message-hint">
+              Don’t include personal information like your Social Security number.
+            </span>
+            @if (error('message'); as message) {
+              <span class="usa-error-message" id="message-error" role="alert">{{ message }}</span>
+            }
+            <textarea
+              class="usa-textarea usa-character-count__field"
+              [class.usa-input--error]="error('message') || overLimit()"
+              id="message"
+              name="message"
+              rows="6"
+              formControlName="message"
+              required
+              aria-required="true"
+              [attr.aria-invalid]="error('message') || overLimit() ? 'true' : null"
+              [attr.aria-describedby]="describedBy('message', 'message-error', 'message-info', 'message-hint')"
+            ></textarea>
+          </div>
+          <span id="message-info" class="usa-character-count__message usa-sr-only">
+            You can enter up to {{ maxLength }} characters
+          </span>
+          <div
+            class="usa-character-count__status usa-hint"
+            [class.usa-character-count__status--invalid]="overLimit()"
+            aria-hidden="true"
+          >{{ countMessage() }}</div>
+          <div class="usa-character-count__sr-status usa-sr-only" aria-live="polite">
+            {{ srCountMessage() }}
+          </div>
+        </div>
+
+        <button class="usa-button" type="submit">Send message</button>
+      </form>
+    </div>
+  </div>
+</div>

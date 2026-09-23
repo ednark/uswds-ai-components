@@ -1,0 +1,75 @@
+<section class="bg-primary-darker padding-y-5 tablet:padding-y-8" aria-labelledby="page-heading">
+  <div class="grid-container">
+    <div class="bg-white radius-md shadow-3 padding-3 tablet:padding-5 maxw-tablet-lg">
+      <h1 id="page-heading" class="margin-top-0 font-heading-2xl">
+        Making government services easier to find
+      </h1>
+      <p class="usa-intro margin-bottom-0">
+        USA.gov helps you locate and understand government benefits, programs, and information.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="bg-primary-lighter padding-y-4" aria-labelledby="how-do-i-heading">
+  <div class="grid-container">
+    <h2 id="how-do-i-heading" class="margin-top-0">How do I ...</h2>
+    <ul class="usa-list usa-list--unstyled grid-row grid-gap-2">
+      @for (item of howDoI; track item.label) {
+        <li class="mobile-lg:grid-col-6 desktop:grid-col-3 margin-bottom-2">
+          <a
+            class="usa-link display-block height-full bg-white border-2px border-primary radius-md padding-2 text-bold text-no-underline"
+            [href]="item.href"
+          >{{ item.label }}</a>
+        </li>
+      }
+    </ul>
+    <p class="margin-bottom-0">
+      <a class="usa-link text-bold" appInPageLink="all-topics-header">Jump to all topics and services</a>
+    </p>
+  </div>
+</section>
+
+<section class="padding-y-5" aria-labelledby="benefits-heading">
+  <div class="grid-container">
+    <div class="grid-row grid-gap-2 flex-align-center">
+      <div class="grid-col-auto text-primary">
+        <app-usa-icon name="account_balance" [size]="7" />
+      </div>
+      <div class="grid-col-fill">
+        <h2 id="benefits-heading" class="margin-top-0 margin-bottom-1">
+          Government benefits and financial assistance
+        </h2>
+        <p class="margin-top-0">
+          Discover government benefits that you may be eligible for and learn how to apply.
+        </p>
+      </div>
+      <div class="grid-col-12 tablet:grid-col-auto">
+        <a class="usa-button usa-button--big" [href]="benefitFinder">Find benefits</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-base-lightest padding-y-5" aria-labelledby="all-topics-header">
+  <div class="grid-container">
+    <h2 id="all-topics-header" class="margin-top-0">All topics and services</h2>
+    <ul class="usa-card-group">
+      @for (topic of topics; track topic.title) {
+        <li class="usa-card tablet:grid-col-6 desktop:grid-col-4">
+          <div class="usa-card__container topic-card">
+            <div class="usa-card__header">
+              <span class="text-primary"><app-usa-icon [name]="topic.icon" [size]="4" /></span>
+              <h3 class="usa-card__heading margin-top-1">
+                <a class="usa-link topic-card__link" [href]="topic.href">{{ topic.title }}</a>
+              </h3>
+            </div>
+            <div class="usa-card__body">
+              <p>{{ topic.description }}</p>
+            </div>
+          </div>
+        </li>
+      }
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,72 @@
+<div class="usa-overlay" [class.is-visible]="menuOpen()" (click)="closeMenu()"></div>
+<header class="usa-header usa-header--extended">
+  <div class="usa-navbar">
+    <div class="usa-logo">
+      <em class="usa-logo__text">
+        <a routerLink="/">USAGov</a>
+      </em>
+    </div>
+    <button #menuButton type="button" class="usa-menu-btn" (click)="openMenu()">Menu</button>
+  </div>
+  <nav
+    #nav
+    aria-label="Primary navigation"
+    class="usa-nav"
+    [class.is-visible]="menuOpen()"
+    (keydown)="trapFocus($event)"
+  >
+    <div class="usa-nav__inner">
+      <button #closeButton type="button" class="usa-nav__close" (click)="closeMenu()">
+        <img src="assets/uswds/img/usa-icons/close.svg" role="img" alt="Close">
+      </button>
+      <ul class="usa-nav__primary usa-accordion">
+        @for (item of primaryNav; track item.label) {
+          <li class="usa-nav__primary-item">
+            @if (item.routerLink) {
+              <a class="usa-nav__link" [routerLink]="item.routerLink" [fragment]="item.fragment">
+                <span>{{ item.label }}</span>
+              </a>
+            } @else {
+              <a class="usa-nav__link" [href]="item.href"><span>{{ item.label }}</span></a>
+            }
+          </li>
+        }
+      </ul>
+      <div class="usa-nav__secondary">
+        <ul class="usa-nav__secondary-links">
+          @for (item of secondaryNav; track item.label) {
+            <li class="usa-nav__secondary-item">
+              @if (item.routerLink) {
+                <a
+                  [routerLink]="item.routerLink"
+                  routerLinkActive="usa-current"
+                  ariaCurrentWhenActive="page"
+                >{{ item.label }}</a>
+              } @else {
+                <a [href]="item.href">{{ item.label }}</a>
+              }
+            </li>
+          }
+          <li class="usa-nav__secondary-item">
+            <a href="https://www.usa.gov/es/" lang="es" hreflang="es">Español</a>
+          </li>
+        </ul>
+        <section aria-label="Search USA.gov">
+          <form
+            class="usa-search usa-search--small"
+            role="search"
+            action="https://search.usa.gov/search"
+            method="get"
+          >
+            <input type="hidden" name="affiliate" value="usagov_en_internal">
+            <label class="usa-sr-only" for="search-field-small">Search</label>
+            <input class="usa-input usa-search__input" id="search-field-small" type="search" name="query">
+            <button class="usa-button usa-search__submit" type="submit">
+              <img src="assets/uswds/img/usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt="Search">
+            </button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </nav>
+</header>

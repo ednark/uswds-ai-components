@@ -1,0 +1,87 @@
+<footer class="usa-footer usa-footer--big">
+  <div class="grid-container usa-footer__return-to-top">
+    <a appInPageLink="page-top">Return to top</a>
+  </div>
+  <div class="usa-footer__primary-section">
+    <div class="grid-container">
+      <nav class="usa-footer__nav" aria-label="Footer navigation">
+        <div class="grid-row grid-gap-4">
+          @for (column of columns; track column.heading) {
+            <div class="mobile-lg:grid-col-6 desktop:grid-col-3">
+              <section class="usa-footer__primary-content">
+                <h2 class="usa-footer__primary-link">{{ column.heading }}</h2>
+                <ul class="usa-list usa-list--unstyled">
+                  @for (link of column.links; track link.label) {
+                    <li class="usa-footer__secondary-link">
+                      @if (link.routerLink) {
+                        <a [routerLink]="link.routerLink" [fragment]="link.fragment">{{ link.label }}</a>
+                      } @else {
+                        <a [href]="link.href">{{ link.label }}</a>
+                      }
+                    </li>
+                  }
+                </ul>
+              </section>
+            </div>
+          }
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="usa-footer__logo grid-row mobile-lg:grid-col-6">
+          <p class="usa-footer__logo-heading">USAGov Contact Center</p>
+        </div>
+        <div class="usa-footer__contact-links mobile-lg:grid-col-6">
+          <p class="usa-footer__contact-heading">Ask USA.gov a question</p>
+          <address class="usa-footer__address">
+            <div class="usa-footer__contact-info grid-row grid-gap">
+              <div class="grid-col-auto">
+                <a [href]="usagov + '/phone'">1-844-USAGOV1 (1-844-872-4681)</a>
+              </div>
+              <div class="grid-col-auto">
+                <a routerLink="/contact">Send us a message</a>
+              </div>
+            </div>
+          </address>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="usa-identifier">
+  <section
+    class="usa-identifier__section usa-identifier__section--masthead"
+    aria-label="Agency identifier"
+  >
+    <div class="usa-identifier__container">
+      <section class="usa-identifier__identity" aria-label="Agency description">
+        <p class="usa-identifier__identity-domain">USA.gov</p>
+        <p class="usa-identifier__identity-disclaimer">
+          USAGov is the official guide to government information and services. An official
+          website of the <a href="https://www.gsa.gov/">U.S. General Services Administration</a>
+        </p>
+      </section>
+    </div>
+  </section>
+  <nav
+    class="usa-identifier__section usa-identifier__section--required-links"
+    aria-label="Important links"
+  >
+    <div class="usa-identifier__container">
+      <ul class="usa-identifier__required-links-list">
+        @for (link of requiredLinks; track link.label) {
+          <li class="usa-identifier__required-links-item">
+            <a [href]="link.href" class="usa-identifier__required-link usa-link">{{ link.label }}</a>
+          </li>
+        }
+        <li class="usa-identifier__required-links-item">
+          <a routerLink="/contact" class="usa-identifier__required-link usa-link">Contact USAGov</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
