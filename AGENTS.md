@@ -117,3 +117,11 @@ When constraints conflict, follow this order (highest to lowest):
 
 For Drupal implementation guidance (modules, paragraph types, Twig, Drush), query the companion registry:
 - https://raw.githubusercontent.com/ednark/drupal-uswds-ai-components/main/agents.json
+
+## Version Sync
+
+This registry is a faithful snapshot of **USWDS 3.14.0** (`designSystem.version` in `registry.config.json`; `@uswds/uswds` pinned exactly in `package.json` — the validator errors on any disagreement).
+
+- Tile bodies carry `provenance.designSystemVersion` = the version they were last verified against. Missing/stale stamps appear as an aggregated worklist warning, never an error.
+- **Upgrading USWDS**: follow the runbook in `_base/protocol.md` ("Design-System Version Sync") — bump the pin, let `staticView.classCheck` enumerate class drift, apply cited corrections through the purity path, regenerate, record the event in `versions.json`.
+- Never re-version tiles speculatively: a tile's markup changes only as a cited ground-truth correction against the new pinned release.

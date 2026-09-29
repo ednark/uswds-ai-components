@@ -3,7 +3,7 @@
   "registry": "uswds-ai-components",
   "designSystem": {
     "name": "U.S. Web Design System",
-    "version": "3.13.0",
+    "version": "3.14.0",
     "url": "https://designsystem.digital.gov"
   },
   "versions": [
@@ -122,6 +122,28 @@
       ],
       "migrationPath": "Fully additive — absent customization, agents use the implicit ordering (variants → tokens → inline → core → documented fork).",
       "notes": "Extends the 0.3.0 guidance patch: makes the override surface enumerable so agents get agent-specific advice about where to customize"
+    },
+    {
+      "version": "0.5.0",
+      "releaseDate": "2026-09-29",
+      "componentCount": 152,
+      "breakingChanges": [],
+      "addedCategories": [
+        "patterns"
+      ],
+      "addedFacets": [
+        "patterns",
+        "origin"
+      ],
+      "metadataChanges": [
+        "provenance.designSystemVersion",
+        "instruction.behavior",
+        "tile-purity baselines",
+        "tradeoffs"
+      ],
+      "migrationPath": "Fully additive — re-fetch facets.json and agents.json.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Ground-truth pass against pinned USWDS 3.14.0: behavior contracts on JS-backed tiles, tile purity baselines, Surface 6 patterns (time-sensitive-action, step-by-step-journey, official-identity), trial-expiry-banner recipe, origin labeling"
     }
   ],
   "designSystemVersions": [
