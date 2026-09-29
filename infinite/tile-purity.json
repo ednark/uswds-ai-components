@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedBy": "_base/generate-index.mjs",
   "algorithm": "sha256 of whitespace-normalized body markup; script elements (metadata + behavior) excluded",
-  "count": 152,
+  "count": 153,
   "tiles": {
     "accordion/bordered.html": "acd50e4a90eb3c040315d66d22804d992890795027e9c3bce7eab2868ebab351",
     "accordion/default.html": "feaf12d2157928e506a8a1c7b5b133f7f5298d0a432953cc5e6a7561847016fe",
@@ -71,6 +71,7 @@
     "header/extended.html": "f6d0369c4cb2064bbb48062e6c9d1388a13aeedcde306e0443fed63db36b9082",
     "header/megamenu.html": "bbfbd88cc7e987993d6f4e4013b223f5e319e91d0af247a3a24f497cddadf599",
     "header/nav-search.html": "1224c9fede118f3f5a0251c39fcaf9b458643269f4db20a1f17157332fd94fb8",
+    "hero/default.html": "8c809c698978e44faf6af1b3bb06e45e66e238f050060c4f61a267b9c1a4aa2e",
     "icon/default.html": "82f47864ad167dc96f7658439330e34619709e0f4db19df8e956a489e12b3ee9",
     "icon-list/checklist.html": "83b182dab91df6ac949fc16e6625e9d15aa6fc69080f9972d645571d7029bfd4",
     "icon-list/default.html": "06b4875679d21f9f1f3fa21a87a665d92528a0ef8c4ad2d423a73922081d2931",

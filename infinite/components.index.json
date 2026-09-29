@@ -3,7 +3,7 @@
   "metadataSchemaVersion": 2,
   "generatedBy": "_base/generate-index.mjs",
   "counts": {
-    "total": 152,
+    "total": 153,
     "bySection": {
       "data-display": 25,
       "utilities": 12,
@@ -12,7 +12,7 @@
       "navigation": 30,
       "buttons": 1,
       "forms": 42,
-      "layout": 11,
+      "layout": 12,
       "typography": 5,
       "overlays": 1,
       "notifications": 2
@@ -4377,6 +4377,50 @@
         "navigation-hierarchy"
       ],
       "resolvedView": "header/nav-search.resolved.html"
+    },
+    {
+      "file": "hero/default.html",
+      "title": "Hero (Default)",
+      "_schemaVersion": 2,
+      "description": "Hero: introduces a page with a callout headline, short supporting text, and a call to action.",
+      "uswdsComponentType": "hero",
+      "uswdClass": "usa-hero",
+      "section": "layout",
+      "variant": "default",
+      "requiresJs": "no",
+      "interaction": [
+        "click",
+        "focus",
+        "hover"
+      ],
+      "a11y": {
+        "wcag21AA": true,
+        "keyboardNav": true
+      },
+      "govCompliance": [
+        "Section 508",
+        "WCAG 2.1 AA"
+      ],
+      "tier": "curated",
+      "tags": [
+        "hero",
+        "banner",
+        "landing",
+        "callout",
+        "page-header"
+      ],
+      "origin": "design-system",
+      "fedRampLevel": "IL2",
+      "piiHandling": "none",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "relatedComponents": [
+        "button",
+        "card",
+        "header"
+      ],
+      "costTier": "cheap"
     },
     {
       "file": "icon/default.html",

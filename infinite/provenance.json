@@ -34,6 +34,23 @@
         "input-prefix-suffix/prefix",
         "input-prefix-suffix/suffix"
       ]
+    },
+    {
+      "date": "2026-09-29",
+      "source": "field-research/agency-survey-2026-09 (31 federal homepage probe, depth-2 crawl of usda/gsa/ssa/hhs)",
+      "title": "USWDS agency homepage survey (live-site observation)",
+      "method": "live-site observation",
+      "findings": [
+        "25/31 agencies confirmed USWDS; grants.gov runs 3.3.0; irs/hud weak; vote/recreation/uspto/commerce render-gated",
+        "usa-hero observed in the wild (hhs, usda) — canon component missing from the registry; hero/default added from the pinned twig",
+        "usa-header--inverse (hhs) verified absent from the pinned 3.14.0 stylesheet — custom/legacy extension, NOT a variant; classCheck correctly blocks canon tiling",
+        "custom usa-namespace extensions observed: hhs alert--no-collapse/no-icon, section--background-light-gray; usda nav-bottom*, megamenu-search, sign_up-*",
+        "coverage confirmations: alert/footer/header/card variants match the registry on gsa/ssa/hhs",
+        "forks recorded: va.gov (Formation, USWDS-adjacent vocabulary), consumerfinance.gov (zero usa-* lineage)"
+      ],
+      "tilesAdded": [
+        "hero/default"
+      ]
     }
   ]
 }

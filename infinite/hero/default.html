@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Hero: introduces a page with a callout, headline, supporting text, and a call to action.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hero (Default)</title>
+  <script type="application/json" id="uswds-agent-meta">
+  {
+    "file": "hero/default.html",
+    "title": "Hero (Default)",
+    "_schemaVersion": 2,
+    "discovery": {
+      "description": "Hero: introduces a page with a callout headline, short supporting text, and a call to action.",
+      "uswdsComponentType": "hero",
+      "uswdClass": "usa-hero",
+      "section": "layout",
+      "variant": "default",
+      "requiresJs": "no",
+      "interaction": ["click", "focus", "hover"],
+      "a11y": { "wcag21AA": true, "keyboardNav": true },
+      "govCompliance": ["Section 508", "WCAG 2.1 AA"],
+      "tier": "curated",
+      "tags": ["hero", "banner", "landing", "callout", "page-header"],
+      "origin": "design-system",
+      "compliance": { "nistControls": [], "fedRampLevel": "IL2", "section508": true, "wcag21AA": true, "piiHandling": "none", "auditTrailCompatible": false, "dataMaskingCompatible": false },
+      "mobileUX": { "touchTargetSize": "44px", "requiredMinSpacing": "8px", "orientationLocked": false, "fullscreenSafe": true }
+    },
+    "selection": {
+      "useWhen": [
+        "Introducing a page with a primary message and a single call to action",
+        "Landing or entry pages where the hero is the first content users see"
+      ],
+      "avoidWhen": [
+        "The page has no strong primary message — a hero with filler text weakens the page",
+        "Content-heavy reference pages — heroes belong to entry points"
+      ],
+      "guidance": [
+        { "guidance": true, "description": "Keep the hero to one headline, one short paragraph, and one call to action, as the official template structures it" },
+        { "guidance": true, "description": "The hero content is the page's h1 — do not add a second h1 elsewhere on the page" },
+        { "guidance": false, "description": "Do not stack multiple heroes or nest components inside the callout" }
+      ]
+    },
+    "instruction": {
+      "agentPrompt": "Adapt the callout (the usa-hero__heading--alt span), the headline, the supporting paragraph, and the button text/href. The background image is set by the site's theme styling, not by this markup.",
+      "relatedComponents": ["button", "card", "header"]
+    },
+    "coordination": {
+      "compositionCost": { "costTier": "cheap", "estimatedTokens": 900, "renderingTimeMs": 5, "recommendedModel": "haiku" },
+      "agentPromptSequence": [
+        "1. Place the hero as the first content element of the page",
+        "2. Fill the callout span, headline, paragraph, and button from the page's primary message",
+        "3. The hero content is the page's h1 — no second h1 elsewhere"
+      ]
+    },
+    "constraints": {
+      "preserve": [
+        "section.usa-hero wrapper with aria-label",
+        "grid-container wrapper",
+        "usa-hero__callout container",
+        "usa-hero__heading with optional usa-hero__heading--alt callout span"
+      ],
+      "portableInvariants": [
+        "section element with aria-label='Introduction'",
+        "single h1 heading inside the callout",
+        "optional paragraph and single button link"
+      ],
+      "editable": [
+        "Callout text (usa-hero__heading--alt span)",
+        "Headline, paragraph, button text and href",
+        "Background image via the site's theme/deployment styling"
+      ],
+      "limitations": [
+        "The background image comes from the theme's styling, not the component markup — this tile renders without it",
+        "Hero content is the page's h1"
+      ]
+    },
+    "provenance": {
+      "observed": "2026-09-29",
+      "method": "design-system documentation",
+      "source": "packages/usa-hero/src/usa-hero.twig + hero.json (pinned @uswds/uswds 3.14.0); corroborated by live-site observation — usda.gov, hhs.gov (field-research/agency-survey-2026-09)",
+      "designSystemVersion": "3.14.0"
+    }
+  }
+  </script>
+</head>
+<body>
+  <section class="usa-hero" aria-label="Introduction">
+    <div class="grid-container">
+      <div class="usa-hero__callout">
+        <h1 class="usa-hero__heading">
+          <span class="usa-hero__heading--alt">Hero callout:</span>
+          Bring attention to a project priority
+        </h1>
+        <p>Support the callout with some short explanatory text. You don’t need more than a couple of sentences.</p>
+        <a class="usa-button" href="#">Call to action</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
