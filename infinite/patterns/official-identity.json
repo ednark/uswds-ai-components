@@ -1,0 +1,28 @@
+{
+  "pattern": "official-identity",
+  "description": "Task guidance for declaring official government identity and affiliation on a page",
+  "useWhen": [
+    "the page must identify the government organization behind it",
+    "trust indicators (official domain, required links) are required",
+    "a footer must carry the mandated identity elements"
+  ],
+  "avoidWhen": [
+    "the property is not an official government site",
+    "a component-level identity mark already carries the affiliation"
+  ],
+  "components": ["identifier"],
+  "doctrine": [
+    {
+      "source": "USWDS identifier component guidance",
+      "url": "https://designsystem.digital.gov/components/identifier/",
+      "note": "the identifier communicates the agency and site identity and carries the required links (accessibility, privacy, FOIA)"
+    }
+  ],
+  "knownFailureModes": [
+    {
+      "run": "cross-registry-tests/comparison.md Finding 6",
+      "lesson": "L7",
+      "note": "the USWDS identifier banner has no equivalent in any other registry — rebuilds improvised four different treatments (DSFR substituted fr-notice, ECL merged into the header, GOV.UK/Canada omitted); the identity role must be decided deliberately per registry"
+    }
+  ]
+}

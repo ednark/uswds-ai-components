@@ -218,7 +218,8 @@
     },
     "patterns": {
       "step-by-step-journey": 9,
-      "time-sensitive-action": 18
+      "time-sensitive-action": 18,
+      "official-identity": 2
     }
   }
 }

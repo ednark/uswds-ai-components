@@ -4656,6 +4656,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-identifier",
+      "patterns": [
+        "official-identity"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -4716,6 +4719,9 @@
       "uswdClass": "usa-identifier",
       "limitations": [
         "usa-identifier__heading is not a USWDS class; the identifier section is titled via aria-label, not a heading element."
+      ],
+      "patterns": [
+        "official-identity"
       ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
