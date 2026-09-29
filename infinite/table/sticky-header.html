@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Sticky header table: column headers remain visible while scrolling a long table.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Table (Sticky Header)</title>
+  <script type="application/json" id="uswds-agent-meta">
+  {
+    "file": "table/sticky-header.html",
+    "title": "Table (Sticky Header)",
+    "_schemaVersion": 2,
+    "discovery": {
+      "description": "Sticky header table: column headers stay visible while the table scrolls inside a scrollable container.",
+      "uswdsComponentType": "table",
+      "uswdClass": "usa-table usa-table--sticky-header",
+      "section": "data-display",
+      "variant": "sticky-header",
+      "requiresJs": "no",
+      "interaction": ["click", "focus", "scroll"],
+      "a11y": { "wcag21AA": true, "keyboardNav": true },
+      "govCompliance": ["Section 508", "WCAG 2.1 AA"],
+      "tier": "curated",
+      "tags": ["table", "data", "sticky", "scrolling", "headers", "long-tables"],
+      "origin": "design-system",
+      "compliance": { "nistControls": [], "fedRampLevel": "IL2", "section508": true, "wcag21AA": true, "piiHandling": "none", "auditTrailCompatible": false, "dataMaskingCompatible": false },
+      "mobileUX": { "touchTargetSize": "44px", "requiredMinSpacing": "8px", "orientationLocked": false, "fullscreenSafe": true }
+    },
+    "selection": {
+      "useWhen": [
+        "Long tables in a constrained, scrollable container — column headers must stay visible while scrolling",
+        "Data tables taller than their viewport where header context matters"
+      ],
+      "avoidWhen": [
+        "Short tables — the sticky header adds no value and can obscure content while scrolling",
+        "Tables without a scrollable container — the sticky header has no effect there"
+      ],
+      "guidance": [
+        { "guidance": true, "description": "Wrap the table in a usa-table-container--scrollable div with tabindex=0 so keyboard users can scroll the container" },
+        { "guidance": true, "description": "Provide enough rows that the header actually sticks during scroll — the official template repeats its rows to guarantee this" },
+        { "guidance": true, "description": "Give the table a caption for screen-reader context" },
+        { "guidance": false, "description": "Do not use the sticky variant outside a scrollable container" }
+      ]
+    },
+    "instruction": {
+      "agentPrompt": "Adapt the caption, header cells, and row data. The scrollable wrapper (usa-table-container--scrollable with tabindex=0) and the usa-table--sticky-header class must stay together — one without the other is the known misuse.",
+      "relatedComponents": ["table", "pagination"]
+    },
+    "coordination": {
+      "compositionCost": { "costTier": "cheap", "estimatedTokens": 3200, "renderingTimeMs": 5, "recommendedModel": "haiku" },
+      "agentPromptSequence": [
+        "1. Wrap the table in the scrollable container div with tabindex=0",
+        "2. Apply usa-table--sticky-header alongside usa-table on the table element",
+        "3. Provide enough body rows for the header to stick during scroll",
+        "4. Verify the caption and th scope attributes before finishing"
+      ]
+    },
+    "constraints": {
+      "preserve": [
+        "div.usa-table-container--scrollable wrapper with tabindex=0",
+        "usa-table--sticky-header class alongside usa-table",
+        "caption element",
+        "thead th with scope='col'"
+      ],
+      "portableInvariants": [
+        "table semantics (thead/tbody, th scope attributes)",
+        "trigger/scroll container pairing"
+      ],
+      "editable": [
+        "Caption text",
+        "Header cell content and scope",
+        "Data cell values and row count"
+      ],
+      "limitations": [
+        "The sticky header applies only inside the scrollable container",
+        "The sticky header overlays body rows while scrolling — keep header labels short"
+      ]
+    },
+    "provenance": {
+      "observed": "2026-09-29",
+      "method": "design-system documentation",
+      "source": "packages/usa-table/src/usa-table.twig + usa-table~stickyheader.json (pinned @uswds/uswds 3.14.0); corroborated by live-site observation — usitc.gov (field-research/agency-survey-2026-09, round 2)",
+      "designSystemVersion": "3.14.0"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="usa-table-container--scrollable" tabindex="0">
+    <table class="usa-table usa-table--sticky-header">
+      <caption>Sticky header table</caption>
+      <thead>
+        <tr>
+          <th scope="col">Document title</th>
+          <th scope="col">Description</th>
+          <th scope="col">Year</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Declaration of Independence</th>
+          <td>Statement adopted by the Continental Congress declaring independence from the British Empire.</td>
+          <td>1776</td>
+        </tr>
+        <tr>
+          <th scope="row">Bill of Rights</th>
+          <td>The first ten amendments of the U.S. Constitution guaranteeing rights and freedoms.</td>
+          <td>1791</td>
+        </tr>
+        <tr>
+          <th scope="row">Declaration of Sentiments</th>
+          <td>A document written during the Seneca Falls Convention outlining the rights that American women should be entitled to as citizens.</td>
+          <td>1848</td>
+        </tr>
+        <tr>
+          <th scope="row">Emancipation Proclamation</th>
+          <td>An executive order granting freedom to slaves in designated southern states.</td>
+          <td>1863</td>
+        </tr>
+        <tr>
+          <th scope="row">Declaration of Independence</th>
+          <td>Statement adopted by the Continental Congress declaring independence from the British Empire.</td>
+          <td>1776</td>
+        </tr>
+        <tr>
+          <th scope="row">Bill of Rights</th>
+          <td>The first ten amendments of the U.S. Constitution guaranteeing rights and freedoms.</td>
+          <td>1791</td>
+        </tr>
+        <tr>
+          <th scope="row">Declaration of Sentiments</th>
+          <td>A document written during the Seneca Falls Convention outlining the rights that American women should be entitled to as citizens.</td>
+          <td>1848</td>
+        </tr>
+        <tr>
+          <th scope="row">Emancipation Proclamation</th>
+          <td>An executive order granting freedom to slaves in designated southern states.</td>
+          <td>1863</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

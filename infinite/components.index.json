@@ -3,9 +3,9 @@
   "metadataSchemaVersion": 2,
   "generatedBy": "_base/generate-index.mjs",
   "counts": {
-    "total": 153,
+    "total": 154,
     "bySection": {
-      "data-display": 25,
+      "data-display": 26,
       "utilities": 12,
       "feedback": 12,
       "supporting": 11,
@@ -4420,7 +4420,8 @@
         "card",
         "header"
       ],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "hero/default.resolved.html"
     },
     {
       "file": "icon/default.html",
@@ -8448,6 +8449,50 @@
         "data-table-with-sorting"
       ],
       "resolvedView": "table/stacked.resolved.html"
+    },
+    {
+      "file": "table/sticky-header.html",
+      "title": "Table (Sticky Header)",
+      "_schemaVersion": 2,
+      "description": "Sticky header table: column headers stay visible while the table scrolls inside a scrollable container.",
+      "uswdsComponentType": "table",
+      "uswdClass": "usa-table usa-table--sticky-header",
+      "section": "data-display",
+      "variant": "sticky-header",
+      "requiresJs": "no",
+      "interaction": [
+        "click",
+        "focus",
+        "scroll"
+      ],
+      "a11y": {
+        "wcag21AA": true,
+        "keyboardNav": true
+      },
+      "govCompliance": [
+        "Section 508",
+        "WCAG 2.1 AA"
+      ],
+      "tier": "curated",
+      "tags": [
+        "table",
+        "data",
+        "sticky",
+        "scrolling",
+        "headers",
+        "long-tables"
+      ],
+      "origin": "design-system",
+      "fedRampLevel": "IL2",
+      "piiHandling": "none",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "relatedComponents": [
+        "table",
+        "pagination"
+      ],
+      "costTier": "cheap"
     },
     {
       "file": "table/striped.html",

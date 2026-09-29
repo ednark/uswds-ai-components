@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedBy": "_base/generate-index.mjs",
   "algorithm": "sha256 of whitespace-normalized body markup; script elements (metadata + behavior) excluded",
-  "count": 153,
+  "count": 154,
   "tiles": {
     "accordion/bordered.html": "acd50e4a90eb3c040315d66d22804d992890795027e9c3bce7eab2868ebab351",
     "accordion/default.html": "feaf12d2157928e506a8a1c7b5b133f7f5298d0a432953cc5e6a7561847016fe",
@@ -137,6 +137,7 @@
     "table/default.html": "9670b6848bd72d790bd01346898b70ab732ac9fffe791a3339ac650d0fdbb2cb",
     "table/scrollable.html": "7401e406c178db890c0301fb935e85cd9607126657106255a56fd2cbd7d7e6b3",
     "table/stacked.html": "e4a22f17107a8859a8fbd3641bb13b51c0656d983aee2ebec093ac521fbfe869",
+    "table/sticky-header.html": "b90eb1142979f3011aadf7d5db4cf6c5481763bdb485a796818d81740a0411aa",
     "table/striped.html": "762c14271711db8417c6c508db79237566da26ec1aa6ba7b902780e710200a84",
     "tag/big.html": "f867a89425f857c7f246fe41006d8f862629a52a1b4c0d1172651718b8404b11",
     "tag/default.html": "e7c3575b58c3aa6c0c15162802e47483f9201d795b0acab20f0081bf191ce930",

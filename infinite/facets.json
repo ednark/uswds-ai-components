@@ -2,11 +2,11 @@
   "schemaVersion": 1,
   "metadataSchemaVersion": 2,
   "generatedBy": "_base/generate-index.mjs",
-  "total": 153,
+  "total": 154,
   "designSystem": "U.S. Web Design System 3.14.0",
   "facets": {
     "section": {
-      "data-display": 25,
+      "data-display": 26,
       "utilities": 12,
       "feedback": 12,
       "supporting": 11,
@@ -66,7 +66,7 @@
       "skip-nav": 1,
       "step-indicator": 3,
       "summary-box": 4,
-      "table": 5,
+      "table": 6,
       "tag": 2,
       "text-input": 5,
       "time-picker": 1,
@@ -76,12 +76,12 @@
     },
     "requiresJs": {
       "required": 39,
-      "no": 102,
+      "no": 103,
       "optional": 12
     },
     "interaction": {
-      "click": 98,
-      "focus": 88,
+      "click": 99,
+      "focus": 89,
       "keyboard": 14,
       "passive": 46,
       "hover": 31,
@@ -92,21 +92,21 @@
       "drop": 1,
       "submit": 6,
       "validation": 2,
-      "scroll": 2,
+      "scroll": 3,
       "change": 4,
       "dismiss": 2
     },
     "a11y": {
-      "wcag21AA": 153,
-      "keyboardNav": 135,
+      "wcag21AA": 154,
+      "keyboardNav": 136,
       "screenReader": 151,
       "reducedMotion": 152,
       "forcedColors": 152,
       "ariaAttributes": 144
     },
     "govCompliance": {
-      "Section 508": 153,
-      "WCAG 2.1 AA": 153,
+      "Section 508": 154,
+      "WCAG 2.1 AA": 154,
       "21st Century IDEA": 152,
       "NIST Guidelines": 4,
       "Required by US federal agencies": 4,
@@ -177,6 +177,7 @@
       "borderless": 1,
       "scrollable": 1,
       "stacked": 1,
+      "sticky-header": 1,
       "striped": 1,
       "bottom": 1,
       "left": 1,
@@ -188,7 +189,7 @@
     },
     "costTier": {
       "moderate": 73,
-      "cheap": 76,
+      "cheap": 77,
       "expensive": 4
     },
     "prerequisites": {
@@ -205,15 +206,15 @@
     },
     "fedRampLevel": {
       "IL2+": 152,
-      "IL2": 1
+      "IL2": 2
     },
     "piiHandling": {
       "displays_only": 95,
-      "none": 17,
+      "none": 18,
       "accepts_input": 41
     },
     "touchTargetSize": {
-      "44px": 153
+      "44px": 154
     },
     "supportedTokenProfiles": {
       "highContrast": 152
