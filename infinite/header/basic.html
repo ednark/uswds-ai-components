@@ -71,7 +71,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add usa-header--basic class to usa-header. Simpler than extended, hides nav on mobile by default.",
+    "agentPrompt": "Add usa-header--basic class to usa-header. Simpler than extended, hides nav on mobile by default. The navbar wrapper (usa-navbar) and primary list (usa-nav__primary) are required for correct collapse behavior.",
     "relatedComponents": [
       "side-navigation",
       "footer",
@@ -103,8 +103,10 @@
   "constraints": {
     "preserve": [
       "header.usa-header usa-header--basic",
+      "div.usa-navbar wrapping logo + menu button",
       "div.usa-logo",
-      "nav.usa-nav"
+      "nav.usa-nav",
+      "ul.usa-nav__primary"
     ],
     "editable": [
       "Agency logo and name",
@@ -141,19 +143,23 @@
     ]
   },
   "provenance": {
-    "designSystemVersion": "3.14.0"
+    "designSystemVersion": "3.14.0",
+    "method": "design-system documentation",
+    "source": "packages/usa-header/src/usa-header.twig + _includes/usa-navbar.twig (pinned @uswds/uswds 3.14.0) — correction: added the usa-navbar wrapper and usa-nav__primary list the tile omitted"
   }
 }</script>
 </head>
 <body>
 <a class="usa-skipnav" href="#main-content">Skip to main content</a>
 <header class="usa-header usa-header--basic" id="header">
-  <div class="usa-logo">
-    <em class="usa-logo__text">Agency Name</em>
+  <div class="usa-navbar">
+    <div class="usa-logo">
+      <em class="usa-logo__text">Agency Name</em>
+    </div>
+    <button class="usa-menu-btn">Menu</button>
   </div>
-  <button class="usa-menu-btn">Menu</button>
   <nav class="usa-nav" aria-label="Main navigation">
-    <ul class="usa-list--unstyled">
+    <ul class="usa-nav__primary">
       <li class="usa-nav__primary-item">
         <a class="usa-nav__link" href="#">Section One</a>
       </li>

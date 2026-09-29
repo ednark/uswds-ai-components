@@ -3825,7 +3825,8 @@
       "prerequisites": [
         "footer"
       ],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "footer/sign-up.resolved.html"
     },
     {
       "file": "footer/slim.html",

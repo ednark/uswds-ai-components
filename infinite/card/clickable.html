@@ -72,7 +72,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Keep one link per card: the heading wraps the only <a>. The tile's .demo-stretch-link pattern CSS (style block) stretches that link over the card — copy the CSS with the markup. Never invent usa-* classes for this (make-link and card-link were invented and are removed).",
+    "agentPrompt": "Keep one link per card: the heading wraps the only <a>. The tile's stretched-link pattern CSS (style block, on .usa-card__heading a::after) stretches that link over the card — copy the CSS with the markup. Never invent usa-* classes for this (make-link, card-link, and demo-stretch-link were invented and are removed).",
     "relatedComponents": [
       "collection",
       "link"
@@ -100,7 +100,7 @@
       "li.usa-card > div.usa-card__container",
       "div.usa-card__header with h2.usa-card__heading link",
       "div.usa-card__body",
-      ".demo-stretch-link pattern CSS (copy with the markup)"
+      "stretched-link pattern CSS on .usa-card__heading a::after (copy with the markup)"
     ],
     "editable": [
       "Card heading",
@@ -110,7 +110,7 @@
     ],
     "limitations": [
       "Entire card is one link - can't have multiple actions",
-      ".demo-stretch-link is a pattern helper defined in this tile's style block, not a USWDS class — copy its CSS with the markup"
+      "The stretched-link overlay is pattern CSS on .usa-card__heading a::after defined in this tile's style block (USWDS has no utility class for it) — copy the CSS with the markup"
     ]
   },
   "file": "card/clickable.html",
@@ -131,14 +131,16 @@
     ]
   },
   "provenance": {
-    "designSystemVersion": "3.14.0"
+    "designSystemVersion": "3.14.0",
+    "method": "design-system documentation",
+    "source": "packages/usa-card/src/usa-card.twig (pinned @uswds/uswds 3.14.0) — correction: replaced the invented demo-stretch-link class with the official heading-link + ::after overlay pattern"
   }
 }</script>
 <style>
-  /* Pattern helper (NOT a USWDS class): stretches the heading link over the
-     whole card. usa-card__container is position: relative in USWDS, so the
-     ::after overlay covers the card. Copy these rules with the markup. */
-  .demo-stretch-link::after {
+  /* Stretched-link pattern: the heading link covers the whole card via ::after
+     (usa-card__container is position: relative in USWDS). These rules ship
+     with the tile — USWDS has no utility class for the overlay. */
+  .usa-card__heading a::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -154,7 +156,7 @@
       </div>
       <div class="usa-card__header">
         <h2 class="usa-card__heading">
-          <a href="/topic-one" class="demo-stretch-link">Clickable Card Heading</a>
+          <a href="/topic-one">Clickable Card Heading</a>
         </h2>
       </div>
       <div class="usa-card__body">

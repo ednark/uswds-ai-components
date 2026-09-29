@@ -93,7 +93,9 @@
       "footer.usa-footer.usa-footer--big",
       "div.grid-container.usa-footer__return-to-top",
       "div.usa-footer__primary-section with nav.usa-footer__nav and column sections",
-      "div.usa-footer__secondary-section"
+      "div.usa-footer__secondary-section",
+      "div.usa-sign-up block in the right column (tablet:grid-col-4)",
+      "div.usa-sign-up block in the right column (tablet:grid-col-4)"
     ],
     "editable": [
       "Agency info",
@@ -102,7 +104,7 @@
     ],
     "limitations": [
       "Takes significant vertical space",
-      "Column layout is core grid classes (grid-row/grid-gap-4 + mobile-lg/desktop:grid-col-*) plus usa-footer__primary-content; the demo-footer-grid/__col/__heading classes this tile once used are not USWDS and are removed"
+      "Column layout is core grid classes (grid-row/grid-gap-4 + mobile-lg/desktop:grid-col-*) plus usa-footer__primary-content; an earlier revision used non-USWDS demo classes — removed; the markup now mirrors the official twig"
     ]
   },
   "file": "footer/big.html",
@@ -126,7 +128,9 @@
     ]
   },
   "provenance": {
-    "designSystemVersion": "3.14.0"
+    "designSystemVersion": "3.14.0",
+    "method": "design-system documentation",
+    "source": "packages/usa-footer/src/usa-footer--big.twig + _includes/usa-footer-nav-primary--big.twig + _includes/usa-signup.twig (pinned @uswds/uswds 3.14.0) — correction: added the grid-container + tablet:grid-col-8/4 primary-section split and the sign-up block the official big footer includes"
   }
 }</script>
 </head>
@@ -136,6 +140,9 @@
     <a href="#main-content">Return to top</a>
   </div>
   <div class="usa-footer__primary-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="tablet:grid-col-8">
     <nav class="usa-footer__nav" aria-label="Footer navigation">
       <div class="grid-row grid-gap-4">
         <div class="mobile-lg:grid-col-6 desktop:grid-col-3">
@@ -158,6 +165,19 @@
         </div>
       </div>
     </nav>
+        </div>
+        <div class="tablet:grid-col-4">
+          <div class="usa-sign-up">
+            <h3 class="usa-sign-up__heading">Sign up</h3>
+            <form class="usa-form">
+              <label class="usa-label" for="email">Your email address</label>
+              <input class="usa-input" id="email" name="email" type="email" autocomplete="email"/>
+              <button class="usa-button" type="submit">Sign up</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="usa-footer__secondary-section">
     <div class="grid-container">
