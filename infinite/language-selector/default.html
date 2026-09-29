@@ -99,7 +99,14 @@
     "tokenOverrides": [
       "$theme-language-selector-border-radius",
       "$theme-language-selector-background-color"
-    ]
+    ],
+    "behavior": {
+      "requires": "required",
+      "source": "host",
+      "script": "uswds.min.js",
+      "init": "auto — uswds.min.js initializes components on DOMContentLoaded",
+      "fallback": "links navigate; no expandable behavior"
+    }
   },
   "constraints": {
     "preserve": [

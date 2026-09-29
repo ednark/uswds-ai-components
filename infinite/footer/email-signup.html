@@ -95,7 +95,14 @@
     ],
     "tokenOverrides": [
       "$theme-footer-font-family"
-    ]
+    ],
+    "behavior": {
+      "requires": "optional",
+      "source": "host",
+      "script": "uswds.min.js",
+      "init": "auto — uswds.min.js initializes components on DOMContentLoaded",
+      "fallback": "links and form action work; no JS enhancement"
+    }
   },
   "constraints": {
     "preserve": [

@@ -93,7 +93,14 @@
     "tokenOverrides": [
       "$theme-breadcrumb-font-family",
       "$theme-breadcrumb-background-color"
-    ]
+    ],
+    "behavior": {
+      "requires": "optional",
+      "source": "host",
+      "script": "uswds.min.js",
+      "init": "auto — uswds.min.js initializes components on DOMContentLoaded",
+      "fallback": "links navigate; current-page span not announced via JS"
+    }
   },
   "constraints": {
     "preserve": [

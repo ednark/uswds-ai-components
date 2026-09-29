@@ -86,7 +86,14 @@
     ],
     "tokenOverrides": [
       "$theme-navigation-width"
-    ]
+    ],
+    "behavior": {
+      "requires": "required",
+      "source": "host",
+      "script": "uswds.min.js",
+      "init": "auto — uswds.min.js initializes components on DOMContentLoaded",
+      "fallback": "anchor links navigate natively; no scroll spy"
+    }
   },
   "constraints": {
     "preserve": [

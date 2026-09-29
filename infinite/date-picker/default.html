@@ -96,7 +96,14 @@
     "tokenOverrides": [
       "$theme-date-picker-border-radius",
       "$theme-date-picker-focus-border-color"
-    ]
+    ],
+    "behavior": {
+      "requires": "required",
+      "source": "host",
+      "script": "uswds.min.js",
+      "init": "auto — uswds.min.js initializes components on DOMContentLoaded",
+      "fallback": "plain text input; no calendar widget"
+    }
   },
   "constraints": {
     "preserve": [

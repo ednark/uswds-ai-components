@@ -98,7 +98,14 @@
     "tokenOverrides": [
       "$theme-select-border-radius",
       "$theme-input-state-border-width"
-    ]
+    ],
+    "behavior": {
+      "requires": "optional",
+      "source": "host",
+      "script": "uswds.min.js",
+      "init": "auto — uswds.min.js initializes components on DOMContentLoaded",
+      "fallback": "native select element; no JS enhancement"
+    }
   },
   "constraints": {
     "preserve": [

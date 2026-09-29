@@ -85,7 +85,14 @@
       "right"
     ],
     "settings": [],
-    "tokenOverrides": []
+    "tokenOverrides": [],
+    "behavior": {
+      "requires": "required",
+      "source": "host",
+      "script": "uswds.min.js",
+      "init": "auto — uswds.min.js initializes components on DOMContentLoaded",
+      "fallback": "relies on title attribute only; no positioned tooltip"
+    }
   },
   "constraints": {
     "preserve": [

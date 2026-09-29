@@ -101,7 +101,14 @@
       "$theme-input-border-radius",
       "$theme-input-focus-border-color",
       "$theme-input-state-border-width"
-    ]
+    ],
+    "behavior": {
+      "requires": "optional",
+      "source": "host",
+      "script": "uswds.min.js",
+      "init": "auto — uswds.min.js initializes components on DOMContentLoaded",
+      "fallback": "native input; no JS enhancement"
+    }
   },
   "constraints": {
     "preserve": [

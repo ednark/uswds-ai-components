@@ -84,7 +84,14 @@
     ],
     "tokenOverrides": [
       "$theme-step-indicator-counter-gap"
-    ]
+    ],
+    "behavior": {
+      "requires": "required",
+      "source": "host",
+      "script": "uswds.min.js",
+      "init": "auto — uswds.min.js initializes components on DOMContentLoaded",
+      "fallback": "static progress display"
+    }
   },
   "constraints": {
     "preserve": [

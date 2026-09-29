@@ -83,7 +83,14 @@
       "pie"
     ],
     "settings": [],
-    "tokenOverrides": []
+    "tokenOverrides": [],
+    "behavior": {
+      "requires": "optional",
+      "source": "host",
+      "script": "uswds.min.js",
+      "init": "auto — uswds.min.js initializes components on DOMContentLoaded",
+      "fallback": "static SVG render; no interactive tooltips"
+    }
   },
   "constraints": {
     "preserve": [

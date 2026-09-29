@@ -97,7 +97,14 @@
     "tokenOverrides": [
       "$theme-step-indicator-border-color",
       "$theme-step-indicator-current-color"
-    ]
+    ],
+    "behavior": {
+      "requires": "required",
+      "source": "host",
+      "script": "uswds.min.js",
+      "init": "auto — uswds.min.js initializes components on DOMContentLoaded",
+      "fallback": "static progress display"
+    }
   },
   "constraints": {
     "preserve": [

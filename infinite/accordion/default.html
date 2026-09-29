@@ -95,7 +95,14 @@
     "tokenOverrides": [
       "$theme-accordion-background-color",
       "$theme-accordion-border-color"
-    ]
+    ],
+    "behavior": {
+      "requires": "required",
+      "source": "host",
+      "script": "uswds.min.js",
+      "init": "auto — uswds.min.js initializes components on DOMContentLoaded",
+      "fallback": "static-expanded, all panels visible"
+    }
   },
   "constraints": {
     "preserve": [

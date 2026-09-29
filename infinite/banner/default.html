@@ -96,7 +96,13 @@
     "tokenOverrides": [
       "$theme-banner-font-family",
       "$theme-banner-background-color"
-    ]
+    ],
+    "behavior": {
+      "requires": "required",
+      "source": "inline",
+      "init": "auto — the tile’s script toggles aria-expanded on .usa-banner__button",
+      "fallback": "collapsed; here’s-how-you-know guidance hidden"
+    }
   },
   "constraints": {
     "preserve": [
@@ -184,5 +190,17 @@
     </div>
   </div>
 </section>
+<script>
+  // Behavior: banner disclosure — dependency-free (behavior.source: inline).
+  // Toggles aria-expanded + visibility for .usa-banner__button/.usa-banner__content.
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('.usa-banner__button');
+    if (!btn) return;
+    var expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
+    var content = btn.closest('.usa-banner').querySelector('.usa-banner__content');
+    if (content) content.hidden = expanded;
+  });
+</script>
 </body>
 </html>

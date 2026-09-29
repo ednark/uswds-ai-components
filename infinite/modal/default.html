@@ -101,7 +101,14 @@
     "tokenOverrides": [
       "$theme-modal-border-radius",
       "$theme-modal-lg-max-width"
-    ]
+    ],
+    "behavior": {
+      "requires": "required",
+      "source": "host",
+      "script": "uswds.min.js",
+      "init": "auto — uswds.min.js initializes components on DOMContentLoaded",
+      "fallback": "trigger is inert; dialog content hidden — link to a standalone page instead"
+    }
   },
   "constraints": {
     "preserve": [

@@ -98,7 +98,14 @@
     "tokenOverrides": [
       "$theme-tooltip-font-family",
       "$theme-tooltip-background-color"
-    ]
+    ],
+    "behavior": {
+      "requires": "required",
+      "source": "host",
+      "script": "uswds.min.js",
+      "init": "auto — uswds.min.js initializes components on DOMContentLoaded",
+      "fallback": "relies on title attribute only; no positioned tooltip"
+    }
   },
   "constraints": {
     "preserve": [

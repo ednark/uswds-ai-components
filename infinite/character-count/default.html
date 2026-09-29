@@ -95,7 +95,14 @@
     ],
     "tokenOverrides": [
       "$theme-input-border-radius"
-    ]
+    ],
+    "behavior": {
+      "requires": "required",
+      "source": "host",
+      "script": "uswds.min.js",
+      "init": "auto — uswds.min.js initializes components on DOMContentLoaded",
+      "fallback": "no live count; maxlength still enforced natively"
+    }
   },
   "constraints": {
     "preserve": [

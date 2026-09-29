@@ -97,7 +97,14 @@
     ],
     "tokenOverrides": [
       "$theme-search-font-family"
-    ]
+    ],
+    "behavior": {
+      "requires": "required",
+      "source": "host",
+      "script": "uswds.min.js",
+      "init": "auto — uswds.min.js initializes components on DOMContentLoaded",
+      "fallback": "form submits via GET; no JS enhancement"
+    }
   },
   "constraints": {
     "preserve": [

@@ -76,7 +76,14 @@
     "relatedComponents": [
       "date-picker",
       "time-picker"
-    ]
+    ],
+    "behavior": {
+      "requires": "required",
+      "source": "host",
+      "script": "uswds.min.js",
+      "init": "auto — uswds.min.js initializes components on DOMContentLoaded",
+      "fallback": "plain text inputs; no calendar widget"
+    }
   },
   "coordination": {
     "prerequisiteComponents": [],

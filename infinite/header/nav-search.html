@@ -91,7 +91,14 @@
     ],
     "tokenOverrides": [
       "$theme-header-font-family"
-    ]
+    ],
+    "behavior": {
+      "requires": "required",
+      "source": "host",
+      "script": "uswds.min.js",
+      "init": "auto — uswds.min.js initializes components on DOMContentLoaded",
+      "fallback": "primary nav renders as flat visible list; menu toggle inert"
+    }
   },
   "constraints": {
     "preserve": [

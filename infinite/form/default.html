@@ -96,7 +96,14 @@
     "tokenOverrides": [
       "$theme-form-font-family",
       "$theme-input-border-radius"
-    ]
+    ],
+    "behavior": {
+      "requires": "optional",
+      "source": "host",
+      "script": "uswds.min.js",
+      "init": "auto — uswds.min.js initializes components on DOMContentLoaded",
+      "fallback": "native submission; no client-side validation styling"
+    }
   },
   "constraints": {
     "preserve": [

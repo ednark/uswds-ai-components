@@ -95,7 +95,14 @@
     "tokenOverrides": [
       "$theme-input-error-border-color",
       "$theme-input-error-message-color"
-    ]
+    ],
+    "behavior": {
+      "requires": "optional",
+      "source": "host",
+      "script": "uswds.min.js",
+      "init": "auto — uswds.min.js initializes components on DOMContentLoaded",
+      "fallback": "native constraint validation; no styled error summary"
+    }
   },
   "constraints": {
     "preserve": [

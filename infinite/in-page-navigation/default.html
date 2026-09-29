@@ -100,7 +100,14 @@
     "tokenOverrides": [
       "$theme-in-page-nav-border-radius",
       "$theme-in-page-nav-link-color"
-    ]
+    ],
+    "behavior": {
+      "requires": "required",
+      "source": "host",
+      "script": "uswds.min.js",
+      "init": "auto — uswds.min.js initializes components on DOMContentLoaded",
+      "fallback": "anchor links navigate natively; no scroll spy"
+    }
   },
   "constraints": {
     "preserve": [
