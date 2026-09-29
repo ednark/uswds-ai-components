@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "note": "Field observations of agencies extending the USWDS namespace. Records about the ecosystem — never tiles. See _base/protocol.md Surface 7.",
+  "observations": [
+    {
+      "observed": "2026-09-29",
+      "site": "hhs.gov",
+      "url": "https://www.hhs.gov",
+      "family": "alert",
+      "kind": "extension",
+      "extension": "usa-alert--no-collapse",
+      "note": "alert rendered without the collapse control",
+      "source": "field-research/agency-survey-2026-09"
+    },
+    {
+      "observed": "2026-09-29",
+      "site": "hhs.gov",
+      "url": "https://www.hhs.gov",
+      "family": "alert",
+      "kind": "extension",
+      "extension": "usa-alert--no-icon",
+      "note": "alert rendered without the leading icon",
+      "source": "field-research/agency-survey-2026-09"
+    },
+    {
+      "observed": "2026-09-29",
+      "site": "hhs.gov",
+      "url": "https://www.hhs.gov",
+      "family": "section",
+      "kind": "extension",
+      "extension": "usa-section--background-light-gray",
+      "note": "background-color modifier beyond the documented section variants",
+      "source": "field-research/agency-survey-2026-09"
+    },
+    {
+      "observed": "2026-09-29",
+      "site": "hhs.gov",
+      "url": "https://www.hhs.gov",
+      "family": "header",
+      "kind": "extension",
+      "extension": "usa-header--inverse",
+      "note": "inverse (dark) header — legacy 2.x-era vocabulary; verified absent from the pinned 3.14.0 stylesheet",
+      "source": "field-research/agency-survey-2026-09"
+    },
+    {
+      "observed": "2026-09-29",
+      "site": "usda.gov",
+      "url": "https://www.usda.gov",
+      "family": "header",
+      "kind": "extension",
+      "extension": "usa-nav-bottom",
+      "note": "secondary nav strip below the primary header nav (usa-nav-bottom* family: -about, -farming-ranching, -food, -forests, -search, -sustainability, -trades-markets)",
+      "source": "field-research/agency-survey-2026-09"
+    },
+    {
+      "observed": "2026-09-29",
+      "site": "usda.gov",
+      "url": "https://www.usda.gov",
+      "family": "search",
+      "kind": "extension",
+      "extension": "usa-megamenu-search",
+      "note": "search control embedded in the megamenu chrome",
+      "source": "field-research/agency-survey-2026-09"
+    },
+    {
+      "observed": "2026-09-29",
+      "site": "usda.gov",
+      "url": "https://www.usda.gov",
+      "family": "follow",
+      "kind": "extension",
+      "extension": "usa-sign_up-header",
+      "note": "sign-up (follow/newsletter) block header in the site chrome (usa-sign_up-* family)",
+      "source": "field-research/agency-survey-2026-09"
+    }
+  ]
+}
