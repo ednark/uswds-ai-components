@@ -141,6 +141,95 @@
       "extension": "usa-cards-with-header",
       "note": "card grid with section header composition",
       "source": "field-research/agency-survey-2026-09 (round 2)"
+    },
+    {
+      "observed": "2026-09-29",
+      "site": "ams.usda.gov",
+      "url": "https://www.ams.usda.gov",
+      "family": "footer",
+      "kind": "extension",
+      "extension": "usa-footer-medium",
+      "note": "medium footer, single-dash form — 3rd site overall (eeoc, cbp use usa-footer--medium); spelling variants across sites",
+      "source": "field-research/agency-survey-2026-09 (round 3)"
+    },
+    {
+      "observed": "2026-09-29",
+      "site": "rd.usda.gov",
+      "url": "https://www.rd.usda.gov",
+      "kind": "extension",
+      "extension": "usa-tabs",
+      "note": "legacy 2.x-era tabs vocabulary — USWDS 3.x ships no tabs component; verified absent from the pinned stylesheet (no canon family exists — orphan 2.x component)",
+      "source": "field-research/agency-survey-2026-09 (round 3)"
+    },
+    {
+      "observed": "2026-09-29",
+      "site": "rd.usda.gov",
+      "url": "https://www.rd.usda.gov",
+      "family": "alert",
+      "kind": "extension",
+      "extension": "usa-message",
+      "note": "legacy 2.x-era alert vocabulary (usa-message); verified absent from the pinned stylesheet",
+      "source": "field-research/agency-survey-2026-09 (round 3)"
+    },
+    {
+      "observed": "2026-09-29",
+      "site": "rd.usda.gov",
+      "url": "https://www.rd.usda.gov",
+      "family": "section",
+      "kind": "extension",
+      "extension": "usa-section-lighter",
+      "note": "background modifier beyond documented section variants",
+      "source": "field-research/agency-survey-2026-09 (round 3)"
+    },
+    {
+      "observed": "2026-09-29",
+      "site": "rd.usda.gov",
+      "url": "https://www.rd.usda.gov",
+      "family": "button",
+      "kind": "extension",
+      "extension": "usa-button-blue",
+      "note": "site-local color modifier (cf. cbp usa-green-button)",
+      "source": "field-research/agency-survey-2026-09 (round 3)"
+    },
+    {
+      "observed": "2026-09-29",
+      "site": "doi.gov",
+      "url": "https://www.doi.gov",
+      "family": "hero",
+      "kind": "composition",
+      "extension": "usa-hero-video",
+      "note": "video hero composition on the hero family — 5th site using hero",
+      "source": "field-research/agency-survey-2026-09 (round 3)"
+    },
+    {
+      "observed": "2026-09-29",
+      "site": "ers.usda.gov",
+      "url": "https://www.ers.usda.gov",
+      "family": "link",
+      "kind": "extension",
+      "extension": "usa-link--accent-cool",
+      "note": "link color modifier; verified absent from the pinned stylesheet",
+      "source": "field-research/agency-survey-2026-09 (round 3)"
+    },
+    {
+      "observed": "2026-09-29",
+      "site": "rd.usda.gov",
+      "url": "https://www.rd.usda.gov",
+      "family": "follow",
+      "kind": "extension",
+      "extension": "usa-sign_up-header",
+      "note": "follow/sign-up block again — the follow-family coverage gap now has 4 site citations (usda, usitc, rd, ams via sign-up block)",
+      "source": "field-research/agency-survey-2026-09 (round 3)"
+    },
+    {
+      "observed": "2026-09-29",
+      "site": "ams.usda.gov",
+      "url": "https://www.ams.usda.gov",
+      "family": "button",
+      "kind": "extension",
+      "extension": "usa-button-big",
+      "note": "single-dash form of the canonical usa-button--big (tiled) — legacy modifier convention, not a new class",
+      "source": "field-research/agency-survey-2026-09 (round 3)"
     }
   ]
 }
