@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Sign up for updates: an email newsletter signup block embedded in the footer.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Footer (Sign Up)</title>
+  <script type="application/json" id="uswds-agent-meta">
+  {
+    "file": "footer/sign-up.html",
+    "title": "Footer (Sign Up)",
+    "_schemaVersion": 2,
+    "discovery": {
+      "description": "Sign up for updates: an email newsletter signup block (heading, email input, submit) embedded in the footer.",
+      "uswdsComponentType": "sign-up",
+      "uswdClass": "usa-sign-up",
+      "section": "forms",
+      "variant": "sign-up",
+      "requiresJs": "no",
+      "interaction": ["click", "focus", "submit"],
+      "a11y": { "wcag21AA": true, "keyboardNav": true },
+      "govCompliance": ["Section 508", "WCAG 2.1 AA"],
+      "tier": "curated",
+      "tags": ["footer", "sign-up", "newsletter", "email", "form", "follow"],
+      "origin": "design-system",
+      "compliance": { "nistControls": [], "fedRampLevel": "IL2", "section508": true, "wcag21AA": true, "piiHandling": "accepts_input", "auditTrailCompatible": false, "dataMaskingCompatible": false },
+      "mobileUX": { "touchTargetSize": "44px", "requiredMinSpacing": "8px", "orientationLocked": false, "fullscreenSafe": true }
+    },
+    "selection": {
+      "useWhen": [
+        "The site's goal includes getting visitors to sign up for a newsletter (USWDS footer guidance)",
+        "A footer needs an email capture block — the official placement is the big footer's right column"
+      ],
+      "avoidWhen": [
+        "The signup submission endpoint doesn't exist — never ship a dead form",
+        "More than an email address is needed — the official template is a single-email signup"
+      ],
+      "guidance": [
+        { "guidance": true, "description": "Keep the label/input pairing (label for ↔ input id) and autocomplete=email — both are accessibility requirements" },
+        { "guidance": true, "description": "Keep the block to one email field and one submit, as the official template does — minimal friction" },
+        { "guidance": false, "description": "Do not add extra fields (name, phone) — the official pattern is email-only" }
+      ]
+    },
+    "instruction": {
+      "agentPrompt": "Adapt the heading and button text. The form's action and submission handling belong to the host application. Official placement: the big footer's right column (tablet:grid-col-4).",
+      "relatedComponents": ["footer", "text-input", "button"],
+      "behavior": {
+        "requires": "optional",
+        "source": "host",
+        "script": "uswds.min.js",
+        "init": "no component JS — form submission is wired by the host application",
+        "fallback": "fully functional static form; native browser submission"
+      }
+    },
+    "coordination": {
+      "prerequisiteComponents": [
+        { "name": "footer", "reason": "the sign-up block embeds in the footer (big footer right column per the official example)" }
+      ],
+      "compositionCost": { "costTier": "cheap", "estimatedTokens": 700, "renderingTimeMs": 2, "recommendedModel": "haiku" },
+      "agentPromptSequence": [
+        "1. Place the usa-sign-up block in the footer's right column (tablet:grid-col-4)",
+        "2. Wire the form action to the site's newsletter endpoint",
+        "3. Verify label/input pairing and autocomplete before finishing"
+      ]
+    },
+    "constraints": {
+      "preserve": [
+        "div.usa-sign-up wrapper",
+        "usa-sign-up__heading heading element",
+        "usa-form with label/input/button structure",
+        "label[for] ↔ input[id] pairing",
+        "input type=email with autocomplete=email"
+      ],
+      "portableInvariants": [
+        "form semantics (label/input pairing, email type)",
+        "single-submit structure"
+      ],
+      "editable": [
+        "Heading text",
+        "Label and button text",
+        "Form action and input name"
+      ],
+      "limitations": [
+        "Submission handling is the host application's responsibility — the component ships markup only",
+        "The official template provides only an email field — keep friction minimal",
+        "Official placement is the big footer's right column"
+      ]
+    },
+    "tradeoffs": {
+      "sacrifices": [
+        { "capability": "additional signup fields (name, preferences)", "because": "the official template ships a single-email signup — minimal friction is the documented pattern" }
+      ]
+    },
+    "provenance": {
+      "observed": "2026-09-29",
+      "method": "design-system documentation",
+      "source": "packages/usa-footer/src/_includes/usa-signup.twig (pinned @uswds/uswds 3.14.0) + footer docs 'Sign up' section; corroborated by live-site observation — usitc.gov, ams.usda.gov (canon spelling), usda.gov, rd.usda.gov (legacy underscore form) — field-research/agency-survey-2026-09 rounds 2–3",
+      "designSystemVersion": "3.14.0"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="usa-sign-up">
+    <h3 class="usa-sign-up__heading">Sign up</h3>
+    <form class="usa-form">
+      <label class="usa-label" for="email" id="">Your email address</label>
+      <input class="usa-input" id="email" name="email" type="email" autocomplete="email"/>
+      <button class="usa-button" type="submit">Sign up</button>
+    </form>
+  </div>
+</body>
+</html>

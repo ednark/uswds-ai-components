@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "metadataSchemaVersion": 2,
   "generatedBy": "_base/generate-index.mjs",
-  "total": 154,
+  "total": 155,
   "designSystem": "U.S. Web Design System 3.14.0",
   "facets": {
     "section": {
@@ -12,7 +12,7 @@
       "supporting": 11,
       "navigation": 30,
       "buttons": 1,
-      "forms": 42,
+      "forms": 43,
       "layout": 12,
       "typography": 5,
       "overlays": 1,
@@ -35,6 +35,7 @@
       "date-range-picker": 1,
       "file-input": 2,
       "footer": 5,
+      "sign-up": 1,
       "form": 2,
       "header": 6,
       "hero": 1,
@@ -76,12 +77,12 @@
     },
     "requiresJs": {
       "required": 39,
-      "no": 103,
+      "no": 104,
       "optional": 12
     },
     "interaction": {
-      "click": 99,
-      "focus": 89,
+      "click": 100,
+      "focus": 90,
       "keyboard": 14,
       "passive": 46,
       "hover": 31,
@@ -90,23 +91,23 @@
       "select": 2,
       "drag": 4,
       "drop": 1,
-      "submit": 6,
+      "submit": 7,
       "validation": 2,
       "scroll": 3,
       "change": 4,
       "dismiss": 2
     },
     "a11y": {
-      "wcag21AA": 154,
-      "keyboardNav": 136,
+      "wcag21AA": 155,
+      "keyboardNav": 137,
       "screenReader": 151,
       "reducedMotion": 152,
       "forcedColors": 152,
       "ariaAttributes": 144
     },
     "govCompliance": {
-      "Section 508": 154,
-      "WCAG 2.1 AA": 154,
+      "Section 508": 155,
+      "WCAG 2.1 AA": 155,
       "21st Century IDEA": 152,
       "NIST Guidelines": 4,
       "Required by US federal agencies": 4,
@@ -149,6 +150,7 @@
       "pie": 1,
       "collapsible": 1,
       "email-signup": 1,
+      "sign-up": 1,
       "feedback": 1,
       "basic-megamenu": 1,
       "basic": 1,
@@ -189,11 +191,12 @@
     },
     "costTier": {
       "moderate": 73,
-      "cheap": 77,
+      "cheap": 78,
       "expensive": 4
     },
     "prerequisites": {
       "form": 35,
+      "footer": 1,
       "header": 1
     },
     "compositionRecipes": {
@@ -206,15 +209,15 @@
     },
     "fedRampLevel": {
       "IL2+": 152,
-      "IL2": 2
+      "IL2": 3
     },
     "piiHandling": {
       "displays_only": 95,
       "none": 18,
-      "accepts_input": 41
+      "accepts_input": 42
     },
     "touchTargetSize": {
-      "44px": 154
+      "44px": 155
     },
     "supportedTokenProfiles": {
       "highContrast": 152

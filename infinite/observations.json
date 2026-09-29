@@ -66,10 +66,10 @@
       "observed": "2026-09-29",
       "site": "usda.gov",
       "url": "https://www.usda.gov",
-      "family": "follow",
+      "family": "footer",
       "kind": "extension",
       "extension": "usa-sign_up-header",
-      "note": "sign-up (follow/newsletter) block header in the site chrome (usa-sign_up-* family)",
+      "note": "sign-up (follow/newsletter) block header in the site chrome (usa-sign_up-* family) | family corrected to footer: usa-sign-up is a footer include (usa-signup.twig), now tiled as footer/sign-up",
       "source": "field-research/agency-survey-2026-09"
     },
     {
@@ -89,7 +89,7 @@
       "family": "footer",
       "kind": "extension",
       "extension": "usa-footer--medium",
-      "note": "also observed on cbp.gov — NOT in the pinned 3.14.0 stylesheet (verified); needs a USWDS docs check before anyone calls it canon",
+      "note": "also observed on cbp.gov — NOT in the pinned 3.14.0 stylesheet (verified); needs a USWDS docs check before anyone calls it canon | RESOLVED via docs check (2026-09-29): USWDS footer docs document a Medium footer whose canonical markup is <footer class=\"usa-footer\"> — NO modifier class (docs variants table lists only --big and --slim). usa-footer--medium is a docs-ambiguity-invented class; medium is the default footer, already tiled as footer/default.",
       "source": "field-research/agency-survey-2026-09 (round 2)"
     },
     {
@@ -99,17 +99,17 @@
       "family": "footer",
       "kind": "extension",
       "extension": "usa-footer--medium",
-      "note": "second independent site; see eeoc.gov entry",
+      "note": "second independent site; see eeoc.gov entry | RESOLVED via docs check (2026-09-29): USWDS footer docs document a Medium footer whose canonical markup is <footer class=\"usa-footer\"> — NO modifier class (docs variants table lists only --big and --slim). usa-footer--medium is a docs-ambiguity-invented class; medium is the default footer, already tiled as footer/default.",
       "source": "field-research/agency-survey-2026-09 (round 2)"
     },
     {
       "observed": "2026-09-29",
       "site": "usitc.gov",
       "url": "https://www.usitc.gov",
-      "family": "follow",
+      "family": "footer",
       "kind": "extension",
       "extension": "usa-sign-up",
-      "note": "sign-up (follow) block observed again — second site after usda.gov; follow family remains untiled",
+      "note": "sign-up (follow) block observed again — second site after usda.gov; follow family remains untiled | family corrected to footer: usa-sign-up is a footer include (usa-signup.twig), now tiled as footer/sign-up",
       "source": "field-research/agency-survey-2026-09 (round 2)"
     },
     {
@@ -149,7 +149,7 @@
       "family": "footer",
       "kind": "extension",
       "extension": "usa-footer-medium",
-      "note": "medium footer, single-dash form — 3rd site overall (eeoc, cbp use usa-footer--medium); spelling variants across sites",
+      "note": "medium footer, single-dash form — 3rd site overall (eeoc, cbp use usa-footer--medium); spelling variants across sites | RESOLVED via docs check (2026-09-29): USWDS footer docs document a Medium footer whose canonical markup is <footer class=\"usa-footer\"> — NO modifier class (docs variants table lists only --big and --slim). usa-footer--medium is a docs-ambiguity-invented class; medium is the default footer, already tiled as footer/default.",
       "source": "field-research/agency-survey-2026-09 (round 3)"
     },
     {
@@ -215,10 +215,10 @@
       "observed": "2026-09-29",
       "site": "rd.usda.gov",
       "url": "https://www.rd.usda.gov",
-      "family": "follow",
+      "family": "footer",
       "kind": "extension",
       "extension": "usa-sign_up-header",
-      "note": "follow/sign-up block again — the follow-family coverage gap now has 4 site citations (usda, usitc, rd, ams via sign-up block)",
+      "note": "follow/sign-up block again — the follow-family coverage gap now has 4 site citations (usda, usitc, rd, ams via sign-up block) | family corrected to footer: usa-sign-up is a footer include (usa-signup.twig), now tiled as footer/sign-up",
       "source": "field-research/agency-survey-2026-09 (round 3)"
     },
     {

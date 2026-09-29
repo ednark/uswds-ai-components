@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedBy": "_base/generate-index.mjs",
   "algorithm": "sha256 of whitespace-normalized body markup; script elements (metadata + behavior) excluded",
-  "count": 154,
+  "count": 155,
   "tiles": {
     "accordion/bordered.html": "acd50e4a90eb3c040315d66d22804d992890795027e9c3bce7eab2868ebab351",
     "accordion/default.html": "feaf12d2157928e506a8a1c7b5b133f7f5298d0a432953cc5e6a7561847016fe",
@@ -62,6 +62,7 @@
     "footer/collapsible.html": "1fe31865f84e02e51195e88af50640a0431f52fbaba483d8fa40b921cc5cdf1e",
     "footer/default.html": "63a103df451dd0df6177cb0d8c3d02dd00afd11645dcdabc62f1995ca222a7b7",
     "footer/email-signup.html": "f31b5b11f39ee348c3681d3cb1b1d242a58266518db0677ab92e6f98d8176158",
+    "footer/sign-up.html": "fa883c8098010d590159085ad85503bd98bd449ba1d4fa805b46975ec9688a35",
     "footer/slim.html": "489900ac76f9e6f65b7da4914ab93f1a838757a7e6101eb49bec9841705b3cde",
     "form/default.html": "6c64710c6b73ae4779933a7aba4bc052a0675d0d1081593017f95a95bc96e540",
     "form/feedback.html": "7aac9b32f96163a91763ec59decfc2846536b526db9d6a96bd434e3a8793c73f",

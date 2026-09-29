@@ -3,7 +3,7 @@
   "metadataSchemaVersion": 2,
   "generatedBy": "_base/generate-index.mjs",
   "counts": {
-    "total": 154,
+    "total": 155,
     "bySection": {
       "data-display": 26,
       "utilities": 12,
@@ -11,7 +11,7 @@
       "supporting": 11,
       "navigation": 30,
       "buttons": 1,
-      "forms": 42,
+      "forms": 43,
       "layout": 12,
       "typography": 5,
       "overlays": 1,
@@ -3778,6 +3778,54 @@
         "navigation-hierarchy"
       ],
       "resolvedView": "footer/email-signup.resolved.html"
+    },
+    {
+      "file": "footer/sign-up.html",
+      "title": "Footer (Sign Up)",
+      "_schemaVersion": 2,
+      "description": "Sign up for updates: an email newsletter signup block (heading, email input, submit) embedded in the footer.",
+      "uswdsComponentType": "sign-up",
+      "uswdClass": "usa-sign-up",
+      "section": "forms",
+      "variant": "sign-up",
+      "requiresJs": "no",
+      "interaction": [
+        "click",
+        "focus",
+        "submit"
+      ],
+      "a11y": {
+        "wcag21AA": true,
+        "keyboardNav": true
+      },
+      "govCompliance": [
+        "Section 508",
+        "WCAG 2.1 AA"
+      ],
+      "tier": "curated",
+      "tags": [
+        "footer",
+        "sign-up",
+        "newsletter",
+        "email",
+        "form",
+        "follow"
+      ],
+      "origin": "design-system",
+      "fedRampLevel": "IL2",
+      "piiHandling": "accepts_input",
+      "auditTrailCompatible": false,
+      "nistControls": [],
+      "touchTargetSize": "44px",
+      "relatedComponents": [
+        "footer",
+        "text-input",
+        "button"
+      ],
+      "prerequisites": [
+        "footer"
+      ],
+      "costTier": "cheap"
     },
     {
       "file": "footer/slim.html",
@@ -8492,7 +8540,8 @@
         "table",
         "pagination"
       ],
-      "costTier": "cheap"
+      "costTier": "cheap",
+      "resolvedView": "table/sticky-header.resolved.html"
     },
     {
       "file": "table/striped.html",

@@ -192,5 +192,10 @@
     }
   },
   "behaviorContract": true,
-  "patternGuidance": true
+  "patternGuidance": true,
+  "modifierSeparators": [
+    "--",
+    "__",
+    "-"
+  ]
 }
