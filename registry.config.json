@@ -100,7 +100,9 @@
       "concept": "language-toggle",
       "status": "not_part_of_design_system",
       "nearestAlternative": "language-selector tiles (language-selector/default.html, language-selector/expanded.html) or plain links with lang/hreflang (usa.gov Español pattern)",
-      "reason": "USWDS has no header-integrated language toggle component; the language-selector tiles cover the standalone list pattern"
+      "reason": "USWDS has no header-integrated language toggle component; the language-selector tiles cover the standalone list pattern",
+      "consequence": "Do not add a header-integrated language toggle; use the language-selector tiles or plain links with lang/hreflang",
+      "source": "USWDS language selector component documentation (https://designsystem.digital.gov/components/language-selector/) — USWDS publishes no header-integrated language toggle"
     },
     {
       "concept": "hero",
@@ -188,5 +190,6 @@
       ]
     }
   },
-  "behaviorContract": true
+  "behaviorContract": true,
+  "patternGuidance": true
 }

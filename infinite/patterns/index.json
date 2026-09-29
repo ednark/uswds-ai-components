@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generatedBy": "_base/generate-index.mjs",
+  "count": 2,
+  "patterns": [
+    {
+      "pattern": "step-by-step-journey",
+      "description": "Task guidance for presenting an end-to-end journey as ordered, expandable steps with visible progress"
+    },
+    {
+      "pattern": "time-sensitive-action",
+      "description": "Task guidance for acting before a user-facing deadline (trial expiry, cutoffs, conversions)"
+    }
+  ]
+}

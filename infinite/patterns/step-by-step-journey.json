@@ -1,0 +1,44 @@
+{
+  "pattern": "step-by-step-journey",
+  "description": "Task guidance for presenting an end-to-end journey as ordered, expandable steps with visible progress",
+  "useWhen": [
+    "the journey has a specific start and end point",
+    "the user interacts with several pieces of guidance or transactions in a specific order",
+    "steps expand to show the tasks or links that complete them"
+  ],
+  "avoidWhen": [
+    "the user only needs to read guidance, not take an action",
+    "there is no logical or helpful order to complete the tasks",
+    "inside a transactional service — use a multi-task (task-list) flow instead"
+  ],
+  "components": ["step-indicator", "process-list", "accordion"],
+  "doctrine": [
+    {
+      "source": "GOV.UK Design System — Step by step navigation pattern",
+      "url": "https://design-system.service.gov.uk/patterns/step-by-step-navigation/",
+      "note": "end-to-end journeys have a start and end point and complete in a specific order; steps are numbered sections the user can click to expand; tasks are links within each step; order steps by user need; use 'and'/'or' connectors between related steps; make sure the step number is read out to screen reader users"
+    },
+    {
+      "source": "USWDS step indicator component guidance",
+      "url": "https://designsystem.digital.gov/components/step-indicator/",
+      "note": "communicates the user's position in a multi-step flow — the progress semantics the journey carries"
+    },
+    {
+      "source": "USWDS accordion component guidance",
+      "url": "https://designsystem.digital.gov/components/accordion/",
+      "note": "expandable content sections — the disclosure semantics for per-step task lists"
+    },
+    {
+      "source": "USWDS process list component guidance",
+      "url": "https://designsystem.digital.gov/components/process-list/",
+      "note": "sequential-step semantics for journeys read as a narrative rather than navigated step by step"
+    }
+  ],
+  "knownFailureModes": [
+    {
+      "run": "cross-registry-tests/comparison.md Finding 3",
+      "lesson": "L7",
+      "note": "the GOV.UK step-by-step page rebuilt in four registries produced four inconsistent substitutes; the USWDS run mapped app-step-nav to usa-process-list alone — sequential semantics but no progress indicator and no per-step disclosure"
+    }
+  ]
+}

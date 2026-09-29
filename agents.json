@@ -9,6 +9,7 @@
   "indexSchemaVersion": 1,
   "metadataSchemaVersion": 2,
   "recipesUrl": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/recipes/index.json",
+  "patternsUrl": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/patterns/index.json",
   "versionsUrl": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/versions.json",
   "compatibilityUrl": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/compatibility.json",
   "compatibilityTargets": [

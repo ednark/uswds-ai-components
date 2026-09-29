@@ -1,0 +1,38 @@
+{
+  "pattern": "time-sensitive-action",
+  "description": "Task guidance for acting before a user-facing deadline (trial expiry, cutoffs, conversions)",
+  "useWhen": [
+    "the user must act before a deadline",
+    "an expiry, cutoff, or conversion date drives the task"
+  ],
+  "avoidWhen": [
+    "the deadline is not user-facing",
+    "the action has no cost or consequence to explain"
+  ],
+  "components": ["alert", "button", "accordion"],
+  "recipes": ["trial-expiry-banner"],
+  "doctrine": [
+    {
+      "source": "USWDS alert component guidance",
+      "url": "https://designsystem.digital.gov/components/alert/",
+      "note": "match the alert variant to the consequence — warning alerts precede actions with adverse outcomes"
+    },
+    {
+      "source": "USWDS button component guidance",
+      "url": "https://designsystem.digital.gov/components/button/",
+      "note": "default variant for the primary action; secondary for the less-emphasized alternative"
+    }
+  ],
+  "knownFailureModes": [
+    {
+      "run": "task-usability/runs/t5-001",
+      "lesson": "L11",
+      "note": "relative-only countdown ('ends in 12 days') persisted across turns with clean class coverage; resolved after guidance build-back, re-measured in t5-002"
+    },
+    {
+      "run": "task-usability/runs/t5-001",
+      "lesson": "L12",
+      "note": "primary upgrade button carried no plan name or price — commitment opaque before the click; resolved after refined guidance, re-measured in t5-003 (0 high-severity findings from turn 2)"
+    }
+  ]
+}

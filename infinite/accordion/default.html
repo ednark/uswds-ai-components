@@ -61,7 +61,11 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-accordion"
+    "uswdClass": "usa-accordion",
+    "patterns": [
+      "step-by-step-journey",
+      "time-sensitive-action"
+    ]
   },
   "selection": {
     "useWhen": [
@@ -141,6 +145,9 @@
       "1. Keep the accordion JS — without it all sections must render open",
       "2. Keep button+region pairing (aria-controls/aria-expanded) intact",
       "3. Do not nest accordions more than one level deep"
+    ],
+    "compositionRecipes": [
+      "trial-expiry-banner"
     ]
   }
 }</script>

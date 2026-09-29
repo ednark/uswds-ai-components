@@ -32,9 +32,13 @@ Tiles are structurally self-contained: markup, class names, and adaptation metad
 3. Component source: GET https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/{file}
 4. Recipes (multi-component patterns): GET https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/recipes/index.json
    Ordered, nestable component sets for common patterns (contact-form, login-flow,
-   data-table-with-sorting, error-handling-stack, navigation-hierarchy). When the task
-   matches a recipe, fetch it first — one atomic fetch replaces N component lookups
-   plus assembly guesswork.
+   data-table-with-sorting, error-handling-stack, navigation-hierarchy,
+   trial-expiry-banner). When the task matches a recipe, fetch it first — one atomic
+   fetch replaces N component lookups plus assembly guesswork.
+4b. Pattern guidance (task-to-component-set): GET https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/patterns/index.json
+   Which components and doctrine apply to a task (time-sensitive-action), with cited
+   design-system sources and field-test failure modes. Patterns point — page
+   structure is the implementor's job. Fetch the pattern, then its recipes/tiles.
 5. Version history: GET https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/versions.json
    Registry-level history: what changed between registry versions (breakingChanges,
    addedFacets, migrationPath). Check after any gap between your fetches.
@@ -208,9 +212,15 @@ Common customization settings:
 When building common government UI patterns, check recipes first
 (recipes/index.json — they include fetch order, nesting, validation, and a11y notes):
 
+For task-level guidance, fetch the pattern file (patterns/index.json — Surface 6):
+each pattern lists the component families other builds used for the task, the
+design-system doctrine behind them (cited), and the failure modes field tests
+measured when agents assembled them. Patterns never prescribe page structure.
+
 | Pattern | Components to retrieve |
 |---|---|
 | Contact form (recipe) | form + text-input + select + character-count + button + validation |
+| Trial expiry banner (recipe, field-tested) | alert/warning + button/default + button/secondary + accordion |
 | Login flow (recipe) | form + text-input + button + link + alert |
 | Error handling stack (recipe) | validation/alert + alert/error + summary-box/error + text-input/error |
 | Navigation hierarchy (recipe) | skip-nav + banner + header + breadcrumb + side-navigation + footer + identifier |

@@ -1,0 +1,63 @@
+{
+  "recipe": "trial-expiry-banner",
+  "title": "Trial Expiry Banner",
+  "description": "Time-sensitive decision banner: deadline stated as an absolute date with days remaining, upgrade action with pre-commitment context, cancellation alternative, and renewal terms. Field-tested in task-usability/runs/t5-001 through t5-003.",
+  "components": [
+    {
+      "order": 1,
+      "component": "alert",
+      "variant": "warning",
+      "file": "alert/warning.html",
+      "role": "primary-message",
+      "required": true,
+      "reason": "Carries the deadline; states the expiration date in absolute terms with days remaining"
+    },
+    {
+      "order": 2,
+      "component": "button",
+      "variant": "default",
+      "file": "button/default.html",
+      "role": "action",
+      "required": true,
+      "reason": "The upgrade commitment action; its consequence (plan, price, billing cadence) must be visible before the click"
+    },
+    {
+      "order": 3,
+      "component": "button",
+      "variant": "secondary",
+      "file": "button/secondary.html",
+      "role": "action",
+      "required": false,
+      "reason": "The cancellation or manage-plan alternative; state where it leads"
+    },
+    {
+      "order": 4,
+      "component": "accordion",
+      "variant": "default",
+      "file": "accordion/default.html",
+      "role": "supporting-detail",
+      "required": false,
+      "reason": "Renewal and cancellation terms, collapsed until requested"
+    }
+  ],
+  "nesting": "The alert is the banner container; the primary and secondary buttons sit inside the alert's content area (secondary after primary); the terms accordion sits directly below the alert in the same section",
+  "validationOrder": [
+    "Expiration date is stated in absolute terms (e.g. 'on September 29, 2026'), not as a relative countdown alone",
+    "Days remaining matches the stated date",
+    "The commitment action states its consequence before the click (plan name, price, billing cadence)",
+    "The cancellation or dismiss control states whether the choice persists"
+  ],
+  "a11yNotes": [
+    "Do not rely on color or countdown urgency alone — the deadline is in text",
+    "The two buttons are distinguishable by more than styling alone (distinct labels)",
+    "Accordion sections remain keyboard operable when the no-JS fallback is preserved"
+  ],
+  "agentPromptSequence": [
+    "1. Fetch the warning alert (order 1) and place it as the page's primary message",
+    "2. State the expiration date in absolute terms with days remaining inside the alert",
+    "3. Add the upgrade button (order 2) with its pre-commitment context (plan, price, cadence) visible before the click",
+    "4. Add the cancel/manage button (order 3) and the terms accordion (order 4) when the task includes the decision",
+    "5. Verify the deadline statement, the click consequence, and the dismiss persistence before finishing"
+  ],
+  "source": "Field-tested: task-usability/runs/t5-001–t5-003 (2026-09-17), trial-expiry banner task; final t5-003 artifact used alert--warning + button + button--secondary + accordion"
+}

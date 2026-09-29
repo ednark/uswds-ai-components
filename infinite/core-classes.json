@@ -15,22 +15,31 @@
       "usa-intro"
     ],
     "elements": [
-      "usa-logo",
-      "usa-nav",
-      "usa-label",
+      "usa-card__body",
+      "usa-card__header",
       "usa-hint",
       "usa-hint--required",
-      "usa-input-group",
-      "usa-list",
-      "usa-search",
-      "usa-card__header",
-      "usa-card__body",
-      "usa-icon-list__item",
       "usa-icon-list__icon",
-      "usa-process-list__heading"
+      "usa-icon-list__item",
+      "usa-input-group",
+      "usa-label",
+      "usa-list",
+      "usa-logo",
+      "usa-menu-btn",
+      "usa-nav",
+      "usa-nav__inner",
+      "usa-nav__link",
+      "usa-nav__primary",
+      "usa-nav__primary-item",
+      "usa-navbar",
+      "usa-process-list__heading",
+      "usa-search"
     ],
     "states": [
       "usa-label--error"
+    ],
+    "utilities": [
+      "usa-sr-only"
     ]
   }
 }

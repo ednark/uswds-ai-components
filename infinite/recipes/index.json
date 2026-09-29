@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedBy": "hand-authored (tools/add-coordination.mjs consumes this)",
   "spec": "Surface 4: Component Recipes (ai-component-registry-spec/protocol.md)",
-  "count": 6,
+  "count": 7,
   "urlPattern": "infinite/recipes/{recipe}.json",
   "recipes": [
     {
@@ -46,6 +46,13 @@
       "description": "USAGov homepage pattern: banner, extended header, topic card grid, footer",
       "componentCount": 4,
       "url": "infinite/recipes/topic-landing-page.json"
+    },
+    {
+      "name": "trial-expiry-banner",
+      "title": "Trial Expiry Banner",
+      "description": "Time-sensitive decision banner: deadline in absolute terms with days remaining, upgrade action with pre-commitment context, cancellation alternative, renewal terms",
+      "componentCount": 4,
+      "url": "infinite/recipes/trial-expiry-banner.json"
     }
   ]
 }
