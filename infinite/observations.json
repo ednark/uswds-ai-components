@@ -71,6 +71,76 @@
       "extension": "usa-sign_up-header",
       "note": "sign-up (follow/newsletter) block header in the site chrome (usa-sign_up-* family)",
       "source": "field-research/agency-survey-2026-09"
+    },
+    {
+      "observed": "2026-09-29",
+      "site": "usitc.gov",
+      "url": "https://www.usitc.gov",
+      "family": "alert",
+      "kind": "extension",
+      "extension": "usa-alert--no-icon",
+      "note": "second independent site (also hhs.gov) — alert rendered without the leading icon",
+      "source": "field-research/agency-survey-2026-09 (round 2)"
+    },
+    {
+      "observed": "2026-09-29",
+      "site": "eeoc.gov",
+      "url": "https://www.eeoc.gov",
+      "family": "footer",
+      "kind": "extension",
+      "extension": "usa-footer--medium",
+      "note": "also observed on cbp.gov — NOT in the pinned 3.14.0 stylesheet (verified); needs a USWDS docs check before anyone calls it canon",
+      "source": "field-research/agency-survey-2026-09 (round 2)"
+    },
+    {
+      "observed": "2026-09-29",
+      "site": "cbp.gov",
+      "url": "https://www.cbp.gov",
+      "family": "footer",
+      "kind": "extension",
+      "extension": "usa-footer--medium",
+      "note": "second independent site; see eeoc.gov entry",
+      "source": "field-research/agency-survey-2026-09 (round 2)"
+    },
+    {
+      "observed": "2026-09-29",
+      "site": "usitc.gov",
+      "url": "https://www.usitc.gov",
+      "family": "follow",
+      "kind": "extension",
+      "extension": "usa-sign-up",
+      "note": "sign-up (follow) block observed again — second site after usda.gov; follow family remains untiled",
+      "source": "field-research/agency-survey-2026-09 (round 2)"
+    },
+    {
+      "observed": "2026-09-29",
+      "site": "cbp.gov",
+      "url": "https://www.cbp.gov",
+      "family": "button",
+      "kind": "extension",
+      "extension": "usa-green-button",
+      "note": "site-local button color modifier",
+      "source": "field-research/agency-survey-2026-09 (round 2)"
+    },
+    {
+      "observed": "2026-09-29",
+      "site": "cbp.gov",
+      "url": "https://www.cbp.gov",
+      "family": "accordion",
+      "kind": "composition",
+      "extension": "usa-section-accordion",
+      "note": "section-wrapped accordion composition",
+      "source": "field-research/agency-survey-2026-09 (round 2)"
+    },
+    {
+      "observed": "2026-09-29",
+      "site": "fhfa.gov",
+      "url": "https://www.fhfa.gov",
+      "family": "card",
+      "kind": "composition",
+      "extension": "usa-cards-with-header",
+      "note": "card grid with section header composition",
+      "source": "field-research/agency-survey-2026-09 (round 2)"
     }
   ]
 }
