@@ -195,6 +195,7 @@
       "header": 1
     },
     "compositionRecipes": {
+      "trial-expiry-banner": 4,
       "error-handling-stack": 16,
       "login-flow": 24,
       "navigation-hierarchy": 26,
@@ -214,6 +215,10 @@
     },
     "supportedTokenProfiles": {
       "highContrast": 152
+    },
+    "patterns": {
+      "step-by-step-journey": 9,
+      "time-sensitive-action": 18
     }
   }
 }

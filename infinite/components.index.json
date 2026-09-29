@@ -60,6 +60,10 @@
       "limitations": [
         "usa-accordion__item is not a USWDS class; accordion sections are plain <li> containing h2.usa-accordion__heading + div.usa-accordion__content."
       ],
+      "patterns": [
+        "step-by-step-journey",
+        "time-sensitive-action"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -118,6 +122,10 @@
         "highContrast"
       ],
       "uswdClass": "usa-accordion",
+      "patterns": [
+        "step-by-step-journey",
+        "time-sensitive-action"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -135,6 +143,9 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "compositionRecipes": [
+        "trial-expiry-banner"
+      ],
       "resolvedView": "accordion/default.resolved.html"
     },
     {
@@ -176,6 +187,10 @@
         "highContrast"
       ],
       "uswdClass": "usa-accordion",
+      "patterns": [
+        "step-by-step-journey",
+        "time-sensitive-action"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -237,6 +252,10 @@
       "limitations": [
         "usa-accordion__item is not a USWDS class; accordion sections are plain <li> with h2.usa-accordion__heading + div.usa-accordion__content (hidden=\"until-found\" for this variant)."
       ],
+      "patterns": [
+        "step-by-step-journey",
+        "time-sensitive-action"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -295,6 +314,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-alert",
+      "patterns": [
+        "time-sensitive-action"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -362,6 +384,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-alert",
+      "patterns": [
+        "time-sensitive-action"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -425,6 +450,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-alert",
+      "patterns": [
+        "time-sensitive-action"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -488,6 +516,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-alert",
+      "patterns": [
+        "time-sensitive-action"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -551,6 +582,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-alert",
+      "patterns": [
+        "time-sensitive-action"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -573,7 +607,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "error-handling-stack",
-        "login-flow"
+        "login-flow",
+        "trial-expiry-banner"
       ],
       "resolvedView": "alert/warning.resolved.html"
     },
@@ -1056,6 +1091,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-button",
+      "patterns": [
+        "time-sensitive-action"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "none",
       "auditTrailCompatible": false,
@@ -1126,6 +1164,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-button",
+      "patterns": [
+        "time-sensitive-action"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "none",
       "auditTrailCompatible": false,
@@ -1196,6 +1237,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-button",
+      "patterns": [
+        "time-sensitive-action"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "none",
       "auditTrailCompatible": false,
@@ -1267,6 +1311,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-button",
+      "patterns": [
+        "time-sensitive-action"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "none",
       "auditTrailCompatible": false,
@@ -1339,6 +1386,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-button",
+      "patterns": [
+        "time-sensitive-action"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "none",
       "auditTrailCompatible": false,
@@ -1366,7 +1416,8 @@
       "costTier": "moderate",
       "compositionRecipes": [
         "contact-form",
-        "login-flow"
+        "login-flow",
+        "trial-expiry-banner"
       ],
       "resolvedView": "button/default.resolved.html"
     },
@@ -1410,6 +1461,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-button",
+      "patterns": [
+        "time-sensitive-action"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "none",
       "auditTrailCompatible": false,
@@ -1480,6 +1534,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-button",
+      "patterns": [
+        "time-sensitive-action"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "none",
       "auditTrailCompatible": false,
@@ -1550,6 +1607,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-button",
+      "patterns": [
+        "time-sensitive-action"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "none",
       "auditTrailCompatible": false,
@@ -1577,7 +1637,8 @@
       "costTier": "cheap",
       "compositionRecipes": [
         "contact-form",
-        "login-flow"
+        "login-flow",
+        "trial-expiry-banner"
       ],
       "resolvedView": "button/secondary.resolved.html"
     },
@@ -1621,6 +1682,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-button",
+      "patterns": [
+        "time-sensitive-action"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "none",
       "auditTrailCompatible": false,
@@ -5966,6 +6030,9 @@
       "limitations": [
         "usa-process-list__description is not a USWDS class; step descriptions are plain content inside usa-process-list__item."
       ],
+      "patterns": [
+        "step-by-step-journey"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -6023,6 +6090,9 @@
       "uswdClass": "usa-process-list",
       "limitations": [
         "usa-process-list--steps is not a USWDS class; the numbered process list is the default markup."
+      ],
+      "patterns": [
+        "step-by-step-journey"
       ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
@@ -7665,6 +7735,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-step-indicator",
+      "patterns": [
+        "step-by-step-journey"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -7727,6 +7800,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-step-indicator",
+      "patterns": [
+        "step-by-step-journey"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -7784,6 +7860,9 @@
         "highContrast"
       ],
       "uswdClass": "usa-step-indicator",
+      "patterns": [
+        "step-by-step-journey"
+      ],
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
