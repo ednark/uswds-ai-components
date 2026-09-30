@@ -5,7 +5,13 @@
     "name": "U.S. Web Design System",
     "version": "3.14.0",
     "url": "https://designsystem.digital.gov",
-    "package": "@uswds/uswds"
+    "package": "@uswds/uswds",
+    "verification": {
+      "markup": "package-css",
+      "styling": "package-css",
+      "packagePath": "node_modules/@uswds/uswds/dist/css",
+      "groundTruth": "installed-package"
+    }
   },
   "agentMetaId": "uswds-agent-meta",
   "tileDir": "infinite",
