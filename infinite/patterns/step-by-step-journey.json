@@ -36,7 +36,7 @@
   ],
   "knownFailureModes": [
     {
-      "run": "cross-registry-tests/comparison.md Finding 3",
+      "run": "cross-registry field test 2026-09-06, Finding 3",
       "lesson": "L7",
       "note": "the GOV.UK step-by-step page rebuilt in four registries produced four inconsistent substitutes; the USWDS run mapped app-step-nav to usa-process-list alone — sequential semantics but no progress indicator and no per-step disclosure"
     }

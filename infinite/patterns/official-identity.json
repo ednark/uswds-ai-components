@@ -20,7 +20,7 @@
   ],
   "knownFailureModes": [
     {
-      "run": "cross-registry-tests/comparison.md Finding 6",
+      "run": "cross-registry field test 2026-09-06, Finding 6",
       "lesson": "L7",
       "note": "the USWDS identifier banner has no equivalent in any other registry — rebuilds improvised four different treatments (DSFR substituted fr-notice, ECL merged into the header, GOV.UK/Canada omitted); the identity role must be decided deliberately per registry"
     }

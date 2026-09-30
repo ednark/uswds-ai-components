@@ -25,12 +25,12 @@
   ],
   "knownFailureModes": [
     {
-      "run": "task-usability/runs/t5-001",
+      "run": "T5 degradation run t5-001 (2026-09-17)",
       "lesson": "L11",
       "note": "relative-only countdown ('ends in 12 days') persisted across turns with clean class coverage; resolved after guidance build-back, re-measured in t5-002"
     },
     {
-      "run": "task-usability/runs/t5-001",
+      "run": "T5 degradation run t5-001 (2026-09-17)",
       "lesson": "L12",
       "note": "primary upgrade button carried no plan name or price — commitment opaque before the click; resolved after refined guidance, re-measured in t5-003 (0 high-severity findings from turn 2)"
     }

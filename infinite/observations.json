@@ -10,7 +10,7 @@
       "kind": "extension",
       "extension": "usa-alert--no-collapse",
       "note": "alert rendered without the collapse control",
-      "source": "field-research/agency-survey-2026-09"
+      "source": "live-site field survey 2026-09-29 (agency homepage survey; the observed page is this entry's url field)"
     },
     {
       "observed": "2026-09-29",
@@ -20,7 +20,7 @@
       "kind": "extension",
       "extension": "usa-alert--no-icon",
       "note": "alert rendered without the leading icon",
-      "source": "field-research/agency-survey-2026-09"
+      "source": "live-site field survey 2026-09-29 (agency homepage survey; the observed page is this entry's url field)"
     },
     {
       "observed": "2026-09-29",
@@ -30,7 +30,7 @@
       "kind": "extension",
       "extension": "usa-section--background-light-gray",
       "note": "background-color modifier beyond the documented section variants",
-      "source": "field-research/agency-survey-2026-09"
+      "source": "live-site field survey 2026-09-29 (agency homepage survey; the observed page is this entry's url field)"
     },
     {
       "observed": "2026-09-29",
@@ -40,7 +40,7 @@
       "kind": "extension",
       "extension": "usa-header--inverse",
       "note": "inverse (dark) header — legacy 2.x-era vocabulary; verified absent from the pinned 3.14.0 stylesheet",
-      "source": "field-research/agency-survey-2026-09"
+      "source": "live-site field survey 2026-09-29 (agency homepage survey; the observed page is this entry's url field)"
     },
     {
       "observed": "2026-09-29",
@@ -50,7 +50,7 @@
       "kind": "extension",
       "extension": "usa-nav-bottom",
       "note": "secondary nav strip below the primary header nav (usa-nav-bottom* family: -about, -farming-ranching, -food, -forests, -search, -sustainability, -trades-markets)",
-      "source": "field-research/agency-survey-2026-09"
+      "source": "live-site field survey 2026-09-29 (agency homepage survey; the observed page is this entry's url field)"
     },
     {
       "observed": "2026-09-29",
@@ -60,7 +60,7 @@
       "kind": "extension",
       "extension": "usa-megamenu-search",
       "note": "search control embedded in the megamenu chrome",
-      "source": "field-research/agency-survey-2026-09"
+      "source": "live-site field survey 2026-09-29 (agency homepage survey; the observed page is this entry's url field)"
     },
     {
       "observed": "2026-09-29",
@@ -70,7 +70,7 @@
       "kind": "extension",
       "extension": "usa-sign_up-header",
       "note": "sign-up (follow/newsletter) block header in the site chrome (usa-sign_up-* family) | family corrected to footer: usa-sign-up is a footer include (usa-signup.twig), now tiled as footer/sign-up",
-      "source": "field-research/agency-survey-2026-09"
+      "source": "live-site field survey 2026-09-29 (agency homepage survey; the observed page is this entry's url field)"
     },
     {
       "observed": "2026-09-29",
@@ -80,7 +80,7 @@
       "kind": "extension",
       "extension": "usa-alert--no-icon",
       "note": "second independent site (also hhs.gov) — alert rendered without the leading icon",
-      "source": "field-research/agency-survey-2026-09 (round 2)"
+      "source": "live-site field survey 2026-09-29 (round 2)"
     },
     {
       "observed": "2026-09-29",
@@ -90,7 +90,7 @@
       "kind": "extension",
       "extension": "usa-footer--medium",
       "note": "also observed on cbp.gov — NOT in the pinned 3.14.0 stylesheet (verified); needs a USWDS docs check before anyone calls it canon | RESOLVED via docs check (2026-09-29): USWDS footer docs document a Medium footer whose canonical markup is <footer class=\"usa-footer\"> — NO modifier class (docs variants table lists only --big and --slim). usa-footer--medium is a docs-ambiguity-invented class; medium is the default footer, already tiled as footer/default.",
-      "source": "field-research/agency-survey-2026-09 (round 2)"
+      "source": "live-site field survey 2026-09-29 (round 2)"
     },
     {
       "observed": "2026-09-29",
@@ -100,7 +100,7 @@
       "kind": "extension",
       "extension": "usa-footer--medium",
       "note": "second independent site; see eeoc.gov entry | RESOLVED via docs check (2026-09-29): USWDS footer docs document a Medium footer whose canonical markup is <footer class=\"usa-footer\"> — NO modifier class (docs variants table lists only --big and --slim). usa-footer--medium is a docs-ambiguity-invented class; medium is the default footer, already tiled as footer/default.",
-      "source": "field-research/agency-survey-2026-09 (round 2)"
+      "source": "live-site field survey 2026-09-29 (round 2)"
     },
     {
       "observed": "2026-09-29",
@@ -110,7 +110,7 @@
       "kind": "extension",
       "extension": "usa-sign-up",
       "note": "sign-up (follow) block observed again — second site after usda.gov; follow family remains untiled | family corrected to footer: usa-sign-up is a footer include (usa-signup.twig), now tiled as footer/sign-up",
-      "source": "field-research/agency-survey-2026-09 (round 2)"
+      "source": "live-site field survey 2026-09-29 (round 2)"
     },
     {
       "observed": "2026-09-29",
@@ -120,7 +120,7 @@
       "kind": "extension",
       "extension": "usa-green-button",
       "note": "site-local button color modifier",
-      "source": "field-research/agency-survey-2026-09 (round 2)"
+      "source": "live-site field survey 2026-09-29 (round 2)"
     },
     {
       "observed": "2026-09-29",
@@ -130,7 +130,7 @@
       "kind": "composition",
       "extension": "usa-section-accordion",
       "note": "section-wrapped accordion composition",
-      "source": "field-research/agency-survey-2026-09 (round 2)"
+      "source": "live-site field survey 2026-09-29 (round 2)"
     },
     {
       "observed": "2026-09-29",
@@ -140,7 +140,7 @@
       "kind": "composition",
       "extension": "usa-cards-with-header",
       "note": "card grid with section header composition",
-      "source": "field-research/agency-survey-2026-09 (round 2)"
+      "source": "live-site field survey 2026-09-29 (round 2)"
     },
     {
       "observed": "2026-09-29",
@@ -150,7 +150,7 @@
       "kind": "extension",
       "extension": "usa-footer-medium",
       "note": "medium footer, single-dash form — 3rd site overall (eeoc, cbp use usa-footer--medium); spelling variants across sites | RESOLVED via docs check (2026-09-29): USWDS footer docs document a Medium footer whose canonical markup is <footer class=\"usa-footer\"> — NO modifier class (docs variants table lists only --big and --slim). usa-footer--medium is a docs-ambiguity-invented class; medium is the default footer, already tiled as footer/default.",
-      "source": "field-research/agency-survey-2026-09 (round 3)"
+      "source": "live-site field survey 2026-09-29 (round 3)"
     },
     {
       "observed": "2026-09-29",
@@ -159,7 +159,7 @@
       "kind": "extension",
       "extension": "usa-tabs",
       "note": "legacy 2.x-era tabs vocabulary — USWDS 3.x ships no tabs component; verified absent from the pinned stylesheet (no canon family exists — orphan 2.x component)",
-      "source": "field-research/agency-survey-2026-09 (round 3)"
+      "source": "live-site field survey 2026-09-29 (round 3)"
     },
     {
       "observed": "2026-09-29",
@@ -169,7 +169,7 @@
       "kind": "extension",
       "extension": "usa-message",
       "note": "legacy 2.x-era alert vocabulary (usa-message); verified absent from the pinned stylesheet",
-      "source": "field-research/agency-survey-2026-09 (round 3)"
+      "source": "live-site field survey 2026-09-29 (round 3)"
     },
     {
       "observed": "2026-09-29",
@@ -179,7 +179,7 @@
       "kind": "extension",
       "extension": "usa-section-lighter",
       "note": "background modifier beyond documented section variants",
-      "source": "field-research/agency-survey-2026-09 (round 3)"
+      "source": "live-site field survey 2026-09-29 (round 3)"
     },
     {
       "observed": "2026-09-29",
@@ -189,7 +189,7 @@
       "kind": "extension",
       "extension": "usa-button-blue",
       "note": "site-local color modifier (cf. cbp usa-green-button)",
-      "source": "field-research/agency-survey-2026-09 (round 3)"
+      "source": "live-site field survey 2026-09-29 (round 3)"
     },
     {
       "observed": "2026-09-29",
@@ -199,7 +199,7 @@
       "kind": "composition",
       "extension": "usa-hero-video",
       "note": "video hero composition on the hero family — 5th site using hero",
-      "source": "field-research/agency-survey-2026-09 (round 3)"
+      "source": "live-site field survey 2026-09-29 (round 3)"
     },
     {
       "observed": "2026-09-29",
@@ -209,7 +209,7 @@
       "kind": "extension",
       "extension": "usa-link--accent-cool",
       "note": "link color modifier; verified absent from the pinned stylesheet",
-      "source": "field-research/agency-survey-2026-09 (round 3)"
+      "source": "live-site field survey 2026-09-29 (round 3)"
     },
     {
       "observed": "2026-09-29",
@@ -219,7 +219,7 @@
       "kind": "extension",
       "extension": "usa-sign_up-header",
       "note": "follow/sign-up block again — the follow-family coverage gap now has 4 site citations (usda, usitc, rd, ams via sign-up block) | family corrected to footer: usa-sign-up is a footer include (usa-signup.twig), now tiled as footer/sign-up",
-      "source": "field-research/agency-survey-2026-09 (round 3)"
+      "source": "live-site field survey 2026-09-29 (round 3)"
     },
     {
       "observed": "2026-09-29",
@@ -229,7 +229,7 @@
       "kind": "extension",
       "extension": "usa-button-big",
       "note": "single-dash form of the canonical usa-button--big (tiled) — legacy modifier convention, not a new class",
-      "source": "field-research/agency-survey-2026-09 (round 3)"
+      "source": "live-site field survey 2026-09-29 (round 3)"
     }
   ]
 }
