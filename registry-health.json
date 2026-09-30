@@ -40,12 +40,13 @@
   "observations": 23,
   "convergenceWatchlist": 3,
   "findings": {
-    "count": 9,
+    "count": 12,
     "lastDeepCheck": "2026-09-30",
+    "openItems": [],
     "byResult": {
       "broke": 4,
       "recorded": 3,
-      "fixed": 1,
+      "fixed": 4,
       "clean": 1
     }
   },
