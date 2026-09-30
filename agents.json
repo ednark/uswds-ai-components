@@ -77,5 +77,6 @@
   ],
   "updated": "2.0.0",
   "language": "en",
-  "appearance": "Every tile has a generated resolved view: fetch {tileDir}/{file with .html replaced by .resolved.html} for a computed-style standalone rendering (geometry + colors inline, design-system CSS injected at build time). Index records expose the path as the resolvedView field. Tile markup alone is structurally self-contained; styled preview requires the resolved view or a host page that loads USWDS CSS."
+  "appearance": "Every tile has a generated resolved view: fetch {tileDir}/{file with .html replaced by .resolved.html} for a computed-style standalone rendering (geometry + colors inline, design-system CSS injected at build time). Index records expose the path as the resolvedView field. Tile markup alone is structurally self-contained; styled preview requires the resolved view or a host page that loads USWDS CSS.",
+  "healthUrl": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/registry-health.json"
 }

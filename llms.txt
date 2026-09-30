@@ -39,7 +39,10 @@ Tiles are structurally self-contained: markup, class names, and adaptation metad
    Which components and doctrine apply to a task (time-sensitive-action), with cited
    design-system sources and field-test failure modes. Patterns point — page
    structure is the implementor's job. Fetch the pattern, then its recipes/tiles.
-5. Version history: GET https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/versions.json
+5. Trust surface: GET https://raw.githubusercontent.com/ednark/uswds-ai-components/main/registry-health.json
+   Pin, ground truth, stamp census and drift register for this registry — read it
+   before deciding how much to trust what you fetch.
+6. Version history: GET https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/versions.json
    Registry-level history: what changed between registry versions (breakingChanges,
    addedFacets, migrationPath). Check after any gap between your fetches.
 

@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "registry": "uswds-ai-components",
+  "note": "Epistemic record: what was tested, what broke, what changed. See _base/findings-ledger.md. Backfilled from 2026-09-29/30 sessions; earlier evidence lives in the project workspace (workspace/docs/lessons-learned.md).",
+  "findings": [
+    {
+      "id": "F-001",
+      "date": "2026-09-29",
+      "kind": "deep-check",
+      "result": "broke",
+      "target": ["versions.json", "agents.json", "registry.config.json"],
+      "changed": [
+        "spec: designSystem.package + per-file pin cross-checks added to validate-registry.mjs",
+        "spec: designSystem.version promoted to the single source of truth",
+        "registry: all three version records aligned to 3.14.0"
+      ],
+      "evidence": [
+        "versions.json designSystem.version 3.13.0 vs registry.config.json 3.14.0",
+        "@uswds/uswds@3.14.0 (exact devDependency)"
+      ],
+      "summary": "The registry disagreed with itself: versions.json said 3.13.0 while the pin was 3.14.0.",
+      "detail": "Nothing in the tooling compared the version records, so the registry could hold a stale design-system version indefinitely without any signal. This produced the pin/cross-check design in protocol.md and the drift register in deep-check.md: a pin that is stated but never checked is not a pin."
+    },
+    {
+      "id": "F-002",
+      "date": "2026-09-29",
+      "kind": "rework",
+      "result": "broke",
+      "target": ["header/default", "footer/default", "card/clickable"],
+      "changed": [
+        "spec: tile purity rule — body markup changes only as cited ground-truth corrections",
+        "spec: generate-index maintains a body-hash baseline (tile-purity.json); validator errors on drift without a provenance citation",
+        "registry: header/basic gained usa-navbar + usa-nav__primary; footer/big gained the grid split and the sign-up block; card/clickable lost the invented demo-stretch-link class"
+      ],
+      "evidence": [
+        "packages/usa-header/src/usa-header.twig + _includes/usa-navbar.twig (3.14.0)",
+        "packages/usa-footer/src/usa-footer--big.twig + _includes/usa-signup.twig (3.14.0)",
+        "packages/usa-card/src/usa-card.twig (3.14.0)"
+      ],
+      "summary": "Three tiles carried structure and classes that USWDS does not ship, and nothing caught it.",
+      "detail": "header/basic omitted the usa-navbar wrapper (exposed visually during a pattern-first rebuild), footer/big omitted the sign-up block the official big footer includes, and card/clickable used an invented class for a stretched link. The class check already existed for class names but nothing protected the body, which is what motivated the purity baseline and the cited-correction path."
+    },
+    {
+      "id": "F-003",
+      "date": "2026-09-29",
+      "kind": "sweep",
+      "result": "broke",
+      "target": ["header/default", "footer/default"],
+      "changed": [
+        "tile: invented class 'flag' replaced with the real identity image markup (sig-blk-en.svg / wmms-blk.svg)",
+        "tile: invented class=\"footer\" on footer/default removed — the live footer is <footer id=\"wb-info\"> inside .global-footer"
+      ],
+      "evidence": [
+        "live canada.ca 2026-09-29, verified in a real browser: class=\"flag\" 0 occurrences, class=\"footer\" 0 occurrences",
+        "WET-BOEW v19.6.0 theme.min.css header: v19.6.0 - 2026-08-18"
+      ],
+      "summary": "Live-browser capture found two classes present in neither the design-system stylesheet nor the live site.",
+      "detail": "A scripted fetch of canada.ca had already suggested these were wrong; the browser check confirmed it and also revealed a stylesheet (GCDS from an alpha CDN) the fetches had never shown. Both classes were replaced with markup taken from the live capture, cited as live-site observations."
+    },
+    {
+      "id": "F-004",
+      "date": "2026-09-29",
+      "kind": "observation",
+      "result": "recorded",
+      "target": ["alert", "footer", "header", "follow", "section", "button"],
+      "changed": [
+        "registry: observations.json published (Surface 7) with 23 cited entries",
+        "registry: classCheck allowlist established as the drift register"
+      ],
+      "evidence": [
+        "hhs.gov: usa-alert--no-collapse, usa-alert--no-icon, usa-section--background-light-gray, usa-header--inverse",
+        "eeoc.gov, cbp.gov: usa-footer--medium (absent from WET 19.6.0 — docs-ambiguity invention)",
+        "usitc.gov, ams.usda.gov, usda.gov, rd.usda.gov: sign-up block in canon and legacy underscore spellings"
+      ],
+      "summary": "A field survey of 115 federal homepages found widespread use of classes USWDS does not ship.",
+      "detail": "62 of 115 probed federal homepages confirmed USWDS. The interesting output was not adoption but the extensions: 23 observations across the namespace, including usa-footer--medium used by three independent sites and absent from the pinned stylesheet, and the sign-up block whose canonical form (usa-sign-up, in the footer package) was untiled in this registry until the survey found it."
+    },
+    {
+      "id": "F-005",
+      "date": "2026-09-29",
+      "kind": "rework",
+      "result": "fixed",
+      "target": ["hero/default", "table/sticky-header", "footer/sign-up"],
+      "changed": [
+        "tile: hero/default added (canon component absent from the registry, observed on 5 sites)",
+        "tile: table/sticky-header added (verified in the pinned stylesheet, observed live on usitc.gov)",
+        "tile: footer/sign-up added from the official include; the first tile to carry a tradeoffs block"
+      ],
+      "evidence": [
+        "packages/usa-hero/src/usa-hero.twig + hero.json (3.14.0)",
+        "packages/usa-table/src/usa-table.twig sticky_header branch + usa-table~stickyheader.json (3.14.0)",
+        "packages/usa-footer/src/_includes/usa-signup.twig (3.14.0)",
+        "usda.gov, hhs.gov, doi.gov, data.europa.eu, cbp.gov (hero); usitc.gov (sticky header)"
+      ],
+      "summary": "Three canon components were missing or untiled; the survey proved each against the pinned package before any tile was written.",
+      "detail": "The discipline that made this safe: verify the class exists in the pinned stylesheet (word-boundary, not substring — 'usa-tab' is inside 'usa-table') and identify the template before authoring. Two candidates were rejected on that basis: usa-header--inverse and fr-card__big, neither of which exists in the pinned release."
+    },
+    {
+      "id": "F-006",
+      "date": "2026-09-29",
+      "kind": "sweep",
+      "result": "broke",
+      "target": ["patterns/", "observations.json"],
+      "changed": [
+        "spec: Surface 6 patterns added with the lane rule as normative text",
+        "spec: observations.json added (Surface 7)",
+        "spec: detector v2 — config-driven modifier separators, known-family canonicalization, family rollup",
+        "registry: patternGuidance declared; discovery.patterns on 27 tiles"
+      ],
+      "evidence": [
+        "T1 cross-registry field test Finding 3: app-step-nav mapped four different ways across registries",
+        "L7: all structural failures in 13 tests were composition-level, not component-level"
+      ],
+      "summary": "Pattern-first retrieval resolved a composition failure that four registries had diverged on.",
+      "detail": "The GOV.UK step-by-step page rebuilt with USWDS used process-list alone ('no collapse') in the control; rebuilt with the step-by-step-journey pattern retrieved first it composed step-indicator + accordion, the semantics Finding 3 ranked as best. Coverage stayed at 0 invented classes. This is the evidence for the pattern layer existing at all — and for its lane rule, since the pattern supplies doctrine and citations, never page structure."
+    },
+    {
+      "id": "F-007",
+      "date": "2026-09-29",
+      "kind": "decision",
+      "result": "recorded",
+      "target": ["provenance", "observations.json", "patterns/"],
+      "changed": [
+        "spec: repository independence — a registry never cites a path outside its own repo; provenance names the design system, the site and the date",
+        "registry: all workspace paths removed from provenance sources"
+      ],
+      "evidence": [
+        "24 tiles across 5 registries cited workspace paths such as field-research/agency-survey-2026-09",
+        "task-usability/runs/t5-001 citations in published pattern and recipe files"
+      ],
+      "summary": "Published tiles were citing internal workspace paths that mean nothing to anyone who clones the registry.",
+      "detail": "Introduced during the workspace reorganisation, then caught. The fix established a rule now in tile-format.md: provenance cites resolvable ground truth (package@version, live URL, observation date); process records live in the project workspace. A registry is a published artifact and must stand alone."
+    },
+    {
+      "id": "F-008",
+      "date": "2026-09-29",
+      "kind": "decision",
+      "result": "recorded",
+      "target": ["classCheck", "tile-purity.json"],
+      "changed": [
+        "spec: tile-purity baseline (body hash) added",
+        "spec: classCheck prefix became a per-namespace array",
+        "registry: classCheck enabled with a categorised drift register; verification strategy declared"
+      ],
+      "evidence": [
+        "EPL/DSFR: classes present in the component templates carry no rules in the compiled CSS",
+        "ECL: an allowlisted class was mistakenly treated as verification, stamping 61/61 instead of 49/61"
+      ],
+      "summary": "An allowlist is a drift register, not a waiver — and a single prefix left whole namespaces unchecked.",
+      "detail": "Two mechanisms failed in the same session. First, verification accepted allowlisted classes as passing, so drifted tiles were stamped as verified until the predicate was corrected to test real definition. Second, GOV.UK and canada.ca span several class namespaces (govuk-/gem-/app-, wb-/btn-/form-/gc-) and a single prefix silently unchecked the rest. Both fixes are now in the spec, and the second one generalises the two-axis rule to multi-namespace registries."
+    },
+    {
+      "id": "F-009",
+      "date": "2026-09-30",
+      "kind": "upgrade",
+      "result": "clean",
+      "target": ["registry.config.json", "versions.json", "agents.json"],
+      "changed": [
+        "registry: pin verified against the installed @uswds/uswds@3.14.0",
+        "registry: 155/155 tiles verified and stamped",
+        "versions.json: 0.5.0 event recorded"
+      ],
+      "evidence": ["@uswds/uswds@3.14.0 (exact devDependency, classCheck active)"],
+      "summary": "First registry to pass a full verification: 155/155 tiles canon, zero drift, zero warnings.",
+      "detail": "Recorded as a null result on purpose. A clean deep check is a measurement, not an absence of one — it bounds where the risk is, and it is the only way a reader can tell a maintained registry from an unexamined one."
+    }
+  ]
+}

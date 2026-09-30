@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "registry": "uswds-ai-components",
+  "description": "Machine-readable trust surface: what this registry claims, and how far that claim has been checked. A registry with drift or unstamped tiles is telling you where not to trust it.",
+  "designSystem": {
+    "name": "U.S. Web Design System",
+    "pin": "3.14.0",
+    "package": "@uswds/uswds",
+    "groundTruth": "installed-package",
+    "verification": {
+      "markup": "package-css",
+      "styling": "package-css"
+    }
+  },
+  "classCheck": {
+    "enabled": true,
+    "prefixes": [
+      "usa-"
+    ],
+    "allowlistSize": 16,
+    "categories": {
+      "canonicalUnstyled": 9,
+      "appLayer": 0,
+      "siteLayer": 0,
+      "extension": 0,
+      "drift": 0,
+      "compat": 1,
+      "registryInternal": 2,
+      "unclassified": 4
+    }
+  },
+  "stamps": {
+    "verified": 155,
+    "total": 155,
+    "percent": 100
+  },
+  "tiles": 155,
+  "families": 55,
+  "coreClasses": 28,
+  "observations": 23,
+  "convergenceWatchlist": 3,
+  "findings": {
+    "count": 9,
+    "lastDeepCheck": "2026-09-30",
+    "byResult": {
+      "broke": 4,
+      "recorded": 3,
+      "fixed": 1,
+      "clean": 1
+    }
+  },
+  "conformance": "pass",
+  "generatedBy": "_base/generate-health.mjs",
+  "generatedAt": "2026-09-30"
+}
