@@ -58,6 +58,7 @@
     ],
     "uswdClass": "usa-banner",
     "limitations": [
+      "USWDS 3 ships no slim or medium banner variant — those are USWDS 2.x legacy. The canonical options are the default banner and the usa-banner web component (lang, tld, slot=domain-text, --theme-banner-background-color). Treat the compact form here as a site customization, not canon.",
       "usa-banner--medium is a USWDS 2.x class, removed in USWDS 3 — the banner has one variant (default) plus the <usa-banner> web component."
     ]
   },
@@ -129,13 +130,13 @@
 </head>
 <body>
 <section class="usa-banner" aria-label="Official website of the United States government">
-  <div class="usa-banner__header">
+  <header class="usa-banner__header">
     <div class="usa-banner__inner">
       <div class="usa-banner__header-text">
         <p class="usa-banner__header-text">An official website of the United States government</p>
       </div>
     </div>
-  </div>
+  </header>
   <div class="usa-banner__content">
     <div class="usa-banner__guidance">
       <p>Here's how you know</p>

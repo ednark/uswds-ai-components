@@ -80,6 +80,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "accordion/bordered.resolved.html"
     },
     {
@@ -146,6 +147,7 @@
       "compositionRecipes": [
         "trial-expiry-banner"
       ],
+      "origin": "design-system",
       "resolvedView": "accordion/default.resolved.html"
     },
     {
@@ -208,6 +210,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "accordion/multiselectable.resolved.html"
     },
     {
@@ -274,6 +277,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "accordion/until-found.resolved.html"
     },
     {
@@ -341,6 +345,7 @@
         "error-handling-stack",
         "login-flow"
       ],
+      "origin": "design-system",
       "resolvedView": "alert/error.resolved.html"
     },
     {
@@ -411,6 +416,7 @@
         "error-handling-stack",
         "login-flow"
       ],
+      "origin": "design-system",
       "resolvedView": "alert/info.resolved.html"
     },
     {
@@ -477,6 +483,7 @@
         "error-handling-stack",
         "login-flow"
       ],
+      "origin": "design-system",
       "resolvedView": "alert/slim.resolved.html"
     },
     {
@@ -543,6 +550,7 @@
         "error-handling-stack",
         "login-flow"
       ],
+      "origin": "design-system",
       "resolvedView": "alert/success.resolved.html"
     },
     {
@@ -610,6 +618,7 @@
         "login-flow",
         "trial-expiry-banner"
       ],
+      "origin": "design-system",
       "resolvedView": "alert/warning.resolved.html"
     },
     {
@@ -676,6 +685,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "banner/default.resolved.html"
     },
     {
@@ -717,6 +727,7 @@
       ],
       "uswdClass": "usa-banner",
       "limitations": [
+        "USWDS 3 ships no slim or medium banner variant — those are USWDS 2.x legacy. The canonical options are the default banner and the usa-banner web component (lang, tld, slot=domain-text, --theme-banner-background-color). Treat the compact form here as a site customization, not canon.",
         "usa-banner--medium is a USWDS 2.x class, removed in USWDS 3 — the banner has one variant (default) plus the <usa-banner> web component."
       ],
       "fedRampLevel": "IL2+",
@@ -739,6 +750,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "banner/medium.resolved.html"
     },
     {
@@ -780,6 +792,7 @@
       ],
       "uswdClass": "usa-banner",
       "limitations": [
+        "USWDS 3 ships no slim or medium banner variant — those are USWDS 2.x legacy. The canonical options are the default banner and the usa-banner web component (lang, tld, slot=domain-text, --theme-banner-background-color). Treat the compact form here as a site customization, not canon.",
         "usa-banner--slim is a USWDS 2.x class, removed in USWDS 3 — the banner has one variant (default) plus the <usa-banner> web component."
       ],
       "fedRampLevel": "IL2+",
@@ -802,6 +815,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "banner/slim.resolved.html"
     },
     {
@@ -866,6 +880,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "banner/until-found.resolved.html"
     },
     {
@@ -928,6 +943,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "breadcrumb/default.resolved.html"
     },
     {
@@ -991,6 +1007,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "breadcrumb/naviprev-next.resolved.html"
     },
     {
@@ -1050,6 +1067,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "breadcrumb/wrap.resolved.html"
     },
     {
@@ -1123,6 +1141,7 @@
         "contact-form",
         "login-flow"
       ],
+      "origin": "design-system",
       "resolvedView": "button/accent-cool.resolved.html"
     },
     {
@@ -1196,6 +1215,7 @@
         "contact-form",
         "login-flow"
       ],
+      "origin": "design-system",
       "resolvedView": "button/accent-warm.resolved.html"
     },
     {
@@ -1269,6 +1289,7 @@
         "contact-form",
         "login-flow"
       ],
+      "origin": "design-system",
       "resolvedView": "button/base.resolved.html"
     },
     {
@@ -1343,6 +1364,7 @@
         "contact-form",
         "login-flow"
       ],
+      "origin": "design-system",
       "resolvedView": "button/big.resolved.html"
     },
     {
@@ -1419,6 +1441,7 @@
         "login-flow",
         "trial-expiry-banner"
       ],
+      "origin": "design-system",
       "resolvedView": "button/default.resolved.html"
     },
     {
@@ -1493,6 +1516,7 @@
         "contact-form",
         "login-flow"
       ],
+      "origin": "design-system",
       "resolvedView": "button/outline-inverse.resolved.html"
     },
     {
@@ -1566,6 +1590,7 @@
         "contact-form",
         "login-flow"
       ],
+      "origin": "design-system",
       "resolvedView": "button/outline.resolved.html"
     },
     {
@@ -1640,6 +1665,7 @@
         "login-flow",
         "trial-expiry-banner"
       ],
+      "origin": "design-system",
       "resolvedView": "button/secondary.resolved.html"
     },
     {
@@ -1714,6 +1740,7 @@
         "contact-form",
         "login-flow"
       ],
+      "origin": "design-system",
       "resolvedView": "button/unstyled.resolved.html"
     },
     {
@@ -1775,6 +1802,7 @@
         "button"
       ],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "button-group/default.resolved.html"
     },
     {
@@ -1832,6 +1860,7 @@
         "button"
       ],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "button-group/segmented.resolved.html"
     },
     {
@@ -1894,6 +1923,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "card/clickable.resolved.html"
     },
     {
@@ -1954,6 +1984,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "card/default.resolved.html"
     },
     {
@@ -2012,6 +2043,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "card/flag.resolved.html"
     },
     {
@@ -2072,6 +2104,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "card/group.resolved.html"
     },
     {
@@ -2130,6 +2163,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "card/header-first.resolved.html"
     },
     {
@@ -2192,6 +2226,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "card/inset.resolved.html"
     },
     {
@@ -2254,6 +2289,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "card/media.resolved.html"
     },
     {
@@ -2321,6 +2357,7 @@
       "compositionRecipes": [
         "contact-form"
       ],
+      "origin": "design-system",
       "resolvedView": "character-count/default.resolved.html"
     },
     {
@@ -2387,6 +2424,7 @@
       "compositionRecipes": [
         "contact-form"
       ],
+      "origin": "design-system",
       "resolvedView": "character-count/error.resolved.html"
     },
     {
@@ -2451,6 +2489,7 @@
       ],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "checkbox/default.resolved.html"
     },
     {
@@ -2514,6 +2553,7 @@
       ],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "checkbox/disabled.resolved.html"
     },
     {
@@ -2579,6 +2619,7 @@
       ],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "checkbox/error.resolved.html"
     },
     {
@@ -2645,6 +2686,7 @@
       ],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "checkbox/success.resolved.html"
     },
     {
@@ -2711,6 +2753,7 @@
       ],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "checkbox/tile.resolved.html"
     },
     {
@@ -2770,6 +2813,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "collection/default.resolved.html"
     },
     {
@@ -2828,6 +2872,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "collection/list.resolved.html"
     },
     {
@@ -2892,6 +2937,7 @@
       ],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "combo-box/default.resolved.html"
     },
     {
@@ -2956,6 +3002,7 @@
       ],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "combo-box/lg.resolved.html"
     },
     {
@@ -3015,6 +3062,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "expensive",
+      "origin": "design-system",
       "resolvedView": "data-visualizations/bar.resolved.html"
     },
     {
@@ -3079,6 +3127,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "expensive",
+      "origin": "design-system",
       "resolvedView": "data-visualizations/default.resolved.html"
     },
     {
@@ -3138,6 +3187,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "expensive",
+      "origin": "design-system",
       "resolvedView": "data-visualizations/line.resolved.html"
     },
     {
@@ -3197,6 +3247,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "expensive",
+      "origin": "design-system",
       "resolvedView": "data-visualizations/pie.resolved.html"
     },
     {
@@ -3261,6 +3312,7 @@
       ],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "date-picker/default.resolved.html"
     },
     {
@@ -3325,6 +3377,7 @@
       ],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "date-picker/lg.resolved.html"
     },
     {
@@ -3378,6 +3431,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "date-range-picker/default.resolved.html"
     },
     {
@@ -3448,6 +3502,7 @@
       ],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "file-input/default.resolved.html"
     },
     {
@@ -3515,6 +3570,7 @@
       ],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "file-input/error.resolved.html"
     },
     {
@@ -3576,6 +3632,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "footer/big.resolved.html"
     },
     {
@@ -3639,6 +3696,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "footer/collapsible.resolved.html"
     },
     {
@@ -3702,6 +3760,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "footer/default.resolved.html"
     },
     {
@@ -3772,6 +3831,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "footer/email-signup.resolved.html"
     },
     {
@@ -3882,6 +3942,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "footer/slim.resolved.html"
     },
     {
@@ -3951,6 +4012,7 @@
         "contact-form",
         "login-flow"
       ],
+      "origin": "design-system",
       "resolvedView": "form/default.resolved.html"
     },
     {
@@ -4017,6 +4079,7 @@
         "contact-form",
         "login-flow"
       ],
+      "origin": "design-system",
       "resolvedView": "form/feedback.resolved.html"
     },
     {
@@ -4088,6 +4151,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "header/basic-megamenu.resolved.html"
     },
     {
@@ -4153,6 +4217,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "header/basic.resolved.html"
     },
     {
@@ -4222,6 +4287,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "header/default.resolved.html"
     },
     {
@@ -4287,6 +4353,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "header/extended.resolved.html"
     },
     {
@@ -4352,6 +4419,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "header/megamenu.resolved.html"
     },
     {
@@ -4420,6 +4488,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "header/nav-search.resolved.html"
     },
     {
@@ -4522,6 +4591,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "icon/default.resolved.html"
     },
     {
@@ -4581,6 +4651,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "icon-list/checklist.resolved.html"
     },
     {
@@ -4642,6 +4713,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "icon-list/default.resolved.html"
     },
     {
@@ -4701,6 +4773,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "icon-list/icon-lg.resolved.html"
     },
     {
@@ -4766,6 +4839,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "identifier/default.resolved.html"
     },
     {
@@ -4831,6 +4905,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "identifier/with-logo.resolved.html"
     },
     {
@@ -4900,6 +4975,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "in-page-navigation/default.resolved.html"
     },
     {
@@ -4951,6 +5027,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "input-mask/default.resolved.html"
     },
     {
@@ -5002,6 +5079,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "input-prefix-suffix/prefix.resolved.html"
     },
     {
@@ -5053,6 +5131,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "input-prefix-suffix/suffix.resolved.html"
     },
     {
@@ -5118,6 +5197,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "language-selector/default.resolved.html"
     },
     {
@@ -5174,6 +5254,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "language-selector/expanded.resolved.html"
     },
     {
@@ -5231,6 +5312,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "layout-docs/default.resolved.html"
     },
     {
@@ -5299,6 +5381,7 @@
       "compositionRecipes": [
         "login-flow"
       ],
+      "origin": "design-system",
       "resolvedView": "link/default.resolved.html"
     },
     {
@@ -5365,6 +5448,7 @@
       "compositionRecipes": [
         "login-flow"
       ],
+      "origin": "design-system",
       "resolvedView": "link/download.resolved.html"
     },
     {
@@ -5425,6 +5509,7 @@
       "compositionRecipes": [
         "login-flow"
       ],
+      "origin": "design-system",
       "resolvedView": "link/external.resolved.html"
     },
     {
@@ -5488,6 +5573,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "list/default.resolved.html"
     },
     {
@@ -5544,6 +5630,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "list/unstyled.resolved.html"
     },
     {
@@ -5604,6 +5691,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "logo/image-text.resolved.html"
     },
     {
@@ -5659,6 +5747,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "media-block/default.resolved.html"
     },
     {
@@ -5711,6 +5800,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "memorable-date/default.resolved.html"
     },
     {
@@ -5780,6 +5870,7 @@
         "form"
       ],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "modal/default.resolved.html"
     },
     {
@@ -5840,6 +5931,7 @@
         "form"
       ],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "modal/lg.resolved.html"
     },
     {
@@ -5898,6 +5990,7 @@
       ],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "navbar/default.resolved.html"
     },
     {
@@ -5956,6 +6049,7 @@
         "modal"
       ],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "overlay/default.resolved.html"
     },
     {
@@ -6019,6 +6113,7 @@
       "compositionRecipes": [
         "data-table-with-sorting"
       ],
+      "origin": "design-system",
       "resolvedView": "pagination/default.resolved.html"
     },
     {
@@ -6080,6 +6175,7 @@
       "compositionRecipes": [
         "data-table-with-sorting"
       ],
+      "origin": "design-system",
       "resolvedView": "pagination/show-all.resolved.html"
     },
     {
@@ -6145,6 +6241,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "process-list/default.resolved.html"
     },
     {
@@ -6206,6 +6303,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "process-list/steps.resolved.html"
     },
     {
@@ -6263,6 +6361,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "prose/default.resolved.html"
     },
     {
@@ -6318,6 +6417,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "prose.resolved.html"
     },
     {
@@ -6384,6 +6484,7 @@
       ],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "radio-buttons/default.resolved.html"
     },
     {
@@ -6447,6 +6548,7 @@
       ],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "radio-buttons/disabled.resolved.html"
     },
     {
@@ -6512,6 +6614,7 @@
       ],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "radio-buttons/error.resolved.html"
     },
     {
@@ -6578,6 +6681,7 @@
       ],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "radio-buttons/success.resolved.html"
     },
     {
@@ -6644,6 +6748,7 @@
       ],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "radio-buttons/tile.resolved.html"
     },
     {
@@ -6708,6 +6813,7 @@
       ],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "range-slider/default.resolved.html"
     },
     {
@@ -6770,6 +6876,7 @@
       ],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "range-slider/lg.resolved.html"
     },
     {
@@ -6832,6 +6939,7 @@
       ],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "search/big.resolved.html"
     },
     {
@@ -6898,6 +7006,7 @@
       ],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "search/default.resolved.html"
     },
     {
@@ -6960,6 +7069,7 @@
       ],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "search/small.resolved.html"
     },
     {
@@ -7028,6 +7138,7 @@
       "compositionRecipes": [
         "contact-form"
       ],
+      "origin": "design-system",
       "resolvedView": "select/default.resolved.html"
     },
     {
@@ -7098,6 +7209,7 @@
       "compositionRecipes": [
         "contact-form"
       ],
+      "origin": "design-system",
       "resolvedView": "select/disabled.resolved.html"
     },
     {
@@ -7163,6 +7275,7 @@
       "compositionRecipes": [
         "contact-form"
       ],
+      "origin": "design-system",
       "resolvedView": "select/error.resolved.html"
     },
     {
@@ -7235,6 +7348,7 @@
       "compositionRecipes": [
         "contact-form"
       ],
+      "origin": "design-system",
       "resolvedView": "select/success.resolved.html"
     },
     {
@@ -7305,6 +7419,7 @@
       "compositionRecipes": [
         "contact-form"
       ],
+      "origin": "design-system",
       "resolvedView": "select/tile.resolved.html"
     },
     {
@@ -7368,6 +7483,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "side-navigation/current.resolved.html"
     },
     {
@@ -7432,6 +7548,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "side-navigation/default.resolved.html"
     },
     {
@@ -7494,6 +7611,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "side-navigation/sidenav.resolved.html"
     },
     {
@@ -7555,6 +7673,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "side-navigation/sub-list.resolved.html"
     },
     {
@@ -7621,6 +7740,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "site-alert/default.resolved.html"
     },
     {
@@ -7677,6 +7797,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "site-alert/emergency.resolved.html"
     },
     {
@@ -7732,6 +7853,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "site-alert/no-icon.resolved.html"
     },
     {
@@ -7792,6 +7914,7 @@
       "compositionRecipes": [
         "navigation-hierarchy"
       ],
+      "origin": "design-system",
       "resolvedView": "skip-nav/default.resolved.html"
     },
     {
@@ -7851,6 +7974,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "step-indicator/centered.resolved.html"
     },
     {
@@ -7917,6 +8041,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "step-indicator/default.resolved.html"
     },
     {
@@ -7976,6 +8101,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "step-indicator/no-labels.resolved.html"
     },
     {
@@ -8042,6 +8168,7 @@
         "data-table-with-sorting",
         "error-handling-stack"
       ],
+      "origin": "design-system",
       "resolvedView": "summary-box/default.resolved.html"
     },
     {
@@ -8110,6 +8237,7 @@
         "data-table-with-sorting",
         "error-handling-stack"
       ],
+      "origin": "design-system",
       "resolvedView": "summary-box/error.resolved.html"
     },
     {
@@ -8177,6 +8305,7 @@
         "data-table-with-sorting",
         "error-handling-stack"
       ],
+      "origin": "design-system",
       "resolvedView": "summary-box/info.resolved.html"
     },
     {
@@ -8244,6 +8373,7 @@
         "data-table-with-sorting",
         "error-handling-stack"
       ],
+      "origin": "design-system",
       "resolvedView": "summary-box/warning.resolved.html"
     },
     {
@@ -8305,6 +8435,7 @@
       "compositionRecipes": [
         "data-table-with-sorting"
       ],
+      "origin": "design-system",
       "resolvedView": "table/borderless.resolved.html"
     },
     {
@@ -8370,6 +8501,7 @@
       "compositionRecipes": [
         "data-table-with-sorting"
       ],
+      "origin": "design-system",
       "resolvedView": "table/default.resolved.html"
     },
     {
@@ -8432,6 +8564,7 @@
       "compositionRecipes": [
         "data-table-with-sorting"
       ],
+      "origin": "design-system",
       "resolvedView": "table/scrollable.resolved.html"
     },
     {
@@ -8493,6 +8626,7 @@
       "compositionRecipes": [
         "data-table-with-sorting"
       ],
+      "origin": "design-system",
       "resolvedView": "table/stacked.resolved.html"
     },
     {
@@ -8599,6 +8733,7 @@
       "compositionRecipes": [
         "data-table-with-sorting"
       ],
+      "origin": "design-system",
       "resolvedView": "table/striped.resolved.html"
     },
     {
@@ -8655,6 +8790,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "tag/big.resolved.html"
     },
     {
@@ -8716,6 +8852,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "tag/default.resolved.html"
     },
     {
@@ -8788,6 +8925,7 @@
         "error-handling-stack",
         "login-flow"
       ],
+      "origin": "design-system",
       "resolvedView": "text-input/default.resolved.html"
     },
     {
@@ -8856,6 +8994,7 @@
         "error-handling-stack",
         "login-flow"
       ],
+      "origin": "design-system",
       "resolvedView": "text-input/disabled.resolved.html"
     },
     {
@@ -8924,6 +9063,7 @@
         "error-handling-stack",
         "login-flow"
       ],
+      "origin": "design-system",
       "resolvedView": "text-input/error.resolved.html"
     },
     {
@@ -8995,6 +9135,7 @@
         "error-handling-stack",
         "login-flow"
       ],
+      "origin": "design-system",
       "resolvedView": "text-input/success.resolved.html"
     },
     {
@@ -9068,6 +9209,7 @@
         "error-handling-stack",
         "login-flow"
       ],
+      "origin": "design-system",
       "resolvedView": "text-input/tile.resolved.html"
     },
     {
@@ -9119,6 +9261,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "time-picker/default.resolved.html"
     },
     {
@@ -9179,6 +9322,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "tooltip/bottom.resolved.html"
     },
     {
@@ -9242,6 +9386,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "tooltip/default.resolved.html"
     },
     {
@@ -9302,6 +9447,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "tooltip/left.resolved.html"
     },
     {
@@ -9362,6 +9508,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "tooltip/right.resolved.html"
     },
     {
@@ -9422,6 +9569,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "tooltip/top.resolved.html"
     },
     {
@@ -9482,6 +9630,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "moderate",
+      "origin": "design-system",
       "resolvedView": "typography/default.resolved.html"
     },
     {
@@ -9540,6 +9689,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "typography/link.resolved.html"
     },
     {
@@ -9598,6 +9748,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "typography/list.resolved.html"
     },
     {
@@ -9655,6 +9806,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "cheap",
+      "origin": "design-system",
       "resolvedView": "typography/typeset.resolved.html"
     },
     {
@@ -9717,6 +9869,7 @@
         "contact-form",
         "error-handling-stack"
       ],
+      "origin": "design-system",
       "resolvedView": "validation/alert.resolved.html"
     },
     {
@@ -9784,6 +9937,7 @@
         "contact-form",
         "error-handling-stack"
       ],
+      "origin": "design-system",
       "resolvedView": "validation/default.resolved.html"
     }
   ]
