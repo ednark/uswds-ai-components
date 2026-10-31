@@ -234,6 +234,10 @@
         {
           "class": "usa-pagination__page-no",
           "reason": "Documented USWDS pagination markup (official docs); no styles in the 3.14 bundle"
+        },
+        {
+          "class": "usa-accordion--multiselectable",
+          "reason": "Documented on the official accordion component page alongside data-allow-multiple; the modifier carries no stylesheet rule of its own in the 3.14 bundle (unstyled modifier)"
         }
       ]
     }
