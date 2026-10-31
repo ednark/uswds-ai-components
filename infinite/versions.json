@@ -170,6 +170,19 @@
       "migrationPath": "Fully additive — provenance stays tile-side (never in the index); no re-fetch needed unless you consume tile provenance.",
       "designSystemVersion": "3.14.0",
       "notes": "Source-tier provenance pass: records which authoritative source stands behind each tile body (pinned package source > official docs > maintainer guidance > observed behavior), per the authority-hierarchy interview; banner/default remains the only docs-only canon tile"
+    },
+    {
+      "version": "0.5.3",
+      "releaseDate": "2026-10-30",
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "footer/big secondary-section polish: logo column gains the official mobile-lg:grid-gap-2 + dual grid-col-auto wrapper (img + heading) and the contact-links column gains the usa-footer__social-links block — cited against usa-footer.twig + _includes/usa-social-nav.twig @ 3.14.0",
+        "identifier/default structure review closed: masthead/identity/required-links/usagov sections verified against usa-identifier.twig @ 3.14.0; optional usa-identifier__logos block intentionally omitted (tiles carry no external image assets) and documented in limitations"
+      ],
+      "migrationPath": "Re-fetch footer/big and identifier/default if you compose footers or identifiers.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Closes the two open registry-change-plan §A residuals; all §A markup fixes now implemented"
     }
   ],
   "designSystemVersions": [

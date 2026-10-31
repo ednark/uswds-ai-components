@@ -131,7 +131,7 @@
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0",
     "method": "design-system documentation",
-    "source": "packages/usa-footer/src/usa-footer--big.twig + _includes/usa-footer-nav-primary--big.twig + _includes/usa-signup.twig (pinned @uswds/uswds 3.14.0) — correction: added the grid-container + tablet:grid-col-8/4 primary-section split and the sign-up block the official big footer includes"
+    "source": "packages/usa-footer/src/usa-footer--big.twig + usa-footer.twig + _includes/usa-footer-nav-primary--big.twig + _includes/usa-signup.twig + _includes/usa-social-nav.twig (pinned @uswds/uswds 3.14.0) — corrections: primary-section split + sign-up block (2026-09-29); secondary-section polish (2026-10-30): logo grid-col-auto wrapper + mobile-lg:grid-gap-2 and social-links block per official template"
   }
 }</script>
 </head>
@@ -183,10 +183,32 @@
   <div class="usa-footer__secondary-section">
     <div class="grid-container">
       <div class="grid-row grid-gap">
-        <div class="usa-footer__logo grid-row mobile-lg:grid-col-6">
-          <p class="usa-footer__logo-heading">Agency Name</p>
+        <div class="usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
+          <div class="mobile-lg:grid-col-auto">
+            <img class="usa-footer__logo-img" src="logo.svg" alt="">
+          </div>
+          <div class="mobile-lg:grid-col-auto">
+            <p class="usa-footer__logo-heading">Agency Name</p>
+          </div>
         </div>
         <div class="usa-footer__contact-links mobile-lg:grid-col-6">
+          <div class="usa-footer__social-links grid-row grid-gap-1">
+            <div class="grid-col-auto">
+              <a class="usa-social-link" href="javascript:void(0);">
+                <img class="usa-social-link__icon" src="./img/usa-icons/facebook.svg" alt="Facebook" />
+              </a>
+            </div>
+            <div class="grid-col-auto">
+              <a class="usa-social-link" href="javascript:void(0);">
+                <img class="usa-social-link__icon" src="./img/usa-icons/x.svg" alt="X" />
+              </a>
+            </div>
+            <div class="grid-col-auto">
+              <a class="usa-social-link" href="javascript:void(0);">
+                <img class="usa-social-link__icon" src="./img/usa-icons/youtube.svg" alt="YouTube" />
+              </a>
+            </div>
+          </div>
           <p class="usa-footer__contact-heading">Agency Contact Center</p>
           <address class="usa-footer__address">
             <div class="usa-footer__contact-info grid-row grid-gap">
