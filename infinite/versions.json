@@ -354,6 +354,19 @@
       "migrationPath": "Re-fetch date-picker/default if you embed its markup.",
       "designSystemVersion": "3.14.0",
       "notes": "Closed the last straggler from the two-tile sweep. The form-group wrapper was the only structural gap; the hint stays a span, which is what the package twig uses (the docs page renders a div, both appear in USWDS)."
+    },
+    {
+      "version": "0.5.18",
+      "releaseDate": "2026-10-30",
+      "componentCount": 153,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "logo/image-text: recorded that USWDS supplies only usa-logo and usa-logo__text here and that the inner logo-img / logo-text / logo-text-bold / logo-tagline classes are tile-local site customizations carrying no USWDS styles"
+      ],
+      "migrationPath": "Re-fetch logo/image-text if you consume its limitations.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Non-usa-prefixed custom classes are invisible to the class gate by design, so the only way to surface them is a read against source. This records the fact rather than removing the markup, since an image-plus-text logo is a legitimate need USWDS does not cover."
     }
   ],
   "designSystemVersions": [

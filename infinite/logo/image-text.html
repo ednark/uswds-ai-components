@@ -59,6 +59,7 @@
     ],
     "uswdClass": "usa-logo",
     "limitations": [
+      "Site customization: USWDS provides only usa-logo and usa-logo__text here, and ships no image-plus-text logo component. The inner logo-img, logo-text, logo-text-bold and logo-tagline classes are this tile's own — they carry no USWDS styles, so the site stylesheet must define them (or replace them with your own classes).",
       "usa-logo-img is not a USWDS class; the logo image sits inside usa-logo without a dedicated class."
     ]
   },
@@ -125,6 +126,8 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "verified 2026-10-30 against the pinned 3.14.0 stylesheet: only usa-logo and usa-logo__text are design-system classes in this markup; the remaining classes are tile-local",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }
