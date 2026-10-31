@@ -2,7 +2,7 @@
 
 ## What This Is
 
-A structured component knowledge base for AI coding agents building government websites with the U.S. Web Design System (USWDS 3.14.0). 152 component tiles with categorized adaptation metadata (schema v2).
+A structured component knowledge base for AI coding agents building government websites with the U.S. Web Design System (USWDS 3.14.0). 155 component tiles with categorized adaptation metadata (schema v2).
 
 ## How to Query This Registry
 
@@ -14,7 +14,7 @@ A structured component knowledge base for AI coding agents building government w
 ## Workflow
 
 1. Fetch the index (lean, no prose — facets normalized to flat fields)
-2. Filter in code by section, requiresJs, govCompliance, a11y, costTier, prerequisites, compositionRecipes
+2. Filter in code by section, requiresJs, govCompliance, a11y, costTier, prerequisites, compositionRecipes, `origin` (`design-system` is canon — implied when a record omits it; `live-site` is an observed variant; `extension` is a non-canon class in the USWDS namespace)
 3. **Recipe check:** if the task matches a published pattern (contact-form, login-flow, data-table-with-sorting, error-handling-stack, navigation-hierarchy), fetch `infinite/recipes/{name}.json` instead of composing manually
 4. Fetch only the chosen tiles
 5. Parse the `uswds-agent-meta` JSON block inside each tile
@@ -96,6 +96,7 @@ When constraints conflict, follow this order (highest to lowest):
 
 - ALWAYS query this registry before generating USWDS markup
 - Do not guess USWDS class names — fetch the tile
+- Check `discovery.origin` and `provenance.tier` before relying on a tile body: prefer `design-system-source` claims (the pinned package's own templates/JS); treat `design-system-docs`-tier bodies as weaker citations; `origin: "live-site"` and `origin: "extension"` tiles are observed variants and non-canon classes, not USWDS canon — say so in output when you use them
 - Prefer `requiresJs: "no"` unless JS is explicitly needed
 - Prefer `costTier: "cheap"` components unless the task requires richer behavior
 - Check `discovery.compliance` before proposing components for regulated systems: `fedRampLevel` (conservative floor — escalate only with review), `piiHandling` (`accepts_input` components need PII handling in the host system), `auditTrailCompatible`, `nistControls`

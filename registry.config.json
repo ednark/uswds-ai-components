@@ -26,6 +26,7 @@
     "costTier",
     "prerequisites",
     "compositionRecipes",
+    "origin",
     "fedRampLevel",
     "piiHandling",
     "touchTargetSize",

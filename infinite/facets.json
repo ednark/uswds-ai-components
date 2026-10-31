@@ -207,6 +207,9 @@
       "contact-form": 25,
       "data-table-with-sorting": 11
     },
+    "origin": {
+      "design-system": 155
+    },
     "fedRampLevel": {
       "IL2+": 152,
       "IL2": 3

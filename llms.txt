@@ -7,7 +7,7 @@
 
 ## Overview
 
-USWDS AI Components is a component registry for AI coding agents building government websites with the U.S. Web Design System (USWDS 3.14.0). The registry contains 146 accessible, mobile-friendly components, each with rich adaptation metadata. It extends the ai-component-registry-spec base layer.
+USWDS AI Components is a component registry for AI coding agents building government websites with the U.S. Web Design System (USWDS 3.14.0). The registry contains 155 accessible, mobile-friendly component tiles, each with rich adaptation metadata. It extends the ai-component-registry-spec base layer.
 
 ## Machine manifest
 
@@ -51,7 +51,8 @@ Tiles are structurally self-contained: markup, class names, and adaptation metad
 ## Facets
 
 - uswdsComponentType — accordion, alert, banner, breadcrumb, button, card, checkbox, combo-box, etc.
-- section — forms (16), navigation (10), feedback (8), data-display (6), layout (4), utilities (3)
+- section — forms, navigation, feedback, data-display, layout, utilities, supporting, typography, overlays, buttons (live counts in facets.json)
+- origin — design-system (canon; implied when a record omits it), live-site (observed variant from a real implementation), extension (a class in the USWDS namespace that USWDS does not ship)
 - variant — component variant (e.g., bordered, multiselectable for accordion)
 - interaction — passive, click, hover, keyboard, focus, drag, pointer
 - requiresJs — no, optional, required
@@ -61,7 +62,7 @@ Tiles are structurally self-contained: markup, class names, and adaptation metad
 - prerequisites — components that must be fetched/placed first (e.g., form before inputs)
 - compositionRecipes — recipes this component participates in
 - fedRampLevel — conservative suitability floor (IL2/IL2+/IL4/IL5); all tiles currently assert IL2+ pending compliance review
-- piiHandling — accepts_input (35), displays_only (95), none (16); nistControls and auditTrailCompatible in tile metadata
+- piiHandling — accepts_input / displays_only / none (live counts in facets.json); nistControls and auditTrailCompatible in tile metadata
 - touchTargetSize — guaranteed mobile touch target (44px across all tiles)
 - supportedTokenProfiles — token profiles supported (highContrast on all tiles; darkMode/compactDensity defined in registry config, not yet asserted)
 
@@ -72,11 +73,12 @@ Tiles are structurally self-contained: markup, class names, and adaptation metad
 When selecting a component for a government UI task:
 
 1. Filter by section (forms, navigation, feedback, data-display, layout, utilities)
-2. Check requiresJs — prefer "no" unless task explicitly needs JS behavior
-3. Verify govCompliance includes applicable requirements
-4. Prefer components with wcag21AA: true and keyboardNav: true
-5. Check relatedComponents for commonly paired components
-6. Only generate custom UI if no suitable component exists
+2. Check origin — `design-system` is canon; `live-site` and `extension` records are observed variants and non-canon classes, never present them as USWDS canon
+3. Check requiresJs — prefer "no" unless task explicitly needs JS behavior
+4. Verify govCompliance includes applicable requirements
+5. Prefer components with wcag21AA: true and keyboardNav: true
+6. Check relatedComponents for commonly paired components
+7. Only generate custom UI if no suitable component exists
 
 ---
 
@@ -100,6 +102,7 @@ Each component record in the index contains:
 - title — component name + variant
 - description — one-line summary
 - section — forms | navigation | feedback | data-display | layout | utilities
+- origin — design-system | live-site | extension (canon vs observed variant vs non-canon class)
 - variant — primary variant name
 - variants — all available variant class names
 - requiresJs — no | optional | required
@@ -123,7 +126,7 @@ classMapping, settings, tokenOverrides) is embedded in each tile's
 
 ## Government compliance
 
-All 146 USWDS component tiles pass WCAG 2.1 AA and support Section 508 accessibility requirements.
+All 155 USWDS component tiles pass WCAG 2.1 AA and support Section 508 accessibility requirements.
 
 Components support:
 - Section 508 (36 CFR 1194)
@@ -135,22 +138,22 @@ Components support:
 
 ## USWDS Components by Section
 
-### Forms (16)
+### Forms
 text-input, checkbox, radio-buttons, select, combo-box, date-picker, date-range-picker, file-input, memorable-date, time-picker, range-slider, character-count, input-mask, input-prefix-suffix, form, validation
 
-### Navigation (10)
+### Navigation
 header, side-navigation, breadcrumb, pagination, step-indicator, in-page-navigation, search, language-selector, icon-list, link
 
-### Feedback (8)
+### Feedback
 alert, site-alert, modal, tooltip, banner, process-list, summary-box, tag
 
-### Data Display (6)
+### Data Display
 table, card, collection, identifier, icon, data-visualizations
 
-### Layout (4)
+### Layout
 footer, header, prose, typography
 
-### Utilities (3)
+### Utilities
 button, button-group, accordion
 
 ---
@@ -171,6 +174,7 @@ Each tile includes:
 - compliance — nistControls, fedRampLevel, section508, wcag21AA, piiHandling, auditTrailCompatible, dataMaskingCompatible
 - mobileUX — touchTargetSize, requiredMinSpacing, orientationLocked, fullscreenSafe
 - supportedTokenProfiles — token profiles this component supports (see registry.config.json tokenProfiles)
+- provenance — method (live-site observation | design-system documentation | coverage audit), source, observed date, tier (design-system-source > design-system-docs > maintainer-guidance > observed-behavior), designSystemVersion
 
 ---
 
