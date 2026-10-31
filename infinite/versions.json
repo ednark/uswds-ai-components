@@ -341,6 +341,19 @@
       "migrationPath": "Re-fetch modal/default if you embed its markup.",
       "designSystemVersion": "3.14.0",
       "notes": "Completes the two-tile sweep items deferred by budget. modal compared against the live examples: the dialog needs aria-labelledby AND aria-describedby, and heading plus body belong inside usa-modal__main. range-slider verified matching (label + input.usa-range); it omits the optional usa-hint the docs show, left as is. date-picker still differs by omitting the usa-form-group wrapper the live markup uses."
+    },
+    {
+      "version": "0.5.17",
+      "releaseDate": "2026-10-30",
+      "componentCount": 153,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "date-picker/default: label, hint and the picker are now wrapped in div.usa-form-group, and the input carries aria-labelledby pointing at the label id — matching the live date picker examples and every other form-field tile"
+      ],
+      "migrationPath": "Re-fetch date-picker/default if you embed its markup.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Closed the last straggler from the two-tile sweep. The form-group wrapper was the only structural gap; the hint stays a span, which is what the package twig uses (the docs page renders a div, both appear in USWDS)."
     }
   ],
   "designSystemVersions": [

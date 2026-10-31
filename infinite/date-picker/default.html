@@ -146,6 +146,8 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "correction 2026-10-30: label, hint and the date picker sit inside div.usa-form-group, and the input carries aria-labelledby pointing at the label, per the live date picker examples",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }
@@ -176,10 +178,12 @@
 </head>
 <body>
 <div class="form-section">
-  <label class="usa-label" for="date-picker">Date</label>
-  <span class="usa-hint" id="date-picker-hint">mm/dd/yyyy</span>
-  <div class="usa-date-picker">
-    <input class="usa-input" id="date-picker" aria-describedby="date-picker-hint" type="text" name="date-picker">
+  <div class="usa-form-group">
+    <label class="usa-label" id="date-picker-label" for="date-picker">Date</label>
+    <span class="usa-hint" id="date-picker-hint">mm/dd/yyyy</span>
+    <div class="usa-date-picker">
+      <input class="usa-input" id="date-picker" aria-labelledby="date-picker-label" aria-describedby="date-picker-hint" type="text" name="date-picker">
+    </div>
   </div>
 </div>
 <div class="cap">Date Picker default</div>
