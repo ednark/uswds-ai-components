@@ -301,6 +301,19 @@
       "migrationPath": "Re-fetch icon/default and in-page-navigation/default if you embed their markup.",
       "designSystemVersion": "3.14.0",
       "notes": "Single-tile family sweep (ascending order), part 1. Version re-verified: package.json, registry.config, agents.json, versions.json, installed package and all 153 tile stamps are 3.14.0. Of the 14 single-tile families, 7 have live docs pages (icon, prose, time-picker, date-range-picker, input-mask, memorable-date, in-page-navigation) and 7 return 404 (hero, logo, skipnav, media-block, navbar, overlay, layout-docs) so those fall back to package source only."
+    },
+    {
+      "version": "0.5.14",
+      "releaseDate": "2026-10-30",
+      "componentCount": 153,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "navbar/default: menu button now carries type=button per usa-header/src/_includes/usa-navbar.twig"
+      ],
+      "migrationPath": "Re-fetch navbar/default if you embed its markup.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Single-tile sweep part 2 — the seven families with no live docs page, checked against package source. hero, skip-nav and media-block match their twig; navbar fixed (type=button); overlay is a bare div.usa-overlay which is what the header JS targets; layout-docs uses main.usa-layout-docs with usa-layout-docs__sidenav (only the sidenav modifier is styled in 3.14). logo/image-text is a site-custom image+text logo built on div.usa-logo > em.usa-logo__text; its inner logo-img/logo-text/logo-text-bold/logo-tagline classes are custom, not design-system classes."
     }
   ],
   "designSystemVersions": [
