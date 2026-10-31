@@ -58,7 +58,7 @@
     ],
     "uswdClass": "usa-accordion",
     "limitations": [
-      "usa-accordion__item is not a USWDS class; accordion sections are plain <li> containing h2.usa-accordion__heading + div.usa-accordion__content."
+      "Accordion sections have no wrapper element: each is h4.usa-accordion__heading containing button.usa-accordion__button, followed by div.usa-accordion__content. The ul/li structure is USWDS 2.x and was removed in USWDS 3."
     ],
     "patterns": [
       "step-by-step-journey",
@@ -98,7 +98,7 @@
   },
   "constraints": {
     "preserve": [
-      "ul.usa-accordion",
+      "div.usa-accordion",
       "li",
       "button.usa-accordion__button",
       "div.usa-accordion__content"
@@ -129,29 +129,31 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "correction 2026-10-30: rebuilt to the div-based accordion structure (h4.usa-accordion__heading > button.usa-accordion__button, then div.usa-accordion__content) per usa-accordion.twig and the live component examples; the previous ul/li markup was USWDS 2.x",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }
 }</script>
 </head>
 <body>
-<ul class="usa-accordion usa-accordion--bordered">
-  <li>
-    <button class="usa-accordion__button" aria-controls="errored-bordered">
+<div class="usa-accordion usa-accordion--bordered">
+  <h4 class="usa-accordion__heading">
+    <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="errored-bordered">
       Bordered Accordion Item
     </button>
-    <div id="errored-bordered" class="usa-accordion__content">
-      <p>This accordion has borders around each item for visual separation.</p>
-    </div>
-  </li>
-  <li>
-    <button class="usa-accordion__button" aria-controls="errored-bordered-2">
+  </h4>
+  <div id="errored-bordered" class="usa-accordion__content usa-prose">
+    <p>This accordion has borders around each item for visual separation.</p>
+  </div>
+  <h4 class="usa-accordion__heading">
+    <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="errored-bordered-2">
       Second Bordered Item
     </button>
-    <div id="errored-bordered-2" class="usa-accordion__content">
-      <p>More content in the second bordered accordion item.</p>
-    </div>
-  </li>
-</ul>
+  </h4>
+  <div id="errored-bordered-2" class="usa-accordion__content usa-prose">
+    <p>More content in the second bordered accordion item.</p>
+  </div>
+</div>
 </body>
 </html>

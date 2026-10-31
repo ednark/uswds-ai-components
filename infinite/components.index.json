@@ -58,7 +58,7 @@
       ],
       "uswdClass": "usa-accordion",
       "limitations": [
-        "usa-accordion__item is not a USWDS class; accordion sections are plain <li> containing h2.usa-accordion__heading + div.usa-accordion__content."
+        "Accordion sections have no wrapper element: each is h4.usa-accordion__heading containing button.usa-accordion__button, followed by div.usa-accordion__content. The ul/li structure is USWDS 2.x and was removed in USWDS 3."
       ],
       "patterns": [
         "step-by-step-journey",
@@ -250,7 +250,7 @@
       ],
       "uswdClass": "usa-accordion",
       "limitations": [
-        "usa-accordion__item is not a USWDS class; accordion sections are plain <li> with h2.usa-accordion__heading + div.usa-accordion__content (hidden=\"until-found\" for this variant)."
+        "Accordion sections have no wrapper element: each is h4.usa-accordion__heading containing button.usa-accordion__button, followed by div.usa-accordion__content. The ul/li structure is USWDS 2.x and was removed in USWDS 3."
       ],
       "patterns": [
         "step-by-step-journey",

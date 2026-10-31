@@ -59,7 +59,7 @@
     ],
     "uswdClass": "usa-accordion",
     "limitations": [
-      "usa-accordion__item is not a USWDS class; accordion sections are plain <li> with h2.usa-accordion__heading + div.usa-accordion__content (hidden=\"until-found\" for this variant)."
+      "Accordion sections have no wrapper element: each is h4.usa-accordion__heading containing button.usa-accordion__button, followed by div.usa-accordion__content. The ul/li structure is USWDS 2.x and was removed in USWDS 3."
     ],
     "patterns": [
       "step-by-step-journey",
@@ -131,34 +131,32 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "correction 2026-10-30: rebuilt to the div-based accordion structure (h4.usa-accordion__heading > button.usa-accordion__button, then div.usa-accordion__content) per usa-accordion.twig and the live component examples; the previous ul/li markup was USWDS 2.x",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }
 }</script>
 </head>
 <body>
-<ul class="usa-accordion">
-  <li>
-    <h2 class="usa-accordion__heading">
-      <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-until-found-1">
-        Searchable Accordion Item
-      </button>
-    </h2>
-    <div id="accordion-until-found-1" class="usa-accordion__content usa-prose" hidden="until-found">
-      <p>This content is hidden but still searchable via browser find-in-page. The browser will reveal it when found.</p>
-    </div>
-  </li>
-  <li>
-    <h2 class="usa-accordion__heading">
-      <button class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-until-found-2">
-        Second Searchable Item
-      </button>
-    </h2>
-    <div id="accordion-until-found-2" class="usa-accordion__content usa-prose" hidden="until-found">
-      <p>More searchable content that stays hidden until expanded or found via search.</p>
-    </div>
-  </li>
-</ul>
+<div class="usa-accordion">
+  <h4 class="usa-accordion__heading">
+    <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-until-found-1">
+      Searchable Accordion Item
+    </button>
+  </h4>
+  <div id="accordion-until-found-1" class="usa-accordion__content usa-prose" hidden="until-found">
+    <p>This content is hidden but still searchable via browser find-in-page. The browser will reveal it when found.</p>
+  </div>
+  <h4 class="usa-accordion__heading">
+    <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="accordion-until-found-2">
+      Second Searchable Item
+    </button>
+  </h4>
+  <div id="accordion-until-found-2" class="usa-accordion__content usa-prose" hidden="until-found">
+    <p>More searchable content that stays hidden until expanded or found via search.</p>
+  </div>
+</div>
 <script>
   document.querySelectorAll(".usa-accordion__content").forEach((content) => {
     content.onbeforematch = () => {

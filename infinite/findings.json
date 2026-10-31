@@ -305,7 +305,11 @@
         "remaining 16 classes: absent from every USWDS release CSS checked (2.0.0/2.10.0/2.13.3/3.14.0), package source harvest, relevant docs pages (checkbox/sidenav/language), and 0 Sourcegraph global matches — unattributed; caveat: sourcegraph under-indexes .gov repos"
       ],
       "summary": "First preserve-lint run flagged 19 class citations; classification is NOT uniformly \"invented\" — one is an observed in-the-wild extension, two are stale 2.x canon, the rest are unattributed. Origin labels, not deletion, are the treatment for categories A/B.",
-      "detail": "The lint itself is correct: preserve lists must cite real 3.14 classes. The correction pass initially overclaimed (\"invented\"); this entry records the corrected classification and the tile limitations added for the extension (accordion) and 2.x-lineage (list, sub-list) cases."
+      "detail": "The lint itself is correct: preserve lists must cite real 3.14 classes. The correction pass initially overclaimed (\"invented\"); this entry records the corrected classification and the tile limitations added for the extension (accordion) and 2.x-lineage (list, sub-list) cases. CORRECTED: see the corrected field — the multiselectable class is canon, not an extension.",
+      "corrected": [
+        "2026-10-30: the usa-accordion--multiselectable classification was WRONG. The official accordion component page documents it (used on the accordion root alongside data-allow-multiple). The original check grepped a markdown rendering of the docs page, which strips class attributes, producing a false negative.",
+        "The class has been restored on accordion/multiselectable and allowlisted in staticView.classCheck as a documented-but-unstyled modifier (no stylesheet rule in the 3.14 bundle)."
+      ]
     }
   ]
 }
