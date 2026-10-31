@@ -578,6 +578,20 @@
       "migrationPath": "Re-fetch footer/default and footer/slim if you embed their markup.",
       "designSystemVersion": "3.14.0",
       "notes": "Six-tile tier, footer. footer/big, collapsible, email-signup and sign-up were not changed in this pass: big and sign-up were corrected earlier (0.5.3), and collapsible/email-signup are custom patterns whose remaining differences (h3 vs h4 primary-link, demo-footer-email/email-signup wrapper classes) need a decision rather than a mechanical fix."
+    },
+    {
+      "version": "0.5.33",
+      "releaseDate": "2026-10-31",
+      "componentCount": 146,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "footer/collapsible: added the grid-container usa-footer__return-to-top block the footer twig always renders",
+        "footer/collapsible: recorded that the collapsible footer preserves whichever heading level you author (h1-h6; a non-heading tag falls back to h4) — the tile h3 is a deliberate choice, not a deviation"
+      ],
+      "migrationPath": "Re-fetch footer/collapsible if you embed its markup.",
+      "designSystemVersion": "3.14.0",
+      "notes": "The h3 was initially flagged as a defect by comparing against the big-footer twig h4. Reading usa-footer/src/index.js showed toggleHtmlTag preserves any h1-h6 via data-tag, so the heading level is an authoring decision. Same lesson as file-input: check whether the element is functional before calling a difference a defect."
     }
   ],
   "designSystemVersions": [

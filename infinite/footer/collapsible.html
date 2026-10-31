@@ -108,6 +108,7 @@
       "Link lists within each section"
     ],
     "limitations": [
+      "The collapsible footer swaps each usa-footer__primary-link heading for a button on mobile and restores it on desktop, preserving whichever heading level you author (h1-h6; a non-heading tag falls back to h4). This tile uses h3 to suit its page outline — a deliberate choice, not a deviation from canon.",
       "JavaScript may be needed for toggle on mobile"
     ]
   },
@@ -133,12 +134,17 @@
   },
   "provenance": {
     "tier": "design-system-source",
-    "designSystemVersion": "3.14.0"
+    "designSystemVersion": "3.14.0",
+    "method": "design-system documentation",
+    "source": "correction 2026-10-31: added the grid-container usa-footer__return-to-top block the footer twig always renders"
   }
 }</script>
 </head>
 <body>
 <footer class="usa-footer usa-footer--big">
+  <div class="grid-container usa-footer__return-to-top">
+    <a href="#">Return to top</a>
+  </div>
   <div class="usa-footer__primary-section">
     <div class="grid-container">
       <nav class="usa-footer__nav" aria-label="Footer navigation">
