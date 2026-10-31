@@ -126,17 +126,21 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "correction 2026-10-30: step indicator is div.usa-step-indicator wrapping ol.usa-step-indicator__segments, per the live step indicator examples",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }
 }</script>
 </head>
 <body>
-<ol class="usa-step-indicator usa-step-indicator--no-labels" aria-label="Progress">
+<div class="usa-step-indicator usa-step-indicator--no-labels">
+  <ol class="usa-step-indicator__segments">
   <li class="usa-step-indicator__segment usa-step-indicator__segment--complete"></li>
   <li class="usa-step-indicator__segment usa-step-indicator__segment--complete"></li>
   <li class="usa-step-indicator__segment usa-step-indicator__segment--current"></li>
   <li class="usa-step-indicator__segment"></li>
 </ol>
+</div>
 </body>
 </html>

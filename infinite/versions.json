@@ -411,6 +411,19 @@
       "migrationPath": "If you referenced these tiles, use breadcrumb/default or icon-list/default; see the gap entries for the nearestAlternative in each case.",
       "designSystemVersion": "3.14.0",
       "notes": "Three-tile tier, variants pass. A tile name is a claim that a variant exists, so names encoding invented classes are as harmful as invented classes in markup — and invisible to the class gate, which only inspects markup."
+    },
+    {
+      "version": "0.5.22",
+      "releaseDate": "2026-10-30",
+      "componentCount": 150,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "step-indicator/centered and step-indicator/no-labels: restructured to div.usa-step-indicator > ol.usa-step-indicator__segments — both previously put the component class on the ol and omitted the segments class entirely"
+      ],
+      "migrationPath": "Re-fetch the two step-indicator variant tiles if you embed their markup.",
+      "designSystemVersion": "3.14.0",
+      "notes": "The variant tiles were missing a required class (usa-step-indicator__segments), which the default tile has — a good reminder to check variants, not just defaults. The default tile still uses nav where the docs use div; that one is a semantic choice awaiting a decision."
     }
   ],
   "designSystemVersions": [
