@@ -2075,13 +2075,13 @@
       "resolvedView": "card/group.resolved.html"
     },
     {
-      "file": "card/header-flag.html",
+      "file": "card/header-first.html",
       "title": "Card (Header Flag)",
       "_schemaVersion": 2,
       "uswdsComponentType": "card",
       "uswdsClass": "usa-card usa-card--header-first",
       "section": "data-display",
-      "variant": "header-flag",
+      "variant": "header-first",
       "requiresJs": "no",
       "interaction": [
         "passive",
@@ -2130,7 +2130,7 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "cheap",
-      "resolvedView": "card/header-flag.resolved.html"
+      "resolvedView": "card/header-first.resolved.html"
     },
     {
       "file": "card/inset.html",
