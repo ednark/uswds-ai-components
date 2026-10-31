@@ -1209,7 +1209,7 @@
         "primary",
         "form"
       ],
-      "description": "Primary button for important actions like Download, Sign up, or Log out.",
+      "description": "Primary button for important actions, plus its interaction states (hover, active, focus, disabled). Secondary, outline and big each have their own tile.",
       "supportedTokenProfiles": [
         "highContrast"
       ],

@@ -43,7 +43,7 @@
       "primary",
       "form"
     ],
-    "description": "Primary button for important actions like Download, Sign up, or Log out.",
+    "description": "Primary button for important actions, plus its interaction states (hover, active, focus, disabled). Secondary, outline and big each have their own tile.",
     "compliance": {
       "nistControls": [],
       "fedRampLevel": "IL2+",
@@ -267,7 +267,9 @@
   },
   "provenance": {
     "tier": "design-system-source",
-    "designSystemVersion": "3.14.0"
+    "designSystemVersion": "3.14.0",
+    "method": "design-system documentation",
+    "source": "correction 2026-10-31: removed the secondary, outline and big sections, which duplicated their own tiles; this tile now shows the default button and its states, which no other tile covers"
   }
 }</script>
 <script type="application/json" id="uswds-agent-meta-dense">{"use": ["important primary actions", "form submissions"], "avoid": ["navigation (use a link)", "secondary actions"], "do": ["sentence-case action labels", "commitment/destructive buttons need visible pre-click context (cost, effect, undo path)"], "dont": ["vague labels like OK", "commitment context in the label alone"], "preserve": ["usa-button base class", "type attribute", "semantic button/a root element"], "adapt": "One primary per view; commitment actions need plan/price/outcome context nearby"}</script>
@@ -317,6 +319,7 @@
   </div>
 </div>
 
+
 <div class="preview-section">
   <p class="preview-heading">With States</p>
   <div class="demo-buttons">
@@ -327,28 +330,6 @@
     <button class="usa-button" type="button" aria-disabled="true">aria-disabled</button>
   </div>
 </div>
-
-<div class="preview-section">
-  <p class="preview-heading">Secondary</p>
-  <div class="demo-buttons">
-    <button class="usa-button usa-button--secondary" type="button">Secondary</button>
-  </div>
-</div>
-
-<div class="preview-section">
-  <p class="preview-heading">Outline</p>
-  <div class="demo-buttons">
-    <button class="usa-button usa-button--outline" type="button">Outline</button>
-  </div>
-</div>
-
-<div class="preview-section">
-  <p class="preview-heading">Big</p>
-  <div class="demo-buttons">
-    <button class="usa-button usa-button--big" type="button">Big Button</button>
-  </div>
-</div>
-
-<div class="cap">Button default</div>
+<div class="cap">Button default and states</div>
 </body>
 </html>

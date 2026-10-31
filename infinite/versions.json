@@ -636,6 +636,19 @@
       "migrationPath": "Re-fetch table/scrollable if you embed its markup.",
       "designSystemVersion": "3.14.0",
       "notes": "Six-tile tier, table. default, striped, borderless, stacked and sticky-header verified correct against usa-table.twig (caption, thead th[scope], tbody td, and sticky-header inside its scrollable container with tabindex). All five modifiers confirmed present in the stylesheet. Only scrollable was missing the keyboard affordance."
+    },
+    {
+      "version": "0.5.37",
+      "releaseDate": "2026-10-31",
+      "componentCount": 146,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "button/default: trimmed to the default button and its interaction states (hover, active, focus, disabled) — the secondary, outline and big sections duplicated their own tiles. Description updated to say so"
+      ],
+      "migrationPath": "Re-fetch button/default if you embed its markup; use button/secondary, button/outline and button/big for those variants.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Nine-tile tier, button — and the last family in the sweep. All nine tiles use real modifiers (secondary, outline, inverse, base, accent-cool, accent-warm, big, unstyled all confirmed in the stylesheet), all carry type=button per usa-button.twig, and outline-inverse correctly composes usa-button--outline usa-button--inverse as the twig specifies. The only defect was the default tile duplicating three sibling variants."
     }
   ],
   "designSystemVersions": [
