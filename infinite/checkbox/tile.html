@@ -124,6 +124,8 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "correction 2026-10-31: the input and label sit inside the usa-checkbox wrapper div — the wrapper is styled and canon requires it, but the tile used a bare div",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }
@@ -132,13 +134,13 @@
 <body>
 <fieldset class="usa-fieldset">
   <legend class="usa-legend">Select an option</legend>
-  <div>
+  <div class="usa-checkbox">
     <input class="usa-checkbox__input usa-checkbox__input--tile" id="checkbox-tile-1" type="checkbox" name="checkbox-tile" value="1">
     <label class="usa-checkbox__label" for="checkbox-tile-1">
       Tile option one
     </label>
   </div>
-  <div>
+  <div class="usa-checkbox">
     <input class="usa-checkbox__input usa-checkbox__input--tile" id="checkbox-tile-2" type="checkbox" name="checkbox-tile" value="2">
     <label class="usa-checkbox__label" for="checkbox-tile-2">
       Tile option two

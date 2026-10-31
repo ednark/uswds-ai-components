@@ -664,6 +664,21 @@
       "migrationPath": "Re-fetch these three tiles if you consume their limitations.",
       "designSystemVersion": "3.14.0",
       "notes": "The three standing requiresJs warnings were not heuristic noise: all three limitations carried factually wrong JavaScript claims, verified against the package source (usa-button-group and usa-tag ship no index.js at all). The registry now validates with zero errors and zero warnings under its own bundled validator."
+    },
+    {
+      "version": "0.5.39",
+      "releaseDate": "2026-10-31",
+      "componentCount": 146,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "claimed-class presence gate: discovery.uswdsClass and uswdClass must appear in the tile body. Surfaced 13 tiles; all resolved",
+        "body fixes: character-count/error gained the div.usa-character-count wrapper with data-maxlength (the JS could not initialise without it); checkbox/error, checkbox/success, checkbox/tile and radio-buttons/tile gained their usa-checkbox / usa-radio wrapper divs; modal/lg finally applies usa-modal--lg",
+        "metadata fixes: data-visualizations bar/line/pie -> usa-chart-container; in-page-navigation -> usa-in-page-nav (usa-in-page-navigation does not exist); language-selector/default -> usa-language-container; language-selector/expanded -> usa-language-switcher; validation/alert -> usa-alert"
+      ],
+      "migrationPath": "Re-fetch the affected tiles; the uswdsClass facet changed for seven of them.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Gate A is the first check that catches ABSENT classes, which nothing previously could — the class gate only validates classes that are present. It needs no ground truth (it compares a tile claim to its own body), so it also applies to registries without staticView. It would have caught the breadcrumb defect before the audit found it by hand."
     }
   ],
   "designSystemVersions": [

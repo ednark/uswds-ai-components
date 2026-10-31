@@ -2849,7 +2849,7 @@
       "supportedTokenProfiles": [
         "highContrast"
       ],
-      "uswdClass": "usa-chart",
+      "uswdClass": "usa-chart-container",
       "origin": "extension",
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
@@ -2974,7 +2974,7 @@
       "supportedTokenProfiles": [
         "highContrast"
       ],
-      "uswdClass": "usa-chart",
+      "uswdClass": "usa-chart-container",
       "origin": "extension",
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
@@ -3034,7 +3034,7 @@
       "supportedTokenProfiles": [
         "highContrast"
       ],
-      "uswdClass": "usa-chart",
+      "uswdClass": "usa-chart-container",
       "origin": "extension",
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
@@ -4636,7 +4636,7 @@
       "supportedTokenProfiles": [
         "highContrast"
       ],
-      "uswdClass": "usa-in-page-navigation",
+      "uswdClass": "usa-in-page-nav",
       "limitations": [
         " is not a USWDS class; links inside usa-in-page-nav__item carry no class.",
         " is not a USWDS class; links inside usa-in-page-nav__item carry no class.",
@@ -4825,7 +4825,7 @@
       "title": "Language Selector",
       "_schemaVersion": 2,
       "uswdsComponentType": "language-selector",
-      "uswdsClass": "usa-language",
+      "uswdsClass": "usa-language-container",
       "section": "navigation",
       "variant": "default",
       "requiresJs": "required",
@@ -4862,7 +4862,7 @@
       "supportedTokenProfiles": [
         "highContrast"
       ],
-      "uswdClass": "usa-language",
+      "uswdClass": "usa-language-container",
       "limitations": [
         "usa-language__list is not a USWDS class; language selector lists use usa-language__primary/__submenu families."
       ],
@@ -4891,7 +4891,7 @@
       "title": "Language Selector (Expanded)",
       "_schemaVersion": 2,
       "uswdsComponentType": "language-selector",
-      "uswdsClass": "usa-language-switcher--expanded",
+      "uswdsClass": "usa-language-switcher",
       "section": "navigation",
       "variant": "expanded",
       "requiresJs": "optional",
@@ -4923,7 +4923,7 @@
       "supportedTokenProfiles": [
         "highContrast"
       ],
-      "uswdClass": "usa-language",
+      "uswdClass": "usa-language-switcher",
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -9234,7 +9234,7 @@
       "title": "Validation (Alert)",
       "_schemaVersion": 2,
       "uswdsComponentType": "validation",
-      "uswdsClass": "usa-alert--validation",
+      "uswdsClass": "usa-alert",
       "section": "forms",
       "variant": "alert",
       "requiresJs": "no",
@@ -9265,7 +9265,7 @@
       "supportedTokenProfiles": [
         "highContrast"
       ],
-      "uswdClass": "usa-error-message",
+      "uswdClass": "usa-alert",
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": true,

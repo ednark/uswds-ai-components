@@ -133,17 +133,21 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "correction 2026-10-31: added the div.usa-character-count wrapper with data-maxlength — the component JS initialises from that root, so the tile previously shipped a character count that could not run",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }
 }</script>
 </head>
 <body>
+<div class="usa-character-count" data-maxlength="50">
 <div class="usa-form-group">
   <label class="usa-label" for="with-hint-input">Text field with limit</label>
   <span id="with-hint-input-hint" class="usa-hint">Max 50 characters</span>
   <input id="with-hint-input" class="usa-input" name="with-hint-input" maxlength="50" aria-describedby="with-hint-input-hint with-hint-input-info">
   <span id="with-hint-input-info" class="usa-character-count__status" aria-live="polite"></span>
+</div>
 </div>
 </body>
 </html>

@@ -122,6 +122,8 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "correction 2026-10-31: the input and label sit inside the usa-checkbox wrapper div — the wrapper is styled and canon requires it, but the tile used a bare div",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }
@@ -132,7 +134,7 @@
   <fieldset class="usa-fieldset">
     <legend class="usa-legend">Select options</legend>
     <span class="usa-error-message" id="checkbox-error-message" role="alert">Error: Please select at least one option</span>
-    <div>
+    <div class="usa-checkbox">
       <input class="usa-checkbox__input" id="checkbox-error-1" type="checkbox" name="checkbox-error" value="1">
       <label class="usa-checkbox__label" for="checkbox-error-1">Option one</label>
     </div>
