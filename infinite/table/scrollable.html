@@ -122,13 +122,15 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "correction 2026-10-31: the scrollable table container needs tabindex=0 so keyboard users can scroll it, per usa-table.twig",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }
 }</script>
 </head>
 <body>
-<div class="usa-table-container--scrollable">
+<div class="usa-table-container--scrollable" tabindex="0">
   <table class="usa-table">
     <thead>
       <tr>
