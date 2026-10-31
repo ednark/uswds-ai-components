@@ -314,6 +314,20 @@
       "migrationPath": "Re-fetch navbar/default if you embed its markup.",
       "designSystemVersion": "3.14.0",
       "notes": "Single-tile sweep part 2 — the seven families with no live docs page, checked against package source. hero, skip-nav and media-block match their twig; navbar fixed (type=button); overlay is a bare div.usa-overlay which is what the header JS targets; layout-docs uses main.usa-layout-docs with usa-layout-docs__sidenav (only the sidenav modifier is styled in 3.14). logo/image-text is a site-custom image+text logo built on div.usa-logo > em.usa-logo__text; its inner logo-img/logo-text/logo-text-bold/logo-tagline classes are custom, not design-system classes."
+    },
+    {
+      "version": "0.5.15",
+      "releaseDate": "2026-10-30",
+      "componentCount": 153,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "input-prefix-suffix/prefix: prefix icon svg now carries usa-icon, aria-hidden, focusable=false and role=img (same contract as the icon family)",
+        "validation/default: required-field marker changed from span to abbr.usa-label--required with title=required"
+      ],
+      "migrationPath": "Re-fetch input-prefix-suffix/prefix and validation/default if you embed their markup.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Two-tile family sweep. All ten families have live docs pages. combo-box, character-count, file-input, form, tag verified matching; date-picker and input-prefix-suffix/prefix differ only in wrapper/attributes (form-group vs form, hint span vs div) and were partially corrected; validation uses the inline-error pattern rather than the checklist pattern on the validation page — both are documented, kept as is. modal and range-slider bodies were not compared in this pass."
     }
   ],
   "designSystemVersions": [

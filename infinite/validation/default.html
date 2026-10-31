@@ -150,6 +150,8 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "correction 2026-10-30: the required-field marker is abbr.usa-label--required with title=required, not a span",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }
@@ -182,7 +184,7 @@
 <div class="form-section">
   <form class="usa-form">
     <div class="usa-form-group usa-form-group--error">
-      <label class="usa-label" for="example-input-error">Email address <span class="usa-label--required">*</span></label>
+      <label class="usa-label" for="example-input-error">Email address <abbr title="required" class="usa-label--required">*</abbr></label>
       <span class="usa-error-message" role="alert" id="example-input-error-message">Error message text</span>
       <input class="usa-input usa-input--error" id="example-input-error" type="email" aria-describedby="example-input-error-message" aria-invalid="true" required>
     </div>
