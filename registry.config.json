@@ -101,7 +101,7 @@
     "WCAG 2.1 AA",
     "21st Century IDEA"
   ],
-  "updated": "0.5.9",
+  "updated": "0.5.12",
   "language": "en",
   "gaps": [
     {
@@ -117,6 +117,14 @@
       "status": "deferred",
       "nearestAlternative": "usa-section + usa-prose + layout grid (see core-classes.json)",
       "reason": "USWDS ships a usa-hero component but the registry has no hero tile yet; compose from section/grid/prose or consult the USWDS hero documentation"
+    },
+    {
+      "concept": "banner size variants (slim / medium)",
+      "status": "not_part_of_design_system",
+      "nearestAlternative": "the default banner (banner/default.html) or the usa-banner web component, which supports lang, tld, slot=domain-text and --theme-banner-background-color but no size attribute",
+      "reason": "USWDS 3 ships no slim or medium banner variant; those sizes are USWDS 2.x legacy. The tiles that documented them carried non-canonical markup: no usa-accordion wrapper, no toggle button, and a div in place of header.usa-banner__header",
+      "consequence": "Do not build a slim or medium banner. Use the default banner or the usa-banner web component, and express any compact styling as scoped site CSS — never a usa-banner--slim or usa-banner--medium class",
+      "source": "USWDS banner component documentation (https://designsystem.digital.gov/components/banner/) renders only usa-banner and usa-banner site-banner; no size modifier exists in the 3.14.0 stylesheet"
     }
   ],
   "staticView": {

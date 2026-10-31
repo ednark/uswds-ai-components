@@ -3,12 +3,12 @@
   "metadataSchemaVersion": 2,
   "generatedBy": "_base/generate-index.mjs",
   "counts": {
-    "total": 155,
+    "total": 153,
     "bySection": {
       "data-display": 26,
       "utilities": 12,
       "feedback": 12,
-      "supporting": 11,
+      "supporting": 9,
       "navigation": 30,
       "buttons": 1,
       "forms": 43,
@@ -687,136 +687,6 @@
       ],
       "origin": "design-system",
       "resolvedView": "banner/default.resolved.html"
-    },
-    {
-      "file": "banner/medium.html",
-      "title": "Banner (Medium)",
-      "_schemaVersion": 2,
-      "uswdsComponentType": "banner",
-      "uswdsClass": "usa-banner--medium",
-      "section": "supporting",
-      "variant": "medium",
-      "requiresJs": "no",
-      "interaction": [
-        "click"
-      ],
-      "a11y": {
-        "wcag21AA": true,
-        "keyboardNav": true,
-        "screenReader": true,
-        "reducedMotion": true,
-        "forcedColors": true,
-        "ariaAttributes": true
-      },
-      "govCompliance": [
-        "Section 508",
-        "WCAG 2.1 AA",
-        "21st Century IDEA",
-        "Required by US federal agencies"
-      ],
-      "tier": "curated",
-      "tags": [
-        "banner",
-        "medium",
-        "government",
-        "official"
-      ],
-      "description": "Banner with medium-sized government emblem.",
-      "supportedTokenProfiles": [
-        "highContrast"
-      ],
-      "uswdClass": "usa-banner",
-      "limitations": [
-        "USWDS 3 ships no slim or medium banner variant — those are USWDS 2.x legacy. The canonical options are the default banner and the usa-banner web component (lang, tld, slot=domain-text, --theme-banner-background-color). Treat the compact form here as a site customization, not canon.",
-        "usa-banner--medium is a USWDS 2.x class, removed in USWDS 3 — the banner has one variant (default) plus the <usa-banner> web component."
-      ],
-      "fedRampLevel": "IL2+",
-      "piiHandling": "displays_only",
-      "auditTrailCompatible": false,
-      "nistControls": [],
-      "touchTargetSize": "44px",
-      "relatedComponents": [
-        "header",
-        "identifier"
-      ],
-      "variants": [
-        "default",
-        "medium",
-        "slim"
-      ],
-      "prerequisites": [],
-      "incompatibleWith": [],
-      "costTier": "cheap",
-      "compositionRecipes": [
-        "navigation-hierarchy"
-      ],
-      "origin": "design-system",
-      "resolvedView": "banner/medium.resolved.html"
-    },
-    {
-      "file": "banner/slim.html",
-      "title": "Banner (Slim)",
-      "_schemaVersion": 2,
-      "uswdsComponentType": "banner",
-      "uswdsClass": "usa-banner--slim",
-      "section": "supporting",
-      "variant": "slim",
-      "requiresJs": "no",
-      "interaction": [
-        "click"
-      ],
-      "a11y": {
-        "wcag21AA": true,
-        "keyboardNav": true,
-        "screenReader": true,
-        "reducedMotion": true,
-        "forcedColors": true,
-        "ariaAttributes": true
-      },
-      "govCompliance": [
-        "Section 508",
-        "WCAG 2.1 AA",
-        "21st Century IDEA",
-        "Required by US federal agencies"
-      ],
-      "tier": "curated",
-      "tags": [
-        "banner",
-        "slim",
-        "compact",
-        "mobile"
-      ],
-      "description": "Compact banner for limited vertical space.",
-      "supportedTokenProfiles": [
-        "highContrast"
-      ],
-      "uswdClass": "usa-banner",
-      "limitations": [
-        "USWDS 3 ships no slim or medium banner variant — those are USWDS 2.x legacy. The canonical options are the default banner and the usa-banner web component (lang, tld, slot=domain-text, --theme-banner-background-color). Treat the compact form here as a site customization, not canon.",
-        "usa-banner--slim is a USWDS 2.x class, removed in USWDS 3 — the banner has one variant (default) plus the <usa-banner> web component."
-      ],
-      "fedRampLevel": "IL2+",
-      "piiHandling": "displays_only",
-      "auditTrailCompatible": false,
-      "nistControls": [],
-      "touchTargetSize": "44px",
-      "relatedComponents": [
-        "header",
-        "identifier"
-      ],
-      "variants": [
-        "default",
-        "medium",
-        "slim"
-      ],
-      "prerequisites": [],
-      "incompatibleWith": [],
-      "costTier": "cheap",
-      "compositionRecipes": [
-        "navigation-hierarchy"
-      ],
-      "origin": "design-system",
-      "resolvedView": "banner/slim.resolved.html"
     },
     {
       "file": "banner/until-found.html",

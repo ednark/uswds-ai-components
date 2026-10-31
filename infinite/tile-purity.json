@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedBy": "_base/generate-index.mjs",
   "algorithm": "sha256 of whitespace-normalized body markup; script elements (metadata + behavior) excluded",
-  "count": 155,
+  "count": 153,
   "tiles": {
     "accordion/bordered.html": "7c5086774be544c525973b03dfc38033c16c4c4093fab752392d8bdf7c44f388",
     "accordion/default.html": "feaf12d2157928e506a8a1c7b5b133f7f5298d0a432953cc5e6a7561847016fe",
@@ -14,8 +14,6 @@
     "alert/success.html": "5c0780ad5cca02a6fed6c2d6d2c13d3708775c243ea417622100b2185cf827f9",
     "alert/warning.html": "c898ebf7d990c63cd0048ea72ee16d4168af2444c931a13a714f25977965a9f1",
     "banner/default.html": "f51fdadb1e484128024ea31191655fa7fc8f92e2324ddbb78e016cbd8efb23fc",
-    "banner/medium.html": "be451f2e4d2cce0164a0a25fb6d16079fa6b7943d277886ad4e88a776cf0608d",
-    "banner/slim.html": "101e443e415d1bf7daf9afe7a8447bc22feaca12b0194caf8c06796043cc2de5",
     "banner/until-found.html": "3ea22ec6e26c6e1202541d13496c48484e059552a840a9577b2eb3306c0bc070",
     "breadcrumb/default.html": "fd4aee8aba45905d86e9be1ad4aa4739cfa10913dbbd3c14e215cbe9f6f1f7ee",
     "breadcrumb/naviprev-next.html": "eaebf5b9180fd6b7c6b05e37c15c99c73f11ece96223d0bd1a605fe44aab3fd0",

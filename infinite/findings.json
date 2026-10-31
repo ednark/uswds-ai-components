@@ -330,6 +330,31 @@
       ],
       "summary": "Closure of the F-014 open question: all 16 unattributed classes are confirmed absent from release CSS (2.0.0 to 3.14.0), package templates/JS, and the raw documentation, each check validated by a positive control.",
       "detail": "Method note worth keeping: twice in this audit the CHECK was the defect, not the data — first a markdown rendering that stripped class attributes, then control classes (usa-date-picker__button, usa-language-container) that were themselves invented. Validate a negative check with a positive control that is itself verified to exist."
+    },
+    {
+      "id": "F-016",
+      "date": "2026-10-30",
+      "kind": "decision",
+      "result": "deprecated",
+      "target": [
+        "banner/medium.html",
+        "banner/slim.html",
+        "banner/medium.resolved.html",
+        "banner/slim.resolved.html"
+      ],
+      "changed": [
+        "tiles removed — slim and medium banner sizes are USWDS 2.x legacy with no USWDS 3 equivalent",
+        "registry.config.json: gap declared for banner size variants pointing at the default banner and the usa-banner web component",
+        "agents.json count updated 155 -> 153"
+      ],
+      "evidence": [
+        "live banner docs render only class=\"usa-banner\" and class=\"usa-banner site-banner\" — no size modifier",
+        "no usa-banner--slim or usa-banner--medium in the pinned 3.14.0 stylesheet",
+        "the usa-banner web component is real (lang, tld, slot=domain-text, --theme-banner-background-color) but exposes no size attribute",
+        "both tiles carried non-canonical markup: no div.usa-accordion wrapper, no toggle button, div in place of header.usa-banner__header"
+      ],
+      "summary": "Retired the slim and medium banner tiles. Rebuilding them would have produced near-duplicates of banner/default — the signal that the concept no longer exists in the design system. Recorded as a declared gap instead.",
+      "detail": "Retirement chosen over relabel or rebuild per the audit procedure: after structural correction the two tiles would be indistinguishable from the default banner, so the tile carried a concept USWDS dropped. The gap entry gives the web component plus scoped site CSS as the nearestAlternative."
     }
   ]
 }

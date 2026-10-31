@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "metadataSchemaVersion": 2,
   "generatedBy": "_base/generate-index.mjs",
-  "total": 155,
+  "total": 153,
   "designSystem": "U.S. Web Design System 3.14.0",
   "facets": {
     "section": {
       "data-display": 26,
       "utilities": 12,
       "feedback": 12,
-      "supporting": 11,
+      "supporting": 9,
       "navigation": 30,
       "buttons": 1,
       "forms": 43,
@@ -21,7 +21,7 @@
     "uswdsComponentType": {
       "accordion": 4,
       "alert": 5,
-      "banner": 4,
+      "banner": 2,
       "breadcrumb": 3,
       "button": 9,
       "button-group": 2,
@@ -77,11 +77,11 @@
     },
     "requiresJs": {
       "required": 39,
-      "no": 104,
+      "no": 102,
       "optional": 12
     },
     "interaction": {
-      "click": 100,
+      "click": 98,
       "focus": 90,
       "keyboard": 14,
       "passive": 46,
@@ -98,19 +98,19 @@
       "dismiss": 2
     },
     "a11y": {
-      "wcag21AA": 155,
-      "keyboardNav": 137,
-      "screenReader": 151,
-      "reducedMotion": 152,
-      "forcedColors": 152,
-      "ariaAttributes": 144
+      "wcag21AA": 153,
+      "keyboardNav": 135,
+      "screenReader": 149,
+      "reducedMotion": 150,
+      "forcedColors": 150,
+      "ariaAttributes": 142
     },
     "govCompliance": {
-      "Section 508": 155,
-      "WCAG 2.1 AA": 155,
-      "21st Century IDEA": 152,
+      "Section 508": 153,
+      "WCAG 2.1 AA": 153,
+      "21st Century IDEA": 150,
       "NIST Guidelines": 4,
-      "Required by US federal agencies": 4,
+      "Required by US federal agencies": 2,
       "Required for keyboard accessibility": 1
     },
     "variant": {
@@ -120,10 +120,9 @@
       "until-found": 2,
       "error": 8,
       "info": 2,
-      "slim": 3,
+      "slim": 2,
       "success": 5,
       "warning": 2,
-      "medium": 1,
       "naviprev-next": 1,
       "wrap": 1,
       "accent-cool": 1,
@@ -191,7 +190,7 @@
     },
     "costTier": {
       "moderate": 73,
-      "cheap": 78,
+      "cheap": 76,
       "expensive": 4
     },
     "prerequisites": {
@@ -203,27 +202,27 @@
       "trial-expiry-banner": 4,
       "error-handling-stack": 16,
       "login-flow": 24,
-      "navigation-hierarchy": 26,
+      "navigation-hierarchy": 24,
       "contact-form": 25,
       "data-table-with-sorting": 11
     },
     "origin": {
-      "design-system": 155
+      "design-system": 153
     },
     "fedRampLevel": {
-      "IL2+": 152,
+      "IL2+": 150,
       "IL2": 3
     },
     "piiHandling": {
-      "displays_only": 95,
+      "displays_only": 93,
       "none": 18,
       "accepts_input": 42
     },
     "touchTargetSize": {
-      "44px": 155
+      "44px": 153
     },
     "supportedTokenProfiles": {
-      "highContrast": 152
+      "highContrast": 150
     },
     "patterns": {
       "step-by-step-journey": 9,

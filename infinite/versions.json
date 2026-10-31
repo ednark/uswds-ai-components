@@ -271,6 +271,22 @@
       "migrationPath": "Re-fetch card media/flag/header-flag/inset if you embed their markup or drive media placement from them.",
       "designSystemVersion": "3.14.0",
       "notes": "Live-example sync: pinned 3.14.0 matches the latest published release, so the docs examples are apples-to-apples. Canonical order confirmed as header > media > body > footer inside usa-card__container. Remaining known divergence: article.usa-card vs li.usa-card, recorded and verified safe (no li-dependent selectors under .usa-card-group)"
+    },
+    {
+      "version": "0.5.12",
+      "releaseDate": "2026-10-30",
+      "componentCount": 153,
+      "breakingChanges": [
+        "banner/medium and banner/slim tiles removed (USWDS 2.x legacy sizes with no USWDS 3 equivalent) — use banner/default or the usa-banner web component"
+      ],
+      "addedFacets": [],
+      "metadataChanges": [
+        "registry.config.json: gap declared for banner size variants (slim/medium) with nearestAlternative and consequence",
+        "findings F-016: retirement recorded with the evidence chain"
+      ],
+      "migrationPath": "If you referenced banner/medium.html or banner/slim.html, switch to banner/default.html or the usa-banner web component; scoped site CSS for any compact styling.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Banner audit follow-up: retired rather than rebuilt. Corrected structure would have duplicated banner/default — the signal that the concept is gone from the design system, not merely mis-tiled."
     }
   ],
   "designSystemVersions": [
