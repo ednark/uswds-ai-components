@@ -607,6 +607,22 @@
       "migrationPath": "Re-fetch the four affected tiles if you embed their markup.",
       "designSystemVersion": "3.14.0",
       "notes": "Class provenance policy applied. Spec now states that every class in a tile must be design-system, a design-system utility, declared demo scaffolding, or a custom class documented in limitations — a class with no direction is a defect. A corpus scan found 22 component-adjacent custom classes; four cases were undocumented and are fixed here. The remaining documented ones (logo-*, chart-legend, demo-legend-item) already carry limitations."
+    },
+    {
+      "version": "0.5.35",
+      "releaseDate": "2026-10-31",
+      "componentCount": 146,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "footer/email-signup: the GovDelivery account is now the placeholder YOUR-ACCOUNT instead of a real agency account (USCIGIE) — the integration pattern is kept, the copy hazard removed",
+        "footer/email-signup: the email input carries usa-input and autocomplete=email",
+        "footer/email-signup: the four custom layout classes (demo-footer-email, email-signup, email-signup-form, input-container) are documented in limitations per the class provenance policy, with the canonical usa-sign-up block named as the alternative",
+        "footer/email-signup: limitations explain the GovDelivery integration and how to swap providers"
+      ],
+      "migrationPath": "Re-fetch footer/email-signup — replace YOUR-ACCOUNT with your own GovDelivery account before use.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Kept rather than retired: the GovDelivery integration is genuinely useful knowledge that the canonical usa-sign-up block does not cover. Made policy-compliant instead — placeholder endpoint, canon input class, and every custom class documented. This is the intended shape for a site-specific integration tile: real pattern, no real credentials, no undocumented classes."
     }
   ],
   "designSystemVersions": [

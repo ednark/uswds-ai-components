@@ -118,7 +118,8 @@
       "Subscribe button text"
     ],
     "limitations": [
-      "Requires backend integration with email service (e.g., GovDelivery)"
+      "Custom classes in this tile: demo-footer-email and email-signup are layout wrappers for the signup band, email-signup-form and input-container are form layout helpers. None are USWDS classes and none carry USWDS styles — style them in your theme, or replace the band with the canonical usa-sign-up block (footer/sign-up.html) if you do not need the two-column layout.",
+      "Third-party integration: the form posts to a GovDelivery subscriber endpoint. Replace YOUR-ACCOUNT with your own GovDelivery account before use, and never copy another agency endpoint — it would add subscribers to their list. The same pattern works for other providers by swapping the action URL and field names."
     ]
   },
   "file": "footer/email-signup.html",
@@ -143,7 +144,9 @@
   },
   "provenance": {
     "tier": "design-system-source",
-    "designSystemVersion": "3.14.0"
+    "designSystemVersion": "3.14.0",
+    "method": "design-system documentation",
+    "source": "correction 2026-10-31: GovDelivery account neutralised to a placeholder, and the email input now carries usa-input; custom layout classes documented in limitations"
   }
 }</script>
 </head>
@@ -159,10 +162,10 @@
               <div>Get news delivered right to your inbox.</div>
             </div>
             <div class="grid-col-12 desktop:grid-col-6">
-              <form action="https://public.govdelivery.com/accounts/USCIGIE/subscribers/qualify" method="post" class="email-signup-form">
+              <form action="https://public.govdelivery.com/accounts/YOUR-ACCOUNT/subscribers/qualify" method="post" class="email-signup-form">
                 <div class="input-container">
                   <label class="usa-sr-only" for="email">Input Email</label>
-                  <input type="email" name="email" placeholder="example@website.com" id="email" required>
+                  <input class="usa-input" type="email" name="email" placeholder="example@website.com" id="email" autocomplete="email" required>
                 </div>
                 <input class="usa-button" type="submit" value="Subscribe">
               </form>
