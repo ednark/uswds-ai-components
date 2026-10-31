@@ -90,12 +90,8 @@
     "variants": [
       "default"
     ],
-    "settings": [
-
-    ],
-    "tokenOverrides": [
-
-    ],
+    "settings": [],
+    "tokenOverrides": [],
     "behavior": {
       "requires": "required",
       "source": "host",
@@ -150,7 +146,9 @@
     "method": "design-system documentation",
     "source": "correction 2026-10-30: added id=\"state-label\" to the label — the listbox aria-labelledby referenced an id the tile did not define (dangling aria reference)",
     "tier": "design-system-source",
-    "designSystemVersion": "3.14.0"
+    "designSystemVersion": "3.14.0",
+    "contractLayer": "js",
+    "contractNote": "The combo box JS initialises from .usa-combo-box and replaces the select with an input at runtime; usa-combo-box__select is the pre-init state."
   }
 }</script>
 <style>

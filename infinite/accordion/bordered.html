@@ -132,7 +132,9 @@
     "method": "design-system documentation",
     "source": "correction 2026-10-30: rebuilt to the div-based accordion structure (h4.usa-accordion__heading > button.usa-accordion__button, then div.usa-accordion__content) per usa-accordion.twig and the live component examples; the previous ul/li markup was USWDS 2.x",
     "tier": "design-system-source",
-    "designSystemVersion": "3.14.0"
+    "designSystemVersion": "3.14.0",
+    "contractLayer": "js",
+    "contractNote": "The accordion JS selects button.usa-accordion__button[aria-controls]; the control must be a <button> or the toggle is inert."
   }
 }</script>
 </head>

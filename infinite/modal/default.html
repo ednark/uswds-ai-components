@@ -164,7 +164,9 @@
     "method": "design-system documentation",
     "source": "correction 2026-10-30: modal content wrapped in div.usa-modal__main and the dialog carries aria-describedby pointing at the description, per the live modal examples; replaced custom demo-modal-* wrappers",
     "tier": "design-system-source",
-    "designSystemVersion": "3.14.0"
+    "designSystemVersion": "3.14.0",
+    "contractLayer": "js",
+    "contractNote": "The modal JS initialises from .usa-modal and is opened by data-open-modal on a trigger; aria-labelledby and aria-describedby must point at real ids inside the dialog."
   }
 }</script>
 <style>

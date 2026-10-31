@@ -115,7 +115,7 @@
       "Initial aria-expanded states"
     ],
     "limitations": [
-          "Origin note: usa-accordion--multiselectable IS documented — the official accordion component page uses it alongside data-allow-multiple. It carries no stylesheet rule of its own, so data-allow-multiple is the functional hook. Corrected 2026-10-30: an earlier pass wrongly classified this class as a non-canon extension by grepping a markdown rendering of the docs page, which strips class attributes.",
+      "Origin note: usa-accordion--multiselectable IS documented — the official accordion component page uses it alongside data-allow-multiple. It carries no stylesheet rule of its own, so data-allow-multiple is the functional hook. Corrected 2026-10-30: an earlier pass wrongly classified this class as a non-canon extension by grepping a markdown rendering of the docs page, which strips class attributes.",
       "JavaScript required",
       "Do not set hidden manually"
     ]
@@ -141,7 +141,9 @@
     "method": "design-system documentation",
     "source": "correction 2026-10-30: removed usa-accordion--multiselectable — absent from USWDS 3.14.0 CSS, twig, JS, and the docs page; multi-open is implemented via data-allow-multiple (packages/usa-accordion/src/index.js)",
     "tier": "design-system-source",
-    "designSystemVersion": "3.14.0"
+    "designSystemVersion": "3.14.0",
+    "contractLayer": "js",
+    "contractNote": "The accordion JS selects button.usa-accordion__button[aria-controls] and reads data-allow-multiple for multi-open."
   }
 }</script>
 </head>

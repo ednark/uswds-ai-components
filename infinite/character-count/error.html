@@ -136,7 +136,9 @@
     "method": "design-system documentation",
     "source": "correction 2026-10-31: added the div.usa-character-count wrapper with data-maxlength — the component JS initialises from that root, so the tile previously shipped a character count that could not run",
     "tier": "design-system-source",
-    "designSystemVersion": "3.14.0"
+    "designSystemVersion": "3.14.0",
+    "contractLayer": "js",
+    "contractNote": "The character count JS initialises from div.usa-character-count[data-maxlength]; without that root the counter never runs."
   }
 }</script>
 </head>

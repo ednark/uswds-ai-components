@@ -679,6 +679,20 @@
       "migrationPath": "Re-fetch the affected tiles; the uswdsClass facet changed for seven of them.",
       "designSystemVersion": "3.14.0",
       "notes": "Gate A is the first check that catches ABSENT classes, which nothing previously could — the class gate only validates classes that are present. It needs no ground truth (it compares a tile claim to its own body), so it also applies to registries without staticView. It would have caught the breadcrumb defect before the audit found it by hand."
+    },
+    {
+      "version": "0.5.40",
+      "releaseDate": "2026-10-31",
+      "componentCount": 146,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "provenance.contractLayer and provenance.contractNote added to 30 tiles — records which layer (js, css, both, neither) owns each component structural contract, so a reviewer knows whether a difference from the reference template is load-bearing before changing it",
+        "annotated: tooltip (5), character-count (2), combo-box (2), date-picker (2), modal (2), accordion (4), footer/collapsible, file-input (2), table scrollable and sticky-header, banner (2), header (6)"
+      ],
+      "migrationPath": "Fully additive metadata; no re-fetch needed unless you consume provenance.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Step 4 of the blind-spot plan. The field exists because three defects this session were flagged by pattern-matching against the reference template and two of them were wrong: the file-input wrapper is correct post-init state (CSS owns the contract), and the footer collapsible h3 is preserved by the JS (which accepts h1-h6). Only the tooltip was genuinely broken (JS owns the contract and the tile authored post-init state). Recording the layer makes that distinction visible before the next reviewer acts."
     }
   ],
   "designSystemVersions": [

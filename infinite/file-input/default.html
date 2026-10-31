@@ -96,12 +96,8 @@
       "default",
       "error"
     ],
-    "settings": [
-
-    ],
-    "tokenOverrides": [
-
-    ],
+    "settings": [],
+    "tokenOverrides": [],
     "behavior": {
       "requires": "optional",
       "source": "host",
@@ -149,7 +145,9 @@
   },
   "provenance": {
     "tier": "design-system-source",
-    "designSystemVersion": "3.14.0"
+    "designSystemVersion": "3.14.0",
+    "contractLayer": "css",
+    "contractNote": "The file input JS moves usa-file-input from the input to a created parent wrapper at init, and the stylesheet targets .usa-file-input .usa-file-input__input. This tile is authored in that post-init state — moving the class onto the input renders it unstyled."
   }
 }</script>
 <style>
