@@ -101,7 +101,7 @@
     "WCAG 2.1 AA",
     "21st Century IDEA"
   ],
-  "updated": "0.5.20",
+  "updated": "0.5.21",
   "language": "en",
   "gaps": [
     {
@@ -125,6 +125,22 @@
       "reason": "USWDS 3 ships no slim or medium banner variant; those sizes are USWDS 2.x legacy. The tiles that documented them carried non-canonical markup: no usa-accordion wrapper, no toggle button, and a div in place of header.usa-banner__header",
       "consequence": "Do not build a slim or medium banner. Use the default banner or the usa-banner web component, and express any compact styling as scoped site CSS — never a usa-banner--slim or usa-banner--medium class",
       "source": "USWDS banner component documentation (https://designsystem.digital.gov/components/banner/) renders only usa-banner and usa-banner site-banner; no size modifier exists in the 3.14.0 stylesheet"
+    },
+    {
+      "concept": "breadcrumb previous/next variant",
+      "status": "not_part_of_design_system",
+      "nearestAlternative": "the default breadcrumb (breadcrumb/default.html) for hierarchy, or plain links for sequential prev/next navigation",
+      "reason": "USWDS ships no prev/next breadcrumb variant. The class such a tile implied (usa-breadcrumb--naviprev-next) does not exist in the 3.14.0 stylesheet, and the component page documents only default, RDFa-metadata and truncated variants",
+      "consequence": "Do not build a prev/next breadcrumb. Use the default breadcrumb for hierarchy, or plain links labelled Previous/Next — never a usa-breadcrumb--naviprev-next class",
+      "source": "USWDS breadcrumb component documentation renders Default, RDFa metadata and Truncated previews only; no naviprev-next class in the 3.14.0 stylesheet"
+    },
+    {
+      "concept": "icon-list checklist and custom-size modifiers",
+      "status": "not_part_of_design_system",
+      "nearestAlternative": "the default icon list (icon-list/default.html) — choose the icon itself to convey checklist meaning, and size icons with usa-icon--size-* on the svg",
+      "reason": "usa-icon-list--checklist and usa-icon-list--icon-lg do not exist in the 3.14.0 stylesheet. The component page documents Default, Simple content, Rich content and Custom size previews, none of which use those classes",
+      "consequence": "Do not add usa-icon-list--checklist or usa-icon-list--icon-lg. Express a checklist by selecting a check icon, and custom sizes via usa-icon--size-* on the icon svg",
+      "source": "USWDS icon list component documentation previews (Default, Simple content, Rich content, Custom size); neither class appears in the 3.14.0 stylesheet"
     }
   ],
   "staticView": {

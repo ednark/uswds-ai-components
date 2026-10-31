@@ -3,13 +3,13 @@
   "metadataSchemaVersion": 2,
   "generatedBy": "_base/generate-index.mjs",
   "counts": {
-    "total": 153,
+    "total": 150,
     "bySection": {
-      "data-display": 26,
+      "data-display": 24,
       "utilities": 12,
       "feedback": 12,
       "supporting": 9,
-      "navigation": 30,
+      "navigation": 29,
       "buttons": 1,
       "forms": 43,
       "layout": 12,
@@ -815,70 +815,6 @@
       ],
       "origin": "design-system",
       "resolvedView": "breadcrumb/default.resolved.html"
-    },
-    {
-      "file": "breadcrumb/naviprev-next.html",
-      "title": "Breadcrumb (Naviprev Next)",
-      "_schemaVersion": 2,
-      "uswdsComponentType": "breadcrumb",
-      "uswdsClass": "usa-breadcrumb--naviprev-next",
-      "section": "navigation",
-      "variant": "naviprev-next",
-      "requiresJs": "no",
-      "interaction": [
-        "click"
-      ],
-      "a11y": {
-        "wcag21AA": true,
-        "keyboardNav": true,
-        "screenReader": true,
-        "reducedMotion": true,
-        "forcedColors": true,
-        "ariaAttributes": true
-      },
-      "govCompliance": [
-        "Section 508",
-        "WCAG 2.1 AA",
-        "21st Century IDEA"
-      ],
-      "tier": "curated",
-      "tags": [
-        "breadcrumb",
-        "naviprev-next",
-        "prev-next",
-        "linear"
-      ],
-      "description": "Breadcrumb variant showing previous and next navigation only.",
-      "supportedTokenProfiles": [
-        "highContrast"
-      ],
-      "uswdClass": "usa-breadcrumb",
-      "limitations": [
-        "usa-breadcrumb--naviprev-next is not a USWDS class; prev/next flows use the pagination component."
-      ],
-      "fedRampLevel": "IL2+",
-      "piiHandling": "displays_only",
-      "auditTrailCompatible": false,
-      "nistControls": [],
-      "touchTargetSize": "44px",
-      "relatedComponents": [
-        "header",
-        "link",
-        "pagination"
-      ],
-      "variants": [
-        "default",
-        "wrap",
-        "naviprev-next"
-      ],
-      "prerequisites": [],
-      "incompatibleWith": [],
-      "costTier": "cheap",
-      "compositionRecipes": [
-        "navigation-hierarchy"
-      ],
-      "origin": "design-system",
-      "resolvedView": "breadcrumb/naviprev-next.resolved.html"
     },
     {
       "file": "breadcrumb/wrap.html",
@@ -4465,66 +4401,6 @@
       "resolvedView": "icon/default.resolved.html"
     },
     {
-      "file": "icon-list/checklist.html",
-      "title": "Icon List (Checklist)",
-      "_schemaVersion": 2,
-      "uswdsComponentType": "icon-list",
-      "uswdsClass": "usa-icon-list--checklist",
-      "section": "data-display",
-      "variant": "checklist",
-      "requiresJs": "no",
-      "interaction": [
-        "passive"
-      ],
-      "a11y": {
-        "wcag21AA": true,
-        "keyboardNav": true,
-        "screenReader": true,
-        "reducedMotion": true,
-        "forcedColors": true,
-        "ariaAttributes": true
-      },
-      "govCompliance": [
-        "Section 508",
-        "WCAG 2.1 AA",
-        "21st Century IDEA"
-      ],
-      "tier": "curated",
-      "tags": [
-        "icon-list",
-        "checklist",
-        "check",
-        "completed"
-      ],
-      "description": "Icon list with checkmark icons for completed items.",
-      "supportedTokenProfiles": [
-        "highContrast"
-      ],
-      "uswdClass": "usa-icon-list",
-      "limitations": [
-        "usa-icon-list--checklist is not a USWDS class; check icons come from the icon hrefs, not a variant class."
-      ],
-      "fedRampLevel": "IL2+",
-      "piiHandling": "displays_only",
-      "auditTrailCompatible": false,
-      "nistControls": [],
-      "touchTargetSize": "44px",
-      "relatedComponents": [
-        "list",
-        "process-list"
-      ],
-      "variants": [
-        "default",
-        "checklist",
-        "icon-lg"
-      ],
-      "prerequisites": [],
-      "incompatibleWith": [],
-      "costTier": "cheap",
-      "origin": "design-system",
-      "resolvedView": "icon-list/checklist.resolved.html"
-    },
-    {
       "file": "icon-list/default.html",
       "title": "Icon List",
       "_schemaVersion": 2,
@@ -4585,66 +4461,6 @@
       "costTier": "moderate",
       "origin": "design-system",
       "resolvedView": "icon-list/default.resolved.html"
-    },
-    {
-      "file": "icon-list/icon-lg.html",
-      "title": "Icon List (Icon Large)",
-      "_schemaVersion": 2,
-      "uswdsComponentType": "icon-list",
-      "uswdsClass": "usa-icon-list--icon-lg",
-      "section": "data-display",
-      "variant": "icon-lg",
-      "requiresJs": "no",
-      "interaction": [
-        "passive"
-      ],
-      "a11y": {
-        "wcag21AA": true,
-        "keyboardNav": true,
-        "screenReader": true,
-        "reducedMotion": true,
-        "forcedColors": true,
-        "ariaAttributes": true
-      },
-      "govCompliance": [
-        "Section 508",
-        "WCAG 2.1 AA",
-        "21st Century IDEA"
-      ],
-      "tier": "curated",
-      "tags": [
-        "icon-list",
-        "icon-lg",
-        "large",
-        "featured"
-      ],
-      "description": "Icon list with larger icon size for emphasis.",
-      "supportedTokenProfiles": [
-        "highContrast"
-      ],
-      "uswdClass": "usa-icon-list",
-      "limitations": [
-        "usa-icon-list--icon-lg is not a USWDS class; icon sizing is not a USWDS 3 icon-list variant."
-      ],
-      "fedRampLevel": "IL2+",
-      "piiHandling": "displays_only",
-      "auditTrailCompatible": false,
-      "nistControls": [],
-      "touchTargetSize": "44px",
-      "relatedComponents": [
-        "list",
-        "process-list"
-      ],
-      "variants": [
-        "default",
-        "checklist",
-        "icon-lg"
-      ],
-      "prerequisites": [],
-      "incompatibleWith": [],
-      "costTier": "cheap",
-      "origin": "design-system",
-      "resolvedView": "icon-list/icon-lg.resolved.html"
     },
     {
       "file": "identifier/default.html",

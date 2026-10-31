@@ -355,6 +355,33 @@
       ],
       "summary": "Retired the slim and medium banner tiles. Rebuilding them would have produced near-duplicates of banner/default — the signal that the concept no longer exists in the design system. Recorded as a declared gap instead.",
       "detail": "Retirement chosen over relabel or rebuild per the audit procedure: after structural correction the two tiles would be indistinguishable from the default banner, so the tile carried a concept USWDS dropped. The gap entry gives the web component plus scoped site CSS as the nearestAlternative."
+    },
+    {
+      "id": "F-017",
+      "date": "2026-10-30",
+      "kind": "decision",
+      "result": "deprecated",
+      "target": [
+        "infinite/breadcrumb/naviprev-next.html",
+        "infinite/breadcrumb/naviprev-next.resolved.html",
+        "infinite/icon-list/checklist.html",
+        "infinite/icon-list/checklist.resolved.html",
+        "infinite/icon-list/icon-lg.html",
+        "infinite/icon-list/icon-lg.resolved.html"
+      ],
+      "changed": [
+        "breadcrumb/naviprev-next, icon-list/checklist and icon-list/icon-lg removed — each tile name encoded a class that does not exist",
+        "registry.config.json: two gaps declared (breadcrumb prev/next variant; icon-list checklist and custom-size modifiers)",
+        "agents.json count updated 153 -> 150"
+      ],
+      "evidence": [
+        "usa-breadcrumb--naviprev-next, usa-icon-list--checklist and usa-icon-list--icon-lg are all absent from the pinned 3.14.0 stylesheet",
+        "breadcrumb page previews: Default, Breadcrumb with RDFa metadata, Truncated breadcrumb — no prev/next",
+        "icon list page previews: Default, Simple content, Rich content, Custom size, Custom size with rich content — no checklist modifier",
+        "real variants confirmed present: usa-breadcrumb--truncate, usa-link--external, usa-search--big/small, usa-site-alert--emergency/no-icon, usa-step-indicator--center/no-labels"
+      ],
+      "summary": "Retired three tiles whose filenames encoded invented classes, matching the banner slim/medium precedent. A tile name is a claim: it tells an agent a variant exists.",
+      "detail": "Same reasoning as F-016: a tile whose only distinguishing feature is a class the design system does not ship is carrying a concept that does not exist. Gap entries give the nearestAlternative in each case. Note usa-step-indicator--center is real while its tile is named centered — a filename mismatch only, left for a separate rename."
     }
   ]
 }

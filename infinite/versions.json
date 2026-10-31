@@ -395,6 +395,22 @@
       "migrationPath": "Re-fetch breadcrumb/default, icon-list/default and link/default if you embed their markup.",
       "designSystemVersion": "3.14.0",
       "notes": "Three-tile tier, part 1. search verified (usa-search__submit is a real class; the tile omits the sprite icon image, which is the documented no-external-assets divergence). site-alert matches after the earlier curated-contract corrections. step-indicator uses nav where the docs use div — flagged, not changed, since nav gives a landmark; needs a decision."
+    },
+    {
+      "version": "0.5.21",
+      "releaseDate": "2026-10-30",
+      "componentCount": 150,
+      "breakingChanges": [
+        "breadcrumb/naviprev-next, icon-list/checklist and icon-list/icon-lg removed — each encoded a class USWDS does not ship"
+      ],
+      "addedFacets": [],
+      "metadataChanges": [
+        "registry.config.json: two gaps declared for the removed variants",
+        "findings F-017: retirement recorded with the evidence chain"
+      ],
+      "migrationPath": "If you referenced these tiles, use breadcrumb/default or icon-list/default; see the gap entries for the nearestAlternative in each case.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Three-tile tier, variants pass. A tile name is a claim that a variant exists, so names encoding invented classes are as harmful as invented classes in markup — and invisible to the class gate, which only inspects markup."
     }
   ],
   "designSystemVersions": [

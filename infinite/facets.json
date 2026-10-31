@@ -2,15 +2,15 @@
   "schemaVersion": 1,
   "metadataSchemaVersion": 2,
   "generatedBy": "_base/generate-index.mjs",
-  "total": 153,
+  "total": 150,
   "designSystem": "U.S. Web Design System 3.14.0",
   "facets": {
     "section": {
-      "data-display": 26,
+      "data-display": 24,
       "utilities": 12,
       "feedback": 12,
       "supporting": 9,
-      "navigation": 30,
+      "navigation": 29,
       "buttons": 1,
       "forms": 43,
       "layout": 12,
@@ -22,7 +22,7 @@
       "accordion": 4,
       "alert": 5,
       "banner": 2,
-      "breadcrumb": 3,
+      "breadcrumb": 2,
       "button": 9,
       "button-group": 2,
       "card": 7,
@@ -40,7 +40,7 @@
       "header": 6,
       "hero": 1,
       "icon": 1,
-      "icon-list": 3,
+      "icon-list": 1,
       "identifier": 2,
       "in-page-navigation": 1,
       "input-mask": 1,
@@ -77,14 +77,14 @@
     },
     "requiresJs": {
       "required": 39,
-      "no": 102,
+      "no": 99,
       "optional": 12
     },
     "interaction": {
-      "click": 98,
+      "click": 97,
       "focus": 90,
       "keyboard": 14,
-      "passive": 46,
+      "passive": 44,
       "hover": 31,
       "input": 13,
       "type": 8,
@@ -98,17 +98,17 @@
       "dismiss": 2
     },
     "a11y": {
-      "wcag21AA": 153,
-      "keyboardNav": 135,
-      "screenReader": 149,
-      "reducedMotion": 150,
-      "forcedColors": 150,
-      "ariaAttributes": 142
+      "wcag21AA": 150,
+      "keyboardNav": 132,
+      "screenReader": 146,
+      "reducedMotion": 147,
+      "forcedColors": 147,
+      "ariaAttributes": 139
     },
     "govCompliance": {
-      "Section 508": 153,
-      "WCAG 2.1 AA": 153,
-      "21st Century IDEA": 150,
+      "Section 508": 150,
+      "WCAG 2.1 AA": 150,
+      "21st Century IDEA": 147,
       "NIST Guidelines": 4,
       "Required by US federal agencies": 2,
       "Required for keyboard accessibility": 1
@@ -123,7 +123,6 @@
       "slim": 2,
       "success": 5,
       "warning": 2,
-      "naviprev-next": 1,
       "wrap": 1,
       "accent-cool": 1,
       "accent-warm": 1,
@@ -156,8 +155,6 @@
       "extended": 1,
       "megamenu": 1,
       "nav-search": 1,
-      "checklist": 1,
-      "icon-lg": 1,
       "with-logo": 1,
       "prefix": 1,
       "suffix": 1,
@@ -190,7 +187,7 @@
     },
     "costTier": {
       "moderate": 73,
-      "cheap": 76,
+      "cheap": 73,
       "expensive": 4
     },
     "prerequisites": {
@@ -202,27 +199,27 @@
       "trial-expiry-banner": 4,
       "error-handling-stack": 16,
       "login-flow": 24,
-      "navigation-hierarchy": 24,
+      "navigation-hierarchy": 23,
       "contact-form": 25,
       "data-table-with-sorting": 11
     },
     "origin": {
-      "design-system": 153
+      "design-system": 150
     },
     "fedRampLevel": {
-      "IL2+": 150,
+      "IL2+": 147,
       "IL2": 3
     },
     "piiHandling": {
-      "displays_only": 93,
+      "displays_only": 90,
       "none": 18,
       "accepts_input": 42
     },
     "touchTargetSize": {
-      "44px": 153
+      "44px": 150
     },
     "supportedTokenProfiles": {
-      "highContrast": 150
+      "highContrast": 147
     },
     "patterns": {
       "step-by-step-journey": 9,
