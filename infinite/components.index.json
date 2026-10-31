@@ -3,13 +3,13 @@
   "metadataSchemaVersion": 2,
   "generatedBy": "_base/generate-index.mjs",
   "counts": {
-    "total": 150,
+    "total": 149,
     "bySection": {
       "data-display": 24,
       "utilities": 12,
       "feedback": 12,
       "supporting": 9,
-      "navigation": 29,
+      "navigation": 28,
       "buttons": 1,
       "forms": 43,
       "layout": 12,
@@ -7300,68 +7300,6 @@
       ],
       "origin": "design-system",
       "resolvedView": "side-navigation/sidenav.resolved.html"
-    },
-    {
-      "file": "side-navigation/sub-list.html",
-      "title": "Side Navigation (Sub-list)",
-      "_schemaVersion": 2,
-      "uswdsComponentType": "side-navigation",
-      "uswdsClass": "usa-nav__submenu",
-      "section": "navigation",
-      "variant": "sub-list",
-      "requiresJs": "required",
-      "interaction": [
-        "click",
-        "hover",
-        "focus"
-      ],
-      "a11y": {
-        "wcag21AA": true,
-        "keyboardNav": true,
-        "screenReader": true,
-        "reducedMotion": true,
-        "forcedColors": true,
-        "ariaAttributes": true
-      },
-      "govCompliance": [
-        "Section 508",
-        "WCAG 2.1 AA",
-        "21st Century IDEA"
-      ],
-      "tier": "curated",
-      "tags": [
-        "side-navigation",
-        "sub-list",
-        "hierarchical",
-        "dropdown"
-      ],
-      "description": "Side navigation with expandable sub-menu items.",
-      "supportedTokenProfiles": [
-        "highContrast"
-      ],
-      "uswdClass": "usa-sidenav",
-      "fedRampLevel": "IL2+",
-      "piiHandling": "displays_only",
-      "auditTrailCompatible": false,
-      "nistControls": [],
-      "touchTargetSize": "44px",
-      "relatedComponents": [
-        "header",
-        "link",
-        "in-page-navigation"
-      ],
-      "variants": [
-        "default",
-        "sub-list"
-      ],
-      "prerequisites": [],
-      "incompatibleWith": [],
-      "costTier": "moderate",
-      "compositionRecipes": [
-        "navigation-hierarchy"
-      ],
-      "origin": "design-system",
-      "resolvedView": "side-navigation/sub-list.resolved.html"
     },
     {
       "file": "site-alert/default.html",

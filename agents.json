@@ -3,7 +3,7 @@
   "description": "USWDS (U.S. Web Design System) component registry for AI coding agents. 146 accessible, mobile-friendly government components with full adaptation metadata.",
   "repo": "https://github.com/ednark/uswds-ai-components",
   "base": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main",
-  "count": 150,
+  "count": 149,
   "facetsUrl": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/facets.json",
   "index": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/components.index.json",
   "indexSchemaVersion": 1,

@@ -424,6 +424,25 @@
       "migrationPath": "Re-fetch the two step-indicator variant tiles if you embed their markup.",
       "designSystemVersion": "3.14.0",
       "notes": "The variant tiles were missing a required class (usa-step-indicator__segments), which the default tile has — a good reminder to check variants, not just defaults. The default tile still uses nav where the docs use div; that one is a semantic choice awaiting a decision."
+    },
+    {
+      "version": "0.5.23",
+      "releaseDate": "2026-10-30",
+      "componentCount": 149,
+      "breakingChanges": [
+        "side-navigation/sub-list removed — it shipped header navigation markup while claiming to be side navigation"
+      ],
+      "addedFacets": [],
+      "metadataChanges": [
+        "side-navigation/default: usa-sidenav moved off the nav onto the ul only (canon is nav[aria-label] > ul.usa-sidenav)",
+        "side-navigation/current and side-navigation/sidenav: current page is now a.usa-current with aria-current=page, replacing div.usa-current plus a visually hidden label",
+        "side-navigation/current: recorded that active-trail is Drupal's menu class, not a USWDS class",
+        "registry.config.json: gap declared for expandable side-navigation sub-menus",
+        "findings F-018: retirement recorded with the evidence chain"
+      ],
+      "migrationPath": "Re-fetch side-navigation/default, current and sidenav. If you referenced side-navigation/sub-list, use sidenav.html or current.html and nest ul.usa-sidenav__sublist.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Four-tile tier, side-navigation complete. The retired tile was the most misleading found so far: every class it named is real, but they are header navigation classes presented as side navigation — invisible to the class gate, which cannot judge which component a class belongs to."
     }
   ],
   "designSystemVersions": [

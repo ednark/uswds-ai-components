@@ -101,7 +101,7 @@
     "WCAG 2.1 AA",
     "21st Century IDEA"
   ],
-  "updated": "0.5.22",
+  "updated": "0.5.23",
   "language": "en",
   "gaps": [
     {
@@ -141,6 +141,14 @@
       "reason": "usa-icon-list--checklist and usa-icon-list--icon-lg do not exist in the 3.14.0 stylesheet. The component page documents Default, Simple content, Rich content and Custom size previews, none of which use those classes",
       "consequence": "Do not add usa-icon-list--checklist or usa-icon-list--icon-lg. Express a checklist by selecting a check icon, and custom sizes via usa-icon--size-* on the icon svg",
       "source": "USWDS icon list component documentation previews (Default, Simple content, Rich content, Custom size); neither class appears in the 3.14.0 stylesheet"
+    },
+    {
+      "concept": "side navigation with expandable sub-menu (usa-nav__submenu)",
+      "status": "not_part_of_design_system",
+      "nearestAlternative": "side-navigation/sidenav.html or side-navigation/current.html — both nest a plain ul.usa-sidenav__sublist inside li.usa-sidenav__item",
+      "reason": "usa-nav__submenu is header navigation markup, not side navigation. Side navigation nests ul.usa-sidenav__sublist inside li.usa-sidenav__item with no toggle; there is no expandable variant. The retired tile used usa-nav, usa-nav__primary, usa-nav__primary-item, usa-nav__link and usa-nav__submenu while claiming to be side navigation",
+      "consequence": "Do not use usa-nav__* classes inside a side navigation. Nest ul.usa-sidenav__sublist inside li.usa-sidenav__item; for header dropdowns use the header tiles instead",
+      "source": "USWDS side navigation examples nest ul.usa-sidenav__sublist inside li.usa-sidenav__item; usa-nav__submenu appears only in header navigation markup"
     }
   ],
   "staticView": {

@@ -126,6 +126,8 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "correction 2026-10-30: the current page is a.usa-current with aria-current=page, per the live side navigation examples — the tile used a div with a visually hidden label",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }
@@ -141,10 +143,7 @@
           <a href="#">Sub-item One</a>
         </li>
         <li class="usa-sidenav__item">
-          <div class="usa-current">
-            <p class="usa-sr-only">current page</p>
-            Current Page
-          </div>
+          <a href="#" class="usa-current" aria-current="page">Current Page</a>
         </li>
         <li class="usa-sidenav__item">
           <a href="#">Sub-item Three</a>

@@ -101,7 +101,9 @@
       "Navigation links",
       "Current page label"
     ],
-    "limitations": []
+    "limitations": [
+
+  "active-trail is not a USWDS class — it is Drupal's menu-link convention marking an ancestor of the current page. USWDS has no equivalent, so it is a legitimate site/Drupal customization, but it carries no USWDS styles."]
   },
   "file": "side-navigation/current.html",
   "title": "Side Navigation (Current Page)",
@@ -124,6 +126,8 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "correction 2026-10-30: the current page is a.usa-current with aria-current=page, per the live side navigation examples — the tile used a div with a visually hidden label",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }
@@ -136,10 +140,7 @@
       <a href="/about" class="active-trail">About Us</a>
       <ul class="usa-sidenav__sublist">
         <li class="usa-sidenav__item">
-          <div class="active-trail usa-current">
-            <p class="usa-sr-only">current page</p>
-            Current Page
-          </div>
+          <a href="#" class="usa-current" aria-current="page">Current Page</a>
         </li>
         <li class="usa-sidenav__item">
           <a href="/strategic-plan">Strategic Plan</a>

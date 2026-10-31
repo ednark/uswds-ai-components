@@ -382,6 +382,29 @@
       ],
       "summary": "Retired three tiles whose filenames encoded invented classes, matching the banner slim/medium precedent. A tile name is a claim: it tells an agent a variant exists.",
       "detail": "Same reasoning as F-016: a tile whose only distinguishing feature is a class the design system does not ship is carrying a concept that does not exist. Gap entries give the nearestAlternative in each case. Note usa-step-indicator--center is real while its tile is named centered — a filename mismatch only, left for a separate rename."
+    },
+    {
+      "id": "F-018",
+      "date": "2026-10-30",
+      "kind": "decision",
+      "result": "deprecated",
+      "target": [
+        "infinite/side-navigation/sub-list.html",
+        "infinite/side-navigation/sub-list.resolved.html"
+      ],
+      "changed": [
+        "tile removed — it claimed to be side navigation but shipped header navigation markup, and its agentPrompt instructed agents to use usa-nav__submenu for side navigation sub-lists",
+        "registry.config.json: gap declared with the correct pattern as nearestAlternative",
+        "agents.json count updated 150 -> 149"
+      ],
+      "evidence": [
+        "tile metadata: uswdsComponentType side-navigation, variant sub-list, description \"Side navigation with expandable sub-menu items\", agentPrompt \"Use usa-nav__submenu class for dropdown sub-lists within side navigation\"",
+        "tile markup: nav.usa-nav > ul.usa-nav__primary > li.usa-nav__primary-item > a.usa-nav__link, ul.usa-nav__submenu — all header navigation classes",
+        "USWDS side navigation examples nest ul.usa-sidenav__sublist inside li.usa-sidenav__item with no toggle; usa-nav__submenu appears only in header markup",
+        "the concept is already covered correctly by side-navigation/sidenav.html and side-navigation/current.html"
+      ],
+      "summary": "Retired a tile that was not merely mislabeled but actively misleading: its agentPrompt told agents to use header navigation classes for side navigation sub-lists.",
+      "detail": "This is the worst instance of the tile-name-is-a-claim problem found so far. Earlier retirements (banner slim/medium, breadcrumb naviprev-next, icon-list checklist) encoded nonexistent classes; this one encoded a real class used in the wrong component, which is harder for an agent to detect because every class it names does exist."
     }
   ]
 }
