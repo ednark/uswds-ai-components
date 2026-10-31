@@ -592,6 +592,21 @@
       "migrationPath": "Re-fetch footer/collapsible if you embed its markup.",
       "designSystemVersion": "3.14.0",
       "notes": "The h3 was initially flagged as a defect by comparing against the big-footer twig h4. Reading usa-footer/src/index.js showed toggleHtmlTag preserves any h1-h6 via data-tag, so the heading level is an authoring decision. Same lesson as file-input: check whether the element is functional before calling a difference a defect."
+    },
+    {
+      "version": "0.5.34",
+      "releaseDate": "2026-10-31",
+      "componentCount": 146,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "accordion/default and accordion/multiselectable: removed a site-preview-heading label copied from the USWDS documentation site — not a USWDS class, carried no styles",
+        "form/feedback: rebuilt on fieldset + legend, replacing the custom helpful_title and btns wrappers",
+        "header/basic-megamenu: item-title and item-description documented as site classes with no USWDS equivalent"
+      ],
+      "migrationPath": "Re-fetch the four affected tiles if you embed their markup.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Class provenance policy applied. Spec now states that every class in a tile must be design-system, a design-system utility, declared demo scaffolding, or a custom class documented in limitations — a class with no direction is a defect. A corpus scan found 22 component-adjacent custom classes; four cases were undocumented and are fixed here. The remaining documented ones (logo-*, chart-legend, demo-legend-item) already carry limitations."
     }
   ],
   "designSystemVersions": [

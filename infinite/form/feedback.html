@@ -137,6 +137,8 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "correction 2026-10-31: the question is a fieldset legend and the buttons sit directly in it — replaced the custom helpful_title and btns wrappers, which carried no USWDS styles",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }
@@ -144,11 +146,11 @@
 </head>
 <body>
 <form class="usa-form" data-drupal-selector="helpful-form" action="/feedback" method="post" id="helpful-form">
-  <span class="helpful_title">Was this page helpful?</span>
-  <div class="btns">
+  <fieldset class="usa-fieldset">
+    <legend class="usa-legend">Was this page helpful?</legend>
     <input class="usa-button" type="submit" id="affirmative" name="op" value="Yes">
     <input class="usa-button" type="submit" id="negative" name="op" value="No">
-  </div>
+  </fieldset>
 </form>
 </body>
 </html>
