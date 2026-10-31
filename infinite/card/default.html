@@ -86,8 +86,7 @@
       "default",
       "flag",
       "media",
-      "inset",
-      "header-flag"
+      "header-first"
     ],
     "settings": [
       "$theme-card-border-radius",
@@ -136,6 +135,8 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "correction 2026-10-30: added the div.usa-card__container wrapper the official usa-card.twig requires",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }
@@ -169,6 +170,7 @@
 <body>
 <div class="card-grid">
   <article class="usa-card">
+    <div class="usa-card__container">
     <div class="usa-card__header">
       <h2 class="usa-card__heading">Card Heading</h2>
     </div>
@@ -178,6 +180,7 @@
     <div class="usa-card__footer">
       <button class="usa-button" type="button">Action</button>
     </div>
+  </div>
   </article>
 </div>
 <div class="cap">Card default</div>

@@ -79,8 +79,7 @@
       "default",
       "flag",
       "media",
-      "inset",
-      "header-flag"
+      "header-first"
     ],
     "settings": [
       "$theme-card-border-radius",
@@ -124,6 +123,8 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "correction 2026-10-30: added the div.usa-card__container wrapper the official usa-card.twig requires",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }
@@ -131,6 +132,7 @@
 </head>
 <body>
 <article class="usa-card usa-card--flag">
+  <div class="usa-card__container">
   <div class="usa-card__header">
     <div class="usa-card__media">
       <div class="usa-card__img" style="background: #ccc; width: 100px; height: 80px;"></div>
@@ -140,6 +142,7 @@
   <div class="usa-card__body">
     <p>Card body content goes here. The flag variant displays image and content side by side.</p>
   </div>
+</div>
 </article>
 </body>
 </html>

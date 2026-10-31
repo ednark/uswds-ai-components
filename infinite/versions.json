@@ -242,6 +242,20 @@
       "migrationPath": "Re-fetch banner/medium, banner/slim, identifier/with-logo, and the three site-alert tiles if you embed their markup.",
       "designSystemVersion": "3.14.0",
       "notes": "Element contracts are now CURATED, not inferred: inference is unsound because component JS may move a class at init (file-input) and demo templates exercise one tag per class. Declared contracts are enforced as errors; file-input passes unchanged, confirming its post-init structure is correct as authored"
+    },
+    {
+      "version": "0.5.8",
+      "releaseDate": "2026-10-30",
+      "componentCount": 155,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "card/default|flag|header-flag|inset|media: added the missing div.usa-card__container wrapper (official usa-card.twig nests header/body/footer inside it; it is styled in the pinned stylesheet)",
+        "card family (7 tiles): instruction.variants corrected — invented \"header-flag\" replaced with the real \"header-first\" modifier, and \"inset\" removed (the real modifier is usa-card__media--inset on the media element, not a card variant)"
+      ],
+      "migrationPath": "Re-fetch card tiles if you embed their markup or read their variants arrays.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Card-family audit: reviewed card/default against usa-card.twig, the pinned stylesheet, and the card content sidecar. Two evidence-backed defects fixed. The article.usa-card root was reviewed and kept — no li-dependent selectors exist under .usa-card-group, so the semantic choice is safe; a variant-name scanner was attempted and reverted because instruction.variants holds family/sibling variant names rather than modifier classes"
     }
   ],
   "designSystemVersions": [
