@@ -45,7 +45,7 @@
           "mdc-banner__actions wrapper for dismiss/snooze controls"
         ],
         "remove": [
-          "usa-alert__icon — Material uses graphic slot"
+          "usa-alert__body icon area — Material uses a graphic slot"
         ]
       },
       "dependencies": [

@@ -79,7 +79,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add usa-tooltip__wrapper--top, --bottom, --left, or --right for positioning. Set aria-describedby on the trigger element. Update title attribute for tooltip content. Add usa-tooltip__trigger class to the trigger element.",
+    "agentPrompt": "Position via the data-position attribute (top, bottom, left, or right) on the trigger — there is no position modifier class; the JS creates usa-tooltip__body and repositions it relative to the trigger. Set aria-describedby on the trigger element and update the title attribute for tooltip content.",
     "relatedComponents": [
       "modal",
       "alert",

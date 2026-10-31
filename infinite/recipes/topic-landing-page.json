@@ -10,7 +10,7 @@
     { "order": 3, "component": "card", "variant": "group", "file": "card/group.html", "role": "data-display", "required": true, "reason": "Topic card grid with descriptions (usa.gov 'All topics and services')" },
     { "order": 4, "component": "footer", "variant": "default", "file": "footer/default.html", "role": "page-chrome", "required": true, "reason": "Footer with secondary link columns" }
   ],
-  "nesting": "DOM order 1 → 2 → <main> card grid → 4. The card grid uses usa-card-group with usa-card--media variants",
+  "nesting": "DOM order 1 → 2 → <main> card grid → 4. The card grid uses usa-card-group with usa-card--flag media variants",
   "validationOrder": [
     "Banner precedes the header",
     "Card grid is a usa-card-group; each card links its topic page",

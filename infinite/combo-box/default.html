@@ -147,6 +147,8 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "correction 2026-10-30: added id=\"state-label\" to the label — the listbox aria-labelledby referenced an id the tile did not define (dangling aria reference)",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }
@@ -177,7 +179,7 @@
 </head>
 <body>
 <div class="form-section">
-  <label class="usa-label" for="state">State</label>
+  <label class="usa-label" for="state" id="state-label">State</label>
   <div class="usa-combo-box">
     <select class="usa-combo-box__select" id="state" name="state">
       <option value="">Select a state</option>

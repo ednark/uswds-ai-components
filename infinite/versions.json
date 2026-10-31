@@ -199,6 +199,22 @@
       "migrationPath": "Re-fetch accordion/multiselectable, checkbox/success, and any tile whose preserve lists you enforce; agents.json re-fetch for count.",
       "designSystemVersion": "3.14.0",
       "notes": "Validator-suite pass: the new preserve-lint found 19 invented-class citations on first run — reclassified on verification (F-014): one is an observed in-the-wild extension (usa-accordion--multiselectable, 16 public-code matches), two are stale 2.x-era canon (usa-list__item, usa-nav__item — carried forward, dropped in 3.x), the rest unattributed; 16 tiles corrected, 3 entries were negative guidance (lint now skips them); the JS keyword heuristic surfaces 3 review items (button-group, table, tag) where limitations honestly describe additional behaviors"
+    },
+    {
+      "version": "0.5.5",
+      "releaseDate": "2026-10-30",
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "prose class-citation lint findings fixed across ~20 tiles — hallucinated classes in agentPrompt/editable/variants: alert compound modifiers (usa-alert--info--slim), usa-banner--slim mention kept as negative guidance, usa-breadcrumb--naviprev-next, usa-card--header-flag/--inset/--media, usa-icon--size-12 (max is 9), usa-icon-list--checklist/--icon-lg, usa-list--bordered, usa-input--width-2, usa-pagination__show-all, usa-process-list__details/--item--current, tooltip position variants (data-position is the mechanism), usa-typography umbrella, usa-form-error-message",
+        "error-variant tiles' discovery.uswdsClass facets were invented classes (usa-checkbox__input--error, usa-radio__input--error, usa-select--error, usa-character-count--error) — corrected to the real base classes; error styling is usa-form-group--error + usa-error-message",
+        "combo-box/default body correction (purity path): added id=state-label — the listbox aria-labelledby referenced an id the tile did not define",
+        "adapters/alert.json + recipes/topic-landing-page.json: invented source-class citations corrected",
+        "validator additions (spec): prose class-citation scan (agentPrompt/editable/guidance/variants), behavior-selector resolution against tile DOM, runtime-class ground-truth checks (bodyClass/states), ARIA/id cross-reference resolution (aria-controls/describedby/labelledby/owns, label for), repo-level JSON scans (core-classes structured check; adapters/compatibility/patterns/recipes line scan), harvest improvement resolving ${PREFIX}-led template constants (two-pass)"
+      ],
+      "migrationPath": "Re-fetch error-variant tiles and tooltip variants if you consume uswdsClass; re-fetch combo-box/default if you embed its markup; adapters/alert.json and recipes/topic-landing-page.json re-fetch if consumed.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Hallucination-surface pass: the same invented-class defect found in preserve lists existed across metadata prose — the new scans found and fixed them; the prose layer is now covered by the same ground-truth gate as the DOM"
     }
   ],
   "designSystemVersions": [
