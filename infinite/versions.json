@@ -564,6 +564,20 @@
       "migrationPath": "Re-fetch the affected header tiles if you embed their markup.",
       "designSystemVersion": "3.14.0",
       "notes": "Six-tile tier, header. The header docs page uses screenshots and iframe links rather than inline markup, so package twig was the only ground truth — worth knowing, since every other component audited so far had live markup to compare against. header/extended already matched (overlay sibling, nav-container, navbar, usa-nav__inner)."
+    },
+    {
+      "version": "0.5.32",
+      "releaseDate": "2026-10-31",
+      "componentCount": 146,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "footer/default and footer/slim: the primary nav list is now ul.grid-row.grid-gap per usa-footer-nav-primary.twig, replacing the usa-list--unstyled utility",
+        "footer/default and footer/slim: added the grid-container usa-footer__return-to-top block the footer twig always renders"
+      ],
+      "migrationPath": "Re-fetch footer/default and footer/slim if you embed their markup.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Six-tile tier, footer. footer/big, collapsible, email-signup and sign-up were not changed in this pass: big and sign-up were corrected earlier (0.5.3), and collapsible/email-signup are custom patterns whose remaining differences (h3 vs h4 primary-link, demo-footer-email/email-signup wrapper classes) need a decision rather than a mechanical fix."
     }
   ],
   "designSystemVersions": [

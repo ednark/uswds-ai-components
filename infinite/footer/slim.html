@@ -122,6 +122,8 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "correction 2026-10-31: the primary nav list is ul.grid-row.grid-gap per usa-footer-nav-primary.twig (not the usa-list--unstyled utility), and the footer opens with the grid-container usa-footer__return-to-top block the twig always renders",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }
@@ -129,9 +131,12 @@
 </head>
 <body>
 <footer class="usa-footer usa-footer--slim">
+  <div class="grid-container usa-footer__return-to-top">
+    <a href="#">Return to top</a>
+  </div>
   <div class="usa-footer__primary-section">
     <nav class="usa-footer__nav" aria-label="Footer navigation">
-      <ul class="usa-list--unstyled">
+      <ul class="grid-row grid-gap">
         <li class="usa-footer__primary-content">
           <a class="usa-footer__primary-link" href="#">Footer Link</a>
         </li>
