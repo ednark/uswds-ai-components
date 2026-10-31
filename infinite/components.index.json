@@ -2816,7 +2816,7 @@
       "title": "Data Visualizations (Bar)",
       "_schemaVersion": 2,
       "uswdsComponentType": "data-visualizations",
-      "uswdsClass": "usa-chart-data",
+      "uswdsClass": "usa-chart-container",
       "section": "data-display",
       "variant": "bar",
       "requiresJs": "optional",
@@ -2850,6 +2850,7 @@
         "highContrast"
       ],
       "uswdClass": "usa-chart",
+      "origin": "extension",
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -2868,7 +2869,6 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "expensive",
-      "origin": "design-system",
       "resolvedView": "data-visualizations/bar.resolved.html"
     },
     {
@@ -2915,6 +2915,7 @@
         "highContrast"
       ],
       "uswdClass": "usa-chart",
+      "origin": "extension",
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -2933,7 +2934,6 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "expensive",
-      "origin": "design-system",
       "resolvedView": "data-visualizations/default.resolved.html"
     },
     {
@@ -2941,7 +2941,7 @@
       "title": "Data Visualizations (Line)",
       "_schemaVersion": 2,
       "uswdsComponentType": "data-visualizations",
-      "uswdsClass": "usa-chart-data",
+      "uswdsClass": "usa-chart-container",
       "section": "data-display",
       "variant": "line",
       "requiresJs": "optional",
@@ -2975,6 +2975,7 @@
         "highContrast"
       ],
       "uswdClass": "usa-chart",
+      "origin": "extension",
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -2993,7 +2994,6 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "expensive",
-      "origin": "design-system",
       "resolvedView": "data-visualizations/line.resolved.html"
     },
     {
@@ -3001,7 +3001,7 @@
       "title": "Data Visualizations (Pie)",
       "_schemaVersion": 2,
       "uswdsComponentType": "data-visualizations",
-      "uswdsClass": "usa-chart-data",
+      "uswdsClass": "usa-chart-container",
       "section": "data-display",
       "variant": "pie",
       "requiresJs": "optional",
@@ -3035,6 +3035,7 @@
         "highContrast"
       ],
       "uswdClass": "usa-chart",
+      "origin": "extension",
       "fedRampLevel": "IL2+",
       "piiHandling": "displays_only",
       "auditTrailCompatible": false,
@@ -3053,7 +3054,6 @@
       "prerequisites": [],
       "incompatibleWith": [],
       "costTier": "expensive",
-      "origin": "design-system",
       "resolvedView": "data-visualizations/pie.resolved.html"
     },
     {

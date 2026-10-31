@@ -459,6 +459,23 @@
       "migrationPath": "Use summary-box/default for neutral key information, alert/error for an error summary, and the site-alert tiles for site-wide status.",
       "designSystemVersion": "3.14.0",
       "notes": "Four-tile tier, summary-box complete. summary-box/default verified correct (role=region, aria-labelledby tied to the heading id, __body > __heading + __text > ul.usa-list). Note usa-summary-box__body is documented in the live markup but carries no stylesheet rule in 3.14 — a documented-but-unstyled wrapper."
+    },
+    {
+      "version": "0.5.25",
+      "releaseDate": "2026-10-30",
+      "componentCount": 146,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "data-visualizations (all four tiles): labeled origin: extension — USWDS states these components are guidance-only and ship no component code, so usa-chart and usa-chart-container are registry-internal demo structure, not canon",
+        "data-visualizations/bar,line,pie: discovery.uswdsClass corrected from the nonexistent usa-chart-data to usa-chart-container",
+        "data-visualizations/bar,line,pie: the chart legend no longer borrows usa-legend (a form-fieldset class); it uses a neutral chart-legend class",
+        "data-visualizations (all four): limitations record that the family is guidance-only in USWDS",
+        "registry.config.json: gap declared for data visualization components"
+      ],
+      "migrationPath": "Re-fetch the data-visualizations tiles if you consume their metadata; note they are origin: extension, not canon.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Four-tile tier, data-visualizations complete. Found a gate blind spot: discovery.uswdsClass is not covered by the prose scan, so the invented usa-chart-data class survived every check — it is the single most important class claim in a tile and is currently unchecked."
     }
   ],
   "designSystemVersions": [

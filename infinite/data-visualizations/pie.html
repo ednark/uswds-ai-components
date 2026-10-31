@@ -9,7 +9,7 @@
   "_schemaVersion": 2,
   "discovery": {
     "uswdsComponentType": "data-visualizations",
-    "uswdsClass": "usa-chart-data",
+    "uswdsClass": "usa-chart-container",
     "section": "data-display",
     "variant": "pie",
     "requiresJs": "optional",
@@ -57,7 +57,8 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-chart"
+    "uswdClass": "usa-chart",
+    "origin": "extension"
   },
   "selection": {
     "useWhen": [
@@ -104,6 +105,7 @@
       "Percentage labels"
     ],
     "limitations": [
+      "USWDS data visualizations are guidance-only and ship no component code. The usa-chart and usa-chart-container classes are registry-internal demo structure, not design-system classes — this tile is labeled origin: extension for that reason. Build your chart with your chosen library and follow the USWDS data visualization guidance for accessibility.",
       "Hard to compare multiple pie charts",
       "JavaScript library needed"
     ]
@@ -126,6 +128,8 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "correction 2026-10-30: the chart legend no longer borrows usa-legend, which is a form-fieldset class; USWDS data visualizations are guidance-only and ship no component code, so the legend uses a neutral chart-legend class",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }
@@ -134,7 +138,7 @@
 <body>
 <figure class="usa-chart-container">
   <canvas id="pieChart" role="img" aria-label="Pie chart showing sample data"></canvas>
-  <ul class="usa-legend">
+  <ul class="chart-legend">
     <li><span class="demo-legend-item" style="background: #005ea2;"></span> 40% Category A</li>
     <li><span class="demo-legend-item" style="background: #71767a;"></span> 35% Category B</li>
     <li><span class="demo-legend-item" style="background: #00a91c;"></span> 25% Category C</li>

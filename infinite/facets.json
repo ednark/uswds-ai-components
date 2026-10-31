@@ -203,7 +203,8 @@
       "data-table-with-sorting": 8
     },
     "origin": {
-      "design-system": 146
+      "design-system": 142,
+      "extension": 4
     },
     "fedRampLevel": {
       "IL2+": 143,

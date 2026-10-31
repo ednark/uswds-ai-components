@@ -101,7 +101,7 @@
     "WCAG 2.1 AA",
     "21st Century IDEA"
   ],
-  "updated": "0.5.24",
+  "updated": "0.5.25",
   "language": "en",
   "gaps": [
     {
@@ -157,6 +157,14 @@
       "reason": "USWDS ships exactly one summary box. The component page has a single Default preview and the 3.14.0 stylesheet defines only usa-summary-box, __heading, __text and __link — no severity modifiers. The retired tiles were structurally identical to the default tile and differed only in heading wording",
       "consequence": "Do not build info, warning or error summary boxes. Use summary-box/default for neutral key information, alert/error for an error summary, and the site-alert tiles for site-wide status",
       "source": "USWDS summary box documentation has one Default preview; no severity modifier exists in the 3.14.0 stylesheet. Error summaries in USWDS are usa-alert--error, tiled at alert/error.html"
+    },
+    {
+      "concept": "data visualization component (charts)",
+      "status": "not_part_of_design_system",
+      "nearestAlternative": "the USWDS data visualization guidance (designsystem.digital.gov/components/data-visualizations) plus your chosen charting library; the registry tiles demonstrate one accessible pattern but are origin: extension, not canon",
+      "reason": "USWDS states the data visualizations components are guidance-only and do not include any Component Code. There are no usa-chart classes in the 3.14.0 stylesheet; the tiles use registry-internal demo classes in the USWDS namespace",
+      "consequence": "Do not present usa-chart or usa-chart-container as USWDS classes. Choose a charting library, follow the USWDS guidance for accessible charts (text alternative, data table, colour contrast), and treat the tiles as one worked example",
+      "source": "USWDS data visualizations page: \"The data visualizations components are guidance-only and do not include any Component Code\"; no usa-chart class in the 3.14.0 stylesheet"
     }
   ],
   "staticView": {

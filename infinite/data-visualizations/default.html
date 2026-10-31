@@ -65,7 +65,8 @@
     "supportedTokenProfiles": [
       "highContrast"
     ],
-    "uswdClass": "usa-chart"
+    "uswdClass": "usa-chart",
+    "origin": "extension"
   },
   "selection": {
     "useWhen": [
@@ -92,12 +93,8 @@
       "pie",
       "table"
     ],
-    "settings": [
-
-    ],
-    "tokenOverrides": [
-
-    ]
+    "settings": [],
+    "tokenOverrides": []
   },
   "constraints": {
     "preserve": [
@@ -113,6 +110,7 @@
       "Legend labels"
     ],
     "limitations": [
+      "USWDS data visualizations are guidance-only and ship no component code. The usa-chart and usa-chart-container classes are registry-internal demo structure, not design-system classes — this tile is labeled origin: extension for that reason. Build your chart with your chosen library and follow the USWDS data visualization guidance for accessibility.",
       "USWDS doesn't include charting library — reference external or custom",
       "Data tables must accompany all charts for accessibility",
       "Color is not the only means of conveying information"
