@@ -76,7 +76,7 @@
     ]
   },
   "instruction": {
-    "agentPrompt": "Add class and data-allow-multiple attribute to usa-accordion wrapper. Same button/content structure as default.",
+    "agentPrompt": "Add the data-allow-multiple attribute to the usa-accordion wrapper — USWDS 3.14 implements multi-open via the attribute; no modifier class exists (absent from CSS, twig, JS, and the docs page). Same button/content structure as default.",
     "relatedComponents": [
       "process-list",
       "summary-box"
@@ -104,7 +104,6 @@
   "constraints": {
     "preserve": [
       "usa-accordion wrapper",
-      "usa-accordion--multiselectable class",
       "data-allow-multiple attribute",
       "button.usa-accordion__button",
       "aria-expanded and aria-controls"
@@ -115,6 +114,7 @@
       "Initial aria-expanded states"
     ],
     "limitations": [
+          "Origin note: the modifier class usa-accordion--multiselectable appears on real federal sites (e.g. 18F/analytics.usa.gov) but has no effect in USWDS 3.14 — it is not in the CSS, twig, JS, or docs. Treat it as an observed extension; the functional multi-open hook is the data-allow-multiple attribute.",
       "JavaScript required",
       "Do not set hidden manually"
     ]
@@ -137,6 +137,7 @@
     ]
   },
   "provenance": {
+    "source": "correction 2026-10-30: removed usa-accordion--multiselectable — absent from USWDS 3.14.0 CSS, twig, JS, and the docs page; multi-open is implemented via data-allow-multiple (packages/usa-accordion/src/index.js)",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }

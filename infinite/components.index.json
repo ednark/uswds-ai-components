@@ -2630,7 +2630,7 @@
       "title": "Checkbox (Success)",
       "_schemaVersion": 2,
       "uswdsComponentType": "checkbox",
-      "uswdsClass": "usa-checkbox__input--success",
+      "uswdsClass": "usa-checkbox__input",
       "section": "forms",
       "variant": "success",
       "requiresJs": "no",

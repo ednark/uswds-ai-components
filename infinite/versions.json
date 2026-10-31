@@ -183,6 +183,22 @@
       "migrationPath": "Re-fetch footer/big and identifier/default if you compose footers or identifiers.",
       "designSystemVersion": "3.14.0",
       "notes": "Closes the two open registry-change-plan §A residuals; all §A markup fixes now implemented"
+    },
+    {
+      "version": "0.5.4",
+      "releaseDate": "2026-10-30",
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "preserve-lint findings resolved (16 tiles): unattributed and stale classes removed or replaced with the real 3.14 ones — usa-breadcrumb__item→usa-breadcrumb__list-item, usa-button-group__segmented→usa-button-group--segmented, usa-nav__item→usa-nav__primary-item, site-alert/summary-box/list/sidenav/date-picker/character-count/checkbox preserve entries corrected to actual markup",
+        "accordion/multiselectable: removed usa-accordion--multiselectable — the class exists in no USWDS 3.14.0 CSS, twig, JS, or docs page; multi-open is implemented via data-allow-multiple (packages/usa-accordion/src/index.js); data-allow-multiple remains the preserve target",
+        "checkbox/success: discovery.uswdsClass corrected to usa-checkbox__input — no success modifier class exists for checkboxes; success feedback is host styling + hint text",
+        "agents.json count corrected 152 → 155",
+        "validator upgrades (spec 0.5.4-era): package-source class harvest (twig/JS literals enrich ground truth), preserve-list lint with negative-entry skip, requiresJs↔limitations keyword heuristic (warning-level), recipes manifest count check, agents.json count check"
+      ],
+      "migrationPath": "Re-fetch accordion/multiselectable, checkbox/success, and any tile whose preserve lists you enforce; agents.json re-fetch for count.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Validator-suite pass: the new preserve-lint found 19 invented-class citations on first run — reclassified on verification (F-014): one is an observed in-the-wild extension (usa-accordion--multiselectable, 16 public-code matches), two are stale 2.x-era canon (usa-list__item, usa-nav__item — carried forward, dropped in 3.x), the rest unattributed; 16 tiles corrected, 3 entries were negative guidance (lint now skips them); the JS keyword heuristic surfaces 3 review items (button-group, table, tag) where limitations honestly describe additional behaviors"
     }
   ],
   "designSystemVersions": [

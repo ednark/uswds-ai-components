@@ -63,6 +63,7 @@
     ],
     "uswdClass": "usa-list",
     "limitations": [
+      "Origin note: usa-list__item was canon in USWDS 2.x and is removed in 3.x — list items are plain <li> now. Templates migrated from 2.x may still carry it; it is stale, not canonical.",
       "usa-list__item is not a USWDS class; list items are plain <li> inside .usa-list."
     ]
   },
@@ -100,7 +101,7 @@
   "constraints": {
     "preserve": [
       "ol.usa-list or ul.usa-list wrapper",
-      "li.usa-list__item for each item",
+      "plain <li> elements inside ul.usa-list",
       "Semantic list structure for screen readers",
       "Proper nesting of lists"
     ],

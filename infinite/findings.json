@@ -284,6 +284,28 @@
       ],
       "summary": "Guidance compression defect: upstream graduated guidance ('most should', pending standard, executive-branch scope) had hardened into absolute claims ('required on all') in banner selection metadata; header useWhen carried an unsupported design universal. Both rescoped with citations.",
       "detail": "The registry's ground-truth tooling (classCheck, purity baselines) verifies markup, not prose — guidance strings had no citation and no capture date, so upstream wording drift was undetectable. The fix records the verified quotes and dates, adds a guidance do/don't pair carrying the exact policy posture, and stamps provenance. Standing lesson: normative claims in selection metadata must carry modality (must/should/may), scope, and the position of their source in the citation chain (law / policy memo / standard + status), or they compress into absolutes that mislead agents on any site outside the assumed audience."
+    },
+    {
+      "id": "F-014",
+      "date": "2026-10-30",
+      "kind": "rework",
+      "result": "broke",
+      "target": [
+        "16 tiles — constraints.preserve / uswdsClass"
+      ],
+      "changed": [
+        "tile: 16 preserve-list entries corrected to real 3.14 classes; checkbox/success uswdsClass corrected",
+        "tile: accordion/multiselectable usa-accordion--multiselectable removed from preserve (class has no effect in 3.14); data-allow-multiple is the mechanism",
+        "spec: preserve-list lint added to validate-registry.mjs (with negative-entry skip); package-source class harvest added",
+        "registry: agents.json count 152→155"
+      ],
+      "evidence": [
+        "usa-accordion--multiselectable: absent from USWDS CSS 2.0.0/2.10.0/2.13.3/3.14.0, package twig/JS, and the docs page; BUT 16 matches in indexed public code (e.g. github.com/18F/analytics.usa.gov) — observed extension, not invention",
+        "usa-list__item and usa-nav__item: canon in USWDS 2.x CSS (verified via unpkg 2.0.0/2.10.0/2.13.3), removed in 3.x — stale 2.x-era knowledge, not invention",
+        "remaining 16 classes: absent from every USWDS release CSS checked (2.0.0/2.10.0/2.13.3/3.14.0), package source harvest, relevant docs pages (checkbox/sidenav/language), and 0 Sourcegraph global matches — unattributed; caveat: sourcegraph under-indexes .gov repos"
+      ],
+      "summary": "First preserve-lint run flagged 19 class citations; classification is NOT uniformly \"invented\" — one is an observed in-the-wild extension, two are stale 2.x canon, the rest are unattributed. Origin labels, not deletion, are the treatment for categories A/B.",
+      "detail": "The lint itself is correct: preserve lists must cite real 3.14 classes. The correction pass initially overclaimed (\"invented\"); this entry records the corrected classification and the tile limitations added for the extension (accordion) and 2.x-lineage (list, sub-list) cases."
     }
   ]
 }

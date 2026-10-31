@@ -40,11 +40,11 @@
   "observations": 76,
   "convergenceWatchlist": 5,
   "findings": {
-    "count": 13,
+    "count": 14,
     "lastDeepCheck": "2026-10-30",
     "openItems": [],
     "byResult": {
-      "broke": 4,
+      "broke": 5,
       "recorded": 3,
       "fixed": 5,
       "clean": 1
@@ -52,5 +52,5 @@
   },
   "conformance": "pass",
   "generatedBy": "_base/generate-health.mjs",
-  "generatedAt": "2026-10-30"
+  "generatedAt": "2026-10-31"
 }
