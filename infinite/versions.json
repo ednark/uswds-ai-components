@@ -227,7 +227,21 @@
       ],
       "migrationPath": "Re-fetch any tile you embed if the validator reports an element-contract warning for it.",
       "designSystemVersion": "3.14.0",
-      "notes": "Tag-structure pass: 67 element-contract warnings surfaced on first run. Most are semantic choices the demo templates under-determine (e.g. <article>/<div> cards, <ul> vs <ol> breadcrumbs, inline-SVG banner icons the tile documents) — they are a triage worklist, not proven defects. Confirmed real defects worth fixing: usa-file-input applied to a wrapper <div> instead of the <input> (JS mounts on input.usa-file-input), usa-error-message on <div> instead of <span>, usa-site-alert on <div> instead of <section>. Left as warnings because a demo template exercises one tag per class, so the harvested union is evidence of usage, not the full legal set"
+      "notes": "Tag-structure pass (0.5.6): added a warning-level element-contract gate that harvests class→element usage from the pinned package. CORRECTED by 0.5.7: the harvested approach is unsound and its headline finding was a false positive — usa-file-input on a wrapper div is the post-JS-init state, which is the only structure the stylesheet targets (.usa-file-input .usa-file-input__input), so that tile was correct. Harvested tag usage under-determines the legal element set in both directions: including demo templates flags legal alternatives (usa-nav__link on <a>), excluding them discards real evidence. Superseded by curated contracts"
+    },
+    {
+      "version": "0.5.7",
+      "releaseDate": "2026-10-30",
+      "componentCount": 155,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "staticView.structure.contracts: curated element contracts declared for banner (section.usa-banner), site-alert (section.usa-site-alert), identifier (div.usa-identifier + section.usa-identifier__identity), accordion (button.usa-accordion__button), file-input (.usa-file-input input.usa-file-input__input) — each verified against the pinned package at declaration time",
+        "tile corrections from the contracts (purity path, cited): banner/medium and banner/slim now use <section aria-label>; identifier/with-logo root is div.usa-identifier with section.usa-identifier__identity; site-alert/default|emergency|no-icon now use <section aria-label>, and site-alert/default gained the missing div.usa-alert > div.usa-alert__body wrappers and p.usa-alert__text (it previously had empty class attributes)"
+      ],
+      "migrationPath": "Re-fetch banner/medium, banner/slim, identifier/with-logo, and the three site-alert tiles if you embed their markup.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Element contracts are now CURATED, not inferred: inference is unsound because component JS may move a class at init (file-input) and demo templates exercise one tag per class. Declared contracts are enforced as errors; file-input passes unchanged, confirming its post-init structure is correct as authored"
     }
   ],
   "designSystemVersions": [

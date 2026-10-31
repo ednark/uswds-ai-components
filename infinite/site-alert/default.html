@@ -139,6 +139,8 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "correction 2026-10-30: site alert root is a section with aria-label, content is div.usa-alert > div.usa-alert__body, per usa-site-alert.twig",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }
@@ -165,12 +167,14 @@
 </style>
 </head>
 <body>
-<div class="usa-site-alert">
-  <div>
-    <h3 class="usa-alert__heading">Informational alert</h3>
-    <p class="">This is an informational alert that displays sitewide information.</p>
+<section class="usa-site-alert" aria-label="Site alert">
+  <div class="usa-alert">
+    <div class="usa-alert__body">
+      <h3 class="usa-alert__heading">Informational alert</h3>
+      <p class="usa-alert__text">This is an informational alert that displays sitewide information.</p>
+    </div>
   </div>
-</div>
+</section>
 <div class="cap">Site Alert default</div>
 </body>
 </html>

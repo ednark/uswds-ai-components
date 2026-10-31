@@ -101,7 +101,7 @@
     "WCAG 2.1 AA",
     "21st Century IDEA"
   ],
-  "updated": "0.5.6",
+  "updated": "0.5.7",
   "language": "en",
   "gaps": [
     {
@@ -123,6 +123,45 @@
     "css": [
       "node_modules/@uswds/uswds/dist/css/uswds.min.css"
     ],
+    "structure": {
+      "enabled": true,
+      "contracts": {
+        "banner": [
+          {
+            "selector": "section.usa-banner",
+            "note": "the banner is a <section aria-label>, not a generic div (usa-banner.twig; _notifications.scss `section.usa-banner`)"
+          }
+        ],
+        "site-alert": [
+          {
+            "selector": "section.usa-site-alert",
+            "note": "usa-site-alert.twig: <section class=\"usa-site-alert\" aria-label> — a labelled region"
+          }
+        ],
+        "identifier": [
+          {
+            "selector": "div.usa-identifier",
+            "note": "usa-identifier.twig: the identifier root is <div class=\"usa-identifier\">"
+          },
+          {
+            "selector": "section.usa-identifier__identity",
+            "note": "usa-identifier.twig: the identity block is <section class=\"usa-identifier__identity\">"
+          }
+        ],
+        "accordion": [
+          {
+            "selector": "button.usa-accordion__button",
+            "note": "usa-accordion.twig + the JS BUTTON selector: the control must be a <button>, or the toggle is inert"
+          }
+        ],
+        "file-input": [
+          {
+            "selector": ".usa-file-input input.usa-file-input__input",
+            "note": "file-input JS removes usa-file-input from the input and adds it to a created parent wrapper at init; the input keeps usa-file-input__input. Tiles are authored in that post-init state, which is the structure the stylesheet targets"
+          }
+        ]
+      }
+    },
     "viewport": {
       "width": 1280,
       "height": 4000
