@@ -1,0 +1,82 @@
+{
+  "name": "uswds-ai-components",
+  "description": "USWDS (U.S. Web Design System) component registry for AI coding agents. 146 accessible, mobile-friendly government components with full adaptation metadata.",
+  "repo": "https://github.com/ednark/uswds-ai-components",
+  "base": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main",
+  "count": 155,
+  "facetsUrl": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/facets.json",
+  "index": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/components.index.json",
+  "indexSchemaVersion": 1,
+  "metadataSchemaVersion": 2,
+  "recipesUrl": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/recipes/index.json",
+  "patternsUrl": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/patterns/index.json",
+  "versionsUrl": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/versions.json",
+  "compatibilityUrl": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/compatibility.json",
+  "compatibilityTargets": [
+    "govuk",
+    "carbon"
+  ],
+  "recipes": [
+    "contact-form",
+    "login-flow",
+    "data-table-with-sorting",
+    "error-handling-stack",
+    "navigation-hierarchy"
+  ],
+  "supportedDesignSystems": [
+    "material",
+    "bootstrap"
+  ],
+  "adapterBase": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/adapters",
+  "adapterManifest": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/adapters/adapters.json",
+  "tileFetchPattern": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/infinite/{file}",
+  "designSystem": {
+    "name": "U.S. Web Design System (USWDS)",
+    "version": "3.14.0"
+  },
+  "facets": [
+    "uswdsComponentType",
+    "variant",
+    "interaction",
+    "requiresJs",
+    "a11y",
+    "section",
+    "govCompliance"
+  ],
+  "flow": [
+    "GET facets.json",
+    "GET components.index.json",
+    "filter by facet in code",
+    "GET tile by file",
+    "read uswds-agent-meta block",
+    "check _schemaVersion (v2 = categorized metadata)",
+    "validate selection against useWhen/avoidWhen",
+    "adapt following instruction.agentPrompt",
+    "enforce constraints.preserve boundaries",
+    "verify all preserved elements intact in output"
+  ],
+  "mcp": {
+    "enabled": true,
+    "transport": "stdio",
+    "server": "_base/mcp/server.mjs",
+    "tools": [
+      "search_components",
+      "get_component",
+      "list_facets",
+      "get_index",
+      "get_adapter",
+      "translate_component"
+    ],
+    "note": "When an MCP client is connected, prefer these tools over raw HTTP fetches."
+  },
+  "govCompliance": [
+    "Section 508",
+    "WCAG 2.1 AA",
+    "21st Century IDEA",
+    "NIST Guidelines"
+  ],
+  "updated": "2.0.0",
+  "language": "en",
+  "appearance": "Every tile has a generated resolved view: fetch {tileDir}/{file with .html replaced by .resolved.html} for a computed-style standalone rendering (geometry + colors inline, design-system CSS injected at build time). Index records expose the path as the resolvedView field. Tile markup alone is structurally self-contained; styled preview requires the resolved view or a host page that loads USWDS CSS.",
+  "healthUrl": "https://raw.githubusercontent.com/ednark/uswds-ai-components/main/registry-health.json"
+}

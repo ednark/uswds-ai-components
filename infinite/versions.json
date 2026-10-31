@@ -215,6 +215,19 @@
       "migrationPath": "Re-fetch error-variant tiles and tooltip variants if you consume uswdsClass; re-fetch combo-box/default if you embed its markup; adapters/alert.json and recipes/topic-landing-page.json re-fetch if consumed.",
       "designSystemVersion": "3.14.0",
       "notes": "Hallucination-surface pass: the same invented-class defect found in preserve lists existed across metadata prose — the new scans found and fixed them; the prose layer is now covered by the same ground-truth gate as the DOM"
+    },
+    {
+      "version": "0.5.6",
+      "releaseDate": "2026-10-30",
+      "componentCount": 155,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "validator: tag-contract gate added — class→element contracts harvested from the pinned package's Twig templates and asserted against tile markup (warning-level; see notes)"
+      ],
+      "migrationPath": "Re-fetch any tile you embed if the validator reports an element-contract warning for it.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Tag-structure pass: 67 element-contract warnings surfaced on first run. Most are semantic choices the demo templates under-determine (e.g. <article>/<div> cards, <ul> vs <ol> breadcrumbs, inline-SVG banner icons the tile documents) — they are a triage worklist, not proven defects. Confirmed real defects worth fixing: usa-file-input applied to a wrapper <div> instead of the <input> (JS mounts on input.usa-file-input), usa-error-message on <div> instead of <span>, usa-site-alert on <div> instead of <section>. Left as warnings because a demo template exercises one tag per class, so the harvested union is evidence of usage, not the full legal set"
     }
   ],
   "designSystemVersions": [
