@@ -263,6 +263,27 @@
       ],
       "summary": "L12 — a closed loop: found in t5-001, fixed with refined guidance, re-measured in t5-003 with highs eliminated.",
       "detail": "Same shape as F-011 and worth keeping adjacent to it: an agent can satisfy every class and structural rule and still produce an unusable experience, because nothing said the commitment action must state its consequence before the click. The refined guidance (cadence plus click consequence) is what took it from high to low, and the residuals are recorded rather than smoothed away — a closed loop is not the same as a perfect result."
+    },
+    {
+      "id": "F-013",
+      "date": "2026-10-30",
+      "kind": "deep-check",
+      "result": "fixed",
+      "target": [
+        "banner/default",
+        "header/default"
+      ],
+      "changed": [
+        "tile: banner/default selection rescope — 'Required on all official government websites' and 'Federal agencies must display this banner' replaced with scoped, cited posture (USWDS 'most should' modality; pending federal website standard, executive-branch public-facing .gov/.mil scope); guidance do/don't pair added; provenance citation stamped",
+        "tile: header/default useWhen universal softened — 'Every website needs a header' → 'Content websites need a header', harmonizing with the tile's own avoidWhen exceptions (standalone apps, modal-only interfaces)"
+      ],
+      "evidence": [
+        "USWDS banner docs (verified 2026-10-30): 'Most government sites should use the banner, but some should not use the banner. Do NOT use the banner on non-government domains such as a .com or .org.' — designsystem.digital.gov/components/banner/",
+        "Federal website standards, banner standard (verified 2026-10-30): status Pending — 'A timeline will be provided for when agencies need to comply'; site states 'There are no required standards at this time'; applies to executive branch public-facing .gov/.mil domains — standards.digital.gov/standards/banner/",
+        "Policy frame: 21st Century IDEA (P.L. 115-336) + OMB M-23-22 (2023-09-26) establish the requirements framework; the banner-level mandate lives in the pending standard, not the law or memo — standards.digital.gov, digital.gov/resources/delivering-digital-first-public-experience/"
+      ],
+      "summary": "Guidance compression defect: upstream graduated guidance ('most should', pending standard, executive-branch scope) had hardened into absolute claims ('required on all') in banner selection metadata; header useWhen carried an unsupported design universal. Both rescoped with citations.",
+      "detail": "The registry's ground-truth tooling (classCheck, purity baselines) verifies markup, not prose — guidance strings had no citation and no capture date, so upstream wording drift was undetectable. The fix records the verified quotes and dates, adds a guidance do/don't pair carrying the exact policy posture, and stamps provenance. Standing lesson: normative claims in selection metadata must carry modality (must/should/may), scope, and the position of their source in the citation chain (law / policy memo / standard + status), or they compress into absolutes that mislead agents on any site outside the assumed audience."
     }
   ]
 }

@@ -68,14 +68,25 @@
   },
   "selection": {
     "useWhen": [
-      "Required on all official government websites",
-      "Federal agencies must display this banner",
+      "Official US government websites on .gov or .mil domains",
+      "Executive branch public-facing sites — a federal website standard for the banner is pending (standards.digital.gov/standards/banner)",
       "Communicates official status to users",
       "Provides security awareness information"
     ],
     "avoidWhen": [
-      "Non-government websites",
+      "Non-government domains (.com, .org) — USWDS guidance: do NOT use the banner there",
+      "Sites outside the pending standard's scope (state/local/tribal, non-public-facing) — banner is optional; USWDS guidance is 'most government sites should use' it",
       "When hiding official status is desired"
+    ],
+    "guidance": [
+      {
+        "guidance": true,
+        "description": "State the real policy posture when asked about requirements: USWDS guidance is 'most government sites should use the banner'; a federal website standard requiring it on executive branch public-facing .gov/.mil sites is pending at standards.digital.gov/standards/banner (verified 2026-10-30)."
+      },
+      {
+        "guidance": false,
+        "description": "Don't state the banner is 'required by law' or 'required on all government websites' — 21st Century IDEA and OMB M-23-22 establish the policy framework, but the banner standard itself is pending and scoped to executive branch .gov/.mil sites."
+      }
     ]
   },
   "instruction": {
@@ -144,7 +155,10 @@
     ]
   },
   "provenance": {
-    "designSystemVersion": "3.14.0"
+    "designSystemVersion": "3.14.0",
+    "observed": "2026-10-30",
+    "source": "https://designsystem.digital.gov/components/banner/",
+    "method": "design-system documentation"
   }
 }</script>
 <style>

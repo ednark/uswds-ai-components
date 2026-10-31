@@ -144,6 +144,19 @@
       "migrationPath": "Fully additive — re-fetch facets.json and agents.json.",
       "designSystemVersion": "3.14.0",
       "notes": "Ground-truth pass against pinned USWDS 3.14.0: behavior contracts on JS-backed tiles, tile purity baselines, Surface 6 patterns (time-sensitive-action, step-by-step-journey, official-identity), trial-expiry-banner recipe, origin labeling"
+    },
+    {
+      "version": "0.5.1",
+      "releaseDate": "2026-10-30",
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "selection guidance corrections (findings F-013): banner/default requirement claim rescoped to cited posture (USWDS 'most should'; pending federal website standard, executive-branch .gov/.mil scope) + guidance do/don't pair + provenance stamp",
+        "header/default useWhen universal ('Every website needs a header') softened to 'Content websites' to match the tile's own avoidWhen"
+      ],
+      "migrationPath": "Fully additive metadata correction — re-fetch banner/default and header/default if you consume selection guidance.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Guidance-fidelity pass: upstream graduated guidance (USWDS docs, 21st Century IDEA, OMB M-23-22, pending federal website standard) verified 2026-10-30 and recorded with citations; closes the prose-drift gap F-013 exposed in the markup-only verification stack"
     }
   ],
   "designSystemVersions": [

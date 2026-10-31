@@ -37,20 +37,20 @@
   "tiles": 155,
   "families": 55,
   "coreClasses": 28,
-  "observations": 23,
-  "convergenceWatchlist": 3,
+  "observations": 76,
+  "convergenceWatchlist": 5,
   "findings": {
-    "count": 12,
-    "lastDeepCheck": "2026-09-30",
+    "count": 13,
+    "lastDeepCheck": "2026-10-30",
     "openItems": [],
     "byResult": {
       "broke": 4,
       "recorded": 3,
-      "fixed": 4,
+      "fixed": 5,
       "clean": 1
     }
   },
   "conformance": "pass",
   "generatedBy": "_base/generate-health.mjs",
-  "generatedAt": "2026-09-30"
+  "generatedAt": "2026-10-30"
 }

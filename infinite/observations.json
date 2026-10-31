@@ -230,6 +230,531 @@
       "extension": "usa-button-big",
       "note": "single-dash form of the canonical usa-button--big (tiled) — legacy modifier convention, not a new class",
       "source": "live-site field survey 2026-09-29 (round 3)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "pandemicoversight.gov",
+      "url": "https://www.pandemicoversight.gov",
+      "family": "footer",
+      "kind": "extension",
+      "extension": "usa-social-link--twitter",
+      "note": "platform modifier on the footer social block; --linkedin, --youtube and --email also present — none shipped by the pinned 3.14.0 stylesheet (no usa-social-link--* in compiled CSS)",
+      "source": "live-site field survey 2026-10-30 (agency homepage + inner-page survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "pandemicoversight.gov",
+      "url": "https://www.pandemicoversight.gov",
+      "family": "nav",
+      "kind": "extension",
+      "extension": "usa-nav__submenu-items",
+      "note": "plural element class; canon ships usa-nav__submenu-item",
+      "source": "live-site field survey 2026-10-30 (agency homepage + inner-page survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "pandemicoversight.gov",
+      "url": "https://www.pandemicoversight.gov",
+      "family": "logo",
+      "kind": "extension",
+      "extension": "usa-logo-img",
+      "note": "site-local logo block class",
+      "source": "live-site field survey 2026-10-30 (agency homepage + inner-page survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "pandemicoversight.gov",
+      "url": "https://www.pandemicoversight.gov",
+      "family": "banner",
+      "kind": "extension",
+      "extension": "usa-banner__container",
+      "note": "site-local banner container class",
+      "source": "live-site field survey 2026-10-30 (agency homepage + inner-page survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "pandemicoversight.gov",
+      "url": "https://www.pandemicoversight.gov",
+      "family": "footer",
+      "kind": "extension",
+      "extension": "usa-footer__email-container",
+      "note": "footer email-signup container class",
+      "source": "live-site field survey 2026-10-30 (agency homepage + inner-page survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "pandemicoversight.gov",
+      "url": "https://www.pandemicoversight.gov",
+      "family": "icon",
+      "kind": "other",
+      "extension": "usa-icons / usa-icons-bg in markup — icon-sprite classes from the @uswds/usa-icons package, not the core USWDS bundle",
+      "note": "",
+      "source": "live-site field survey 2026-10-30 (agency homepage + inner-page survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "pandemicoversight.gov",
+      "url": "https://www.pandemicoversight.gov",
+      "family": "layout-docs",
+      "kind": "other",
+      "extension": "usa-layout-docs and usa-layout-docs__main in markup — official template classes, but the pinned compiled CSS styles only usa-layout-docs__sidenav",
+      "note": "",
+      "source": "live-site field survey 2026-10-30 (agency homepage + inner-page survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "usa.gov",
+      "url": "https://www.usa.gov",
+      "family": "nav",
+      "kind": "extension",
+      "extension": "usa-nav__topics",
+      "note": "topic-nav element classes (site-local): also __about, __law, __money, __scams and underscore-form usa-nav_benefits/_housing/_taxes/_travel",
+      "source": "live-site field survey 2026-10-30 (agency homepage + inner-page survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "usa.gov",
+      "url": "https://www.usa.gov",
+      "family": "nav",
+      "kind": "extension",
+      "extension": "usa-nav___primary-item-smaller-padding",
+      "note": "triple-underscore site-local spacing modifier",
+      "source": "live-site field survey 2026-10-30 (agency homepage + inner-page survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "usa.gov",
+      "url": "https://www.usa.gov",
+      "family": "footer",
+      "kind": "extension",
+      "extension": "usa-gov-footer__primary-link",
+      "note": "custom gov-footer block alongside usa-footer; not a USWDS class",
+      "source": "live-site field survey 2026-10-30 (agency homepage + inner-page survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "usa.gov",
+      "url": "https://www.usa.gov",
+      "family": "banner",
+      "kind": "extension",
+      "extension": "usa-banner__header-action-mobile",
+      "note": "mobile banner action; usa-banner_expand_arrow (underscore form) and usa-banner-inner also present",
+      "source": "live-site field survey 2026-10-30 (agency homepage + inner-page survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "usa.gov",
+      "url": "https://www.usa.gov",
+      "family": "alert",
+      "kind": "extension",
+      "extension": "usa-alert__a11y-label",
+      "note": "element class beyond canon alert markup; usa-alert--1__a11y-label also present",
+      "source": "live-site field survey 2026-10-30 (agency homepage + inner-page survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "usa.gov",
+      "url": "https://www.usa.gov",
+      "family": "header",
+      "kind": "extension",
+      "extension": "usa-logo-text",
+      "note": "site-local logo text class",
+      "source": "live-site field survey 2026-10-30 (agency homepage + inner-page survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "usa.gov",
+      "url": "https://www.usa.gov",
+      "family": "breadcrumb",
+      "kind": "extension",
+      "extension": "usa-breadcrumb__currrent",
+      "note": "misspelled 'current' (triple r); USWDS breadcrumb ships no __current class at all — the last item uses usa-current",
+      "source": "live-site field survey 2026-10-30 (agency homepage + inner-page survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "usa.gov",
+      "url": "https://www.usa.gov",
+      "family": "icon",
+      "kind": "other",
+      "extension": "usa-icons in markup — @uswds/usa-icons package class, not the core bundle",
+      "note": "",
+      "source": "live-site field survey 2026-10-30 (agency homepage + inner-page survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "usa.gov",
+      "url": "https://www.usa.gov",
+      "family": "layout-docs",
+      "kind": "other",
+      "extension": "usa-layout-docs / usa-layout-docs__main in markup — official template classes; pinned compiled CSS styles only usa-layout-docs__sidenav",
+      "note": "",
+      "source": "live-site field survey 2026-10-30 (agency homepage + inner-page survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "usa.gov",
+      "url": "https://www.usa.gov",
+      "family": "card",
+      "kind": "composition",
+      "extension": "usa-card-text-only",
+      "note": "20 cards use header+container+body with no media block and no heading class — text-only card arrangement",
+      "source": "live-site field survey 2026-10-30 (agency homepage + inner-page survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "ferc.gov",
+      "url": "https://www.ferc.gov",
+      "kind": "other",
+      "extension": "negative finding: zero usa- classes in the homepage markup — Drupal site with a non-USWDS theme; recorded as ecosystem context",
+      "note": "",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "ed.gov",
+      "url": "https://www.ed.gov",
+      "family": "banner",
+      "kind": "extension",
+      "extension": "usa-banner-wrapper",
+      "note": "site-local banner wrapper",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "ed.gov",
+      "url": "https://www.ed.gov",
+      "family": "footer",
+      "kind": "extension",
+      "extension": "usa-footer__bottom",
+      "note": "bottom-strip element classes: __logo-bottom, __logo-heading-bottom, __logo-text-bottom also present; usa-footer__logo-image/logo-text alongside canon usa-footer__logo-heading",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "ed.gov",
+      "url": "https://www.ed.gov",
+      "family": "header",
+      "kind": "extension",
+      "extension": "usa-header--extended-megamenu",
+      "note": "extended header + megamenu combination; megamenu modifier not shipped by the pin (cf. nre.navy.mil, store.usgs.gov)",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "ed.gov",
+      "url": "https://www.ed.gov",
+      "family": "nav",
+      "kind": "extension",
+      "extension": "usa-nav__submenu-heading",
+      "note": "site-local submenu heading element",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "ed.gov",
+      "url": "https://www.ed.gov",
+      "family": "label",
+      "kind": "extension",
+      "extension": "usa-label-big",
+      "note": "single-dash form of the canonical usa-label--big",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "ed.gov",
+      "url": "https://www.ed.gov",
+      "kind": "other",
+      "extension": "usa-two-columns-wrapper: site-local layout wrapper class",
+      "note": "",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "ed.gov",
+      "url": "https://www.ed.gov",
+      "family": "character-count",
+      "kind": "other",
+      "extension": "usa-character-count__message in markup — canon template markup (character-count JS template); class not found in the pin's compiled-CSS scan",
+      "note": "",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "ed.gov",
+      "url": "https://www.ed.gov",
+      "family": "icon",
+      "kind": "other",
+      "extension": "usa-icons / usa-icons-bg in markup — @uswds/usa-icons package classes",
+      "note": "",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "ed.gov",
+      "url": "https://www.ed.gov",
+      "family": "layout-docs",
+      "kind": "other",
+      "extension": "usa-layout-docs / usa-layout-docs__main in markup — official template classes; pinned compiled CSS styles only usa-layout-docs__sidenav",
+      "note": "",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "usgs.gov",
+      "url": "https://www.usgs.gov",
+      "family": "banner",
+      "kind": "extension",
+      "extension": "usa-banner-inner",
+      "note": "site-local banner inner class",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "usgs.gov",
+      "url": "https://www.usgs.gov",
+      "family": "icon",
+      "kind": "other",
+      "extension": "usa-icons — @uswds/usa-icons package class",
+      "note": "",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "usgs.gov",
+      "url": "https://www.usgs.gov",
+      "family": "layout-docs",
+      "kind": "other",
+      "extension": "usa-layout-docs / usa-layout-docs__main in markup — official template classes; pinned compiled CSS styles only usa-layout-docs__sidenav",
+      "note": "",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "store.usgs.gov",
+      "url": "https://store.usgs.gov",
+      "family": "banner",
+      "kind": "extension",
+      "extension": "usa-banner-inner",
+      "note": "site-local banner inner class",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "store.usgs.gov",
+      "url": "https://store.usgs.gov",
+      "family": "footer",
+      "kind": "extension",
+      "extension": "usa-footer--medium",
+      "note": "4th independent site (eeoc.gov, cbp.gov, ams.usda.gov precede); see resolved docs-check note on the eeoc.gov entry",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "store.usgs.gov",
+      "url": "https://store.usgs.gov",
+      "family": "form",
+      "kind": "extension",
+      "extension": "usa-form-full",
+      "note": "site-local full-width form modifier",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "store.usgs.gov",
+      "url": "https://store.usgs.gov",
+      "family": "header",
+      "kind": "extension",
+      "extension": "usa-header--extended-megamenu",
+      "note": "extended header + megamenu combination; megamenu modifier not shipped by the pin (cf. ed.gov, nre.navy.mil)",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "store.usgs.gov",
+      "url": "https://store.usgs.gov",
+      "family": "icon",
+      "kind": "other",
+      "extension": "usa-icons-bg — @uswds/usa-icons package class",
+      "note": "",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "store.usgs.gov",
+      "url": "https://store.usgs.gov",
+      "family": "radio-buttons",
+      "kind": "extension",
+      "extension": "usa-radio__input-tile",
+      "note": "tile-style radio input styling — not shipped by the pin",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "store.usgs.gov",
+      "url": "https://store.usgs.gov",
+      "family": "footer",
+      "kind": "extension",
+      "extension": "usa-social-link--instagram",
+      "note": "platform modifier on the social block; --twitter and --youtube also present — none shipped by the pinned stylesheet",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "store.usgs.gov",
+      "url": "https://store.usgs.gov",
+      "family": "layout-docs",
+      "kind": "other",
+      "extension": "usa-layout-docs / usa-layout-docs__main in markup — official template classes; pinned compiled CSS styles only usa-layout-docs__sidenav",
+      "note": "",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "nre.navy.mil",
+      "url": "https://www.nre.navy.mil",
+      "family": "banner",
+      "kind": "extension",
+      "extension": "usa-banner__desktop",
+      "note": "desktop/mobile banner split: __mobile also present, plus usa-banner-inner",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "nre.navy.mil",
+      "url": "https://www.nre.navy.mil",
+      "family": "header",
+      "kind": "extension",
+      "extension": "usa-header--extended-megamenu",
+      "note": "extended header + megamenu combination; megamenu modifier not shipped by the pin (cf. ed.gov, store.usgs.gov)",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "nre.navy.mil",
+      "url": "https://www.nre.navy.mil",
+      "family": "hero",
+      "kind": "extension",
+      "extension": "usa-hero__container",
+      "note": "site-local hero element classes: __title also present",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "nre.navy.mil",
+      "url": "https://www.nre.navy.mil",
+      "family": "icon",
+      "kind": "other",
+      "extension": "usa-icons — @uswds/usa-icons package class",
+      "note": "",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "nre.navy.mil",
+      "url": "https://www.nre.navy.mil",
+      "family": "layout-docs",
+      "kind": "other",
+      "extension": "usa-layout-docs / usa-layout-docs__main in markup — official template classes; pinned compiled CSS styles only usa-layout-docs__sidenav",
+      "note": "",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "nre.navy.mil",
+      "url": "https://www.nre.navy.mil",
+      "family": "nav",
+      "kind": "extension",
+      "extension": "usa-nav__submenu-group",
+      "note": "site-local nav element classes: usa-nav__parent-link and usa-megamenu-inner also present",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "nasa.gov",
+      "url": "https://www.nasa.gov",
+      "kind": "other",
+      "extension": "usa-article-content: site-local article layout wrapper class",
+      "note": "",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "nasa.gov",
+      "url": "https://www.nasa.gov",
+      "family": "header",
+      "kind": "extension",
+      "extension": "usa-header-mobile",
+      "note": "site-local mobile/primary header split: usa-header-primary also present",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "nasa.gov",
+      "url": "https://www.nasa.gov",
+      "family": "nav",
+      "kind": "extension",
+      "extension": "usa-nav__link-nasa-live",
+      "note": "site-local nav link variant for the NASA Live link",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "nasa.gov",
+      "url": "https://www.nasa.gov",
+      "family": "list",
+      "kind": "extension",
+      "extension": "usa-unstyled-list",
+      "note": "legacy single-dash form of the canonical usa-list--unstyled",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "va.gov",
+      "url": "https://www.va.gov",
+      "family": "accordion",
+      "kind": "extension",
+      "extension": "usa-accordion-button",
+      "note": "legacy 1.x-era element naming (canon: usa-accordion__button); usa-accordion-content likewise — main VA system is its own design system (VADS)",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "va.gov",
+      "url": "https://www.va.gov",
+      "family": "banner",
+      "kind": "extension",
+      "extension": "usa-banner-button",
+      "note": "legacy 1.x-era banner element naming cluster: also -button-text, -content, -header, -icon, -inner, -guidance-gov, -guidance-ssl, -toggle (canon: usa-banner__* with inner-element BEM)",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "va.gov",
+      "url": "https://www.va.gov",
+      "family": "media-block",
+      "kind": "extension",
+      "extension": "usa-media_block-body",
+      "note": "underscore typo of canon usa-media-block__body (usa-media_block-img likewise)",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "va.gov",
+      "url": "https://www.va.gov",
+      "kind": "other",
+      "extension": "usa-flag: non-USWDS flag class in the banner markup",
+      "note": "",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
+    },
+    {
+      "observed": "2026-10-30",
+      "site": "trade.gov",
+      "url": "https://www.trade.gov",
+      "kind": "other",
+      "extension": "site applies the usa- prefix to 13 entirely custom component classes with no canon-family relation: usa-contact-us, usa-fact-sheets, usa-find-economic-developers, usa-iiwg, usa-industries, usa-investment-advisory-council, usa-investment-summit, usa-investor-guide, usa-reports-and-publications, usa-resources-and-information, usa-stats, usa-tech, usa-upcoming-events — zero core USWDS component classes observed on the homepage",
+      "note": "",
+      "source": "live-site field survey 2026-10-30 (mobomo portfolio survey; the observed page is this entry's url field)"
     }
   ]
 }
