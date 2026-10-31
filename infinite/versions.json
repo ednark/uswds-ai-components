@@ -476,6 +476,22 @@
       "migrationPath": "Re-fetch the data-visualizations tiles if you consume their metadata; note they are origin: extension, not canon.",
       "designSystemVersion": "3.14.0",
       "notes": "Four-tile tier, data-visualizations complete. Found a gate blind spot: discovery.uswdsClass is not covered by the prose scan, so the invented usa-chart-data class survived every check — it is the single most important class claim in a tile and is currently unchecked."
+    },
+    {
+      "version": "0.5.26",
+      "releaseDate": "2026-10-31",
+      "componentCount": 146,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "18 tiles: discovery.uswdsClass corrected — each claimed an invented modifier class (usa-checkbox__input--disabled, usa-collection--list, usa-combo-box--lg, usa-date-picker--lg, usa-file-input--error, usa-identifier--with-logo, usa-pagination--show-all, usa-process-list--steps, usa-radio__input--disabled, usa-radio__input--success, usa-range--lg, usa-select--tile, usa-input--disabled, usa-input--tile, usa-typography) and now name the real base class",
+        "layout-docs/default: discovery.uswdClass corrected from usa-grid (USWDS 2.x, removed in 3.x) to usa-layout-docs",
+        "18 tiles: limitations record how each variant is actually expressed — HTML attributes for disabled, a form-group wrapper for error, form-group width utilities for size, and so on",
+        "spec: prose scan now covers discovery.uswdsClass and discovery.uswdClass"
+      ],
+      "migrationPath": "Re-fetch any tile whose uswdsClass you filter on; the facet values changed for 18 tiles.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Closing the gate blind spot found during the data-visualizations audit immediately surfaced 18 more invented class claims in discovery.uswdsClass — the field agents filter on and the coverage check asserts. Every one was a variant tile that invented a modifier to name itself: disabled, tile, lg, success, show-all, steps, with-logo. None of those modifiers exist in USWDS; each variant is expressed by an attribute, a wrapper, or utilities."
     }
   ],
   "designSystemVersions": [
