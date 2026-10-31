@@ -89,12 +89,8 @@
       "default",
       "big"
     ],
-    "settings": [
-
-    ],
-    "tokenOverrides": [
-
-    ]
+    "settings": [],
+    "tokenOverrides": []
   },
   "constraints": {
     "preserve": [
@@ -111,7 +107,7 @@
     ],
     "limitations": [
       "Tags are not interactive by default",
-      "Removable tags require JavaScript",
+      "USWDS ships no tag JavaScript. A removable tag needs a host-provided close control and its own handler — nothing in the design system implements removal.",
       "Color customization requires CSS customization"
     ]
   },
@@ -133,7 +129,9 @@
   },
   "provenance": {
     "tier": "design-system-source",
-    "designSystemVersion": "3.14.0"
+    "designSystemVersion": "3.14.0",
+    "method": "design-system documentation",
+    "source": "correction 2026-10-31: replaced an inaccurate JavaScript claim with what the package actually does (verified against the component source)"
   }
 }</script>
 <style>

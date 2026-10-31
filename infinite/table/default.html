@@ -91,9 +91,7 @@
       "scrollable",
       "stacked"
     ],
-    "settings": [
-
-    ],
+    "settings": [],
     "tokenOverrides": [
       "$theme-table-border-color",
       "$theme-table-text-color"
@@ -115,7 +113,7 @@
       "Variant: borderless, striped, scrollable, stacked"
     ],
     "limitations": [
-      "Scrollable variant needs JS for proper horizontal scroll",
+      "The scrollable container scrolls natively; tabindex=0 makes it keyboard-reachable and no JavaScript is involved. USWDS table JavaScript covers sorting (th[data-sortable]) and sticky headers only.",
       "Stacked variant stacks cells vertically on mobile",
       "Tables need caption or aria-label for accessibility"
     ]
@@ -142,7 +140,9 @@
   },
   "provenance": {
     "tier": "design-system-source",
-    "designSystemVersion": "3.14.0"
+    "designSystemVersion": "3.14.0",
+    "method": "design-system documentation",
+    "source": "correction 2026-10-31: replaced an inaccurate JavaScript claim with what the package actually does (verified against the component source)"
   }
 }</script>
 <style>

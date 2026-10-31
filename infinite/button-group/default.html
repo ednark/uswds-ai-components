@@ -87,12 +87,8 @@
       "default",
       "segmented"
     ],
-    "settings": [
-
-    ],
-    "tokenOverrides": [
-
-    ]
+    "settings": [],
+    "tokenOverrides": []
   },
   "constraints": {
     "preserve": [
@@ -109,7 +105,7 @@
       "Button sizes"
     ],
     "limitations": [
-      "Segmented buttons require JavaScript for active states",
+      "The segmented layout is CSS only — usa-button-group--segmented needs no JavaScript. Express the active state with the usa-button--active class or aria-pressed on the button.",
       "All buttons in group should be same size",
       "Mobile may require button wrapping"
     ]
@@ -133,7 +129,9 @@
   },
   "provenance": {
     "tier": "design-system-source",
-    "designSystemVersion": "3.14.0"
+    "designSystemVersion": "3.14.0",
+    "method": "design-system documentation",
+    "source": "correction 2026-10-31: replaced an inaccurate JavaScript claim with what the package actually does (verified against the component source)"
   }
 }</script>
 <style>

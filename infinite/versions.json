@@ -649,6 +649,21 @@
       "migrationPath": "Re-fetch button/default if you embed its markup; use button/secondary, button/outline and button/big for those variants.",
       "designSystemVersion": "3.14.0",
       "notes": "Nine-tile tier, button — and the last family in the sweep. All nine tiles use real modifiers (secondary, outline, inverse, base, accent-cool, accent-warm, big, unstyled all confirmed in the stylesheet), all carry type=button per usa-button.twig, and outline-inverse correctly composes usa-button--outline usa-button--inverse as the twig specifies. The only defect was the default tile duplicating three sibling variants."
+    },
+    {
+      "version": "0.5.38",
+      "releaseDate": "2026-10-31",
+      "componentCount": 146,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "button-group/default: replaced \"Segmented buttons require JavaScript for active states\" — the segmented layout is CSS only and the active state is usa-button--active or aria-pressed",
+        "table/default: replaced \"Scrollable variant needs JS for proper horizontal scroll\" — the container scrolls natively with tabindex=0; table JS covers sorting and sticky headers only",
+        "tag/default: replaced \"Removable tags require JavaScript\" — USWDS ships no tag JavaScript, so removal is entirely host-provided"
+      ],
+      "migrationPath": "Re-fetch these three tiles if you consume their limitations.",
+      "designSystemVersion": "3.14.0",
+      "notes": "The three standing requiresJs warnings were not heuristic noise: all three limitations carried factually wrong JavaScript claims, verified against the package source (usa-button-group and usa-tag ship no index.js at all). The registry now validates with zero errors and zero warnings under its own bundled validator."
     }
   ],
   "designSystemVersions": [
