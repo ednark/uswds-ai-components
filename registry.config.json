@@ -240,6 +240,9 @@
           "reason": "Documented on the official accordion component page alongside data-allow-multiple; the modifier carries no stylesheet rule of its own in the 3.14 bundle (unstyled modifier)"
         }
       ]
+    },
+    "tokens": {
+      "path": "node_modules/@uswds/uswds/packages/uswds-core/src/styles/settings"
     }
   },
   "behaviorContract": true,
