@@ -492,6 +492,20 @@
       "migrationPath": "Re-fetch any tile whose uswdsClass you filter on; the facet values changed for 18 tiles.",
       "designSystemVersion": "3.14.0",
       "notes": "Closing the gate blind spot found during the data-visualizations audit immediately surfaced 18 more invented class claims in discovery.uswdsClass — the field agents filter on and the coverage check asserts. Every one was a variant tile that invented a modifier to name itself: disabled, tile, lg, success, show-all, steps, with-logo. None of those modifiers exist in USWDS; each variant is expressed by an attribute, a wrapper, or utilities."
+    },
+    {
+      "version": "0.5.27",
+      "releaseDate": "2026-10-31",
+      "componentCount": 146,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "typography (all four tiles): limitations record that USWDS publishes typography as guidance, not a component — the page has no previews and no component code, and there is no usa-typography class; the classes used are real typesetting utilities",
+        "typography/default: discovery.section corrected from layout to typography, and a limitation explains why this tile deliberately has no usa-prose wrapper (usa-display and usa-intro are standalone utilities for page headers)"
+      ],
+      "migrationPath": "Re-fetch the typography tiles if you consume their limitations or section facet.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Four-tile tier complete. All four typography tiles use only real classes (usa-prose, usa-display, usa-intro, usa-link, usa-list — each verified in the stylesheet; usa-display has its own package and usa-intro appears in usa-type-setting.twig). The defect was framing, not markup: uswdsComponentType typography implied a component where USWDS ships guidance."
     }
   ],
   "designSystemVersions": [

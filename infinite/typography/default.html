@@ -13,7 +13,7 @@
   "discovery": {
     "uswdsComponentType": "typography",
     "uswdsClass": "usa-display",
-    "section": "layout",
+    "section": "typography",
     "variant": "default",
     "requiresJs": "no",
     "interaction": [
@@ -109,9 +109,11 @@
       "Display text styling"
     ],
     "limitations": [
+      "USWDS publishes typography as guidance, not a component: the typography page has no previews and no component code, and there is no usa-typography class. The classes used here (usa-prose, usa-display, usa-intro, usa-link, usa-list) are real typesetting utilities — apply them to your own markup rather than looking for a typography component.",
       "Typography requires USWDS font settings",
       "Source Sans Pro is the default — can be overridden",
-      "Heading classes need proper semantic hierarchy"
+      "Heading classes need proper semantic hierarchy",
+      "This tile deliberately has no usa-prose wrapper: usa-display and usa-intro are standalone typesetting utilities for page headers, not prose-scoped styles. The other typography tiles wrap content in usa-prose."
     ]
   },
   "file": "typography/default.html",
