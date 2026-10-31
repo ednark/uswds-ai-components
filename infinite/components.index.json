@@ -6970,7 +6970,7 @@
       "title": "Select (Success)",
       "_schemaVersion": 2,
       "uswdsComponentType": "select",
-      "uswdsClass": "usa-input--success",
+      "uswdsClass": "usa-select",
       "section": "forms",
       "variant": "success",
       "requiresJs": "no",

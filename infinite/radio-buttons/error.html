@@ -122,6 +122,8 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "correction 2026-10-31: the input and label sit inside the usa-radio wrapper div — the wrapper is styled and canon requires it, but the tile used a bare div",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }
@@ -132,11 +134,11 @@
   <fieldset class="usa-fieldset">
     <legend class="usa-legend">Select an option</legend>
     <span class="usa-error-message" id="radio-error-message" role="alert">Error: Please select an option</span>
-    <div>
+    <div class="usa-radio">
       <input class="usa-radio__input" id="radio-error-1" type="radio" name="radio-error" value="1">
       <label class="usa-radio__label" for="radio-error-1">Option one</label>
     </div>
-    <div>
+    <div class="usa-radio">
       <input class="usa-radio__input" id="radio-error-2" type="radio" name="radio-error" value="2">
       <label class="usa-radio__label" for="radio-error-2">Option two</label>
     </div>

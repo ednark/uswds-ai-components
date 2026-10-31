@@ -534,6 +534,21 @@
       "migrationPath": "Re-fetch alert/info if you embed its markup; use alert/success, warning, error and slim for the other statuses.",
       "designSystemVersion": "3.14.0",
       "notes": "Five-tile tier, alert complete. alert/warning, error, success and slim verified correct against the live pattern (div.usa-alert.usa-alert--{status} > div.usa-alert__body > p.usa-alert__text). role=alert on alert/error is documented on the error example. alert/slim correctly composes usa-alert--info usa-alert--slim as separate classes."
+    },
+    {
+      "version": "0.5.30",
+      "releaseDate": "2026-10-31",
+      "componentCount": 146,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "checkbox/disabled and radio-buttons/disabled,error,success: the input and label are now wrapped in div.usa-checkbox / div.usa-radio — both wrappers are styled and canon requires them, but the tiles used a bare div",
+        "select/disabled: removed a duplicated usa-select class",
+        "select/success: usa-input--success is an input class and does not apply to a select — removed from the markup, uswdsClass corrected to usa-select, and five garbled self-contradictory limitation entries replaced with one accurate note"
+      ],
+      "migrationPath": "Re-fetch the affected checkbox, radio-buttons and select tiles if you embed their markup.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Five-tile tier complete. text-input (all five) and checkbox/radio/select defaults verified correct. The select/success limitations were a real quality defect: five copies of text that said usa-input--success is not a USWDS class and then named usa-input--success as the correct class — an earlier automated fix had inverted itself."
     }
   ],
   "designSystemVersions": [
