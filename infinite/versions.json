@@ -506,6 +506,21 @@
       "migrationPath": "Re-fetch the typography tiles if you consume their limitations or section facet.",
       "designSystemVersion": "3.14.0",
       "notes": "Four-tile tier complete. All four typography tiles use only real classes (usa-prose, usa-display, usa-intro, usa-link, usa-list — each verified in the stylesheet; usa-display has its own package and usa-intro appears in usa-type-setting.twig). The defect was framing, not markup: uswdsComponentType typography implied a component where USWDS ships guidance."
+    },
+    {
+      "version": "0.5.28",
+      "releaseDate": "2026-10-31",
+      "componentCount": 146,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "tooltip (all five tiles): the trigger is now button.usa-tooltip with data-position — the tiles authored the post-init usa-tooltip__trigger on a non-focusable span, which the tooltip JS never initializes (.usa-tooltip is the init selector) and which keyboard users cannot focus",
+        "tooltip/default: data-tooltip-position corrected to data-position (the attribute the JS reads)",
+        "tooltip (all five): discovery.uswdsClass set to usa-tooltip and a limitation records the init contract"
+      ],
+      "migrationPath": "Re-fetch the tooltip tiles — the previous markup produced an inert, keyboard-inaccessible tooltip.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Five-tile tier, tooltip complete. This is the first functional (not just canonical) defect in the sweep: authoring the post-init state of a JS component breaks it, because the JS initialises from the pre-init class. Contrast file-input, where the post-init state IS correct because the stylesheet targets the wrapper. The rule is per-component and must be read from the JS init selector, not assumed."
     }
   ],
   "designSystemVersions": [

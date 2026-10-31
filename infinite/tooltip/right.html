@@ -104,6 +104,7 @@
       "Trigger element"
     ],
     "limitations": [
+      "The trigger is a focusable button carrying usa-tooltip, data-position and title — that is the state the tooltip JS initializes from (.usa-tooltip). The JS then adds usa-tooltip__trigger and creates usa-tooltip__body at runtime, so authoring usa-tooltip__trigger directly leaves the tooltip inert, and a non-focusable element never fires focusin for keyboard users.",
       "May be obscured by page right edge"
     ]
   },
@@ -125,12 +126,14 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "correction 2026-10-31: the trigger is button.usa-tooltip with data-position, per the live tooltip examples and the tooltip JS init selector (.usa-tooltip); the tile authored the post-init usa-tooltip__trigger on a non-focusable span, which left it inert",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }
 }</script>
 </head>
 <body>
-<span class="usa-tooltip__trigger" data-position="right" title="Tooltip text">Hover or focus for tooltip</span>
+<button type="button" class="usa-button usa-tooltip" data-position="right" title="Tooltip text">Hover or focus for tooltip</button>
 </body>
 </html>

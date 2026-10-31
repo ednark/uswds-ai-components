@@ -92,9 +92,7 @@
       "left",
       "right"
     ],
-    "settings": [
-
-    ],
+    "settings": [],
     "tokenOverrides": [
       "$theme-tooltip-background-color"
     ],
@@ -121,6 +119,7 @@
       "Trigger element id"
     ],
     "limitations": [
+      "The trigger is a focusable button carrying usa-tooltip, data-position and title — that is the state the tooltip JS initializes from (.usa-tooltip). The JS then adds usa-tooltip__trigger and creates usa-tooltip__body at runtime, so authoring usa-tooltip__trigger directly leaves the tooltip inert, and a non-focusable element never fires focusin for keyboard users.",
       "JavaScript required for tooltip behavior",
       "Touch devices may not show hover tooltips",
       "Content in title attribute is not accessible on mobile",
@@ -145,6 +144,8 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "correction 2026-10-31: the trigger is button.usa-tooltip with data-position, per the live tooltip examples and the tooltip JS init selector (.usa-tooltip); the tile authored the post-init usa-tooltip__trigger on a non-focusable span, which left it inert",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }
@@ -171,7 +172,7 @@
 </style>
 </head>
 <body>
-<span class="usa-tooltip__trigger" data-tooltip-position="top" title="Tooltip text">Hover or focus for tooltip</span>
+<button type="button" class="usa-button usa-tooltip" data-position="top" title="Tooltip text">Hover or focus for tooltip</button>
 <div class="cap">Tooltip default</div>
 </body>
 </html>
