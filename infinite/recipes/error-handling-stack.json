@@ -2,7 +2,9 @@
   "recipe": "error-handling-stack",
   "title": "Error Handling Stack",
   "description": "Layered error feedback pattern: page-level validation summary, contextual alert, highlighted callout, and field-level error state.",
-  "aliases": ["collection:error-handling-stack"],
+  "aliases": [
+    "collection:error-handling-stack"
+  ],
   "components": [
     {
       "order": 1,
@@ -24,15 +26,6 @@
     },
     {
       "order": 3,
-      "component": "summary-box",
-      "variant": "error",
-      "file": "summary-box/error.html",
-      "role": "feedback",
-      "required": false,
-      "reason": "Highlighted callout for critical information the user must not miss"
-    },
-    {
-      "order": 4,
       "component": "text-input",
       "variant": "error",
       "file": "text-input/error.html",
@@ -41,7 +34,7 @@
       "reason": "Field-level error pattern: instantiate the errored input with aria-invalid and a linked error message"
     }
   ],
-  "nesting": "Use the highest layer that fits: component 1 at the top of the form/page; component 2 within the failing section; component 3 for critical one-off callouts; component 4 is the field-level pattern applied inside the form (requires form wrapper prerequisite)",
+  "nesting": "Use the highest layer that fits: component 1 at the top of the form/page; component 2 within the failing section; component 3 for the error summary listing failing fields; component 3 is the field-level pattern applied inside the form (requires form wrapper prerequisite)",
   "validationOrder": [
     "Every error message is linked to its control via aria-describedby",
     "Failing controls carry aria-invalid='true'",

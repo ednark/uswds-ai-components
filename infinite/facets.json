@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "metadataSchemaVersion": 2,
   "generatedBy": "_base/generate-index.mjs",
-  "total": 149,
+  "total": 146,
   "designSystem": "U.S. Web Design System 3.14.0",
   "facets": {
     "section": {
       "data-display": 24,
       "utilities": 12,
       "feedback": 12,
-      "supporting": 9,
+      "supporting": 6,
       "navigation": 28,
       "buttons": 1,
       "forms": 43,
@@ -66,7 +66,7 @@
       "site-alert": 3,
       "skip-nav": 1,
       "step-indicator": 3,
-      "summary-box": 4,
+      "summary-box": 1,
       "table": 6,
       "tag": 2,
       "text-input": 5,
@@ -77,14 +77,14 @@
     },
     "requiresJs": {
       "required": 38,
-      "no": 99,
+      "no": 96,
       "optional": 12
     },
     "interaction": {
       "click": 96,
       "focus": 89,
       "keyboard": 14,
-      "passive": 44,
+      "passive": 41,
       "hover": 30,
       "input": 13,
       "type": 8,
@@ -98,17 +98,17 @@
       "dismiss": 2
     },
     "a11y": {
-      "wcag21AA": 149,
-      "keyboardNav": 131,
-      "screenReader": 145,
-      "reducedMotion": 146,
-      "forcedColors": 146,
-      "ariaAttributes": 138
+      "wcag21AA": 146,
+      "keyboardNav": 128,
+      "screenReader": 142,
+      "reducedMotion": 143,
+      "forcedColors": 143,
+      "ariaAttributes": 135
     },
     "govCompliance": {
-      "Section 508": 149,
-      "WCAG 2.1 AA": 149,
-      "21st Century IDEA": 146,
+      "Section 508": 146,
+      "WCAG 2.1 AA": 146,
+      "21st Century IDEA": 143,
       "NIST Guidelines": 4,
       "Required by US federal agencies": 2,
       "Required for keyboard accessibility": 1
@@ -118,11 +118,11 @@
       "default": 52,
       "multiselectable": 1,
       "until-found": 2,
-      "error": 8,
-      "info": 2,
+      "error": 7,
+      "info": 1,
       "slim": 2,
       "success": 5,
-      "warning": 2,
+      "warning": 1,
       "wrap": 1,
       "accent-cool": 1,
       "accent-warm": 1,
@@ -186,7 +186,7 @@
     },
     "costTier": {
       "moderate": 72,
-      "cheap": 73,
+      "cheap": 70,
       "expensive": 4
     },
     "prerequisites": {
@@ -196,29 +196,29 @@
     },
     "compositionRecipes": {
       "trial-expiry-banner": 4,
-      "error-handling-stack": 16,
+      "error-handling-stack": 13,
       "login-flow": 24,
       "navigation-hierarchy": 22,
       "contact-form": 25,
-      "data-table-with-sorting": 11
+      "data-table-with-sorting": 8
     },
     "origin": {
-      "design-system": 149
+      "design-system": 146
     },
     "fedRampLevel": {
-      "IL2+": 146,
+      "IL2+": 143,
       "IL2": 3
     },
     "piiHandling": {
-      "displays_only": 89,
+      "displays_only": 86,
       "none": 18,
       "accepts_input": 42
     },
     "touchTargetSize": {
-      "44px": 149
+      "44px": 146
     },
     "supportedTokenProfiles": {
-      "highContrast": 146
+      "highContrast": 143
     },
     "patterns": {
       "step-by-step-journey": 9,

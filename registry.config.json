@@ -101,7 +101,7 @@
     "WCAG 2.1 AA",
     "21st Century IDEA"
   ],
-  "updated": "0.5.23",
+  "updated": "0.5.24",
   "language": "en",
   "gaps": [
     {
@@ -149,6 +149,14 @@
       "reason": "usa-nav__submenu is header navigation markup, not side navigation. Side navigation nests ul.usa-sidenav__sublist inside li.usa-sidenav__item with no toggle; there is no expandable variant. The retired tile used usa-nav, usa-nav__primary, usa-nav__primary-item, usa-nav__link and usa-nav__submenu while claiming to be side navigation",
       "consequence": "Do not use usa-nav__* classes inside a side navigation. Nest ul.usa-sidenav__sublist inside li.usa-sidenav__item; for header dropdowns use the header tiles instead",
       "source": "USWDS side navigation examples nest ul.usa-sidenav__sublist inside li.usa-sidenav__item; usa-nav__submenu appears only in header navigation markup"
+    },
+    {
+      "concept": "summary box severity variants (info / warning / error)",
+      "status": "not_part_of_design_system",
+      "nearestAlternative": "summary-box/default.html for a neutral key-information panel; alert/error.html for an error summary; site-alert tiles for site-wide status messages",
+      "reason": "USWDS ships exactly one summary box. The component page has a single Default preview and the 3.14.0 stylesheet defines only usa-summary-box, __heading, __text and __link — no severity modifiers. The retired tiles were structurally identical to the default tile and differed only in heading wording",
+      "consequence": "Do not build info, warning or error summary boxes. Use summary-box/default for neutral key information, alert/error for an error summary, and the site-alert tiles for site-wide status",
+      "source": "USWDS summary box documentation has one Default preview; no severity modifier exists in the 3.14.0 stylesheet. Error summaries in USWDS are usa-alert--error, tiled at alert/error.html"
     }
   ],
   "staticView": {

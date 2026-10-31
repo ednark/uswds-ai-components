@@ -2,7 +2,9 @@
   "recipe": "data-table-with-sorting",
   "title": "Data Table with Sorting and Pagination",
   "description": "Accessible tabular data display with sortable columns, scrollable container for small screens, and pagination for large datasets.",
-  "aliases": ["collection:data-table-with-sorting"],
+  "aliases": [
+    "collection:data-table-with-sorting"
+  ],
   "components": [
     {
       "order": 1,
@@ -26,7 +28,7 @@
       "order": 3,
       "component": "summary-box",
       "variant": "info",
-      "file": "summary-box/info.html",
+      "file": "summary-box/default.html",
       "role": "supporting",
       "required": false,
       "reason": "Optional data-source note or 'last updated' callout above the table"
