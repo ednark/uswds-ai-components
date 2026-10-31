@@ -693,6 +693,23 @@
       "migrationPath": "Fully additive metadata; no re-fetch needed unless you consume provenance.",
       "designSystemVersion": "3.14.0",
       "notes": "Step 4 of the blind-spot plan. The field exists because three defects this session were flagged by pattern-matching against the reference template and two of them were wrong: the file-input wrapper is correct post-init state (CSS owns the contract), and the footer collapsible h3 is preserved by the JS (which accepts h1-h6). Only the tooltip was genuinely broken (JS owns the contract and the tile authored post-init state). Recording the layer makes that distinction visible before the next reviewer acts."
+    },
+    {
+      "version": "0.5.41",
+      "releaseDate": "2026-10-31",
+      "componentCount": 146,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "class provenance gate: every class in a tile body must be a design-system class, a known utility, declared demo scaffolding, or documented in the tile. This is the only check that sees unprefixed custom classes",
+        "registry.config.json: staticView.classCheck.scaffolding declares the 12 demo-scaffolding classes (cap, form-section, preview-section, preview-heading, demo-section, demo-buttons, demo-legend-item, card-grid, icon-demo, link-demo, list-demo, tag-demo)",
+        "logo/image-text: limitation now names logo-img, logo-text, logo-text-bold and logo-tagline",
+        "header/nav-search: search-container documented as a site layout wrapper",
+        "spec: CSS class extraction now unescapes responsive prefixes (tablet\\:grid-col-6) so utilities are recognised"
+      ],
+      "migrationPath": "Re-fetch logo/image-text and header/nav-search if you consume their limitations.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Gate C closes the last blind spot that could be mechanised. It found 9 undocumented classes; the real ones were chart-legend and search-container, while logo-* turned out to be documented only in provenance.source rather than limitations — so the check reads limitations, contractNote and provenance.source together. The allowlist covers usa-combo-box__select, usa-language-switcher and the usa-breadcrumb--wrap backward-compat no-op."
     }
   ],
   "designSystemVersions": [
