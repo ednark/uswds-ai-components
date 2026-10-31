@@ -161,6 +161,8 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "correction 2026-10-30: modal content wrapped in div.usa-modal__main and the dialog carries aria-describedby pointing at the description, per the live modal examples; replaced custom demo-modal-* wrappers",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }
@@ -188,14 +190,12 @@
 </head>
 <body>
 <div class="usa-modal-wrapper">
-  <div class="usa-modal usa-modal--lg" id="example-modal" aria-labelledby="modal-heading">
+  <div class="usa-modal usa-modal--lg" id="example-modal" aria-labelledby="modal-heading" aria-describedby="modal-description">
     <div class="usa-modal__content">
-      <div class="demo-modal-header">
+      <div class="usa-modal__main">
         <h2 class="usa-modal__heading" id="modal-heading">Confirm Action</h2>
+        <p id="modal-description">Are you sure you want to proceed? This action cannot be undone.</p>
         <button class="usa-modal__close" aria-label="Close">Close</button>
-      </div>
-      <div class="demo-modal-body">
-        <p>Are you sure you want to proceed? This action cannot be undone.</p>
       </div>
       <div class="usa-modal__footer">
         <button class="usa-button" type="button">Confirm</button>

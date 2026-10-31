@@ -328,6 +328,19 @@
       "migrationPath": "Re-fetch input-prefix-suffix/prefix and validation/default if you embed their markup.",
       "designSystemVersion": "3.14.0",
       "notes": "Two-tile family sweep. All ten families have live docs pages. combo-box, character-count, file-input, form, tag verified matching; date-picker and input-prefix-suffix/prefix differ only in wrapper/attributes (form-group vs form, hint span vs div) and were partially corrected; validation uses the inline-error pattern rather than the checklist pattern on the validation page — both are documented, kept as is. modal and range-slider bodies were not compared in this pass."
+    },
+    {
+      "version": "0.5.16",
+      "releaseDate": "2026-10-30",
+      "componentCount": 153,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "modal/default: content wrapped in div.usa-modal__main and the dialog now carries aria-describedby pointing at the description paragraph; custom demo-modal-header/demo-modal-body wrappers removed"
+      ],
+      "migrationPath": "Re-fetch modal/default if you embed its markup.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Completes the two-tile sweep items deferred by budget. modal compared against the live examples: the dialog needs aria-labelledby AND aria-describedby, and heading plus body belong inside usa-modal__main. range-slider verified matching (label + input.usa-range); it omits the optional usa-hint the docs show, left as is. date-picker still differs by omitting the usa-form-group wrapper the live markup uses."
     }
   ],
   "designSystemVersions": [
