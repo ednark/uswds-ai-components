@@ -146,6 +146,8 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "correction 2026-10-30: in-page navigation uses div.usa-in-page-nav-container > aside.usa-in-page-nav per the live examples; removed empty class attributes on the links",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }
@@ -172,19 +174,21 @@
 </style>
 </head>
 <body>
-<nav class="usa-in-page-nav" aria-label="Page navigation">
+<div class="usa-in-page-nav-container">
+<aside class="usa-in-page-nav" aria-label="Page navigation">
   <ul class="usa-in-page-nav__list">
     <li class="usa-in-page-nav__item">
-      <a class="" href="#section-1">Section One</a>
+      <a href="#section-1">Section One</a>
     </li>
     <li class="usa-in-page-nav__item">
-      <a class="" href="#section-2">Section Two</a>
+      <a href="#section-2">Section Two</a>
     </li>
     <li class="usa-in-page-nav__item">
-      <a class="" href="#section-3">Section Three</a>
+      <a href="#section-3">Section Three</a>
     </li>
   </ul>
-</nav>
+</aside>
+</div>
 <div class="cap">In-Page Navigation default</div>
 </body>
 </html>

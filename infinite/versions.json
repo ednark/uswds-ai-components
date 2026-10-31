@@ -287,6 +287,20 @@
       "migrationPath": "If you referenced banner/medium.html or banner/slim.html, switch to banner/default.html or the usa-banner web component; scoped site CSS for any compact styling.",
       "designSystemVersion": "3.14.0",
       "notes": "Banner audit follow-up: retired rather than rebuilt. Corrected structure would have duplicated banner/default — the signal that the concept is gone from the design system, not merely mis-tiled."
+    },
+    {
+      "version": "0.5.13",
+      "releaseDate": "2026-10-30",
+      "componentCount": 153,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "icon/default: svg icons now carry focusable=false and role=img per the live icon examples",
+        "in-page-navigation/default: restructured to div.usa-in-page-nav-container > aside.usa-in-page-nav (was a bare nav); removed three empty class attributes on the links"
+      ],
+      "migrationPath": "Re-fetch icon/default and in-page-navigation/default if you embed their markup.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Single-tile family sweep (ascending order), part 1. Version re-verified: package.json, registry.config, agents.json, versions.json, installed package and all 153 tile stamps are 3.14.0. Of the 14 single-tile families, 7 have live docs pages (icon, prose, time-picker, date-range-picker, input-mask, memorable-date, in-page-navigation) and 7 return 404 (hero, logo, skipnav, media-block, navbar, overlay, layout-docs) so those fall back to package source only."
     }
   ],
   "designSystemVersions": [
