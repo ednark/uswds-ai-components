@@ -102,6 +102,7 @@
       "Footer actions"
     ],
     "limitations": [
+      "The official markup nests a real <img> inside usa-card__img; this tile uses a styled placeholder block because tiles ship no external image assets. Swap in the img element when you have an asset.",
       "Requires specific DOM order (media first)"
     ]
   },
@@ -134,10 +135,10 @@
 <article class="usa-card usa-card--flag">
   <div class="usa-card__container">
   <div class="usa-card__header">
-    <div class="usa-card__media">
-      <div class="usa-card__img" style="background: #ccc; width: 100px; height: 80px;"></div>
-    </div>
     <h2 class="usa-card__heading">Flag Card Heading</h2>
+  </div>
+  <div class="usa-card__media">
+    <div class="usa-card__img" style="background: #ccc; width: 100px; height: 80px;"></div>
   </div>
   <div class="usa-card__body">
     <p>Card body content goes here. The flag variant displays image and content side by side.</p>

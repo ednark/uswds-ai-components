@@ -256,6 +256,21 @@
       "migrationPath": "Re-fetch card tiles if you embed their markup or read their variants arrays.",
       "designSystemVersion": "3.14.0",
       "notes": "Card-family audit: reviewed card/default against usa-card.twig, the pinned stylesheet, and the card content sidecar. Two evidence-backed defects fixed. The article.usa-card root was reviewed and kept — no li-dependent selectors exist under .usa-card-group, so the semantic choice is safe; a variant-name scanner was attempted and reverted because instruction.variants holds family/sibling variant names rather than modifier classes"
+    },
+    {
+      "version": "0.5.9",
+      "releaseDate": "2026-10-30",
+      "componentCount": 155,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "card/media|flag|header-flag: usa-card__media moved to its documented position — a sibling AFTER usa-card__header, not nested inside it and not before it (live USWDS examples at designsystem.digital.gov/components/card)",
+        "card/inset: added the missing div.usa-card__media usa-card__media--inset element — the tile previously demonstrated no media at all, so the modifier it is named for was invisible",
+        "card/media|flag|header-flag|inset: recorded the deliberate placeholder-image divergence in limitations (official markup nests a real img inside usa-card__img; tiles ship no external image assets)"
+      ],
+      "migrationPath": "Re-fetch card media/flag/header-flag/inset if you embed their markup or drive media placement from them.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Live-example sync: pinned 3.14.0 matches the latest published release, so the docs examples are apples-to-apples. Canonical order confirmed as header > media > body > footer inside usa-card__container. Remaining known divergence: article.usa-card vs li.usa-card, recorded and verified safe (no li-dependent selectors under .usa-card-group)"
     }
   ],
   "designSystemVersions": [

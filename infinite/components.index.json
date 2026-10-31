@@ -2171,6 +2171,7 @@
       ],
       "uswdClass": "usa-card",
       "limitations": [
+        "The official markup nests a real <img> inside usa-card__img; this tile uses a styled placeholder block because tiles ship no external image assets. Swap in the img element when you have an asset.",
         "usa-card--inset is not a USWDS 3 class; the real inset is usa-card__media--inset on the card's media element."
       ],
       "fedRampLevel": "IL2+",
@@ -2232,6 +2233,7 @@
       ],
       "uswdClass": "usa-card",
       "limitations": [
+        "The official markup nests a real <img> inside usa-card__img; this tile uses a styled placeholder block because tiles ship no external image assets. Swap in the img element when you have an asset.",
         "usa-card--media is not a USWDS 3 class; the image area is the usa-card__media element (used in this markup)."
       ],
       "fedRampLevel": "IL2+",

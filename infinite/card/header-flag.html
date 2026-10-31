@@ -103,6 +103,7 @@
       "Footer actions"
     ],
     "limitations": [
+      "The official markup nests a real <img> inside usa-card__img; this tile uses a styled placeholder block because tiles ship no external image assets. Swap in the img element when you have an asset.",
       "Header image limited in height"
     ]
   },
@@ -135,10 +136,10 @@
 <article class="usa-card usa-card--header-first">
   <div class="usa-card__container">
   <div class="usa-card__header">
-    <div class="usa-card__media">
-      <div class="usa-card__img" style="background: #3b3b3b; width: 60px; height: 60px; border-radius: 50%;"></div>
-    </div>
     <h2 class="usa-card__heading">Header Flag Card</h2>
+  </div>
+  <div class="usa-card__media">
+    <div class="usa-card__img" style="background: #3b3b3b; width: 60px; height: 60px; border-radius: 50%;"></div>
   </div>
   <div class="usa-card__body">
     <p>Card with image in header alongside title text.</p>

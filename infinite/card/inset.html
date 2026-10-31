@@ -58,6 +58,7 @@
     ],
     "uswdClass": "usa-card",
     "limitations": [
+      "The official markup nests a real <img> inside usa-card__img; this tile uses a styled placeholder block because tiles ship no external image assets. Swap in the img element when you have an asset.",
       "usa-card--inset is not a USWDS 3 class; the real inset is usa-card__media--inset on the card's media element."
     ]
   },
@@ -137,6 +138,9 @@
   <div class="usa-card__container">
   <div class="usa-card__header">
     <h2 class="usa-card__heading">Inset Card Heading</h2>
+  </div>
+  <div class="usa-card__media usa-card__media--inset">
+    <div class="usa-card__img" style="background: #d9d9d9; height: 120px;"></div>
   </div>
   <div class="usa-card__body">
     <p>Card with inset styling, content set in from the edges.</p>
