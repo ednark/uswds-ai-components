@@ -95,6 +95,7 @@
       "Main content"
     ],
     "limitations": [
+      "In USWDS 3.14 only usa-layout-docs__sidenav carries styles; the bare usa-layout-docs class on the main element is a layout hook with no stylesheet rule of its own. It documents the two-column docs contract for your theme — expect to supply the grid styles, or use the class purely as a semantic marker.",
       "Requires grid system for proper layout"
     ]
   },
@@ -115,6 +116,8 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "verified 2026-10-30 against the pinned 3.14.0 stylesheet: only usa-layout-docs__sidenav is styled; bare usa-layout-docs has no rule",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }

@@ -367,6 +367,19 @@
       "migrationPath": "Re-fetch logo/image-text if you consume its limitations.",
       "designSystemVersion": "3.14.0",
       "notes": "Non-usa-prefixed custom classes are invisible to the class gate by design, so the only way to surface them is a read against source. This records the fact rather than removing the markup, since an image-plus-text logo is a legitimate need USWDS does not cover."
+    },
+    {
+      "version": "0.5.19",
+      "releaseDate": "2026-10-30",
+      "componentCount": 153,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "layout-docs/default: recorded that only usa-layout-docs__sidenav is styled in 3.14 and the bare usa-layout-docs class is an unstyled layout hook"
+      ],
+      "migrationPath": "Re-fetch layout-docs/default if you consume its limitations.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Closes the final straggler from the single- and two-tile sweeps. Both remaining notes (logo and layout-docs) were metadata recordings rather than markup changes: in each case the markup is legitimate, it was only undocumented."
     }
   ],
   "designSystemVersions": [
