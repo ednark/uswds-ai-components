@@ -155,6 +155,8 @@
     ]
   },
   "provenance": {
+    "method": "design-system documentation",
+    "source": "correction 2026-10-31: rebuilt to the usa-header.twig structure — div.usa-nav-container wrapping div.usa-navbar, the usa-header--basic modifier, and ul.usa-nav__primary instead of usa-list--unstyled",
     "tier": "design-system-source",
     "designSystemVersion": "3.14.0"
   }
@@ -173,13 +175,16 @@
 </head>
 <body>
 <a class="usa-skipnav" href="#main-content">Skip to main content</a>
-<header class="usa-header" id="header">
-  <div class="usa-logo">
-    <em class="usa-logo__text">Agency Name</em>
+<header class="usa-header usa-header--basic" id="header">
+  <div class="usa-nav-container">
+  <div class="usa-navbar">
+    <div class="usa-logo">
+      <em class="usa-logo__text">Agency Name</em>
+    </div>
+    <button type="button" class="usa-menu-btn">Menu</button>
   </div>
-  <button class="usa-menu-btn">Menu</button>
   <nav class="usa-nav" aria-label="Main navigation">
-    <ul class="usa-list--unstyled">
+    <ul class="usa-nav__primary">
       <li class="usa-nav__primary-item">
         <a class="usa-nav__link" href="#">Section One</a>
       </li>
@@ -191,7 +196,8 @@
       </li>
     </ul>
   </nav>
-</header>
+  </div>
+  </header>
 <main id="main-content">
   <p>Main content area</p>
 </main>

@@ -549,6 +549,21 @@
       "migrationPath": "Re-fetch the affected checkbox, radio-buttons and select tiles if you embed their markup.",
       "designSystemVersion": "3.14.0",
       "notes": "Five-tile tier complete. text-input (all five) and checkbox/radio/select defaults verified correct. The select/success limitations were a real quality defect: five copies of text that said usa-input--success is not a USWDS class and then named usa-input--success as the correct class — an earlier automated fix had inverted itself."
+    },
+    {
+      "version": "0.5.31",
+      "releaseDate": "2026-10-31",
+      "componentCount": 146,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "header/basic: added the div.usa-nav-container wrapper between the header and the navbar (usa-header.twig)",
+        "header/default: rebuilt to the twig structure — div.usa-nav-container > div.usa-navbar, the usa-header--basic modifier, and ul.usa-nav__primary instead of usa-list--unstyled",
+        "header/megamenu, basic-megamenu, nav-search: menu button carries type=button"
+      ],
+      "migrationPath": "Re-fetch the affected header tiles if you embed their markup.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Six-tile tier, header. The header docs page uses screenshots and iframe links rather than inline markup, so package twig was the only ground truth — worth knowing, since every other component audited so far had live markup to compare against. header/extended already matched (overlay sibling, nav-container, navbar, usa-nav__inner)."
     }
   ],
   "designSystemVersions": [
