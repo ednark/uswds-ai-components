@@ -157,6 +157,19 @@
       "migrationPath": "Fully additive metadata correction — re-fetch banner/default and header/default if you consume selection guidance.",
       "designSystemVersion": "3.14.0",
       "notes": "Guidance-fidelity pass: upstream graduated guidance (USWDS docs, 21st Century IDEA, OMB M-23-22, pending federal website standard) verified 2026-10-30 and recorded with citations; closes the prose-drift gap F-013 exposed in the markup-only verification stack"
+    },
+    {
+      "version": "0.5.2",
+      "releaseDate": "2026-10-30",
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "provenance.tier — authoritative-source tier added to all 155 tiles: design-system-source (148: bodies purity-baselined against the pinned package, plus 6 documentation-method corrections whose citations name package templates) or design-system-docs (7: banner/default docs-only citation + 6 coverage-audit tiles)",
+        "spec: provenance.tier enum added to tile-format.md Provenance Fields; validator enforces tier vocabulary and method↔tier consistency"
+      ],
+      "migrationPath": "Fully additive — provenance stays tile-side (never in the index); no re-fetch needed unless you consume tile provenance.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Source-tier provenance pass: records which authoritative source stands behind each tile body (pinned package source > official docs > maintainer guidance > observed behavior), per the authority-hierarchy interview; banner/default remains the only docs-only canon tile"
     }
   ],
   "designSystemVersions": [
