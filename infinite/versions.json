@@ -380,6 +380,21 @@
       "migrationPath": "Re-fetch layout-docs/default if you consume its limitations.",
       "designSystemVersion": "3.14.0",
       "notes": "Closes the final straggler from the single- and two-tile sweeps. Both remaining notes (logo and layout-docs) were metadata recordings rather than markup changes: in each case the markup is legitimate, it was only undocumented."
+    },
+    {
+      "version": "0.5.20",
+      "releaseDate": "2026-10-30",
+      "componentCount": 153,
+      "breakingChanges": [],
+      "addedFacets": [],
+      "metadataChanges": [
+        "breadcrumb/default: the nav now carries the usa-breadcrumb component class, which the tile was missing entirely",
+        "icon-list/default: icon svg carries role=img",
+        "link/default: removed a duplicated usa-link class; external link carries rel=noreferrer"
+      ],
+      "migrationPath": "Re-fetch breadcrumb/default, icon-list/default and link/default if you embed their markup.",
+      "designSystemVersion": "3.14.0",
+      "notes": "Three-tile tier, part 1. search verified (usa-search__submit is a real class; the tile omits the sprite icon image, which is the documented no-external-assets divergence). site-alert matches after the earlier curated-contract corrections. step-indicator uses nav where the docs use div — flagged, not changed, since nav gives a landmark; needs a decision."
     }
   ],
   "designSystemVersions": [
